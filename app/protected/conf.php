@@ -12,5 +12,9 @@ $conf = array(
     'rewriteURL' => true,
 
     // Custom vars:
-    'baseURL' => 'http://localhost/spartalien.com/app/public/',
+    'baseURL' => '//localhost/spartalien.com/app/public/',
+    'siteTitle' => 'SPARTALIEN',
+    'timezone' => 'UTC',
+    'locale' => 'en-US',
+    'encoding' => 'UTF-8',
 );

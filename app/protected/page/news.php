@@ -1,31 +1,55 @@
 <?php
+$q = 'SELECT id, postedOn, items FROM news ORDER BY postedOn DESC;';
+$newsList = $this->DB->query($q);
+
+$newsByDate = null;
 if (isset($this->route['var']['date'])) {
-    $q = 'SELECT id, postedOn, items FROM news WHERE postedOn = :postedOn ORDER BY id DESC;';
+    $q = 'SELECT id, postedOn, items FROM news WHERE postedOn = :postedOn ORDER BY postedOn DESC;';
     $v = array(
         array('postedOn', $this->route['var']['date'], SQLITE3_TEXT),
     );
+    $newsByDate = $this->DB->querySingle($q, $v);
+    if (!$newsByDate) {
+        printf('<div class="error">could not find news by date: %s.</div>', $this->route['var']['date']);
+    }
 }
-else {
-    $q = 'SELECT id, postedOn, items FROM news ORDER BY id DESC;';
-    $v = array();
-}
-
-$news = $this->DB->query($q, $v);
 ?>
 
 
 
 
-<h2>/<a href="<?php print($this->routeURL('news')); ?>">news</a></h2>
+
+
 <?php
-foreach ($news as $v) {
+if (!$newsByDate) {
+    print('<h2>/news</h2>');
+}
+else {
+    $items = array();
+    foreach (jdec($newsByDate['items']) as $i) {
+        $items[] = sprintf('<li>%s</li>', $this->parseLazyText($i));
+    }
+    $items = implode('', $items);
+    printf('
+        <h2>/news : %1$s</h2>
+        <div>
+            <ul>
+                %3$s
+            </ul>
+        </div>
+        ',
+        $newsByDate['postedOn'],
+        $this->routeURL(sprintf('news/date:%s', $newsByDate['postedOn'])),
+        $items,
+    );
+
+    print('<hr><h3>more news...</h3>');
+}
+
+foreach ($newsList as $v) {
     $items = array();
     foreach (jdec($v['items']) as $i) {
-        // TODO: create custom markdown-like parser later to use across the app. Example:
-        //       $i = preg_replace('/\[(.*)\]\((.*)\)/', '<a href="$1">$2</a>', $i);
-        //       $i = preg_replace('/routeURL\((.*)\)/', $this->routeURL('${1}'), $i);
-        //       etc.
-        $items[] = sprintf('<li>%s</li>', $i);
+        $items[] = sprintf('<li>%s</li>', $this->parseLazyText($i));
     }
     $items = implode('', $items);
     printf('

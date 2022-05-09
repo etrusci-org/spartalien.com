@@ -1,1 +1,1 @@
-body{background-color:#000}a,body{color:gray}a:focus,a:hover{color:#fff}
+body{background-color:#000}a,body{color:gray}a:link,a:visited{color:silver;text-decoration:none}a:focus,a:hover{color:#fff;text-decoration:underline}table{text-align:left;border-collapse:collapse}table td{border:1px solid gray;padding:.25rem}

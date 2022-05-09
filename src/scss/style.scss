@@ -6,6 +6,27 @@ body, a {
     color: gray;
 }
 
-a:hover, a:focus {
-    color: white;
+a {
+    &:link,
+    &:visited {
+        color: silver;
+        text-decoration: none;
+    }
+
+    &:hover, &:focus {
+        color: white;
+        text-decoration: underline;
+    }
+
+}
+
+
+table {
+    text-align: left;
+    border-collapse: collapse;
+
+    td {
+        border: 1px solid gray;
+        padding: .25rem;
+    }
 }
