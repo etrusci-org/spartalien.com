@@ -1,26 +1,8 @@
 <?php
-$q = 'SELECT id, postedOn, items FROM news ORDER BY postedOn DESC;';
-$newsList = $this->DB->query($q);
-
-$newsByDate = null;
-if (isset($this->route['var']['date'])) {
-    $q = 'SELECT id, postedOn, items FROM news WHERE postedOn = :postedOn ORDER BY postedOn DESC;';
-    $v = array(
-        array('postedOn', $this->route['var']['date'], SQLITE3_TEXT),
-    );
-    $newsByDate = $this->DB->querySingle($q, $v);
-    if (!$newsByDate) {
-        printf('<div class="error">could not find news by date: %s.</div>', $this->route['var']['date']);
-    }
-}
-?>
+$newsList = $this->getNews('list');
+$newsByDate = $this->getNews('byDate');
 
 
-
-
-
-
-<?php
 if (!$newsByDate) {
     print('<h2>/news</h2>');
 }
@@ -42,7 +24,6 @@ else {
         $this->routeURL(sprintf('news/date:%s', $newsByDate['postedOn'])),
         $items,
     );
-
     print('<hr><h3>more news...</h3>');
 }
 
@@ -55,9 +36,7 @@ foreach ($newsList as $v) {
     printf('
         <div>
             <h3><a href="%2$s">%1$s</a></h3>
-            <ul>
-                %3$s
-            </ul>
+            <ul>%3$s</ul>
         </div>
         ',
         $v['postedOn'],

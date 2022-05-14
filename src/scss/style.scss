@@ -20,7 +20,6 @@ a {
 
 }
 
-
 table {
     text-align: left;
     border-collapse: collapse;
@@ -29,4 +28,16 @@ table {
         border: 1px solid gray;
         padding: .25rem;
     }
+}
+
+.active,
+a.active {
+    color: green;
+}
+
+.btn {
+    display: inline-block;
+    border: 1px solid gray;
+    padding: .25rem;
+    margin: 0 .5rem .25rem 0;
 }
