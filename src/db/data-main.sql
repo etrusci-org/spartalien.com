@@ -16,27 +16,19 @@ INSERT INTO "audioRelease" ("id","catalogID","audioCatalogIDs","releaseName","ar
  (15,'s9ar15','["s9a27","s9a28","s9a29","s9a30"]','THE GREAT FILTER','[1]',NULL,2,'2018-08-31',NULL,'When humans get blinded by reality, we must tell them the truth.','["Recorded, composed, mixed and mastered by SPARTALIEN","Speech - Robert Jamison (track: 1)","Speech - John Maynard (track: 2)","Speech - Dr. Carolin Rosin (track: 3)","Speech - Robert Hastings (track: 4)"]',NULL,NULL,0,'3617310353','//spartalien.bandcamp.com','/album/the-great-filter','//open.spotify.com','/album/052gFoANpMCUET2C21MUqh'),
  (16,'s9ar16','["s9a31","s9a32","s9a33","s9a34","s9a35","s9a36","s9a37","s9a38","s9a39","s9a40","s9a41","s9a42","s9a43"]','2358','[1]',NULL,3,'2019-03-13',NULL,'You wander and stumble. Through space and time. Literally. Soul searching and yearning for the one thing nobody has ever seen, but most have felt...Suddenly, something flickers from the glare of your slowly dying flashlight. "That''s not what I''m looking for!", you think. Nonetheless, your ingrained curiosity is stronger...It''s an ancient recording device with some magnetic cassette tapes lying right beside it.; dust-layered, it kind of looks like it was left here on purpose...One tape is still loaded in the recorder deck. "Whatever! It''s 2 minutes to midnight anyway.", you think - and hit the play button.
 
-Limited Edition CD is [routeURL(merch)](available here).','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between August 2018 and March 2019.","Speech - Dr. Jordan B Peterson (jordanbpeterson.com), from the \"2017 Personality 04/05: Heroic and Shamanic Initiations\" lecture (youtube.com/watch?v=wLc_MC7NQek) (track: 2)","Kid calling sample - Klankbeeld (freesound.org/people/klankbeeld) (track: 6)","Didgeridoo - Esblendet (track: 8)","Background vocals - Esblendet (track: 12)"]',NULL,'["youtube:video:Yf_Q5zuvdOQ","youtube:video:Roib2OdFF2U"]',0,'1596302206','//spartalien.bandcamp.com','/album/2358','//open.spotify.com','/album/74TE0Q53NLubkkZyHm8bNJ'),
- (17,'s9ar17','["s9a44"]','Frozen Memories','[1]',1,1,'2019-03-29',NULL,'Do you remember, when everything was moving? Made for [https://kaisekidigital.bandcamp.com/album/bento-box-vol-2-2](Bento Box Vol. 2).',NULL,NULL,'["youtube:video:DEko4fBXAyE"]',0,'286448283','//spartalien.bandcamp.com','/track/frozen-memories','//open.spotify.com','/track/6rSSRx7JdtdWdbNn7gS5Pl'),
+Limited Edition CD is [route=merch]available here[/route].','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between August 2018 and March 2019.","Speech - Dr. Jordan B Peterson (jordanbpeterson.com), from the \"2017 Personality 04/05: Heroic and Shamanic Initiations\" lecture (youtube.com/watch?v=wLc_MC7NQek) (track: 2)","Kid calling sample - Klankbeeld (freesound.org/people/klankbeeld) (track: 6)","Didgeridoo - Esblendet (track: 8)","Background vocals - Esblendet (track: 12)"]',NULL,'["youtube:video:Yf_Q5zuvdOQ","youtube:video:Roib2OdFF2U"]',0,'1596302206','//spartalien.bandcamp.com','/album/2358','//open.spotify.com','/album/74TE0Q53NLubkkZyHm8bNJ'),
+ (17,'s9ar17','["s9a44"]','Frozen Memories','[1]',1,1,'2019-03-29',NULL,'Do you remember, when everything was moving?
+
+Made for [url=//kaisekidigital.bandcamp.com/album/bento-box-vol-2-2]Bento Box Vol. 2[/url].',NULL,NULL,'["youtube:video:DEko4fBXAyE"]',0,'286448283','//spartalien.bandcamp.com','/track/frozen-memories','//open.spotify.com','/track/6rSSRx7JdtdWdbNn7gS5Pl'),
  (18,'s9ar18','["s9a45","s9a46","s9a47","s9a50","s9a51","s9a52","s9a53","s9a59","s9a62","s9a76"]','BRAIN I/O','[1]',NULL,3,'2019-06-09','2020-07-13','Very personal and raw mind exploration.
 
-New output will be added over time to this album.
-2019-06-09: Brain I/O #1
-2019-06-13: Brain I/O #2
-2019-07-02: Brain I/O #3
-2019-07-12: Brain I/O #4
-2019-07-20: Brain I/O #5
-2019-08-15: Brain I/O #6
-2019-12-12: Brain I/O #7
-2019-12-28: Brain I/O #8
-2020-04-23: Brain I/O #9
-2020-07-13: Brain I/O #10','["Didgeridoo - Esblendet (track: 9)","Some Vocals - Esblendet (track: 9)"]',NULL,'["youtube:playlist:PLGOlCfPCyZ4HXSGHqzH54kjHcIc79tJC5"]',0,'2810895713','//spartalien.bandcamp.com','/album/brain-i-o','//open.spotify.com','/playlist/2LF6a2ASNVlKiutk1tADG9'),
+New output will be added over time to this album.','["Didgeridoo - Esblendet (track: 9)","Some Vocals - Esblendet (track: 9)"]',NULL,'["youtube:playlist:PLGOlCfPCyZ4HXSGHqzH54kjHcIc79tJC5"]',0,'2810895713','//spartalien.bandcamp.com','/album/brain-i-o','//open.spotify.com','/playlist/2LF6a2ASNVlKiutk1tADG9'),
  (19,'s9ar19','["s9a48"]','They Shot My Friend','[1]',2,1,'2019-07-07',NULL,'Dedicated to Sina. Rest in peace my friend. I will neither forget nor forgive what they did to you.
 
-Made for [https://lessthanone.bandcamp.com/album/the-fencepost-reclamation-project-volume-5](the fencepost reclamation project volume 5).','["Some foley samples from the Fencepost material originally released by Evelyn Records in 2002 provided by <1 (lessthanone.bandcamp.com)"]',NULL,NULL,0,'3891255445','//spartalien.bandcamp.com','/track/they-shot-my-friend','//open.spotify.com','/track/6gcULl01jPOsWwn2EwVWHM'),
+Made for [url=//lessthanone.bandcamp.com/album/the-fencepost-reclamation-project-volume-5]the fencepost reclamation project volume 5[/url].','["Some foley samples from the Fencepost material originally released by Evelyn Records in 2002 provided by <1 (lessthanone.bandcamp.com)"]',NULL,NULL,0,'3891255445','//spartalien.bandcamp.com','/track/they-shot-my-friend','//open.spotify.com','/track/6gcULl01jPOsWwn2EwVWHM'),
  (20,'s9ar20','["s9a49"]','The Sad Lightness Of Being','[1]',2,1,'2019-07-07',NULL,'A story about being strong, but still vulnerable.
 
-Made for [https://lessthanone.bandcamp.com/album/the-fencepost-reclamation-project-volume-5](the fencepost reclamation project volume 5).','["Some foley samples from the Fencepost material originally released by Evelyn Records in 2002 provided by <1 (lessthanone.bandcamp.com)"]',NULL,NULL,0,'2901018221','//spartalien.bandcamp.com','/track/the-sad-lightness-of-being','//open.spotify.com','/track/2onyU5yxSx9FhxtBgGoykG'),
+Made for [url=//lessthanone.bandcamp.com/album/the-fencepost-reclamation-project-volume-5]the fencepost reclamation project volume 5[/url].','["Some foley samples from the Fencepost material originally released by Evelyn Records in 2002 provided by <1 (lessthanone.bandcamp.com)"]',NULL,NULL,0,'2901018221','//spartalien.bandcamp.com','/track/the-sad-lightness-of-being','//open.spotify.com','/track/2onyU5yxSx9FhxtBgGoykG'),
  (21,'s9ar21','["s9a54","s9a55","s9a56","s9a57"]','KEEN','[1]',NULL,2,'2019-12-13',NULL,'History is over and the future is just an idea.','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) in November 2019."]',NULL,'["youtube:playlist:OLAK5uy_kzqRHNeABeBfON3ukcbuzvUWAWYbw8TQ4"]',0,'2895888302','//spartalien.bandcamp.com','/album/keen','//open.spotify.com','/album/7iQax3iHA9OilsTq9dM2nl'),
  (22,'s9ar22','["s9a58"]','Rainbows & Unicorns','[1,2]',NULL,1,'2019-12-23',NULL,'For your mellow (xmas) days.','["Pan Drum - Esblendet","Guzheng - Esblendet","Cover Unicorn - Unknown Artist","Cover Rainbow Texture - kitti851"]',NULL,NULL,1,'2223839995','//spartalien.bandcamp.com','/track/rainbows-unicorns','//open.spotify.com','/track/3flUCe6A3SQWJ86hMP0xpU'),
  (23,'s9ar23','["s9a60","s9a61"]','LET IT ALL GO, Volume 1','[1]',NULL,3,'2020-02-13',NULL,'Sit back and relax. Breathe slowly. Try to focus on one thought at a time. Let your emotions flow, but do not let them overwhelm you. Deconstruct your thoughts. Study each little part. Understand, or accept your confusion for now. You do not have energy. You are energy. Everything is here. In your mind. Peace, you can find. Repeat.
@@ -62,17 +54,17 @@ Digital album and merchandise purchases on Bandcamp include the bonus track "A N
  (28,'s9ar28','["s9a92"]','Uncertain','[1]',NULL,1,'2021-05-07',NULL,'A song about our future.','["Most nature samples - DJs for Climate Action and Greenpeace (djs4ca.com/climate-sample-pack)"]','["DJs for Climate Action and Greenpeace for taking action."]',NULL,0,'2666379051','//spartalien.bandcamp.com','/track/uncertain','//open.spotify.com','/track/4A9uz51yEBcHImxUXnhABw'),
  (29,'s9ar29','["s9a93","s9a94","s9a95","s9a96"]','THE BAND WITH THE DRUMMER WHO KNEW ONLY ONE RHYTHM','[1]',NULL,2,'2021-06-07',NULL,'A small band plays in a smoky open air club. Their instruments are slightly out of tune. But the crowd doesn''t care. Out of tune experiences is what they got used to.',NULL,'["Special thanks to the Might crew (might.digital) who started the creation process of these tracks."]',NULL,0,'2317686308','//spartalien.bandcamp.com','/album/the-band-with-the-drummer-who-knew-only-one-rhythm','//open.spotify.com','/album/5GO8DT7O6oqhAz4Mwblslp'),
  (30,'s9ar30','["s9a97","s9a98","s9a99"]','Flux','[1,3]',NULL,1,'2021-08-13',NULL,'Everything. Nothing. Doesn''t matter. You just float. Somewhere. Sometime.','["Vocals - Stevie Lee Price (track: 1)","Lyrics - Stevie Lee Price (track: 1)","Ocean Photo in Coverart - Rachel Claire"]',NULL,'["youtube:video:mE4p5UV62sw", "file:lyrics.txt"]',0,'2224755430','//spartalien.bandcamp.com','/album/flux','//open.spotify.com','/album/7nngUQbyI6LtVUA1JEJmiL'),
- (31,'s9ar31','["s9a100","s9a101","s9a102","s9a103","s9a104","s9a105","s9a106","s9a107","s9a108","s9a109","s9a110","s9a111","s9a112","s9a113","s9a114","s9a115","s9a116","s9a117","s9a118","s9a119","s9a120","s9a121","s9a122","s9a123","s9a124","s9a125","s9a126","s9a127","s9a128","s9a129","s9a130","s9a131","s9a132","s9a133","s9a134","s9a135","s9a136","s9a137"]','UNTOLD STORIES','[1]',NULL,3,'2021-09-22',NULL,'Do you know that feeling, when you hear a sound, and you suddenly feel like you''re in another place? When a sound triggers a feeling, or a memory? And then, when the sound is gone, and the world turns silent, you miss the sound?
+ (31,'s9ar31','["s9a141"]','Haphe (SPARTALIEN''s Wicca Remix)','[4,1]',NULL,4,'2021-08-31',NULL,'A spooky remix of the track [url=//ediblewaves.bandcamp.com/track/haphe]Haphe[/url] made upon request for [url=//ediblewaves.bandcamp.com]ediblewaves[/url].','["Original track by ediblewaves (ediblewaves.bandcamp.com)."]',NULL,'["youtube:video:mseAapnJomY","file:untold-stories/mood-gfx-1.jpg","file:untold-stories/mood-gfx-2.jpg","file:untold-stories/mood-gfx-3.jpg","file:untold-stories/mood-gfx-4.jpg"]',1,'563831413','//spartalien.bandcamp.com','/track/haphe-spartaliens-wicca-remix','//open.spotify.com',NULL),
+ (32,'s9ar32','["s9a100","s9a101","s9a102","s9a103","s9a104","s9a105","s9a106","s9a107","s9a108","s9a109","s9a110","s9a111","s9a112","s9a113","s9a114","s9a115","s9a116","s9a117","s9a118","s9a119","s9a120","s9a121","s9a122","s9a123","s9a124","s9a125","s9a126","s9a127","s9a128","s9a129","s9a130","s9a131","s9a132","s9a133","s9a134","s9a135","s9a136","s9a137"]','UNTOLD STORIES','[1]',NULL,3,'2021-09-22',NULL,'Do you know that feeling, when you hear a sound, and you suddenly feel like you''re in another place? When a sound triggers a feeling, or a memory? And then, when the sound is gone, and the world turns silent, you miss the sound?
 
 This body of work is quiet, but also loud, and very emotional. Raw, but not rushed, feelings. Intentionally improvised moments to get lost in.
 
-There is also a special edition [Doomers Delight](music/id:s9a9_untold).','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between July and August 2021."]',NULL,'["youtube:video:mseAapnJomY","file:untold-stories/mood-gfx-1.jpg","file:untold-stories/mood-gfx-2.jpg","file:untold-stories/mood-gfx-3.jpg","file:untold-stories/mood-gfx-4.jpg"]',0,'1766454808','//spartalien.bandcamp.com','/album/untold-stories','//open.spotify.com','/album/5Z09PSUcbZioMV7UvRv7yw'),
- (32,'s9ar32','["s9a138","s9a139","s9a140"]','UNTOLD STORIES (Doomer''s Delight)','[1]',NULL,3,'2021-09-22',NULL,'Do you know that feeling, when you hear a sound, and you suddenly feel like you''re in another place? When a sound triggers a feeling, or a memory? And then, when the sound is gone, and the world turns silent, you miss the sound?
+There is also a "[route=music/id:s9ar33]Doomer''s Delight[/route]" special edition.','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between July and August 2021."]',NULL,NULL,0,'1766454808','//spartalien.bandcamp.com','/album/untold-stories','//open.spotify.com','/album/5Z09PSUcbZioMV7UvRv7yw'),
+ (33,'s9ar33','["s9a138","s9a139","s9a140"]','UNTOLD STORIES (Doomer''s Delight)','[1]',NULL,3,'2021-09-22',NULL,'Do you know that feeling, when you hear a sound, and you suddenly feel like you''re in another place? When a sound triggers a feeling, or a memory? And then, when the sound is gone, and the world turns silent, you miss the sound?
 
 This body of work is quiet, but also loud, and very emotional. Raw, but not rushed, feelings. Intentionally improvised moments to get lost in.
 
-This is a special edition of [routeURL(music/id:s9a8_untold)](UNTOLD STORIES).','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between July and August 2021."]',NULL,NULL,0,'762897740','//spartalien.bandcamp.com','/album/untold-stories-doomers-delight','//open.spotify.com','/album/3MBt8QE1l8kCWBW6QaM71e'),
- (33,'s9ar33','["s9a141"]','Haphe (SPARTALIEN''s Wicca Remix)','[4,1]',NULL,4,'2021-08-31',NULL,'A spooky remix of the track [Haphe](//ediblewaves.bandcamp.com/track/haphe) made upon request for [ediblewaves](https://ediblewaves.bandcamp.com).','["Original track by ediblewaves (ediblewaves.bandcamp.com)."]',NULL,NULL,1,'563831413','//spartalien.bandcamp.com','/track/haphe-spartaliens-wicca-remix','//open.spotify.com',NULL);
+This is a special edition of [route=music/id:s9ar32]UNTOLD STORIES[/route].','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between July and August 2021."]',NULL,NULL,1,'762897740','//spartalien.bandcamp.com','/album/untold-stories-doomers-delight','//open.spotify.com','/album/3MBt8QE1l8kCWBW6QaM71e');
 INSERT INTO "audio" ("id","catalogID","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (1,'s9a1','Continuoduction',396,'[1]','2223569284','//spartalien.bandcamp.com','/track/continuoduction','//open.spotify.com','/track/2Clx7jPmYSA21DbB0FKxUR'),
  (2,'s9a2','I''ll Embrace You Again In Space',418,'[1]','1079688660','//spartalien.bandcamp.com','/track/ill-embrace-you-again-in-space','//open.spotify.com','/track/3QmCKvjLtKXS4vQD6822rf'),
  (3,'s9a3','Realize It''s Just A Ride',360,'[1]','4004833542','//spartalien.bandcamp.com','/track/realize-its-just-a-ride','//open.spotify.com','/track/7LwAhr4FxPmxhsM0X4C2h6'),
@@ -224,6 +216,57 @@ INSERT INTO "audioReleaseType" ("id","typeName") VALUES (1,'Single'),
  (4,'Remix');
 INSERT INTO "label" ("id","labelName","labelURL") VALUES (1,'Kaiseki Digital','//kaisekidigital.bandcamp.com'),
  (2,'<1','//lessthanone.bandcamp.com');
-INSERT INTO "news" ("id","postedOn","items") VALUES (1,'2016-03-24','["New release: [Continuoduction](routeURL(music/id:s9ar1))"]'),
- (2,'2016-10-13','["New release: [I''ll Embrace You Again In Space](routeURL(music/id:s9ar2))"]');
+INSERT INTO "news" ("id","postedOn","items") VALUES (1,'2016-03-24','["New release: [route=music/id:s9ar1]Continuoduction[/route]"]'),
+ (2,'2016-10-13','["New release: [route=music/id:s9ar2]I''ll Embrace You Again In Space[/route]"]'),
+ (3,'2017-03-13','["New release: [route=music/id:s9ar3]Realize It''s Just A Ride[/route]"]'),
+ (4,'2017-06-18','["New release: [route=music/id:s9ar4]Nature''s Song[/route]"]'),
+ (5,'2017-06-20','["New release: [route=music/id:s9ar5]Following The Calling[/route]"]'),
+ (6,'2017-07-03','["New release: [route=music/id:s9ar6]Digging In Memories[/route]"]'),
+ (7,'2017-07-15','["New release: [route=music/id:s9ar7]Heat-Resistant[/route]"]'),
+ (8,'2017-08-01','["spartalien.com goes online!"]'),
+ (9,'2017-08-10','["New release: [route=music/id:s9ar8]Song For Wind[/route]"]'),
+ (10,'2017-08-25','["New release: [route=music/id:s9ar9]Messaggio Per Naelog[/route]"]'),
+ (11,'2017-09-22','["New release: [route=music/id:s9ar10]Martina[/route]"]'),
+ (12,'2017-10-22','["New release: [route=music/id:s9ar11]Time[/route]"]'),
+ (13,'2018-02-27','["New release: [route=music/id:s9ar12]Every Day[/route]"]'),
+ (14,'2018-04-13','["New release: [route=music/id:s9ar13]MONOLOG[/route]"]'),
+ (15,'2018-06-07','["New merchandise: [route=merch]Artefact S9M1, MONOLOG Limited Edition[/route]"]'),
+ (16,'2018-08-13','["New release: [route=music/id:s9ar14]Searching[/route]"]'),
+ (17,'2018-08-31','["New release: [route=music/id:s9ar15]THE GREAT FILTER[/route]"]'),
+ (18,'2019-03-13','["New release: [route=music/id:s9ar16]2358[/route]"]'),
+ (19,'2019-03-29','["New release: [route=music/id:s9ar17]Frozen Memories[/route]"]'),
+ (20,'2019-06-09','["New release: [route=music/id:s9ar18]BRAIN I/O[/route]"]'),
+ (21,'2019-06-13','["New release: [route=music/id:s9ar18]Brain I/O #2[/route]"]'),
+ (22,'2019-07-02','["New release: [route=music/id:s9ar18]Brain I/O #3[/route]"]'),
+ (23,'2019-07-07','["New release: [route=music/id:s9ar19]They Shot My Friend[/route]", "New release: [route=music/id:s9ar20]The Sad Lightness Of Being[/route]"]'),
+ (24,'2019-07-12','["New release: [route=music/id:s9ar18]Brain I/O #4[/route]"]'),
+ (25,'2019-07-20','["New release: [route=music/id:s9ar18]Brain I/O #5[/route]"]'),
+ (26,'2019-08-13','["New merchandise: [route=merch]Memoria S9M2, 2358 Limited Edition[/route]"]'),
+ (27,'2019-08-15','["New release: [route=music/id:s9ar18]Brain I/O #6[/route]"]'),
+ (28,'2019-12-12','["New release: [route=music/id:s9ar18]Brain I/O #7[/route]"]'),
+ (29,'2019-12-13','["New release: [route=music/id:s9ar21]KEEN[/route]"]'),
+ (30,'2019-12-23','["New release: [route=music/id:s9ar22]Rainbows & Unicorns[/route]"]'),
+ (31,'2019-12-28','["New release: [route=music/id:s9ar18]Brain I/O #8[/route]"]'),
+ (32,'2020-01-20','["New logo"]'),
+ (33,'2020-01-22','["New [route=media/id:wp202001]Wallpapers[/route]"]'),
+ (34,'2020-02-13','["New release: [route=music/id:s9ar23]Let It All Go, Volume 1[/route]"]'),
+ (35,'2020-04-23','["New release: [route=music/id:s9ar18]Brain I/O #9[/route]"]'),
+ (36,'2020-06-26','["New release: [route=music/id:s9ar24]1996[/route]"]'),
+ (37,'2020-07-06','["New merchandise: [route=merch]Logo T-Shirt, S9M3[/route]"]'),
+ (38,'2020-07-13','["New release: [route=music/id:s9ar18]Brain I/O #10[/route]"]'),
+ (39,'2020-07-22','["New merchandise: [route=merch]Logo Sticker, S9M4[/route]"]'),
+ (40,'2020-08-26','["My music will soon disappear from all streaming/download platforms for roughly 2-3 weeks. It will be then re-uploaded again - and should automagically reappear in your playlists and libraries. If you''re missing anything after this timeframe, let me know. In the meantime you can always stream/purchase everything through my [route=]website[/route] or Bandcamp page."]'),
+ (41,'2020-09-03','["New release: [route=music/id:s9ar25]Let It All Go, Volume 2[/route]"]'),
+ (42,'2020-09-08','["New release: [route=prod]S9SP1 - 2358 Sample Pack[/route]"]'),
+ (43,'2020-10-11','["The music is back on Spotify and other platforms", "Updated the website."]'),
+ (44,'2020-12-13','["New release: [route=music/id:s9ar26]CHILL TRACKS 2016-2020[/route]"]'),
+ (45,'2021-01-01','["New release: [route=music/id:s9ar27]FLOATING HIGH[/route]","New merchandise: [route=merch]Memory S9M5, FLOATING HIGH Limited Edition CD-R[/route]","New merchandise: [route=merch]Memory S9M6, FLOATING HIGH Limited Edition USB-Stick[/route]"]'),
+ (46,'2021-01-13','["New release: [route=prod]S9SP2 - Trip Construction Kit 1[/route]"]'),
+ (47,'2021-03-19','["New page: [route=visual]visual[/route]"]'),
+ (48,'2021-03-22','["[route=/media/id:shikantaza-interview]Interview[/route] by Shikantaza Art"]'),
+ (49,'2021-05-07','["New release: [route=music/id:s9ar28]Uncertain[/route]"]'),
+ (50,'2021-06-07','["New release: [route=music/id:s9ar29]THE BAND WITH THE DRUMMER WHO KNEW ONLY ONE RHYTHM[/route]"]'),
+ (51,'2021-08-13','["New release: [route=music/id:s9ar30]Flux[/route]"]'),
+ (52,'2021-08-31','["New release: [route=music/id:s9ar31]ediblewaves - Haphe (SPARTALIEN''s Wicca Remix)[/route]"]'),
+ (53,'2021-09-22','["New release: [route=music/id:s9ar32]UNTOLD STORIES[/route]","New release: [route=music/id:s9ar33]UNTOLD STORIES (Doomer''s Delight)[/route]"]');
 COMMIT;

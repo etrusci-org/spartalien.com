@@ -20,9 +20,9 @@ CREATE TABLE IF NOT EXISTS "audioRelease" (
 	"bandcampSlug"	TEXT,
 	"spotifyHost"	TEXT DEFAULT '//open.spotify.com',
 	"spotifySlug"	TEXT,
-	FOREIGN KEY("audioReleaseTypeID") REFERENCES "audioReleaseType"("id"),
+	PRIMARY KEY("id" AUTOINCREMENT),
 	FOREIGN KEY("labelID") REFERENCES "label"("id"),
-	PRIMARY KEY("id" AUTOINCREMENT)
+	FOREIGN KEY("audioReleaseTypeID") REFERENCES "audioReleaseType"("id")
 );
 DROP TABLE IF EXISTS "audio";
 CREATE TABLE IF NOT EXISTS "audio" (
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS "audio" (
 	"bandcampSlug"	TEXT,
 	"spotifyHost"	TEXT DEFAULT '//open.spotify.com',
 	"spotifySlug"	TEXT,
-	PRIMARY KEY("id")
+	PRIMARY KEY("id" AUTOINCREMENT)
 );
 DROP TABLE IF EXISTS "artist";
 CREATE TABLE IF NOT EXISTS "artist" (

@@ -3,17 +3,20 @@ $newsList = $this->getNews('list');
 $newsByDate = $this->getNews('byDate');
 
 
-if (!$newsByDate) {
-    print('<h2>/news</h2>');
-}
-else {
+print('
+    <h2>/news</h2>
+    <p>[ <a href="#">Newsletter</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a></p>
+');
+
+if ($newsByDate) {
     $items = array();
-    foreach (jdec($newsByDate['items']) as $i) {
-        $items[] = sprintf('<li>%s</li>', $this->parseLazyText($i));
+    foreach ($newsByDate['items'] as $i) {
+        $items[] = sprintf('<li>%s</li>', $this->parseLazyInput($i));
     }
     $items = implode('', $items);
+
     printf('
-        <h2>/news : %1$s</h2>
+        <h3>news from %1$s</h3>
         <div>
             <ul>
                 %3$s
@@ -24,15 +27,17 @@ else {
         $this->routeURL(sprintf('news/date:%s', $newsByDate['postedOn'])),
         $items,
     );
-    print('<hr><h3>more news...</h3>');
+
+    print('<hr><h4>more news...</h4>');
 }
 
 foreach ($newsList as $v) {
     $items = array();
-    foreach (jdec($v['items']) as $i) {
-        $items[] = sprintf('<li>%s</li>', $this->parseLazyText($i));
+    foreach ($v['items'] as $i) {
+        $items[] = sprintf('<li>%s</li>', $this->parseLazyInput($i));
     }
     $items = implode('', $items);
+
     printf('
         <div>
             <h3><a href="%2$s">%1$s</a></h3>

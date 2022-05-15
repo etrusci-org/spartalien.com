@@ -9,7 +9,7 @@ $conf = array(
     'cachingEnabled' => false,
     'cacheTTL' => 86400 * 365 * 1000,
     'cacheExcludedNodes' => array(),
-    'rewriteURL' => true,
+    'rewriteURL' => false,
 
     // Custom vars:
     'baseURL' => '//localhost/spartalien.com/app/public/',

@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+
 /**
  * Super simple web app for the lazy.
  *

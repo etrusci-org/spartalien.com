@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+
 /**
  * URL query string parser for the lazy.
  *

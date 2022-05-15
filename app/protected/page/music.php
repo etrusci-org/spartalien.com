@@ -8,15 +8,12 @@ foreach ($filter as $v) {
     $filterHTML[] = sprintf('<a href="%2$s"%3$s>%1$s</a>', $v[0], $v[1], $v[2] ? ' class="active"' : '');
 }
 $filterHTML = implode(' &middot; ', $filterHTML);
-?>
 
 
+print('<h2>/music</h2>');
 
-<?php
-if (!$releaseByID) {
-    print('<h2>music</h2>');
-}
-else {
+
+if ($releaseByID) {
     $rls = $releaseByID;
 
     $artist = array();
@@ -24,7 +21,7 @@ else {
     if (count($dump) > 1) {
         foreach ($dump as $a) {
             if ($a['id'] != 1) {
-                $artist[] = $a['artistName'];
+                $artist[] = hsc5($a['artistName']);
             }
         }
     }
@@ -42,43 +39,52 @@ else {
     if ($rls['spotifySlug']) {
         $spotifyBtn = sprintf(
             '<a href="%1$s" class="btn">STREAM</a>',
-            $rls['spotifyHost'].$rls['spotifySlug']
+            $rls['spotifyHost'].$rls['spotifySlug'],
         );
     }
 
     printf(
-        '<h2>%s</h2>',
-        $rls['releaseName']
+        '<h3>%s</h3>',
+        hsc5($rls['releaseName']),
     );
 
     printf('
         <p>
             [
             %1$s
+            %2$s
             &middot;
-            %2$s%3$s
-            &middot;
-            released on %4$s%5$s
+            released on %3$s%4$s
             ]
         </p>',
-        $rls['typeName'],
-        ($rls['trackCount'] > 1) ? sprintf('%s tracks', $rls['trackCount']) : sprintf('%s track', $rls['trackCount']),
-        ($artist) ? sprintf(' &middot; collab w/ %s', implode(' + ', $artist)) : '',
+        $rls['releaseType'],
+        ($artist) ? sprintf('&middot; collab w/ %s', implode(' + ', $artist)) : '',
         $rls['releasedOn'],
         ($rls['updatedOn']) ? sprintf(' &middot; updated on %s', $rls['updatedOn']) : '',
     );
 
     printf(
         '<p>%s</p>',
-        $this->parseLazyText($rls['description']),
+        $this->parseLazyInput($rls['description']),
     );
+
+    print('TRACKLIST<ul>');
+    $i = 1;
+    foreach ($rls['tracklist'] as $v) {
+        printf(
+            '<li>%1$s. %2$s [%3$s]',
+            $i++,
+            hsc5($v['audioName']),
+            $v['audioRuntime'],
+        );
+    }
+    print('</ul>');
 
     printf(
         '<p>%1$s %2$s</p>',
         $bandcampBtn,
         $spotifyBtn,
     );
-
 
     printf(
         '<p><a href="file/cover/%1$s-big.png"><img src="file/cover/%1$s-med.jpg"></a></p>',
@@ -92,7 +98,7 @@ else {
     print_r($releaseByID);
     print('</pre>');
 
-    print('<hr><h3>more music...</h3>');
+    print('<hr><h4>more music...</h4>');
 }
 
 printf(
@@ -106,7 +112,6 @@ printf(
         <tr>
             <th>title</th>
             <th>type</th>
-            <th>tracks</th>
             <th>date</th>
         </tr>
     </thead>
@@ -118,7 +123,7 @@ printf(
             if (count($dump) > 1) {
                 foreach ($dump as $a) {
                     if ($a['id'] != 1) {
-                        $artist[] = $a['artistName'];
+                        $artist[] = hsc5($a['artistName']);
                     }
                 }
             }
@@ -128,15 +133,12 @@ printf(
                     <td><a href="%1$s">%2$s</a>%3$s</td>
                     <td>%4$s</td>
                     <td>%5$s</td>
-                    <td>%6$s</td>
                 </tr>
                 ',
                 $this->routeURL(sprintf('music/id:%s', $v['catalogID'])),
                 $v['releaseName'],
-                ($artist) ? sprintf(' [Collab w/ %s]', implode(' + ', $artist)) : '',
+                ($artist) ? sprintf(' [collab w/ %s]', implode(' + ', $artist)) : '',
                 $v['releaseType'],
-                $v['trackCount'],
-                // $v['releasedOn'],
                 ($v['updatedOn']) ? $v['updatedOn'] : $v['releasedOn'],
             );
         }
