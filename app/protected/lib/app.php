@@ -49,7 +49,7 @@ class App extends WebApp {
     }
 
 
-    public function getMusic(string $mode, array $kwargs=array()): array {
+    public function getAudio(string $mode, array $kwargs=array()): array {
         $data = array();
 
         switch ($mode) {
@@ -76,7 +76,7 @@ class App extends WebApp {
 
                 $q = sprintf('
                     SELECT
-                        audioRelease.catalogID,
+                        audioRelease.id,
                         audioRelease.releaseName,
                         audioRelease.releasedOn,
                         audioRelease.updatedOn,
@@ -90,7 +90,7 @@ class App extends WebApp {
                     FROM audioRelease
                     LEFT JOIN audioReleaseType ON audioReleaseType.id = audioRelease.audioReleaseTypeID
                     %s
-                    ORDER BY releaseOrder DESC, audioRelease.catalogID DESC;',
+                    ORDER BY releaseOrder DESC, audioRelease.id DESC;',
                     $w
                 );
 
@@ -101,23 +101,23 @@ class App extends WebApp {
                 }
                 break;
 
-            case 'byCatalogID':
-                $catalogID = null;
+            case 'byID':
+                $id = null;
                 if (isset($kwargs['id'])) {
-                    $catalogID = $kwargs['id'];
+                    $id = $kwargs['id'];
                 }
                 elseif (isset($this->route['var']['id'])) {
-                    $catalogID = $this->route['var']['id'];
+                    $id = $this->route['var']['id'];
                 }
 
-                if ($catalogID) {
+                if ($id) {
                     $q = '
                     SELECT
-                        audioRelease.catalogID,
+                        audioRelease.id,
                         audioRelease.releaseName,
                         audioRelease.releasedOn,
                         audioRelease.updatedOn,
-                        audioRelease.audioCatalogIDs,
+                        audioRelease.audioIDs,
                         audioRelease.artistIDs,
                         audioRelease.description,
                         audioRelease.credits,
@@ -135,17 +135,17 @@ class App extends WebApp {
                     FROM audioRelease
                     LEFT JOIN label ON label.id = audioRelease.labelID
                     LEFT JOIN audioReleaseType ON audioReleaseType.id = audioRelease.audioReleaseTypeID
-                    WHERE audioRelease.catalogID = :catalogID;';
+                    WHERE audioRelease.id = :id;';
 
                     $v = array(
-                        array('catalogID', $catalogID, SQLITE3_TEXT),
+                        array('id', $id, SQLITE3_TEXT),
                     );
 
                     $data = $this->DB->querySingle($q, $v);
 
                     $data['artist'] = $this->getArtistByID(jdec($data['artistIDs']));
-                    $data['audioCatalogIDs'] = jdec($data['audioCatalogIDs']);
-                    $data['tracklist'] = $this->getAudioByID($data['audioCatalogIDs']);
+                    $data['audioIDs'] = jdec($data['audioIDs']);
+                    $data['tracklist'] = $this->getAudioByID($data['audioIDs']);
                     $data['description'] = $this->parseLazyInput($data['description']);
                     $data['credits'] = jdec($data['credits']);
                     $data['thanks'] = jdec($data['thanks']);
@@ -158,13 +158,13 @@ class App extends WebApp {
     }
 
 
-    public function getMusicFilter(): array {
+    public function getAudioFilter(): array {
         $filter = array();
 
         // all
         $filter[] = array(
             'All',
-            $this->routeURL('music'),
+            $this->routeURL('audio'),
             !in_array('freedl', $this->route['flag']) && !isset($this->route['var']['year']) && !isset($this->route['var']['type']),
         );
 
@@ -178,7 +178,7 @@ class App extends WebApp {
         foreach ($dump as $v) {
             $filter[] = array(
                 $v['year'],
-                $this->routeURL(sprintf('music/year:%s', $v['year'])),
+                $this->routeURL(sprintf('audio/year:%s', $v['year'])),
                 isset($this->route['var']['year']) && $this->route['var']['year'] == $v['year'],
             );
         }
@@ -195,7 +195,7 @@ class App extends WebApp {
             $v['releaseType'] = str_replace('Digital ', '', $v['releaseType']);
             $filter[] = array(
                 $v['releaseType'],
-                $this->routeURL(sprintf('music/type:%s', strtolower($v['releaseType']))),
+                $this->routeURL(sprintf('audio/type:%s', strtolower($v['releaseType']))),
                 isset($this->route['var']['type']) && strtolower($this->route['var']['type']) == strtolower($v['releaseType']),
             );
         }
@@ -203,7 +203,7 @@ class App extends WebApp {
         // free to download
         $filter[] = array(
             'FreeDL',
-            $this->routeURL('music/freedl'),
+            $this->routeURL('audio/freedl'),
             in_array('freedl', $this->route['flag']),
         );
 
@@ -215,6 +215,52 @@ class App extends WebApp {
         );
 
         return $filter;
+    }
+
+
+    public function getAudioByID(int|array $id): array {
+        $data = array();
+
+        $q = '
+        SELECT
+            id,
+            audioName,
+            audioRuntime,
+            bandcampID,
+            bandcampHost,
+            bandcampSlug,
+            spotifyHost,
+            spotifySlug
+        FROM audio
+        WHERE id = :id;';
+
+        if (is_int($id)) {
+            $v = array(
+                array('id', $id, SQLITE3_INTEGER),
+            );
+            $dump = $this->DB->querySingle($q, $v);
+            if ($dump) {
+                $data = $dump;
+            }
+        }
+
+        if (is_array($id)) {
+            foreach ($id as $v) {
+                $v = array(
+                    array('id', $v, SQLITE3_INTEGER),
+                );
+                $dump = $this->DB->querySingle($q, $v);
+
+                if ($dump) {
+                    $dump['audioRuntimeString'] = $this->secondsToString($dump['audioRuntime']);
+                    $dump['bandcampURL'] = ($dump['bandcampSlug']) ? sprintf('%s%s', $dump['bandcampHost'], $dump['bandcampSlug']) : null;
+                    $dump['spotifyURL'] = ($dump['spotifySlug']) ? sprintf('%s%s', $dump['spotifyHost'], $dump['spotifySlug']) : null;
+                    $data[] = $dump;
+                }
+            }
+        }
+
+        return $data;
     }
 
 
@@ -254,52 +300,6 @@ class App extends WebApp {
         return $data;
     }
 
-
-    public function getAudioByID(string|array $catalogID): array {
-        $data = array();
-
-        $q = '
-        SELECT
-            id,
-            catalogID,
-            audioName,
-            audioRuntime,
-            bandcampID,
-            bandcampHost,
-            bandcampSlug,
-            spotifyHost,
-            spotifySlug
-        FROM audio
-        WHERE catalogID = :catalogID;';
-
-        if (is_string($catalogID)) {
-            $v = array(
-                array('catalogID', $catalogID, SQLITE3_TEXT),
-            );
-            $dump = $this->DB->querySingle($q, $v);
-            if ($dump) {
-                $data = $dump;
-            }
-        }
-
-        if (is_array($catalogID)) {
-            foreach ($catalogID as $id) {
-                $v = array(
-                    array('catalogID', $id, SQLITE3_TEXT),
-                );
-                $dump = $this->DB->querySingle($q, $v);
-
-                if ($dump) {
-                    $dump['audioRuntimeString'] = $this->secondsToString($dump['audioRuntime']);
-                    $dump['bandcampURL'] = ($dump['bandcampSlug']) ? sprintf('%s%s', $dump['bandcampHost'], $dump['bandcampSlug']) : null;
-                    $dump['spotifyURL'] = ($dump['spotifySlug']) ? sprintf('%s%s', $dump['spotifyHost'], $dump['spotifySlug']) : null;
-                    $data[] = $dump;
-                }
-            }
-        }
-
-        return $data;
-    }
 
     public function parseLazyInput(string $input): string|array|null {
         $patterns = array(

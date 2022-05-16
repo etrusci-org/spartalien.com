@@ -15,12 +15,12 @@
     <nav>
         /<a href="<?php print($this->routeURL()); ?>">index</a>
         /<a href="<?php print($this->routeURL('news')); ?>">news</a>
-        /<a href="<?php print($this->routeURL('music')); ?>">music</a>
-        /<a href="<?php print($this->routeURL('visual')); ?>">visual</a>
-        /<a href="<?php print($this->routeURL('merch')); ?>">merch</a>
-        /<a href="<?php print($this->routeURL('about')); ?>">about</a>
-        /<a href="<?php print($this->routeURL('cam')); ?>">cam</a>
-        /<a href="<?php print($this->routeURL('planet420')); ?>">planet420</a>
+        /<a href="<?php print($this->routeURL('audio')); ?>">audio</a>
+        <!-- /<a href="<?php print($this->routeURL('visual')); ?>">visual</a> -->
+        <!-- /<a href="<?php print($this->routeURL('merch')); ?>">merch</a> -->
+        <!-- /<a href="<?php print($this->routeURL('about')); ?>">about</a> -->
+        <!-- /<a href="<?php print($this->routeURL('cam')); ?>">cam</a> -->
+        <!-- /<a href="<?php print($this->routeURL('planet420')); ?>">planet420</a> -->
     </nav>
 
     <hr>
