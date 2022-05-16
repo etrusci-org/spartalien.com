@@ -1,7 +1,6 @@
 <?php
 $releaseList = $this->getMusic('list');
 $releaseByID = $this->getMusic('byCatalogID');
-
 $filter = $this->getMusicFilter();
 $filterHTML = array();
 foreach ($filter as $v) {
@@ -10,21 +9,15 @@ foreach ($filter as $v) {
 $filterHTML = implode(' &middot; ', $filterHTML);
 
 
+// header info
 print('<h2>/music</h2>');
 
 
+// release by catalog id
 if ($releaseByID) {
     $rls = $releaseByID;
 
-    $artist = array();
-    $dump = $rls['artist'];
-    if (count($dump) > 1) {
-        foreach ($dump as $a) {
-            if ($a['id'] != 1) {
-                $artist[] = hsc5($a['artistName']);
-            }
-        }
-    }
+    $collabArtist = $this->getCollabArtist($rls['artist']);
 
     $bandcampBtn = '';
     if ($rls['bandcampSlug']) {
@@ -58,7 +51,7 @@ if ($releaseByID) {
             ]
         </p>',
         $rls['releaseType'],
-        ($artist) ? sprintf('&middot; collab w/ %s', implode(' + ', $artist)) : '',
+        ($collabArtist) ? sprintf('&middot; collab w/ %s', implode(' + ', $collabArtist)) : '',
         $rls['releasedOn'],
         ($rls['updatedOn']) ? sprintf(' &middot; updated on %s', $rls['updatedOn']) : '',
     );
@@ -75,7 +68,7 @@ if ($releaseByID) {
             '<li>%1$s. %2$s [%3$s]',
             $i++,
             hsc5($v['audioName']),
-            $v['audioRuntime'],
+            $v['audioRuntimeString'],
         );
     }
     print('</ul>');
@@ -91,57 +84,50 @@ if ($releaseByID) {
         $rls['catalogID'],
     );
 
-
-
-
-    print('<hr><pre>');
-    print_r($releaseByID);
-    print('</pre>');
+    // print('<hr><pre>');
+    // print_r($releaseByID);
+    // print('</pre>');
 
     print('<hr><h4>more music...</h4>');
 }
 
+
+// release list
 printf(
     '<p>%s</p>',
     $filterHTML,
 );
-?>
 
-<table>
-    <thead>
+print('
+    <table>
+        <thead>
+            <tr>
+                <th>title</th>
+                <th>type</th>
+                <th>date</th>
+            </tr>
+        </thead>
+        <tbody>
+');
+
+foreach ($releaseList as $v) {
+    $collabArtist = $this->getCollabArtist($v['artist']);
+
+    printf('
         <tr>
-            <th>title</th>
-            <th>type</th>
-            <th>date</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php
-        foreach ($releaseList as $v) {
-            $artist = array();
-            $dump = $v['artist'];
-            if (count($dump) > 1) {
-                foreach ($dump as $a) {
-                    if ($a['id'] != 1) {
-                        $artist[] = hsc5($a['artistName']);
-                    }
-                }
-            }
+            <td><a href="%1$s">%2$s</a>%3$s</td>
+            <td>%4$s</td>
+            <td>%5$s</td>
+        </tr>',
+        $this->routeURL(sprintf('music/id:%s', $v['catalogID'])),
+        $v['releaseName'],
+        ($collabArtist) ? sprintf(' [collab w/ %s]', implode(' + ', $collabArtist)) : '',
+        $v['releaseType'],
+        ($v['updatedOn']) ? $v['updatedOn'] : $v['releasedOn'],
+    );
+}
 
-            printf('
-                <tr>
-                    <td><a href="%1$s">%2$s</a>%3$s</td>
-                    <td>%4$s</td>
-                    <td>%5$s</td>
-                </tr>
-                ',
-                $this->routeURL(sprintf('music/id:%s', $v['catalogID'])),
-                $v['releaseName'],
-                ($artist) ? sprintf(' [collab w/ %s]', implode(' + ', $artist)) : '',
-                $v['releaseType'],
-                ($v['updatedOn']) ? $v['updatedOn'] : $v['releasedOn'],
-            );
-        }
-        ?>
-    </tbody>
-</table>
+print('
+        </tbody>
+    </table>
+');

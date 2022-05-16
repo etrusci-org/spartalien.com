@@ -3,27 +3,6 @@ declare(strict_types=1);
 
 
 class App extends WebApp {
-    public function parseLazyInput(string $input): string|array|null {
-        $patterns = array(
-            '/\n/', // linefeed
-            '/\[b\](.*?)\[\/b\]/', // [b]bold[/b]
-            '/\[i\](.*?)\[\/i\]/', // [i]italic[/i]
-            '/\[url=(.*?)\](.*?)\[\/url\]/', // [url=link_url]link_text[/url]
-            '/\[route=(.*?)\](.*?)\[\/route\]/', // [route=route_request]link_text[/route]
-        );
-
-        $replacements = array(
-            '<br>',
-            '<strong>$1</strong>',
-            '<em>$1</em>',
-            '<a href="$1" rel="nofollow">$2</a>',
-            sprintf('<a href="%1$s">%2$s</a>', $this->routeURL('$1'), '$2'),
-        );
-
-        return preg_replace($patterns, $replacements, $input);
-    }
-
-
     public function getNews(string $mode): array {
         $data = array();
 
@@ -232,7 +211,7 @@ class App extends WebApp {
         $filter[] = array(
             'DJ-Mixes&nearr;',
             'https://mixcloud.com/lowtechman/uploads/?order=latest',
-            NULL,
+            null,
         );
 
         return $filter;
@@ -309,12 +288,67 @@ class App extends WebApp {
                     array('catalogID', $id, SQLITE3_TEXT),
                 );
                 $dump = $this->DB->querySingle($q, $v);
+
                 if ($dump) {
+                    $dump['audioRuntimeString'] = $this->secondsToString($dump['audioRuntime']);
+                    $dump['bandcampURL'] = ($dump['bandcampSlug']) ? sprintf('%s%s', $dump['bandcampHost'], $dump['bandcampSlug']) : null;
+                    $dump['spotifyURL'] = ($dump['spotifySlug']) ? sprintf('%s%s', $dump['spotifyHost'], $dump['spotifySlug']) : null;
                     $data[] = $dump;
                 }
             }
         }
 
         return $data;
+    }
+
+    public function parseLazyInput(string $input): string|array|null {
+        $patterns = array(
+            '/\n/', // linefeed
+            '/\[b\](.*?)\[\/b\]/', // [b]bold[/b]
+            '/\[i\](.*?)\[\/i\]/', // [i]italic[/i]
+            '/\[url=(.*?)\](.*?)\[\/url\]/', // [url=link_url]link_text[/url]
+            '/\[route=(.*?)\](.*?)\[\/route\]/', // [route=route_request]link_text[/route]
+        );
+
+        $replacements = array(
+            '<br>',
+            '<strong>$1</strong>',
+            '<em>$1</em>',
+            '<a href="$1" rel="nofollow">$2</a>',
+            sprintf('<a href="%1$s">%2$s</a>', $this->routeURL('$1'), '$2'),
+        );
+
+        return preg_replace($patterns, $replacements, $input);
+    }
+
+
+    static function getCollabArtist(array $audioArtist): array {
+        $artist = array();
+
+        if (count($audioArtist) > 1) {
+            foreach ($audioArtist as $v) {
+                if ($v['id'] != 1) {
+                    $artist[] = hsc5($v['artistName']);
+                }
+            }
+        }
+
+        return $artist;
+    }
+
+
+    static function secondsToString(int $seconds): string {
+        $s = max(0, $seconds);
+
+        $string = array();
+
+        $string['d'] = floor($s / (3600 * 24));
+        $string['h'] = floor($s % (3600 * 24) / 3600);
+        $string['m'] = floor($s % 3600 / 60);
+        $string['s'] = floor($s % 60);
+
+        $string = array_diff($string, array(0, 0, 0, 0));
+
+        return implode(':', $string);
     }
 }

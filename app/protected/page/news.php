@@ -3,11 +3,14 @@ $newsList = $this->getNews('list');
 $newsByDate = $this->getNews('byDate');
 
 
+// header info
 print('
     <h2>/news</h2>
-    <p>[ <a href="#">Newsletter</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a></p>
+    <p>[ <a href="#">Newsletter</a> &middot; <a href="#">Twitter</a> &middot; <a href="#">Instagram</a> ]</p>
 ');
 
+
+// new by date
 if ($newsByDate) {
     $items = array();
     foreach ($newsByDate['items'] as $i) {
@@ -31,6 +34,8 @@ if ($newsByDate) {
     print('<hr><h4>more news...</h4>');
 }
 
+
+// news list
 foreach ($newsList as $v) {
     $items = array();
     foreach ($v['items'] as $i) {
@@ -49,4 +54,3 @@ foreach ($newsList as $v) {
         $items,
     );
 }
-?>
