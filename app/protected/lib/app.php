@@ -347,8 +347,14 @@ class App extends WebApp {
         $string['m'] = floor($s % 3600 / 60);
         $string['s'] = floor($s % 60);
 
-        $string = array_diff($string, array(0, 0, 0, 0));
+        if ($string['d'] > 0) {
+            return sprintf('%d:%d:%d:%02d', $string['d'], $string['h'], $string['m'], $string['s']);
+        }
 
-        return implode(':', $string);
+        if ($string['h'] > 0) {
+            return sprintf('%d:%d:%02d', $string['h'], $string['m'], $string['s']);
+        }
+
+        return sprintf('%d:%02d', $string['m'], $string['s']);
     }
 }
