@@ -340,21 +340,21 @@ class App extends WebApp {
     static function secondsToString(int $seconds): string {
         $s = max(0, $seconds);
 
-        $string = array();
+        $dur = array(
+            'd' => floor($s / (3600 * 24)),
+            'h' => floor($s % (3600 * 24) / 3600),
+            'm' => floor($s % 3600 / 60),
+            's' => floor($s % 60),
+        );
 
-        $string['d'] = floor($s / (3600 * 24));
-        $string['h'] = floor($s % (3600 * 24) / 3600);
-        $string['m'] = floor($s % 3600 / 60);
-        $string['s'] = floor($s % 60);
-
-        if ($string['d'] > 0) {
-            return sprintf('%d:%d:%d:%02d', $string['d'], $string['h'], $string['m'], $string['s']);
+        if ($dur['d'] > 0) {
+            return sprintf('%d:%d:%d:%02d', $dur['d'], $dur['h'], $dur['m'], $dur['s']);
         }
 
-        if ($string['h'] > 0) {
-            return sprintf('%d:%d:%02d', $string['h'], $string['m'], $string['s']);
+        if ($dur['h'] > 0) {
+            return sprintf('%d:%d:%02d', $dur['h'], $dur['m'], $dur['s']);
         }
 
-        return sprintf('%d:%02d', $string['m'], $string['s']);
+        return sprintf('%d:%02d', $dur['m'], $dur['s']);
     }
 }
