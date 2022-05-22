@@ -17,4 +17,15 @@ $conf = array(
     'timezone' => 'UTC',
     'locale' => 'en-US',
     'encoding' => 'UTF-8',
+    'nav' => array(
+        // route request, label text
+        array('index', 'Index'),
+        array('news', 'News'),
+        array('audio', 'Audio'),
+        // array('visual', 'Visual'),
+        // array('merch', 'Merch'),
+        // array('about', 'About'),
+        // array('cam', 'Cam'),
+        // array('planet420', 'Planet420'),
+    ),
 );

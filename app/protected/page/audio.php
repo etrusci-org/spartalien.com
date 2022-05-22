@@ -36,49 +36,93 @@ if ($releaseByID) {
         );
     }
 
+    // heading
     printf(
         '<h3>%s</h3>',
         hsc5($rls['releaseName']),
     );
 
+    // meta nfo
     printf('
         <p>
             [
             %1$s
             %2$s
             &middot;
-            released on %3$s%4$s
+            released %3$s%4$s
+            %5$s
             ]
         </p>',
         $rls['releaseType'],
         ($collabArtist) ? sprintf('&middot; collab w/ %s', implode(' + ', $collabArtist)) : '',
         $rls['releasedOn'],
         ($rls['updatedOn']) ? sprintf(' &middot; updated on %s', $rls['updatedOn']) : '',
+        ($rls['labelName']) ? sprintf('&middot; on label %s', $rls['labelName']) : '',
+
     );
 
+    // description
     printf(
         '<p>%s</p>',
         $this->parseLazyInput($rls['description']),
     );
 
+    // credits
+    if ($rls['credits']) {
+        print('CREDITS<br>');
+        $credits = array();
+        foreach ($rls['credits'] as $v) {
+            $credits[] = sprintf('<li>%s</li>', hsc5($v));
+        }
+        $credits = sprintf('<ul>%s</ul>', implode('', $credits));
+        print($credits);
+    }
+
+    // credits
+    if ($rls['thanks']) {
+        print('THANKS<br>');
+        $thanks = array();
+        foreach ($rls['thanks'] as $v) {
+            $thanks[] = sprintf('<li>%s</li>', hsc5($v));
+        }
+        $thanks = sprintf('<ul>%s</ul>', implode('', $thanks));
+        print($thanks);
+    }
+
+    // tracklist
     print('TRACKLIST<ul>');
     $i = 1;
     foreach ($rls['tracklist'] as $v) {
         printf(
-            '<li>%1$s. %2$s [%3$s]',
+            '<li>%1$s. %2$s [%3$s] %4$s %5$s',
             $i++,
             hsc5($v['audioName']),
             $v['audioRuntimeString'],
+            ($v['bandcampURL']) ? sprintf('(<a href="%s">B</a>)', $v['bandcampURL']) : '',
+            ($v['spotifyURL']) ? sprintf('(<a href="%s">S</a>)', $v['spotifyURL']) : '',
         );
     }
     print('</ul>');
 
+    // related media
+    if ($rls['relatedMedia']) {
+        print('RELATED MEDIA<br>');
+        $relatedMedia = array();
+        foreach ($rls['relatedMedia'] as $v) {
+            $relatedMedia[] = sprintf('<div class="lazyMedia" data-slug="%1$s">%1$s</div>', $v);
+        }
+        $relatedMedia = sprintf('<ul>%s</ul>', implode('', $relatedMedia));
+        print($relatedMedia);
+    }
+
+    // buy/stream buttons
     printf(
         '<p>%1$s %2$s</p>',
         $bandcampBtn,
         $spotifyBtn,
     );
 
+    // cover image
     printf(
         '<p><a href="file/cover/%1$s-big.png"><img src="file/cover/%1$s-med.jpg"></a></p>',
         $rls['id'],
@@ -115,7 +159,7 @@ foreach ($releaseList as $v) {
 
     printf('
         <tr>
-            <td><a href="%1$s">%2$s</a>%3$s</td>
+            <td><a href="%1$s"%6$s>%2$s</a>%3$s</td>
             <td>%4$s</td>
             <td>%5$s</td>
         </tr>',
@@ -124,6 +168,7 @@ foreach ($releaseList as $v) {
         ($collabArtist) ? sprintf(' [collab w/ %s]', implode(' + ', $collabArtist)) : '',
         $v['releaseType'],
         ($v['updatedOn']) ? $v['updatedOn'] : $v['releasedOn'],
+        (isset($this->route['var']['id']) && $this->route['var']['id'] == $v['id']) ? ' class="active"' : '',
     );
 }
 

@@ -45,12 +45,13 @@ foreach ($newsList as $v) {
 
     printf('
         <div>
-            <h3><a href="%2$s">%1$s</a></h3>
-            <ul>%3$s</ul>
+            <h3><a href="%2$s"%3$s>%1$s</a></h3>
+            <ul>%4$s</ul>
         </div>
         ',
         $v['postedOn'],
         $this->routeURL(sprintf('news/date:%s', $v['postedOn'])),
+        (isset($this->route['var']['date']) && $this->route['var']['date'] == $v['postedOn']) ? ' class="active"' : '',
         $items,
     );
 }

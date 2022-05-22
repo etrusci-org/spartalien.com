@@ -3,6 +3,21 @@ declare(strict_types=1);
 
 
 class App extends WebApp {
+    public function getNavHTML(): string {
+        $nav = array();
+        foreach ($this->conf['nav'] as $v) {
+            $nav[] = sprintf(
+                '<a href="%1$s"%3$s>%2$s</a>',
+                $this->routeURL($v[0]),
+                hsc5($v[1]),
+                ($this->route['node'] == substr($v[0], 0, strlen($this->route['node']))) ? ' class="active"' : '',
+            );
+        }
+        $nav = implode(' &middot; ', $nav);
+        return $nav;
+    }
+
+
     public function getNews(string $mode): array {
         $data = array();
 
