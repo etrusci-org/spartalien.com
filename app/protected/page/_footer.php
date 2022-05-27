@@ -11,8 +11,7 @@
 
     <pre>Route <?php print_r($this->route); ?></pre>
 
-    <script src="res/app.js"></script>
-    <script src="res/main.js"></script>
+    <script src="res/main.js" type="module"></script>
 
 </body>
 </html>

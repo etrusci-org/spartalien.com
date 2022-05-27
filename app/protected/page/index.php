@@ -1,1 +1,1 @@
-<h2>/index</h2>
+<h2>Index</h2>

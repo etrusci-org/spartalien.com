@@ -10,7 +10,7 @@ $filterHTML = implode(' &middot; ', $filterHTML);
 
 
 // header info
-print('<h2>/audio</h2>');
+print('<h2>Audio</h2>');
 
 
 // release by catalog id

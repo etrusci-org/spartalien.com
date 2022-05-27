@@ -19,13 +19,13 @@ $conf = array(
     'encoding' => 'UTF-8',
     'nav' => array(
         // route request, label text
-        array('index', 'Index'),
+        array('', 'Index'),
         array('news', 'News'),
         array('audio', 'Audio'),
         // array('visual', 'Visual'),
         // array('merch', 'Merch'),
-        // array('about', 'About'),
-        // array('cam', 'Cam'),
-        // array('planet420', 'Planet420'),
+        array('cam', 'Cam'),
+        array('planet420', 'Planet420'),
+        array('about', 'About'),
     ),
 );

@@ -5,7 +5,7 @@ $newsByDate = $this->getNews('byDate');
 
 // header info
 print('
-    <h2>/news</h2>
+    <h2>News</h2>
     <p>[ <a href="#">Newsletter</a> &middot; <a href="#">Twitter</a> &middot; <a href="#">Instagram</a> ]</p>
 ');
 

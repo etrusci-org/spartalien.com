@@ -1,0 +1,3 @@
+interface AppInterface {
+    main(): void
+}

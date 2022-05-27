@@ -1,8 +1,5 @@
-"use strict";
-const App = {
+export const App = {
     main() {
-        console.log('spartalien.com');
-    },
-    loadLazyMedia() {
-    },
+        console.log('S P A R T A L I E N . C O M');
+    }
 };

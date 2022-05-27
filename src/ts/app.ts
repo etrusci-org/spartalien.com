@@ -1,17 +1,10 @@
-// IT'S BEEN A WHILE SINCE I WROTE TS
+// import { Scur } from './vendor/scur.js'
 
-interface AppInterface {
-    main(): void
-    loadLazyMedia(): void
-}
 
-const App: AppInterface = {
+export const App: AppInterface = {
+
     main() {
-        console.log('spartalien.com');
-    },
-    loadLazyMedia() {
-        // ele = all: .lazyMedia data-slug
-        // foreach ele as v
-        //     replace with embed code
-    },
+        console.log('S P A R T A L I E N . C O M')
+    }
+
 }
