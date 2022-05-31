@@ -179,7 +179,7 @@ class App extends WebApp {
         // all
         $filter[] = array(
             'All',
-            $this->routeURL('audio'),
+            $this->routeURL('music'),
             !in_array('freedl', $this->route['flag']) && !isset($this->route['var']['year']) && !isset($this->route['var']['type']),
         );
 
@@ -193,7 +193,7 @@ class App extends WebApp {
         foreach ($dump as $v) {
             $filter[] = array(
                 $v['year'],
-                $this->routeURL(sprintf('audio/year:%s', $v['year'])),
+                $this->routeURL(sprintf('music/year:%s', $v['year'])),
                 isset($this->route['var']['year']) && $this->route['var']['year'] == $v['year'],
             );
         }
@@ -210,7 +210,7 @@ class App extends WebApp {
             $v['releaseType'] = str_replace('Digital ', '', $v['releaseType']);
             $filter[] = array(
                 $v['releaseType'],
-                $this->routeURL(sprintf('audio/type:%s', strtolower($v['releaseType']))),
+                $this->routeURL(sprintf('music/type:%s', strtolower($v['releaseType']))),
                 isset($this->route['var']['type']) && strtolower($this->route['var']['type']) == strtolower($v['releaseType']),
             );
         }
@@ -218,7 +218,7 @@ class App extends WebApp {
         // free to download
         $filter[] = array(
             'FreeDL',
-            $this->routeURL('audio/freedl'),
+            $this->routeURL('music/freedl'),
             in_array('freedl', $this->route['flag']),
         );
 
@@ -316,6 +316,21 @@ class App extends WebApp {
     }
 
 
+    static function getCollabArtist(array $audioArtist): array {
+        $artist = array();
+
+        if (count($audioArtist) > 1) {
+            foreach ($audioArtist as $v) {
+                if ($v['id'] != 1) {
+                    $artist[] = hsc5($v['artistName']);
+                }
+            }
+        }
+
+        return $artist;
+    }
+
+
     public function parseLazyInput(string $input): string|array|null {
         $patterns = array(
             '/\n/', // linefeed
@@ -334,21 +349,6 @@ class App extends WebApp {
         );
 
         return preg_replace($patterns, $replacements, $input);
-    }
-
-
-    static function getCollabArtist(array $audioArtist): array {
-        $artist = array();
-
-        if (count($audioArtist) > 1) {
-            foreach ($audioArtist as $v) {
-                if ($v['id'] != 1) {
-                    $artist[] = hsc5($v['artistName']);
-                }
-            }
-        }
-
-        return $artist;
     }
 
 

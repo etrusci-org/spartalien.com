@@ -21,7 +21,7 @@ $conf = array(
         // route request, label text
         array('', 'Index'),
         array('news', 'News'),
-        array('audio', 'Audio'),
+        array('music', 'Music'),
         // array('visual', 'Visual'),
         // array('merch', 'Merch'),
         array('cam', 'Cam'),

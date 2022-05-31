@@ -10,7 +10,7 @@ $filterHTML = implode(' &middot; ', $filterHTML);
 
 
 // header info
-print('<h2>Audio</h2>');
+print('<h2>Music</h2>');
 
 
 // release by catalog id
@@ -89,11 +89,18 @@ if ($releaseByID) {
         print($thanks);
     }
 
+    // bandcamp player
+    if ($rls['bandcampID']) {
+        print('BANDCAMP PLAYER<br>');
+        printf('<div data-lazymedia="bandcamp:%1$s:%2$s">bandcamp:%1$s:%2$s</div>', ((count($rls['tracklist']) > 1) ? 'album' : 'track'), $rls['bandcampID']);
+    }
+
     // tracklist
-    print('TRACKLIST<ul>');
+    print('TRACKLIST');
     $i = 1;
+    $tracklist = array();
     foreach ($rls['tracklist'] as $v) {
-        printf(
+        $tracklist[] = sprintf(
             '<li>%1$s. %2$s [%3$s] %4$s %5$s',
             $i++,
             hsc5($v['audioName']),
@@ -102,16 +109,16 @@ if ($releaseByID) {
             ($v['spotifyURL']) ? sprintf('(<a href="%s">S</a>)', $v['spotifyURL']) : '',
         );
     }
-    print('</ul>');
+    printf('<ul>%s</ul>', implode('', $tracklist));
 
     // related media
     if ($rls['relatedMedia']) {
         print('RELATED MEDIA<br>');
         $relatedMedia = array();
         foreach ($rls['relatedMedia'] as $v) {
-            $relatedMedia[] = sprintf('<div class="lazyMedia" data-slug="%1$s">%1$s</div>', $v);
+            $relatedMedia[] = sprintf('<div data-lazymedia="%1$s">%1$s</div>', $v);
         }
-        $relatedMedia = sprintf('<ul>%s</ul>', implode('', $relatedMedia));
+        $relatedMedia = implode('', $relatedMedia);
         print($relatedMedia);
     }
 
@@ -163,7 +170,7 @@ foreach ($releaseList as $v) {
             <td>%4$s</td>
             <td>%5$s</td>
         </tr>',
-        $this->routeURL(sprintf('audio/id:%s', $v['id'])),
+        $this->routeURL(sprintf('music/id:%s', $v['id'])),
         $v['releaseName'],
         ($collabArtist) ? sprintf(' [collab w/ %s]', implode(' + ', $collabArtist)) : '',
         $v['releaseType'],

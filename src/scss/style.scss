@@ -6,6 +6,10 @@ body, a {
     color: gray;
 }
 
+iframe {
+    display: block;
+}
+
 a {
     &:link,
     &:visited {
@@ -42,6 +46,6 @@ a.active {
     margin: 0 .5rem .25rem 0;
 }
 
-.lazyMedia {
+[data-lazymedia] {
     background-color: orange;
 }
