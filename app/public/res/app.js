@@ -1,5 +1,7 @@
+import { Scur } from './vendor/scur.js';
 export const App = {
     main() {
-        console.log('S P A R T A L I E N . C O M');
+        console.log('%cSPARTALIEN.COM', 'font-size: 72px;');
+        Scur.deobElements();
     }
 };
