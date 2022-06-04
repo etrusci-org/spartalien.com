@@ -1,0 +1,41 @@
+@media screen and (min-width: 560px) {
+    body {
+        font-size: $font-size-10;
+    }
+
+    header {
+        h1,
+        nav {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        h1 {
+            margin-right: 20px;
+        }
+    }
+
+    .gridbox {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+    }
+
+    .box {
+        margin: 0 40px 40px 0;
+    }
+
+}
+
+
+@media screen and (min-width: 768px) {
+    body {
+        font-size: $font-size-20;
+    }
+}
+
+
+// @media screen and (min-width: 960px) {}
+
+
+// @media screen and (min-width: 1280px) {}

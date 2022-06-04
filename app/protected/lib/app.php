@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 
 class App extends WebApp {
-    public function getNavHTML(): string {
+    public function getNavHTML($separator=' &middot; '): string {
         $nav = array();
         foreach ($this->conf['nav'] as $v) {
             $nav[] = sprintf(
@@ -13,7 +13,7 @@ class App extends WebApp {
                 ($this->route['node'] == substr($v[0], 0, strlen($this->route['node']))) ? ' class="active"' : '',
             );
         }
-        $nav = implode(' &middot; ', $nav);
+        $nav = implode($separator, $nav);
         return $nav;
     }
 
@@ -39,18 +39,28 @@ class App extends WebApp {
                 break;
 
             case 'byDate':
-                if (isset($this->route['var']['date'])) {
+                // if (isset($this->route['var']['date'])) {
+                if (isset($this->route['var']['id'])) {
+                        // $q = '
+                    // SELECT
+                    //     id,
+                    //     postedOn,
+                    //     items
+                    // FROM news
+                    // WHERE postedOn = :postedOn
+                    // ORDER BY postedOn DESC;';
                     $q = '
                     SELECT
                         id,
                         postedOn,
                         items
                     FROM news
-                    WHERE postedOn = :postedOn
+                    WHERE id = :id
                     ORDER BY postedOn DESC;';
 
                     $v = array(
-                        array('postedOn', $this->route['var']['date'], SQLITE3_TEXT),
+                        // array('postedOn', $this->route['var']['date'], SQLITE3_TEXT),
+                        array('id', $this->route['var']['id'], SQLITE3_TEXT),
                     );
 
                     $data = $this->DB->querySingle($q, $v);
@@ -119,10 +129,10 @@ class App extends WebApp {
             case 'byID':
                 $id = null;
                 if (isset($kwargs['id'])) {
-                    $id = $kwargs['id'];
+                    $id = intval($kwargs['id']);
                 }
                 elseif (isset($this->route['var']['id'])) {
-                    $id = $this->route['var']['id'];
+                    $id = intval($this->route['var']['id']);
                 }
 
                 if ($id) {
@@ -156,15 +166,18 @@ class App extends WebApp {
                         array('id', $id, SQLITE3_TEXT),
                     );
 
-                    $data = $this->DB->querySingle($q, $v);
+                    $dump = $this->DB->querySingle($q, $v);
 
-                    $data['artist'] = $this->getArtistByID(jdec($data['artistIDs']));
-                    $data['audioIDs'] = jdec($data['audioIDs']);
-                    $data['tracklist'] = $this->getAudioByID($data['audioIDs']);
-                    $data['description'] = $this->parseLazyInput($data['description']);
-                    $data['credits'] = jdec($data['credits']);
-                    $data['thanks'] = jdec($data['thanks']);
-                    $data['relatedMedia'] = jdec($data['relatedMedia']);
+                    if ($dump) {
+                        $data  = $dump;
+                        $data['artist'] = $this->getArtistByID(jdec($data['artistIDs']));
+                        $data['audioIDs'] = jdec($data['audioIDs']);
+                        $data['tracklist'] = $this->getAudioByID($data['audioIDs']);
+                        $data['description'] = $this->parseLazyInput($data['description']);
+                        $data['credits'] = jdec($data['credits']);
+                        $data['thanks'] = jdec($data['thanks']);
+                        $data['relatedMedia'] = jdec($data['relatedMedia']);
+                    }
                 }
                 break;
         }

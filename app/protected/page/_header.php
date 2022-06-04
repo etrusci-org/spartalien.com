@@ -12,11 +12,34 @@
     <title><?php print($this->conf['siteTitle']); ?></title>
 </head>
 <body>
-    <nav>
-        <?php
-        $nav = $this->getNavHTML();
-        print($nav);
-        ?>
-    </nav>
 
-    <hr>
+    <?php
+    if ($this->route['node'] == 'index') {
+
+        printf('
+            <header>
+                <h1><img src="res/logo-small.png" alt="Logo"></h1>
+                <nav>%1$s</nav>
+            </header>
+            ',
+            $this->getNavHTML(),
+        );
+
+
+    }
+    else {
+        printf('
+            <header>
+                <h1><a href="%1$s">SPARTALIEN</a></h1>
+                <nav>%2$s</nav>
+            </header>
+            ',
+            $this->routeURL(),
+            $this->getNavHTML(),
+        );
+    }
+
+    ?>
+
+
+    <main>

@@ -1,4 +1,6 @@
-<h2>Cam</h2>
+<div class="box">
+    <h2>CAM</h2>
+</div>
 
 <!-- bla -->
 

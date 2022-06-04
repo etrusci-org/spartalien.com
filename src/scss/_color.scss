@@ -1,0 +1,57 @@
+body {
+    color: $color-30;
+    background-color: $color-10;
+}
+
+h2,
+h3,
+h4 {
+    color: $color-50;
+}
+
+a {
+    &:visited,
+    &:link {
+        color: $color-40;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $color-50;
+    }
+
+    &.active {
+        color: green;
+    }
+
+    &.btn {
+        background-color: $color-20;
+        box-shadow: 0px 0px 3px 0px $color-00;
+        border-radius: 5px;
+    }
+}
+
+
+header {
+    background-color: $color-00;
+    box-shadow: 0px 0px 10px 0px $color-00;
+
+    h1 {
+        a {
+            &:visited,
+            &:link,
+            &:hover,
+            &:focus,
+            &:active {
+                color: $color-50;
+            }
+        }
+    }
+}
+
+
+.box {
+    background-color: $color-20;
+    box-shadow: 0px 0px 10px 0px $color-00;
+}

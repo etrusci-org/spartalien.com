@@ -1,4 +1,6 @@
-<h2>Planet 420</h2>
+<div class="box">
+    <h2>PLANET 420</h2>
+</div>
 
 <!-- latest mix embed -->
 <!-- mix archive listing -->

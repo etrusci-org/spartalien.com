@@ -1,7 +1,7 @@
 import { Scur } from './vendor/scur.js';
 export const App = {
     main() {
-        console.log('%cSPARTALIEN.COM', 'font-size: 72px;');
+        console.log('SPARTALIEN.COM');
         this.loadLazyMedia();
         Scur.deobElements();
     },

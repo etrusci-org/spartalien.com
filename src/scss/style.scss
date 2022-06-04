@@ -1,51 +1,5 @@
-body {
-    background-color: black;
-}
-
-body, a {
-    color: gray;
-}
-
-iframe {
-    display: block;
-}
-
-a {
-    &:link,
-    &:visited {
-        color: silver;
-        text-decoration: none;
-    }
-
-    &:hover, &:focus {
-        color: white;
-        text-decoration: underline;
-    }
-
-}
-
-table {
-    text-align: left;
-    border-collapse: collapse;
-
-    td {
-        border: 1px solid gray;
-        padding: .25rem;
-    }
-}
-
-.active,
-a.active {
-    color: green;
-}
-
-.btn {
-    display: inline-block;
-    border: 1px solid gray;
-    padding: .25rem;
-    margin: 0 .5rem .25rem 0;
-}
-
-[data-lazymedia] {
-    background-color: orange;
-}
+@import '_var';
+@import '_reset';
+@import '_layout';
+@import '_color';
+@import '_query';

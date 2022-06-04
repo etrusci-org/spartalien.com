@@ -1,0 +1,96 @@
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    font-family: $font-main;
+    font-size: $font-size-00;
+    line-height: 1.5;
+}
+
+
+h1,
+h2,
+h3,
+h4 {
+    letter-spacing: 2px;
+}
+
+
+h2,
+h3,
+h4 {
+    margin-bottom: 10px;
+}
+
+
+p,
+ul {
+    margin-bottom: 7px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+ul {
+    list-style: none inside;
+}
+
+a {
+    &:link,
+    &:visited {
+        text-decoration: none;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration-line: underline;
+        text-decoration-style: dotted;
+    }
+
+    &.btn {
+        display: inline-block;
+        padding: 2px 4px;
+        margin: 0 5px 5px 0;
+    }
+}
+
+
+hr { // our <hr>'s are invisible
+    border: 0;
+    height: 20px;
+}
+
+
+header {
+    position: sticky;
+    top: 0;
+    text-align: center;
+    padding: 10px;
+}
+
+
+main {
+    max-width: 960px;
+    padding: 40px 20px 20px 20px;
+    margin: 0 auto;
+}
+
+
+footer {
+    text-align: center;
+    margin: 100px 10px 30px 10px;
+}
+
+
+.gridbox {
+    display: block;
+}
+
+
+.box {
+    padding: 10px;
+    margin: 0 0 40px 0;
+}
