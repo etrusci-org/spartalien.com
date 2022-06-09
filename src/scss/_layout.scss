@@ -1,41 +1,95 @@
+// mobile layout/size, handle larger screens in _query
+
 body {
     min-height: 100vh;
-    scroll-behavior: smooth;
-    text-rendering: optimizeLegibility;
     font-family: $font-main;
+    line-height: 1.4;
+}
+
+
+body,
+code {
     font-size: $font-size-00;
-    line-height: 1.5;
 }
 
 
 h1,
 h2,
-h3,
-h4 {
-    letter-spacing: 2px;
+h3 {
+    letter-spacing: .125rem;
 }
 
+
+h1 {
+    font-size: 1.7rem;
+}
+
+
+h2 {
+    font-size: 1.5rem;
+}
+
+
+h3 {
+    font-size: 1rem;
+}
 
 h2,
-h3,
-h4 {
-    margin-bottom: 10px;
+h3 {
+    margin: 0 0 .25rem 0;
 }
+
 
 
 p,
+ul,
+table,
+iframe {
+    margin: 0 0 .25rem 0;
+}
+
+
 ul {
-    margin-bottom: 7px;
+    list-style: none;
+    padding: 0;
+}
+
+
+table {
+    text-align: left;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+
+th {
+    font-weight: bold;
+}
+
+
+li,
+th,
+td {
+    vertical-align: top;
+    padding: .125rem 1rem .125rem 0;
 
     &:last-child {
-        margin-bottom: 0;
+        padding-right: 0;
     }
 }
 
 
-ul {
-    list-style: none inside;
+iframe {
+    &.mixcloud {
+        width: 100%;
+
+        &.mix,
+        &.playlist {
+            height: 180px;
+        }
+    }
 }
+
 
 a {
     &:link,
@@ -49,48 +103,366 @@ a {
         text-decoration-line: underline;
         text-decoration-style: dotted;
     }
-
-    &.btn {
-        display: inline-block;
-        padding: 2px 4px;
-        margin: 0 5px 5px 0;
-    }
 }
 
 
-hr { // our <hr>'s are invisible
+hr {
     border: 0;
-    height: 20px;
+    height: 6rem;
 }
 
 
 header {
     position: sticky;
     top: 0;
+    padding: 1rem;
+    margin: 0 0 2rem 0;
     text-align: center;
-    padding: 10px;
 }
 
 
 main {
-    max-width: 960px;
-    padding: 40px 20px 20px 20px;
+    max-width: 600px;
+    padding: 0 1rem 1rem 1rem;
     margin: 0 auto;
 }
 
 
-footer {
-    text-align: center;
-    margin: 100px 10px 30px 10px;
-}
-
-
-.gridbox {
-    display: block;
-}
-
-
 .box {
-    padding: 10px;
-    margin: 0 0 40px 0;
+    box-sizing: border-box;
+    padding: .75rem 1rem .5rem 1rem;
+    margin: 0 0 2rem 0;
 }
+
+
+// .grid {
+//     box-sizing: border-box;
+
+//     &.planet420-list {
+//         display: grid;
+//         grid-template-columns: auto auto auto 1fr;
+//         grid-auto-rows: auto;
+//         column-gap: 1.5rem;
+//         row-gap: .5rem;
+//     }
+// }
+
+.grid {
+    box-sizing: border-box;
+
+    .row {
+        &:hover,
+        &:focus {
+            background-color: $color-10;
+        }
+    }
+
+    &.music-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: auto;
+        column-gap: 1.5rem;
+        row-gap: 1.5rem;
+
+        .row {
+            text-align: center;
+
+            // img {}
+        }
+    }
+}
+
+
+
+
+
+
+
+.btn {
+    display: inline-block;
+    padding: .125rem .25rem;
+    margin: 0 .25rem .5rem 0;
+}
+
+
+
+
+.label {
+    font-weight: bold;
+}
+
+
+.text-align-right {
+    text-align: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+[data-lazymedia] {
+    display: inline-block;
+    padding: .25rem .25rem .25rem 1.5rem;
+    margin: 0 .5rem 0 0;
+    background-position: .25rem 50%;
+    background-size: 1rem 1rem;
+    background-repeat: no-repeat;
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// body {
+//     min-height: 100vh;
+//     scroll-behavior: smooth;
+//     text-rendering: optimizeLegibility;
+//     font-family: $font-main;
+//     line-height: 1.5;
+// }
+
+
+// body,
+// code {
+//     font-size: $font-size-00;
+// }
+
+
+// h1,
+// h2,
+// h3,
+// h4 {
+//     letter-spacing: 2px;
+// }
+
+
+// h2 {
+//     margin-bottom: 5px;
+// }
+
+// // h3,
+// // h4 {
+// //     // margin-top: 20px;
+// //     // margin-bottom: 5px;
+// // }
+
+
+// h1 {
+//     font-size: 1.7rem;
+// }
+
+// h2 {
+//     font-size: 1.5rem;
+// }
+
+// h3 {
+//     font-size: 1.3rem;
+// }
+
+// h4 {
+//     font-size: 1.1rem;
+// }
+
+
+// p,
+// ul {
+//     margin-bottom: 7px;
+
+//     &:last-child {
+//         margin-bottom: 0;
+//     }
+// }
+
+
+// ul {
+//     list-style: none inside;
+// }
+
+// a {
+//     &:link,
+//     &:visited {
+//         text-decoration: none;
+//     }
+
+//     &:hover,
+//     &:focus,
+//     &:active {
+//         text-decoration-line: underline;
+//         text-decoration-style: dotted;
+//     }
+// }
+
+
+// img {
+//     border: 2px solid;
+// }
+
+
+// hr { // our <hr>'s are invisible
+//     border: 0;
+//     height: 20px;
+// }
+
+
+// header {
+//     position: sticky;
+//     top: 0;
+//     padding: 10px;
+//     text-align: center;
+
+//     img {
+//         border: 0;
+//     }
+// }
+
+
+// main {
+//     max-width: 960px;
+//     padding: 40px 20px 20px 20px;
+//     margin: 0 auto;
+// }
+
+
+// // footer {
+// //     text-align: center;
+// //     margin: 100px 10px 30px 10px;
+// // }
+
+
+
+
+
+
+// .box {
+//     padding: 10px;
+//     margin: 0 0 40px 0;
+// }
+
+
+// .grid {
+//     // &.two-1-1 {}
+//     vertical-align: top;
+
+//     &.news-list-item {
+//         display: grid;
+//         grid-template-columns: auto 1fr;
+//         grid-auto-rows: auto;
+//         column-gap: 10px;
+//         padding: 0 0 10px 0;
+//     }
+
+//     &.rls-list-item {
+//         text-align: center;
+//         padding: 0 0 15px 0;
+//     }
+
+//     &.p420-archive { // FIXME: make other grids like this, e.g. don't do one grid per item but one per list!!!
+//         display: grid;
+//         grid-template-columns: 1fr auto auto;
+//         grid-auto-rows: auto;
+//         column-gap: 10px;
+//         row-gap: 10px;
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+// .btn {
+//     display: inline-block;
+//     padding: 2px 5px;
+//     margin: 0 5px 5px 0;
+// }
+
+
+// .label {
+//     font-weight: bold;
+// }
+
+
+// .text-align-left {
+//     text-align: left;
+// }
+
+
+// .text-align-center {
+//     text-align: center;
+// }
+
+
+// .text-align-right {
+//     text-align: right;
+// }
+
+
+// img {
+//     &.center {
+//         display: block;
+//         margin: 0 auto;
+//     }
+
+//     &.fluid {
+//         display: inline-block;
+//         width: 100%;
+//         height: auto;
+//     }
+// }

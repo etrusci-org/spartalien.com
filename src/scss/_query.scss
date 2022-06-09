@@ -1,41 +1,168 @@
+// _query
+
 @media screen and (min-width: 560px) {
     body {
         font-size: $font-size-10;
     }
 
-    header {
-        h1,
-        nav {
-            display: inline-block;
-            vertical-align: middle;
+    .grid {
+        &.music-list {
+            grid-template-columns: 1fr 1fr 1fr;
         }
-
-        h1 {
-            margin-right: 20px;
-        }
-    }
-
-    .gridbox {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: minmax(100px, auto);
-    }
-
-    .box {
-        margin: 0 40px 40px 0;
     }
 
 }
 
 
 @media screen and (min-width: 768px) {
-    body {
-        font-size: $font-size-20;
-    }
+    // body {
+    //     font-size: $font-size-20;
+    // }
+
+    // .grid {
+    //     &.music-list {
+    //         grid-template-columns: 1fr 1fr 1fr 1fr;
+    //     }
+    // }
 }
 
 
-// @media screen and (min-width: 960px) {}
+@media screen and (min-width: 960px) {
+    // body {
+    //     font-size: $font-size-30;
+    // }
+}
 
 
 // @media screen and (min-width: 1280px) {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// @media screen and (min-width: 560px) {
+//     body {
+//         font-size: $font-size-10;
+//     }
+
+//     header {
+//         h1,
+//         nav {
+//             display: inline-block;
+//             vertical-align: middle;
+//         }
+
+//         h1 {
+//             margin-right: 20px;
+//         }
+//     }
+
+//     // .grid {}
+// }
+
+
+// @media screen and (min-width: 768px) {
+//     body {
+//         font-size: $font-size-20;
+//     }
+
+//     .grid {
+//         &.two-1-1 {
+//             display: grid;
+//             grid-template-columns: 1fr 1fr;
+//             grid-auto-rows: auto;
+//             column-gap: 40px;
+//         }
+
+//         // &.news-list-item {}
+
+//         &.rls-list-item {
+//             display: grid;
+//             grid-template-columns: auto 1fr;
+//             grid-auto-rows: auto;
+//             column-gap: 10px;
+
+//             text-align: left;
+
+//             // padding: 0;
+
+//             // .title {}
+
+//             .meta {
+//                 text-align: right;
+//             }
+//         }
+//     }
+// }
+
+
+// @media screen and (min-width: 960px) {
+//     body {
+//         font-size: $font-size-30;
+//     }
+// }
+
+
+// // @media screen and (min-width: 1280px) {}

@@ -105,6 +105,7 @@ class App extends WebApp {
                         audioRelease.releaseName,
                         audioRelease.releasedOn,
                         audioRelease.updatedOn,
+                        audioRelease.audioIDs,
                         audioRelease.artistIDs,
                         audioReleaseType.typeName AS releaseType,
                     CASE
@@ -123,6 +124,7 @@ class App extends WebApp {
 
                 foreach ($data as $k => $v) {
                     $data[$k]['artist'] = $this->getArtistByID(jdec($v['artistIDs']));
+                    $data[$k]['trackCount'] = count(jdec($v['audioIDs']));
                 }
                 break;
 
@@ -344,6 +346,102 @@ class App extends WebApp {
     }
 
 
+    public function getPlanet420(string $mode, array $kwargs=array()): array {
+        $data = array();
+
+        $sessionNum = null;
+        if (isset($kwargs['num'])) {
+            $sessionNum = intval($kwargs['num']);
+        }
+        elseif (in_array('session', $this->route['flag']) && isset($this->route['var']['num'])) {
+            $sessionNum = intval($this->route['var']['num']);
+        }
+
+        switch ($mode) {
+            case 'archive':
+                $q = '
+                SELECT
+                    p420session.sessionNum, p420session.sessionDate, p420session.sessionDur, p420session.mixcloudHost, p420session.mixcloudSlug,
+                    COUNT(p420trackHistory.sessionNum) AS trackCount
+                FROM
+                    p420session
+                JOIN
+                    p420trackHistory ON p420trackHistory.sessionNum = p420session.sessionNum
+                GROUP BY
+                    p420session.sessionNum
+                ORDER BY
+                    p420session.sessionNum DESC;
+                ';
+
+                $data = $this->DB->query($q);
+                break;
+
+            case 'session':
+                if ($sessionNum) {
+                    $q = '
+                    SELECT
+                        p420session.sessionNum, p420session.sessionDate, p420session.sessionDur, p420session.mixcloudHost, p420session.mixcloudSlug,
+                        COUNT(p420trackHistory.sessionNum) AS trackCount
+                    FROM
+                        p420session
+                    JOIN
+                        p420trackHistory ON p420trackHistory.sessionNum = p420session.sessionNum
+                    WHERE
+                        p420session.sessionNum = :sessionNum
+                    GROUP BY
+                        p420session.sessionNum;
+                    ';
+
+                    $v = array(
+                        array('sessionNum', $sessionNum, SQLITE3_INTEGER),
+                    );
+
+                    $data = $this->DB->querySingle($q, $v);
+                }
+                break;
+
+            case 'session-tracklist':
+                if ($sessionNum) {
+                    $q = '
+                    SELECT
+                        artistName, trackName, timeStart
+                    FROM
+                        p420trackHistory
+                    WHERE
+                        sessionNum = :sessionNum
+                    ORDER BY
+                        timeStart ASC;
+                    ';
+
+                    $v = array(
+                        array('sessionNum', $sessionNum, SQLITE3_INTEGER),
+                    );
+
+                    $data = $this->DB->query($q, $v);
+                }
+                break;
+
+            case 'artists':
+                if (in_array('artists', $this->route['flag'])) {
+                    $q = '
+                    SELECT
+                        DISTINCT LOWER(artistName) AS artistNameLC, artistName
+                    FROM
+                        p420trackHistory
+                    ORDER BY
+                        artistNameLC ASC;
+                    ';
+
+                    $data = $this->DB->query($q);
+                }
+                break;
+
+        }
+
+        return $data;
+    }
+
+
     public function parseLazyInput(string $input): string|array|null {
         $patterns = array(
             '/\n/', // linefeed
@@ -376,11 +474,11 @@ class App extends WebApp {
         );
 
         if ($dur['d'] > 0) {
-            return sprintf('%d:%d:%d:%02d', $dur['d'], $dur['h'], $dur['m'], $dur['s']);
+            return sprintf('%d:%02d:%02d:%02d', $dur['d'], $dur['h'], $dur['m'], $dur['s']);
         }
 
         if ($dur['h'] > 0) {
-            return sprintf('%d:%d:%02d', $dur['h'], $dur['m'], $dur['s']);
+            return sprintf('%d:%02d:%02d', $dur['h'], $dur['m'], $dur['s']);
         }
 
         return sprintf('%d:%02d', $dur['m'], $dur['s']);

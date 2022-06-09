@@ -1,19 +1,5 @@
     </main>
 
-
-    <?php
-    if ($this->route['node'] != 'index') {
-        printf('
-            <footer>
-                <nav>%1$s</nav>
-            </footer>
-            ',
-            $this->getNavHTML(),
-        );
-    }
-    ?>
-
-
     <script src="res/main.js" type="module"></script>
 </body>
 </html>

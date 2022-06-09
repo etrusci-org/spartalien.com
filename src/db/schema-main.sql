@@ -63,4 +63,24 @@ CREATE TABLE IF NOT EXISTS "audioRelease" (
 	FOREIGN KEY("labelID") REFERENCES "label"("id"),
 	PRIMARY KEY("id" AUTOINCREMENT)
 );
+DROP TABLE IF EXISTS "p420trackHistory";
+CREATE TABLE IF NOT EXISTS "p420trackHistory" (
+	"id"	INTEGER,
+	"sessionNum"	INTEGER NOT NULL,
+	"timeStart"	INTEGER,
+	"artistName"	TEXT,
+	"trackName"	TEXT,
+	FOREIGN KEY("sessionNum") REFERENCES "p420session"("sessionNum"),
+	PRIMARY KEY("id" AUTOINCREMENT)
+);
+DROP TABLE IF EXISTS "p420session";
+CREATE TABLE IF NOT EXISTS "p420session" (
+	"id"	INTEGER,
+	"sessionNum"	INTEGER NOT NULL UNIQUE,
+	"sessionDate"	TEXT NOT NULL,
+	"sessionDur"	INTEGER NOT NULL DEFAULT 0,
+	"mixcloudHost"	TEXT NOT NULL DEFAULT '//mixcloud.com/lowtechman',
+	"mixcloudSlug"	TEXT,
+	PRIMARY KEY("id" AUTOINCREMENT)
+);
 COMMIT;

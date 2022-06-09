@@ -1,29 +1,47 @@
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-
-* {
-    outline: none;
-}
-
+// _reset
 
 html,
 body,
 header,
 main,
-footer,
 nav,
+div,
 h1,
 h2,
 h3,
-h4,
 p,
 ul,
+li,
+iframe,
 hr,
+table,
+th,
+td,
+a,
 img {
-    padding: 0;
     margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+body {
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+}
+
+
+a {
+    outline: none;
+}
+
+
+iframe {
+    display: block;
+}
+
+img {
+//     display: inline-block;
+    max-width: 100%;
+//     box-sizing: border-box;
 }

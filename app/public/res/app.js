@@ -18,13 +18,13 @@ export const App = {
                     if (platform == 'youtube') {
                         if (type == 'video') {
                             let embedEle = document.createElement('iframe');
-                            embedEle.setAttribute('src', `//www.youtube.com/embed/${slug}?modestbranding=1&amp;color=white&amp;rel=0`);
+                            embedEle.setAttribute('src', `//www.youtube.com/embed/${slug}?modestbranding=1&color=white&rel=0`);
                             embedEle.setAttribute('allowfullscreen', 'true');
                             node.replaceWith(embedEle);
                         }
                         if (type == 'playlist') {
                             let embedEle = document.createElement('iframe');
-                            embedEle.setAttribute('src', `//www.youtube.com/embed/videoseries?list=${slug}&amp;modestbranding=1&amp;color=white&amp;rel=0`);
+                            embedEle.setAttribute('src', `//www.youtube.com/embed/videoseries?list=${slug}&modestbranding=1&color=white&rel=0`);
                             embedEle.setAttribute('allowfullscreen', 'true');
                             node.replaceWith(embedEle);
                         }
@@ -33,6 +33,19 @@ export const App = {
                         let embedEle = document.createElement('iframe');
                         embedEle.setAttribute('src', `//bandcamp.com/EmbeddedPlayer/${type}=${slug}/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/`);
                         node.replaceWith(embedEle);
+                    }
+                    if (platform == 'mixcloud') {
+                        let embedEle = document.createElement('iframe');
+                        if (type == 'mix') {
+                            embedEle.setAttribute('src', `//www.mixcloud.com/widget/iframe/?hide_cover=1&feed=${slug}`);
+                            embedEle.classList.add('mixcloud', 'mix');
+                            node.replaceWith(embedEle);
+                        }
+                        if (type == 'playlist') {
+                            embedEle.setAttribute('src', `//www.mixcloud.com/widget/iframe/?hide_cover=1&feed=${slug}`);
+                            embedEle.classList.add('mixcloud', 'playlist');
+                            node.replaceWith(embedEle);
+                        }
                     }
                     if (platform == 'generic') {
                         if (type == 'file') {

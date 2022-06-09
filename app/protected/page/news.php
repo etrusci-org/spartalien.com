@@ -38,13 +38,17 @@ if ($newsByDate) {
 
 
 // news list
-print('<div class="box">');
+print('
+    <div class="box">
+');
 
 if ($newsByDate) {
     print('<h3>MORE NEWS ...</h3>');
 }
 
-print('<ul>');
+print('
+    <ul>
+');
 
 foreach ($newsList as $v) {
     $items = array();
@@ -55,7 +59,7 @@ foreach ($newsList as $v) {
 
     printf('
         <li>
-            <a href="%2$s"%3$s>%1$s</a>:
+            <a href="%2$s"%3$s>%1$s</a> &middot;
             %4$s
         </li>
         ',
@@ -65,7 +69,18 @@ foreach ($newsList as $v) {
         $items,
     );
 }
-print('</ul></div>');
+
+print('
+        </ul>
+    </div>
+');
+
+
+
+
+
+
+
 
 
 

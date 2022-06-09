@@ -24,7 +24,7 @@ $conf = array(
         array('music', 'MUSIC'),
         // array('visual', 'VISUAL'),
         // array('merch', 'MERCH'),
-        array('cam', 'CAM'),
+        // array('cam', 'CAM'),
         array('planet420', 'PLANET 420'),
         array('about', 'ABOUT'),
     ),

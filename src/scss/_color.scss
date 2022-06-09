@@ -1,13 +1,35 @@
+// _color
+
 body {
     color: $color-30;
     background-color: $color-10;
 }
 
-h2,
-h3,
-h4 {
-    color: $color-50;
+
+header {
+    background-color: $color-00;
+    box-shadow: 0px 0px 10px 0px $color-00;
 }
+
+
+ul {
+    li {
+        &:hover,
+        &:focus {
+            background-color: $color-10;
+        }
+    }
+}
+
+
+table {
+    tr {
+        &:hover td {
+            background-color: $color-10;
+        }
+    }
+}
+
 
 a {
     &:visited,
@@ -18,40 +40,173 @@ a {
     &:hover,
     &:focus,
     &:active {
-        color: $color-50;
+        color: $color-60;
     }
 
     &.active {
-        color: green;
-    }
-
-    &.btn {
-        background-color: $color-20;
-        box-shadow: 0px 0px 3px 0px $color-00;
-        border-radius: 5px;
+        color: $color-60;
     }
 }
 
 
-header {
-    background-color: $color-00;
-    box-shadow: 0px 0px 10px 0px $color-00;
-
-    h1 {
-        a {
-            &:visited,
-            &:link,
-            &:hover,
-            &:focus,
-            &:active {
-                color: $color-50;
-            }
-        }
-    }
-}
 
 
 .box {
     background-color: $color-20;
     box-shadow: 0px 0px 10px 0px $color-00;
 }
+
+
+
+
+.btn {
+    background-color: $color-25;
+    box-shadow: 0px 0px 3px 0px $color-00;
+
+    &:hover,
+    &:focus {
+        color: $color-10;
+        background-color: $color-30;
+    }
+}
+
+
+
+
+
+
+
+[data-lazymedia] {
+    background-color: $color-25;
+    background-image: url('loading.gif');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// body {
+//     color: $color-30;
+//     background-color: $color-10;
+// }
+
+
+// h2,
+// h3,
+// h4 {
+//     color: $color-50;
+// }
+
+
+// a {
+//     &:visited,
+//     &:link {
+//         color: $color-40;
+//     }
+
+//     &:hover,
+//     &:focus,
+//     &:active {
+//         color: $color-60;
+//     }
+
+//     &.active {
+//         color: $color-60;
+//     }
+// }
+
+
+// img {
+//     border-color: $color-10;
+// }
+
+
+// header {
+//     background-color: $color-00;
+//     box-shadow: 0px 0px 10px 0px $color-00;
+
+//     h1 {
+//         a {
+//             &:visited,
+//             &:link,
+//             &:hover,
+//             &:focus,
+//             &:active {
+//                 color: $color-50;
+//             }
+//         }
+//     }
+// }
+
+
+// .box {
+//     background-color: $color-20;
+//     box-shadow: 0px 0px 10px 0px $color-00;
+// }
+
+
+// .grid {
+//     &.news-list-item,
+//     &.rls-list-item {
+//         &:hover,
+//         &:focus {
+//             background-color: $color-25;
+//         }
+//     }
+// }
+
+
+// .btn {
+//     background-color: $color-25;
+//     box-shadow: 0px 0px 3px 0px $color-00;
+//     border-radius: 5px;
+
+//     &:hover,
+//     &:focus {
+//         color: $color-10;
+//         background-color: $color-30;
+//     }
+// }
