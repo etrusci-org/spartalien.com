@@ -1,4 +1,196 @@
 <?php
+$archiveList = $this->getPlanet420('archiveList');
+$artistsList = $this->getPlanet420('artistList');
+$sessionByID = $this->getPlanet420('sessionByID');
+
+$hoursToListen = floor(array_sum(
+    array_map(function(array $arr): int {
+        return $arr['sessionDur'];
+    }, $archiveList)
+) / 3600);
+
+if ($sessionByID) {
+    $sessionByID['tracklist'] = $this->getPlanet420('sessionTracklist');
+}
+
+
+
+
+// archive list index
+if (!$this->route['flag'] && !$this->route['var']) {
+    printf('
+        <div class="box">
+            <h2>PLANET 420</h2>
+            <p>Click the play button to listen to %1$s hours of selected eclectic music ...</p>
+            <div data-lazymedia="mixcloud:playlist:/lowtechman/playlists/planet-420/">mixcloud:playlist:/lowtechman/playlists/planet-420/</div>
+        </div>
+        ',
+        $hoursToListen,
+    );
+}
+
+
+
+
+// session by id
+if ($sessionByID) {
+    $s = $sessionByID;
+    printf('
+        <div class="box">
+            <h2>Planet 420.%1$s</h2>
+            <ul>
+                <li><span class="label">Tracks:</span> %2$s</li>
+                <li><span class="label">Runtime:</span> %3$s</li>
+                <li><span class="label">Date:</span> %4$s</li>
+                <li><span class="label">@Mixcloud:</span> %5$s</li>
+            </ul>
+            %6$s
+        ',
+        $s['sessionNum'],
+        $s['trackCount'],
+        $this->secondsToString($s['sessionDur']),
+        $s['sessionDate'],
+        ($s['mixcloudSlug']) ? sprintf('<a href="%1$s%2$s">%2$s</a>', $s['mixcloudHost'], $s['mixcloudSlug']) : 'Sorry, the recording for this one is lost.',
+        ($s['mixcloudSlug']) ? sprintf('<div data-lazymedia="mixcloud:mix:%1$s">mixcloud:mix:%1$s</div>', $s['mixcloudSlug']) : '',
+    );
+
+    print('
+        <table>
+            <thead>
+                <tr>
+                    <th class="text-align-right">start</th>
+                    <th>artist</th>
+                    <th>track</th>
+                </tr>
+            </thead>
+            <tbody>
+    ');
+
+    foreach ($s['tracklist'] as $k => $v) {
+        printf('
+            <tr>
+                <td class="text-align-right">%1$s</td>
+                <td><a href="//duckduckgo.com/?q=%4$s+artist">%2$s</a></td>
+                <td><a href="//duckduckgo.com/?q=%5$s+song">%3$s</a></td>
+            </tr>
+        ',
+        $this->secondsToString($v['timeStart']),
+        $v['artistName'],
+        $v['trackName'],
+        urlencode($v['artistName']),
+        urlencode(sprintf('%s - %s', $v['artistName'], $v['trackName'])),
+       );
+    }
+
+    print('</tbody>');
+    print('</table>');
+    print('</div>');
+}
+
+
+
+
+// archive list
+if ($archiveList) {
+    printf('<div class="box%1$s">', ($sessionByID) ? ' more' : '');
+
+    if (!$sessionByID) {
+        print('<p>... or select individual sessions below &darr;</p>');
+    }
+    else {
+        print('<h3>MORE SESSIONS ...</h3>');
+    }
+
+    print('
+        <table>
+            <thead>
+                <tr>
+                    <th>session</th>
+                    <th class="text-align-right">tracks</th>
+                    <th class="text-align-right">runtime</th>
+                    <th>date</th>
+                </tr>
+            </thead>
+            <tbody>
+    ');
+
+    foreach ($archiveList as $v) {
+        printf('
+            <tr>
+                <td><a href="%5$s"%6$s>Planet 420.%1$s</a></td>
+                <td class="text-align-right">%2$s</td>
+                <td class="text-align-right">%3$s</td>
+                <td>%4$s</td>
+            </tr>
+            ',
+            $v['sessionNum'],
+            $v['trackCount'],
+            $this->secondsToString($v['sessionDur']),
+            $v['sessionDate'],
+            $this->routeURL(sprintf('planet420/session/num:%s', $v['sessionNum'])),
+            (isset($this->route['var']['num']) && $this->route['var']['num'] == $v['sessionNum']) ? ' class="active"' : '',
+        );
+    }
+
+    print('</tbody>');
+    print('</table>');
+    print('</div>');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 $archive = $this->getPlanet420('archive');
 $session = $this->getPlanet420('session');
 $artists = $this->getPlanet420('artists');
@@ -219,39 +411,43 @@ if ($archive) {
     //     </div>
     // ');
 
-    /*
-    print('
-        <div class="box">
-    ');
 
-    if ($session) {
-        print('<h3>MORE SESSIONS ...</h3>');
-    }
 
-    print('
-        <ul class="clean">
-    ');
 
-    foreach ($archive as $v) {
-        printf('
-            <li>
-                <a href="%4$s"%5$s>Planet 420.%1$s</a> &middot;
-                %2$s, %3$s
-            </li>
-            ',
-            $v['sessionNum'],
-            $this->secondsToString($v['sessionDur']),
-            $v['sessionDate'],
-            $this->routeURL(sprintf('planet420/session/num:%s', $v['sessionNum'])),
-            (isset($this->route['var']['num']) && $this->route['var']['num'] == $v['sessionNum']) ? ' class="active"' : '',
-        );
-    }
 
-    print('
-            </ul>
-        </div>
-    ');
-    */
+
+
+    // print('
+    //     <div class="box">
+    // ');
+
+    // if ($session) {
+    //     print('<h3>MORE SESSIONS ...</h3>');
+    // }
+
+    // print('
+    //     <ul class="clean">
+    // ');
+
+    // foreach ($archive as $v) {
+    //     printf('
+    //         <li>
+    //             <a href="%4$s"%5$s>Planet 420.%1$s</a> &middot;
+    //             %2$s, %3$s
+    //         </li>
+    //         ',
+    //         $v['sessionNum'],
+    //         $this->secondsToString($v['sessionDur']),
+    //         $v['sessionDate'],
+    //         $this->routeURL(sprintf('planet420/session/num:%s', $v['sessionNum'])),
+    //         (isset($this->route['var']['num']) && $this->route['var']['num'] == $v['sessionNum']) ? ' class="active"' : '',
+    //     );
+    // }
+
+    // print('
+    //         </ul>
+    //     </div>
+    // ');
 }
 
 
@@ -259,3 +455,4 @@ if ($archive) {
 
 // ???? route: planet420/session/id:N -> individual session page
 // ???? route: planet420/artists -> individual artists list page
+*/

@@ -6,7 +6,8 @@
     }
 
     .grid {
-        &.music-list {
+        &.music-list,
+        &.visual-list {
             grid-template-columns: 1fr 1fr 1fr;
         }
     }
@@ -20,7 +21,8 @@
     // }
 
     // .grid {
-    //     &.music-list {
+    //     &.music-list,
+    //     &.visual-list {
     //         grid-template-columns: 1fr 1fr 1fr 1fr;
     //     }
     // }

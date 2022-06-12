@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 /**
  * Super simple web app for the lazy.
- *
- * @example WebApp.example/
  */
 class WebApp {
     public DatabaseSQLite3 $DB;
@@ -96,7 +94,7 @@ class WebApp {
                 return '';
             }
             else {
-                return sprintf('?r=%s', $request);
+                return sprintf('?%s=%s', $this->Router->requestKey, $request);
             }
         }
     }

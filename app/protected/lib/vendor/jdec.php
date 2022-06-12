@@ -6,12 +6,11 @@ declare(strict_types=1);
  * Convert JSON to an associative array.
  *
  * @param string|null $data  Input JSON.
- * @return array|null  Converted data or null.
- *
- * @example jdec.example.php
- * @see https://php.net/json_decode
+ * @param int $depth=512  Maximum nesting depth of the structure being decoded.
+ * @param int $flags=JSON_THROW_ON_ERROR  JSON options bitmask.
+ * @return array|bool Converted data or false.
  */
-function jdec(string|null $data): array|null {
-    if (!$data) return null;
-    return json_decode($data, TRUE);
+function jdec(string|null $data, int $depth = 512, int $flags=JSON_THROW_ON_ERROR): array|bool {
+    if (!$data) return false;
+    return json_decode(json: $data, associative: true, depth: $depth, flags: $flags);
 }

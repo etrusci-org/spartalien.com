@@ -78,7 +78,7 @@ class App extends WebApp {
         $data = array();
 
         switch ($mode) {
-            case 'list':
+            case 'releaseList':
                 $w = '';
                 $v = array();
 
@@ -128,7 +128,7 @@ class App extends WebApp {
                 }
                 break;
 
-            case 'byID':
+            case 'releaseByID':
                 $id = null;
                 if (isset($kwargs['id'])) {
                     $id = intval($kwargs['id']);
@@ -358,7 +358,7 @@ class App extends WebApp {
         }
 
         switch ($mode) {
-            case 'archive':
+            case 'archiveList':
                 $q = '
                 SELECT
                     p420session.sessionNum, p420session.sessionDate, p420session.sessionDur, p420session.mixcloudHost, p420session.mixcloudSlug,
@@ -376,7 +376,7 @@ class App extends WebApp {
                 $data = $this->DB->query($q);
                 break;
 
-            case 'session':
+            case 'sessionByID':
                 if ($sessionNum) {
                     $q = '
                     SELECT
@@ -400,7 +400,7 @@ class App extends WebApp {
                 }
                 break;
 
-            case 'session-tracklist':
+            case 'sessionTracklist':
                 if ($sessionNum) {
                     $q = '
                     SELECT
@@ -421,7 +421,7 @@ class App extends WebApp {
                 }
                 break;
 
-            case 'artists':
+            case 'artistList':
                 if (in_array('artists', $this->route['flag'])) {
                     $q = '
                     SELECT
@@ -436,6 +436,70 @@ class App extends WebApp {
                 }
                 break;
 
+        }
+
+        return $data;
+    }
+
+
+    public function getVisual(string $mode, array $kwargs=array()): array {
+        $data = array();
+
+        switch ($mode) {
+
+            case 'list':
+                $q = '
+                SELECT
+                    id, createdOn, visualName, tags, files
+                FROM
+                    visual
+                ORDER BY
+                    id DESC;
+                ';
+
+                $r = $this->DB->query($q);
+
+                if ($r) {
+                    foreach ($r as $k => $v) {
+                        $r[$k]['tags'] = jdec($v['tags']);
+                        $r[$k]['files'] = jdec($v['files']);
+                    }
+
+                    $data = $r;
+                }
+                break;
+
+            case 'byID':
+                $id = null;
+                if (isset($kwargs['id'])) {
+                    $id = intval($kwargs['id']);
+                }
+                elseif (isset($this->route['var']['id'])) {
+                    $id = intval($this->route['var']['id']);
+                }
+
+                if ($id) {
+                    $q = '
+                    SELECT
+                        id, createdOn, visualName, description, tags, files
+                    FROM
+                        visual
+                    WHERE
+                        id = :id;';
+
+                    $v = array(
+                        array('id', $id, SQLITE3_TEXT),
+                    );
+
+                    $dump = $this->DB->querySingle($q, $v);
+
+                    if ($dump) {
+                        $dump['tags'] = jdec($dump['tags']);
+                        $dump['files'] = jdec($dump['files']);
+                        $data = $dump;
+                    }
+                }
+                break;
         }
 
         return $data;

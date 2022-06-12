@@ -36,12 +36,10 @@ a {
 }
 
 
-iframe {
-    display: block;
-}
-
-img {
-//     display: inline-block;
+iframe,
+img,
+audio,
+video {
     max-width: 100%;
-//     box-sizing: border-box;
+    box-sizing: border-box;
 }

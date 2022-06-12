@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 /**
  * SQLite3 wrapper for the lazy.
- *
- * @example DatabaseSQLite3.example.php
- * @see https://php.net/SQLite3
  */
 class DatabaseSQLite3 {
     protected $dbFile;
@@ -18,7 +15,7 @@ class DatabaseSQLite3 {
      * Class constructor.
      *
      * @param string $dbFile  Path to database file to use.
-     * @param string $encryptionKey  Encryption key if any.
+     * @param string $encryptionKey=''  Encryption key if any.
      * @return void
      */
     public function __construct(string $dbFile, string $encryptionKey='') {

@@ -8,8 +8,6 @@ declare(strict_types=1);
  * The idea is to provide a syntax for generating and reading your web app routes.
  * It's hard sometimes doing this with individual query string variables. With this
  * approach you'll have all the needed data in an array ready to use.
- *
- * @example WebRouter.example.php
  */
 class WebRouter {
     public $requestSource = 'get+post';

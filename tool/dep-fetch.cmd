@@ -1,18 +1,14 @@
 @echo off
 
-:: Requires:
-:: - curl
-::
-:: Usage:
-::
-:: $ cd <project_directory>/
-:: $ ./tool/dep-fetch.cmd
+:: etrusci-org/nifty
+curl -o app/protected/lib/vendor/WebApp.php             https://raw.githubusercontent.com/etrusci-org/nifty/main/php/WebApp.php
+curl -o app/protected/lib/vendor/WebRouter.php          https://raw.githubusercontent.com/etrusci-org/nifty/main/php/WebRouter.php
+curl -o app/protected/lib/vendor/DatabaseSQLite3.php    https://raw.githubusercontent.com/etrusci-org/nifty/main/php/DatabaseSQLite3.php
+curl -o app/protected/lib/vendor/jdec.php               https://raw.githubusercontent.com/etrusci-org/nifty/main/php/jdec.php
+curl -o app/protected/lib/vendor/jenc.php               https://raw.githubusercontent.com/etrusci-org/nifty/main/php/jenc.php
+curl -o app/protected/lib/vendor/hsc5.php               https://raw.githubusercontent.com/etrusci-org/nifty/main/php/hsc5.php
+curl -o src/ts/vendor/pathBasename.ts                   https://raw.githubusercontent.com/etrusci-org/nifty/main/typescript/pathBasename.ts
 
-curl -o app/protected/lib/vendor/WebApp.php          https://raw.githubusercontent.com/etrusci-org/nifty/main/php/class/WebApp.php
-curl -o app/protected/lib/vendor/WebRouter.php       https://raw.githubusercontent.com/etrusci-org/nifty/main/php/class/WebRouter.php
-curl -o app/protected/lib/vendor/DatabaseSQLite3.php https://raw.githubusercontent.com/etrusci-org/nifty/main/php/class/DatabaseSQLite3.php
-curl -o app/protected/lib/vendor/jdec.php            https://raw.githubusercontent.com/etrusci-org/nifty/main/php/function/jdec.php
-curl -o app/protected/lib/vendor/jenc.php            https://raw.githubusercontent.com/etrusci-org/nifty/main/php/function/jenc.php
-curl -o app/protected/lib/vendor/hsc5.php            https://raw.githubusercontent.com/etrusci-org/nifty/main/php/function/hsc5.php
-curl -o src/ts/vendor/scur.ts                        https://raw.githubusercontent.com/etrusci-org/scur/main/src/scur.ts
-curl -o src/ts/vendor/scur.types.d.ts                https://raw.githubusercontent.com/etrusci-org/scur/main/src/scur.types.d.ts
+:: etrusci-org/scur
+curl -o src/ts/vendor/scur.ts                           https://raw.githubusercontent.com/etrusci-org/scur/main/src/scur.ts
+curl -o src/ts/vendor/scur.types.d.ts                   https://raw.githubusercontent.com/etrusci-org/scur/main/src/scur.types.d.ts

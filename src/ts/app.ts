@@ -1,4 +1,5 @@
 import { Scur } from './vendor/scur.js'
+import { pathBasename } from './vendor/pathBasename.js'
 
 
 export const App: AppInterface = {
@@ -23,15 +24,17 @@ export const App: AppInterface = {
                     let slug      = mediaCode.slice(2).join(':')
 
                     if (platform == 'youtube') {
+                        let embedEle = document.createElement('iframe')
+                        embedEle.classList.add('lazymedia')
+                        embedEle.setAttribute('loading', 'lazy')
+
                         if (type == 'video') {
-                            let embedEle = document.createElement('iframe')
                             embedEle.setAttribute('src', `//www.youtube.com/embed/${slug}?modestbranding=1&color=white&rel=0`)
                             embedEle.setAttribute('allowfullscreen', 'true')
                             node.replaceWith(embedEle)
                         }
 
                         if (type == 'playlist') {
-                            let embedEle = document.createElement('iframe')
                             embedEle.setAttribute('src', `//www.youtube.com/embed/videoseries?list=${slug}&modestbranding=1&color=white&rel=0`)
                             embedEle.setAttribute('allowfullscreen', 'true')
                             node.replaceWith(embedEle)
@@ -40,12 +43,16 @@ export const App: AppInterface = {
 
                     if (platform == 'bandcamp') {
                         let embedEle = document.createElement('iframe')
+                        embedEle.classList.add('lazymedia')
+                        embedEle.setAttribute('loading', 'lazy')
                         embedEle.setAttribute('src', `//bandcamp.com/EmbeddedPlayer/${type}=${slug}/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/`)
                         node.replaceWith(embedEle)
                     }
 
                     if (platform == 'mixcloud') {
                         let embedEle = document.createElement('iframe')
+                        embedEle.classList.add('lazymedia')
+                        embedEle.setAttribute('loading', 'lazy')
 
                         if (type == 'mix') {
                             embedEle.setAttribute('src', `//www.mixcloud.com/widget/iframe/?hide_cover=1&feed=${slug}`)
@@ -61,27 +68,57 @@ export const App: AppInterface = {
                     }
 
                     if (platform == 'generic') {
-                        if (type == 'file') {
+                        // make slug a local path if it does not start with http
+                        if (slug.slice(0, 4) != 'http') {
+                            slug = `file/${slug}`
+                        }
+
+                        if (type == 'none') {
                             let embedEle = document.createElement('a')
-                            embedEle.setAttribute('href', `file/${slug}`)
-                            embedEle.innerHTML = slug
+                            embedEle.classList.add('lazymedia')
+                            embedEle.setAttribute('href', slug)
+                            embedEle.innerHTML = pathBasename(slug)
                             node.replaceWith(embedEle)
                         }
 
                         if (type == 'image') {
                             let embedEle = document.createElement('img')
-                            embedEle.setAttribute('src', `file/${slug}`)
-                            embedEle.setAttribute('alt', `${slug}`)
+                            embedEle.classList.add('lazymedia')
+                            embedEle.setAttribute('src', slug)
+                            embedEle.setAttribute('alt', slug)
+                            embedEle.setAttribute('loading', 'lazy')
                             node.replaceWith(embedEle)
                         }
 
-                        // TODO
-                        // if (type == 'audio') {}
-                        // if (type == 'video') {}
+                        if (type == 'image-lb') {
+                            let embedEle1 = document.createElement('a')
+                            embedEle1.classList.add('lazymedia')
+                            embedEle1.dataset['lightbox'] = slug
+                            embedEle1.setAttribute('href', slug)
+                            let embedEle2 = document.createElement('img')
+                            embedEle2.setAttribute('src', slug)
+                            embedEle2.setAttribute('alt', slug)
+                            embedEle2.setAttribute('loading', 'lazy')
+                            embedEle1.appendChild(embedEle2)
+                            node.replaceWith(embedEle1)
+                        }
+
+                        if (type == 'video-mp4') {
+                            let embedEle1 = document.createElement('video')
+                            embedEle1.classList.add('lazymedia')
+                            embedEle1.setAttribute('autoplay', 'true')
+                            embedEle1.setAttribute('loop', 'true')
+                            embedEle1.setAttribute('controls', 'true')
+                            let embedEle2 = document.createElement('source')
+                            embedEle2.setAttribute('src', slug)
+                            embedEle2.setAttribute('type', 'video/mp4')
+                            embedEle1.appendChild(embedEle2)
+                            node.replaceWith(embedEle1)
+                        }
+
+                        // TODO: audio
                     }
-
                 }
-
             })
         }
     },

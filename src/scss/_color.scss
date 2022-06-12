@@ -42,13 +42,17 @@ a {
     &:active {
         color: $color-60;
     }
-
-    &.active {
-        color: $color-60;
-    }
 }
 
 
+a.active {
+    color: $color-60;
+}
+
+
+.error {
+    color: $color-70;
+}
 
 
 .box {
@@ -77,6 +81,7 @@ a {
 
 
 [data-lazymedia] {
+    color: $color-70;
     background-color: $color-25;
     background-image: url('loading.gif');
 }
