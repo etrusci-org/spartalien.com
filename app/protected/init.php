@@ -10,4 +10,5 @@ require_once __DIR__.'/conf.php';
 require_once __DIR__.'/lib/app.php';
 
 $App = new App($conf);
+$App->validateRequest();
 $App->renderOutput();

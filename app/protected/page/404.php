@@ -1,9 +1,17 @@
 <div class="box">
     <h2>Error 404</h2>
     <p>
-        The requested page or resource
+        Your request
         <code>[<?php print($this->route['request']); ?>]</code>
-        does not exist or was moved to another location.
+        is invalid.
     </p>
-    <img src="res/err404.gif" class="fluid">
+    <p>
+        Feel free to send me the following code if you think this is a bug.
+    </p>
+    <p>
+        <code>route: <?php print(jenc($this->route)); ?></code>
+    </p>
+    <p>
+        <img src="res/err404.gif" class="fluid">
+    </p>
 </div>

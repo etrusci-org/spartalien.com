@@ -45,8 +45,20 @@ export const App: AppInterface = {
                         let embedEle = document.createElement('iframe')
                         embedEle.classList.add('lazymedia')
                         embedEle.setAttribute('loading', 'lazy')
-                        embedEle.setAttribute('src', `//bandcamp.com/EmbeddedPlayer/${type}=${slug}/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/`)
-                        node.replaceWith(embedEle)
+
+                        if (type == 'track') {
+                            embedEle.setAttribute('src', `//bandcamp.com/EmbeddedPlayer/track=${slug}/size=small/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/`)
+                            embedEle.classList.add('bandcamp', 'track')
+                            node.replaceWith(embedEle)
+                        }
+
+                        if (type == 'album') {
+                            // TODO: port auto-height from old version:
+                            // playerheight = `style="height: ${Math.round(120 + 60 + (32 * this.dataset.trackcount))}px;"`;
+                            embedEle.setAttribute('src', `//bandcamp.com/EmbeddedPlayer/album=${slug}/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/`)
+                            embedEle.classList.add('bandcamp', 'album')
+                            node.replaceWith(embedEle)
+                        }
                     }
 
                     if (platform == 'mixcloud') {
@@ -90,20 +102,21 @@ export const App: AppInterface = {
                             node.replaceWith(embedEle)
                         }
 
-                        if (type == 'image-lb') {
-                            let embedEle1 = document.createElement('a')
-                            embedEle1.classList.add('lazymedia')
-                            embedEle1.dataset['lightbox'] = slug
-                            embedEle1.setAttribute('href', slug)
-                            let embedEle2 = document.createElement('img')
-                            embedEle2.setAttribute('src', slug)
-                            embedEle2.setAttribute('alt', slug)
-                            embedEle2.setAttribute('loading', 'lazy')
-                            embedEle1.appendChild(embedEle2)
-                            node.replaceWith(embedEle1)
-                        }
+                        // if (type == 'image-lb') {
+                        //     let embedEle1 = document.createElement('a')
+                        //     embedEle1.classList.add('lazymedia')
+                        //     embedEle1.dataset['lightbox'] = slug
+                        //     embedEle1.setAttribute('href', slug)
+                        //     let embedEle2 = document.createElement('img')
+                        //     embedEle2.setAttribute('src', slug)
+                        //     embedEle2.setAttribute('alt', slug)
+                        //     embedEle2.setAttribute('loading', 'lazy')
+                        //     embedEle1.appendChild(embedEle2)
+                        //     node.replaceWith(embedEle1)
+                        // }
 
-                        if (type == 'video-mp4') {
+                        // if (type == 'video-mp4') {
+                        if (type == 'video') {
                             let embedEle1 = document.createElement('video')
                             embedEle1.classList.add('lazymedia')
                             embedEle1.setAttribute('autoplay', 'true')

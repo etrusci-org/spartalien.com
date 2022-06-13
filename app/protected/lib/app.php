@@ -3,6 +3,36 @@ declare(strict_types=1);
 
 
 class App extends WebApp {
+    public function validateRequest(): void {
+        if (!$this->conf['validateRequests']) {
+            return;
+        }
+
+        // prepare request
+        $request = trim($this->route['request'], ' /');
+
+        // prepare/expand valid requests
+        $validRequests = array();
+
+        foreach ($this->conf['validRequests'] as $requestPattern) {
+            // :[n-n]
+            if (preg_match('/(.+:)\[(\d+)-(\d+)\]/i', $requestPattern, $patternMatch)) {
+                foreach (range($patternMatch[2], $patternMatch[3]) as $n) {
+                    $validRequests[] = sprintf('%1$s%2$s', $patternMatch[1], $n);
+                }
+            }
+            else {
+                $validRequests[] = $requestPattern;
+            }
+        }
+
+        // set node to 404 if invalid request
+        if (!in_array($request, $validRequests)) {
+            $this->route['node'] = '404';
+        }
+    }
+
+
     public function getNavHTML($separator=' &middot; '): string {
         $nav = array();
         foreach ($this->conf['nav'] as $v) {
@@ -331,19 +361,19 @@ class App extends WebApp {
     }
 
 
-    static function getCollabArtist(array $audioArtist): array {
-        $artist = array();
-
-        if (count($audioArtist) > 1) {
-            foreach ($audioArtist as $v) {
-                if ($v['id'] != 1) {
-                    $artist[] = hsc5($v['artistName']);
-                }
-            }
-        }
-
-        return $artist;
-    }
+    // static function getCollabArtist(array $audioArtist): array {
+    //     $artist = array();
+    //
+    //     if (count($audioArtist) > 1) {
+    //         foreach ($audioArtist as $v) {
+    //             if ($v['id'] != 1) {
+    //                 $artist[] = $v['artistName'];
+    //             }
+    //         }
+    //     }
+    //
+    //     return $artist;
+    // }
 
 
     public function getPlanet420(string $mode, array $kwargs=array()): array {
@@ -450,7 +480,7 @@ class App extends WebApp {
             case 'list':
                 $q = '
                 SELECT
-                    id, createdOn, visualName, tags, files
+                    id, createdOn, visualName, tags, media
                 FROM
                     visual
                 ORDER BY
@@ -462,7 +492,7 @@ class App extends WebApp {
                 if ($r) {
                     foreach ($r as $k => $v) {
                         $r[$k]['tags'] = jdec($v['tags']);
-                        $r[$k]['files'] = jdec($v['files']);
+                        $r[$k]['media'] = jdec($v['media']);
                     }
 
                     $data = $r;
@@ -481,7 +511,7 @@ class App extends WebApp {
                 if ($id) {
                     $q = '
                     SELECT
-                        id, createdOn, visualName, description, tags, files
+                        id, createdOn, visualName, description, tags, media
                     FROM
                         visual
                     WHERE
@@ -495,7 +525,7 @@ class App extends WebApp {
 
                     if ($dump) {
                         $dump['tags'] = jdec($dump['tags']);
-                        $dump['files'] = jdec($dump['files']);
+                        $dump['media'] = jdec($dump['media']);
                         $data = $dump;
                     }
                 }

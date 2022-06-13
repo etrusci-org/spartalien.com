@@ -1,6 +1,13 @@
 <?php
 $releaseList = $this->getAudio('releaseList');
 $releaseByID = $this->getAudio('releaseByID');
+$releaseFilter = $this->getAudioFilter();
+
+$releaseFilterHTML = array();
+foreach ($releaseFilter as $v) {
+    $releaseFilterHTML[] = sprintf('<a href="%2$s" class="btn%3$s">%1$s</a>', $v[0], $v[1], $v[2] ? ' active' : '');
+}
+$releaseFilterHTML = implode(' ', $releaseFilterHTML);
 
 
 
@@ -13,8 +20,7 @@ if (!$releaseByID) {
             %1$s
         </div>
         ',
-        // $filterHTML,
-        '[todo:filter_html]'
+        $releaseFilterHTML,
     );
 }
 
@@ -36,6 +42,116 @@ if (isset($this->route['var']['id']) && !$releaseByID) {
 
 
 // release by id
+if ($releaseByID) {
+    $rls = $releaseByID;
+
+    $platformBtnTpl = '<a href="%1$s" class="btn">%2$s</a>';
+
+    $bandcampBtn = '';
+    if ($rls['bandcampSlug']) {
+        $bandcampBtn = sprintf($platformBtnTpl,
+            $rls['bandcampHost'].$rls['bandcampSlug'].'?action=buy&from=embed',
+            ($rls['freeToDownload']) ? 'FREE DOWNLOAD' : 'BUY',
+        );
+    }
+
+    $spotifyBtn = '';
+    if ($rls['spotifySlug']) {
+        $spotifyBtn = sprintf($platformBtnTpl,
+            $rls['spotifyHost'].$rls['spotifySlug'],
+            'STREAM',
+        );
+    }
+
+
+
+
+
+    print('<div class="box">');
+
+
+
+
+
+
+
+    // rls heading
+    printf('
+        <h2>%s</h2>',
+        $rls['releaseName']
+    );
+
+
+    // meta nfo
+    printf('
+        <p>
+            %1$s &middot;
+            %2$s &middot;
+            %3$s
+            Released %4$s
+            %5$s
+            %6$s
+        </p>',
+        $rls['releaseType'],
+        sprintf(ngettext('%s track', '%s tracks', count($rls['tracklist'])), count($rls['tracklist'])),
+        (count($rls['artist']) > 1) ? 'Collab &middot; ' : '',
+        $rls['releasedOn'],
+        ($rls['updatedOn']) ? sprintf('&middot; Updated %s', $rls['updatedOn']) : '',
+        ($rls['labelName']) ? sprintf('&middot; Label %s', sprintf('<a href="%1$s">%2$s</a>', $rls['labelURL'], $rls['labelName'])) : '',
+    );
+
+
+    // buy/stream buttons
+    printf(
+        '<p>%1$s %2$s</p>',
+        $bandcampBtn,
+        $spotifyBtn,
+    );
+
+
+    // description
+    printf(
+        '<p>%s</p>',
+        $this->parseLazyInput($rls['description']),
+    );
+
+
+    // cover image
+    printf(
+        '<p><a href="file/cover/%1$s-big.png"><img src="file/cover/%1$s-med.jpg" class="fluid" loading="lazy"></a></p>',
+        $rls['id'],
+    );
+
+
+    // bandcamp release player
+    if ($rls['bandcampID']) {
+        printf('<div data-lazymedia="bandcamp:%1$s:%2$s">bandcamp:%1$s:%2$s</div>', ((count($rls['tracklist']) > 1) ? 'album' : 'track'), $rls['bandcampID']);
+    }
+
+
+    // tracklist
+    print('<h3>TRACKLIST</h3>');
+    print('<ul>');
+    foreach ($rls['tracklist'] as $k => $v) {
+        printf('
+            <li>%1$s. %2$s [%3$s] %4$s %5$s</li>',
+            $k+1,
+            $v['audioName'],
+            $v['audioRuntimeString'],
+            ($v['bandcampSlug']) ? sprintf('<a href="%1$s%2$s"><img src="res/ico-bandcamp.png" alt="Bandcamp"></a>', $v['bandcampHost'], $v['bandcampSlug']) : '',
+            ($v['spotifySlug']) ? sprintf('<a href="%1$s%2$s"><img src="res/ico-spotify.png" alt="Spotify"></a>', $v['spotifyHost'], $v['spotifySlug']) : '',
+        );
+    }
+    print('</ul>');
+
+
+
+    print('</div>');
+
+    print('<pre>'); print_r($rls); print('</pre>');
+}
+
+/*
 if ($releaseByID) {
     $rls = $releaseByID;
 
@@ -162,7 +278,7 @@ if ($releaseByID) {
 
     print('</div>');
 }
-
+*/
 
 
 
@@ -177,31 +293,295 @@ if ($releaseList) {
     print('<div class="grid music-list">');
 
     foreach ($releaseList as $v) {
-        $collabArtist = $this->getCollabArtist($v['artist']);
         printf('
             <div class="row">
-                <a href="%1$s"%4$s>
-                    <img src="file/cover/%8$s-tn.jpg" alt="cover art" loading="lazy"><br>
-                    %2$s
+                <a href="%2$s"%8$s>
+                    <img src="file/cover/%1$s-tn.jpg" alt="cover art" class="fluid" loading="lazy"><br>
+                    %3$s
                 </a><br>
-                %3$s %5$s, %6$s, %7$s
+                %4$s, %5$s, %6$s%7$s
             </div>
             ',
+            $v['id'],
             $this->routeURL(sprintf('music/id:%s', $v['id'])),
             $v['releaseName'],
-            // ($collabArtist) ? sprintf('Collab w/ %s,', implode(' + ', $collabArtist)) : '',
-            ($collabArtist) ? 'Collab,' : '',
-            (isset($this->route['var']['id']) && $this->route['var']['id'] == $v['id']) ? ' class="active"' : '',
             $v['releaseType'],
-            sprintf('%1$s&nbsp;track%2$s', $v['trackCount'], $v['trackCount'] > 1 ? 's' : ''),
+            sprintf(ngettext('%s track', '%s tracks', $v['trackCount']), $v['trackCount']),
+            (count($v['artist']) > 1) ? 'Collab, ' : '',
             ($v['updatedOn']) ? substr($v['updatedOn'], 0, 4) : substr($v['releasedOn'], 0, 4),
-            $v['id'],
+            (isset($this->route['var']['id']) && $this->route['var']['id'] == $v['id']) ? ' class="active"' : '',
         );
     }
 
     print('</div>');
     print('</div>');
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

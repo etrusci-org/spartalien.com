@@ -33,35 +33,14 @@ if (isset($this->route['var']['id']) && !$visualByID) {
 
 // visual by id
 if ($visualByID) {
-    $lazymedia = array();
-    foreach ($visualByID['files'] as $v) {
-        $type = null;
-        switch (pathinfo($v)['extension']) {
-            case 'png':
-            case 'jpg':
-            case 'gif':
-                $type = 'image-lb';
-                break;
-
-            case 'mp4':
-                $type = 'video-mp4';
-                break;
-
-            // TODO: mp3
-            // TODO: wav
-
-            default:
-                $type = 'none';
-        }
-        $lazymedia[] = sprintf('<div data-lazymedia="generic:%1$s:%2$s">generic:%1$s:%2$s</div>', $type, $v);
-    }
+    $lazymedia = array_map(function(string $v): string {
+        return sprintf('<div data-lazymedia="%1$s">%1$s</div>', $v);
+    }, $visualByID['media']);
 
     printf('
         <div class="box">
             <h2>%1$s</h2>
-            <p>
-                [ %2$s, %3$s ]
-            </p>
+            <p>%2$s, %3$s</p>
             %4$s
         </div>
         ',
