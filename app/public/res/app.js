@@ -1,6 +1,7 @@
 import { Scur } from './vendor/scur.js';
 import { pathBasename } from './vendor/pathBasename.js';
 export const App = {
+    filesBasePath: '',
     main() {
         console.log('SPARTALIEN.COM');
         this.loadLazyMedia();
@@ -32,17 +33,24 @@ export const App = {
                         }
                     }
                     if (platform == 'bandcamp') {
+                        let trackCount = 1;
+                        let slugRest = slug.split(':');
+                        if (slugRest[0] && slugRest[1]) {
+                            slug = slugRest[0];
+                            trackCount = parseInt(slugRest[1]);
+                        }
                         let embedEle = document.createElement('iframe');
                         embedEle.classList.add('lazymedia');
                         embedEle.setAttribute('loading', 'lazy');
                         if (type == 'track') {
-                            embedEle.setAttribute('src', `//bandcamp.com/EmbeddedPlayer/track=${slug}/size=small/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/`);
+                            embedEle.setAttribute('src', `//bandcamp.com/EmbeddedPlayer/track=${slug}/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=none/transparent=true/`);
                             embedEle.classList.add('bandcamp', 'track');
                             node.replaceWith(embedEle);
                         }
                         if (type == 'album') {
                             embedEle.setAttribute('src', `//bandcamp.com/EmbeddedPlayer/album=${slug}/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/`);
                             embedEle.classList.add('bandcamp', 'album');
+                            embedEle.style.height = `${Math.round(120 + (33 * trackCount) + 33)}px`;
                             node.replaceWith(embedEle);
                         }
                     }
@@ -63,7 +71,7 @@ export const App = {
                     }
                     if (platform == 'generic') {
                         if (slug.slice(0, 4) != 'http') {
-                            slug = `file/${slug}`;
+                            slug = `${this.filesBasePath}${slug}`;
                         }
                         if (type == 'none') {
                             let embedEle = document.createElement('a');
@@ -73,12 +81,17 @@ export const App = {
                             node.replaceWith(embedEle);
                         }
                         if (type == 'image') {
-                            let embedEle = document.createElement('img');
-                            embedEle.classList.add('lazymedia');
-                            embedEle.setAttribute('src', slug);
-                            embedEle.setAttribute('alt', slug);
-                            embedEle.setAttribute('loading', 'lazy');
-                            node.replaceWith(embedEle);
+                            let embedEle1 = document.createElement('a');
+                            embedEle1.classList.add('lazymedia');
+                            embedEle1.dataset['lightbox'] = (node.classList.contains('gallery')) ? 'gallery' : pathBasename(slug);
+                            embedEle1.dataset['title'] = pathBasename(slug);
+                            embedEle1.setAttribute('href', slug);
+                            let embedEle2 = document.createElement('img');
+                            embedEle2.setAttribute('src', slug);
+                            embedEle2.setAttribute('alt', pathBasename(slug));
+                            embedEle2.setAttribute('loading', 'lazy');
+                            embedEle1.appendChild(embedEle2);
+                            node.replaceWith(embedEle1);
                         }
                         if (type == 'video') {
                             let embedEle1 = document.createElement('video');

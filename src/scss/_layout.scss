@@ -95,13 +95,17 @@ img {
         height: auto;
     }
 
-    &[src^="res/ico-"] {
+    &[src^='res/ico-'] {
         display: inline-block;
         width: auto;
         height: .85rem;
         margin: 0 .25rem .25rem 0;
         vertical-align: text-top;
     }
+
+    // &[src$='-tn.jpg'] {
+    //     background-color: yellow;
+    // }
 }
 
 
@@ -150,7 +154,7 @@ main {
     margin: 0 0 2rem 0;
 
     &.more {
-        margin-top: 6rem;
+        margin-top: 10rem;
     }
 }
 
@@ -245,18 +249,6 @@ main {
     background-repeat: no-repeat;
 }
 
-// iframe.lazymedia {
-//     display: block;
-// }
-
-// img,
-// audio,
-// video,
-// a {
-//     &.lazymedia {
-//         display: inline-block;
-//     }
-// }
 
 .lazymedia {
     display: block;
@@ -271,7 +263,7 @@ main {
 
         &.track {
             min-width: 170px;
-            height: 42px;
+            height: 120px;
         }
 
         &.album {
@@ -286,6 +278,17 @@ main {
         &.mix,
         &.playlist {
             height: 180px;
+        }
+    }
+
+    &[data-lightbox='gallery'] {
+        display: inline-block;
+        max-width: 170px;
+        height: auto;
+        margin: 0 1rem 1rem 0;
+
+        &:last-child {
+            margin-bottom: .5rem;
         }
     }
 }

@@ -1,12 +1,12 @@
 <?php
 $newsList = $this->getNews('list');
-$newsByDate = $this->getNews('byDate');
+$newsByID = $this->getNews('byID');
 
 
 
 
 // news list index
-if (!$newsByDate) {
+if (!$newsByID) {
     print('
         <div class="box">
             <h2>NOTABLE UPDATES AND CHANGES</h2>
@@ -21,22 +21,20 @@ if (!$newsByDate) {
 
 
 
-// news by date
-if ($newsByDate) {
-    $items = array();
-    foreach ($newsByDate['items'] as $i) {
-        $items[] = sprintf('<p>%s</p>', $this->parseLazyInput($i));
-    }
-    $items = implode('', $items);
+// news by id
+if ($newsByID) {
+    $nws = $newsByID;
+
+    $items = implode(' ', array_map(function(string $v): string {
+        return sprintf('<p>%s</p>', $this->parseLazyInput($v));
+    }, $nws['items']));
 
     printf('
         <div class="box">
             <h2>NEWS FROM %1$s</h2>
-            %3$s
-        </div>
-        ',
-        $newsByDate['postedOn'],
-        $this->routeURL(sprintf('news/date:%s', $newsByDate['postedOn'])),
+            %2$s
+        </div>',
+        $nws['postedOn'],
         $items,
     );
 }
@@ -46,27 +44,24 @@ if ($newsByDate) {
 
 // news list
 if ($newsList) {
-    printf('<div class="box%1$s">', ($newsByDate) ? ' more' : '');
+    printf('<div class="box%1$s">', ($newsByID) ? ' more' : '');
 
-    if ($newsByDate) {
+    if ($newsByID) {
         print('<h3>MORE NEWS ...</h3>');
     }
 
     print('<ul>');
 
     foreach ($newsList as $v) {
-        $items = array();
-        foreach ($v['items'] as $i) {
-            $items[] = sprintf('%s', $this->parseLazyInput($i));
-        }
-        $items = implode(' + ', $items);
+        $items = implode(' + ', array_map(function($v) {
+            return $this->parseLazyInput($v);
+        }, $v['items']));
 
         printf('
             <li>
                 <a href="%2$s"%3$s>%1$s</a> &middot;
                 %4$s
-            </li>
-            ',
+            </li>',
             $v['postedOn'],
             $this->routeURL(sprintf('news/id:%s', $v['id'])),
             (isset($this->route['var']['id']) && $this->route['var']['id'] == $v['id']) ? ' class="active"' : '',
@@ -77,245 +72,3 @@ if ($newsList) {
     print('</ul>');
     print('</div>');
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // news list
-// print('
-//     <div class="box">
-// ');
-
-// if ($newsByDate) {
-//     print('<h3>MORE NEWS ...</h3>');
-// }
-
-// print('
-//     <ul>
-// ');
-
-// foreach ($newsList as $v) {
-//     $items = array();
-//     foreach ($v['items'] as $i) {
-//         $items[] = sprintf('%s', $this->parseLazyInput($i));
-//     }
-//     $items = implode(' + ', $items);
-
-//     printf('
-//         <li>
-//             <a href="%2$s"%3$s>%1$s</a> &middot;
-//             %4$s
-//         </li>
-//         ',
-//         $v['postedOn'],
-//         $this->routeURL(sprintf('news/id:%s', $v['id'])),
-//         (isset($this->route['var']['id']) && $this->route['var']['id'] == $v['id']) ? ' class="active"' : '',
-//         $items,
-//     );
-// }
-
-// print('
-//         </ul>
-//     </div>
-// ');
-
-
-
-
-
-
-
-
-
-
-/*
-$newsList = $this->getNews('list');
-$newsByDate = $this->getNews('byDate');
-
-
-if (!$newsByDate) {
-    print('
-        <div class="box">
-            <h2>NOTABLE UPDATES AND CHANGES</h2>
-            <p>
-                Subscribe to the <a href="#">Newsletter</a> to get these news directly in your inbox.
-                Follow me on <a href="#">Twitter</a> and <a href="#">Instagram</a> for random bleeps in between.
-            </p>
-        </div>
-    ');
-}
-
-
-// news by date
-if ($newsByDate) {
-    $items = array();
-    foreach ($newsByDate['items'] as $i) {
-        $items[] = sprintf('<p>%s</p>', $this->parseLazyInput($i));
-    }
-    $items = implode('', $items);
-
-    printf('
-        <div class="box">
-            <h2>NEWS FROM %1$s</h2>
-            %3$s
-        </div>
-        ',
-        $newsByDate['postedOn'],
-        $this->routeURL(sprintf('news/date:%s', $newsByDate['postedOn'])),
-        $items,
-    );
-}
-
-
-// news list
-print('
-    <div class="box">
-');
-
-if ($newsByDate) {
-    print('<h3>MORE NEWS ...</h3>');
-}
-
-print('
-    <ul>
-');
-
-foreach ($newsList as $v) {
-    $items = array();
-    foreach ($v['items'] as $i) {
-        $items[] = sprintf('%s', $this->parseLazyInput($i));
-    }
-    $items = implode(' + ', $items);
-
-    printf('
-        <li>
-            <a href="%2$s"%3$s>%1$s</a> &middot;
-            %4$s
-        </li>
-        ',
-        $v['postedOn'],
-        $this->routeURL(sprintf('news/id:%s', $v['id'])),
-        (isset($this->route['var']['id']) && $this->route['var']['id'] == $v['id']) ? ' class="active"' : '',
-        $items,
-    );
-}
-
-print('
-        </ul>
-    </div>
-');
-*/
-
-
-
-
-
-
-
-
-
-
-
-/*
-$newsList = $this->getNews('list');
-$newsByDate = $this->getNews('byDate');
-
-
-print('
-    <div class="box">
-        <h2>NEWS</h2>
-        <p>
-            Notable updates and changes.
-            Subscribe to the <a href="#">Newsletter</a> to get these news directly in your inbox.
-            Follow me on <a href="#">Twitter</a> and <a href="#">Instagram</a> for random bleeps in between.
-        </p>
-    </div>
-');
-
-
-// new by date
-if ($newsByDate) {
-    $items = array();
-    foreach ($newsByDate['items'] as $i) {
-        $items[] = sprintf('<p>%s</p>', $this->parseLazyInput($i));
-    }
-    $items = implode('', $items);
-
-    printf('
-        <div class="box">
-            <h3>NEWS FROM %1$s</h3>
-            %3$s
-        </div>
-        ',
-        $newsByDate['postedOn'],
-        $this->routeURL(sprintf('news/date:%s', $newsByDate['postedOn'])),
-        $items,
-    );
-}
-
-
-// news list
-print('<div class="box">');
-
-if ($newsByDate) {
-    print('<h4>MORE NEWS...</h4>');
-}
-
-print('<ul>');
-
-foreach ($newsList as $v) {
-    $items = array();
-    foreach ($v['items'] as $i) {
-        $items[] = sprintf('%s', $this->parseLazyInput($i));
-    }
-    $items = implode(' + ', $items);
-
-    printf('
-        <li>
-            <a href="%2$s"%3$s>%1$s</a>:
-            %4$s
-        </li>
-        ',
-        $v['postedOn'],
-        $this->routeURL(sprintf('news/id:%s', $v['id'])),
-        (isset($this->route['var']['id']) && $this->route['var']['id'] == $v['id']) ? ' class="active"' : '',
-        $items,
-    );
-}
-print('</ul></div>');
-*/

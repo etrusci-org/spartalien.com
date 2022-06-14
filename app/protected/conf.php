@@ -1,4 +1,14 @@
 <?php
+/* --- brain ---
+Adjust on content change:
+- validRequests
+Change before deploy:
+- cachingEnabled
+- cacheTTL
+- baseURL
+- filesBasePath
+*/
+
 error_reporting(E_ALL | E_STRICT);
 
 $conf = array(
@@ -13,20 +23,19 @@ $conf = array(
 
     // Custom vars:
     'baseURL' => '//localhost/spartalien.com/app/public/',
+    'filesBasePath' => '/spartalien.com-files/',
     'siteTitle' => 'SPARTALIEN',
     'timezone' => 'UTC',
     'locale' => 'en-US',
     'encoding' => 'UTF-8',
     'nav' => array(
-        // route request, label text
-        // array('', 'INDEX'),
         array('news', 'NEWS'),
         array('music', 'MUSIC'),
         array('visual', 'VISUAL'),
         // array('stuff', 'STUFF'),
         // array('merch', 'MERCH'),
         // array('cam', 'CAM'),
-        array('planet420', 'PLANET 420'),
+        array('planet420', '420'),
         array('about', 'ABOUT'),
     ),
     'validateRequests' => true,
@@ -37,6 +46,9 @@ $conf = array(
         'news/id:[1-53]',
         'music',
         'music/id:[1-33]',
+        'music/year:[2016-2021]',
+        'music/type:[album|ep|remix|single]',
+        'music/freedl',
         'visual',
         'visual/id:[1-40]',
         'planet420',

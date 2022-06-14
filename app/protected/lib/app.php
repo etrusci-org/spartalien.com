@@ -15,12 +15,19 @@ class App extends WebApp {
         $validRequests = array();
 
         foreach ($this->conf['validRequests'] as $requestPattern) {
-            // :[n-n]
+            // range :[n-n]
             if (preg_match('/(.+:)\[(\d+)-(\d+)\]/i', $requestPattern, $patternMatch)) {
-                foreach (range($patternMatch[2], $patternMatch[3]) as $n) {
-                    $validRequests[] = sprintf('%1$s%2$s', $patternMatch[1], $n);
+                foreach (range($patternMatch[2], $patternMatch[3]) as $v) {
+                    $validRequests[] = sprintf('%1$s%2$s', $patternMatch[1], $v);
                 }
             }
+            // or :[a|b]
+            else if (preg_match('/(.+:)\[([\w|]+)\]/i', $requestPattern, $patternMatch)) {
+                foreach (explode('|', $patternMatch[2]) as $v) {
+                    $validRequests[] = sprintf('%1$s%2$s', $patternMatch[1], $v);
+                }
+            }
+            // default
             else {
                 $validRequests[] = $requestPattern;
             }
@@ -68,17 +75,8 @@ class App extends WebApp {
                 }
                 break;
 
-            case 'byDate':
-                // if (isset($this->route['var']['date'])) {
+            case 'byID':
                 if (isset($this->route['var']['id'])) {
-                        // $q = '
-                    // SELECT
-                    //     id,
-                    //     postedOn,
-                    //     items
-                    // FROM news
-                    // WHERE postedOn = :postedOn
-                    // ORDER BY postedOn DESC;';
                     $q = '
                     SELECT
                         id,
@@ -89,13 +87,14 @@ class App extends WebApp {
                     ORDER BY postedOn DESC;';
 
                     $v = array(
-                        // array('postedOn', $this->route['var']['date'], SQLITE3_TEXT),
                         array('id', $this->route['var']['id'], SQLITE3_TEXT),
                     );
 
                     $data = $this->DB->querySingle($q, $v);
 
-                    $data['items'] = jdec($data['items']);
+                    if ($data) {
+                        $data['items'] = jdec($data['items']);
+                    }
                 }
                 break;
         }
@@ -154,7 +153,8 @@ class App extends WebApp {
 
                 foreach ($data as $k => $v) {
                     $data[$k]['artist'] = $this->getArtistByID(jdec($v['artistIDs']));
-                    $data[$k]['trackCount'] = count(jdec($v['audioIDs']));
+                    $data[$k]['audioIDs'] = jdec($v['audioIDs']);
+                    $data[$k]['trackCount'] = count($data[$k]['audioIDs']);
                 }
                 break;
 
@@ -205,6 +205,7 @@ class App extends WebApp {
                         $data['artist'] = $this->getArtistByID(jdec($data['artistIDs']));
                         $data['audioIDs'] = jdec($data['audioIDs']);
                         $data['tracklist'] = $this->getAudioByID($data['audioIDs']);
+                        $data['trackCount'] = count($data['tracklist']);
                         $data['description'] = $this->parseLazyInput($data['description']);
                         $data['credits'] = jdec($data['credits']);
                         $data['thanks'] = jdec($data['thanks']);
@@ -286,6 +287,7 @@ class App extends WebApp {
             id,
             audioName,
             audioRuntime,
+            artistIDs,
             bandcampID,
             bandcampHost,
             bandcampSlug,
@@ -312,6 +314,7 @@ class App extends WebApp {
                 $dump = $this->DB->querySingle($q, $v);
 
                 if ($dump) {
+                    $dump['artist'] = $this->getArtistByID(jdec($dump['artistIDs']));
                     $dump['audioRuntimeString'] = $this->secondsToString($dump['audioRuntime']);
                     $dump['bandcampURL'] = ($dump['bandcampSlug']) ? sprintf('%s%s', $dump['bandcampHost'], $dump['bandcampSlug']) : null;
                     $dump['spotifyURL'] = ($dump['spotifySlug']) ? sprintf('%s%s', $dump['spotifyHost'], $dump['spotifySlug']) : null;

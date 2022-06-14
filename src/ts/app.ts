@@ -3,6 +3,7 @@ import { pathBasename } from './vendor/pathBasename.js'
 
 
 export const App: AppInterface = {
+    filesBasePath: '',
 
     main() {
         console.log('SPARTALIEN.COM')
@@ -18,6 +19,7 @@ export const App: AppInterface = {
                     node instanceof HTMLElement &&
                     node.dataset['lazymedia'] !== undefined
                 ) {
+                    // part1:part2:slug[:rest][:rest][:...]
                     let mediaCode = node.dataset['lazymedia'].split(':')
                     let platform  = mediaCode.slice(0, 1).join('')
                     let type      = mediaCode.slice(1, 2).join('')
@@ -42,21 +44,28 @@ export const App: AppInterface = {
                     }
 
                     if (platform == 'bandcamp') {
+                        let trackCount = 1
+
+                        let slugRest = slug.split(':')
+                        if (slugRest[0] && slugRest[1]) {
+                            slug = slugRest[0]
+                            trackCount = parseInt(slugRest[1])
+                        }
+
                         let embedEle = document.createElement('iframe')
                         embedEle.classList.add('lazymedia')
                         embedEle.setAttribute('loading', 'lazy')
 
                         if (type == 'track') {
-                            embedEle.setAttribute('src', `//bandcamp.com/EmbeddedPlayer/track=${slug}/size=small/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/`)
+                            embedEle.setAttribute('src', `//bandcamp.com/EmbeddedPlayer/track=${slug}/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=none/transparent=true/`)
                             embedEle.classList.add('bandcamp', 'track')
                             node.replaceWith(embedEle)
                         }
 
                         if (type == 'album') {
-                            // TODO: port auto-height from old version:
-                            // playerheight = `style="height: ${Math.round(120 + 60 + (32 * this.dataset.trackcount))}px;"`;
                             embedEle.setAttribute('src', `//bandcamp.com/EmbeddedPlayer/album=${slug}/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/`)
                             embedEle.classList.add('bandcamp', 'album')
+                            embedEle.style.height = `${Math.round(/*playerheader*/120 + /*trackrows*/(33 * trackCount) + /*extra space*/33)}px`
                             node.replaceWith(embedEle)
                         }
                     }
@@ -80,9 +89,10 @@ export const App: AppInterface = {
                     }
 
                     if (platform == 'generic') {
-                        // make slug a local path if it does not start with http
+                        // make slug a project file path if it does not start with http
                         if (slug.slice(0, 4) != 'http') {
-                            slug = `file/${slug}`
+                            // slug = `file/${slug}`
+                            slug = `${this.filesBasePath}${slug}`
                         }
 
                         if (type == 'none') {
@@ -94,28 +104,19 @@ export const App: AppInterface = {
                         }
 
                         if (type == 'image') {
-                            let embedEle = document.createElement('img')
-                            embedEle.classList.add('lazymedia')
-                            embedEle.setAttribute('src', slug)
-                            embedEle.setAttribute('alt', slug)
-                            embedEle.setAttribute('loading', 'lazy')
-                            node.replaceWith(embedEle)
+                            let embedEle1 = document.createElement('a')
+                            embedEle1.classList.add('lazymedia')
+                            embedEle1.dataset['lightbox'] = (node.classList.contains('gallery')) ? 'gallery' : pathBasename(slug)
+                            embedEle1.dataset['title'] = pathBasename(slug)
+                            embedEle1.setAttribute('href', slug)
+                            let embedEle2 = document.createElement('img')
+                            embedEle2.setAttribute('src', slug)
+                            embedEle2.setAttribute('alt', pathBasename(slug))
+                            embedEle2.setAttribute('loading', 'lazy')
+                            embedEle1.appendChild(embedEle2)
+                            node.replaceWith(embedEle1)
                         }
 
-                        // if (type == 'image-lb') {
-                        //     let embedEle1 = document.createElement('a')
-                        //     embedEle1.classList.add('lazymedia')
-                        //     embedEle1.dataset['lightbox'] = slug
-                        //     embedEle1.setAttribute('href', slug)
-                        //     let embedEle2 = document.createElement('img')
-                        //     embedEle2.setAttribute('src', slug)
-                        //     embedEle2.setAttribute('alt', slug)
-                        //     embedEle2.setAttribute('loading', 'lazy')
-                        //     embedEle1.appendChild(embedEle2)
-                        //     node.replaceWith(embedEle1)
-                        // }
-
-                        // if (type == 'video-mp4') {
                         if (type == 'video') {
                             let embedEle1 = document.createElement('video')
                             embedEle1.classList.add('lazymedia')
