@@ -22,7 +22,11 @@ if (!$this->route['flag'] && !$this->route['var']) {
         <div class="box">
             <h2>PLANET 420</h2>
             <p>Click the play button to listen to %1$s hours of selected eclectic music ...</p>
-            <div data-lazymedia="mixcloud:playlist:/lowtechman/playlists/planet-420/">mixcloud:playlist:/lowtechman/playlists/planet-420/</div>
+            <div class="lazymedia mixcloud playlist">{
+                "platform": "mixcloud",
+                "type": "playlist",
+                "slug": "/lowtechman/playlists/planet-420/"
+            }</div>
         </div>
         ',
         $hoursToListen,
@@ -51,7 +55,7 @@ if ($sessionByID) {
         $this->secondsToString($s['sessionDur']),
         $s['sessionDate'],
         ($s['mixcloudSlug']) ? sprintf('<a href="%1$s%2$s">%2$s</a>', $s['mixcloudHost'], $s['mixcloudSlug']) : 'Sorry, the recording for this one is lost.',
-        ($s['mixcloudSlug']) ? sprintf('<div data-lazymedia="mixcloud:mix:%1$s">mixcloud:mix:%1$s</div>', $s['mixcloudSlug']) : '',
+        ($s['mixcloudSlug']) ? sprintf('<div class="lazymedia mixcloud playlist">{"platform": "mixcloud", "type": "mix", "slug": "%1$s"}</div>', $s['mixcloudSlug']) : '',
     );
 
     print('

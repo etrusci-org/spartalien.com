@@ -3,12 +3,13 @@ ServerSignature Off
 Options +FollowSymlinks
 Options -Indexes
 Options -MultiViews
-
-AddType application/rss+xml .rss # most correct
-# AddType application/xml .rss      # most compatible
+AddType application/rss+xml .rss
 
 RewriteEngine On
-# RewriteBase /
+
+# COMMENT-OUT THIS FILES REDIRECT BEFORE DEPLOY:
+RewriteRule ^file(/.*)?$ /spartalien.com-files$1 [R=302,L]
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php?r=$1 [L]

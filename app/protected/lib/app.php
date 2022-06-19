@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 class App extends WebApp {
     public function validateRequest(): void {
-        if (!$this->conf['validateRequests']) {
+        if (!VALID_REQUESTS) {
             return;
         }
 
@@ -14,7 +14,7 @@ class App extends WebApp {
         // prepare/expand valid requests
         $validRequests = array();
 
-        foreach ($this->conf['validRequests'] as $requestPattern) {
+        foreach (VALID_REQUESTS as $requestPattern) {
             // range :[n-n]
             if (preg_match('/(.+:)\[(\d+)-(\d+)\]/i', $requestPattern, $patternMatch)) {
                 foreach (range($patternMatch[2], $patternMatch[3]) as $v) {
@@ -40,22 +40,19 @@ class App extends WebApp {
     }
 
 
-    public function getNavHTML($separator=' &middot; '): string {
-        $nav = array();
-        foreach ($this->conf['nav'] as $v) {
-            $nav[] = sprintf(
+    protected function getNavHTML(string $separator=' &middot; '): string {
+        return implode($separator, array_map(function(array $v): string {
+            return sprintf(
                 '<a href="%1$s"%3$s>%2$s</a>',
                 $this->routeURL($v[0]),
                 hsc5($v[1]),
                 ($this->route['node'] == substr($v[0], 0, strlen($this->route['node']))) ? ' class="active"' : '',
             );
-        }
-        $nav = implode($separator, $nav);
-        return $nav;
+        }, $this->conf['nav']));
     }
 
 
-    public function getNews(string $mode): array {
+    protected function getNews(string $mode): array {
         $data = array();
 
         switch ($mode) {
@@ -103,7 +100,7 @@ class App extends WebApp {
     }
 
 
-    public function getAudio(string $mode, array $kwargs=array()): array {
+    protected function getAudio(string $mode, array $kwargs=array()): array {
         $data = array();
 
         switch ($mode) {
@@ -195,7 +192,7 @@ class App extends WebApp {
                     WHERE audioRelease.id = :id;';
 
                     $v = array(
-                        array('id', $id, SQLITE3_TEXT),
+                        array('id', $id, SQLITE3_INTEGER),
                     );
 
                     $dump = $this->DB->querySingle($q, $v);
@@ -219,7 +216,7 @@ class App extends WebApp {
     }
 
 
-    public function getAudioFilter(): array {
+    protected function getAudioFilter(): array {
         $filter = array();
 
         // all
@@ -271,7 +268,7 @@ class App extends WebApp {
         // dj mixes link
         $filter[] = array(
             'DJ-Mixes&nearr;',
-            'https://mixcloud.com/lowtechman/uploads/?order=latest',
+            '//mixcloud.com/lowtechman/uploads/?order=latest',
             null,
         );
 
@@ -279,7 +276,7 @@ class App extends WebApp {
     }
 
 
-    public function getAudioByID(int|array $id): array {
+    protected function getAudioByID(int|array $id): array {
         $data = array();
 
         $q = '
@@ -302,6 +299,10 @@ class App extends WebApp {
             );
             $dump = $this->DB->querySingle($q, $v);
             if ($dump) {
+                $dump['artist'] = $this->getArtistByID(jdec($dump['artistIDs']));
+                $dump['audioRuntimeString'] = $this->secondsToString($dump['audioRuntime']);
+                $dump['bandcampURL'] = ($dump['bandcampSlug']) ? sprintf('%s%s', $dump['bandcampHost'], $dump['bandcampSlug']) : null;
+                $dump['spotifyURL'] = ($dump['spotifySlug']) ? sprintf('%s%s', $dump['spotifyHost'], $dump['spotifySlug']) : null;
                 $data = $dump;
             }
         }
@@ -327,7 +328,7 @@ class App extends WebApp {
     }
 
 
-    public function getArtistByID(int|array $id): array {
+    protected function getArtistByID(int|array $id): array {
         $data = array();
 
         $q = '
@@ -364,22 +365,24 @@ class App extends WebApp {
     }
 
 
-    // static function getCollabArtist(array $audioArtist): array {
-    //     $artist = array();
-    //
-    //     if (count($audioArtist) > 1) {
-    //         foreach ($audioArtist as $v) {
-    //             if ($v['id'] != 1) {
-    //                 $artist[] = $v['artistName'];
-    //             }
-    //         }
-    //     }
-    //
-    //     return $artist;
-    // }
+    /*
+    static function getCollabArtist(array $audioArtist): array {
+        $artist = array();
+
+        if (count($audioArtist) > 1) {
+            foreach ($audioArtist as $v) {
+                if ($v['id'] != 1) {
+                    $artist[] = $v['artistName'];
+                }
+            }
+        }
+
+        return $artist;
+    }
+    */
 
 
-    public function getPlanet420(string $mode, array $kwargs=array()): array {
+    protected function getPlanet420(string $mode, array $kwargs=array()): array {
         $data = array();
 
         $sessionNum = null;
@@ -475,7 +478,7 @@ class App extends WebApp {
     }
 
 
-    public function getVisual(string $mode, array $kwargs=array()): array {
+    protected function getVisual(string $mode, array $kwargs=array()): array {
         $data = array();
 
         switch ($mode) {
@@ -521,7 +524,7 @@ class App extends WebApp {
                         id = :id;';
 
                     $v = array(
-                        array('id', $id, SQLITE3_TEXT),
+                        array('id', $id, SQLITE3_INTEGER),
                     );
 
                     $dump = $this->DB->querySingle($q, $v);
@@ -539,7 +542,69 @@ class App extends WebApp {
     }
 
 
-    public function parseLazyInput(string $input): string|array|null {
+    protected function getStuff(string $mode, array $kwargs=array()): array {
+        $data = array();
+
+        switch ($mode) {
+
+            case 'list':
+                $q = '
+                SELECT
+                    id, stuffName, media
+                FROM
+                    stuff
+                ORDER BY
+                    stuffName ASC;
+                ';
+
+                $dump = $this->DB->query($q);
+
+                if ($dump) {
+                    foreach ($dump as $k => $v) {
+                        $dump[$k]['media'] = jdec($v['media']);
+                    }
+
+                    $data = $dump;
+                }
+                break;
+
+            case 'byID':
+                $id = null;
+                if (isset($kwargs['id'])) {
+                    $id = intval($kwargs['id']);
+                }
+                elseif (isset($this->route['var']['id'])) {
+                    $id = intval($this->route['var']['id']);
+                }
+
+                if ($id) {
+                    $q = '
+                    SELECT
+                        id, stuffName, description, media
+                    FROM
+                        stuff
+                    WHERE
+                        id = :id;';
+
+                    $v = array(
+                        array('id', $id, SQLITE3_INTEGER),
+                    );
+
+                    $dump = $this->DB->querySingle($q, $v);
+
+                    if ($dump) {
+                        $dump['media'] = jdec($dump['media']);
+                        $data = $dump;
+                    }
+                }
+                break;
+        }
+
+        return $data;
+    }
+
+
+    protected function parseLazyInput(string $input): string|array|null {
         $patterns = array(
             '/\n/', // linefeed
             '/\[b\](.*?)\[\/b\]/', // [b]bold[/b]
@@ -560,7 +625,7 @@ class App extends WebApp {
     }
 
 
-    static function secondsToString(int $seconds): string {
+    static protected function secondsToString(int $seconds): string {
         $s = max(0, $seconds);
 
         $dur = array(

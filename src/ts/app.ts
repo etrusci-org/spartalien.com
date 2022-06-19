@@ -1,15 +1,31 @@
 import { Scur } from './vendor/scur.js'
-import { pathBasename } from './vendor/pathBasename.js'
+import { LazyMedia } from './vendor/LazyMedia.js'
 
 
 export const App: AppInterface = {
-    filesBasePath: '',
 
     main() {
         console.log('SPARTALIEN.COM')
-        this.loadLazyMedia()
         Scur.deobElements()
+        LazyMedia.embed()
     },
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+// import { pathBasename } from './vendor/pathBasename.js'
+
+    // filesBasePath: '',
 
     loadLazyMedia() {
         let nodeList = document.querySelectorAll('[data-lazymedia]')
@@ -65,7 +81,7 @@ export const App: AppInterface = {
                         if (type == 'album') {
                             embedEle.setAttribute('src', `//bandcamp.com/EmbeddedPlayer/album=${slug}/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/`)
                             embedEle.classList.add('bandcamp', 'album')
-                            embedEle.style.height = `${Math.round(/*playerheader*/120 + /*trackrows*/(33 * trackCount) + /*extra space*/33)}px`
+                            embedEle.style.height = `${Math.round(120 + (33 * trackCount) + 33)}px`
                             node.replaceWith(embedEle)
                         }
                     }
@@ -106,7 +122,7 @@ export const App: AppInterface = {
                         if (type == 'image') {
                             let embedEle1 = document.createElement('a')
                             embedEle1.classList.add('lazymedia')
-                            embedEle1.dataset['lightbox'] = (node.classList.contains('gallery')) ? 'gallery' : pathBasename(slug)
+                            // embedEle1.dataset['lightbox'] = (node.classList.contains('gallery')) ? 'gallery' : pathBasename(slug)
                             embedEle1.dataset['title'] = pathBasename(slug)
                             embedEle1.setAttribute('href', slug)
                             let embedEle2 = document.createElement('img')
@@ -136,4 +152,4 @@ export const App: AppInterface = {
             })
         }
     },
-}
+*/

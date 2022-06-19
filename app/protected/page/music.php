@@ -93,9 +93,9 @@ if ($releaseByID) {
 
     // cover image
     printf(
-        '<p><a href="%2$scover/%1$s-big.png"><img src="%2$scover/%1$s-med.jpg" class="fluid" loading="lazy"></a></p>',
+        '<p><a href="file/cover/%1$s-big.png"><img src="file/cover/%1$s-med.jpg" class="fluid"></a></p>',
         $rls['id'],
-        $this->conf['filesBasePath'],
+        // $this->conf['filesBasePath'],
     );
 
 
@@ -120,7 +120,19 @@ if ($releaseByID) {
 
     // bandcamp release player
     if ($rls['bandcampID']) {
-        printf('<div data-lazymedia="bandcamp:%1$s:%2$s:%3$s">bandcamp:%1$s:%2$s:%3$s</div>', ($rls['trackCount'] > 1) ? 'album' : 'track', $rls['bandcampID'], $rls['trackCount']);
+        // printf('<div data-lazymedia="bandcamp:%1$s:%2$s:%3$s">bandcamp:%1$s:%2$s:%3$s</div>', ($rls['trackCount'] > 1) ? 'album' : 'track', $rls['bandcampID'], $rls['trackCount']);
+        printf('
+            <div class="lazymedia bandcamp %1$s">{
+                "platform": "bandcamp",
+                "type": "%1$s",
+                "slug": "%2$s",
+                "trackCount": "%3$s"
+            }</div>
+            ',
+            ($rls['trackCount'] > 1) ? 'album' : 'track',
+            $rls['bandcampID'],
+            $rls['trackCount'],
+        );
     }
 
 
@@ -207,9 +219,18 @@ if ($releaseByID) {
     if ($rls['relatedMedia']) {
         print('<div class="box">');
         print('<h3>RELATED MEDIA</h3>');
+        // print(
+        //     implode(' ', array_map(function(string $v): string {
+        //         return sprintf('<div data-lazymedia="%1$s" class="gallery">%1$s</div>', $v);
+        //     }, $rls['relatedMedia']))
+        // );
         print(
-            implode(' ', array_map(function(string $v): string {
-                return sprintf('<div data-lazymedia="%1$s" class="gallery">%1$s</div>', $v);
+            implode(' ', array_map(function(array $v): string {
+                // var_dump(substr($v['slug'], 0, 4));
+                // if (substr($v['slug'], 0, 4) != 'http' && substr($v['slug'], 0, 2) != '//') {
+                    // $v['slug'] = $this->conf['filesBasePath'].$v['slug'];
+                // }
+                return sprintf('<div class="lazymedia">%1$s</div>', jenc($v));
             }, $rls['relatedMedia']))
         );
         print('</div>'); // /.box
@@ -235,7 +256,7 @@ if ($releaseList) {
         printf('
             <div class="row">
                 <a href="%2$s"%8$s>
-                    <img src="%9$scover/%1$s-tn.jpg" alt="cover art" class="fluid" loading="lazy"><br>
+                    <img src="file/cover/%1$s-tn.jpg" alt="cover art" class="fluid" loading="lazy"><br>
                     %3$s
                 </a><br>
                 %4$s, %5$s, %6$s%7$s
@@ -249,7 +270,7 @@ if ($releaseList) {
             (count($v['artist']) > 1) ? 'Collab, ' : '',
             ($v['updatedOn']) ? substr($v['updatedOn'], 0, 4) : substr($v['releasedOn'], 0, 4),
             (isset($this->route['var']['id']) && $this->route['var']['id'] == $v['id']) ? ' class="active"' : '',
-            $this->conf['filesBasePath'],
+            // $this->conf['filesBasePath'],
         );
     }
 

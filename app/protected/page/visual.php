@@ -34,10 +34,15 @@ if (isset($this->route['var']['id']) && !$visualByID) {
 // visual by id
 if ($visualByID) {
     $vis = $visualByID;
-    $lazymediaCount = count($vis['media']);
-    $lazymedia = array_map(function(string $v) use ($lazymediaCount): string {
-        return sprintf('<div data-lazymedia="%1$s"%2$s>%1$s</div>', $v, ($lazymediaCount > 1) ? ' class="gallery"' : '');
-    }, $vis['media']);
+
+    $lazymedia = implode(' ', array_map(function(array $v) use ($vis): string {
+        return sprintf(
+            '<a href="%2$s" data-lightbox="%3$s"><div class="lazymedia">%1$s</div></a>',
+            jenc($v),
+            $v['slug'],
+            (count($vis['media']) > 1) ? sprintf('gallery-%1$s', $vis['id']) : basename($v['slug'])
+        );
+    }, $vis['media']));
 
     printf('
         <div class="box">
@@ -53,7 +58,7 @@ if ($visualByID) {
         implode(' ', $vis['tags']),
         $vis['createdOn'],
         ($vis['description']) ? sprintf('<p>%1$s</p>', $vis['description']) : '',
-        implode(' ', $lazymedia),
+        $lazymedia,
     );
 }
 
@@ -81,8 +86,8 @@ if ($visualList) {
             </div>
             ',
             $this->routeURL(sprintf('visual/id:%1$s', $v['id'])),
-            // sprintf('file/visual/%1$s-tn.jpg', $v['id']),
-            sprintf('%2$svisual/%1$s-tn.jpg', $v['id'], $this->conf['filesBasePath']),
+            // sprintf('%2$svisual/%1$s-tn.jpg', $v['id'], $this->conf['filesBasePath']),
+            sprintf('file/visual/%1$s-tn.jpg', $v['id']),
             $v['visualName'],
             implode(' ', $v['tags']),
             $v['createdOn'],

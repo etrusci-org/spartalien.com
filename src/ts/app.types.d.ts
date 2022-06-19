@@ -1,5 +1,5 @@
 interface AppInterface {
-    filesBasePath: string
+    // filesBasePath: string
     main(): void
-    loadLazyMedia(): void
+    // loadLazyMedia(): void
 }

@@ -82,8 +82,6 @@ a.active {
 }
 
 
-
-
 img {
     &[src^="res/ico-"] {
         opacity: .5;
@@ -95,16 +93,11 @@ img {
 }
 
 
-
-[data-lazymedia] {
-    color: $color-70;
-    background-color: $color-25;
-    background-image: url('loading.gif');
-}
-
-
-
-
+// [data-lazymedia] {
+//     color: $color-70;
+//     background-color: $color-25;
+//     background-image: url('loading.gif');
+// }
 
 
 
