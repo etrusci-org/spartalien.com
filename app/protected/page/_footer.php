@@ -1,6 +1,5 @@
     </main>
-
-    <script src="res/main.js" type="module"></script>
+    <script src="res/main.js?v=<?php print(filemtime('res/main.js')); ?>" type="module"></script>
 </body>
 </html>
 <!--+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+

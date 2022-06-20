@@ -3,7 +3,7 @@
  *
  * WORK IN PROGRESS!!
  */
-export const LazyMedia: LazyMediaInterface = {
+ export const LazyMedia: LazyMediaInterface = {
     selector: '.lazymedia',
     slugSuffix: {
         generic: {
@@ -99,6 +99,13 @@ export const LazyMedia: LazyMediaInterface = {
 
                             if (audioType) {
                                 e2.setAttribute('type', audioType)
+                            }
+
+                            if (!code.noAudioLabel) {
+                                let e3 = this.createDefaultElement('label')
+                                e3.innerText = code.slug.split('/').pop() || code.slug
+                                console.log('e3 :>> ', e3);
+                                node.insertAdjacentElement('beforebegin', e3)
                             }
 
                             e.appendChild(e2)
@@ -278,6 +285,7 @@ type lazyCodeType = {
     dataset?: [string, string][]
     text?: string
     trackCount?: number
+    noAudioLabel?: boolean
 } | null
 
 
@@ -295,8 +303,10 @@ type lazyCodeType = {
         all:
             - attribute
             - dataset
-        link:
+        generic link:
             - text
+        generic audio:
+            - noAudioLabel
         bandcamp:
             - trackCount
 

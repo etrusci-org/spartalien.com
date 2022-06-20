@@ -10,12 +10,20 @@ if ($stuffByID) {
     $stuff = $stuffByID;
 
     $lazymedia = implode(' ', array_map(function(array $v) use ($stuff): string {
-        return sprintf(
-            // '<a href="%2$s" data-lightbox="%3$s"><div class="lazymedia">%1$s</div></a>',
-            '%2$s<div class="lazymedia">%1$s</div>',
-            jenc($v),
-            ($v['type'] == 'audio') ? sprintf('%1$s:<br>', basename($v['slug'])) : '',
-        );
+        if ($v['type'] == 'image') {
+            return sprintf(
+                '<a href="%2$s" data-lightbox="%3$s"><div class="lazymedia">%1$s</div></a>',
+                jenc($v),
+                $v['slug'],
+                sprintf('stuff-%1$s', $stuff['id']),
+            );
+        }
+        else {
+            return sprintf(
+                '<div class="lazymedia">%1$s</div>',
+                jenc($v)
+            );
+        }
     }, $stuff['media']));
 
     printf('

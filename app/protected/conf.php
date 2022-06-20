@@ -1,7 +1,7 @@
 <?php
 /*
 On content change:
-- run app/protected/gen-validrequests.php
+- adjust validRequestPatterns and run app/protected/gen-validrequests.php
 
 Before deploy:
 - set APP_PRODUCTION_MODE to true
@@ -33,10 +33,9 @@ $conf = array(
         array('music', 'MUSIC'),
         array('visual', 'VISUAL'),
         array('stuff', 'STUFF'),
-        // array('merch', 'MERCH'),
-        // array('cam', 'CAM'),
         array('planet420', '420'),
         array('about', 'ABOUT'),
+        // to add or ditch completely: merch, prod, cam, links
     ),
     'validateRequests' => true,
     'validRequestPatterns' => array( # after updating these patterns, run app/protected/gen-validrequests.php once to generate app/protected/cache/valid-requests.php which is required in app/protected/init.php
@@ -52,7 +51,7 @@ $conf = array(
         'visual',
         'visual/id:[1-40]',
         'stuff',
-        'stuff/id:[1-10]',
+        'stuff/id:[1-13]',
         'planet420',
         'planet420/session/num:[1-38]',
         'about',

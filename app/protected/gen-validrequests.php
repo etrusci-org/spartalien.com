@@ -15,8 +15,6 @@ foreach ($conf['validRequestPatterns'] as $requestPattern) {
     if (preg_match('/(.+:)\[(\d+)-(\d+)\]/i', $requestPattern, $patternMatch)) {
         foreach (range($patternMatch[2], $patternMatch[3]) as $v) {
             $validRequests[] = sprintf('    \'%1$s%2$s\',', $patternMatch[1], $v);
-
-
         }
     }
     // or :[a|b]
@@ -35,4 +33,6 @@ $validRequests[] = '));';
 $validRequests[] = '?>';
 $validRequests = implode(PHP_EOL, $validRequests);
 
-file_put_contents(__DIR__.'/cache/validrequests.php', $validRequests, LOCK_EX);
+print_r($validRequests);
+
+file_put_contents(__DIR__.'/cache/validrequests.php', $validRequests);

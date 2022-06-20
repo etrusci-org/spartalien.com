@@ -24,16 +24,16 @@ if (!$releaseByID) {
 
 
 
-// release not found, in case they follow old links
-if (isset($this->route['var']['id']) && !$releaseByID) {
-    printf('
-        <div class="box error">
-            <p>The requested release <code>[ID:%1$s]</code> does not exist or got assigned a new ID.</p>
-            <img src="res/err404.gif" class="fluid">
-        </div>',
-        $this->route['var']['id']
-    );
-}
+// // release not found, in case they follow old links
+// if (isset($this->route['var']['id']) && !$releaseByID) {
+//     printf('
+//         <div class="box error">
+//             <p>The requested release <code>[ID:%1$s]</code> does not exist or got assigned a new ID.</p>
+//             <img src="res/err404.gif" class="fluid">
+//         </div>',
+//         $this->route['var']['id']
+//     );
+// }
 
 
 

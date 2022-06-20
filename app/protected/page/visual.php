@@ -17,16 +17,16 @@ if (!$visualByID) {
 
 
 
-// visual not found, in case they follow old links
-if (isset($this->route['var']['id']) && !$visualByID) {
-    printf('
-        <div class="box error">
-            <p>The requested visual <code>[ID:%1$s]</code> does not exist or got assigned a new ID.</p>
-            <img src="res/err404.gif" class="fluid">
-        </div>',
-        $this->route['var']['id'],
-    );
-}
+// // visual not found, in case they follow old links
+// if (isset($this->route['var']['id']) && !$visualByID) {
+//     printf('
+//         <div class="box error">
+//             <p>The requested visual <code>[ID:%1$s]</code> does not exist or got assigned a new ID.</p>
+//             <img src="res/err404.gif" class="fluid">
+//         </div>',
+//         $this->route['var']['id'],
+//     );
+// }
 
 
 
@@ -36,12 +36,20 @@ if ($visualByID) {
     $vis = $visualByID;
 
     $lazymedia = implode(' ', array_map(function(array $v) use ($vis): string {
-        return sprintf(
-            '<a href="%2$s" data-lightbox="%3$s"><div class="lazymedia">%1$s</div></a>',
-            jenc($v),
-            $v['slug'],
-            (count($vis['media']) > 1) ? sprintf('gallery-%1$s', $vis['id']) : basename($v['slug'])
-        );
+        if ($v['type'] == 'image') {
+            return sprintf(
+                '<a href="%2$s" data-lightbox="%3$s"><div class="lazymedia">%1$s</div></a>',
+                jenc($v),
+                $v['slug'],
+                sprintf('visual-%1$s', $vis['id']),
+            );
+        }
+        else {
+            return sprintf(
+                '<div class="lazymedia">%1$s</div>',
+                jenc($v)
+            );
+        }
     }, $vis['media']));
 
     printf('

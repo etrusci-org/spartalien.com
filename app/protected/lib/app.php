@@ -45,7 +45,7 @@ class App extends WebApp {
             return sprintf(
                 '<a href="%1$s"%3$s>%2$s</a>',
                 $this->routeURL($v[0]),
-                hsc5($v[1]),
+                $v[1],
                 ($this->route['node'] == substr($v[0], 0, strlen($this->route['node']))) ? ' class="active"' : '',
             );
         }, $this->conf['nav']));
@@ -226,21 +226,6 @@ class App extends WebApp {
             !in_array('freedl', $this->route['flag']) && !isset($this->route['var']['year']) && !isset($this->route['var']['type']),
         );
 
-        // years
-        $q = '
-        SELECT DISTINCT
-            substr(releasedOn, 1, 4) AS year
-        FROM audioRelease
-        ORDER BY releasedOn DESC;';
-        $dump = $this->DB->query($q);
-        foreach ($dump as $v) {
-            $filter[] = array(
-                $v['year'],
-                $this->routeURL(sprintf('music/year:%s', $v['year'])),
-                isset($this->route['var']['year']) && $this->route['var']['year'] == $v['year'],
-            );
-        }
-
         // types
         $q = '
         SELECT DISTINCT
@@ -255,6 +240,21 @@ class App extends WebApp {
                 $v['releaseType'],
                 $this->routeURL(sprintf('music/type:%s', strtolower($v['releaseType']))),
                 isset($this->route['var']['type']) && strtolower($this->route['var']['type']) == strtolower($v['releaseType']),
+            );
+        }
+
+        // years
+        $q = '
+        SELECT DISTINCT
+            substr(releasedOn, 1, 4) AS year
+        FROM audioRelease
+        ORDER BY releasedOn DESC;';
+        $dump = $this->DB->query($q);
+        foreach ($dump as $v) {
+            $filter[] = array(
+                $v['year'],
+                $this->routeURL(sprintf('music/year:%s', $v['year'])),
+                isset($this->route['var']['year']) && $this->route['var']['year'] == $v['year'],
             );
         }
 
@@ -550,11 +550,11 @@ class App extends WebApp {
             case 'list':
                 $q = '
                 SELECT
-                    id, stuffName, media
+                    id, stuffName, LOWER(stuffName) AS stuffNameLC, media
                 FROM
                     stuff
                 ORDER BY
-                    stuffName ASC;
+                    stuffNameLC ASC;
                 ';
 
                 $dump = $this->DB->query($q);

@@ -7,21 +7,37 @@
 
     <base href="<?php print($this->conf['baseURL']); ?>">
 
-    <link rel="stylesheet" href="res/style.min.css">
+    <!-- <meta name="application-name" content="spartalien.com"> -->
+    <!-- <meta name="author" content="arT2 (etrusci.org)"> -->
+    <!-- <meta name="generator" content="Brain"> -->
+    <!-- <meta name="description" content="SPARTALIEN's Website"> -->
+    <!-- <meta name="keywords" content="SPARTALIEN, multimedia, art, music, audio, visual, code, experimental"> -->
+
+    <!-- <meta property="og:title" content="SPARTALIEN.com"> -->
+    <!-- <meta property="og:url" content="https://spartalien.com"> -->
+    <!-- <meta property="og:description" content="SPARTALIEN's Website"> -->
+    <!-- <meta property="og:type" content="website"> -->
+    <!-- <meta property="og:image" content="https://spartalien.com/ogp.png?v=<?php print(filemtime('favicon.ico')); ?>"> -->
+
+    <link rel="icon" href="favicon.ico?v=<?php print(filemtime('favicon.ico')); ?>" type="image/x-icon">
+
+    <link rel="preload" href="res/share-tech-v17-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="res/style.min.css?v=<?php print(filemtime('res/style.min.css')); ?>">
 
     <title><?php print($this->conf['siteTitle']); ?></title>
+
 </head>
 <body>
-    <?php
-    printf('
-        <header>
+    <header>
+        <?php
+        printf('
             <h1>%1$s</h1>
             <nav>%2$s</nav>
-        </header>
-        ',
-        ($this->route['node'] == 'index') ? '<img src="res/logo-small.png" alt="SPARTALIEN" title="SPARTALIEN">' : '<a href="./">SPARTALIEN</a>',
-        $this->getNavHTML(),
-    );
-    ?>
-
+            ',
+            ($this->route['node'] == 'index') ? '<img src="res/logo-small.png" alt="SPARTALIEN" title="SPARTALIEN">' : '<a href="./">SPARTALIEN</a>',
+            $this->getNavHTML(),
+        );
+        ?>
+    </header>
     <main>
