@@ -125,7 +125,7 @@ a {
 header {
     position: sticky;
     top: 0;
-    padding: 1rem;
+    padding: .5rem;
     margin: 0 0 2rem 0;
     text-align: center;
     z-index: 1000;
@@ -155,7 +155,7 @@ main {
     margin: 0 0 2rem 0;
 
     &.more {
-        margin-top: 20rem;
+        margin-top: 15rem;
     }
 }
 
@@ -260,245 +260,21 @@ main {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// body {
-//     min-height: 100vh;
-//     scroll-behavior: smooth;
-//     text-rendering: optimizeLegibility;
-//     font-family: $font-main;
-//     line-height: 1.5;
-// }
-
-
-// body,
-// code {
-//     font-size: $font-size-00;
-// }
-
-
-// h1,
-// h2,
-// h3,
-// h4 {
-//     letter-spacing: 2px;
-// }
-
-
-// h2 {
-//     margin-bottom: 5px;
-// }
-
-// // h3,
-// // h4 {
-// //     // margin-top: 20px;
-// //     // margin-bottom: 5px;
-// // }
-
-
-// h1 {
-//     font-size: 1.7rem;
-// }
-
-// h2 {
-//     font-size: 1.5rem;
-// }
-
-// h3 {
-//     font-size: 1.3rem;
-// }
-
-// h4 {
-//     font-size: 1.1rem;
-// }
-
-
-// p,
-// ul {
-//     margin-bottom: 7px;
-
-//     &:last-child {
-//         margin-bottom: 0;
-//     }
-// }
-
-
-// ul {
-//     list-style: none inside;
-// }
-
-// a {
-//     &:link,
-//     &:visited {
-//         text-decoration: none;
-//     }
-
-//     &:hover,
-//     &:focus,
-//     &:active {
-//         text-decoration-line: underline;
-//         text-decoration-style: dotted;
-//     }
-// }
-
-
-// img {
-//     border: 2px solid;
-// }
-
-
-// hr { // our <hr>'s are invisible
-//     border: 0;
-//     height: 20px;
-// }
-
-
-// header {
-//     position: sticky;
-//     top: 0;
-//     padding: 10px;
-//     text-align: center;
-
-//     img {
-//         border: 0;
-//     }
-// }
-
-
-// main {
-//     max-width: 960px;
-//     padding: 40px 20px 20px 20px;
-//     margin: 0 auto;
-// }
-
-
-// // footer {
-// //     text-align: center;
-// //     margin: 100px 10px 30px 10px;
-// // }
-
-
-
-
-
-
-// .box {
-//     padding: 10px;
-//     margin: 0 0 40px 0;
-// }
-
-
-// .grid {
-//     // &.two-1-1 {}
-//     vertical-align: top;
-
-//     &.news-list-item {
-//         display: grid;
-//         grid-template-columns: auto 1fr;
-//         grid-auto-rows: auto;
-//         column-gap: 10px;
-//         padding: 0 0 10px 0;
-//     }
-
-//     &.rls-list-item {
-//         text-align: center;
-//         padding: 0 0 15px 0;
-//     }
-
-//     &.p420-archive { // FIXME: make other grids like this, e.g. don't do one grid per item but one per list!!!
-//         display: grid;
-//         grid-template-columns: 1fr auto auto;
-//         grid-auto-rows: auto;
-//         column-gap: 10px;
-//         row-gap: 10px;
-//     }
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-// .btn {
-//     display: inline-block;
-//     padding: 2px 5px;
-//     margin: 0 5px 5px 0;
-// }
-
-
-// .label {
-//     font-weight: bold;
-// }
-
-
-// .text-align-left {
-//     text-align: left;
-// }
-
-
-// .text-align-center {
-//     text-align: center;
-// }
-
-
-// .text-align-right {
-//     text-align: right;
-// }
-
-
-// img {
-//     &.center {
-//         display: block;
-//         margin: 0 auto;
-//     }
-
-//     &.fluid {
-//         display: inline-block;
-//         width: 100%;
-//         height: auto;
-//     }
-// }
+.videobox {  // to use with .lazymedia.video as child for keeping the w/h ratio when resizing content
+    position: relative;
+    padding-top: 56.25%;
+    overflow: hidden;
+    margin: 0 0 1rem 0;
+
+    &:last-child {
+        margin: 0;
+    }
+
+    .lazymedia {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+}

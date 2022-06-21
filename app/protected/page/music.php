@@ -219,18 +219,14 @@ if ($releaseByID) {
     if ($rls['relatedMedia']) {
         print('<div class="box">');
         print('<h3>RELATED MEDIA</h3>');
-        // print(
-        //     implode(' ', array_map(function(string $v): string {
-        //         return sprintf('<div data-lazymedia="%1$s" class="gallery">%1$s</div>', $v);
-        //     }, $rls['relatedMedia']))
-        // );
         print(
             implode(' ', array_map(function(array $v): string {
-                // var_dump(substr($v['slug'], 0, 4));
-                // if (substr($v['slug'], 0, 4) != 'http' && substr($v['slug'], 0, 2) != '//') {
-                    // $v['slug'] = $this->conf['filesBasePath'].$v['slug'];
-                // }
-                return sprintf('<div class="lazymedia">%1$s</div>', jenc($v));
+                if ($v['type'] == 'video' || $v['platform'] == 'youtube') {
+                    return sprintf('<div class="videobox"><div class="lazymedia">%1$s</div></div>', jenc($v));
+                }
+                else {
+                    return sprintf('<div class="lazymedia">%1$s</div>', jenc($v));
+                }
             }, $rls['relatedMedia']))
         );
         print('</div>'); // /.box

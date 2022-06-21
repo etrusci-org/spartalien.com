@@ -8,16 +8,16 @@
     <base href="<?php print($this->conf['baseURL']); ?>">
 
     <!-- <meta name="application-name" content="spartalien.com"> -->
-    <!-- <meta name="author" content="arT2 (etrusci.org)"> -->
+    <!-- <meta name="author" content="SPARTALIEN"> -->
     <!-- <meta name="generator" content="Brain"> -->
     <!-- <meta name="description" content="SPARTALIEN's Website"> -->
-    <!-- <meta name="keywords" content="SPARTALIEN, multimedia, art, music, audio, visual, code, experimental"> -->
+    <!-- <meta name="keywords" content="SPARTALIEN, multimedia, art, music, audio, soundtrack, visual, code, experimental, original"> -->
 
     <!-- <meta property="og:title" content="SPARTALIEN.com"> -->
     <!-- <meta property="og:url" content="https://spartalien.com"> -->
     <!-- <meta property="og:description" content="SPARTALIEN's Website"> -->
     <!-- <meta property="og:type" content="website"> -->
-    <!-- <meta property="og:image" content="https://spartalien.com/ogp.png?v=<?php print(filemtime('favicon.ico')); ?>"> -->
+    <!-- <meta property="og:image" content="https://spartalien.com/ogp.png?v=<?php print(filemtime('ogp.png')); ?>"> -->
 
     <link rel="icon" href="favicon.ico?v=<?php print(filemtime('favicon.ico')); ?>" type="image/x-icon">
 

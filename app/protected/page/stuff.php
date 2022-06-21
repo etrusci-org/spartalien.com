@@ -5,6 +5,18 @@ $stuffByID = $this->getStuff('byID');
 
 
 
+// stuff list index
+if (!$stuffByID) {
+    print('
+        <div class="box">
+            <h2>MISCELLANEOUS STUFF</h2>
+        </div>
+    ');
+}
+
+
+
+
 // stuff by id
 if ($stuffByID) {
     $stuff = $stuffByID;
@@ -17,6 +29,9 @@ if ($stuffByID) {
                 $v['slug'],
                 sprintf('stuff-%1$s', $stuff['id']),
             );
+        }
+        else if ($v['type'] == 'video' || $v['platform'] == 'youtube') {
+            return sprintf('<div class="videobox"><div class="lazymedia">%1$s</div></div>', jenc($v));
         }
         else {
             return sprintf(

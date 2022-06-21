@@ -2,6 +2,7 @@
     <script src="res/main.js?v=<?php print(filemtime('res/main.js')); ?>" type="module"></script>
 </body>
 </html>
+<!--[ request: <?php print($this->route['request']); ?> ][ output baked on: <?php print(date('Y-m-d H:i:s T')); ?> ]-->
 <!--+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+
     |                                        |
     |            ... part  of ...            |

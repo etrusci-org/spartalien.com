@@ -42,7 +42,7 @@ export const LazyMedia = {
                     }
                 }
                 catch (error) {
-                    console.error('bad code:', node.innerHTML, 'in node:', node, 'error:', error);
+                    console.error('bad code:', node.innerHTML, 'in node:', node, 'error message:', error);
                 }
                 if (code) {
                     let e = null;
@@ -137,6 +137,7 @@ export const LazyMedia = {
                         }
                     }
                     if (e) {
+                        e.classList.add(code.platform, code.type);
                         if (code.attribute) {
                             for (const [k, v] of code.attribute) {
                                 if (v != 'false') {
@@ -152,7 +153,7 @@ export const LazyMedia = {
                                 e.dataset[k] = v;
                             }
                         }
-                        console.debug('[lazymedia]', 'code:', node.innerHTML, 'element:', e);
+                        console.debug('[lazymedia]', 'code:', node.innerHTML, 'baked element:', e);
                         node.replaceWith(e);
                     }
                 }

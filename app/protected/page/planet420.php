@@ -1,6 +1,6 @@
 <?php
 $archiveList = $this->getPlanet420('archiveList');
-$artistsList = $this->getPlanet420('artistList');
+// $artistsList = $this->getPlanet420('artistList');
 $sessionByID = $this->getPlanet420('sessionByID');
 
 $hoursToListen = floor(array_sum(
@@ -22,7 +22,7 @@ if (!$this->route['flag'] && !$this->route['var']) {
         <div class="box">
             <h2>PLANET 420</h2>
             <p>Click the play button to listen to %1$s hours of selected eclectic music ...</p>
-            <div class="lazymedia mixcloud playlist">{
+            <div class="lazymedia">{
                 "platform": "mixcloud",
                 "type": "playlist",
                 "slug": "/lowtechman/playlists/planet-420/"

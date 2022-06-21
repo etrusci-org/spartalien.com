@@ -2,9 +2,6 @@ interface ScurInterface {
     // Salt string
     s: string
 
-    // Obscure a string
-    ob(data: string): string
-
     // Deobscure a string
     deob(data: string): string
 
