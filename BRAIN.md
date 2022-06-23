@@ -9,9 +9,12 @@
 - maybe video background on index
 - hide secrets
 
-- stuff content
 - stuff descriptions
+- stuff media
+- stuff add start times to url's of [featured on] videos
+
 - about content
+
 - audio release descriptions
 - audio release related media
 

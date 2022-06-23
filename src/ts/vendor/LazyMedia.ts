@@ -180,6 +180,9 @@
                         e.setAttribute('allowfullscreen', 'true')
 
                         if (code.type == 'video') {
+                            if (code.timeStart) {
+                                this.slugSuffix.youtube.video = `${this.slugSuffix.youtube.video}&t=${code.timeStart}`
+                            }
                             e.setAttribute('src', `//www.youtube.com/embed/${code.slug}${this.slugSuffix.youtube.video}`)
                         }
 
@@ -286,6 +289,7 @@ type lazyCodeType = {
     dataset?: [string, string][]
     text?: string
     trackCount?: number
+    timeStart?: number
     noAudioLabel?: boolean
 } | null
 
@@ -302,14 +306,16 @@ type lazyCodeType = {
 
     Optional:
         all:
-            - attribute
-            - dataset
+            - attribute[]
+            - dataset[]
         generic link:
             - text
         generic audio:
             - noAudioLabel
         bandcamp:
             - trackCount
+        youtube video:
+            - timeStart
 
     Example: {
         "platform": "generic",

@@ -129,6 +129,9 @@ export const LazyMedia = {
                         e = this.createDefaultElement('iframe', node);
                         e.setAttribute('allowfullscreen', 'true');
                         if (code.type == 'video') {
+                            if (code.timeStart) {
+                                this.slugSuffix.youtube.video = `${this.slugSuffix.youtube.video}&t=${code.timeStart}`;
+                            }
                             e.setAttribute('src', `//www.youtube.com/embed/${code.slug}${this.slugSuffix.youtube.video}`);
                         }
                         if (code.type == 'playlist') {

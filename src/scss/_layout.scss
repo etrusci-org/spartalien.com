@@ -278,3 +278,11 @@ main {
         top: 0;
     }
 }
+
+
+
+.external-link {
+    &::after {
+        content: '↗';
+    }
+}

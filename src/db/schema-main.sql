@@ -59,9 +59,9 @@ CREATE TABLE IF NOT EXISTS "audioRelease" (
 	"bandcampSlug"	TEXT,
 	"spotifyHost"	TEXT DEFAULT '//open.spotify.com',
 	"spotifySlug"	TEXT,
-	FOREIGN KEY("audioReleaseTypeID") REFERENCES "audioReleaseType"("id"),
+	PRIMARY KEY("id" AUTOINCREMENT),
 	FOREIGN KEY("labelID") REFERENCES "label"("id"),
-	PRIMARY KEY("id" AUTOINCREMENT)
+	FOREIGN KEY("audioReleaseTypeID") REFERENCES "audioReleaseType"("id")
 );
 DROP TABLE IF EXISTS "p420trackHistory";
 CREATE TABLE IF NOT EXISTS "p420trackHistory" (
@@ -70,8 +70,8 @@ CREATE TABLE IF NOT EXISTS "p420trackHistory" (
 	"timeStart"	INTEGER,
 	"artistName"	TEXT,
 	"trackName"	TEXT,
-	FOREIGN KEY("sessionNum") REFERENCES "p420session"("sessionNum"),
-	PRIMARY KEY("id" AUTOINCREMENT)
+	PRIMARY KEY("id" AUTOINCREMENT),
+	FOREIGN KEY("sessionNum") REFERENCES "p420session"("sessionNum")
 );
 DROP TABLE IF EXISTS "p420session";
 CREATE TABLE IF NOT EXISTS "p420session" (
@@ -81,6 +81,24 @@ CREATE TABLE IF NOT EXISTS "p420session" (
 	"sessionDur"	INTEGER NOT NULL DEFAULT 0,
 	"mixcloudHost"	TEXT NOT NULL DEFAULT '//mixcloud.com/lowtechman',
 	"mixcloudSlug"	TEXT,
+	PRIMARY KEY("id" AUTOINCREMENT)
+);
+DROP TABLE IF EXISTS "visual";
+CREATE TABLE IF NOT EXISTS "visual" (
+	"id"	INTEGER,
+	"createdOn"	TEXT,
+	"visualName"	TEXT UNIQUE,
+	"description"	TEXT,
+	"tags"	TEXT DEFAULT '[]',
+	"media"	TEXT DEFAULT '[]',
+	PRIMARY KEY("id" AUTOINCREMENT)
+);
+DROP TABLE IF EXISTS "stuff";
+CREATE TABLE IF NOT EXISTS "stuff" (
+	"id"	INTEGER,
+	"stuffName"	TEXT UNIQUE,
+	"description"	TEXT,
+	"media"	TEXT DEFAULT '[]',
 	PRIMARY KEY("id" AUTOINCREMENT)
 );
 COMMIT;

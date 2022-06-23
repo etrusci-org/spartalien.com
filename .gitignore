@@ -1,3 +1,2 @@
 0000/
-*.code-workspace
 app/protected/db/*.bak*.sqlite3
