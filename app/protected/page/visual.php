@@ -17,20 +17,6 @@ if (!$visualByID) {
 
 
 
-// // visual not found, in case they follow old links
-// if (isset($this->route['var']['id']) && !$visualByID) {
-//     printf('
-//         <div class="box error">
-//             <p>The requested visual <code>[ID:%1$s]</code> does not exist or got assigned a new ID.</p>
-//             <img src="res/err404.gif" class="fluid">
-//         </div>',
-//         $this->route['var']['id'],
-//     );
-// }
-
-
-
-
 // visual by id
 if ($visualByID) {
     $vis = $visualByID;
