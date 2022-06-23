@@ -8,6 +8,6 @@ export const App: AppInterface = {
         console.log('SPARTALIEN.COM')
         LazyMedia.embed()
         Scur.deobElements()
-        addTargetToExtLinks(['localhost', 'spartalien.com'])
+        addTargetToExtLinks()
     },
 }

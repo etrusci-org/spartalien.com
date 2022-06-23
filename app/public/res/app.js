@@ -6,6 +6,6 @@ export const App = {
         console.log('SPARTALIEN.COM');
         LazyMedia.embed();
         Scur.deobElements();
-        addTargetToExtLinks(['localhost', 'spartalien.com']);
+        addTargetToExtLinks();
     },
 };

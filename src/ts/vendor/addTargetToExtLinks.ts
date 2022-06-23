@@ -1,14 +1,13 @@
 /**
- * Automagically add target="..." to anchors that link to a different place.
+ * Automagically add target="..." to anchors that link to a different domain.
  *
- * @param {array} localHostnames  Hostnames in this array will be kept alone.
- * @param {string} [target='_blank']  Link target.
+ * @param {string} [target='_blank']  Anchor target.
  * @returns {void}
  */
-export function addTargetToExtLinks(localHostnames: string[], target: string = '_blank'): void {
+export function addTargetToExtLinks(target: string = '_blank'): void {
     let anchors = document.querySelectorAll('a')
     anchors.forEach(e => {
-        if (localHostnames.indexOf(e.hostname) == -1 && e.protocol != 'mailto:') {
+        if (document.location.hostname != e.hostname) {
             e.setAttribute('target', target)
         }
     })

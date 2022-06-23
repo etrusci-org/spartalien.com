@@ -104,7 +104,6 @@
                             if (!code.noAudioLabel) {
                                 let e3 = this.createDefaultElement('label')
                                 e3.innerText = code.slug.split('/').pop() || code.slug
-                                console.log('e3 :>> ', e3);
                                 node.insertAdjacentElement('beforebegin', e3)
                             }
 

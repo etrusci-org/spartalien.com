@@ -1,7 +1,7 @@
-export function addTargetToExtLinks(localHostnames, target = '_blank') {
+export function addTargetToExtLinks(target = '_blank') {
     let anchors = document.querySelectorAll('a');
     anchors.forEach(e => {
-        if (localHostnames.indexOf(e.hostname) == -1 && e.protocol != 'mailto:') {
+        if (document.location.hostname != e.hostname) {
             e.setAttribute('target', target);
         }
     });
