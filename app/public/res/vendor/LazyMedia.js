@@ -74,11 +74,6 @@ export const LazyMedia = {
                             if (audioType) {
                                 e2.setAttribute('type', audioType);
                             }
-                            if (!code.noAudioLabel) {
-                                let e3 = this.createDefaultElement('label');
-                                e3.innerText = code.slug.split('/').pop() || code.slug;
-                                node.insertAdjacentElement('beforebegin', e3);
-                            }
                             e.appendChild(e2);
                         }
                         if (code.type == 'video') {
@@ -140,6 +135,18 @@ export const LazyMedia = {
                     }
                     if (e) {
                         e.classList.add(code.platform, code.type);
+                        if (code.label) {
+                            let nodeLabel = this.createDefaultElement('label');
+                            nodeLabel.innerText = code.label;
+                            node.insertAdjacentElement('beforebegin', nodeLabel);
+                        }
+                        else {
+                            if (code.platform == 'generic' && code.type == 'audio') {
+                                let nodeLabel = this.createDefaultElement('label');
+                                nodeLabel.innerText = code.slug.split('/').pop() || code.slug;
+                                node.insertAdjacentElement('beforebegin', nodeLabel);
+                            }
+                        }
                         if (code.attribute) {
                             for (const [k, v] of code.attribute) {
                                 if (v != 'false') {

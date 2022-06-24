@@ -1,5 +1,10 @@
 # BRAIN
 
+- add merch and prod to stuff
+
+- page cam
+- page links
+
 - finalize color
 - finalize layout
 
