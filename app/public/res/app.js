@@ -5,7 +5,7 @@ export const App = {
     main() {
         console.log('SPARTALIEN.COM');
         LazyMedia.embed();
-        Scur.deobElements();
         addTargetToExtLinks();
+        Scur.deobElements();
     },
 };

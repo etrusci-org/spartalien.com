@@ -1,4 +1,2 @@
 import { App } from './app.js';
-(() => {
-    App.main();
-})();
+window.addEventListener('load', App.main);

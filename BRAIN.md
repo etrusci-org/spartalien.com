@@ -1,9 +1,7 @@
 # BRAIN
 
-- add merch and prod to stuff
-
 - page cam
-- page links
+- page links or ditch links page completely? maybe add a kinda hidden "network" link in the footer?
 
 - finalize color
 - finalize layout
@@ -19,6 +17,8 @@
 - stuff add start times to url's of [featured on] videos
 
 - about content
+
+- update old route links
 
 - audio release descriptions
 - audio release related media

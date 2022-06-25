@@ -135,18 +135,6 @@ export const LazyMedia = {
                     }
                     if (e) {
                         e.classList.add(code.platform, code.type);
-                        if (code.label) {
-                            let nodeLabel = this.createDefaultElement('label');
-                            nodeLabel.innerText = code.label;
-                            node.insertAdjacentElement('beforebegin', nodeLabel);
-                        }
-                        else {
-                            if (code.platform == 'generic' && code.type == 'audio') {
-                                let nodeLabel = this.createDefaultElement('label');
-                                nodeLabel.innerText = code.slug.split('/').pop() || code.slug;
-                                node.insertAdjacentElement('beforebegin', nodeLabel);
-                            }
-                        }
                         if (code.attribute) {
                             for (const [k, v] of code.attribute) {
                                 if (v != 'false') {

@@ -101,13 +101,6 @@
                                 e2.setAttribute('type', audioType)
                             }
 
-                            // TODO: ditch this boolean flag, instead  use the text or create new label option
-                            // if (!code.noAudioLabel) {
-                            //     let e3 = this.createDefaultElement('label')
-                            //     e3.innerText = code.slug.split('/').pop() || code.slug
-                            //     node.insertAdjacentElement('beforebegin', e3)
-                            // }
-
                             e.appendChild(e2)
                         }
 
@@ -197,20 +190,20 @@
                         // Add platform/type css classes
                         e.classList.add(code.platform, code.type)
 
-                        // Add label if given
-                        if (code.label) {
-                            let nodeLabel = this.createDefaultElement('label')
-                            nodeLabel.innerText = code.label
-                            node.insertAdjacentElement('beforebegin', nodeLabel)
-                        }
-                        else {
-                            // Auto-label generic:audio
-                            if (code.platform == 'generic' && code.type == 'audio') {
-                                let nodeLabel = this.createDefaultElement('label')
-                                nodeLabel.innerText = code.slug.split('/').pop() || code.slug
-                                node.insertAdjacentElement('beforebegin', nodeLabel)
-                            }
-                        }
+                        // // Add label if given
+                        // if (code.label) {
+                        //     let nodeLabel = this.createDefaultElement('label')
+                        //     nodeLabel.innerText = code.label
+                        //     node.insertAdjacentElement('beforebegin', nodeLabel)
+                        // }
+                        // else {
+                        //     // Auto-label generic:audio
+                        //     if (code.platform == 'generic' && code.type == 'audio') {
+                        //         let nodeLabel = this.createDefaultElement('label')
+                        //         nodeLabel.innerText = code.slug.split('/').pop() || code.slug
+                        //         node.insertAdjacentElement('beforebegin', nodeLabel)
+                        //     }
+                        // }
 
                         // attribute
                         if (code.attribute) {
@@ -305,7 +298,7 @@ type lazyCodeType = {
     attribute?: [string, string][]
     dataset?: [string, string][]
     text?: string
-    label?: string
+    // label?: string
     trackCount?: number
     timeStart?: number
 } | null
@@ -325,7 +318,7 @@ type lazyCodeType = {
         all:
             - attribute[]
             - dataset[]
-            - label
+            // - label
         generic link:
             - text
         bandcamp:

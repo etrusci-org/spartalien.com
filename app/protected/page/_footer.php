@@ -1,4 +1,19 @@
     </main>
+
+    <footer>
+        <?php
+        foreach ($this->conf['elsewhere'] as $k => $v) {
+            printf('
+                <a href="%3$s"><img src="res/ico-%1$s.png" alt="%2$s" title="%2$s"></a>
+                ',
+                strtolower($k),
+                $k,
+                $v,
+            );
+        }
+        ?>
+    </footer>
+
     <script src="res/main.js?v=<?php print(filemtime('res/main.js')); ?>" type="module"></script>
 </body>
 </html>

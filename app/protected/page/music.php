@@ -156,8 +156,8 @@ if ($releaseByID) {
             $artist,
             $v['audioName'],
             $v['audioRuntimeString'],
-            ($v['bandcampSlug']) ? sprintf('<a href="%1$s%2$s"><img src="res/ico-bandcamp.png" alt="Bandcamp"></a>', $v['bandcampHost'], $v['bandcampSlug']) : '',
-            ($v['spotifySlug']) ? sprintf('<a href="%1$s%2$s"><img src="res/ico-spotify.png" alt="Spotify"></a>', $v['spotifyHost'], $v['spotifySlug']) : '',
+            ($v['bandcampSlug']) ? sprintf('<a href="%1$s%2$s"><img src="res/ico-bandcamp.png" alt="Bandcamp" title="Bandcamp"></a>', $v['bandcampHost'], $v['bandcampSlug']) : '',
+            ($v['spotifySlug']) ? sprintf('<a href="%1$s%2$s"><img src="res/ico-spotify.png" alt="Spotify" title="Spotify"></a>', $v['spotifyHost'], $v['spotifySlug']) : '',
         );
     }
     print('

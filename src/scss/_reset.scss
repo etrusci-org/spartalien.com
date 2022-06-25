@@ -9,6 +9,7 @@ div,
 h1,
 h2,
 h3,
+label,
 p,
 ul,
 li,
@@ -41,5 +42,6 @@ img,
 audio,
 video {
     max-width: 100%;
+    height: auto;
     box-sizing: border-box;
 }

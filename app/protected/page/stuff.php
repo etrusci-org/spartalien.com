@@ -23,15 +23,27 @@ if ($stuffByID) {
 
     $lazymedia = implode(' ', array_map(function(array $v) use ($stuff): string {
         if ($v['type'] == 'image') {
-            return sprintf(
-                '<a href="%2$s" data-lightbox="%3$s"><div class="lazymedia">%1$s</div></a>',
+            return sprintf('
+                <a href="%2$s" data-lightbox="%3$s"><div class="lazymedia">%1$s</div></a>
+                ',
                 jenc($v),
                 $v['slug'],
                 sprintf('stuff-%1$s', $stuff['id']),
             );
         }
         else if ($v['type'] == 'video' || $v['platform'] == 'youtube') {
-            return sprintf('<div class="videobox"><div class="lazymedia">%1$s</div></div>', jenc($v));
+            return sprintf('
+                <div class="videobox"><div class="lazymedia">%1$s</div></div>
+                ',
+                jenc($v)
+            );
+        }
+        else if ($v['type'] == 'audio') {
+            return sprintf(
+                '%2$s: <div class="lazymedia">%1$s</div>',
+                jenc($v),
+                basename($v['slug']),
+            );
         }
         else {
             return sprintf(
@@ -46,11 +58,11 @@ if ($stuffByID) {
             <h2>%1$s</h2>
             %2$s
         </div>
-        %3$s
+        <div class="box">%3$s</div>
         ',
         $stuff['stuffName'],
         ($stuff['description']) ? sprintf('<p>%1$s</p>', $this->parseLazyInput($stuff['description'])) : '',
-        ($lazymedia) ? sprintf('<div class="box">%1$s</div>', $lazymedia) : '',
+        ($lazymedia) ? $lazymedia : '',
     );
 
 
@@ -70,14 +82,15 @@ if ($stuffList) {
     print('<ul>');
 
     foreach ($stuffList as $v) {
-        printf(
-            '<li><a href="%1$s"%3$s>%2$s</a></li>',
+        printf('
+            <li><a href="%1$s"%3$s>%2$s</a></li>
+            ',
             $this->routeURL(sprintf('stuff/id:%1$s', $v['id'])),
             $v['stuffName'],
             (isset($this->route['var']['id']) && $this->route['var']['id'] == $v['id']) ? ' class="active"' : '',
         );
     }
 
-    print('</div>');
+    print('</ul>');
     print('</div>');
 }
