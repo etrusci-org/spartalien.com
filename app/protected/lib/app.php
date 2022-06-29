@@ -546,7 +546,6 @@ class App extends WebApp {
         $data = array();
 
         switch ($mode) {
-
             case 'list':
                 $q = '
                 SELECT
@@ -598,6 +597,33 @@ class App extends WebApp {
                     }
                 }
                 break;
+        }
+
+        return $data;
+    }
+
+
+    protected function getExit(string $mode, array $kwargs=array()): array {
+        $data = array();
+
+        switch ($mode) {
+            case 'list':
+                $q = '
+                SELECT
+                    id, linkText, LOWER(linkText) AS linkTextLC, url
+                FROM
+                    exit
+                ORDER BY
+                    linkTextLC ASC;
+                ';
+
+                $dump = $this->DB->query($q);
+
+                if ($dump) {
+                    $data = $dump;
+                }
+                break;
+
         }
 
         return $data;

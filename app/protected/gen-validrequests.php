@@ -8,6 +8,10 @@ $validRequests = array(
     'define(\'VALID_REQUESTS\', array(',
 );
 
+printf('parsing %d route patterns...'.PHP_EOL, count($conf['validRequestPatterns']));
+
+$scriptStart = microtime(TRUE);
+
 foreach ($conf['validRequestPatterns'] as $requestPattern) {
     // ignore intelephense(1006) on $requestPattern of preg_match, it's a bug in intelephense.
 
@@ -31,8 +35,7 @@ foreach ($conf['validRequestPatterns'] as $requestPattern) {
 
 $validRequests[] = '));';
 $validRequests[] = '?>';
-$validRequests = implode(PHP_EOL, $validRequests);
 
-print_r($validRequests);
+file_put_contents(__DIR__.'/cache/validrequests.php', implode(PHP_EOL, $validRequests));
 
-file_put_contents(__DIR__.'/cache/validrequests.php', $validRequests);
+printf('baked %d valid requests in %f seconds'.PHP_EOL, count($validRequests), (microtime(TRUE) - $scriptStart));

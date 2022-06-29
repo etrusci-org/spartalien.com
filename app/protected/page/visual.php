@@ -24,7 +24,7 @@ if ($visualByID) {
     $lazymedia = implode(' ', array_map(function(array $v) use ($vis): string {
         if ($v['type'] == 'image') {
             return sprintf(
-                '<a href="%2$s" data-lightbox="%3$s"><div class="lazymedia">%1$s</div></a>',
+                '<a href="%2$s" data-lightbox="%3$s"><div class="lazycode">%1$s</div></a>',
                 jenc($v),
                 $v['slug'],
                 sprintf('visual-%1$s', $vis['id']),
@@ -32,7 +32,7 @@ if ($visualByID) {
         }
         else {
             return sprintf(
-                '<div class="lazymedia">%1$s</div>',
+                '<div class="lazycode">%1$s</div>',
                 jenc($v)
             );
         }
@@ -67,7 +67,8 @@ if ($visualList) {
         print('<h3>MORE VISUALS ...</h3>');
     }
 
-    print('<div class="grid visual-list">');
+    // print('<div class="grid visual-list">');
+    print('<div class="grid simple">');
 
     foreach ($visualList as $v) {
         printf('

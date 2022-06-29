@@ -1,13 +1,17 @@
-import { Scur } from './vendor/scur.js'
 import { LazyMedia } from './vendor/LazyMedia.js'
+import { Scur } from './vendor/scur.js'
 import { addTargetToExtLinks } from './vendor/addTargetToExtLinks.js'
 
 
 export const App: AppInterface = {
     main() {
         console.log('SPARTALIEN.COM')
+
+        // LazyMedia.debug = true
         LazyMedia.embed()
-        addTargetToExtLinks()
+
         Scur.deobElements()
+
+        addTargetToExtLinks()
     },
 }

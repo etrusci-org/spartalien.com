@@ -1,23 +1,32 @@
     </main>
 
-    <footer>
-        <?php
-        foreach ($this->conf['elsewhere'] as $k => $v) {
-            printf('
-                <a href="%3$s"><img src="res/ico-%1$s.png" alt="%2$s" title="%2$s"></a>
-                ',
-                strtolower($k),
-                $k,
-                $v,
-            );
-        }
-        ?>
-    </footer>
 
-    <script src="res/main.js?v=<?php print(filemtime('res/main.js')); ?>" type="module"></script>
+    <?php if ($this->route['node'] != 'index'): ?>
+        <footer>
+            <p>
+                <?php
+                foreach ($this->conf['elsewhere'] as $k => $v) {
+                    printf('
+                        <a href="%1$s"><img src="res/ico-%2$s.png" alt="%3$s" title="%3$s"></a>',
+                        $v[1],
+                        $k,
+                        $v[0],
+                    );
+                }
+                ?>
+            </p>
+            <p>&copy; 2016-<?php print(date('Y')); ?> SPARTALIEN.COM</p>
+            <p>
+                <a href="<?php print($this->routeURL('sitemap')); ?>"><img src="res/ico-sitemap.png" alt="Sitemap" title="Sitemap"></a>
+                <a href="<?php print($this->routeURL('exit')); ?>"><img src="res/ico-exit.png" alt="Exit" title="Exit"></a>
+            </p>
+        </footer>
+    <?php endif; ?>
+
+
+    <script src="res/main.js?v=<?php print(filemtime('res/app.js')); ?>" type="module"></script>
 </body>
 </html>
-<!--[ request: <?php print($this->route['request']); ?> ][ output baked on: <?php print(date('Y-m-d H:i:s T')); ?> ]-->
 <!--+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+
     |                                        |
     |            ... part  of ...            |

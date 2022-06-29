@@ -24,8 +24,9 @@
     }
 
     .grid {
-        &.music-list,
-        &.visual-list {
+        // &.music-list,
+        // &.visual-list,
+        &.simple {
             grid-template-columns: 1fr 1fr 1fr;
         }
     }

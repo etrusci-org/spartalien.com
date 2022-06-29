@@ -106,16 +106,14 @@ if ($releaseByID) {
 
     // bandcamp release player
     if ($rls['bandcampID']) {
-        // printf('<div data-lazymedia="bandcamp:%1$s:%2$s:%3$s">bandcamp:%1$s:%2$s:%3$s</div>', ($rls['trackCount'] > 1) ? 'album' : 'track', $rls['bandcampID'], $rls['trackCount']);
         printf('
-            <div class="lazymedia bandcamp %1$s">{
-                "platform": "bandcamp",
-                "type": "%1$s",
+            <div class="lazycode">{
+                "type": "bandcamp%1$s",
                 "slug": "%2$s",
-                "trackCount": "%3$s"
+                "trackCount": %3$s
             }</div>
             ',
-            ($rls['trackCount'] > 1) ? 'album' : 'track',
+            ($rls['trackCount'] > 1) ? 'Album' : 'Track',
             $rls['bandcampID'],
             $rls['trackCount'],
         );
@@ -207,11 +205,11 @@ if ($releaseByID) {
         print('<h3>RELATED MEDIA</h3>');
         print(
             implode(' ', array_map(function(array $v): string {
-                if ($v['type'] == 'video' || $v['platform'] == 'youtube') {
-                    return sprintf('<div class="videobox"><div class="lazymedia">%1$s</div></div>', jenc($v));
+                if ($v['type'] == 'video' || $v['type'] == 'youtubeVideo' || $v['type'] == 'youtubePlaylist') {
+                    return sprintf('<div class="videobox"><div class="lazycode">%1$s</div></div>', jenc($v));
                 }
                 else {
-                    return sprintf('<div class="lazymedia">%1$s</div>', jenc($v));
+                    return sprintf('<div class="lazycode">%1$s</div>', jenc($v));
                 }
             }, $rls['relatedMedia']))
         );
@@ -232,7 +230,8 @@ if ($releaseList) {
         print('<h3>MORE MUSIC ...</h3>');
     }
 
-    print('<div class="grid music-list">');
+    // print('<div class="grid music-list">');
+    print('<div class="grid simple">');
 
     foreach ($releaseList as $v) {
         printf('

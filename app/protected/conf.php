@@ -1,7 +1,7 @@
 <?php
 /*
 On content change:
-- adjust validRequestPatterns and run app/protected/gen-validrequests.php
+- adjust validRequestPatterns and run app/protected/gen-validrequests.php (run build task to do so)
 
 Before deploy:
 - set APP_PRODUCTION_MODE to true
@@ -39,32 +39,34 @@ $conf = array(
     'validateRequests' => true,
     'validRequestPatterns' => array( # after updating these patterns, run app/protected/gen-validrequests.php once to generate app/protected/cache/valid-requests.php which is required in app/protected/init.php
         '',
-        'index',
+        // 'index',
         'news',
         'news/id:[1-53]',
         'music',
-        'music/freedl',
         'music/id:[1-33]',
         'music/type:[album|ep|remix|single]',
         'music/year:[2016-2021]',
+        'music/freedl',
         'visual',
-        'visual/id:[1-40]',
+        'visual/id:[1-41]',
         'stuff',
         'stuff/id:[1-22]',
         'planet420',
+        'planet420/session/num:[1-39]',
         'planet420/artists',
-        'planet420/session/num:[1-38]',
         'about',
+        'sitemap',
+        'exit',
     ),
     'elsewhere' => array(
-        'Newsletter' => '//eepurl.com/dqYlHr',
-        'Bandcamp' => '//spartalien.bandcamp.com',
-        'Spotify' => '//open.spotify.com/artist/553FKlcVkf1YFU6dl129Ef',
-        'YouTube' => '//www.youtube.com/channel/UCXwYExlRqK_oeUocuKkhRUw',
-        'Twitch' => '//twitch.tv/spartalien',
-        'Discogs' => '//www.discogs.com/artist/5977226',
-        'Twitter' => '//twitter.com/spartalien',
-        'Instagram' => '//instagram.com/spartalien',
+        'newsletter' => ['Newsletter', '//eepurl.com/dqYlHr'],
+        'bandcamp' => ['Bandcamp', '//spartalien.bandcamp.com'],
+        'spotify' => ['Spotify', '//open.spotify.com/artist/553FKlcVkf1YFU6dl129Ef'],
+        'youtube' => ['YouTube', '//www.youtube.com/channel/UCXwYExlRqK_oeUocuKkhRUw'],
+        'discogs' => ['Discogs', '//www.discogs.com/artist/5977226'],
+        'twitch' => ['Twitch', '//twitch.tv/spartalien'],
+        'twitter' => ['Twitter', '//twitter.com/spartalien'],
+        'instagram' => ['Instagram', '//instagram.com/spartalien'],
     ),
 );
 

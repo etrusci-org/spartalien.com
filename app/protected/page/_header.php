@@ -25,10 +25,14 @@
 
     <link rel="stylesheet" href="res/style.min.css?v=<?php print(filemtime('res/style.min.css')); ?>">
 
-    <title><?php print($this->conf['siteTitle']); ?></title>
+    <title><?php print($this->conf['siteTitle']); ?> :: <?php print($this->route['request']); ?></title>
 
 </head>
 <body>
+    <noscript>
+        <div class="noscript">Consider enabling JavaScript or features like audio and video players won't work. (<a href="//enable-javascript.com">instructions</a>)</div>
+    </noscript>
+
     <header>
         <?php
         printf('
@@ -40,4 +44,6 @@
         );
         ?>
     </header>
+
+
     <main>

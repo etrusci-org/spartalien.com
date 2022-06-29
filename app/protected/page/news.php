@@ -7,15 +7,17 @@ $newsByID = $this->getNews('byID');
 
 // news list index
 if (!$newsByID) {
-    print('
+    printf('
         <div class="box">
             <h2>NOTABLE UPDATES AND CHANGES</h2>
-            <p>
-                Subscribe to the <a href="#">Newsletter</a> to get these news directly in your inbox.
-                Follow me on <a href="#">Twitter</a> and <a href="#">Instagram</a> for random bleeps in between.
-            </p>
-        </div>
-    ');
+            <a href="%1$s" class="btn">Newsletter</a>
+            <a href="%2$s" class="btn">Twitter</a>
+            <a href="%3$s" class="btn">Instagram</a>
+        </div>',
+        $this->conf['elsewhere']['newsletter'][1],
+        $this->conf['elsewhere']['twitter'][1],
+        $this->conf['elsewhere']['instagram'][1],
+    );
 }
 
 

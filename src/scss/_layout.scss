@@ -188,8 +188,9 @@ footer {
         }
     }
 
-    &.music-list,
-    &.visual-list {
+    // &.music-list,
+    // &.visual-list,
+    &.simple {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-auto-rows: auto;
@@ -247,27 +248,23 @@ footer {
         margin-bottom: .5rem;
     }
 
-    &.bandcamp {
+
+    &.bandcampTrack {
         width: 100%;
-
-        &.track {
-            min-width: 170px;
-            height: 120px;
-        }
-
-        &.album {
-            min-width: 370px;
-            min-height: 208px;
-        }
+        min-width: 170px;
+        height: 120px;
     }
 
-    &.mixcloud {
+    &.bandcampAlbum {
         width: 100%;
+        min-width: 370px;
+        min-height: 208px;
+    }
 
-        &.mix,
-        &.playlist {
-            height: 180px;
-        }
+    &.mixcloudMix,
+    &.mixcloudPlaylist {
+        width: 100%;
+        height: 180px;
     }
 }
 
@@ -279,19 +276,38 @@ footer {
     margin: 0 0 1rem 0;
 
     &:last-child {
-        margin: 0;
+        margin-bottom: .5rem;
     }
 
     .lazymedia {
         position: absolute;
-        width: 100%;
-        height: 100%;
         left: 0;
         top: 0;
+        width: 100%;
+        height: 100%;
     }
 }
 
 
+.fsvideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+// .lazycode.fsvideo {
+//     display: none;
+// }
+
+
+.noscript {
+    font-weight: bold;
+    text-align: center;
+}
 
 // .external-link {
 //     &::after {
