@@ -12,6 +12,6 @@
         <code>route: <?php print(jenc($this->route)); ?></code>
     </p>
     <p>
-        <img src="res/err404.gif" class="fluid">
+        <img src="res/err404.gif" alt="Error 404" class="fluid">
     </p>
 </div>

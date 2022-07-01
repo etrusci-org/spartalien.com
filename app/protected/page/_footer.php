@@ -24,7 +24,10 @@
     <?php endif; ?>
 
 
-    <script src="res/main.js?v=<?php print(filemtime('res/app.js')); ?>" type="module"></script>
+    <div class="imagepreviewTarget" title="Click anywhere or press Escape to close"></div>
+
+
+    <script src="res/main.js?v=<?php print(filemtime('res/main.js')); ?>" type="module"></script>
 </body>
 </html>
 <!--+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+

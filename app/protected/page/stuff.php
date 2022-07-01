@@ -24,7 +24,7 @@ if ($stuffByID) {
     $lazymedia = implode(' ', array_map(function(array $v) use ($stuff): string {
         if ($v['type'] == 'image') {
             return sprintf('
-                <a href="%2$s" data-lightbox="%3$s"><div class="lazycode">%1$s</div></a>
+                <a href="%2$s" class="imagepreview"><span class="lazycode">%1$s</span></a>
                 ',
                 jenc($v),
                 $v['slug'],
@@ -33,21 +33,21 @@ if ($stuffByID) {
         }
         else if ($v['type'] == 'video' || $v['type'] == 'youtubeVideo') {
             return sprintf('
-                <div class="videobox"><div class="lazycode">%1$s</div></div>
+                <div class="videobox"><span class="lazycode">%1$s</span></div>
                 ',
                 jenc($v)
             );
         }
         else if ($v['type'] == 'audio') {
             return sprintf(
-                '%2$s: <div class="lazycode">%1$s</div>',
+                '%2$s: <span class="lazycode">%1$s</span>',
                 jenc($v),
                 basename($v['slug']),
             );
         }
         else {
             return sprintf(
-                '<div class="lazycode">%1$s</div>',
+                '<span class="lazycode">%1$s</span>',
                 jenc($v)
             );
         }

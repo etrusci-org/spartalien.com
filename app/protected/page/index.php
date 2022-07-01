@@ -1,4 +1,4 @@
-<div class="lazycode fsvideo" style="display:none">{
+<span class="lazycode fsvideo" style="display:none">{
     "type": "video",
     "slug": "file/visual/2021-subweird1.mp4",
     "attr": [
@@ -8,4 +8,4 @@
         ["muted", "muted"],
         ["controls", false]
     ]
-}</div>
+}</span>

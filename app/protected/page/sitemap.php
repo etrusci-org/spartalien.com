@@ -13,12 +13,11 @@ printf('
 
 // sitemap list
 print('<div class="box text-align-center">');
-print('<ul>');
-print('<li><a href="./">index</a></li>');
+print('<a href="./">index</a>');
 
-print(implode('', array_map(function(string $v): string {
-    return sprintf('<li><a href="%1$s">%1$s</a></li>', $this->routeURL($v));
+print(implode('<br>', array_map(function(string $v): string {
+    if (!$v) return '';
+    return sprintf('<a href="%1$s">%1$s</a>', $this->routeURL($v));
 }, VALID_REQUESTS)));
 
-print('</ul>');
 print('</div>');

@@ -1,12 +1,10 @@
 <div class="box">
-    <p>
-        <img src="file/me/1.jpg" alt="me" class="fluid">
-    </p>
+    TODO
 </div>
 
 
 <div class="box">
-    <h2>WAYS TO GET IN TOUCH</h2>
+    <h3>WAYS TO GET IN TOUCH</h3>
     <p>I'm always curious in your thoughts on my music and art. Both positive feedback and constructive criticism is welcome.</p>
     <p>Also, feel free to send me a message if you have an idea for collaboration.</p>
     <ul>
@@ -18,9 +16,16 @@
 </div>
 
 
+<!-- <div class="box">
+    <p>
+        <img src="file/me/1.jpg" alt="me" class="fluid">
+    </p>
+</div> -->
+
+<!--
 <div class="box">
-    <h2>SUPPORT ME</h2>
+    <h3>SUPPORT ME</h3>
     <p>To create all this stuff not only costs a lot of time, but also money.</p>
     <p>By buying and spreading the word about my music and art you can directly support not only its further development, but also my livelihood.</p>
     <p><strong>Thank you!</strong></p>
-</div>
+</div> -->

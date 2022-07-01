@@ -237,17 +237,19 @@ footer {
 
 
 
-
+.lazycode {
+    display: block;
+    padding: .25rem .25rem .25rem 1.5rem;
+    margin-bottom: 1rem;
+    background-size: 1rem;
+    background-position: .25rem 50%;
+    background-repeat: no-repeat;
+}
 
 
 .lazymedia {
     display: block;
     margin-bottom: 1rem;
-
-    &:last-child {
-        margin-bottom: .5rem;
-    }
-
 
     &.bandcampTrack {
         width: 100%;
@@ -269,7 +271,7 @@ footer {
 }
 
 
-.videobox {  // to use with .lazymedia.video as child for keeping the w/h ratio when resizing content
+.videobox {  // to use with .lazymedia(videos) as child for keeping the w/h ratio when resizing content
     position: relative;
     padding-top: 56.25%;
     overflow: hidden;
@@ -299,9 +301,45 @@ footer {
 }
 
 
-// .lazycode.fsvideo {
-//     display: none;
-// }
+
+
+
+
+
+
+.imagepreviewTarget {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2000;
+    padding: 1rem;
+    text-align: center;
+    cursor: zoom-out;
+
+    &.open {
+        display: block;
+    }
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+.imagepreview {
+    cursor: zoom-in;
+}
+
+
+
+
+
+
+
+
 
 
 .noscript {
@@ -309,8 +347,5 @@ footer {
     text-align: center;
 }
 
-// .external-link {
-//     &::after {
-//         content: '↗';
-//     }
-// }
+
+// .external-link {}

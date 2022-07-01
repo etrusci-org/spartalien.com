@@ -1,7 +1,6 @@
 # BRAIN
 
 - page cam
-- page links or ditch links page completely? maybe add a kinda hidden "network" link in the footer?
 
 - finalize color
 - finalize layout
@@ -9,7 +8,6 @@
 - embeds color
 - embeds layout
 
-- maybe video background on index
 - hide secrets
 
 - stuff descriptions
@@ -26,6 +24,8 @@
 - finalize nifty/typescript/LazyMedia.ts and pull into main, then update tool/dep-fetch.cmd
 - pull nifty/typescript/addTargetToExtLinks.ts into main, then update tool/dep-fetch.cmd
 
-- integrate or create lightbox'ish thing becauzse old lightbox2 requires jQuery.
-
 - proof read texts 'cause my english skills vary daily
+
+- ui sound
+
+- beacon

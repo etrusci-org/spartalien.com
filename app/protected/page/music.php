@@ -79,9 +79,8 @@ if ($releaseByID) {
 
     // cover image
     printf(
-        '<p><a href="file/cover/%1$s-big.png"><img src="file/cover/%1$s-med.jpg" class="fluid"></a></p>',
+        '<p><a href="file/cover/%1$s-big.png" class="imagepreview"><img src="file/cover/%1$s-med.jpg" class="fluid"></a></p>',
         $rls['id'],
-        // $this->conf['filesBasePath'],
     );
 
 
@@ -107,11 +106,11 @@ if ($releaseByID) {
     // bandcamp release player
     if ($rls['bandcampID']) {
         printf('
-            <div class="lazycode">{
+            <span class="lazycode">{
                 "type": "bandcamp%1$s",
                 "slug": "%2$s",
                 "trackCount": %3$s
-            }</div>
+            }</span>
             ',
             ($rls['trackCount'] > 1) ? 'Album' : 'Track',
             $rls['bandcampID'],
@@ -205,11 +204,14 @@ if ($releaseByID) {
         print('<h3>RELATED MEDIA</h3>');
         print(
             implode(' ', array_map(function(array $v): string {
-                if ($v['type'] == 'video' || $v['type'] == 'youtubeVideo' || $v['type'] == 'youtubePlaylist') {
-                    return sprintf('<div class="videobox"><div class="lazycode">%1$s</div></div>', jenc($v));
+                if ($v['type'] == 'image') {
+                    return sprintf('<a href="%1$s" class="imagepreview"><span class="lazycode">%2$s</span></a>', $v['slug'], jenc($v));
+                }
+                else if ($v['type'] == 'video' || $v['type'] == 'youtubeVideo' || $v['type'] == 'youtubePlaylist') {
+                    return sprintf('<div class="videobox"><span class="lazycode">%1$s</span></div>', jenc($v));
                 }
                 else {
-                    return sprintf('<div class="lazycode">%1$s</div>', jenc($v));
+                    return sprintf('<span class="lazycode">%1$s</span>', jenc($v));
                 }
             }, $rls['relatedMedia']))
         );

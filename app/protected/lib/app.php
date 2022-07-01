@@ -267,8 +267,8 @@ class App extends WebApp {
 
         // dj mixes link
         $filter[] = array(
-            'DJ-Mixes&nearr;',
-            '//mixcloud.com/lowtechman/uploads/?order=latest',
+            'DJ-Mixes',
+            $this->routeURL('stuff/id:7'),
             null,
         );
 

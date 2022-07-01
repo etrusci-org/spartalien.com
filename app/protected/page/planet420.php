@@ -22,10 +22,10 @@ if (!$artistsList && !$sessionByID) {
         <div class="box">
             <h2>PLANET 420</h2>
             <p>Click the play button to listen to %1$s hours of selected eclectic music ...</p>
-            <div class="lazycode">{
+            <span class="lazycode">{
                 "type": "mixcloudPlaylist",
                 "slug": "/lowtechman/playlists/planet-420/"
-            }</div>
+            }</span>
         </div>
         ',
         $hoursToListen,
@@ -75,7 +75,7 @@ if ($sessionByID) {
         $this->secondsToString($s['sessionDur']),
         $s['sessionDate'],
         ($s['mixcloudSlug']) ? sprintf('<a href="%1$s%2$s">%2$s</a>', $s['mixcloudHost'], $s['mixcloudSlug']) : 'Sorry, the recording for this one is lost.',
-        ($s['mixcloudSlug']) ? sprintf('<div class="lazycode">{"type": "mixcloudMix", "slug": "%1$s"}</div>', $s['mixcloudSlug']) : '',
+        ($s['mixcloudSlug']) ? sprintf('<span class="lazycode">{"type": "mixcloudMix", "slug": "%1$s"}</span>', $s['mixcloudSlug']) : '',
     );
 
     print('

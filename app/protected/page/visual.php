@@ -24,7 +24,7 @@ if ($visualByID) {
     $lazymedia = implode(' ', array_map(function(array $v) use ($vis): string {
         if ($v['type'] == 'image') {
             return sprintf(
-                '<a href="%2$s" data-lightbox="%3$s"><div class="lazycode">%1$s</div></a>',
+                '<a href="%2$s" class="imagepreview"><span class="lazycode">%1$s</span></a>',
                 jenc($v),
                 $v['slug'],
                 sprintf('visual-%1$s', $vis['id']),
@@ -32,7 +32,7 @@ if ($visualByID) {
         }
         else {
             return sprintf(
-                '<div class="lazycode">%1$s</div>',
+                '<span class="lazycode">%1$s</span>',
                 jenc($v)
             );
         }
@@ -74,14 +74,13 @@ if ($visualList) {
         printf('
             <div class="row">
                 <a href="%1$s"%6$s>
-                    <img src="%2$s" alt="preview" loading="lazy"><br>
+                    <img src="%2$s" alt="%3$s" loading="lazy"><br>
                     %3$s
                 </a><br>
                 %4$s, %5$s
             </div>
             ',
             $this->routeURL(sprintf('visual/id:%1$s', $v['id'])),
-            // sprintf('%2$svisual/%1$s-tn.jpg', $v['id'], $this->conf['filesBasePath']),
             sprintf('file/visual/%1$s-tn.jpg', $v['id']),
             $v['visualName'],
             implode(' ', $v['tags']),
