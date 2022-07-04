@@ -9,7 +9,7 @@
     },
     "tasks": [
         {
-            "label": "Create terminals",
+            "label": "spartalien.com build",
             "dependsOn": [
                 "tsc-watch",
                 "sass-watch",
@@ -75,7 +75,7 @@
         {
             "label": "gen-validrequests",
             "type": "shell",
-            "command": "D:/xampp/php/php.exe ./app/protected/gen-validrequests.php",
+            "command": "D:/xampp/php/php.exe ./app/protected/bin/1-gen-validrequests.php",
             "options": {
                 "shell": {
                     "executable": "powershell.exe",

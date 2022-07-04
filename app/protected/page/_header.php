@@ -17,21 +17,19 @@
     <!-- <meta property="og:url" content="https://spartalien.com"> -->
     <!-- <meta property="og:description" content="SPARTALIEN's Website"> -->
     <!-- <meta property="og:type" content="website"> -->
-    <!-- <meta property="og:image" content="https://spartalien.com/ogp.png?v=<?php print(filemtime('ogp.png')); ?>"> -->
+    <!-- <meta property="og:image" content="https://spartalien.com/ogp.png?v="> -->
 
-    <link rel="icon" href="favicon.ico?v=<?php print(filemtime('favicon.ico')); ?>" type="image/x-icon">
+    <link rel="icon" href="favicon.ico?v=<?php print(VERSION['favicon']); ?>" type="image/x-icon">
 
     <link rel="preload" href="res/share-tech-v17-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
 
-    <link rel="stylesheet" href="res/style.min.css?v=<?php print(filemtime('res/style.min.css')); ?>">
+    <link rel="stylesheet" href="res/style.min.css?v=<?php print(VERSION['css']); ?>">
 
-    <title><?php print($this->conf['siteTitle']); ?> :: <?php print($this->route['request']); ?></title>
+    <title><?php print($this->conf['siteTitle']); ($this->route['request']) ? print(' :: '.$this->route['request']) : ''; ?></title>
 
 </head>
 <body>
-    <noscript>
-        <div class="noscript">Consider enabling JavaScript or features like audio and video players won't work. (<a href="//enable-javascript.com">instructions</a>)</div>
-    </noscript>
+    <noscript><div class="noscript">Consider enabling JavaScript or features like audio and video players won't work. (<a href="//enable-javascript.com" target="_blank">instructions</a>)</div></noscript>
 
 
     <header>

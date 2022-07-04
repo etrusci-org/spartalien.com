@@ -6,28 +6,29 @@ export const ImagePreview = {
     init() {
         this.target = document.querySelector(this.targetSelector);
         this.nodes = document.querySelectorAll(this.nodeSelector);
+        if (!this.target)
+            return;
         this.nodes.forEach((nodeElement) => {
             nodeElement.addEventListener('click', (event) => {
-                let elementToInsert = document.createElement('img');
-                let elementHref = nodeElement.getAttribute('href');
-                if (!elementHref)
+                let img = new Image();
+                let imgSrc = nodeElement.getAttribute('href');
+                if (!imgSrc)
                     return;
-                elementToInsert.setAttribute('src', elementHref);
-                elementToInsert.setAttribute('alt', elementHref.split('/').pop() || elementHref);
+                img.setAttribute('src', imgSrc);
                 if (!this.target)
                     return;
-                this.target.replaceChildren(elementToInsert);
+                this.target.replaceChildren(img);
                 this.target.classList.add('open');
                 document.body.style.overflow = 'hidden';
                 event.preventDefault();
             }, false);
         });
-        if (!this.target)
-            return;
         this.target.addEventListener('click', (event) => {
             this.close(event);
         }, false);
         window.addEventListener('keydown', (event) => {
+            if (event.key != 'Escape')
+                return;
             this.close(event);
         }, false);
     },

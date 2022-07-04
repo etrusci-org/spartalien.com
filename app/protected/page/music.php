@@ -51,6 +51,13 @@ if ($releaseByID) {
     print('<div class="box">');
 
 
+    // cover image
+    printf(
+        '<p><a href="file/cover/%1$s-big.png" class="imagepreview"><img src="file/cover/%1$s-med.jpg" class="fluid"></a></p>',
+        $rls['id'],
+    );
+
+
     // rls heading
     printf('
         <h2>%s</h2>',
@@ -74,13 +81,6 @@ if ($releaseByID) {
         $rls['releasedOn'],
         ($rls['updatedOn']) ? sprintf('&middot; Updated %s', $rls['updatedOn']) : '',
         ($rls['labelName']) ? sprintf('&middot; Label %s', sprintf('<a href="%1$s">%2$s</a>', $rls['labelURL'], $rls['labelName'])) : '',
-    );
-
-
-    // cover image
-    printf(
-        '<p><a href="file/cover/%1$s-big.png" class="imagepreview"><img src="file/cover/%1$s-med.jpg" class="fluid"></a></p>',
-        $rls['id'],
     );
 
 
@@ -253,10 +253,15 @@ if ($releaseList) {
             (count($v['artist']) > 1) ? 'Collab, ' : '',
             ($v['updatedOn']) ? substr($v['updatedOn'], 0, 4) : substr($v['releasedOn'], 0, 4),
             (isset($this->route['var']['id']) && $this->route['var']['id'] == $v['id']) ? ' class="active"' : '',
-            // $this->conf['filesBasePath'],
         );
     }
 
     print('</div>');
     print('</div>');
 }
+
+
+print('
+    <div class="box">
+        You can also find my music on most music streaming platforms. Just search for "SPARTALIEN".
+    </div>');

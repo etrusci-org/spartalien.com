@@ -30,13 +30,12 @@ class WebApp {
 
     public function renderOutput(): void {
         $pageFile = sprintf('%s/%s.php', $this->conf['pageDir'], $this->route['node']);
+        $cacheFile = sprintf('%s/%s.html', $this->conf['cacheDir'], $this->cacheID);
 
         if (!is_file($pageFile)) {
             $this->route['node'] = '404';
             $pageFile = sprintf('%s/%s.php', $this->conf['pageDir'], '404');
         }
-
-        $cacheFile = sprintf('%s/%s.php', $this->conf['cacheDir'], $this->cacheID);
 
         if (
             $this->conf['cachingEnabled'] &&
@@ -81,7 +80,7 @@ class WebApp {
             $requestHash[] = sprintf('%s:%s', $k, $v);
         }
         $requestHash[] = implode('/', $this->route['flag']);
-        return hash('ripemd160', implode('/', $requestHash));
+        return sprintf('%s-%s', $this->route['node'], hash('ripemd160', implode('/', $requestHash)));
     }
 
 

@@ -3,7 +3,7 @@ interface ScurInterface {
     s: string
 
     // Obscure a string
-    ob(data: string): string
+    // ob(data: string): string
 
     // Deobscure a string
     deob(data: string): string

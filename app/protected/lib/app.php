@@ -267,8 +267,8 @@ class App extends WebApp {
 
         // dj mixes link
         $filter[] = array(
-            'DJ-Mixes',
-            $this->routeURL('stuff/id:7'),
+            'DJ-Mixes&nearr;',
+            $this->routeURL(sprintf('%s/uploads/?order=latest', $this->conf['elsewhere']['mixcloud'][1])),
             null,
         );
 

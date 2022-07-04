@@ -10,7 +10,7 @@ Before deploy:
 
 define('APP_MODE_PRODUCTION', false);
 
-error_reporting(E_ALL | E_STRICT);
+error_reporting(E_ALL);
 
 $conf = array(
     // Mandatory WebApp vars:
@@ -18,7 +18,7 @@ $conf = array(
     'pageDir' => __DIR__.'/page',
     'cacheDir' => __DIR__.'/cache',
     'cachingEnabled' => false,
-    'cacheTTL' => 10,
+    'cacheTTL' => 3600,
     'cacheExcludedNodes' => array(),
     'rewriteURL' => true,
 
@@ -29,19 +29,17 @@ $conf = array(
     'locale' => 'en-US',
     'encoding' => 'UTF-8',
     'nav' => array(
-        array('news', 'NEWS'),
         array('music', 'MUSIC'),
         array('visual', 'VISUAL'),
         array('stuff', 'STUFF'),
-        array('planet420', '420'),
+        array('planet420', 'P420'),
+        array('cam', 'CAM'),
+        array('news', 'NEWS'),
         array('about', 'ABOUT'),
     ),
     'validateRequests' => true,
     'validRequestPatterns' => array( # after updating these patterns, run app/protected/gen-validrequests.php once to generate app/protected/cache/valid-requests.php which is required in app/protected/init.php
-        '',
-        // 'index',
-        'news',
-        'news/id:[1-53]',
+        '', // index
         'music',
         'music/id:[1-33]',
         'music/type:[album|ep|remix|single]',
@@ -54,16 +52,20 @@ $conf = array(
         'planet420',
         'planet420/session/num:[1-39]',
         'planet420/artists',
+        'cam',
+        'news',
+        'news/id:[1-53]',
         'about',
-        'sitemap',
         'exit',
+        'sitemap',
     ),
     'elsewhere' => array(
         'newsletter' => ['Newsletter', '//eepurl.com/dqYlHr'],
         'bandcamp' => ['Bandcamp', '//spartalien.bandcamp.com'],
         'spotify' => ['Spotify', '//open.spotify.com/artist/553FKlcVkf1YFU6dl129Ef'],
-        'youtube' => ['YouTube', '//www.youtube.com/channel/UCXwYExlRqK_oeUocuKkhRUw'],
-        'discogs' => ['Discogs', '//www.discogs.com/artist/5977226'],
+        'youtube' => ['YouTube', '//youtube.com/channel/UCXwYExlRqK_oeUocuKkhRUw'],
+        'mixcloud' => ['Mixcloud', '//mixcloud.com/lowtechman'],
+        'discogs' => ['Discogs', '//discogs.com/artist/5977226'],
         'twitch' => ['Twitch', '//twitch.tv/spartalien'],
         'twitter' => ['Twitter', '//twitter.com/spartalien'],
         'instagram' => ['Instagram', '//instagram.com/spartalien'],
@@ -74,6 +76,6 @@ $conf = array(
 if (APP_MODE_PRODUCTION) {
     error_reporting(0);
     $conf['cachingEnabled'] = true;
-    $conf['cacheTTL'] = 31_536_000;
+    $conf['cacheTTL'] = 31_536_000_000;
     $conf['baseURL'] = '//spartalien.com/';
 }

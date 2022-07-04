@@ -39,30 +39,6 @@ CREATE TABLE IF NOT EXISTS "audio" (
 	"spotifySlug"	TEXT,
 	PRIMARY KEY("id" AUTOINCREMENT)
 );
-DROP TABLE IF EXISTS "audioRelease";
-CREATE TABLE IF NOT EXISTS "audioRelease" (
-	"id"	INTEGER,
-	"audioIDs"	TEXT DEFAULT '[]',
-	"releaseName"	TEXT,
-	"artistIDs"	TEXT DEFAULT '[1]',
-	"labelID"	INTEGER,
-	"audioReleaseTypeID"	INTEGER,
-	"releasedOn"	TEXT,
-	"updatedOn"	TEXT,
-	"description"	TEXT,
-	"credits"	TEXT,
-	"thanks"	TEXT,
-	"relatedMedia"	TEXT,
-	"freeToDownload"	INTEGER DEFAULT 0,
-	"bandcampID"	TEXT,
-	"bandcampHost"	TEXT DEFAULT '//spartalien.bandcamp.com',
-	"bandcampSlug"	TEXT,
-	"spotifyHost"	TEXT DEFAULT '//open.spotify.com',
-	"spotifySlug"	TEXT,
-	PRIMARY KEY("id" AUTOINCREMENT),
-	FOREIGN KEY("labelID") REFERENCES "label"("id"),
-	FOREIGN KEY("audioReleaseTypeID") REFERENCES "audioReleaseType"("id")
-);
 DROP TABLE IF EXISTS "p420trackHistory";
 CREATE TABLE IF NOT EXISTS "p420trackHistory" (
 	"id"	INTEGER,
@@ -72,16 +48,6 @@ CREATE TABLE IF NOT EXISTS "p420trackHistory" (
 	"trackName"	TEXT,
 	PRIMARY KEY("id" AUTOINCREMENT),
 	FOREIGN KEY("sessionNum") REFERENCES "p420session"("sessionNum")
-);
-DROP TABLE IF EXISTS "p420session";
-CREATE TABLE IF NOT EXISTS "p420session" (
-	"id"	INTEGER,
-	"sessionNum"	INTEGER NOT NULL UNIQUE,
-	"sessionDate"	TEXT NOT NULL,
-	"sessionDur"	INTEGER NOT NULL DEFAULT 0,
-	"mixcloudHost"	TEXT NOT NULL DEFAULT '//mixcloud.com/lowtechman',
-	"mixcloudSlug"	TEXT,
-	PRIMARY KEY("id" AUTOINCREMENT)
 );
 DROP TABLE IF EXISTS "visual";
 CREATE TABLE IF NOT EXISTS "visual" (
@@ -100,5 +66,46 @@ CREATE TABLE IF NOT EXISTS "stuff" (
 	"description"	TEXT,
 	"media"	TEXT DEFAULT '[]',
 	PRIMARY KEY("id" AUTOINCREMENT)
+);
+DROP TABLE IF EXISTS "p420session";
+CREATE TABLE IF NOT EXISTS "p420session" (
+	"id"	INTEGER,
+	"sessionNum"	INTEGER NOT NULL UNIQUE,
+	"sessionDate"	TEXT NOT NULL,
+	"sessionDur"	INTEGER NOT NULL DEFAULT 0,
+	"mixcloudHost"	TEXT NOT NULL DEFAULT '//mixcloud.com',
+	"mixcloudSlug"	TEXT,
+	PRIMARY KEY("id" AUTOINCREMENT)
+);
+DROP TABLE IF EXISTS "exit";
+CREATE TABLE IF NOT EXISTS "exit" (
+	"id"	INTEGER,
+	"linkText"	TEXT NOT NULL,
+	"url"	TEXT NOT NULL,
+	PRIMARY KEY("id" AUTOINCREMENT)
+);
+DROP TABLE IF EXISTS "audioRelease";
+CREATE TABLE IF NOT EXISTS "audioRelease" (
+	"id"	INTEGER,
+	"audioIDs"	TEXT DEFAULT '[]',
+	"releaseName"	TEXT,
+	"artistIDs"	TEXT DEFAULT '[1]',
+	"labelID"	INTEGER,
+	"audioReleaseTypeID"	INTEGER,
+	"releasedOn"	TEXT,
+	"updatedOn"	TEXT,
+	"description"	TEXT,
+	"credits"	TEXT DEFAULT '[]',
+	"thanks"	TEXT DEFAULT '[]',
+	"relatedMedia"	TEXT DEFAULT '[]',
+	"freeToDownload"	INTEGER DEFAULT 0,
+	"bandcampID"	TEXT,
+	"bandcampHost"	TEXT DEFAULT '//spartalien.bandcamp.com',
+	"bandcampSlug"	TEXT,
+	"spotifyHost"	TEXT DEFAULT '//open.spotify.com',
+	"spotifySlug"	TEXT,
+	PRIMARY KEY("id" AUTOINCREMENT),
+	FOREIGN KEY("audioReleaseTypeID") REFERENCES "audioReleaseType"("id"),
+	FOREIGN KEY("labelID") REFERENCES "label"("id")
 );
 COMMIT;

@@ -1,11 +1,11 @@
 import { LazyMedia } from './vendor/LazyMedia.js'
-import { ImagePreview } from './ImagePreview.js'
 import { Scur } from './vendor/scur.js'
 import { addTargetToExtLinks } from './vendor/addTargetToExtLinks.js'
+import { ImagePreview } from './ImagePreview.js'
 
 export const App: AppInterface = {
     main() {
-        console.log('SPARTALIEN.COM')
+        console.group('SPARTALIEN.COM')
 
         // LazyMedia.debug = true
         LazyMedia.embed()
@@ -15,5 +15,7 @@ export const App: AppInterface = {
         addTargetToExtLinks()
 
         ImagePreview.init()
+
+        console.groupEnd()
     },
 }

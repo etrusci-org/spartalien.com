@@ -1,14 +1,13 @@
-.lazycode {
-    transition-property: background-color;
-    animation-duration: 13s;
-    animation-name: lazymedia-loading;
-    animation-iteration-count: infinite;
+// .lazycode {
+//     transition-property: background-color;
+//     animation-duration: 13s;
+//     animation-name: lazymedia-loading;
+//     animation-iteration-count: infinite;
+// }
 
-}
 
-
-@keyframes lazymedia-loading {
-    0% { background-color: $color-00; }
-    50% { background-color: $color-20; }
-    100% { background-color: $color-00; }
-}
+// @keyframes lazymedia-loading {
+//     0% { background-color: $color-00; }
+//     50% { background-color: $color-20; }
+//     100% { background-color: $color-00; }
+// }

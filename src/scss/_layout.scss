@@ -251,6 +251,10 @@ footer {
     display: block;
     margin-bottom: 1rem;
 
+    &:last-child {
+        margin-bottom: .5rem;
+    }
+
     &.bandcampTrack {
         width: 100%;
         min-width: 170px;
@@ -268,12 +272,18 @@ footer {
         width: 100%;
         height: 180px;
     }
+
+    &.twitchChat {
+        width: 100%;
+        height: 350px;
+        background-color: black;
+    }
 }
 
 
-.videobox {  // to use with .lazymedia(videos) as child for keeping the w/h ratio when resizing content
+.videobox {  // to use with .lazymedia as child for keeping the w/h ratio when resizing content
     position: relative;
-    padding-top: 56.25%;
+    padding-top: 56.25%; // 16:9
     overflow: hidden;
     margin: 0 0 1rem 0;
 
@@ -283,10 +293,11 @@ footer {
 
     .lazymedia {
         position: absolute;
-        left: 0;
         top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
+        margin: 0;
     }
 }
 
@@ -315,7 +326,6 @@ footer {
     left: 0;
     right: 0;
     z-index: 2000;
-    padding: 1rem;
     text-align: center;
     cursor: zoom-out;
 
@@ -326,6 +336,7 @@ footer {
     img {
         max-width: 100%;
         max-height: 100%;
+        border: 20px solid;
     }
 }
 
@@ -345,7 +356,10 @@ footer {
 .noscript {
     font-weight: bold;
     text-align: center;
+    padding: .5rem 1rem;
 }
 
 
-// .external-link {}
+.external-link {
+    color: blue;
+}

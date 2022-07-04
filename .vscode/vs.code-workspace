@@ -1,10 +1,13 @@
 {
     "folders": [
-		{
-			"path": ".."
-		},
-		{
-			"path": "..\\..\\spartalien.com-files"
-		}
-	]
+        {
+            "path": ".."
+        },
+        {
+            "path": "..\\..\\spartalien.com-files"
+        },
+        {
+            "path": "..\\..\\nifty"
+        }
+    ]
 }

@@ -23,7 +23,7 @@ INSERT INTO "news" ("id","postedOn","items") VALUES (1,'2016-03-24','["New relea
  (12,'2017-10-22','["New release: [route=music/id:11]Time[/route]"]'),
  (13,'2018-02-27','["New release: [route=music/id:12]Every Day[/route]"]'),
  (14,'2018-04-13','["New release: [route=music/id:13]MONOLOG[/route]"]'),
- (15,'2018-06-07','["New merchandise: [route=merch]Artefact S9M1, MONOLOG Limited Edition[/route]"]'),
+ (15,'2018-06-07','["New merchandise: [route=stuff/id:15]Artefact S9M1, MONOLOG Limited Edition[/route]"]'),
  (16,'2018-08-13','["New release: [route=music/id:14]Searching[/route]"]'),
  (17,'2018-08-31','["New release: [route=music/id:15]THE GREAT FILTER[/route]"]'),
  (18,'2019-03-13','["New release: [route=music/id:16]2358[/route]"]'),
@@ -34,29 +34,29 @@ INSERT INTO "news" ("id","postedOn","items") VALUES (1,'2016-03-24','["New relea
  (23,'2019-07-07','["New release: [route=music/id:19]They Shot My Friend[/route]","New release: [route=music/id:20]The Sad Lightness Of Being[/route]"]'),
  (24,'2019-07-12','["New release: [route=music/id:18]Brain I/O #4[/route]"]'),
  (25,'2019-07-20','["New release: [route=music/id:18]Brain I/O #5[/route]"]'),
- (26,'2019-08-13','["New merchandise: [route=merch]Memoria S9M2, 2358 Limited Edition[/route]"]'),
+ (26,'2019-08-13','["New merchandise: [route=stuff/id:16]Memoria S9M2, 2358 Limited Edition[/route]"]'),
  (27,'2019-08-15','["New release: [route=music/id:18]Brain I/O #6[/route]"]'),
  (28,'2019-12-12','["New release: [route=music/id:18]Brain I/O #7[/route]"]'),
  (29,'2019-12-13','["New release: [route=music/id:21]KEEN[/route]"]'),
  (30,'2019-12-23','["New release: [route=music/id:22]SPARTALIEN & Esblendet - Rainbows & Unicorns[/route]"]'),
  (31,'2019-12-28','["New release: [route=music/id:18]Brain I/O #8[/route]"]'),
  (32,'2020-01-20','["New logo"]'),
- (33,'2020-01-22','["New [route=media/id:wp202001]Wallpapers[/route]"]'),
+ (33,'2020-01-22','["New [route=stuff/id:5]Wallpapers[/route]"]'),
  (34,'2020-02-13','["New release: [route=music/id:23]Let It All Go, Volume 1[/route]"]'),
  (35,'2020-04-23','["New release: [route=music/id:18]Brain I/O #9[/route]"]'),
  (36,'2020-06-26','["New release: [route=music/id:24]1996[/route]"]'),
- (37,'2020-07-06','["New merchandise: [route=merch]Logo T-Shirt, S9M3[/route]"]'),
+ (37,'2020-07-06','["New merchandise: [route=stuff/id:17]Logo T-Shirt, S9M3[/route]"]'),
  (38,'2020-07-13','["New release: [route=music/id:18]Brain I/O #10[/route]"]'),
- (39,'2020-07-22','["New merchandise: [route=merch]Logo Sticker, S9M4[/route]"]'),
+ (39,'2020-07-22','["New merchandise: [route=stuff/id:18]Logo Sticker, S9M4[/route]"]'),
  (40,'2020-08-26','["My music will soon disappear from all streaming/download platforms for roughly 2-3 weeks. It will be then re-uploaded again - and should automagically reappear in your playlists and libraries. If you''re missing anything after this timeframe, let me know. In the meantime you can always stream/purchase everything through my [route=]website[/route] or Bandcamp page."]'),
  (41,'2020-09-03','["New release: [route=music/id:25]Let It All Go, Volume 2[/route]"]'),
- (42,'2020-09-08','["New release: [route=prod]S9SP1 - 2358 Sample Pack[/route]"]'),
+ (42,'2020-09-08','["New release: [route=stuff/id:21]S9SP1 - 2358 Sample Pack[/route]"]'),
  (43,'2020-10-11','["The music is back on Spotify and other platforms", "Updated the website."]'),
  (44,'2020-12-13','["New release: [route=music/id:26]CHILL TRACKS 2016-2020[/route]"]'),
- (45,'2021-01-01','["New release: [route=music/id:27]FLOATING HIGH[/route]","New merchandise: [route=merch]Memory S9M5, FLOATING HIGH Limited Edition CD-R[/route]","New merchandise: [route=merch]Memory S9M6, FLOATING HIGH Limited Edition USB-Stick[/route]"]'),
- (46,'2021-01-13','["New release: [route=prod]S9SP2 - Trip Construction Kit 1[/route]"]'),
+ (45,'2021-01-01','["New release: [route=music/id:27]FLOATING HIGH[/route]","New merchandise: [route=stuff/id:19]Memory S9M5, FLOATING HIGH Limited Edition CD-R[/route]","New merchandise: [route=stuff/id:20]Memory S9M6, FLOATING HIGH Limited Edition USB-Stick[/route]"]'),
+ (46,'2021-01-13','["New release: [route=stuff/id:22]S9SP2 - Trip Construction Kit 1[/route]"]'),
  (47,'2021-03-19','["New page: [route=visual]visual[/route]"]'),
- (48,'2021-03-22','["[route=/media/id:shikantaza-interview]Interview[/route] by Shikantaza Art"]'),
+ (48,'2021-03-22','["[route=stuff/id:11]Interview[/route] by Shikantaza Art"]'),
  (49,'2021-05-07','["New release: [route=music/id:28]Uncertain[/route]"]'),
  (50,'2021-06-07','["New release: [route=music/id:29]THE BAND WITH THE DRUMMER WHO KNEW ONLY ONE RHYTHM[/route]"]'),
  (51,'2021-08-13','["New release: [route=music/id:30]Flux[/route]"]'),
@@ -203,73 +203,6 @@ INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","b
  (139,'Doomer''s Delight: Chapter 1',3324,'[1]','3516440910','//spartalien.bandcamp.com','/track/doomers-delight-chapter-1','//open.spotify.com','/track/3UVuargrscLQKAv7QCETnW'),
  (140,'Doomer''s Delight: Chapter 2',2452,'[1]','3277061765','//spartalien.bandcamp.com','/track/doomers-delight-chapter-2','//open.spotify.com','/track/7reeFcYzOTzxSE8ruZ7KMS'),
  (141,'Doomer''s Delight: Chapter 3',1812,'[1]','1653084213','//spartalien.bandcamp.com','/track/doomers-delight-chapter-3','//open.spotify.com','/track/1JktcLRqQL5kWDHG39Cxfa');
-INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (1,'[1]','Continuoduction','[1]',NULL,1,'2016-03-24',NULL,'The marking of a fresh start.','["Cover art photo - NASA (nasa.gov)"]',NULL,'[{"platform":"youtube","slug":"QZovE8JDsXU","type":"video"}]',1,'2223569284','//spartalien.bandcamp.com','/track/continuoduction','//open.spotify.com','/track/2Clx7jPmYSA21DbB0FKxUR'),
- (2,'[2]','I''ll Embrace You Again In Space','[1]',NULL,1,'2016-10-13',NULL,'Thinking of the moment and place when the time''s over.','["Cover art photo - NASA (nasa.gov)"]',NULL,'[{"platform":"youtube","slug":"cC4vSYqYbYA","type":"video"}]',0,'1079688660','//spartalien.bandcamp.com','/track/ill-embrace-you-again-in-space','//open.spotify.com','/track/3QmCKvjLtKXS4vQD6822rf'),
- (3,'[3]','Realize It''s Just A Ride','[1]',NULL,1,'2017-03-13',NULL,'Don''t be afraid.','["Speech - Dr. Timothy Leary (leary.com)"]',NULL,'[{"platform":"youtube","slug":"cC4vSYqYbYA","type":"video"}]',0,'1079688660','//spartalien.bandcamp.com','/track/ill-embrace-you-again-in-space','//open.spotify.com','/track/3QmCKvjLtKXS4vQD6822rf'),
- (4,'[4]','Nature''s Song','[1]',NULL,1,'2017-06-18',NULL,'You should listen to her more often.','["Speech - Alan Watts (alanwatts.org)","Cover art photo - Unknown Photographer (it''s a Bush TV22)"]',NULL,'[{"platform":"youtube","slug":"KYNIayrc074","type":"video"}]',0,'1367673093','//spartalien.bandcamp.com','/track/natures-song','//open.spotify.com','/track/0Fnu4vn6XsiUpI2ECJyr5K'),
- (5,'[5]','Following The Calling','[1]',NULL,1,'2017-06-20',NULL,'Gloomy days and bittersweet memories.','["Additional Harp strings - Esblendet (esblendet.ch)"]',NULL,NULL,0,'2940566208','//spartalien.bandcamp.com','/track/following-the-calling','//open.spotify.com','/track/5DlhcOQXlUESTOhNWL4wQ5'),
- (6,'[6]','Digging In Memories','[1]',NULL,1,'2017-07-03',NULL,'It all started with a simple thought.',NULL,NULL,NULL,0,'2839011968','//spartalien.bandcamp.com','/track/digging-in-memories','//open.spotify.com','/track/5JmknWTUqtJZ2Qhb3MMoCo'),
- (7,'[7]','Heat-Resistant','[1]',NULL,1,'2017-07-15',NULL,'The heat peaks and your body is lazy - you don''t stop.','["Kids playing sample - klankbeeld (freesound.org/people/klankbeeld)"]',NULL,NULL,0,'2385470360','//spartalien.bandcamp.com','/track/heat-resistant','//open.spotify.com','/track/3VikP8t1yyx98cPKTinZDO'),
- (8,'[8]','Song For Wind','[1]',NULL,1,'2017-08-10',NULL,'The wind is strong and you start breathing for the first time in your life.','["Didgeridoo - Esblendet","Vocals - Esblendet","Breathing - Esblendet","Cover art drawing - Esblendet"]',NULL,NULL,0,'184259074','//spartalien.bandcamp.com','/track/song-for-wind','//open.spotify.com','/track/6Y5r9u7mHDudhTx90XTEF3'),
- (9,'[9]','Messaggio Per Naelog','[1]',NULL,1,'2017-08-25',NULL,'Just a friendly reminder.','["Speech - Alan Watts (alanwatts.org)"]',NULL,'[{"platform":"youtube","slug":"QfDUgPrOhbA","type":"video"}]',1,'3639731854','//spartalien.bandcamp.com','/track/messaggio-per-naelog','//open.spotify.com','/track/2bwflOuvNhQgtaCA4zI40e'),
- (10,'[10]','Martina','[1]',NULL,1,'2017-09-22',NULL,'Being back in town for a moment.','["Cover art photo - A.N.A.M.F. (anamf.it)"]',NULL,NULL,0,'924988911','//spartalien.bandcamp.com','/track/martina','//open.spotify.com','/track/6FSbzkJMMxfi9o2QopDW2W'),
- (11,'[11]','Time','[1]',NULL,1,'2017-10-22',NULL,'When you stop the time for a moment.',NULL,NULL,NULL,0,'2055198430','//spartalien.bandcamp.com','/track/time','//open.spotify.com','/track/3AGRNrD23jzBOThTUGvygn'),
- (12,'[12]','Every Day','[1]',NULL,1,'2018-02-27',NULL,'Dedicating this track to all the lonely robots in space.','["Cover art photo - NASA (nasa.gov)"]',NULL,'[{"platform":"youtube","slug":"hbqMU8nkFNs","type":"video"}]',0,'30233859','//spartalien.bandcamp.com','/track/every-day','//open.spotify.com','/track/3XStzziKE8h0Hzw6cT5OAd'),
- (13,'[13,14,15,16,17,18,19,20,21,22,23,24,25]','MONOLOG','[1]',NULL,3,'2018-05-13',NULL,'Stereophonic pictures recorded by a brain. A deep dive into the abyss of instincts. A honest and unfiltered output of the feelings from an alien that has lost his star map. Trying to dismantle the potential answers to unanswered questions.Faith. Loss. Nostalgia. Change. Life. Death. For you and them. All of us.','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between October 2017 and February 2018.","Speech - Movie \"Plan 9 from Outer Space\" (tracks: 1, 4, 7, 10, 11, 13)","Vocals - Esblendet (track: 11)","Didgeridoo - Esblendet (tracks: 1, 4, 7, 13)"]','["Lots of vibes to Esblendet for... everything. I love you."]',NULL,0,'2581651186','//spartalien.bandcamp.com','/album/monolog','//open.spotify.com','/album/2KnU3c5IXpYtHsdJLYS47D'),
- (14,'[26]','Searching','[1]',NULL,1,'2018-08-13',NULL,'When you stop satisfying expectations and embrace the beginning of the end.',NULL,NULL,NULL,0,'1571954667','//spartalien.bandcamp.com','/track/searching','//open.spotify.com','/track/0zFZIbuKaLJ0bm9MecHfk0'),
- (15,'[27,28,29,30]','THE GREAT FILTER','[1]',NULL,2,'2018-08-31',NULL,'When humans get blinded by reality, we must tell them the truth.','["Recorded, composed, mixed and mastered by SPARTALIEN","Speech - Robert Jamison (track: 1)","Speech - John Maynard (track: 2)","Speech - Dr. Carolin Rosin (track: 3)","Speech - Robert Hastings (track: 4)"]',NULL,NULL,0,'3617310353','//spartalien.bandcamp.com','/album/the-great-filter','//open.spotify.com','/album/052gFoANpMCUET2C21MUqh'),
- (16,'[31,32,33,34,35,36,37,38,39,40,41,42,43]','2358','[1]',NULL,3,'2019-03-13',NULL,'You wander and stumble. Through space and time. Literally. Soul searching and yearning for the one thing nobody has ever seen, but most have felt...Suddenly, something flickers from the glare of your slowly dying flashlight. "That''s not what I''m looking for!", you think. Nonetheless, your ingrained curiosity is stronger...It''s an ancient recording device with some magnetic cassette tapes lying right beside it.; dust-layered, it kind of looks like it was left here on purpose...One tape is still loaded in the recorder deck. "Whatever! It''s 2 minutes to midnight anyway.", you think - and hit the play button.
-
-Limited Edition CD is [route=merch]available here[/route].','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between August 2018 and March 2019.","Speech - Dr. Jordan B Peterson (jordanbpeterson.com), from the \"2017 Personality 04/05: Heroic and Shamanic Initiations\" lecture (youtube.com/watch?v=wLc_MC7NQek) (track: 2)","Kid calling sample - Klankbeeld (freesound.org/people/klankbeeld) (track: 6)","Didgeridoo - Esblendet (track: 8)","Background vocals - Esblendet (track: 12)"]',NULL,'[{"platform":"youtube","slug":"Yf_Q5zuvdOQ","type":"video"},{"platform":"youtube","slug":"Roib2OdFF2U","type":"video"}]',0,'1596302206','//spartalien.bandcamp.com','/album/2358','//open.spotify.com','/album/74TE0Q53NLubkkZyHm8bNJ'),
- (17,'[44]','Frozen Memories','[1]',1,1,'2019-03-29',NULL,'Do you remember, when everything was moving?
-
-Made for [url=//kaisekidigital.bandcamp.com/album/bento-box-vol-2-2]Bento Box Vol. 2[/url].',NULL,NULL,'[{"platform":"youtube","slug":"DEko4fBXAyE","type":"video"}]',0,'286448283','//spartalien.bandcamp.com','/track/frozen-memories','//open.spotify.com','/track/6rSSRx7JdtdWdbNn7gS5Pl'),
- (18,'[45,46,47,50,51,52,53,59,62,76]','BRAIN I/O','[1]',NULL,3,'2019-06-09','2020-07-13','Very personal and raw mind exploration.
-
-New output will be added over time to this album...
-2019-06-09: #1, 2019-06-13: #2, 2019-07-02: #3, 2019-07-12: #4, 2019-07-20: #5, 2019-08-15: #6, 2019-12-12: #7, 2019-12-28: #8, 2020-04-23: #9, 2020-07-13: #10','["Didgeridoo - Esblendet (track: 9)","Some Vocals - Esblendet (track: 9)"]',NULL,'[{"platform":"youtube","slug":"PLGOlCfPCyZ4HXSGHqzH54kjHcIc79tJC5","type":"playlist"},{"platform":"youtube","slug":"FUErhO5OW1M","type":"video"}]',0,'2810895713','//spartalien.bandcamp.com','/album/brain-i-o','//open.spotify.com','/playlist/2LF6a2ASNVlKiutk1tADG9'),
- (19,'[48]','They Shot My Friend','[1]',2,1,'2019-07-07',NULL,'Dedicated to Sina. Rest in peace my friend. I will neither forget nor forgive what they did to you.
-
-Made for [url=//lessthanone.bandcamp.com/album/the-fencepost-reclamation-project-volume-5]the fencepost reclamation project volume 5[/url].','["Some foley samples from the Fencepost material originally released by Evelyn Records in 2002 provided by <1 (lessthanone.bandcamp.com)"]',NULL,NULL,0,'3891255445','//spartalien.bandcamp.com','/track/they-shot-my-friend','//open.spotify.com','/track/6gcULl01jPOsWwn2EwVWHM'),
- (20,'[49]','The Sad Lightness Of Being','[1]',2,1,'2019-07-07',NULL,'A story about being strong, but still vulnerable.
-
-Made for [url=//lessthanone.bandcamp.com/album/the-fencepost-reclamation-project-volume-5]the fencepost reclamation project volume 5[/url].','["Some foley samples from the Fencepost material originally released by Evelyn Records in 2002 provided by <1 (lessthanone.bandcamp.com)"]',NULL,NULL,0,'2901018221','//spartalien.bandcamp.com','/track/the-sad-lightness-of-being','//open.spotify.com','/track/2onyU5yxSx9FhxtBgGoykG'),
- (21,'[54,55,56,57]','KEEN','[1]',NULL,2,'2019-12-13',NULL,'History is over and the future is just an idea.','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) in November 2019."]',NULL,'[{"platform":"youtube","slug":"OLAK5uy_kzqRHNeABeBfON3ukcbuzvUWAWYbw8TQ4","type":"playlist"}]',0,'2895888302','//spartalien.bandcamp.com','/album/keen','//open.spotify.com','/album/7iQax3iHA9OilsTq9dM2nl'),
- (22,'[58]','SPARTALIEN & Esblendet - Rainbows & Unicorns','[1,2]',NULL,1,'2019-12-23',NULL,'For your mellow (xmas) days.','["Pan Drum - Esblendet","Guzheng - Esblendet","Cover Unicorn - Unknown Artist","Cover Rainbow Texture - kitti851"]',NULL,NULL,1,'2223839995','//spartalien.bandcamp.com','/track/rainbows-unicorns','//open.spotify.com','/track/3flUCe6A3SQWJ86hMP0xpU'),
- (23,'[60,61]','LET IT ALL GO, Volume 1','[1]',NULL,3,'2020-02-13',NULL,'Sit back and relax. Breathe slowly. Try to focus on one thought at a time. Let your emotions flow, but do not let them overwhelm you. Deconstruct your thoughts. Study each little part. Understand, or accept your confusion for now. You do not have energy. You are energy. Everything is here. In your mind. Peace, you can find. Repeat.
-
-Purchases on Bandcamp include 24bit/48kHz versions of both the Original and Waveless Mix.',NULL,NULL,'[{"platform":"youtube","slug":"D0GvSMubkFw","type":"video"},{"platform":"youtube","slug":"a8GS5Iw0UyU","type":"video"}]',0,'3162557576','//spartalien.bandcamp.com','/album/let-it-all-go-volume-1','//open.spotify.com','/album/5tQQhtJuFAa1IjOnBNLLzX'),
- (24,'[63,64,65,66,67,68,69,70,71,72,73,74,75]','1996','[1]',NULL,3,'2020-06-26',NULL,'When the past never ends.
-The future never begins.
-One can only be.
-Forever young.
-
-When you listen to this album, remember that times and situations change, but your heart doesn''t have to necessarily.','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between March and June 2020."]',NULL,NULL,0,'3288578507','//spartalien.bandcamp.com','/album/1996','//open.spotify.com','/album/2ASJu0rQC3x7WiCwBN0VuL'),
- (25,'[77,78,79,80]','LET IT ALL GO, Volume 2','[1]',NULL,3,'2020-09-03',NULL,'Sit back and relax. Breathe slowly. Try to focus on one thought at a time. Let your emotions flow, but do not let them overwhelm you. Deconstruct your thoughts. Study each little part. Understand, or accept your confusion for now. You do not have energy. You are energy. Everything is here. In your mind. Peace, you can find. Repeat.
-
-Track 2 (Binaural Headphone Mix) should be listened on good stereo headphones or it may sound strange. It has binaural beats operating at a frequency of ~1-2Hz (delta pattern).',NULL,NULL,'[{"platform":"youtube","slug":"4HLmwToUeXw","type":"video"}]',0,'587722148','//spartalien.bandcamp.com','/album/let-it-all-go-volume-2','//open.spotify.com','/album/0HPDjHHVdD4Es2gSckjK3r'),
- (26,'[1,9,10,11,15,24,33,44,58,32,77]','CHILL TRACKS 2016-2020','[1]',NULL,3,'2020-12-13',NULL,'A selection of chill tracks from my back catalog 2016-2020. I hope you find some relaxation at the end of this unusual year.',NULL,NULL,NULL,0,'131808411','//spartalien.bandcamp.com','/album/chill-tracks-2016-2020','//open.spotify.com','/album/1Ak6UIUqcEN9xtzoB4r3ya'),
- (27,'[81,82,83,84,85,86,87,88,89,90,91]','FLOATING HIGH','[1]',NULL,3,'2021-01-01',NULL,'A magic wooden bench.
-Trees.
-Wild animals.
-You.
-And the cloudy sky.
-
-Digital album and merchandise purchases on Bandcamp include the bonus track "A Night With My Imaginary Friend".','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between September and December 2020."]',NULL,NULL,0,'1204865255','//spartalien.bandcamp.com','/album/floating-high','//open.spotify.com','/album/7rpbLuknkFeNBOscxZ5djs'),
- (28,'[92]','Uncertain','[1]',NULL,1,'2021-05-07',NULL,'A song about our future.','["Most nature samples - DJs for Climate Action and Greenpeace (djs4ca.com/climate-sample-pack)"]','["DJs for Climate Action and Greenpeace for taking action."]',NULL,0,'2666379051','//spartalien.bandcamp.com','/track/uncertain','//open.spotify.com','/track/4A9uz51yEBcHImxUXnhABw'),
- (29,'[93,94,95,96]','THE BAND WITH THE DRUMMER WHO KNEW ONLY ONE RHYTHM','[1]',NULL,2,'2021-06-07',NULL,'A small band plays in a smoky open air club. Their instruments are slightly out of tune. But the crowd doesn''t care. Out of tune experiences is what they got used to.',NULL,'["Special thanks to the Might crew (might.digital) who started the creation process of these tracks."]',NULL,0,'2317686308','//spartalien.bandcamp.com','/album/the-band-with-the-drummer-who-knew-only-one-rhythm','//open.spotify.com','/album/5GO8DT7O6oqhAz4Mwblslp'),
- (30,'[97,98,99]','Flux','[1,3]',NULL,1,'2021-08-13',NULL,'Everything. Nothing. Doesn''t matter. You just float. Somewhere. Sometime.','["Vocals - Stevie Lee Price (track: 1)","Lyrics - Stevie Lee Price (track: 1)","Ocean Photo in Coverart - Rachel Claire"]',NULL,'[{"platform":"youtube","slug":"mE4p5UV62sw","type":"video"},{"platform":"generic","slug":"file/flux-lyrics.txt","type":"link"}]',0,'2224755430','//spartalien.bandcamp.com','/album/flux','//open.spotify.com','/album/7nngUQbyI6LtVUA1JEJmiL'),
- (31,'[100]','ediblewaves - Haphe (SPARTALIEN''s Wicca Remix)','[4,1]',NULL,4,'2021-08-31',NULL,'A spooky remix of the track [url=//ediblewaves.bandcamp.com/track/haphe]Haphe[/url] made upon request for [url=//ediblewaves.bandcamp.com]ediblewaves[/url].','["Original track by ediblewaves (ediblewaves.bandcamp.com)."]',NULL,NULL,1,'563831413','//spartalien.bandcamp.com','/track/haphe-spartaliens-wicca-remix','//open.spotify.com',NULL),
- (32,'[101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138]','UNTOLD STORIES','[1]',NULL,3,'2021-09-22',NULL,'Do you know that feeling, when you hear a sound, and you suddenly feel like you''re in another place? When a sound triggers a feeling, or a memory? And then, when the sound is gone, and the world turns silent, you miss the sound?
-
-This body of work is quiet, but also loud, and very emotional. Raw, but not rushed, feelings. Intentionally improvised moments to get lost in.
-
-There is also a "[route=music/id:33]Doomer''s Delight[/route]" special edition.','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between July and August 2021."]',NULL,'[{"platform":"youtube","slug":"mseAapnJomY","type":"video"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-1.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-2.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-3.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-4.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-5.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-6.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-7.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-8.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-9.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-10.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-11.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-12.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-13.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-14.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-15.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-16.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-17.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-18.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-19.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-20.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-21.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-22.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-23.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-24.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-25.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-26.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-27.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-28.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-29.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-30.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-31.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-32.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-33.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-34.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-35.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-36.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-37.jpg","type":"image"},{"platform":"generic","slug":"file/untold-stories/mood-gfx-38.jpg","type":"image"}]',0,'1766454808','//spartalien.bandcamp.com','/album/untold-stories','//open.spotify.com','/album/5Z09PSUcbZioMV7UvRv7yw'),
- (33,'[139,140,141]','UNTOLD STORIES (Doomer''s Delight)','[1]',NULL,3,'2021-09-22',NULL,'Do you know that feeling, when you hear a sound, and you suddenly feel like you''re in another place? When a sound triggers a feeling, or a memory? And then, when the sound is gone, and the world turns silent, you miss the sound?
-
-This body of work is quiet, but also loud, and very emotional. Raw, but not rushed, feelings. Intentionally improvised moments to get lost in.
-
-This is a special edition of [route=music/id:32]UNTOLD STORIES[/route].','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between July and August 2021."]',NULL,NULL,0,'762897740','//spartalien.bandcamp.com','/album/untold-stories-doomers-delight','//open.spotify.com','/album/3MBt8QE1l8kCWBW6QaM71e');
 INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1,1,0,'DJ Shadow','Lost And Found'),
  (2,1,426,'Mo'' Horizons','Walk Into Space - Pt.1&11'),
  (3,1,601,'Tosca','Chocolate Elvis (Baby Mammoth Version 2)'),
@@ -1244,7 +1177,186 @@ INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trac
  (972,38,3715,'Laineet','Avaruusihmiset'),
  (973,38,3898,'Jello','Shinoque'),
  (974,38,4311,'Scruffnuk Dust','Introvert'),
- (975,38,4612,'How?','Differnet');
+ (975,38,4612,'Differnet','How?'),
+ (976,39,0,'Scruffnuk Dust','Maintain'),
+ (977,39,100,'DJ Vadim','Untitled'),
+ (978,39,360,'The Isolationist','Timeless Void (Remix)'),
+ (979,39,645,'Animals On Wheels','Soluble Ducks'),
+ (980,39,1014,'Fresh Moods','Decisions I Made'),
+ (981,39,1303,'Skalpel','Together'),
+ (982,39,1619,'Jamiroquai','Spend A Lifetime'),
+ (983,39,1858,'Afterlife','Breather 2000'),
+ (984,39,2143,'Moloko','Absent Minded Friends'),
+ (985,39,2423,'Cypress Hill','Illusions'),
+ (986,39,2687,'Sapien','Que Dolor'),
+ (987,39,2963,'arT2','The Trip Construction Kit'),
+ (988,39,3322,'Arovane','Passage To Nagoya'),
+ (989,39,3421,'Daughter Darling','Sad and Lonely'),
+ (990,39,3669,'Crustation','Purple'),
+ (991,39,3926,'j^p^n','without. []'),
+ (992,39,4075,'BLAKMOTH','WILLOW WHISPER'),
+ (993,39,4195,'Sofa Surfers','Sweat (Tom Tyler Remix)'),
+ (994,39,4502,'Spool','Algo'),
+ (995,39,5010,'Krill.Minima','Nautica'),
+ (996,39,5396,'Thomas D','Pilzköpfe'),
+ (997,39,5568,'Green Day','F.O.D.');
+INSERT INTO "visual" ("id","createdOn","visualName","description","tags","media") VALUES (1,'2000','S.O.I.A.',NULL,'["static"]','[{"slug":"file/visual/2000-soia.jpg","type":"image"}]'),
+ (2,'2002','What does your soul look like? (Part 1-5)',NULL,'["static"]','[{"slug":"file/visual/2002-what_like-part1.jpg","type":"image"},{"slug":"file/visual/2002-what_like-part2.jpg","type":"image"},{"slug":"file/visual/2002-what_like-part3.jpg","type":"image"},{"slug":"file/visual/2002-what_like-part4.jpg","type":"image"},{"slug":"file/visual/2002-what_like-part5.jpg","type":"image"}]'),
+ (3,'2002','TripZ v6 theme concept',NULL,'["static"]','[{"slug":"file/visual/2002-tripz_v6_unifit.jpg","type":"image"}]'),
+ (4,'2002','Sunshine Recorder',NULL,'["static"]','[{"slug":"file/visual/2002-sunshine_recorder.jpg","type":"image"}]'),
+ (5,'2002','Stillness of heart',NULL,'["static"]','[{"slug":"file/visual/2002-stillness_of_heart.jpg","type":"image"}]'),
+ (6,'2002','Schlaflos 2',NULL,'["static"]','[{"slug":"file/visual/2002-schlaflos2.jpg","type":"image"}]'),
+ (7,'2002','Auffressen',NULL,'["static"]','[{"slug":"file/visual/2002-auffressen.jpg","type":"image"}]'),
+ (8,'2002','Answer',NULL,'["static"]','[{"slug":"file/visual/2002-answer.jpg","type":"image"}]'),
+ (9,'2003','Based on a true story',NULL,'["static"]','[{"slug":"file/visual/2003-basedonatruestory.jpg","type":"image"}]'),
+ (10,'2003','Deathsman Woman',NULL,'["static"]','[{"slug":"file/visual/2003-deathsman_woman.jpg","type":"image"}]'),
+ (11,'2003','Infected',NULL,'["static"]','[{"slug":"file/visual/2003-infected.jpg","type":"image"}]'),
+ (12,'2003','Zombienation 1',NULL,'["static"]','[{"slug":"file/visual/2003-zombienation1.jpg","type":"image"}]'),
+ (13,'2003','More human than human',NULL,'["static"]','[{"slug":"file/visual/2003-more_human_than_human.jpg","type":"image"}]'),
+ (14,'2003','Killersky 1',NULL,'["static"]','[{"slug":"file/visual/2003-killersky1.jpg","type":"image"}]'),
+ (15,'2004','Zombienation 2',NULL,'["static"]','[{"slug":"file/visual/2004-zombienation2.jpg","type":"image"}]'),
+ (16,'2004','Cold & Empty',NULL,'["static"]','[{"slug":"file/visual/2004-cold_and_empty.jpg","type":"image"}]'),
+ (17,'2004','Wicked',NULL,'["static"]','[{"slug":"file/visual/2004-wicked.png","type":"image"}]'),
+ (18,'2004','Voices in my brain (Part 1-2)',NULL,'["static"]','[{"slug":"file/2004-voices_in_my_brain-1.jpg","type":"image"},{"slug":"file/2004-voices_in_my_brain-2.jpg","type":"image"}]'),
+ (19,'2004','Beach Strangeness',NULL,'["static"]','[{"slug":"file/visual/2004-beach_strangeness.png","type":"image"}]'),
+ (20,'2004','arT2',NULL,'["static"]','[{"slug":"file/visual/2004-arT2.jpg","type":"image"}]'),
+ (21,'2005','Chaos. You are.',NULL,'["static"]','[{"slug":"file/visual/2005-chaos_you_are.jpg","type":"image"}]'),
+ (22,'2006','Communication (Part 1-9)',NULL,'["static"]','[{"slug":"file/visual/2006-communication-part1.png","type":"image"},{"slug":"file/visual/2006-communication-part2.png","type":"image"},{"slug":"file/visual/2006-communication-part3.png","type":"image"},{"slug":"file/visual/2006-communication-part4.png","type":"image"},{"slug":"file/visual/2006-communication-part5.png","type":"image"},{"slug":"file/visual/2006-communication-part6.png","type":"image"},{"slug":"file/visual/2006-communication-part7.png","type":"image"},{"slug":"file/visual/2006-communication-part8.png","type":"image"},{"slug":"file/visual/2006-communication-part9.png","type":"image"}]'),
+ (23,'2006','No cuts. Anymore.',NULL,'["static"]','[{"slug":"file/visual/2006-no_cuts_anymore.jpg","type":"image"}]'),
+ (24,'2009','Underground. The.',NULL,'["static"]','[{"slug":"file/visual/2009-underground_the-remastered.png","type":"image"}]'),
+ (25,'2009','A Childs Rhyme',NULL,'["static"]','[{"slug":"file/visual/2009-a_childs_rhyme.png","type":"image"}]'),
+ (26,'2010','The inside',NULL,'["animation","loop"]','[{"slug":"file/visual/2010-the_inside.gif","type":"image"}]'),
+ (27,'2010','Relict',NULL,'["static"]','[{"slug":"file/visual/2010-relict.png","type":"image"}]'),
+ (28,'2010','Neither you. Nor he.',NULL,'["animation","loop"]','[{"slug":"file/visual/2010-neither_you_nor_he.gif","type":"image"}]'),
+ (29,'2010','Love.',NULL,'["static"]','[{"slug":"file/visual/2010-love.png","type":"image"}]'),
+ (30,'2010','Last consequence',NULL,'["static"]','[{"slug":"file/visual/2010-last_consequence.png","type":"image"}]'),
+ (31,'2010','Compassion',NULL,'["static"]','[{"slug":"file/visual/2010-compassion.png","type":"image"}]'),
+ (32,'2010','Back and forth',NULL,'["animation","loop"]','[{"slug":"file/visual/2010-back_and_forth.gif","type":"image"}]'),
+ (33,'2012','The planet (Part 1-5)',NULL,'["static"]','[{"slug":"file/visual/2012-the_planet_1.png","type":"image"},{"slug":"file/visual/2012-the_planet_2.png","type":"image"},{"slug":"file/visual/2012-the_planet_3.png","type":"image"},{"slug":"file/visual/2012-the_planet_4.png","type":"image"},{"slug":"file/visual/2012-the_planet_5.png","type":"image"}]'),
+ (34,'2013','It''s gonna come down on you anyway...',NULL,'["static"]','[{"slug":"file/visual/2013-its_gonna_come_down_on_you_anyway.png","type":"image"}]'),
+ (35,'2014','The ghost in my world',NULL,'["static"]','[{"slug":"file/visual/2014-20140927-the_ghost_in_my_world.png","type":"image"}]'),
+ (36,'2016','Audionaut','If you think you''ve seen this before, you probably did. It''s a remake of an old logo I once designed.','["static"]','[{"slug":"file/visual/2016-the_audionaut_is_back_1920x1080-notext.png","type":"image"}]'),
+ (37,'2021','Eventually',NULL,'["animation","loop"]','[{"attr":[["autoplay","autoplay"],["loop","loop"]],"slug":"file/visual/2021-eventually.mp4","type":"video"}]'),
+ (38,'2021','Lost memory',NULL,'["animation","loop"]','[{"attr":[["autoplay","autoplay"],["loop","loop"]],"slug":"file/visual/2021-lost_memory.mp4","type":"video"}]'),
+ (39,'2021','Tunnel B21.4.3',NULL,'["animation","loop"]','[{"attr":[["autoplay","autoplay"],["loop","loop"]],"slug":"file/visual/2021-tunnel_b21_4_3.mp4","type":"video"}]'),
+ (40,'2021','E dote Baum am Abgrund',NULL,'["static"]','[{"slug":"file/visual/2021-e_dote_baum_am_abgrund-web.png","type":"image"}]'),
+ (41,'2021','Subweird 1',NULL,'["animation","loop"]','[{"attr":[["autoplay","autoplay"],["loop","loop"]],"slug":"file/visual/2021-subweird1.mp4","type":"video"}]');
+INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (1,'Promo Art 2018-03','Setting the mood.','[{"slug":"file/promoart-201803/spartalien-promoart-201803-1.jpg","type":"image"},{"slug":"file/promoart-201803/spartalien-promoart-201803-2.jpg","type":"image"},{"slug":"file/promoart-201803/spartalien-promoart-201803-3.jpg","type":"image"},{"slug":"file/promoart-201803/spartalien-promoart-201803-4.jpg","type":"image"},{"slug":"file/promoart-201803/spartalien-promoart-201803-5.jpg","type":"image"},{"slug":"file/promoart-201803/spartalien-promoart-201803-6.jpg","type":"image"},{"slug":"file/promoart-201803/spartalien-promoart-201803-7.jpg","type":"image"},{"slug":"file/promoart-201803/spartalien-promoart-201803-8.jpg","type":"image"}]'),
+ (2,'Radio-Dark-Tunnel Jingles','Station IDs/Jingles made for [url=//radio-dark-tunnel.net]Radio-Dark-Tunnel[/url].','[{"slug":"file/rdt-jingles/rdt-jingle-1.mp3","type":"audio"},{"slug":"file/rdt-jingles/rdt-jingle-2.mp3","type":"audio"},{"slug":"file/rdt-jingles/rdt-jingle-3.mp3","type":"audio"}]'),
+ (3,'Old Sound Experiments','A selection of first steps in creating my own sound. 2001-2006.','[{"slug":"file/old-soundex/00-arT2-Sound.Ex-front.jpg","type":"image"},{"slug":"file/old-soundex/2001-arT2-Slow_Adventure.mp3","type":"audio"},{"slug":"file/old-soundex/2001-arT2-The_Answer.mp3","type":"audio"},{"slug":"file/old-soundex/2002-arT2-Dirty_TripRock.mp3","type":"audio"},{"slug":"file/old-soundex/2002-arT2-Killing_Someone.mp3","type":"audio"},{"slug":"file/old-soundex/2002-arT2-Moskau_Dance.mp3","type":"audio"},{"slug":"file/old-soundex/2003-arT2-Ambient_Source.mp3","type":"audio"},{"slug":"file/old-soundex/2003-arT2-Dying_Ambient_Drone.mp3","type":"audio"},{"slug":"file/old-soundex/2003-arT2-She_Gina_I.mp3","type":"audio"},{"slug":"file/old-soundex/2003-arT2-The_Trip_Construction_Kit.mp3","type":"audio"},{"slug":"file/old-soundex/2003-arT2-Were_Wearing_Sunglasses.mp3","type":"audio"},{"slug":"file/old-soundex/2004-arT2-Late-Night_J.mp3","type":"audio"},{"slug":"file/old-soundex/2006-arT2-All_I_Know.mp3","type":"audio"},{"slug":"file/old-soundex/2006-arT2-Intrutrolude.mp3","type":"audio"}]'),
+ (4,'Track 32/2','Just a short tune.','[{"slug":"file/SPARTALIEN-322.mp3","type":"audio"}]'),
+ (5,'Wallpapers 2020-01','Background images for your desktop. Dark and bright versions. All ZIP files contain the same wallpapers from the previews below, just in different resolutions.
+Your current screen resolution is: <script>document.write(window.screen.width, ''x'', window.screen.height)</script><noscript>(JavaScript required)</noscript>','[{"slug":"file/wallpapers202001/wallpapers_800x600.zip","text":"800x600.zip","type":"link"},{"slug":"file/wallpapers202001/wallpapers_1024x768.zip","text":"1024x768.zip","type":"link"},{"slug":"file/wallpapers202001/wallpapers_1280x600.zip","text":"1280x600.zip","type":"link"},{"slug":"file/wallpapers202001/wallpapers_1280x720.zip","text":"1280x720.zip","type":"link"},{"slug":"file/wallpapers202001/wallpapers_1280x1024.zip","text":"1280x1024.zip","type":"link"},{"slug":"file/wallpapers202001/wallpapers_1920x1080.zip","text":"1920x1080.zip","type":"link"},{"slug":"file/wallpapers202001/wallpapers-preview-b-5.jpg","type":"image"},{"slug":"file/wallpapers202001/wallpapers-preview-b-6.jpg","type":"image"},{"slug":"file/wallpapers202001/wallpapers-preview-b-7.jpg","type":"image"},{"slug":"file/wallpapers202001/wallpapers-preview-b-8.jpg","type":"image"},{"slug":"file/wallpapers202001/wallpapers-preview-b-1.jpg","type":"image"},{"slug":"file/wallpapers202001/wallpapers-preview-b-2.jpg","type":"image"},{"slug":"file/wallpapers202001/wallpapers-preview-b-3.jpg","type":"image"},{"slug":"file/wallpapers202001/wallpapers-preview-b-4.jpg","type":"image"},{"slug":"file/wallpapers202001/wallpapers-preview-b-9.jpg","type":"image"},{"slug":"file/wallpapers202001/wallpapers-preview-w-1.jpg","type":"image"},{"slug":"file/wallpapers202001/wallpapers-preview-w-2.jpg","type":"image"},{"slug":"file/wallpapers202001/wallpapers-preview-w-3.jpg","type":"image"},{"slug":"file/wallpapers202001/wallpapers-preview-w-4.jpg","type":"image"},{"slug":"file/wallpapers202001/wallpapers-preview-w-5.jpg","type":"image"},{"slug":"file/wallpapers202001/wallpapers-preview-w-6.jpg","type":"image"},{"slug":"file/wallpapers202001/wallpapers-preview-w-7.jpg","type":"image"},{"slug":"file/wallpapers202001/wallpapers-preview-w-8.jpg","type":"image"},{"slug":"file/wallpapers202001/wallpapers-preview-w-9.jpg","type":"image"}]'),
+ (6,'Making of Memoria S9M2, 2358 Limited Edition','Get yours [route=stuff/id:16]here[/route].','[{"slug":"eVzQQe1LyoY","type":"youtubeVideo"},{"slug":"-9iwRLyjK-g","type":"youtubeVideo"},{"slug":"D_PxOWk6v38","type":"youtubeVideo"},{"slug":"ZbkqkQ8ZUoI","type":"youtubeVideo"},{"slug":"PEOKvptSzDs","type":"youtubeVideo"},{"slug":"43TRzxkP48I","type":"youtubeVideo"},{"slug":"P4ccQUu8S3U","type":"youtubeVideo"},{"slug":"XP89XWk1BeA","type":"youtubeVideo"},{"slug":"wBKZFFxSQb0","type":"youtubeVideo"},{"slug":"LDlcH_Z7Tfc","type":"youtubeVideo"}]'),
+ (7,'DJ Mixes','I like djing. It''s fun.','[{"slug":"//mixcloud.com/lowtechman/uploads/?order=latest","text":"Visit my Mixcloud page to listen","type":"link"}]'),
+ (8,'X Minutes of Peace','Relax.','[{"slug":"uL2S2xVQPto","type":"youtubeVideo"},{"slug":"z7cUKof9VvU","type":"youtubeVideo"},{"slug":"MVBeO9HvKZM","type":"youtubeVideo"},{"slug":"JDFAeND7hlI","type":"youtubeVideo"},{"slug":"YjEKp2UnUn8","type":"youtubeVideo"},{"slug":"fKRlTYKWYwA","type":"youtubeVideo"},{"slug":"q_XuMDRsIwc","type":"youtubeVideo"},{"slug":"awkTjmcHQzc","type":"youtubeVideo"}]'),
+ (9,'[featured on] MighTV','The [url=//might.digital]Might[/url] crew invited me to create some music on their [url=//twitch.tv/might_live]livestream[/url].','[{"slug":"XWlvvSPq9E8","type":"youtubeVideo"},{"slug":"TTJBrAWgoNA","type":"youtubeVideo"}]'),
+ (10,'GhostTownTunes Jingles','Voiceovers/Jingles made for [url=//twitch.tv/ghosttowntunes]GhostTownTunes[/url].','[{"slug":"file/gtt-jingles/gtt-jingle-1.mp3","type":"audio"},{"slug":"file/gtt-jingles/gtt-jingle-1-neithernoisenordub.mp3","type":"audio"},{"slug":"file/gtt-jingles/gtt-jingle-1-nonoise.mp3","type":"audio"}]'),
+ (11,'[featured on] Shikantaza Creativity Interview','[url=//shikantaza.cyberpunkonline.net]Shikantaza Art[/url] asked me to answer some questions.','[{"slug":"file/shikantaza-creativity-interview-iii-spartalien.html","text":"Shikantaza Creativity Interview III","type":"link"}]'),
+ (12,'[featured on] ediblewaves'' YouTube Channel','ediblewaves [i]aka[/i] Klangachse invited me to hang out on his livestream.
+Also check out his [url=//ediblewaves.bandcamp.com]Bandcamp page[/url] and [url=https://www.youtube.com/channel/UClkNMKbwgzH8f26xJQy9fxg]YouTube channel[/url].
+
+Starts at: 0:24:04','[{"slug":"syK2wY3uTpk","timeStart":1444,"type":"youtubeVideo"}]'),
+ (13,'[featured on] Spooky Kitten Records'' WHiTMiRE Reviews Music','[url=//spookykittenrecords.net]Michael Whitmire[/url] played [route=music/id:30]Flux (feat. Stevie Lee Price)[/route] on his music review show.
+
+Starts at: 1:46:27','[{"slug":"UsBWgNRUCyM","timeStart":6387,"type":"youtubeVideo"}]'),
+ (14,'[featured on] Resonate on CAMP Radio','[url=//theargentgrub.co.uk]David Carpenter[/url] (The Argent Grub) included [route=music/id:22]Rainbows & Unicorns[/route] in the Resonate playlist.','[{"slug":"/camp_fr/resonate-27th-march-2022/","type":"mixcloudMix"},{"slug":"//stream.resonate.coop/u/18562/playlist/resonate-2022-03-27-camp-radio","text":"Playlist on resonate.coop","type":"link"}]'),
+ (15,'[merchandise] Artefact S9M1, MONOLOG Limited Edition','Type: USB Flash Drive + Digital Album
+Released: 2018-06-10
+
+In May 2018, aerchologists have discovered five objects from an undisclosed location.
+All of the objects are made of an unknown black material and have the shape of a triangle. The border is painted white.
+On top, on the lower end of the triangles, a pattern of dots is visible. Every triangle has its own pattern. Theories evolved quickly around the dots and the most common one is, that these could be some sort of counter.
+Above the dot patterns, a small electronic device with an aluminum case is plugged into a rectangular slot.
+Above this slot, a twisted line points to the upper corner of the triangle. The aerchologists where startled when they found out that these strangely glow in the dark.
+
+A few days after the initial discovery, scientists found out that the aluminum devices in the slot are storage devices. Here is what they could decode:
+- MONOLOG album in three different file formats: WAV, FLAC, MP3
+- MONOLOG album to stream and download on Bandcamp.
+- PDF file with the album information and lyrics.
+- High resoultion album cover.
+- Bonus album track- and promo art.
+- Art, documents, photos and videos to watch/read while/after listening to the album.','[{"slug":"//spartalien.bandcamp.com/merch/artefact-s9m1-monolog-limited-edition?action=buy","text":"SOLD OUT","type":"link"},{"slug":"file/merch-monolog/1.jpg","type":"image"},{"slug":"file/merch-monolog/2.jpg","type":"image"},{"slug":"file/merch-monolog/3.jpg","type":"image"},{"slug":"file/merch-monolog/4.jpg","type":"image"},{"slug":"file/merch-monolog/5.jpg","type":"image"},{"slug":"file/merch-monolog/6.jpg","type":"image"},{"slug":"file/merch-monolog/7.png","type":"image"}]'),
+ (16,'[merchandise] Memoria S9M2, 2358 Limited Edition','Type: Audio-CD + Digital Album
+Released: 2019-08-13
+
+"They all feel the same."
+
+This is the limited CD edition of the 2358 album. Limited edition of 7.
+
+Contains:
+- 2358 album Audio-CD.
+- 2358 album to stream and download on Bandcamp.
+- Original character drawing (Pencil, 12x12cm).
+- CD Jewel Case with handwritten front and back Inlay.
+- A real four-leaved clover.
+- Love.','[{"slug":"//spartalien.bandcamp.com/merch/memoria-s9m2-2358-limited-edition?action=buy","text":"BUY","type":"link"},{"slug":"file/merch-2358/all.jpg","type":"image"},{"slug":"file/merch-2358/package1of7.jpg","type":"image"},{"slug":"file/merch-2358/package2of7.jpg","type":"image"},{"slug":"file/merch-2358/package3of7.jpg","type":"image"},{"slug":"file/merch-2358/package4of7.jpg","type":"image"},{"slug":"file/merch-2358/package5of7.jpg","type":"image"},{"slug":"file/merch-2358/package6of7.jpg","type":"image"},{"slug":"file/merch-2358/package7of7.jpg","type":"image"}]'),
+ (17,'[merchandise] Logo T-Shirt, S9M3','Type: T-Shirt
+Released: 2020-07-06
+
+Official logo on a comfortable unisex T-Shirt.
+
+Material: 100% Cotton, Oeko-Tex Standard 100
+Colors: black on white, white on black
+Sizes: small, medium, large
+Weight: 145 g/m²
+Washing: max. 40°C, inside-out, similiar colors, don''t iron over the print','[{"slug":"//spartalien.bandcamp.com/merch/logo-t-shirt-s9m3?action=buy","text":"BUY","type":"link"},{"slug":"file/merch-tshirt/1.jpg","type":"image"},{"slug":"file/merch-tshirt/2.jpg","type":"image"},{"slug":"file/merch-tshirt/3.jpg","type":"image"},{"slug":"file/merch-tshirt/4.jpg","type":"image"},{"slug":"file/merch-tshirt/5.jpg","type":"image"}]'),
+ (18,'[merchandise] Logo Sticker, S9M4','Type: Sticker
+Released: 2020-07-22
+
+Official logo on a Sticker.
+
+Colors: black on white, white on black
+Sizes: 58x70mm, 62x82mm, 80x100mm','[{"slug":"//spartalien.bandcamp.com/merch/logo-sticker-s9m4?action=buy","text":"BUY","type":"link"},{"slug":"file/merch-sticker/whiteonblack.jpg","type":"image"},{"slug":"file/merch-sticker/blackonwhite.jpg","type":"image"}]'),
+ (19,'[merchandise] Memory S9M5, FLOATING HIGH Limited Edition CD-R','Type: Audio CD + Digital Album
+Released: 2021-01-01
+
+This is the limited CD edition of the FLOATING HIGH album. Limited edition of 5.
+
+Contains:
+- FLOATING HIGH album Audio-CD.
+- FLOATING HIGH album to stream and download on Bandcamp.
+- Includes bonus track: A Night With My Imaginary Friend.
+- CD jewel case, cover and disc printed, handwritten tracklist.','[{"slug":"//spartalien.bandcamp.com/merch/memory-s9m5-floating-high-limited-edition-cd-r?action=buy","text":"SOLD OUT","type":"link"},{"slug":"file/merch-floatinghigh-cd/1.jpg","type":"image"},{"slug":"file/merch-floatinghigh-cd/2.jpg","type":"image"},{"slug":"file/merch-floatinghigh-cd/8.jpg","type":"image"},{"slug":"file/merch-floatinghigh-cd/3.jpg","type":"image"},{"slug":"file/merch-floatinghigh-cd/4.jpg","type":"image"},{"slug":"file/merch-floatinghigh-cd/5.jpg","type":"image"},{"slug":"file/merch-floatinghigh-cd/6.jpg","type":"image"},{"slug":"file/merch-floatinghigh-cd/7.jpg","type":"image"}]'),
+ (20,'[merchandise] Memory S9M6, FLOATING HIGH Limited Edition USB-Stick','Type: USB Flash Drive + Digital Album
+Released: 2021-01-01
+
+This is the limited USB-Stick edition of the FLOATING HIGH album. Limited edition of 7.
+
+Contains:
+- FLOATING HIGH album in three different file formats: WAV, FLAC, MP3
+- FLOATING HIGH album to stream and download on Bandcamp.
+- Includes bonus track: A Night With My Imaginary Friend.
+- Metal cast USB-Stick (16GB, USB 3.1, FAT32, Win/Mac/Linux).
+- Unique piece of wood to use as a stand for the USB-Stick. All were cut from the same tree branch.
+- Cover art in different sizes including high resolution.
+- Photos to watch while listening to the album.
+
+[b]Warning[/b] for allergy sufferers: Wood was treated with a bit of coconut fat.','[{"slug":"//spartalien.bandcamp.com/merch/memory-s9m6-floating-high-limited-edition-usb-stick?action=buy","text":"BUY","type":"link"},{"slug":"file/merch-floatinghigh-usb/1.jpg","type":"image"},{"slug":"file/merch-floatinghigh-usb/2.jpg","type":"image"},{"slug":"file/merch-floatinghigh-usb/3.jpg","type":"image"}]'),
+ (21,'[samplepack] S9SP1 - 2358 Sample Pack','Type: Sample Pack
+Released: 2020-09-08
+License: non-exclusive + royalty free
+Total samples: 888
+Format: WAV
+Bitdepth: 24
+Samplerate: 48''000
+Uncompressed size: 259 MB
+
+888 samples originally recorded and edited in August 2018, for the album 2358.
+Please see [url=file/samplepack-2358/INFO.html]INFO.html[/url] for (a lot) more information.
+Previews include white noise so ripping makes no sense. Purchased downloads will not have this. You will get a ZIP file with all samples as individual WAV files.','[{"slug":"//spartalien.bandcamp.com/album/s9sp1-2358-sample-pack?action=buy","text":"BUY","type":"link"},{"slug":"file/samplepack-2358/cover.jpg","type":"image"},{"slug":"4205248668","trackCount":7,"type":"bandcampAlbum"}]'),
+ (22,'[samplepack] S9SP2 - Trip Construction Kit 1','Type: Sample Pack
+Released: 2021-01-13
+License: non-exclusive + royalty free
+Total samples: 135
+Format: WAV
+Bitdepth: 24
+Samplerate: 48''000
+Uncompressed size: 3.26 GB
+
+135 trippy samples for you to create something new out of it ;-) Dark and sometimes noisy but also melodic and rhythmic. Often with a psychedelic touch.
+All previews were created with these samples. Feel free to send me yours and it may get added to the list. The only rule is: use only samples from the pack as source for the preview.
+Please see [url=file/samplepack-tck1/INFO.txt]INFO.txt[/url] for more information.','[{"slug":"//spartalien.bandcamp.com/album/s9sp2-trip-construction-kit-1?action=buy","text":"FREE DOWNLOAD","type":"link"},{"slug":"//freesound.org/people/SPARTALIEN/packs/34122","text":"Official Mirror on freesound.org","type":"link"},{"slug":"file/samplepack-tck1/cover.jpg","type":"image"},{"slug":"2056130812","trackCount":11,"type":"bandcampAlbum"}]');
 INSERT INTO "p420session" ("id","sessionNum","sessionDate","sessionDur","mixcloudHost","mixcloudSlug") VALUES (1,1,'2021-05-04',10370,'//mixcloud.com',NULL),
  (2,2,'2021-05-06',10371,'//mixcloud.com','/lowtechman/planet-4202/'),
  (3,3,'2021-05-09',13173,'//mixcloud.com','/lowtechman/planet-4203/'),
@@ -1282,63 +1394,107 @@ INSERT INTO "p420session" ("id","sessionNum","sessionDate","sessionDur","mixclou
  (35,35,'2022-03-22',3483,'//mixcloud.com','/lowtechman/planet-42035/'),
  (36,36,'2022-04-05',3686,'//mixcloud.com','/lowtechman/planet-42036/'),
  (37,37,'2022-04-17',3552,'//mixcloud.com','/lowtechman/planet-42037/'),
- (38,38,'2022-05-05',4866,'//mixcloud.com','/lowtechman/planet-42038/');
-INSERT INTO "visual" ("id","createdOn","visualName","description","tags","media") VALUES (1,'2000','S.O.I.A.',NULL,'["static"]','[{"platform":"generic","slug":"file/visual/2000-soia.jpg","type":"image"}]'),
- (2,'2002','What does your soul look like? (Part 1-5)',NULL,'["static"]','[{"platform":"generic","slug":"file/visual/2002-what_like-part1.jpg","type":"image"},{"platform":"generic","slug":"file/visual/2002-what_like-part2.jpg","type":"image"},{"platform":"generic","slug":"file/visual/2002-what_like-part3.jpg","type":"image"},{"platform":"generic","slug":"file/visual/2002-what_like-part4.jpg","type":"image"},{"platform":"generic","slug":"file/visual/2002-what_like-part5.jpg","type":"image"}]'),
- (3,'2002','TripZ v6 theme concept',NULL,'["static"]','[{"platform":"generic","slug":"file/visual/2002-tripz_v6_unifit.jpg","type":"image"}]'),
- (4,'2002','Sunshine Recorder',NULL,'["static"]','[{"platform":"generic","slug":"file/visual/2002-sunshine_recorder.jpg","type":"image"}]'),
- (5,'2002','Stillness of heart',NULL,'["static"]','[{"platform":"generic","slug":"file/visual/2002-stillness_of_heart.jpg","type":"image"}]'),
- (6,'2002','Schlaflos 2',NULL,'["static"]','[{"platform":"generic","slug":"file/visual/2002-schlaflos2.jpg","type":"image"}]'),
- (7,'2002','Auffressen',NULL,'["static"]','[{"platform":"generic","slug":"file/visual/2002-auffressen.jpg","type":"image"}]'),
- (8,'2002','Answer',NULL,'["static"]','[{"platform":"generic","slug":"file/visual/2002-answer.jpg","type":"image"}]'),
- (9,'2003','Based on a true story',NULL,'["static"]','[{"platform":"generic","slug":"file/visual/2003-basedonatruestory.jpg","type":"image"}]'),
- (10,'2003','Deathsman Woman',NULL,'["static"]','[{"platform":"generic","slug":"file/visual/2003-deathsman_woman.jpg","type":"image"}]'),
- (11,'2003','Infected',NULL,'["static"]','[{"platform":"generic","slug":"file/visual/2003-infected.jpg","type":"image"}]'),
- (12,'2003','Zombienation 1',NULL,'["static"]','[{"platform":"generic","slug":"file/visual/2003-zombienation1.jpg","type":"image"}]'),
- (13,'2003','More human than human',NULL,'["static"]','[{"platform":"generic","slug":"file/visual/2003-more_human_than_human.jpg","type":"image"}]'),
- (14,'2003','Killersky 1',NULL,'["static"]','[{"platform":"generic","slug":"file/visual/2003-killersky1.jpg","type":"image"}]'),
- (15,'2004','Zombienation 2',NULL,'["static"]','[{"platform":"generic","slug":"file/visual/2004-zombienation2.jpg","type":"image"}]'),
- (16,'2004','Cold & Empty',NULL,'["static"]','[{"platform":"generic","slug":"file/visual/2004-cold_and_empty.jpg","type":"image"}]'),
- (17,'2004','Wicked',NULL,'["static"]','[{"platform":"generic","slug":"file/visual/2004-wicked.png","type":"image"}]'),
- (18,'2004','Voices in my brain (Part 1-2)',NULL,'["static"]','[{"platform":"generic","slug":"file/2004-voices_in_my_brain-1.jpg","type":"image"},{"platform":"generic","slug":"file/2004-voices_in_my_brain-2.jpg","type":"image"}]'),
- (19,'2004','Beach Strangeness',NULL,'["static"]','[{"platform":"generic","slug":"file/visual/2004-beach_strangeness.png","type":"image"}]'),
- (20,'2004','arT2',NULL,'["static"]','[{"platform":"generic","slug":"file/visual/2004-arT2.jpg","type":"image"}]'),
- (21,'2005','Chaos. You are.',NULL,'["static"]','[{"platform":"generic","slug":"file/visual/2005-chaos_you_are.jpg","type":"image"}]'),
- (22,'2006','Communication (Part 1-9)',NULL,'["static"]','[{"platform":"generic","slug":"file/visual/2006-communication-part1.png","type":"image"},{"platform":"generic","slug":"file/visual/2006-communication-part2.png","type":"image"},{"platform":"generic","slug":"file/visual/2006-communication-part3.png","type":"image"},{"platform":"generic","slug":"file/visual/2006-communication-part4.png","type":"image"},{"platform":"generic","slug":"file/visual/2006-communication-part5.png","type":"image"},{"platform":"generic","slug":"file/visual/2006-communication-part6.png","type":"image"},{"platform":"generic","slug":"file/visual/2006-communication-part7.png","type":"image"},{"platform":"generic","slug":"file/visual/2006-communication-part8.png","type":"image"},{"platform":"generic","slug":"file/visual/2006-communication-part9.png","type":"image"}]'),
- (23,'2006','No cuts. Anymore.',NULL,'["static"]','[{"platform":"generic","slug":"file/visual/2006-no_cuts_anymore.jpg","type":"image"}]'),
- (24,'2009','Underground. The.',NULL,'["static"]','[{"platform":"generic","slug":"file/visual/2009-underground_the-remastered.png","type":"image"}]'),
- (25,'2009','A Childs Rhyme',NULL,'["static"]','[{"platform":"generic","slug":"file/visual/2009-a_childs_rhyme.png","type":"image"}]'),
- (26,'2010','The inside',NULL,'["animation","loop"]','[{"platform":"generic","slug":"file/visual/2010-the_inside.gif","type":"image"}]'),
- (27,'2010','Relict',NULL,'["static"]','[{"platform":"generic","slug":"file/visual/2010-relict.png","type":"image"}]'),
- (28,'2010','Neither you. Nor he.',NULL,'["animation","loop"]','[{"platform":"generic","slug":"file/visual/2010-neither_you_nor_he.gif","type":"image"}]'),
- (29,'2010','Love.',NULL,'["static"]','[{"platform":"generic","slug":"file/visual/2010-love.png","type":"image"}]'),
- (30,'2010','Last consequence',NULL,'["static"]','[{"platform":"generic","slug":"file/visual/2010-last_consequence.png","type":"image"}]'),
- (31,'2010','Compassion',NULL,'["static"]','[{"platform":"generic","slug":"file/visual/2010-compassion.png","type":"image"}]'),
- (32,'2010','Back and forth',NULL,'["animation","loop"]','[{"platform":"generic","slug":"file/visual/2010-back_and_forth.gif","type":"image"}]'),
- (33,'2012','The planet (Part 1-5)',NULL,'["static"]','[{"platform":"generic","slug":"file/visual/2012-the_planet_1.png","type":"image"},{"platform":"generic","slug":"file/visual/2012-the_planet_2.png","type":"image"},{"platform":"generic","slug":"file/visual/2012-the_planet_3.png","type":"image"},{"platform":"generic","slug":"file/visual/2012-the_planet_4.png","type":"image"},{"platform":"generic","slug":"file/visual/2012-the_planet_5.png","type":"image"}]'),
- (34,'2013','It''s gonna come down on you anyway...',NULL,'["static"]','[{"platform":"generic","slug":"file/visual/2013-its_gonna_come_down_on_you_anyway.png","type":"image"}]'),
- (35,'2014','The ghost in my world',NULL,'["static"]','[{"platform":"generic","slug":"file/visual/2014-20140927-the_ghost_in_my_world.png","type":"image"}]'),
- (36,'2016','Audionaut','If you think you''ve seen this before, you probably did. It''s a remake of an old logo I once designed.','["static"]','[{"platform":"generic","slug":"file/visual/2016-the_audionaut_is_back_1920x1080-notext.png","type":"image"}]'),
- (37,'2021','Eventually',NULL,'["animation","loop"]','[{"attribute":[["autoplay","true"],["loop","true"]],"platform":"generic","slug":"file/visual/2021-eventually.mp4","type":"video"}]'),
- (38,'2021','Lost memory',NULL,'["animation","loop"]','[{"attribute":[["autoplay","true"],["loop","true"]],"platform":"generic","slug":"file/visual/2021-lost_memory.mp4","type":"video"}]'),
- (39,'2021','Tunnel B21.4.3',NULL,'["animation","loop"]','[{"attribute":[["autoplay","true"],["loop","true"]],"platform":"generic","slug":"file/visual/2021-tunnel_b21_4_3.mp4","type":"video"}]'),
- (40,'2021','E dote Baum am Abgrund',NULL,'["static"]','[{"platform":"generic","slug":"file/visual/2021-e_dote_baum_am_abgrund-web.png","type":"image"}]');
-INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (1,'Promo Art 2018-03',NULL,'[{"platform":"generic","slug":"file/promoart-201803/spartalien-promoart-201803-1.jpg","type":"image"},{"platform":"generic","slug":"file/promoart-201803/spartalien-promoart-201803-2.jpg","type":"image"},{"platform":"generic","slug":"file/promoart-201803/spartalien-promoart-201803-3.jpg","type":"image"},{"platform":"generic","slug":"file/promoart-201803/spartalien-promoart-201803-4.jpg","type":"image"},{"platform":"generic","slug":"file/promoart-201803/spartalien-promoart-201803-5.jpg","type":"image"},{"platform":"generic","slug":"file/promoart-201803/spartalien-promoart-201803-6.jpg","type":"image"},{"platform":"generic","slug":"file/promoart-201803/spartalien-promoart-201803-7.jpg","type":"image"},{"platform":"generic","slug":"file/promoart-201803/spartalien-promoart-201803-8.jpg","type":"image"}]'),
- (2,'Radio-Dark-Tunnel Jingles','Station IDs/Jingles made for [url=//radio-dark-tunnel.net]Radio-Dark-Tunnel[/url].','[{"platform":"generic","slug":"file/rdt-jingles/rdt-jingle-1.mp3","type":"audio"},{"platform":"generic","slug":"file/rdt-jingles/rdt-jingle-2.mp3","type":"audio"},{"platform":"generic","slug":"file/rdt-jingles/rdt-jingle-3.mp3","type":"audio"}]'),
- (3,'Old Sound Experiments','First steps in creating my own sound. 2001-2006.','[{"platform":"generic","slug":"file/old-soundex/00-arT2-Sound.Ex-front.jpg","type":"image"},{"platform":"generic","slug":"file/old-soundex/2001-arT2-Slow_Adventure.mp3","type":"audio"},{"platform":"generic","slug":"file/old-soundex/2001-arT2-The_Answer.mp3","type":"audio"},{"platform":"generic","slug":"file/old-soundex/2002-arT2-Dirty_TripRock.mp3","type":"audio"},{"platform":"generic","slug":"file/old-soundex/2002-arT2-Killing_Someone.mp3","type":"audio"},{"platform":"generic","slug":"file/old-soundex/2002-arT2-Moskau_Dance.mp3","type":"audio"},{"platform":"generic","slug":"file/old-soundex/2003-arT2-Ambient_Source.mp3","type":"audio"},{"platform":"generic","slug":"file/old-soundex/2003-arT2-Dying_Ambient_Drone.mp3","type":"audio"},{"platform":"generic","slug":"file/old-soundex/2003-arT2-She_Gina_I.mp3","type":"audio"},{"platform":"generic","slug":"file/old-soundex/2003-arT2-The_Trip_Construction_Kit.mp3","type":"audio"},{"platform":"generic","slug":"file/old-soundex/2003-arT2-Were_Wearing_Sunglasses.mp3","type":"audio"},{"platform":"generic","slug":"file/old-soundex/2004-arT2-Late-Night_J.mp3","type":"audio"},{"platform":"generic","slug":"file/old-soundex/2006-arT2-All_I_Know.mp3","type":"audio"},{"platform":"generic","slug":"file/old-soundex/2006-arT2-Intrutrolude.mp3","type":"audio"}]'),
- (4,'Track 32/2','Just a short tune.','[{"platform":"generic","slug":"file/322/SPARTALIEN-322.mp3","type":"audio"},{"platform":"generic","slug":"file/322/SPARTALIEN-322.png","type":"image"}]'),
- (5,'Wallpapers 2020-01','Background images for your desktop. Dark and bright versions. All ZIP files contain the same wallpapers from the previews below, just in different resolutions.
-Your current screen resolution is: <script>document.write(window.screen.width, ''x'', window.screen.height)</script><noscript>(JavaScript required)</noscript>','[{"platform":"generic","slug":"file/wallpapers202001/wallpapers_800x600.zip","text":"wallpapers_800x600.zip","type":"link"},{"platform":"generic","slug":"file/wallpapers202001/wallpapers_1024x768.zip","text":"wallpapers_1024x768.zip","type":"link"},{"platform":"generic","slug":"file/wallpapers202001/wallpapers_1280x600.zip","text":"wallpapers_1280x600.zip","type":"link"},{"platform":"generic","slug":"file/wallpapers202001/wallpapers_1280x720.zip","text":"wallpapers_1280x720.zip","type":"link"},{"platform":"generic","slug":"file/wallpapers202001/wallpapers_1280x1024.zip","text":"wallpapers_1280x1024.zip","type":"link"},{"platform":"generic","slug":"file/wallpapers202001/wallpapers_1920x1080.zip","text":"wallpapers_1920x1080.zip","type":"link"},{"platform":"generic","slug":"file/wallpapers202001/wallpapers-preview-b-5.jpg","type":"image"},{"platform":"generic","slug":"file/wallpapers202001/wallpapers-preview-b-6.jpg","type":"image"},{"platform":"generic","slug":"file/wallpapers202001/wallpapers-preview-b-7.jpg","type":"image"},{"platform":"generic","slug":"file/wallpapers202001/wallpapers-preview-b-8.jpg","type":"image"},{"platform":"generic","slug":"file/wallpapers202001/wallpapers-preview-b-1.jpg","type":"image"},{"platform":"generic","slug":"file/wallpapers202001/wallpapers-preview-b-2.jpg","type":"image"},{"platform":"generic","slug":"file/wallpapers202001/wallpapers-preview-b-3.jpg","type":"image"},{"platform":"generic","slug":"file/wallpapers202001/wallpapers-preview-b-4.jpg","type":"image"},{"platform":"generic","slug":"file/wallpapers202001/wallpapers-preview-b-9.jpg","type":"image"},{"platform":"generic","slug":"file/wallpapers202001/wallpapers-preview-w-1.jpg","type":"image"},{"platform":"generic","slug":"file/wallpapers202001/wallpapers-preview-w-2.jpg","type":"image"},{"platform":"generic","slug":"file/wallpapers202001/wallpapers-preview-w-3.jpg","type":"image"},{"platform":"generic","slug":"file/wallpapers202001/wallpapers-preview-w-4.jpg","type":"image"},{"platform":"generic","slug":"file/wallpapers202001/wallpapers-preview-w-5.jpg","type":"image"},{"platform":"generic","slug":"file/wallpapers202001/wallpapers-preview-w-6.jpg","type":"image"},{"platform":"generic","slug":"file/wallpapers202001/wallpapers-preview-w-7.jpg","type":"image"},{"platform":"generic","slug":"file/wallpapers202001/wallpapers-preview-w-8.jpg","type":"image"},{"platform":"generic","slug":"file/wallpapers202001/wallpapers-preview-w-9.jpg","type":"image"}]'),
- (6,'Making of Memoria S9M2, 2358 Limited Edition','Get yours [url=//spartalien.bandcamp.com/merch/memoria-s9m2-2358-limited-edition]here[/url].','[{"platform":"youtube","slug":"eVzQQe1LyoY","type":"video"},{"platform":"youtube","slug":"-9iwRLyjK-g","type":"video"},{"platform":"youtube","slug":"D_PxOWk6v38","type":"video"},{"platform":"youtube","slug":"ZbkqkQ8ZUoI","type":"video"},{"platform":"youtube","slug":"PEOKvptSzDs","type":"video"},{"platform":"youtube","slug":"43TRzxkP48I","type":"video"},{"platform":"youtube","slug":"P4ccQUu8S3U","type":"video"},{"platform":"youtube","slug":"XP89XWk1BeA","type":"video"},{"platform":"youtube","slug":"wBKZFFxSQb0","type":"video"},{"platform":"youtube","slug":"LDlcH_Z7Tfc","type":"video"}]'),
- (7,'DJ Mixes','Please visit my [url=//mixcloud.com/lowtechman/uploads/?order=latest]Mixcloud page[/url] to listen.','[]'),
- (8,'X Minutes of Peace','Relax.','[{"platform":"youtube","slug":"uL2S2xVQPto","type":"video"},{"platform":"youtube","slug":"z7cUKof9VvU","type":"video"},{"platform":"youtube","slug":"MVBeO9HvKZM","type":"video"},{"platform":"youtube","slug":"JDFAeND7hlI","type":"video"},{"platform":"youtube","slug":"YjEKp2UnUn8","type":"video"},{"platform":"youtube","slug":"fKRlTYKWYwA","type":"video"},{"platform":"youtube","slug":"q_XuMDRsIwc","type":"video"},{"platform":"youtube","slug":"awkTjmcHQzc","type":"video"}]'),
- (9,'[featured on] Might livestream','"Might is a collective of audiovisual artists, specialized in video mapping and scenographic creation." - [url=//might.digital]might.digital[/url]','[{"platform":"youtube","slug":"XWlvvSPq9E8","type":"video"},{"platform":"youtube","slug":"TTJBrAWgoNA","type":"video"}]'),
- (10,'GhostTownTunes Jingles','Livestream Voiceovers/Jingles made for [url=//twitch.tv/ghosttowntunes]GhostTownTunes[/url].','[{"platform":"generic","slug":"file/gtt-jingles/gtt-jingle-1.mp3","type":"audio"},{"platform":"generic","slug":"file/gtt-jingles/gtt-jingle-1-neithernoisenordub.mp3","type":"audio"},{"platform":"generic","slug":"file/gtt-jingles/gtt-jingle-1-nonoise.mp3","type":"audio"}]'),
- (11,'[featured on] Shikantaza Creativity Interview','About [url=//shikantaza.cyberpunkonline.net]Shikantaza Art[/url]: "Shikantaza Art is the simple shell through which we provide art and experiences."','[{"platform":"generic","slug":"file/shikantaza-creativity-interview-iii-spartalien.html","text":"Shikantaza Creativity Interview III","type":"link"}]'),
- (12,'[featured on] ediblewaves'' YouTube Channel','ediblewaves [i]aka[/i] Klangachse is a cool dude who also makes music. Check out his [url=//ediblewaves.bandcamp.com]Bandcamp page[/url] and [url=https://www.youtube.com/channel/UClkNMKbwgzH8f26xJQy9fxg]YouTube channel[/url].','[{"platform":"youtube","slug":"syK2wY3uTpk","timeStart":1444,"type":"video"}]'),
- (13,'[featured on] Spooky Kitten Records'' WHiTMiRE Reviews Music','Segment starts at: 1:46:27
+ (38,38,'2022-05-05',4866,'//mixcloud.com','/lowtechman/planet-42038/'),
+ (39,39,'2022-06-26',5660,'//mixcloud.com','/lowtechman/planet-42039/');
+INSERT INTO "exit" ("id","linkText","url") VALUES (1,'Conservation Drones','//conservationdrones.org'),
+ (2,'Earthship Biotecture','//earthshipglobal.com'),
+ (3,'Four Paws','//four-paws.org'),
+ (4,'Music Declares Emergency','//musicdeclares.net'),
+ (5,'Pestalozzi Children''s Foundation','//pestalozzi.ch'),
+ (6,'Schweizerische Tiermeldezentrale','//stmz.ch'),
+ (7,'War Child','//warchild.org.uk'),
+ (8,'<1','//lessthanone.bandcamp.com'),
+ (9,'Angel Ruediger','//open.spotify.com/artist/3Xp2zhqhMeT9j9bNIeyZWU'),
+ (10,'Cyber Shaman','//cyber-shaman.bandcamp.com'),
+ (11,'DepthCruiser','//www.depthcruiser.com'),
+ (12,'Dorian Iten','//dorian-iten.com'),
+ (13,'HOLLOWLOVE','//hollowlove.com'),
+ (14,'Lens','//lensmakesart.com'),
+ (15,'melodywhore','//melodywhore.com'),
+ (16,'Plike','//plike.bandcamp.com'),
+ (17,'Radio Dark Tunnel','//radio-dark-tunnel.net'),
+ (18,'Sara Jayne Crow','//straypoodle.wordpress.com'),
+ (19,'Tengushee','//tengushee.com'),
+ (20,'Submarine Broadcasting Company','//submarinebroadcastingco.bandcamp.com'),
+ (21,'Minimal_Drone*GRL','//minimaldronegrl.bandcamp.com'),
+ (22,'ediblewaves','//ediblewaves.bandcamp.com'),
+ (23,'Shikantaza Art','//shikantaza.cyberpunkonline.net'),
+ (24,'Occupy White Walls','//www.oww.io'),
+ (25,'The Creative Passport','//www.creativepassport.net'),
+ (26,'GhostTownTunes','//twitch.tv/ghosttowntunes'),
+ (27,'DJOZeroO','//twitch.tv/djozeroo'),
+ (28,'cruelcoppinger','//cruelcoppinger.tumblr.com'),
+ (29,'Stevie Lee Price','//twitter.com/STEVIELEEPRICE'),
+ (30,'Kaiseki Digital','//kaisekidigital.bandcamp.com');
+INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (1,'[1]','Continuoduction','[1]',NULL,1,'2016-03-24',NULL,'The marking of a fresh start.','["Cover art photo - NASA (nasa.gov)"]','[]','[{"slug":"QZovE8JDsXU","type":"youtubeVideo"}]',1,'2223569284','//spartalien.bandcamp.com','/track/continuoduction','//open.spotify.com','/track/2Clx7jPmYSA21DbB0FKxUR'),
+ (2,'[2]','I''ll Embrace You Again In Space','[1]',NULL,1,'2016-10-13',NULL,'Thinking of the moment and place when the time''s over.','["Cover art photo - NASA (nasa.gov)"]','[]','[{"slug":"cC4vSYqYbYA","type":"youtubeVideo"}]',0,'1079688660','//spartalien.bandcamp.com','/track/ill-embrace-you-again-in-space','//open.spotify.com','/track/3QmCKvjLtKXS4vQD6822rf'),
+ (3,'[3]','Realize It''s Just A Ride','[1]',NULL,1,'2017-03-13',NULL,'Don''t be afraid.','["Speech - Dr. Timothy Leary (leary.com)"]','[]','[{"slug":"cC4vSYqYbYA","type":"youtubeVideo"}]',0,'1079688660','//spartalien.bandcamp.com','/track/ill-embrace-you-again-in-space','//open.spotify.com','/track/3QmCKvjLtKXS4vQD6822rf'),
+ (4,'[4]','Nature''s Song','[1]',NULL,1,'2017-06-18',NULL,'You should listen to her more often.','["Speech - Alan Watts (alanwatts.org)","Cover art photo - Unknown Photographer (it''s a Bush TV22)"]','[]','[{"slug":"KYNIayrc074","type":"youtubeVideo"}]',0,'1367673093','//spartalien.bandcamp.com','/track/natures-song','//open.spotify.com','/track/0Fnu4vn6XsiUpI2ECJyr5K'),
+ (5,'[5]','Following The Calling','[1]',NULL,1,'2017-06-20',NULL,'Gloomy days and bittersweet memories.','["Additional Harp strings - Esblendet (esblendet.ch)"]','[]','[]',0,'2940566208','//spartalien.bandcamp.com','/track/following-the-calling','//open.spotify.com','/track/5DlhcOQXlUESTOhNWL4wQ5'),
+ (6,'[6]','Digging In Memories','[1]',NULL,1,'2017-07-03',NULL,'It all started with a simple thought.','[]','[]','[]',0,'2839011968','//spartalien.bandcamp.com','/track/digging-in-memories','//open.spotify.com','/track/5JmknWTUqtJZ2Qhb3MMoCo'),
+ (7,'[7]','Heat-Resistant','[1]',NULL,1,'2017-07-15',NULL,'The heat peaks and your body is lazy - you don''t stop.','["Kids playing sample - klankbeeld (freesound.org/people/klankbeeld)"]','[]','[]',0,'2385470360','//spartalien.bandcamp.com','/track/heat-resistant','//open.spotify.com','/track/3VikP8t1yyx98cPKTinZDO'),
+ (8,'[8]','Song For Wind','[1]',NULL,1,'2017-08-10',NULL,'The wind is strong and you start breathing for the first time in your life.','["Didgeridoo - Esblendet","Vocals - Esblendet","Breathing - Esblendet","Cover art drawing - Esblendet"]','[]','[]',0,'184259074','//spartalien.bandcamp.com','/track/song-for-wind','//open.spotify.com','/track/6Y5r9u7mHDudhTx90XTEF3'),
+ (9,'[9]','Messaggio Per Naelog','[1]',NULL,1,'2017-08-25',NULL,'Just a friendly reminder.','["Speech - Alan Watts (alanwatts.org)"]','[]','[{"slug":"QfDUgPrOhbA","type":"youtubeVideo"}]',1,'3639731854','//spartalien.bandcamp.com','/track/messaggio-per-naelog','//open.spotify.com','/track/2bwflOuvNhQgtaCA4zI40e'),
+ (10,'[10]','Martina','[1]',NULL,1,'2017-09-22',NULL,'Being back in town for a moment.','["Cover art photo - A.N.A.M.F. (anamf.it)"]','[]','[]',0,'924988911','//spartalien.bandcamp.com','/track/martina','//open.spotify.com','/track/6FSbzkJMMxfi9o2QopDW2W'),
+ (11,'[11]','Time','[1]',NULL,1,'2017-10-22',NULL,'When you stop the time for a moment.','[]','[]','[]',0,'2055198430','//spartalien.bandcamp.com','/track/time','//open.spotify.com','/track/3AGRNrD23jzBOThTUGvygn'),
+ (12,'[12]','Every Day','[1]',NULL,1,'2018-02-27',NULL,'Dedicating this track to all the lonely robots in space.','["Cover art photo - NASA (nasa.gov)"]','[]','[{"slug":"hbqMU8nkFNs","type":"youtubeVideo"}]',0,'30233859','//spartalien.bandcamp.com','/track/every-day','//open.spotify.com','/track/3XStzziKE8h0Hzw6cT5OAd'),
+ (13,'[13,14,15,16,17,18,19,20,21,22,23,24,25]','MONOLOG','[1]',NULL,3,'2018-05-13',NULL,'Stereophonic pictures recorded by a brain. A deep dive into the abyss of instincts. A honest and unfiltered output of the feelings from an alien that has lost his star map. Trying to dismantle the potential answers to unanswered questions. Faith. Loss. Nostalgia. Change. Life. Death. For you and them. All of us.
 
-About [url=//spookykittenrecords.net]Spooky Kitten Records[/url]: "We are a group of creatives providing you entertainment through arts. Not to be confused with a music label, we are an entertainment network showcasing a community of talented people."','[{"platform":"youtube","slug":"UsBWgNRUCyM","timeStart":6387,"type":"video"}]'),
- (14,'[featured on] Resonate on CAMP Radio','The Argent Grub curates radio show on CAMP Radio which broadcasts direct from their arts facility high in the French Pyrenees.
-The station has a diverse array of audible pleasures, from drones to poetry, punk to grime, improv to environmental sound …','[{"platform":"mixcloud","slug":"/camp_fr/resonate-27th-march-2022/","type":"mix"},{"platform":"generic","slug":"//stream.resonate.coop/u/18562/playlist/resonate-2022-03-27-camp-radio","text":"Playlist on resonate.coop","type":"link"}]');
+Limited physical edition is [route=stuff/id:15]there[/route].','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between October 2017 and February 2018.","Speech - Movie \"Plan 9 from Outer Space\" (tracks: 1, 4, 7, 10, 11, 13)","Vocals - Esblendet (track: 11)","Didgeridoo - Esblendet (tracks: 1, 4, 7, 13)"]','["Lots of vibes to Esblendet for... everything. I love you."]','[]',0,'2581651186','//spartalien.bandcamp.com','/album/monolog','//open.spotify.com','/album/2KnU3c5IXpYtHsdJLYS47D'),
+ (14,'[26]','Searching','[1]',NULL,1,'2018-08-13',NULL,'When you stop satisfying expectations and embrace the beginning of the end.','[]','[]','[]',0,'1571954667','//spartalien.bandcamp.com','/track/searching','//open.spotify.com','/track/0zFZIbuKaLJ0bm9MecHfk0'),
+ (15,'[27,28,29,30]','THE GREAT FILTER','[1]',NULL,2,'2018-08-31',NULL,'When humans get blinded by reality, we must tell them the truth.','["Recorded, composed, mixed and mastered by SPARTALIEN","Speech - Robert Jamison (track: 1)","Speech - John Maynard (track: 2)","Speech - Dr. Carolin Rosin (track: 3)","Speech - Robert Hastings (track: 4)"]','[]','[]',0,'3617310353','//spartalien.bandcamp.com','/album/the-great-filter','//open.spotify.com','/album/052gFoANpMCUET2C21MUqh'),
+ (16,'[31,32,33,34,35,36,37,38,39,40,41,42,43]','2358','[1]',NULL,3,'2019-03-13',NULL,'You wander and stumble. Through space and time. Literally. Soul searching and yearning for the one thing nobody has ever seen, but most have felt... Suddenly, something flickers from the glare of your slowly dying flashlight. "That''s not what I''m looking for!", you think. Nonetheless, your ingrained curiosity is stronger... It''s an ancient recording device with some magnetic cassette tapes lying right beside it.; dust-layered, it kind of looks like it was left here on purpose... One tape is still loaded in the recorder deck. "Whatever! It''s 2 minutes to midnight anyway.", you think - and hit the play button.
+
+Limited physical edition is [route=stuff/id:16]there[/route].','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between August 2018 and March 2019.","Speech - Dr. Jordan B Peterson (jordanbpeterson.com), from the \"2017 Personality 04/05: Heroic and Shamanic Initiations\" lecture (youtube.com/watch?v=wLc_MC7NQek) (track: 2)","Kid calling sample - Klankbeeld (freesound.org/people/klankbeeld) (track: 6)","Didgeridoo - Esblendet (track: 8)","Background vocals - Esblendet (track: 12)"]','[]','[{"slug":"Yf_Q5zuvdOQ","type":"youtubeVideo"},{"slug":"Roib2OdFF2U","type":"youtubeVideo"}]',0,'1596302206','//spartalien.bandcamp.com','/album/2358','//open.spotify.com','/album/74TE0Q53NLubkkZyHm8bNJ'),
+ (17,'[44]','Frozen Memories','[1]',1,1,'2019-03-29',NULL,'Do you remember, when everything was moving?
+
+Made for [url=//kaisekidigital.bandcamp.com/album/bento-box-vol-2-2]Bento Box Vol. 2[/url].','[]','[]','[{"slug":"DEko4fBXAyE","type":"youtubeVideo"}]',0,'286448283','//spartalien.bandcamp.com','/track/frozen-memories','//open.spotify.com','/track/6rSSRx7JdtdWdbNn7gS5Pl'),
+ (18,'[45,46,47,50,51,52,53,59,62,76]','BRAIN I/O','[1]',NULL,3,'2019-06-09','2020-07-13','Very personal and raw mind exploration.
+
+New output will be added over time to this album...
+2019-06-09: #1, 2019-06-13: #2, 2019-07-02: #3, 2019-07-12: #4, 2019-07-20: #5, 2019-08-15: #6, 2019-12-12: #7, 2019-12-28: #8, 2020-04-23: #9, 2020-07-13: #10','["Didgeridoo - Esblendet (track: 9)","Some Vocals - Esblendet (track: 9)"]','[]','[{"slug":"PLGOlCfPCyZ4HXSGHqzH54kjHcIc79tJC5","type":"youtubePlaylist"},{"slug":"FUErhO5OW1M","type":"youtubeVideo"}]',0,'2810895713','//spartalien.bandcamp.com','/album/brain-i-o','//open.spotify.com','/playlist/2LF6a2ASNVlKiutk1tADG9'),
+ (19,'[48]','They Shot My Friend','[1]',2,1,'2019-07-07',NULL,'Dedicated to Sina. Rest in peace my friend. I will neither forget nor forgive what they did to you.
+
+Made for [url=//lessthanone.bandcamp.com/album/the-fencepost-reclamation-project-volume-5]the fencepost reclamation project volume 5[/url].','["Some foley samples from the Fencepost material originally released by Evelyn Records in 2002 provided by <1 (lessthanone.bandcamp.com)"]','[]','[]',0,'3891255445','//spartalien.bandcamp.com','/track/they-shot-my-friend','//open.spotify.com','/track/6gcULl01jPOsWwn2EwVWHM'),
+ (20,'[49]','The Sad Lightness Of Being','[1]',2,1,'2019-07-07',NULL,'A story about being strong, but still vulnerable.
+
+Made for [url=//lessthanone.bandcamp.com/album/the-fencepost-reclamation-project-volume-5]the fencepost reclamation project volume 5[/url].','["Some foley samples from the Fencepost material originally released by Evelyn Records in 2002 provided by <1 (lessthanone.bandcamp.com)"]','[]','[]',0,'2901018221','//spartalien.bandcamp.com','/track/the-sad-lightness-of-being','//open.spotify.com','/track/2onyU5yxSx9FhxtBgGoykG'),
+ (21,'[54,55,56,57]','KEEN','[1]',NULL,2,'2019-12-13',NULL,'History is over and the future is just an idea.','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) in November 2019."]','[]','[{"slug":"OLAK5uy_kzqRHNeABeBfON3ukcbuzvUWAWYbw8TQ4","type":"youtubePlaylist"}]',0,'2895888302','//spartalien.bandcamp.com','/album/keen','//open.spotify.com','/album/7iQax3iHA9OilsTq9dM2nl'),
+ (22,'[58]','SPARTALIEN & Esblendet - Rainbows & Unicorns','[1,2]',NULL,1,'2019-12-23',NULL,'For your mellow (xmas) days.','["Pan Drum - Esblendet","Guzheng - Esblendet","Cover Unicorn - Unknown Artist","Cover Rainbow Texture - kitti851"]','[]','[]',1,'2223839995','//spartalien.bandcamp.com','/track/rainbows-unicorns','//open.spotify.com','/track/3flUCe6A3SQWJ86hMP0xpU'),
+ (23,'[60,61]','LET IT ALL GO, Volume 1','[1]',NULL,3,'2020-02-13',NULL,'Sit back and relax. Breathe slowly. Try to focus on one thought at a time. Let your emotions flow, but do not let them overwhelm you. Deconstruct your thoughts. Study each little part. Understand, or accept your confusion for now. You do not have energy. You are energy. Everything is here. In your mind. Peace, you can find. Repeat.
+
+Purchases on Bandcamp include 24bit/48kHz versions of both the Original and Waveless Mix.','[]','[]','[{"slug":"D0GvSMubkFw","type":"youtubeVideo"},{"slug":"a8GS5Iw0UyU","type":"youtubeVideo"}]',0,'3162557576','//spartalien.bandcamp.com','/album/let-it-all-go-volume-1','//open.spotify.com','/album/5tQQhtJuFAa1IjOnBNLLzX'),
+ (24,'[63,64,65,66,67,68,69,70,71,72,73,74,75]','1996','[1]',NULL,3,'2020-06-26',NULL,'When the past never ends.
+The future never begins.
+One can only be.
+Forever young.
+
+When you listen to this album, remember that times and situations change, but your heart doesn''t have to necessarily.','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between March and June 2020."]','[]','[]',0,'3288578507','//spartalien.bandcamp.com','/album/1996','//open.spotify.com','/album/2ASJu0rQC3x7WiCwBN0VuL'),
+ (25,'[77,78,79,80]','LET IT ALL GO, Volume 2','[1]',NULL,3,'2020-09-03',NULL,'Sit back and relax. Breathe slowly. Try to focus on one thought at a time. Let your emotions flow, but do not let them overwhelm you. Deconstruct your thoughts. Study each little part. Understand, or accept your confusion for now. You do not have energy. You are energy. Everything is here. In your mind. Peace, you can find. Repeat.
+
+Track 2 (Binaural Headphone Mix) should be listened on good stereo headphones or it may sound strange. It has binaural beats operating at a frequency of ~1-2Hz (delta pattern).','[]','[]','[{"slug":"4HLmwToUeXw","type":"youtubeVideo"}]',0,'587722148','//spartalien.bandcamp.com','/album/let-it-all-go-volume-2','//open.spotify.com','/album/0HPDjHHVdD4Es2gSckjK3r'),
+ (26,'[1,9,10,11,15,24,33,44,58,32,77]','CHILL TRACKS 2016-2020','[1]',NULL,3,'2020-12-13',NULL,'A selection of chill tracks from my back catalog 2016-2020. I hope you find some relaxation at the end of this unusual year.','[]','[]','[]',0,'131808411','//spartalien.bandcamp.com','/album/chill-tracks-2016-2020','//open.spotify.com','/album/1Ak6UIUqcEN9xtzoB4r3ya'),
+ (27,'[81,82,83,84,85,86,87,88,89,90,91]','FLOATING HIGH','[1]',NULL,3,'2021-01-01',NULL,'A magic wooden bench.
+Trees.
+Wild animals.
+You.
+And the cloudy sky.
+
+Digital album and merchandise purchases on Bandcamp include the bonus track "A Night With My Imaginary Friend".
+
+Limited physical editions are [route=stuff/id:19]there[/route] and [route=stuff/id:20]there[/route].','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between September and December 2020."]','[]','[]',0,'1204865255','//spartalien.bandcamp.com','/album/floating-high','//open.spotify.com','/album/7rpbLuknkFeNBOscxZ5djs'),
+ (28,'[92]','Uncertain','[1]',NULL,1,'2021-05-07',NULL,'A song about our future.','["Most nature samples - DJs for Climate Action and Greenpeace (djs4ca.com/climate-sample-pack)"]','["DJs for Climate Action and Greenpeace for taking action."]','[]',0,'2666379051','//spartalien.bandcamp.com','/track/uncertain','//open.spotify.com','/track/4A9uz51yEBcHImxUXnhABw'),
+ (29,'[93,94,95,96]','THE BAND WITH THE DRUMMER WHO KNEW ONLY ONE RHYTHM','[1]',NULL,2,'2021-06-07',NULL,'A small band plays in a smoky open air club. Their instruments are slightly out of tune. But the crowd doesn''t care. Out of tune experiences is what they got used to.','[]','["Special thanks to the Might crew (might.digital) who started the creation process of these tracks."]','[]',0,'2317686308','//spartalien.bandcamp.com','/album/the-band-with-the-drummer-who-knew-only-one-rhythm','//open.spotify.com','/album/5GO8DT7O6oqhAz4Mwblslp'),
+ (30,'[97,98,99]','Flux','[1,3]',NULL,1,'2021-08-13',NULL,'Everything. Nothing. Doesn''t matter. You just float. Somewhere. Sometime.','["Vocals - Stevie Lee Price (track: 1)","Lyrics - Stevie Lee Price (track: 1)","Ocean Photo in Coverart - Rachel Claire"]','[]','[{"slug":"mE4p5UV62sw","type":"youtubeVideo"},{"slug":"file/flux-lyrics.txt","text":"Lyrics.txt","type":"link"}]',0,'2224755430','//spartalien.bandcamp.com','/album/flux','//open.spotify.com','/album/7nngUQbyI6LtVUA1JEJmiL'),
+ (31,'[100]','ediblewaves - Haphe (SPARTALIEN''s Wicca Remix)','[4,1]',NULL,4,'2021-08-31',NULL,'A spooky remix of the track [url=//ediblewaves.bandcamp.com/track/haphe]Haphe[/url] made upon request for [url=//ediblewaves.bandcamp.com]ediblewaves[/url].','["Original track \"Haphe\" by ediblewaves (ediblewaves.bandcamp.com)."]','[]','[]',1,'563831413','//spartalien.bandcamp.com','/track/haphe-spartaliens-wicca-remix','//open.spotify.com',NULL),
+ (32,'[101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138]','UNTOLD STORIES','[1]',NULL,3,'2021-09-22',NULL,'Do you know that feeling, when you hear a sound, and you suddenly feel like you''re in another place? When a sound triggers a feeling, or a memory? And then, when the sound is gone, and the world turns silent, you miss the sound?
+
+This body of work is quiet, but also loud, and very emotional. Raw, but not rushed, feelings. Intentionally improvised moments to get lost in.
+
+There is also a "[route=music/id:33]Doomer''s Delight[/route]" special edition.','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between July and August 2021."]','[]','[{"slug":"mseAapnJomY","type":"youtubeVideo"},{"slug":"file/untold-stories/mood-gfx-1.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-2.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-3.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-4.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-5.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-6.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-7.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-8.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-9.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-10.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-11.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-12.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-13.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-14.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-15.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-16.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-17.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-18.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-19.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-20.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-21.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-22.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-23.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-24.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-25.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-26.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-27.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-28.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-29.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-30.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-31.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-32.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-33.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-34.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-35.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-36.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-37.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-38.jpg","type":"image"}]',0,'1766454808','//spartalien.bandcamp.com','/album/untold-stories','//open.spotify.com','/album/5Z09PSUcbZioMV7UvRv7yw'),
+ (33,'[139,140,141]','UNTOLD STORIES (Doomer''s Delight)','[1]',NULL,3,'2021-09-22',NULL,'Do you know that feeling, when you hear a sound, and you suddenly feel like you''re in another place? When a sound triggers a feeling, or a memory? And then, when the sound is gone, and the world turns silent, you miss the sound?
+
+This body of work is quiet, but also loud, and very emotional. Raw, but not rushed, feelings. Intentionally improvised moments to get lost in.
+
+This is a special edition of [route=music/id:32]UNTOLD STORIES[/route].','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between July and August 2021."]','[]','[]',0,'762897740','//spartalien.bandcamp.com','/album/untold-stories-doomers-delight','//open.spotify.com','/album/3MBt8QE1l8kCWBW6QaM71e');
 COMMIT;

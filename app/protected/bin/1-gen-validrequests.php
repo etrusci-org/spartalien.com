@@ -1,6 +1,6 @@
 <?php
-require __DIR__.'/conf.php';
-require_once __DIR__.'/lib/vendor/jenc.php';
+require __DIR__.'/../conf.php';
+require_once __DIR__.'/../lib/vendor/jenc.php';
 
 $validRequests = array(
     '<?php',
@@ -36,6 +36,6 @@ foreach ($conf['validRequestPatterns'] as $requestPattern) {
 $validRequests[] = '));';
 $validRequests[] = '?>';
 
-file_put_contents(__DIR__.'/cache/validrequests.php', implode(PHP_EOL, $validRequests));
+file_put_contents(__DIR__.'/../cache/validrequests.php', implode(PHP_EOL, $validRequests));
 
-printf('baked %d valid requests in %f seconds'.PHP_EOL, count($validRequests), (microtime(TRUE) - $scriptStart));
+printf('done in %f seconds'.PHP_EOL, (microtime(TRUE) - $scriptStart));

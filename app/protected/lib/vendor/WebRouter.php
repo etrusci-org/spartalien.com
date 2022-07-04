@@ -29,7 +29,7 @@ class WebRouter {
      */
     public function parseRoute(array $array=null, bool $sort=true): array {
         $route = $this->defaultRoute;
-        $route['time'] = time();
+        $route['time'] = microtime(true);
 
         switch ($this->requestSource) {
             case 'get':

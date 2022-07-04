@@ -3,16 +3,17 @@
 $font-main: 'Share Tech', Helvetica, Arial, sans-serif;
 $font-size-00: .8125rem; // 13px if 1rem = 16px
 $font-size-10: .875rem;  // 14px if 1rem = 16px
-$font-size-20: .9375rem; // 15px if 1rem = 16px
-$font-size-30: 1rem; // 16px if 1rem = 16px
+// $font-size-20: .9375rem; // 15px if 1rem = 16px
+// $font-size-30: 1rem; // 16px if 1rem = 16px
 
-$color-00: #000000;
-$color-10: #161616;
-$color-20: #1c1c1c;
-$color-25: #2c2c2c;
-$color-30: #828282;
-$color-40: #cbcbcb;
-$color-50: #ffffff;
-$color-60: #8bb61a;
-$color-70: #cf5319;
-$color-80: #667c8a;
+$color-00: hsl(0, 0%, 0%, 1);
+$color-05: hsl(0, 0%, 5%, 1);
+$color-10: hsl(0, 0%, 9%, 1);
+$color-20: hsl(0, 0%, 11%, 1);
+$color-25: hsl(0, 0%, 17%, 1);
+$color-30: hsl(0, 0%, 60%, 1);
+$color-40: hsl(0, 0%, 80%, 1);
+$color-50: hsl(0, 0%, 100%, 1);
+$color-60: hsl(77, 75%, 41%, 1);
+$color-70: hsl(19, 78%, 45%, 1);
+$color-80: hsl(203, 15%, 47%, 1);

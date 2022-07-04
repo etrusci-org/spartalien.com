@@ -12,6 +12,8 @@ interface LazyMediaInterface {
         mixcloudPlaylist: string
         youtubeVideo: string
         youtubePlaylist: string
+        twitchStream: string
+        twitchChat: string
     }
     bandcampAlbumHeight: {
         header: number,
@@ -30,6 +32,8 @@ interface LazyMediaInterface {
     bakeMixcloudPlaylist(code: lazyCodeType): HTMLIFrameElement | null
     bakeYoutubeVideo(code: lazyCodeType): HTMLIFrameElement | null
     bakeYoutubePlaylist(code: lazyCodeType): HTMLIFrameElement | null
+    bakeTwitchStream(code: lazyCodeType): HTMLIFrameElement | null
+    bakeTwitchChat(code: lazyCodeType): HTMLIFrameElement | null
     guessHTMLAudioTypeByExt(filename: string): string | null
     guessHTMLVideoTypeByExt(filename: string): string | null
 }
@@ -50,9 +54,7 @@ type lazyCodeType = {
 
 export const LazyMedia: LazyMediaInterface = {
     debug: false,
-
     selector: '.lazycode', // due to my incompetence, this has to be a class for now
-
     slugTpl: {
         link: '{SLUG}',
         image: '{SLUG}',
@@ -64,13 +66,15 @@ export const LazyMedia: LazyMediaInterface = {
         mixcloudPlaylist: '//mixcloud.com/widget/iframe/?feed={SLUG}&hide_cover=1',
         youtubeVideo: '//youtube.com/embed/{SLUG}?modestbranding=1&rel=0',
         youtubePlaylist: '//youtube.com/embed/videoseries?list={SLUG}&modestbranding=1&rel=0',
+        twitchStream: '//player.twitch.tv/?channel={SLUG}&muted=false&autoplay=true',
+        twitchChat: '//twitch.tv/embed/{SLUG}',
     },
-
     bandcampAlbumHeight: {
         header: 120,
         trackRow: 33,
         bottomBar: 50,
     },
+
 
     embed() {
         if (this.debug) console.group('LazyMedia')
@@ -80,7 +84,7 @@ export const LazyMedia: LazyMediaInterface = {
         targetNodes.forEach(targetNode => {
             if (targetNode instanceof HTMLElement) {
                 try {
-                    let code: lazyCodeType = JSON.parse(targetNode.innerHTML)
+                    let code: lazyCodeType = JSON.parse(targetNode.innerText)
                     let e = this.bake(code, targetNode)
 
                     if (e) {
@@ -89,13 +93,14 @@ export const LazyMedia: LazyMediaInterface = {
                     }
                 }
                 catch (error) {
-                    console.error('BOO!\n\ncode:', targetNode.innerHTML.trim(), '\n\ntargetNode:', targetNode, '\n\nerror message:', error)
+                    console.error('BOO!\n\ncode:', targetNode.innerText.trim(), '\n\ntargetNode:', targetNode, '\n\nerror message:', error)
                 }
             }
         })
 
         if (this.debug) console.groupEnd()
     },
+
 
     bake(code, targetNode) {
         let e = null
@@ -110,6 +115,8 @@ export const LazyMedia: LazyMediaInterface = {
         if (code.type == 'mixcloudPlaylist') e = this.bakeMixcloudPlaylist(code)
         if (code.type == 'youtubeVideo') e = this.bakeYoutubeVideo(code)
         if (code.type == 'youtubePlaylist') e = this.bakeYoutubePlaylist(code)
+        if (code.type == 'twitchStream') e = this.bakeTwitchStream(code)
+        if (code.type == 'twitchChat') e = this.bakeTwitchChat(code)
 
         // post process baked elements
         if (e) {
@@ -155,20 +162,22 @@ export const LazyMedia: LazyMediaInterface = {
         return e
     },
 
+
     bakeLink(code) {
         let e = document.createElement('a')
 
-        e.setAttribute('href', this.slugTpl.link.replace('{SLUG}', code.slug.replace('&amp;', '&'))) // FIXME: how to prevent `&` being transformed to `&amp;` for the href attribute without using replace()
+        e.setAttribute('href', this.slugTpl.link.replace('{SLUG}', code.slug))
 
         if (code.text) {
-            e.innerHTML = code.text
+            e.innerText = code.text
         }
         else {
-            e.innerHTML = this.slugTpl.link.replace('{SLUG}', code.slug.split('//').pop() || code.slug)
+            e.innerText = this.slugTpl.link.replace('{SLUG}', code.slug.split('//').pop() || code.slug)
         }
 
         return e
     },
+
 
     bakeImage(code) {
         let e = document.createElement('img')
@@ -179,6 +188,7 @@ export const LazyMedia: LazyMediaInterface = {
 
         return e
     },
+
 
     bakeAudio(code) {
         let e  = document.createElement('audio')
@@ -197,6 +207,7 @@ export const LazyMedia: LazyMediaInterface = {
 
         return e
     },
+
 
     bakeVideo(code) {
         let e  = document.createElement('video')
@@ -217,6 +228,7 @@ export const LazyMedia: LazyMediaInterface = {
         return e
     },
 
+
     bakeBandcampTrack(code) {
         let e = document.createElement('iframe')
 
@@ -225,6 +237,7 @@ export const LazyMedia: LazyMediaInterface = {
 
         return e
     },
+
 
     bakeBandcampAlbum(code) {
         let e = document.createElement('iframe')
@@ -239,6 +252,7 @@ export const LazyMedia: LazyMediaInterface = {
         return e
     },
 
+
     bakeMixcloudMix(code) {
         let e = document.createElement('iframe')
 
@@ -247,6 +261,7 @@ export const LazyMedia: LazyMediaInterface = {
 
         return e
     },
+
 
     bakeMixcloudPlaylist(code) {
         let e = document.createElement('iframe')
@@ -257,6 +272,7 @@ export const LazyMedia: LazyMediaInterface = {
         return e
     },
 
+
     bakeYoutubeVideo(code) {
         let e = document.createElement('iframe')
 
@@ -264,20 +280,45 @@ export const LazyMedia: LazyMediaInterface = {
 
         e.setAttribute('loading', 'lazy')
         e.setAttribute('src', this.slugTpl.youtubeVideo.replace('{SLUG}', code.slug))
-        e.setAttribute('allowfullscreen', 'allowfullscreen') // because allow=fullscreen is still WD
+        e.setAttribute('allowfullscreen', 'allowfullscreen')
 
         return e
     },
+
 
     bakeYoutubePlaylist(code) {
         let e = document.createElement('iframe')
 
         e.setAttribute('loading', 'lazy')
         e.setAttribute('src', this.slugTpl.youtubePlaylist.replace('{SLUG}', code.slug))
-        e.setAttribute('allowfullscreen', 'allowfullscreen') // because allow=fullscreen is still WD
+        e.setAttribute('allowfullscreen', 'allowfullscreen')
+
+        console.log('e :>> ', e);
 
         return e
     },
+
+
+    bakeTwitchStream(code) {
+        let e = document.createElement('iframe')
+
+        e.setAttribute('loading', 'lazy')
+        e.setAttribute('src', this.slugTpl.twitchStream.replace('{SLUG}', code.slug))
+        e.setAttribute('allowfullscreen', 'allowfullscreen')
+
+        return e
+    },
+
+
+    bakeTwitchChat(code) {
+        let e = document.createElement('iframe')
+
+        e.setAttribute('loading', 'lazy')
+        e.setAttribute('src', this.slugTpl.twitchChat.replace('{SLUG}', code.slug))
+
+        return e
+    },
+
 
     guessHTMLAudioTypeByExt(filename) {
         let audioType = null
@@ -297,6 +338,7 @@ export const LazyMedia: LazyMediaInterface = {
 
         return audioType
     },
+
 
     guessHTMLVideoTypeByExt(filename) {
         let videoType = null
