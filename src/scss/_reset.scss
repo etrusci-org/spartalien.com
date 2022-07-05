@@ -1,0 +1,48 @@
+// _reset
+
+html,
+body,
+header,
+main,
+nav,
+div,
+h1,
+h2,
+h3,
+label,
+p,
+ul,
+li,
+hr,
+table,
+th,
+td,
+a,
+iframe,
+img,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+body {
+    text-rendering: geometricPrecision;
+}
+
+
+a {
+    outline: none;
+}
+
+
+iframe,
+img,
+audio,
+video {
+    max-width: 100%;
+    // height: auto; // this would set height to 0 in Edge
+    box-sizing: border-box;
+}

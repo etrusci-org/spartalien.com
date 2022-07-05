@@ -1,1 +1,2 @@
 0000/
+app/protected/db/*.bak*.sqlite3
