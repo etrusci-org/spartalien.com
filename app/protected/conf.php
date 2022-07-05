@@ -56,8 +56,8 @@ $conf = array(
         'news',
         'news/id:[1-53]',
         'about',
-        'exit',
         'sitemap',
+        'exit',
     ),
     'elsewhere' => array(
         'newsletter' => ['Newsletter', '//eepurl.com/dqYlHr'],
@@ -74,8 +74,8 @@ $conf = array(
 
 
 if (APP_MODE_PRODUCTION) {
-    error_reporting(0);
+    error_reporting(E_ALL);
     $conf['cachingEnabled'] = true;
     $conf['cacheTTL'] = 31_536_000_000;
-    $conf['baseURL'] = 'https://spartalien.com/';
+    $conf['baseURL'] = 'https://spartalien.com/v8beta/';
 }
