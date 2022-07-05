@@ -167,7 +167,7 @@ footer {
 
 .box {
     box-sizing: border-box;
-    padding: .75rem 1rem .5rem 1rem;
+    padding: 1rem 1rem .75rem 1rem;
     margin: 0 0 2rem 0;
 
     &.more {
@@ -188,8 +188,6 @@ footer {
         }
     }
 
-    // &.music-list,
-    // &.visual-list,
     &.simple {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -250,6 +248,14 @@ footer {
 .lazymedia {
     display: block;
     margin-bottom: 1rem;
+    background-size: 1rem;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    // &.image,
+    // &.video {
+    //     margin-left: auto;
+    //     margin-right: auto;
+    // }
 
     &:last-child {
         margin-bottom: .5rem;
@@ -263,8 +269,12 @@ footer {
 
     &.bandcampAlbum {
         width: 100%;
-        min-width: 370px;
-        min-height: 208px;
+        // without tracklist:
+        min-width: 250px;
+        height: 120px;
+        // with tracklist:
+        // min-width: 370px;
+        // min-height: 208px;
     }
 
     &.mixcloudMix,
@@ -276,7 +286,6 @@ footer {
     &.twitchChat {
         width: 100%;
         height: 350px;
-        background-color: black;
     }
 }
 
@@ -357,9 +366,4 @@ footer {
     font-weight: bold;
     text-align: center;
     padding: .5rem 1rem;
-}
-
-
-.external-link {
-    color: blue;
 }

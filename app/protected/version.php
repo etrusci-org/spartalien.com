@@ -1,6 +1,7 @@
 <?php
 define('VERSION', array(
     'favicon' => filemtime('favicon.ico'),
+    'og' => filemtime('res/og.jpg'),
     'css' => filemtime('res/style.min.css'),
     'js' =>
         array_sum(array_map(function(string $v): int {

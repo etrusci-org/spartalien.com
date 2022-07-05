@@ -104,8 +104,19 @@ img {
 
 .lazycode {
     color: $color-80;
-    background-color: $color-20;
+    background-color: $color-10;
     background-image: url('loading.gif');
+}
+
+
+.lazymedia {
+    background-color: $color-10;
+    background-image: url('loading.gif');
+
+    &.link {
+        background-color: transparent;
+        background-image: none;
+    }
 }
 
 

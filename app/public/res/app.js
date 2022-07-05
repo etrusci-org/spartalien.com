@@ -4,11 +4,11 @@ import { addTargetToExtLinks } from './vendor/addTargetToExtLinks.js';
 import { ImagePreview } from './ImagePreview.js';
 export const App = {
     main() {
-        console.group('SPARTALIEN.COM');
+        console.log('SPARTALIEN.COM');
+        LazyMedia.slugTpl.bandcampAlbum = LazyMedia.slugTpl.bandcampAlbum.replace('tracklist=true', 'tracklist=false');
         LazyMedia.embed();
         Scur.deobElements();
         addTargetToExtLinks();
         ImagePreview.init();
-        console.groupEnd();
     },
 };

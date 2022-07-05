@@ -24,9 +24,10 @@
     <?php endif; ?>
 
 
-    <div class="imagepreviewTarget" title="Click anywhere or press Escape to close"></div>
+    <div class="imagepreviewTarget" title="Click here or press Escape to close"></div>
 
 
     <script src="res/main.js?v=<?php print(VERSION['js']); ?>" type="module"></script>
 </body>
 </html>
+<!-- <?php print(jenc($this->route)); ?> -->

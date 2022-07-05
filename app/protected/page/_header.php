@@ -7,17 +7,17 @@
 
     <base href="<?php print($this->conf['baseURL']); ?>">
 
-    <!-- <meta name="application-name" content="spartalien.com"> -->
-    <!-- <meta name="author" content="SPARTALIEN"> -->
-    <!-- <meta name="generator" content="Brain"> -->
-    <!-- <meta name="description" content="SPARTALIEN's Website"> -->
-    <!-- <meta name="keywords" content="SPARTALIEN, multimedia, art, music, audio, soundtrack, visual, code, experimental, original"> -->
+    <meta name="application-name" content="SPARTALIEN.COM">
+    <meta name="author" content="SPARTALIEN">
+    <meta name="generator" content="Brain">
+    <meta name="description" content="SPARTALIEN's Website">
+    <meta name="keywords" content="SPARTALIEN, multimedia, digital, art, music, audio, video, soundtrack, visual, code, experimental, original">
 
-    <!-- <meta property="og:title" content="SPARTALIEN.com"> -->
-    <!-- <meta property="og:url" content="https://spartalien.com"> -->
-    <!-- <meta property="og:description" content="SPARTALIEN's Website"> -->
-    <!-- <meta property="og:type" content="website"> -->
-    <!-- <meta property="og:image" content="https://spartalien.com/ogp.png?v="> -->
+    <meta property="og:title" content="SPARTALIEN.COM">
+    <meta property="og:url" content="<?php print($this->conf['baseURL']); ?>">
+    <meta property="og:description" content="SPARTALIEN's Website">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="<?php print($this->conf['baseURL']); ?>res/og.jpg?v=<?php print(VERSION['og']); ?>">
 
     <link rel="icon" href="favicon.ico?v=<?php print(VERSION['favicon']); ?>" type="image/x-icon">
 
@@ -26,7 +26,6 @@
     <link rel="stylesheet" href="res/style.min.css?v=<?php print(VERSION['css']); ?>">
 
     <title><?php print($this->conf['siteTitle']); ($this->route['request']) ? print(' :: '.$this->route['request']) : ''; ?></title>
-
 </head>
 <body>
     <noscript><div class="noscript">Consider enabling JavaScript or features like audio and video players won't work. (<a href="//enable-javascript.com" target="_blank">instructions</a>)</div></noscript>

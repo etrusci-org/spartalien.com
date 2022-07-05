@@ -23,7 +23,7 @@ $conf = array(
     'rewriteURL' => true,
 
     // Custom vars:
-    'baseURL' => '//localhost/spartalien.com/app/public/',
+    'baseURL' => 'http://localhost/spartalien.com/app/public/',
     'siteTitle' => 'SPARTALIEN',
     'timezone' => 'UTC',
     'locale' => 'en-US',
@@ -77,5 +77,5 @@ if (APP_MODE_PRODUCTION) {
     error_reporting(0);
     $conf['cachingEnabled'] = true;
     $conf['cacheTTL'] = 31_536_000_000;
-    $conf['baseURL'] = '//spartalien.com/';
+    $conf['baseURL'] = 'https://spartalien.com/';
 }

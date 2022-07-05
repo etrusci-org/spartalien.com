@@ -5,9 +5,10 @@ import { ImagePreview } from './ImagePreview.js'
 
 export const App: AppInterface = {
     main() {
-        console.group('SPARTALIEN.COM')
+        console.log('SPARTALIEN.COM')
 
         // LazyMedia.debug = true
+        LazyMedia.slugTpl.bandcampAlbum = LazyMedia.slugTpl.bandcampAlbum.replace('tracklist=true', 'tracklist=false')
         LazyMedia.embed()
 
         Scur.deobElements()
@@ -15,7 +16,5 @@ export const App: AppInterface = {
         addTargetToExtLinks()
 
         ImagePreview.init()
-
-        console.groupEnd()
     },
 }

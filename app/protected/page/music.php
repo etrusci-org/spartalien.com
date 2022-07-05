@@ -120,10 +120,10 @@ if ($releaseByID) {
 
 
     // tracklist
-    print('<h3 class="text-align-center">TRACKLIST</h3>');
+    // print('<h3 class="text-align-center">TRACKLIST</h3>');
     print('
         <table>
-            <thead>
+            <!--<thead>
                 <tr>
                     <th>#</th>
                     <th>artist</th>
@@ -131,7 +131,7 @@ if ($releaseByID) {
                     <th class="text-align-right">runtime</th>
                     <th class="text-align-center">&nearr;</th>
                 </tr>
-            </thead>
+            </thead>-->
             <tbody>
         '
     );

@@ -24,8 +24,6 @@
     }
 
     .grid {
-        // &.music-list,
-        // &.visual-list,
         &.simple {
             grid-template-columns: 1fr 1fr 1fr;
         }
@@ -33,25 +31,10 @@
 }
 
 
-// @media screen and (min-width: 768px) {
-//     // body {
-//     //     font-size: $font-size-20;
-//     // }
-
-//     // .grid {
-//     //     &.music-list,
-//     //     &.visual-list {
-//     //         grid-template-columns: 1fr 1fr 1fr 1fr;
-//     //     }
-//     // }
-// }
+// @media screen and (min-width: 768px) {}
 
 
-// @media screen and (min-width: 960px) {
-//     // body {
-//     //     font-size: $font-size-30;
-//     // }
-// }
+// @media screen and (min-width: 960px) {}
 
 
 // @media screen and (min-width: 1280px) {}
