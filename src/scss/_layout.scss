@@ -142,7 +142,7 @@ header {
 
 
 main {
-    min-width: 450px;
+    min-width: 320px;
     max-width: 600px;
     padding: 0 1rem 1rem 1rem;
     margin: 0 auto;
@@ -251,11 +251,13 @@ footer {
     background-size: 1rem;
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    // &.image,
-    // &.video {
-    //     margin-left: auto;
-    //     margin-right: auto;
-    // }
+
+    &.image,
+    &.video {
+        // issue #5
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     &:last-child {
         margin-bottom: .5rem;
@@ -311,14 +313,14 @@ footer {
 }
 
 
-.fsvideo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+// .fsvideo {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+// }
 
 
 
@@ -339,7 +341,9 @@ footer {
     cursor: zoom-out;
 
     &.open {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     img {
