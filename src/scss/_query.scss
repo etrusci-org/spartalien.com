@@ -2,12 +2,12 @@
 
 @media screen and (min-width: 560px) {
     body {
-        font-size: $font-size-10;
+        font-size: $font-size-20;
     }
 
     img {
         &[src^='res/ico-'] {
-            height: $font-size-10;
+            height: $font-size-20;
         }
     }
 

@@ -10,7 +10,7 @@ body {
 
 body,
 code {
-    font-size: $font-size-00;
+    font-size: $font-size-10;
 }
 
 
@@ -153,7 +153,7 @@ main {
 
 footer {
     text-align: center;
-    margin-top: 15rem;
+    margin-top: 25rem;
     margin-bottom: 2rem;
 
     img {
@@ -371,7 +371,11 @@ footer {
 
 
 
-
+.randomQuoteTyperTarget {
+    min-height: 3.25rem;
+    font-style: italic;
+    cursor: help;
+}
 
 
 

@@ -1,13 +1,1 @@
-<!-- issue #3
-<span class="lazycode fsvideo" style="display:none">{
-    "type": "video",
-    "slug": "file/visual/2021-subweird1.mp4",
-    "attr": [
-        ["preload", "auto"],
-        ["autoplay", "autoplay"],
-        ["loop", "loop"],
-        ["muted", "muted"],
-        ["controls", false]
-    ]
-}</span>
--->
+<div class="randomQuoteTyperTarget box text-align-center">?</div>
