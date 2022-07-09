@@ -119,13 +119,10 @@ img {
     }
 
     &.audio {
+        background-color: $color-30;
         background-image: none;
+        color-scheme: dark;
     }
-
-    // &.image,
-    // &.video {
-    //     // issue #5
-    // }
 }
 
 
