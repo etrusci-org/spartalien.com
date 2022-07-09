@@ -6,7 +6,7 @@ export const ImagePreview = {
     init() {
         this.target = document.querySelector(this.targetSelector);
         this.nodes = document.querySelectorAll(this.nodeSelector);
-        if (!this.target)
+        if (!this.target || !this.nodes)
             return;
         this.nodes.forEach((nodeElement) => {
             nodeElement.addEventListener('click', (event) => {

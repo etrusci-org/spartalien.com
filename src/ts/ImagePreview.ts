@@ -54,7 +54,7 @@ export const ImagePreview: ImagePreviewInterface = {
         this.target = document.querySelector(this.targetSelector)
         this.nodes = document.querySelectorAll(this.nodeSelector)
 
-        if (!this.target) return
+        if (!this.target || !this.nodes) return
 
         this.nodes.forEach((nodeElement) => {
             nodeElement.addEventListener('click', (event) => {

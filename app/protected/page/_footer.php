@@ -1,7 +1,9 @@
     </main>
 
 
-    <?php if ($this->route['node'] != 'index'): ?>
+    <?php
+    // if ($this->route['node'] != 'index'):
+    ?>
         <footer>
             <p>
                 <?php
@@ -21,7 +23,9 @@
                 <a href="<?php print($this->routeURL('exit')); ?>"><img src="res/ico-exit.png" alt="Exit" title="Exit"></a>
             </p>
         </footer>
-    <?php endif; ?>
+    <?php
+    // endif;
+    ?>
 
 
     <div class="imagepreviewTarget"></div>
