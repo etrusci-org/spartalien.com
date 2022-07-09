@@ -21,7 +21,7 @@
 
     <link rel="icon" href="favicon.ico?v=<?php print(VERSION['favicon']); ?>" type="image/x-icon">
 
-    <link rel="preload" href="res/share-tech-v17-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="res/vendor/share-tech-v17-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
 
     <link rel="stylesheet" href="res/style.min.css?v=<?php print(VERSION['css']); ?>">
 
