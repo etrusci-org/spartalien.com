@@ -108,13 +108,12 @@ if ($releaseByID) {
         printf('
             <span class="lazycode">{
                 "type": "bandcamp%1$s",
-                "slug": "%2$s",
-                "trackCount": %3$s
+                "slug": "%2$s"
             }</span>
             ',
             ($rls['trackCount'] > 1) ? 'Album' : 'Track',
             $rls['bandcampID'],
-            $rls['trackCount'],
+            // ($rls['trackCount']) ? sprintf(', "trackCount": %1$s', $rls['trackCount']) : '',
         );
     }
 

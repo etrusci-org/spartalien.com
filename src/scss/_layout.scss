@@ -252,6 +252,10 @@ footer {
     background-position: 50% 50%;
     background-repeat: no-repeat;
 
+    &:last-child {
+        margin-bottom: .5rem;
+    }
+
     &.image,
     &.video {
         // issue #5
@@ -259,9 +263,11 @@ footer {
         margin-right: auto;
     }
 
-    &:last-child {
-        margin-bottom: .5rem;
-    }
+    // &.audio {
+    //     // border: 1px solid;
+    //     // background-color: blue;
+    // }
+
 
     &.bandcampTrack {
         width: 100%;
@@ -272,11 +278,18 @@ footer {
     &.bandcampAlbum {
         width: 100%;
         // without tracklist:
-        min-width: 250px;
-        height: 120px;
+        // min-width: 250px;
+        // height: 120px;
         // with tracklist:
-        // min-width: 370px;
-        // min-height: 208px;
+        min-width: 370px;
+        height: 208px;
+        min-height: 208px;
+
+        &.noTracklist {
+            min-width: 250px;
+            height: 120px;
+            min-height: 120px;
+        }
     }
 
     &.mixcloudMix,

@@ -8,7 +8,6 @@ export const App: AppInterface = {
         console.log('SPARTALIEN.COM')
 
         // LazyMedia.debug = true
-        LazyMedia.slugTpl.bandcampAlbum = LazyMedia.slugTpl.bandcampAlbum.replace('tracklist=true', 'tracklist=false')
         LazyMedia.embed()
 
         Scur.deobElements()

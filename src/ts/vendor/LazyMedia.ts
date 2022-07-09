@@ -260,10 +260,15 @@ export const LazyMedia: LazyMediaInterface = {
     bakeBandcampAlbum(code) {
         let e = document.createElement('iframe')
 
+        if (!code.trackCount) {
+            e.classList.add('noTracklist')
+            this.slugTpl.bandcampAlbum = this.slugTpl.bandcampAlbum.replace('tracklist=true', 'tracklist=false')
+        }
+
         e.setAttribute('loading', 'lazy')
         e.setAttribute('src', this.slugTpl.bandcampAlbum.replace('{SLUG}', code.slug))
 
-        if (code.slug.indexOf('tracklist=false') > -1 && code.trackCount) {
+        if (code.trackCount) {
             e.style.height = `${Math.round(this.bandcampAlbumHeight.header + (this.bandcampAlbumHeight.trackRow * code.trackCount) + this.bandcampAlbumHeight.bottomBar)}px`
         }
 
