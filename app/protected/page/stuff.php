@@ -40,7 +40,7 @@ if ($stuffByID) {
         }
         else if ($v['type'] == 'audio') {
             return sprintf(
-                '%2$s: <span class="lazycode">%1$s</span>',
+                '%2$s<br><span class="lazycode">%1$s</span>',
                 jenc($v),
                 basename($v['slug']),
             );
