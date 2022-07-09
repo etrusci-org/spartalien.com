@@ -2,7 +2,6 @@
 // Ditched Lightbox2 because it depends on a 3rd party lib.
 
 // What I miss:
-// - horizontally and vertically center target container
 // - optional title and description in target container
 // - optional file info in target container
 
@@ -59,20 +58,23 @@ export const ImagePreview: ImagePreviewInterface = {
 
         this.nodes.forEach((nodeElement) => {
             nodeElement.addEventListener('click', (event) => {
+                // create image
                 let img = new Image()
                 let imgSrc = nodeElement.getAttribute('href')
-
                 if (!imgSrc) return
-
                 img.setAttribute('src', imgSrc)
 
+                // insert img into target
                 if (!this.target) return
-
                 this.target.replaceChildren(img)
+
+                // make target visible
                 this.target.classList.add('open')
 
+                // prevent scrollbars
                 document.body.style.overflow = 'hidden'
 
+                // prevent following the link
                 event.preventDefault()
             }, false)
         })

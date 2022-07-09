@@ -1,3 +1,4 @@
+<!-- issue #3
 <span class="lazycode fsvideo" style="display:none">{
     "type": "video",
     "slug": "file/visual/2021-subweird1.mp4",
@@ -9,3 +10,4 @@
         ["controls", false]
     ]
 }</span>
+-->

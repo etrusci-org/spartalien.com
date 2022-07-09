@@ -117,6 +117,15 @@ img {
         background-color: transparent;
         background-image: none;
     }
+
+    &.audio {
+        background-image: none;
+    }
+
+    // &.image,
+    // &.video {
+    //     // issue #5
+    // }
 }
 
 
