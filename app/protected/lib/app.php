@@ -549,7 +549,10 @@ class App extends WebApp {
             case 'list':
                 $q = '
                 SELECT
-                    id, stuffName, LOWER(stuffName) AS stuffNameLC, media
+                    id,
+                    stuffName,
+                    LOWER(stuffName) AS stuffNameLC,
+                    media
                 FROM
                     stuff
                 ORDER BY
@@ -579,7 +582,10 @@ class App extends WebApp {
                 if ($id) {
                     $q = '
                     SELECT
-                        id, stuffName, description, media
+                        id,
+                        stuffName,
+                        description,
+                        media
                     FROM
                         stuff
                     WHERE
