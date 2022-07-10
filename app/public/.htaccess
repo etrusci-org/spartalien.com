@@ -1,13 +1,11 @@
 AddDefaultCharset UTF-8
 ServerSignature Off
-Options +FollowSymlinks
 Options -Indexes
 Options -MultiViews
-AddType application/rss+xml .rss
 
 RewriteEngine On
 
-# COMMENT-OUT THIS FILES REDIRECT BEFORE DEPLOY:
+# COMMENT OUT THIS FILES REDIRECT ON THE PRODUCTION SERVER:
 RewriteRule ^file(/.*)?$ /spartalien.com-files$1 [R=302,L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
