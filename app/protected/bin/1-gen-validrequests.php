@@ -2,10 +2,7 @@
 require __DIR__.'/../conf.php';
 require_once __DIR__.'/../lib/vendor/jenc.php';
 
-$validRequests = array(
-    // '<?php',
-    // 'define(\'VALID_REQUESTS\', array(',
-);
+$validRequests = array();
 
 printf('parsing %d route patterns...'.PHP_EOL, count($conf['validRequestPatterns']));
 
@@ -32,10 +29,6 @@ foreach ($conf['validRequestPatterns'] as $requestPattern) {
     }
 }
 
-// $validRequests[] = '));';
-/* $validRequests[] = '?>'; */
-
-// file_put_contents(__DIR__.'/../cache/validrequests.php', implode('', $validRequests));
 $validRequests = sprintf('<?php define(\'VALID_REQUESTS\', array(%1$s)); ?>', implode(',', $validRequests));
 
 file_put_contents(__DIR__.'/../cache/validrequests.php', $validRequests);

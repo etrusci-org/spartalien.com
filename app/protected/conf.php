@@ -18,7 +18,7 @@ $conf = array(
     'pageDir' => __DIR__.'/page',
     'cacheDir' => __DIR__.'/cache',
     'cachingEnabled' => false,
-    'cacheTTL' => 3600,
+    'cacheTTL' => 10,
     'cacheExcludedNodes' => array(),
     'rewriteURL' => true,
 
@@ -73,9 +73,12 @@ $conf = array(
 );
 
 
+$conf['cachePrimingURL'] = $conf['baseURL']; // for app/protected/bin/2-gen-cache.php
+
+
 if (APP_MODE_PRODUCTION) {
-    error_reporting(E_ALL);
+    error_reporting(E_ALL); // TODO: turn off after closed beta has ended
+    $conf['baseURL'] = 'https://spartalien.com/v8beta/';
     $conf['cachingEnabled'] = true;
     $conf['cacheTTL'] = 31_536_000_000;
-    $conf['baseURL'] = 'https://spartalien.com/v8beta/';
 }
