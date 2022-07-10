@@ -6,8 +6,8 @@ import { RandomQuoteTyper } from './RandomQuoteTyper.js'
 
 
 export const App: AppInterface = {
-    main() {
-        console.log('SPARTALIEN.COM')
+    main(routeRequest = '') {
+        console.log(`SPARTALIEN.COM${(routeRequest) ? ` :: ${routeRequest}` : ``}`)
 
         // LazyMedia.debug = true
         LazyMedia.embed()
@@ -19,6 +19,11 @@ export const App: AppInterface = {
         ImagePreview.init()
 
         // RandomQuoteTyper.typingSpeed = 20
+
+        if (routeRequest == '') {
+            let noise = new Audio('res/brownian2500.mp3')
+            noise.play()
+        }
 
         setTimeout(() => {
             RandomQuoteTyper.typeQuote()

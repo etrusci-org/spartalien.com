@@ -1,5 +1,5 @@
 interface AppInterface {
-    main(): void
+    main(routeRequest: string): void
 }
 
 

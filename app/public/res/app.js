@@ -4,12 +4,16 @@ import { addTargetToExtLinks } from './vendor/addTargetToExtLinks.js';
 import { ImagePreview } from './ImagePreview.js';
 import { RandomQuoteTyper } from './RandomQuoteTyper.js';
 export const App = {
-    main() {
-        console.log('SPARTALIEN.COM');
+    main(routeRequest = '') {
+        console.log(`SPARTALIEN.COM${(routeRequest) ? ` :: ${routeRequest}` : ``}`);
         LazyMedia.embed();
         Scur.deobElements();
         addTargetToExtLinks();
         ImagePreview.init();
+        if (routeRequest == '') {
+            let noise = new Audio('res/brownian2500.mp3');
+            noise.play();
+        }
         setTimeout(() => {
             RandomQuoteTyper.typeQuote();
         }, 2500);
