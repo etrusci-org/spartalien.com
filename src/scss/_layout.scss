@@ -2,24 +2,18 @@
 // mobile layout/size, handle larger screens in _query
 
 body {
-    min-height: 100vh;
     font-family: $font-main;
+    min-height: 100vh;
     line-height: 1.4;
 }
 
-
 body,
+textarea,
 code {
     font-size: $font-size-10;
 }
 
 
-code {
-    font-family: monospace;
-    line-height: 1.2;
-    display: inline-block;
-    white-space: pre;
-}
 
 
 h1,
@@ -53,6 +47,20 @@ label {
     font-weight: bold;
 }
 
+
+textarea {
+    width: 100%;
+    height: 8rem;
+    padding: 0.25rem;
+}
+
+textarea,
+code {
+    font-family: monospace;
+    line-height: 1.2;
+    display: inline-block;
+    white-space: pre;
+}
 
 p,
 ul,
@@ -93,19 +101,14 @@ td {
 }
 
 
-img {
-    &.fluid {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-    }
 
-    &[src^='res/ico-'] {
+img {
+    &[src*='/ico-'] {
         display: inline-block;
         width: auto;
-        height: $font-size-00;
+        height: 1rem;
         margin: 0 .25rem .25rem 0;
-        vertical-align: text-top;
+        vertical-align: middle;
     }
 }
 
@@ -156,12 +159,6 @@ footer {
     padding: 0 1rem 1rem 1rem;
     margin-top: 25rem;
     margin-bottom: 2rem;
-
-    img {
-        &[src^='res/ico-'] {
-            margin-right: .5rem;
-        }
-    }
 }
 
 
@@ -208,6 +205,7 @@ footer {
 
 
 
+
 .btn {
     display: inline-block;
     text-align: center;
@@ -231,6 +229,21 @@ footer {
 
 
 
+
+.elsewhere {
+    a {
+        span {
+            display: none;
+        }
+    }
+
+    a:hover,
+    a:focus {
+        span {
+            display: inline;
+        }
+    }
+}
 
 
 
@@ -360,10 +373,9 @@ footer {
 
 
 .randomQuoteTyper {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: $font-serif;
     font-size: 2rem;
-    // font-style: italic;
-    padding: 1rem;
+    margin-top: 3rem;
 
     &.doneTyping {
         cursor: help;

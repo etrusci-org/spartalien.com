@@ -6,8 +6,13 @@ body {
 }
 
 
+textarea,
 code {
     color: $color-80;
+}
+
+textarea {
+    background-color: $color-10;
 }
 
 
@@ -90,7 +95,7 @@ a.active {
 
 
 img {
-    &[src^='res/ico-'] {
+    &[src*='/ico-'] {
         opacity: .5;
 
         &:hover {
@@ -113,7 +118,8 @@ img {
     background-color: $color-10;
     background-image: url('loading.gif');
 
-    &.link {
+    &.link,
+    &.video {
         background-color: transparent;
         background-image: none;
     }

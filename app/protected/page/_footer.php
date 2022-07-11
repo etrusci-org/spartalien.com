@@ -1,32 +1,27 @@
-    <?php
-    if ($this->route['node'] != 'index'):
-    ?>
-        </main>
-    <?php
-    endif;
-    ?>
+    </main>
 
 
     <?php
     if ($this->route['node'] != 'index'):
     ?>
         <footer>
-            <p>
+            <p class="elsewhere">
                 <?php
                 foreach ($this->conf['elsewhere'] as $k => $v) {
                     printf('
-                        <a href="%1$s"><img src="res/ico-%2$s.png" alt="%3$s" title="%3$s"></a>',
-                        $v[1],
-                        $k,
-                        $v[0],
+                        <a href="%1$s">%2$s<span>%3$s</span>%4$s</a>',
+                        $v[2],
+                        substr($v[1], 0, 1),
+                        substr($v[1], 1, -1),
+                        substr($v[1], -1, 1),
                     );
                 }
                 ?>
             </p>
             <p>&copy; 2016-<?php print(date('Y')); ?> SPARTALIEN.COM</p>
             <p>
-                <a href="<?php print($this->routeURL('sitemap')); ?>"><img src="res/ico-sitemap.png" alt="Sitemap" title="Sitemap"></a>
-                <a href="<?php print($this->routeURL('exit')); ?>"><img src="res/ico-exit.png" alt="Exit" title="Exit"></a>
+                <a href="<?php print($this->routeURL('sitemap')); ?>">Lost?</a>
+                <a href="<?php print($this->routeURL('exit')); ?>">[&rarr;]</a>
             </p>
         </footer>
     <?php

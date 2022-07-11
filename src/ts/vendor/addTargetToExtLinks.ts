@@ -10,7 +10,7 @@ export function addTargetToExtLinks(target: string = '_blank', cssClass: string 
     anchors.forEach(e => {
         if (e.hostname && document.location.hostname != e.hostname) {
             e.setAttribute('target', target)
-            e.setAttribute('rel', 'nofollow')
+            // e.setAttribute('rel', 'nofollow')
             if (cssClass) {
                 e.classList.add(cssClass)
             }

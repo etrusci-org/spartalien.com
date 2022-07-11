@@ -23,17 +23,20 @@ export const App: AppInterface = {
             // RandomQuoteTyper.typingSpeed = 20
 
             if (RandomQuoteTyper.target) {
-                let noise = new Audio('res/brownian2500.mp3')
-                noise.play()
-
-                setTimeout(() => {
-                    RandomQuoteTyper.typeQuote()
-                }, 2_600) // audio length + 100ms
-
                 RandomQuoteTyper.target.addEventListener('click', (event) => {
                     RandomQuoteTyper.typeQuote()
                     event.preventDefault()
                 })
+
+                let noise = new Audio('res/brownian2500.mp3')
+                noise.play()
+                noise.volume = 1
+
+                setTimeout(() => {
+                    noise.volume = 0
+                    RandomQuoteTyper.typeQuote()
+                }, 2_500 /* audio length */)
+
             }
         }
     },
