@@ -1,33 +1,49 @@
 import { randomQuotes } from './randomQuotes.js';
 export const RandomQuoteTyper = {
-    quotes: randomQuotes,
-    typingSpeed: 120,
-    target: document.querySelector('.randomQuoteTyperTarget'),
+    typingSpeed: 100,
+    targetSelector: '.randomQuoteTyper',
+    target: null,
+    queue: [],
     quote: null,
     typerID: null,
+    init() {
+        this.target = document.querySelector(this.targetSelector);
+    },
     typeQuote() {
-        if (!this.target || this.typerID)
-            return;
-        this.quote = this.getRandomQuote();
+        if (this.queue.length == 0) {
+            this.queue = [...this._fys(randomQuotes)];
+        }
+        this.quote = this.queue.pop() || null;
         if (!this.quote)
             return;
-        let dump = `"${this.quote['quote']}" — ${this.quote['author']}`.split('');
+        let quoteStr = `"${this.quote.text}" — ${this.quote.author}`.split('');
+        if (!this.target)
+            return;
         this.target.innerHTML = ``;
+        this.target.classList.remove('doneTyping');
         this.typerID = setInterval(() => {
             if (!this.target)
                 return;
-            this.target.innerHTML += `${dump.shift()}`;
-            if (dump.length == 0)
+            this.target.innerHTML += `${quoteStr.shift()}`;
+            if (quoteStr.length == 0) {
                 this.stop();
+                this.target.classList.add('doneTyping');
+            }
         }, this.typingSpeed);
-    },
-    getRandomQuote() {
-        return randomQuotes[Math.floor(Math.random() * randomQuotes.length)] || null;
     },
     stop() {
         if (!this.typerID || !this.target)
             return;
         clearInterval(this.typerID);
         this.typerID = null;
+    },
+    _fys(arr) {
+        for (let x = arr.length - 1; x > 0; x--) {
+            const y = Math.floor(Math.random() * x);
+            const z = arr[x];
+            arr[x] = arr[y];
+            arr[y] = z;
+        }
+        return arr;
     },
 };

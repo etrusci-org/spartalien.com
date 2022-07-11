@@ -1,2 +1,4 @@
 import { App } from './app.js';
-window.addEventListener('load', App.main, false);
+window.addEventListener('load', () => {
+    App.main(routeRequest);
+}, false);

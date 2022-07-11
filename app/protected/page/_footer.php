@@ -1,8 +1,14 @@
-    </main>
+    <?php
+    if ($this->route['node'] != 'index'):
+    ?>
+        </main>
+    <?php
+    endif;
+    ?>
 
 
     <?php
-    // if ($this->route['node'] != 'index'):
+    if ($this->route['node'] != 'index'):
     ?>
         <footer>
             <p>
@@ -24,14 +30,20 @@
             </p>
         </footer>
     <?php
-    // endif;
+    endif;
     ?>
 
 
     <div class="imagepreviewTarget"></div>
 
+    <script>
+        const routeRequest = '<?php print($this->route['request']); ?>'
+    </script>
+
 
     <script src="res/main.js?v=<?php print(VERSION['js']); ?>" type="module"></script>
+
+
 </body>
 </html>
 <!-- <?php print(jenc($this->route)); ?> -->

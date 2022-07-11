@@ -6,8 +6,8 @@ import { RandomQuoteTyper } from './RandomQuoteTyper.js'
 
 
 export const App: AppInterface = {
-    main() {
-        console.log('SPARTALIEN.COM')
+    main(routeRequest = '') {
+        console.log(`SPARTALIEN.COM${(routeRequest) ? ` :: ${routeRequest}` : ``}`)
 
         // LazyMedia.debug = true
         LazyMedia.embed()
@@ -18,17 +18,23 @@ export const App: AppInterface = {
 
         ImagePreview.init()
 
-        // RandomQuoteTyper.typingSpeed = 20
+        if (routeRequest == '') {
+            RandomQuoteTyper.init()
+            // RandomQuoteTyper.typingSpeed = 20
 
-        setTimeout(() => {
-            RandomQuoteTyper.typeQuote()
-        }, 2_500)
+            if (RandomQuoteTyper.target) {
+                let noise = new Audio('res/brownian2500.mp3')
+                noise.play()
 
-        if (RandomQuoteTyper.target) {
-            RandomQuoteTyper.target.addEventListener('click', (event) => {
-                RandomQuoteTyper.typeQuote()
-                event.preventDefault()
-            })
+                setTimeout(() => {
+                    RandomQuoteTyper.typeQuote()
+                }, 2_600) // audio length + 100ms
+
+                RandomQuoteTyper.target.addEventListener('click', (event) => {
+                    RandomQuoteTyper.typeQuote()
+                    event.preventDefault()
+                })
+            }
         }
     },
 }
