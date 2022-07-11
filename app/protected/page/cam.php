@@ -1,8 +1,9 @@
 <div class="box">
     <h2>CAM</h2>
     <p>
-        Watch me doing stuff. The schedule is irregular, so consider following me on
-        <a href="https://twitch.tv/spartalien/about">Twitch</a> to get a notification when I go live next time.
+        Hang out with me while I do stuff. The schedule is irregular, so consider to
+        <a href="https://twitch.tv/spartalien/about">follow me on Twitch</a>
+        to get a notification when I go live next time.
     </p>
 </div>
 

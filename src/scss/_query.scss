@@ -1,13 +1,15 @@
 // _query
 
 @media screen and (min-width: 560px) {
-    body {
+    body,
+    textarea,
+    code {
         font-size: $font-size-20;
     }
 
     img {
         &[src^='res/ico-'] {
-            height: $font-size-20;
+            height: 1.125rem;
         }
     }
 

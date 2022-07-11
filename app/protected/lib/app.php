@@ -108,21 +108,26 @@ class App extends WebApp {
                 $w = '';
                 $v = array();
 
-                // year
-                if (isset($this->route['var']['year'])) {
-                    $w = 'WHERE substr(audioRelease.releasedOn, 1, 4) = :year OR substr(audioRelease.updatedOn, 1, 4) = :year';
-                    $v[] = array('year', $this->route['var']['year'], SQLITE3_TEXT);
-                }
-
                 // type
                 if (isset($this->route['var']['type'])) {
                     $w = sprintf('WHERE lower(audioReleaseType.typeName) = :type');
                     $v[] = array('type', strtolower($this->route['var']['type']), SQLITE3_TEXT);
                 }
 
+                // collab
+                if (in_array('collab', $this->route['flag'])) {
+                    $w = 'WHERE audioRelease.artistIDs != \'[1]\'';
+                }
+
                 // free to download
                 if (in_array('freedl', $this->route['flag'])) {
                     $w = 'WHERE audioRelease.freeToDownload = 1';
+                }
+
+                // year
+                if (isset($this->route['var']['year'])) {
+                    $w = 'WHERE substr(audioRelease.releasedOn, 1, 4) = :year OR substr(audioRelease.updatedOn, 1, 4) = :year';
+                    $v[] = array('year', $this->route['var']['year'], SQLITE3_TEXT);
                 }
 
                 $q = sprintf('
@@ -223,7 +228,7 @@ class App extends WebApp {
         $filter[] = array(
             'All',
             $this->routeURL('music'),
-            !in_array('freedl', $this->route['flag']) && !isset($this->route['var']['year']) && !isset($this->route['var']['type']),
+            empty($this->route['var']) && empty($this->route['flag']),
         );
 
         // types
@@ -243,20 +248,12 @@ class App extends WebApp {
             );
         }
 
-        // years
-        $q = '
-        SELECT DISTINCT
-            substr(releasedOn, 1, 4) AS year
-        FROM audioRelease
-        ORDER BY releasedOn DESC;';
-        $dump = $this->DB->query($q);
-        foreach ($dump as $v) {
-            $filter[] = array(
-                $v['year'],
-                $this->routeURL(sprintf('music/year:%s', $v['year'])),
-                isset($this->route['var']['year']) && $this->route['var']['year'] == $v['year'],
-            );
-        }
+        // collab
+        $filter[] = array(
+            'Collab',
+            $this->routeURL('music/collab'),
+            in_array('collab', $this->route['flag']),
+        );
 
         // free to download
         $filter[] = array(
@@ -271,6 +268,21 @@ class App extends WebApp {
             $this->routeURL(sprintf('%s/uploads/?order=latest', $this->conf['elsewhere']['mixcloud'][1])),
             null,
         );
+
+        // years
+        $q = '
+        SELECT DISTINCT
+            substr(releasedOn, 1, 4) AS year
+        FROM audioRelease
+        ORDER BY releasedOn DESC;';
+        $dump = $this->DB->query($q);
+        foreach ($dump as $v) {
+            $filter[] = array(
+                $v['year'],
+                $this->routeURL(sprintf('music/year:%s', $v['year'])),
+                isset($this->route['var']['year']) && $this->route['var']['year'] == $v['year'],
+            );
+        }
 
         return $filter;
     }

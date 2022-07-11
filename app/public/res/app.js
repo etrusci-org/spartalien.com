@@ -13,15 +13,17 @@ export const App = {
         if (routeRequest == '') {
             RandomQuoteTyper.init();
             if (RandomQuoteTyper.target) {
-                let noise = new Audio('res/brownian2500.mp3');
-                noise.play();
-                setTimeout(() => {
-                    RandomQuoteTyper.typeQuote();
-                }, 2600);
                 RandomQuoteTyper.target.addEventListener('click', (event) => {
                     RandomQuoteTyper.typeQuote();
                     event.preventDefault();
                 });
+                let noise = new Audio('res/brownian2500.mp3');
+                noise.play();
+                noise.volume = 1;
+                setTimeout(() => {
+                    noise.volume = 0;
+                    RandomQuoteTyper.typeQuote();
+                }, 2500);
             }
         }
     },

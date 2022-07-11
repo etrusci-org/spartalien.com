@@ -16,6 +16,8 @@ export const RandomQuoteTyper: RandomQuoteTyperInterface = {
 
 
     typeQuote() {
+        if (RandomQuoteTyper.typerID) return
+
         if (this.queue.length == 0) {
             this.queue = [...this._fys(randomQuotes)]
         }

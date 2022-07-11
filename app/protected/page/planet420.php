@@ -21,7 +21,12 @@ if (!$artistsList && !$sessionByID) {
     printf('
         <div class="box">
             <h2>PLANET 420</h2>
-            <p>Click the play button to listen to %1$s hours of selected eclectic music ...</p>
+            <p>These are my musical chillout sessions where I just enjoy some music from my personal collection...</p>
+            <p>All sessions are <a href="%2$s">recorded live</a> and are then shortly afterwards available here and on <a href="//www.mixcloud.com/lowtechman/playlists/planet-420">Mixcloud</a>.</p>
+            <p>Music styles you can expect: Downtempo, IDM, Ambient, Lounge, Chillout, Experimental, NuJazz, Beats, Hip-Hop, and some more.</p>
+        </div>
+        <div class="box">
+            <p>New here? Then simply click the play button to listen to %1$s hours of selected eclectic music ...</p>
             <span class="lazycode">{
                 "type": "mixcloudPlaylist",
                 "slug": "/lowtechman/playlists/planet-420/"
@@ -29,6 +34,7 @@ if (!$artistsList && !$sessionByID) {
         </div>
         ',
         $hoursToListen,
+        $this->routeURL('cam'),
     );
 }
 
@@ -119,7 +125,7 @@ if ($archiveList) {
     printf('<div class="box%1$s">', ($sessionByID) ? ' more' : '');
 
     if (!$sessionByID) {
-        print('<p>... or select individual sessions below &darr;</p>');
+        print('<p>... or browse through individual sessions and their tracklists below &darr;</p>');
     }
     else {
         print('<h3>MORE SESSIONS ...</h3>');

@@ -40,7 +40,6 @@ export const randomQuotes = [
     { author: `Maria von Trapp`, text: `Music acts like a magic key, to which the most tightly closed heart opens.` },
     { author: `Marilyn Manson`, text: `Music is the strongest form of magic.` },
     { author: `Maya Angelou`, text: `Everything in the universe has a rhythm, everything dances.` },
-    { author: `Morrissey`, text: `Disappointment came to me, and booted me, and bruised and hurt me, but that's how people grow up.` },
     { author: `Pablo Picasso`, text: `Art is the lie that enables us to realize the truth.` },
     { author: `Pablo Picasso`, text: `Art washes away from the soul the dust of everyday life.` },
     { author: `Pablo Picasso`, text: `Every child is an artist. The problem is how to remain an artist once he grows up.` },
