@@ -359,11 +359,15 @@ footer {
 
 
 
-.randomQuoteTyperTarget {
-    min-height: 5rem;
-    font-size: 1.5rem;
-    font-style: italic;
-    cursor: help;
+.randomQuoteTyper {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    // font-style: italic;
+    padding: 1rem;
+
+    &.doneTyping {
+        cursor: help;
+    }
 }
 
 

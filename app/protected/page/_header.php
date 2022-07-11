@@ -44,4 +44,10 @@
     </header>
 
 
-    <main>
+    <?php
+    if ($this->route['node'] != 'index'):
+    ?>
+        <main>
+    <?php
+    endif;
+    ?>

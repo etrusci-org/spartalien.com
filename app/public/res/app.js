@@ -11,17 +11,18 @@ export const App = {
         addTargetToExtLinks();
         ImagePreview.init();
         if (routeRequest == '') {
-            let noise = new Audio('res/brownian2500.mp3');
-            noise.play();
-        }
-        setTimeout(() => {
-            RandomQuoteTyper.typeQuote();
-        }, 2500);
-        if (RandomQuoteTyper.target) {
-            RandomQuoteTyper.target.addEventListener('click', (event) => {
-                RandomQuoteTyper.typeQuote();
-                event.preventDefault();
-            });
+            RandomQuoteTyper.init();
+            if (RandomQuoteTyper.target) {
+                let noise = new Audio('res/brownian2500.mp3');
+                noise.play();
+                setTimeout(() => {
+                    RandomQuoteTyper.typeQuote();
+                }, 2600);
+                RandomQuoteTyper.target.addEventListener('click', (event) => {
+                    RandomQuoteTyper.typeQuote();
+                    event.preventDefault();
+                });
+            }
         }
     },
 };

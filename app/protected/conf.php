@@ -17,8 +17,8 @@ $conf = array(
     'dbFile' => __DIR__.'/db/main.sqlite3',
     'pageDir' => __DIR__.'/page',
     'cacheDir' => __DIR__.'/cache',
-    'cachingEnabled' => false,
-    'cacheTTL' => 10,
+    'cachingEnabled' => true,
+    'cacheTTL' => 60,
     'cacheExcludedNodes' => array(),
     'rewriteURL' => true,
 
