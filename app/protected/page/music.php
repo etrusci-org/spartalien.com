@@ -109,13 +109,11 @@ if ($releaseByID) {
             ',
             ($rls['trackCount'] > 1) ? 'Album' : 'Track',
             $rls['bandcampID'],
-            // ($rls['trackCount']) ? sprintf(', "trackCount": %1$s', $rls['trackCount']) : '',
         );
     }
 
 
     // tracklist
-    // print('<h3 class="text-align-center">TRACKLIST</h3>');
     print('
         <table>
             <tbody>
@@ -212,7 +210,6 @@ if ($releaseByID) {
 
 // release list
 if ($releaseList) {
-    // printf('<div class="box%1$s">', ($releaseByID) ? ' more' : '');
     if ($releaseByID) {
         print('<div class="moreSpacer"></div>');
     }
@@ -223,7 +220,6 @@ if ($releaseList) {
         print('<h3>MORE MUSIC ...</h3>');
     }
 
-    // print('<div class="grid music-list">');
     print('<div class="grid simple">');
 
     foreach ($releaseList as $v) {

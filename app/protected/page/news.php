@@ -46,8 +46,6 @@ if ($newsByID) {
 
 // news list
 if ($newsList) {
-    // printf('<div class="box%1$s">', ($newsByID) ? ' more' : '');
-
     if ($newsByID) {
         print('<div class="moreSpacer"></div>');
     }

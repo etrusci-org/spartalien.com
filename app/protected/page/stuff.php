@@ -73,8 +73,6 @@ if ($stuffByID) {
 
 // stuff list
 if ($stuffList) {
-    // printf('<div class="box%1$s">', ($stuffByID) ? ' more' : '');
-
     if ($stuffByID) {
         print('<div class="moreSpacer"></div>');
     }

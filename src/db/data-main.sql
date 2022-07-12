@@ -1276,7 +1276,9 @@ A few days after the initial discovery, scientists found out that the aluminum d
 - PDF file with the album information and lyrics.
 - High resoultion album cover.
 - Bonus album track- and promo art.
-- Art, documents, photos and videos to watch/read while/after listening to the album.','[{"slug":"//spartalien.bandcamp.com/merch/artefact-s9m1-monolog-limited-edition?action=buy","text":"SOLD OUT","type":"link"},{"slug":"file/merch-monolog/1.jpg","type":"image"},{"slug":"file/merch-monolog/2.jpg","type":"image"},{"slug":"file/merch-monolog/3.jpg","type":"image"},{"slug":"file/merch-monolog/4.jpg","type":"image"},{"slug":"file/merch-monolog/5.jpg","type":"image"},{"slug":"file/merch-monolog/6.jpg","type":"image"},{"slug":"file/merch-monolog/7.png","type":"image"}]'),
+- Art, documents, photos and videos to watch/read while/after listening to the album.
+
+Digital release is [route=music/id:13]there[/route].','[{"slug":"//spartalien.bandcamp.com/merch/artefact-s9m1-monolog-limited-edition?action=buy","text":"SOLD OUT","type":"link"},{"slug":"file/merch-monolog/1.jpg","type":"image"},{"slug":"file/merch-monolog/2.jpg","type":"image"},{"slug":"file/merch-monolog/3.jpg","type":"image"},{"slug":"file/merch-monolog/4.jpg","type":"image"},{"slug":"file/merch-monolog/5.jpg","type":"image"},{"slug":"file/merch-monolog/6.jpg","type":"image"},{"slug":"file/merch-monolog/7.png","type":"image"}]'),
  (16,'[merchandise] Memoria S9M2, 2358 Limited Edition','Type: Audio-CD + Digital Album
 Released: 2019-08-13
 
@@ -1290,7 +1292,9 @@ Contains:
 - Original character drawing (Pencil, 12x12cm).
 - CD Jewel Case with handwritten front and back Inlay.
 - A real four-leaved clover.
-- Love.','[{"slug":"//spartalien.bandcamp.com/merch/memoria-s9m2-2358-limited-edition?action=buy","text":"BUY","type":"link"},{"slug":"file/merch-2358/all.jpg","type":"image"},{"slug":"file/merch-2358/package1of7.jpg","type":"image"},{"slug":"file/merch-2358/package2of7.jpg","type":"image"},{"slug":"file/merch-2358/package3of7.jpg","type":"image"},{"slug":"file/merch-2358/package4of7.jpg","type":"image"},{"slug":"file/merch-2358/package5of7.jpg","type":"image"},{"slug":"file/merch-2358/package6of7.jpg","type":"image"},{"slug":"file/merch-2358/package7of7.jpg","type":"image"}]'),
+- Love.
+
+Digital release is [route=music/id:16]there[/route].','[{"slug":"//spartalien.bandcamp.com/merch/memoria-s9m2-2358-limited-edition?action=buy","text":"BUY","type":"link"},{"slug":"file/merch-2358/all.jpg","type":"image"},{"slug":"file/merch-2358/package1of7.jpg","type":"image"},{"slug":"file/merch-2358/package2of7.jpg","type":"image"},{"slug":"file/merch-2358/package3of7.jpg","type":"image"},{"slug":"file/merch-2358/package4of7.jpg","type":"image"},{"slug":"file/merch-2358/package5of7.jpg","type":"image"},{"slug":"file/merch-2358/package6of7.jpg","type":"image"},{"slug":"file/merch-2358/package7of7.jpg","type":"image"}]'),
  (17,'[merchandise] Logo T-Shirt, S9M3','Type: T-Shirt
 Released: 2020-07-06
 
@@ -1317,7 +1321,9 @@ Contains:
 - FLOATING HIGH album Audio-CD.
 - FLOATING HIGH album to stream and download on Bandcamp.
 - Includes bonus track: A Night With My Imaginary Friend.
-- CD jewel case, cover and disc printed, handwritten tracklist.','[{"slug":"//spartalien.bandcamp.com/merch/memory-s9m5-floating-high-limited-edition-cd-r?action=buy","text":"SOLD OUT","type":"link"},{"slug":"file/merch-floatinghigh-cd/1.jpg","type":"image"},{"slug":"file/merch-floatinghigh-cd/2.jpg","type":"image"},{"slug":"file/merch-floatinghigh-cd/8.jpg","type":"image"},{"slug":"file/merch-floatinghigh-cd/3.jpg","type":"image"},{"slug":"file/merch-floatinghigh-cd/4.jpg","type":"image"},{"slug":"file/merch-floatinghigh-cd/5.jpg","type":"image"},{"slug":"file/merch-floatinghigh-cd/6.jpg","type":"image"},{"slug":"file/merch-floatinghigh-cd/7.jpg","type":"image"}]'),
+- CD jewel case, cover and disc printed, handwritten tracklist.
+
+Digital release is [route=music/id:27]there[/route].','[{"slug":"//spartalien.bandcamp.com/merch/memory-s9m5-floating-high-limited-edition-cd-r?action=buy","text":"SOLD OUT","type":"link"},{"slug":"file/merch-floatinghigh-cd/1.jpg","type":"image"},{"slug":"file/merch-floatinghigh-cd/2.jpg","type":"image"},{"slug":"file/merch-floatinghigh-cd/8.jpg","type":"image"},{"slug":"file/merch-floatinghigh-cd/3.jpg","type":"image"},{"slug":"file/merch-floatinghigh-cd/4.jpg","type":"image"},{"slug":"file/merch-floatinghigh-cd/5.jpg","type":"image"},{"slug":"file/merch-floatinghigh-cd/6.jpg","type":"image"},{"slug":"file/merch-floatinghigh-cd/7.jpg","type":"image"}]'),
  (20,'[merchandise] Memory S9M6, FLOATING HIGH Limited Edition USB-Stick','Type: USB Flash Drive + Digital Album
 Released: 2021-01-01
 
@@ -1332,7 +1338,9 @@ Contains:
 - Cover art in different sizes including high resolution.
 - Photos to watch while listening to the album.
 
-[b]Warning[/b] for allergy sufferers: Wood was treated with a bit of coconut fat.','[{"slug":"//spartalien.bandcamp.com/merch/memory-s9m6-floating-high-limited-edition-usb-stick?action=buy","text":"BUY","type":"link"},{"slug":"file/merch-floatinghigh-usb/1.jpg","type":"image"},{"slug":"file/merch-floatinghigh-usb/2.jpg","type":"image"},{"slug":"file/merch-floatinghigh-usb/3.jpg","type":"image"}]'),
+[b]Warning[/b] for allergy sufferers: Wood was treated with a bit of coconut fat.
+
+Digital release is [route=music/id:27]there[/route].','[{"slug":"//spartalien.bandcamp.com/merch/memory-s9m6-floating-high-limited-edition-usb-stick?action=buy","text":"BUY","type":"link"},{"slug":"file/merch-floatinghigh-usb/1.jpg","type":"image"},{"slug":"file/merch-floatinghigh-usb/2.jpg","type":"image"},{"slug":"file/merch-floatinghigh-usb/3.jpg","type":"image"}]'),
  (21,'[samplepack] S9SP1 - 2358 Sample Pack','Type: Sample Pack
 Released: 2020-09-08
 License: non-exclusive + royalty free
@@ -1448,17 +1456,17 @@ Limited physical edition is [route=stuff/id:15]there[/route].','["Recorded, comp
 Limited physical edition is [route=stuff/id:16]there[/route].','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between August 2018 and March 2019.","Speech - Dr. Jordan B Peterson (jordanbpeterson.com), from the \"2017 Personality 04/05: Heroic and Shamanic Initiations\" lecture (youtube.com/watch?v=wLc_MC7NQek) (track: 2)","Kid calling sample - Klankbeeld (freesound.org/people/klankbeeld) (track: 6)","Didgeridoo - Esblendet (track: 8)","Background vocals - Esblendet (track: 12)"]','[]','[{"slug":"Yf_Q5zuvdOQ","type":"youtubeVideo"},{"slug":"Roib2OdFF2U","type":"youtubeVideo"}]',0,'1596302206','//spartalien.bandcamp.com','/album/2358','//open.spotify.com','/album/74TE0Q53NLubkkZyHm8bNJ'),
  (17,'[44]','Frozen Memories','[1]',1,1,'2019-03-29',NULL,'Do you remember, when everything was moving?
 
-Made for [url=//kaisekidigital.bandcamp.com/album/bento-box-vol-2-2]Bento Box Vol. 2[/url].','[]','[]','[{"slug":"DEko4fBXAyE","type":"youtubeVideo"}]',0,'286448283','//spartalien.bandcamp.com','/track/frozen-memories','//open.spotify.com','/track/6rSSRx7JdtdWdbNn7gS5Pl'),
+Made for [url=//kaisekidigital.bandcamp.com/album/bento-box-vol-2-2]Bento Box Vol. 2[/url].','[]','[]','[{"slug":"1720724288","trackCount":17,"type":"bandcampAlbum"},{"slug":"DEko4fBXAyE","type":"youtubeVideo"}]',0,'286448283','//spartalien.bandcamp.com','/track/frozen-memories','//open.spotify.com','/track/6rSSRx7JdtdWdbNn7gS5Pl'),
  (18,'[45,46,47,50,51,52,53,59,62,76]','BRAIN I/O','[1]',NULL,3,'2019-06-09','2020-07-13','Very personal and raw mind exploration.
 
 New output will be added over time to this album...
 2019-06-09: #1, 2019-06-13: #2, 2019-07-02: #3, 2019-07-12: #4, 2019-07-20: #5, 2019-08-15: #6, 2019-12-12: #7, 2019-12-28: #8, 2020-04-23: #9, 2020-07-13: #10','["Didgeridoo - Esblendet (track: 9)","Some Vocals - Esblendet (track: 9)"]','[]','[{"slug":"PLGOlCfPCyZ4HXSGHqzH54kjHcIc79tJC5","type":"youtubePlaylist"},{"slug":"FUErhO5OW1M","type":"youtubeVideo"}]',0,'2810895713','//spartalien.bandcamp.com','/album/brain-i-o','//open.spotify.com','/playlist/2LF6a2ASNVlKiutk1tADG9'),
  (19,'[48]','They Shot My Friend','[1]',2,1,'2019-07-07',NULL,'Dedicated to Sina. Rest in peace my friend. I will neither forget nor forgive what they did to you.
 
-Made for [url=//lessthanone.bandcamp.com/album/the-fencepost-reclamation-project-volume-5]the fencepost reclamation project volume 5[/url].','["Some foley samples from the Fencepost material originally released by Evelyn Records in 2002 provided by <1 (lessthanone.bandcamp.com)"]','[]','[]',0,'3891255445','//spartalien.bandcamp.com','/track/they-shot-my-friend','//open.spotify.com','/track/6gcULl01jPOsWwn2EwVWHM'),
+Made for [url=//lessthanone.bandcamp.com/album/the-fencepost-reclamation-project-volume-5]the fencepost reclamation project volume 5[/url].','["Some foley samples from the Fencepost material originally released by Evelyn Records in 2002 provided by <1 (lessthanone.bandcamp.com)"]','[]','[{"slug":"692713614","trackCount":141,"type":"bandcampAlbum"}]',0,'3891255445','//spartalien.bandcamp.com','/track/they-shot-my-friend','//open.spotify.com','/track/6gcULl01jPOsWwn2EwVWHM'),
  (20,'[49]','The Sad Lightness Of Being','[1]',2,1,'2019-07-07',NULL,'A story about being strong, but still vulnerable.
 
-Made for [url=//lessthanone.bandcamp.com/album/the-fencepost-reclamation-project-volume-5]the fencepost reclamation project volume 5[/url].','["Some foley samples from the Fencepost material originally released by Evelyn Records in 2002 provided by <1 (lessthanone.bandcamp.com)"]','[]','[]',0,'2901018221','//spartalien.bandcamp.com','/track/the-sad-lightness-of-being','//open.spotify.com','/track/2onyU5yxSx9FhxtBgGoykG'),
+Made for [url=//lessthanone.bandcamp.com/album/the-fencepost-reclamation-project-volume-5]the fencepost reclamation project volume 5[/url].','["Some foley samples from the Fencepost material originally released by Evelyn Records in 2002 provided by <1 (lessthanone.bandcamp.com)"]','[]','[{"slug":"692713614","trackCount":141,"type":"bandcampAlbum"}]',0,'2901018221','//spartalien.bandcamp.com','/track/the-sad-lightness-of-being','//open.spotify.com','/track/2onyU5yxSx9FhxtBgGoykG'),
  (21,'[54,55,56,57]','KEEN','[1]',NULL,2,'2019-12-13',NULL,'History is over and the future is just an idea.','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) in November 2019."]','[]','[{"slug":"OLAK5uy_kzqRHNeABeBfON3ukcbuzvUWAWYbw8TQ4","type":"youtubePlaylist"}]',0,'2895888302','//spartalien.bandcamp.com','/album/keen','//open.spotify.com','/album/7iQax3iHA9OilsTq9dM2nl'),
  (22,'[58]','SPARTALIEN & Esblendet - Rainbows & Unicorns','[1,2]',NULL,1,'2019-12-23',NULL,'For your mellow (xmas) days.','["Pan Drum - Esblendet","Guzheng - Esblendet","Cover Unicorn - Unknown Artist","Cover Rainbow Texture - kitti851"]','[]','[]',1,'2223839995','//spartalien.bandcamp.com','/track/rainbows-unicorns','//open.spotify.com','/track/3flUCe6A3SQWJ86hMP0xpU'),
  (23,'[60,61]','LET IT ALL GO, Volume 1','[1]',NULL,3,'2020-02-13',NULL,'Sit back and relax. Breathe slowly. Try to focus on one thought at a time. Let your emotions flow, but do not let them overwhelm you. Deconstruct your thoughts. Study each little part. Understand, or accept your confusion for now. You do not have energy. You are energy. Everything is here. In your mind. Peace, you can find. Repeat.
@@ -1485,7 +1493,7 @@ Digital and physical album purchases on Bandcamp include the bonus track "A Nigh
 Limited physical editions are [route=stuff/id:19]there[/route] and [route=stuff/id:20]there[/route].','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between September and December 2020."]','[]','[]',0,'1204865255','//spartalien.bandcamp.com','/album/floating-high','//open.spotify.com','/album/7rpbLuknkFeNBOscxZ5djs'),
  (28,'[92]','Uncertain','[1]',NULL,1,'2021-05-07',NULL,'A song about our future.','["Most nature samples - DJs for Climate Action and Greenpeace (djs4ca.com/climate-sample-pack)"]','["DJs for Climate Action and Greenpeace for taking action."]','[]',0,'2666379051','//spartalien.bandcamp.com','/track/uncertain','//open.spotify.com','/track/4A9uz51yEBcHImxUXnhABw'),
  (29,'[93,94,95,96]','THE BAND WITH THE DRUMMER WHO KNEW ONLY ONE RHYTHM','[1]',NULL,2,'2021-06-07',NULL,'A small band plays in a smoky open air club. Their instruments are slightly out of tune. But the crowd doesn''t care. Out of tune experiences is what they got used to.','[]','["Special thanks to the Might crew (might.digital) who started the creation process of these tracks."]','[]',0,'2317686308','//spartalien.bandcamp.com','/album/the-band-with-the-drummer-who-knew-only-one-rhythm','//open.spotify.com','/album/5GO8DT7O6oqhAz4Mwblslp'),
- (30,'[97,98,99]','Flux','[1,3]',NULL,1,'2021-08-13',NULL,'Everything. Nothing. Doesn''t matter. You just float. Somewhere. Sometime.','["Vocals - Stevie Lee Price (track: 1)","Lyrics - Stevie Lee Price (track: 1)","Ocean Photo in Coverart - Rachel Claire"]','[]','[{"slug":"mE4p5UV62sw","type":"youtubeVideo"},{"attr":[["target","_blank"]],"slug":"file/flux-lyrics.txt","text":"Lyrics.txt","type":"link"}]',0,'2224755430','//spartalien.bandcamp.com','/album/flux','//open.spotify.com','/album/7nngUQbyI6LtVUA1JEJmiL'),
+ (30,'[97,98,99]','Flux','[1,3]',NULL,1,'2021-08-13',NULL,'Everything. Nothing. Doesn''t matter. You just float. Somewhere. Sometime.','["Vocals - Stevie Lee Price (track: 1)","Lyrics - Stevie Lee Price (track: 1)","Ocean Photo in Coverart - Rachel Claire"]','[]','[{"attr":[["target","_blank"]],"slug":"file/flux-lyrics.txt","text":"Lyrics.txt","type":"link"},{"slug":"mE4p5UV62sw","type":"youtubeVideo"}]',0,'2224755430','//spartalien.bandcamp.com','/album/flux','//open.spotify.com','/album/7nngUQbyI6LtVUA1JEJmiL'),
  (31,'[100]','ediblewaves - Haphe (SPARTALIEN''s Wicca Remix)','[4,1]',NULL,4,'2021-08-31',NULL,'A spooky remix of the track [url=//ediblewaves.bandcamp.com/track/haphe]Haphe[/url] made upon request for [url=//ediblewaves.bandcamp.com]ediblewaves[/url].','["Original track \"Haphe\" by ediblewaves (ediblewaves.bandcamp.com)."]','[]','[]',1,'563831413','//spartalien.bandcamp.com','/track/haphe-spartaliens-wicca-remix','//open.spotify.com',NULL),
  (32,'[101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138]','UNTOLD STORIES','[1]',NULL,3,'2021-09-22',NULL,'Do you know that feeling, when you hear a sound, and you suddenly feel like you''re in another place? When a sound triggers a feeling, or a memory? And then, when the sound is gone, and the world turns silent, you miss the sound?
 
