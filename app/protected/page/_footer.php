@@ -10,10 +10,10 @@
                 foreach ($this->conf['elsewhere'] as $k => $v) {
                     printf('
                         <a href="%1$s">%2$s<span>%3$s</span>%4$s</a>',
-                        $v[2],
-                        substr($v[1], 0, 1),
-                        substr($v[1], 1, -1),
-                        substr($v[1], -1, 1),
+                        $v[1],
+                        substr($v[0], 0, 1),
+                        substr($v[0], 1, -1),
+                        substr($v[0], -1, 1),
                     );
                 }
                 ?>
