@@ -61,7 +61,6 @@ if ($visualByID) {
 
 // visual list
 if ($visualList) {
-    // printf('<div class="box%1$s">', ($visualByID) ? ' more' : '');
     if ($visualByID) {
         print('<div class="moreSpacer"></div>');
     }
@@ -72,7 +71,6 @@ if ($visualList) {
         print('<h3>MORE VISUALS ...</h3>');
     }
 
-    // print('<div class="grid visual-list">');
     print('<div class="grid simple">');
 
     foreach ($visualList as $v) {

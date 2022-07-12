@@ -124,8 +124,6 @@ if ($sessionByID) {
 
 // archive list
 if ($archiveList) {
-    // printf('<div class="box%1$s">', ($sessionByID) ? ' more' : '');
-
     if ($sessionByID) {
         print('<div class="moreSpacer"></div>');
     }

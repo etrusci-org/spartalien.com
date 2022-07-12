@@ -20,8 +20,6 @@ export const App: AppInterface = {
 
         if (routeRequest == '') {
             RandomQuoteTyper.init()
-            // RandomQuoteTyper.typingSpeed = 20
-
             if (RandomQuoteTyper.target) {
                 RandomQuoteTyper.target.addEventListener('click', (event) => {
                     RandomQuoteTyper.typeQuote()
@@ -36,7 +34,6 @@ export const App: AppInterface = {
                     noise.volume = 0
                     RandomQuoteTyper.typeQuote()
                 }, 2_500 /* audio length */)
-
             }
         }
     },

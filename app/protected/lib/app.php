@@ -348,23 +348,6 @@ class App extends WebApp {
     }
 
 
-    /*
-    static function getCollabArtist(array $audioArtist): array {
-        $artist = array();
-
-        if (count($audioArtist) > 1) {
-            foreach ($audioArtist as $v) {
-                if ($v['id'] != 1) {
-                    $artist[] = $v['artistName'];
-                }
-            }
-        }
-
-        return $artist;
-    }
-    */
-
-
     protected function getPlanet420(string $mode, array $kwargs=array()): array {
         $data = array();
 
