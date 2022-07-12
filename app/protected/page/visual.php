@@ -41,7 +41,7 @@ if ($visualByID) {
     printf('
         <div class="box">
             <h2>%1$s</h2>
-            <p>%2$s, %3$s</p>
+            <p class="meta">%2$s, %3$s</p>
             %4$s
         </div>
         <div class="box">
@@ -61,7 +61,12 @@ if ($visualByID) {
 
 // visual list
 if ($visualList) {
-    printf('<div class="box%1$s">', ($visualByID) ? ' more' : '');
+    // printf('<div class="box%1$s">', ($visualByID) ? ' more' : '');
+    if ($visualByID) {
+        print('<div class="moreSpacer"></div>');
+    }
+
+    print('<div class="box">');
 
     if ($visualByID) {
         print('<h3>MORE VISUALS ...</h3>');

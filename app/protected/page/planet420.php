@@ -23,7 +23,7 @@ if (!$artistsList && !$sessionByID) {
             <h2>PLANET 420</h2>
             <p>These are my musical chillout sessions where I just enjoy some music from my personal collection...</p>
             <p>All sessions are <a href="%2$s">recorded live</a> and are then shortly afterwards available here and on <a href="//www.mixcloud.com/lowtechman/playlists/planet-420">Mixcloud</a>.</p>
-            <p>Music styles you can expect: Downtempo, IDM, Ambient, Lounge, Chillout, Experimental, NuJazz, Beats, Hip-Hop, and some more.</p>
+            <p>Music styles you can expect: Downtempo, IDM, Ambient, Lounge, Chillout, Experimental, NuJazz, Beats, Hip-Hop, and <a href="%3$s">some more</a>.</p>
         </div>
         <div class="box">
             <p>New here? Then simply click the play button to listen to %1$s hours of selected eclectic music ...</p>
@@ -35,6 +35,7 @@ if (!$artistsList && !$sessionByID) {
         ',
         $hoursToListen,
         $this->routeURL('cam'),
+        $this->routeURL('planet420/artists'),
     );
 }
 
@@ -122,7 +123,13 @@ if ($sessionByID) {
 
 // archive list
 if ($archiveList) {
-    printf('<div class="box%1$s">', ($sessionByID) ? ' more' : '');
+    // printf('<div class="box%1$s">', ($sessionByID) ? ' more' : '');
+
+    if ($sessionByID) {
+        print('<div class="moreSpacer"></div>');
+    }
+
+    print('<div class="box">');
 
     if (!$sessionByID) {
         print('<p>... or browse through individual sessions and their tracklists below &darr;</p>');
