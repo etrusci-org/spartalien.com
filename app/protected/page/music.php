@@ -48,7 +48,7 @@ if ($releaseByID) {
     }
 
 
-    print('<div class="box">');
+    print('<div class="box release">');
 
 
     // cover image
@@ -65,23 +65,19 @@ if ($releaseByID) {
     );
 
 
-    // meta nfo
-    printf('
-        <p>
-            %1$s &middot;
-            %2$s &middot;
-            %3$s
-            Released %4$s
-            %5$s
-            %6$s
-        </p>',
-        $rls['releaseType'],
-        sprintf(ngettext('%s track', '%s tracks', $rls['trackCount']), $rls['trackCount']),
-        (count($rls['artist']) > 1) ? 'Collab &middot; ' : '',
-        $rls['releasedOn'],
-        ($rls['updatedOn']) ? sprintf('&middot; Updated %s', $rls['updatedOn']) : '',
-        ($rls['labelName']) ? sprintf('&middot; Label %s', sprintf('<a href="%1$s">%2$s</a>', $rls['labelURL'], $rls['labelName'])) : '',
-    );
+    print('<div class="meta">');
+        // meta nfo
+        $meta = array();
+        $meta[] = $rls['releaseType'];
+        $meta[] = sprintf(ngettext('%s track', '%s tracks', $rls['trackCount']), $rls['trackCount']);
+        $meta[] = (count($rls['artist']) > 1) ? 'Collaboration' : null;
+        $meta[] = sprintf('Released %1$s', $rls['releasedOn']);
+        $meta[] = ($rls['updatedOn']) ? sprintf('Updated %s', $rls['updatedOn']) : null;
+        $meta[] = ($rls['labelName']) ? sprintf('Label %s', sprintf('<a href="%1$s">%2$s</a>', $rls['labelURL'], $rls['labelName'])) : null;
+        $meta = array_filter($meta);
+        $meta = implode(', ', $meta);
+        print($meta);
+    print('</div>');
 
 
     // description
@@ -122,15 +118,6 @@ if ($releaseByID) {
     // print('<h3 class="text-align-center">TRACKLIST</h3>');
     print('
         <table>
-            <!--<thead>
-                <tr>
-                    <th>#</th>
-                    <th>artist</th>
-                    <th>track</th>
-                    <th class="text-align-right">runtime</th>
-                    <th class="text-align-center">&nearr;</th>
-                </tr>
-            </thead>-->
             <tbody>
         '
     );
@@ -141,7 +128,7 @@ if ($releaseByID) {
 
         printf('
             <tr>
-                <td>%1$s</td>
+                <td>%1$s.</td>
                 <td>%2$s</td>
                 <td>%3$s</td>
                 <td class="text-align-right">%4$s</td>
@@ -225,7 +212,12 @@ if ($releaseByID) {
 
 // release list
 if ($releaseList) {
-    printf('<div class="box%1$s">', ($releaseByID) ? ' more' : '');
+    // printf('<div class="box%1$s">', ($releaseByID) ? ' more' : '');
+    if ($releaseByID) {
+        print('<div class="moreSpacer"></div>');
+    }
+
+    print('<div class="box">');
 
     if ($releaseByID) {
         print('<h3>MORE MUSIC ...</h3>');
@@ -263,4 +255,5 @@ if ($releaseList) {
 print('
     <div class="box">
         You can also find my music on most music streaming platforms. Just search for "SPARTALIEN".
+        If you decide to buy something, do so on Bandcamp, since only there I can include bonus material and stuff for digital releases.
     </div>');

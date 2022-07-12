@@ -73,7 +73,13 @@ if ($stuffByID) {
 
 // stuff list
 if ($stuffList) {
-    printf('<div class="box%1$s">', ($stuffByID) ? ' more' : '');
+    // printf('<div class="box%1$s">', ($stuffByID) ? ' more' : '');
+
+    if ($stuffByID) {
+        print('<div class="moreSpacer"></div>');
+    }
+
+    print('<div class="box">');
 
     if ($stuffByID) {
         print('<h3>MORE STUFF ...</h3>');
