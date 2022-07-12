@@ -5,7 +5,7 @@
 
 
 <div class="box">
-    <h3>ME ELSEWHERE</h3>
+    <h2>ME ELSEWHERE</h2>
     <p>
         <?php
         foreach ($this->conf['elsewhere'] as $v) {
@@ -22,7 +22,7 @@
 
 
 <div class="box">
-    <h3>PREFERRED WAYS TO GET IN TOUCH</h3>
+    <h2>PREFERRED WAYS TO GET IN TOUCH</h2>
     <p>
         <a class="btn" data-scur="tFWasR3b6kmbm9GQzBXYyRXYslWZu5yYv12N0UDZzIDOlRmM3cDN2MWY4gDMzMGNiFWM1cTMkR2NzEDNxgzM2UjZ2cjZlRTMjdTYklzN2UTO4EjZjF2Y2EDO">Email<noscript> (JavaScript required)</noscript></a>
         <span class="btn" data-scur="==ARpN3YvJHZ6AyUQFkUUFETJVkTjUzM3gzN0UDZzIDOlRmM3cDN2MWY4gDMzMGNiFWM1cTMkR2NzEDNxgzM2UjZ2cjZlRTMjdTYklzN2UTO4EjZjF2Y2EDO"><noscript>(JavaScript required)</noscript></span>
