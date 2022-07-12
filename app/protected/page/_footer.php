@@ -43,7 +43,7 @@
 </body>
 </html>
 <!--
-    request: <?php print($this->route['request'] | 'index'); ?>
+    request: <?php print(($this->route['request']) ? $this->route['request'] : 'index'); ?>
 
     output baked on: <?php print(date('Y-m-d H:i:s T')); ?>
 
