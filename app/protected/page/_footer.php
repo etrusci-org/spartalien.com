@@ -9,11 +9,12 @@
                 <?php
                 foreach ($this->conf['elsewhere'] as $k => $v) {
                     printf('
-                        <a href="%1$s">%2$s<span>%3$s</span>%4$s</a>',
+                        <a href="%1$s" title="%5$s">%2$s<span>%3$s</span>%4$s</a>',
                         $v[1],
                         substr($v[0], 0, 1),
                         substr($v[0], 1, -1),
                         substr($v[0], -1, 1),
+                        $v[0],
                     );
                 }
                 ?>
