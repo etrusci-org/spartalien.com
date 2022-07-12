@@ -4,37 +4,8 @@ declare(strict_types=1);
 
 class App extends WebApp {
     public function validateRequest(): void {
-        if (!VALID_REQUESTS) {
-            return;
-        }
-
-        // prepare request
-        $request = trim($this->route['request'], ' /');
-
-        // prepare/expand valid requests
-        $validRequests = array();
-
-        foreach (VALID_REQUESTS as $requestPattern) {
-            // range :[n-n]
-            if (preg_match('/(.+:)\[(\d+)-(\d+)\]/i', $requestPattern, $patternMatch)) {
-                foreach (range($patternMatch[2], $patternMatch[3]) as $v) {
-                    $validRequests[] = sprintf('%1$s%2$s', $patternMatch[1], $v);
-                }
-            }
-            // or :[a|b]
-            else if (preg_match('/(.+:)\[([\w|]+)\]/i', $requestPattern, $patternMatch)) {
-                foreach (explode('|', $patternMatch[2]) as $v) {
-                    $validRequests[] = sprintf('%1$s%2$s', $patternMatch[1], $v);
-                }
-            }
-            // default
-            else {
-                $validRequests[] = $requestPattern;
-            }
-        }
-
         // set node to 404 if invalid request
-        if (!in_array($request, $validRequests)) {
+        if (!in_array(trim($this->route['request'], ' /'), VALID_REQUESTS)) {
             $this->route['node'] = '404';
         }
     }
