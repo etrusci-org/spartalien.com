@@ -42,4 +42,10 @@
 
 </body>
 </html>
-<!-- <?php print(jenc($this->route)); ?> -->
+<!--
+    request: <?php print($this->route['request'] | 'index'); ?>
+
+    output baked on: <?php print(date('Y-m-d H:i:s T')); ?>
+
+    { made with 🧠 by arT2 (etrusci.org) }
+-->

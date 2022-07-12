@@ -47,7 +47,7 @@ if ($artistsList) {
     printf('
         <div class="box">
             <h2>ARTISTS PLAYED SO FAR</h2>
-            <p>Without these %1$s artists, there would be no Planet 420. Happy crate digging!</p>
+            <p>Without these %1$s artists, there would be no <a href="%3$s">Planet 420</a>. Happy crate digging!</p>
         </div>
         <div class="box">
             %2$s
@@ -56,7 +56,8 @@ if ($artistsList) {
         count($artistsList),
         implode(' / ', array_map(function(array $v): string {
             return sprintf('<a href="//duckduckgo.com/?q=%1$s+artist">%2$s</a>', urlencode($v['artistName']), $v['artistName']);
-        }, $artistsList))
+        }, $artistsList)),
+        $this->routeURL('planet420'),
     );
 }
 

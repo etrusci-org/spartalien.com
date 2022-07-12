@@ -3,7 +3,7 @@
 printf('
     <div class="box">
         <h2>LOST?</h2>
-        <p>The path you are looking for is probably hidden in this list of %1$s pages.</p>
+        <p>The path you are looking for is probably hidden in this list of %1$s routes.</p>
     </div>',
     count(VALID_REQUESTS),
 );
