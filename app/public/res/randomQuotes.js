@@ -11,6 +11,7 @@ export const randomQuotes = [
     { author: `Bill Hicks`, text: `Life is only a dream and we are the imagination of ourselves.` },
     { author: `Bill Hicks`, text: `Listen, the next revolution is gonna be a revolution of ideas.` },
     { author: `Bob Marley`, text: `None but ourselves can free our minds.` },
+    { author: `Brian Tracy`, text: `It doesn't matter where you are coming from. All that matters is where you are going.` },
     { author: `Captain Disillusion`, text: `Love with your heart; use your head for everything else.` },
     { author: `Charles Bukowski`, text: `Poetry is what happens when nothing else can.` },
     { author: `Chuck Palahniuk`, text: `Losing all hope was freedom.` },
