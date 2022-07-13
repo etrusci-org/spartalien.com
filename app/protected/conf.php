@@ -100,8 +100,8 @@ $conf = array_merge($conf, array(
 
 
 if (APP_MODE_PRODUCTION) {
-    error_reporting(E_ALL); // TODO: turn off after closed beta has ended
-    $conf['baseURL'] = 'https://spartalien.com/v8beta/';
+    error_reporting(0);
+    $conf['baseURL'] = 'https://spartalien.com/';
     $conf['cachingEnabled'] = true;
     $conf['cacheTTL'] = 31_536_000_000;
 }
