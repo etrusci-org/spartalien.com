@@ -67,16 +67,14 @@ if ($releaseByID) {
 
     print('<div class="meta">');
         // meta nfo
-        $meta = array();
-        $meta[] = $rls['releaseType'];
-        $meta[] = sprintf(ngettext('%s track', '%s tracks', $rls['trackCount']), $rls['trackCount']);
-        $meta[] = (count($rls['artist']) > 1) ? 'Collaboration' : null;
-        $meta[] = sprintf('Released %1$s', $rls['releasedOn']);
-        $meta[] = ($rls['updatedOn']) ? sprintf('Updated %s', $rls['updatedOn']) : null;
-        $meta[] = ($rls['labelName']) ? sprintf('Label %s', sprintf('<a href="%1$s">%2$s</a>', $rls['labelURL'], $rls['labelName'])) : null;
-        $meta = array_filter($meta);
-        $meta = implode(', ', $meta);
-        print($meta);
+        print(implode(', ', array_filter(array(
+            $rls['releaseType'],
+            sprintf(ngettext('%s track', '%s tracks', $rls['trackCount']), $rls['trackCount']),
+            (count($rls['artist']) > 1) ? 'Collaboration' : null,
+            sprintf('Released %1$s', $rls['releasedOn']),
+            ($rls['updatedOn']) ? sprintf('Updated %s', $rls['updatedOn']) : null,
+            ($rls['labelName']) ? sprintf('Label %s', sprintf('<a href="%1$s">%2$s</a>', $rls['labelURL'], $rls['labelName'])) : null,
+        ))));
     print('</div>');
 
 
@@ -250,6 +248,18 @@ if ($releaseList) {
 
 print('
     <div class="box">
-        You can also find my music on most music streaming platforms. Just search for "SPARTALIEN".
-        If you decide to buy something, do so on Bandcamp, since only there I can include bonus material and stuff for digital releases.
+        <p>
+            You can also find my music on
+            <a href="https://spartalien.bandcamp.com">Bandcamp</a>,
+            <a href="https://open.spotify.com/artist/553FKlcVkf1YFU6dl129Ef">Spotify</a>,
+            <a href="https://music.amazon.com/artists/B07FYWLY7Z">Amazon</a>,
+            <a href="https://music.apple.com/artist/spartalien/1455263028">Apple</a>,
+            <a href="https://www.deezer.com/artist/50523232">Deezer</a>,
+            <a href="https://www.youtube.com/channel/UCXwYExlRqK_oeUocuKkhRUw">YouTube</a>
+            and many other music platforms. Just search for "SPARTALIEN".
+        </p>
+        <p>
+            If you decide to buy some of my music (thank you!), consider doing so on <a href="https://spartalien.bandcamp.com">Bandcamp</a>,
+            since only there I can include bonus material and stuff for digital releases.
+        </p>
     </div>');

@@ -2,7 +2,7 @@
     <h2>Error 404</h2>
     <p>
         Your request
-        <code>[<?php print($this->route['request']); ?>]</code>
+        "<code><?php print($this->route['request']); ?></code>"
         is invalid.
     </p>
     <p>

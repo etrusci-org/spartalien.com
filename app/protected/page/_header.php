@@ -7,20 +7,23 @@
 
     <base href="<?php print($this->conf['baseURL']); ?>">
 
-    <meta name="application-name" content="SPARTALIEN.COM">
-    <meta name="author" content="SPARTALIEN">
-    <meta name="generator" content="Brain">
-    <meta name="description" content="SPARTALIEN's Website">
-    <meta name="keywords" content="SPARTALIEN, multimedia, digital, art, music, audio, video, soundtrack, visual, code, experimental, original">
+    <meta name="application-name" content="<?php print($this->conf['metaApplicationName']); ?>">
+    <meta name="author" content="<?php print($this->conf['metaAuthor']); ?>">
+    <meta name="generator" content="<?php print($this->conf['metaGenerator']); ?>">
+    <meta name="description" content="<?php print($this->conf['metaDescription']); ?>">
+    <meta name="keywords" content="<?php print($this->conf['metaKeywords']); ?>">
 
-    <meta property="og:title" content="SPARTALIEN.COM">
+    <meta property="og:title" content="<?php print($this->conf['ogTitle']); ?>">
     <meta property="og:url" content="<?php print($this->conf['baseURL']); ?>">
-    <meta property="og:description" content="SPARTALIEN's Website">
-    <meta property="og:type" content="website">
+    <meta property="og:description" content="<?php print($this->conf['ogDescription']); ?>">
+    <meta property="og:type" content="<?php print($this->conf['ogType']); ?>">
     <meta property="og:image" content="<?php print($this->conf['baseURL']); ?>res/og.jpg?v=<?php print(VERSION['og']); ?>">
 
     <link rel="icon" href="favicon.ico?v=<?php print(VERSION['favicon']); ?>" type="image/x-icon">
 
+    <!--[if lt IE 11]>
+        <link rel="preload" href="res/vendor/share-tech-v17-latin-regular.woff" as="font" type="font/woff" crossorigin>
+    <![endif]-->
     <link rel="preload" href="res/vendor/share-tech-v17-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
 
     <link rel="stylesheet" href="res/style.min.css?v=<?php print(VERSION['css']); ?>">

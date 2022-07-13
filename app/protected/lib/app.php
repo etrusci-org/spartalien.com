@@ -233,13 +233,6 @@ class App extends WebApp {
             in_array('freedl', $this->route['flag']),
         );
 
-        // dj mixes link
-        $filter[] = array(
-            'DJ-Mixes&nearr;',
-            $this->routeURL(sprintf('%s/uploads/?order=latest', $this->conf['elsewhere']['mixcloud'][1])),
-            null,
-        );
-
         // years
         $q = '
         SELECT DISTINCT
@@ -363,7 +356,11 @@ class App extends WebApp {
             case 'archiveList':
                 $q = '
                 SELECT
-                    p420session.sessionNum, p420session.sessionDate, p420session.sessionDur, p420session.mixcloudHost, p420session.mixcloudSlug,
+                    p420session.sessionNum,
+                    p420session.sessionDate,
+                    p420session.sessionDur,
+                    p420session.mixcloudHost,
+                    p420session.mixcloudSlug,
                     COUNT(p420trackHistory.sessionNum) AS trackCount
                 FROM
                     p420session
@@ -382,7 +379,11 @@ class App extends WebApp {
                 if ($sessionNum) {
                     $q = '
                     SELECT
-                        p420session.sessionNum, p420session.sessionDate, p420session.sessionDur, p420session.mixcloudHost, p420session.mixcloudSlug,
+                        p420session.sessionNum,
+                        p420session.sessionDate,
+                        p420session.sessionDur,
+                        p420session.mixcloudHost,
+                        p420session.mixcloudSlug,
                         COUNT(p420trackHistory.sessionNum) AS trackCount
                     FROM
                         p420session
@@ -406,7 +407,9 @@ class App extends WebApp {
                 if ($sessionNum) {
                     $q = '
                     SELECT
-                        artistName, trackName, timeStart
+                        artistName,
+                        trackName,
+                        timeStart
                     FROM
                         p420trackHistory
                     WHERE
@@ -427,7 +430,8 @@ class App extends WebApp {
                 if (in_array('artists', $this->route['flag'])) {
                     $q = '
                     SELECT
-                        DISTINCT LOWER(artistName) AS artistNameLC, artistName
+                        DISTINCT LOWER(artistName) AS artistNameLC,
+                        artistName
                     FROM
                         p420trackHistory
                     ORDER BY
@@ -452,7 +456,11 @@ class App extends WebApp {
             case 'list':
                 $q = '
                 SELECT
-                    id, createdOn, visualName, tags, media
+                    id,
+                    createdOn,
+                    visualName,
+                    tags,
+                    media
                 FROM
                     visual
                 ORDER BY
@@ -483,7 +491,12 @@ class App extends WebApp {
                 if ($id) {
                     $q = '
                     SELECT
-                        id, createdOn, visualName, description, tags, media
+                        id,
+                        createdOn,
+                        visualName,
+                        description,
+                        tags,
+                        media
                     FROM
                         visual
                     WHERE
@@ -582,7 +595,10 @@ class App extends WebApp {
             case 'list':
                 $q = '
                 SELECT
-                    id, linkText, LOWER(linkText) AS linkTextLC, url
+                    id,
+                    linkText,
+                    LOWER(linkText) AS linkTextLC,
+                    url
                 FROM
                     exit
                 ORDER BY

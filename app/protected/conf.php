@@ -28,6 +28,7 @@ $conf = array(
     'timezone' => 'UTC',
     'locale' => 'en-US',
     'encoding' => 'UTF-8',
+
     'nav' => array(
         array('music', 'MUSIC'),
         array('visual', 'VISUAL'),
@@ -37,6 +38,7 @@ $conf = array(
         array('news', 'NEWS'),
         array('about', 'ABOUT'),
     ),
+
     'validateRequests' => true,
     'validRequestPatterns' => array( # after updating these patterns, run app/protected/gen-validrequests.php once to generate app/protected/cache/valid-requests.php which is required in app/protected/init.php
         '', // index
@@ -60,6 +62,7 @@ $conf = array(
         'sitemap',
         'exit',
     ),
+
     'elsewhere' => array(
         'newsletter' => ['Newsletter', '//eepurl.com/dqYlHr'],
         'bandcamp' => ['Bandcamp', '//spartalien.bandcamp.com'],
@@ -74,7 +77,26 @@ $conf = array(
 );
 
 
-$conf['cachePrimingURL'] = $conf['baseURL']; // for app/protected/bin/2-gen-cache.php
+// for app/protected/bin/2-gen-cache.php:
+$conf['cachePrimingURL'] = $conf['baseURL'];
+
+// for meta tags:
+$conf = array_merge($conf, array(
+    'metaApplicationName' => $conf['siteTitle'],
+    'metaAuthor' => 'SPARTALIEN',
+    'metaGenerator' => 'Brain',
+    'metaDescription' => 'SPARTALIEN\'s Website',
+    'metaKeywords' => 'SPARTALIEN, arT2, lowtechman, multimedia, digital, art, music, audio, video, soundtrack, visual, code, experimental, original',
+));
+
+// for opengraph tags:
+$conf = array_merge($conf, array(
+    'ogTitle' => $conf['siteTitle'],
+    'ogDescription' => $conf['metaDescription'],
+    'ogType' => 'website',
+));
+
+
 
 
 if (APP_MODE_PRODUCTION) {
