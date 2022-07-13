@@ -2,10 +2,6 @@
 
 ## Must Be Done Before First Deploy
 
-- finalize color
-- finalize layout
-- proof read texts 'cause my english skills vary daily
-
 ---
 
 ## Fix It In Post ;-)

@@ -47,13 +47,15 @@ ssh spartalien
 ### Upload Protected App Files
 
 ```text
-app/protected/cache/       ->  /home/protected/v8.app/cache/
-app/protected/db/          ->  /home/protected/v8.app/db/
-app/protected/lib/         ->  /home/protected/v8.app/lib/
-app/protected/page/        ->  /home/protected/v8.app/page/
-app/protected/conf.php     ->  /home/protected/v8.app/conf.php
-app/protected/init.php     ->  /home/protected/v8.app/init.php
-app/protected/version.php  ->  /home/protected/v8.app/version.php
+app/protected/bin/main-start.sh ->  /home/protected/v8.app/bin/main-start.sh
+app/protected/bin/main-end.sh   ->  /home/protected/v8.app/bin/main-end.sh
+app/protected/cache/            ->  /home/protected/v8.app/cache/
+app/protected/db/               ->  /home/protected/v8.app/db/
+app/protected/lib/              ->  /home/protected/v8.app/lib/
+app/protected/page/             ->  /home/protected/v8.app/page/
+app/protected/conf.php          ->  /home/protected/v8.app/conf.php
+app/protected/init.php          ->  /home/protected/v8.app/init.php
+app/protected/version.php       ->  /home/protected/v8.app/version.php
 ```
 
 ### Set Permissions For Protected App Files
@@ -72,7 +74,7 @@ chmod 664 /home/protected/v8.app/db/*
 app/public/res/         ->  /home/public/res/
 app/public/.htaccess    ->  /home/public/.htaccess
 app/public/favicon.ico  ->  /home/public/favicon.ico
-app/public/index.php    ->  /home/public/index.php
+app/public/index.php    ->  /home/public/index.php    (ommit this and upload it at the end of the install procedure if index-maint.php is already in use)
 app/public/robots.txt   ->  /home/public/robots.txt
 ```
 
