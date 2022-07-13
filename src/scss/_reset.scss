@@ -46,7 +46,8 @@ textarea {
 iframe,
 img,
 audio,
-video {
+video,
+textarea {
     max-width: 100%;
     // height: auto; // this would set height to 0 in Edge, TODO: investigate
     box-sizing: border-box;

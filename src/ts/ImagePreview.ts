@@ -1,4 +1,4 @@
-// My first attempt at making a modal image preview. Still WIP.
+// My first attempt at making a modal image preview. Still a bit WIP.
 // Ditched Lightbox2 because it depends on a 3rd party lib.
 
 // What I miss:

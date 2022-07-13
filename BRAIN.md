@@ -2,7 +2,6 @@
 
 ## Must Be Done Before First Deploy
 
-- code review / janitor
 - finalize color
 - finalize layout
 - proof read texts 'cause my english skills vary daily
@@ -20,3 +19,4 @@
 - implement some kind of automation to include mixcloud mixes on the page
 - maybe redo credits/thanks
 - add new related media to audioRelease
+- tracks catalog

@@ -21,8 +21,8 @@
             </p>
             <p>&copy; 2016-<?php print(date('Y')); ?> SPARTALIEN.COM</p>
             <p>
-                <a href="<?php print($this->routeURL('sitemap')); ?>">Lost?</a>
-                <a href="<?php print($this->routeURL('exit')); ?>">[&rarr;]</a>
+                [<a href="<?php print($this->routeURL('sitemap')); ?>">Lost?</a>]
+                [<a href="<?php print($this->routeURL('exit')); ?>">&rarr;</a>]
             </p>
         </footer>
     <?php
@@ -43,9 +43,9 @@
 </body>
 </html>
 <!--
-    request: <?php print(($this->route['request']) ? $this->route['request'] : 'index'); ?>
+    / <?php print(($this->route['request']) ? $this->route['request'] : 'index'); ?>
 
-    output baked on: <?php print(date('Y-m-d H:i:s T')); ?>
+    > output baked on: <?php print(date('Y-m-d H:i:s T')); ?>
 
-    { made with 🧠 by arT2 (etrusci.org) }
+    : made with 🧠 by arT2 (etrusci.org)
 -->

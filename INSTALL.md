@@ -33,6 +33,13 @@ Open `app/public/.htaccess` to comment-out the rewrite rule for the files redire
 
 Open `app/public/index.php` to change the require path to `/home/protected/v8.app/init.php`.
 
+### Turn On Maintenance Mode On The Production Server
+
+```sh
+ssh spartalien
+/home/protected/v8.app/bin/maint-start.sh
+```
+
 ---
 
 ## Upload
@@ -62,18 +69,18 @@ chmod 664 /home/protected/v8.app/db/*
 ### Upload Public App Files
 
 ```text
-app/public/res/         ->  /home/public/v8beta/res/
-app/public/.htaccess    ->  /home/public/v8beta/.htaccess
-app/public/favicon.ico  ->  /home/public/v8beta/favicon.ico
-app/public/index.php    ->  /home/public/v8beta/index.php
-app/public/robots.txt   ->  /home/public/v8beta/robots.txt
+app/public/res/         ->  /home/public/res/
+app/public/.htaccess    ->  /home/public/.htaccess
+app/public/favicon.ico  ->  /home/public/favicon.ico
+app/public/index.php    ->  /home/public/index.php
+app/public/robots.txt   ->  /home/public/robots.txt
 ```
 
 ### Set Permissions for Public App Files
 
 ```sh
 ssh spartalien
-chgrp web /home/public/v8beta/index.php
+chgrp web /home/public/index.php
 ```
 
 ### Upload Files [Repo](https://github.com/etrusci-org/spartalien.com-files)
@@ -81,7 +88,14 @@ chgrp web /home/public/v8beta/index.php
 **Do not** include any repo files.
 
 ```text
-spartalien.com-files/  ->  /home/public/v8beta/file/
+spartalien.com-files/  ->  /home/public/file/
+```
+
+### Turn Off Maintenance Mode On The Production Server
+
+```sh
+ssh spartalien
+/home/protected/v8.app/bin/maint-end.sh
 ```
 
 ---
@@ -108,4 +122,4 @@ rm app/protected/cache/*.html
 
 ---
 
-Yay, go test it at <https://spartalien.com/v8beta>.
+Yay, go test it at <https://spartalien.com>.
