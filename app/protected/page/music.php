@@ -128,7 +128,7 @@ if ($releaseByID) {
                 <td>%2$s</td>
                 <td>%3$s</td>
                 <td class="text-align-right">%4$s</td>
-                <td class="text-align-center">%5$s %6$s</td>
+                <td class="text-align-center nobr">%5$s %6$s</td>
             </tr>
             ',
             $k+1,
