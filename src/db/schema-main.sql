@@ -105,7 +105,7 @@ CREATE TABLE IF NOT EXISTS "audioRelease" (
 	"spotifyHost"	TEXT DEFAULT '//open.spotify.com',
 	"spotifySlug"	TEXT,
 	PRIMARY KEY("id" AUTOINCREMENT),
-	FOREIGN KEY("audioReleaseTypeID") REFERENCES "audioReleaseType"("id"),
-	FOREIGN KEY("labelID") REFERENCES "label"("id")
+	FOREIGN KEY("labelID") REFERENCES "label"("id"),
+	FOREIGN KEY("audioReleaseTypeID") REFERENCES "audioReleaseType"("id")
 );
 COMMIT;
