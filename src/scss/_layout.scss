@@ -395,6 +395,10 @@ footer {
 
 .imagepreview {
     cursor: zoom-in;
+
+    img {
+        max-height: 600px;
+    }
 }
 
 
