@@ -1,5 +1,13 @@
 // _query
 
+@media screen and (min-height: 400px /* at least logo height + some more for content */) {
+    header {
+        position: sticky;
+        top: 0;
+    }
+}
+
+
 @media screen and (min-width: 560px) {
     body,
     textarea,

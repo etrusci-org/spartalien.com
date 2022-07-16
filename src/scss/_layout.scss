@@ -129,8 +129,7 @@ a {
 
 
 header {
-    position: sticky;
-    top: 0;
+    position: static; // switches to sticky in _query if enough min-height is given
     padding: .5rem;
     margin: 0 0 2rem 0;
     text-align: center;
