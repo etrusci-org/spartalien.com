@@ -17,13 +17,7 @@ export const App = {
                     RandomQuoteTyper.typeQuote();
                     event.preventDefault();
                 });
-                let noise = new Audio('res/brownian2500.mp3');
-                noise.play();
-                noise.volume = 1;
-                noise.autoplay = true;
-                noise.preload = 'auto';
                 setTimeout(() => {
-                    noise.volume = 0;
                     RandomQuoteTyper.typeQuote();
                 }, 2000);
             }
