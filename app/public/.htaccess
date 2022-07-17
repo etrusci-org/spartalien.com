@@ -6,7 +6,7 @@ Options -MultiViews
 RewriteEngine On
 
 # COMMENT OUT THIS FILES REDIRECT ON THE PRODUCTION SERVER:
-RewriteRule ^file(/.*)?$ /spartalien.com-files$1 [R=302,L]
+RewriteRule ^file(/.*)?$ /spartalien.com-files/file$1 [R=302,L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
