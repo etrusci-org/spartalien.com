@@ -1,11 +1,5 @@
 # BRAIN
 
-## Must Be Done Before First Deploy
-
----
-
-## Fix It In Post ;-)
-
 - texting
 - bio
 - doc
@@ -16,3 +10,10 @@
 - maybe redo credits/thanks
 - add new related media to audioRelease
 - tracks catalog
+- maybe add spartalien-files repo as submodule
+
+---
+
+- [LICENSE](LICENSE.md)
+- [INSTALL](INSTALL.md)
+- [UPDATE](UPDATE.md)

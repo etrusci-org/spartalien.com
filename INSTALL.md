@@ -1,39 +1,39 @@
 # INSTALL
 
-How to install the website on the production server.
+How to initially install the website on the production server.
 
 ---
 
 ## Preparations
 
-### Edit Configuration
+### 1. Edit Configuration
 
 Open `app/protected/conf.php` to make final edits and set `APP_MODE_PRODUCTION` to `true`. Make sure the production mode overwrites at the end of the file fit the remote server.
 
-### Delete Cached Files
+### 2. Delete Cached Files
 
 ```sh
 rm app/protected/cache/*.html
 rm app/protected/cache/*.php
 ```
 
-### Generate Valid Requests File
+### 3. Generate Valid Requests File
 
 Run `php app/protected/bin/1-gen-validrequests.php`. This will generate and write valid routes to `app/protected/cache/validrequests.php`.
 
-### Prime The Cache
+### 4. Prime The Cache (Optional)
 
 Run `php app/protected/bin/2-gen-cache.php`. This will read `app/protected/cache/validrequests.php` and generate cache files from those routes in `app/protected/cache/`.
 
-### Disable Files Redirect RewriteRule
+### 5. Disable Files Redirect RewriteRule
 
 Open `app/public/.htaccess` to comment-out the rewrite rule for the files redirect.
 
-### Edit App Entry Path
+### 6. Edit App Entry Path
 
 Open `app/public/index.php` to change the require path to `/home/protected/v8.app/init.php`.
 
-### Turn On Maintenance Mode On The Production Server
+### 7. Turn On Maintenance Mode On The Production Server
 
 ```sh
 ssh spartalien
@@ -44,7 +44,7 @@ ssh spartalien
 
 ## Upload
 
-### Upload Protected App Files
+### 1. Upload Protected App Files
 
 ```text
 app/protected/bin/main-start.sh ->  /home/protected/v8.app/bin/main-start.sh
@@ -58,7 +58,7 @@ app/protected/init.php          ->  /home/protected/v8.app/init.php
 app/protected/version.php       ->  /home/protected/v8.app/version.php
 ```
 
-### Set Permissions For Protected App Files
+### 2. Set Permissions For Protected App Files
 
 ```sh
 ssh spartalien
@@ -68,7 +68,7 @@ chmod 664 /home/protected/v8.app/cache/*
 chmod 664 /home/protected/v8.app/db/*
 ```
 
-### Upload Public App Files
+### 3. Upload Public App Files
 
 ```text
 app/public/res/         ->  /home/public/res/
@@ -78,14 +78,14 @@ app/public/index.php    ->  /home/public/index.php    (ommit this and upload it 
 app/public/robots.txt   ->  /home/public/robots.txt
 ```
 
-### Set Permissions for Public App Files
+### 4. Set Permissions for Public App Files
 
 ```sh
 ssh spartalien
 chgrp web /home/public/index.php
 ```
 
-### Upload Files [Repo](https://github.com/etrusci-org/spartalien.com-files)
+### 5. Upload Files [Repo](https://github.com/etrusci-org/spartalien.com-files)
 
 **Do not** include any repo files.
 
@@ -93,7 +93,7 @@ chgrp web /home/public/index.php
 spartalien.com-files/  ->  /home/public/file/
 ```
 
-### Turn Off Maintenance Mode On The Production Server
+### 6. Turn Off Maintenance Mode On The Production Server
 
 ```sh
 ssh spartalien
@@ -104,19 +104,19 @@ ssh spartalien
 
 ## Undo Local Changes To Continue Development
 
-### Disable Production Mode
+### 1. Disable Production Mode
 
 Open `app/protected/conf.php` to set `APP_MODE_PRODUCTION` back to `false`.
 
-### Enable Files Redirect RewriteRule
+### 2. Enable Files Redirect RewriteRule
 
 Open `app/public/.htaccess` to comment-out the rewrite rule for the files redirect.
 
-### Edit App Entry Path Again
+### 3. Edit App Entry Path
 
 Open `app/public/index.php` to change the require path back to `../protected/init.php`.
 
-### Optionally Delete Locally Cached Route Files
+### 4. Delete Locally Cached Route Files (Optional)
 
 ```sh
 rm app/protected/cache/*.html
@@ -124,4 +124,6 @@ rm app/protected/cache/*.html
 
 ---
 
-Yay, go test it at <https://spartalien.com>.
+- [LICENSE](LICENSE.md)
+- [UPDATE](UPDATE.md)
+- [BRAIN](BRAIN.md)
