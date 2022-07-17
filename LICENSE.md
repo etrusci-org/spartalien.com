@@ -1,10 +1,10 @@
 # LICENSE
 
-Everything, unless noted otherwise below: **Copyright 2016-2022 SPARTALIEN.COM**
+Everything, unless noted otherwise: **Copyright 2016-2022 SPARTALIEN.COM**
 
-&cross; You are **not allowed** to host or otherwise distribute this website and/or its contents elsewhere.
+✗ You are **not allowed** to host or otherwise distribute the contents of this repository elsewhere.
 
-&checkmark; You are allowed to re-use parts of the source code I've wrote. E.g. if you find a function you that works for your project.
+✓ You are allowed to re-use parts of the source code I've wrote. E.g. if you find a function you that works for your project.
 
 ---
 
@@ -33,6 +33,8 @@ Everything, unless noted otherwise below: **Copyright 2016-2022 SPARTALIEN.COM**
 
 ---
 
+- [README](README.md)
+- [LICENSE](LICENSE.md) ←
 - [INSTALL](INSTALL.md)
 - [UPDATE](UPDATE.md)
 - [BRAIN](BRAIN.md)

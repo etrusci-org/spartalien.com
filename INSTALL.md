@@ -87,10 +87,8 @@ chgrp web /home/public/index.php
 
 ### 5. Upload Files [Repo](https://github.com/etrusci-org/spartalien.com-files)
 
-**Do not** include any repo files.
-
 ```text
-spartalien.com-files/  ->  /home/public/file/
+spartalien.com-files/file/  ->  /home/public/file/
 ```
 
 ### 6. Turn Off Maintenance Mode On The Production Server
@@ -124,6 +122,8 @@ rm app/protected/cache/*.html
 
 ---
 
+- [README](README.md)
 - [LICENSE](LICENSE.md)
+- [INSTALL](INSTALL.md) ←
 - [UPDATE](UPDATE.md)
 - [BRAIN](BRAIN.md)

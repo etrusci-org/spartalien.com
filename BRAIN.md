@@ -1,5 +1,7 @@
 # BRAIN
 
+Todos and ideas in no particular order.
+
 - texting
 - bio
 - doc
@@ -14,6 +16,8 @@
 
 ---
 
+- [README](README.md)
 - [LICENSE](LICENSE.md)
 - [INSTALL](INSTALL.md)
 - [UPDATE](UPDATE.md)
+- [BRAIN](BRAIN.md) ←
