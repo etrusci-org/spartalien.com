@@ -258,13 +258,15 @@ footer {
 
 .elsewhere {
     a {
+        margin-left: .25rem;
+        margin-right: .25rem;
         span {
             display: none;
         }
     }
 
-    a:hover,
-    a:focus {
+    &:hover,
+    &:focus {
         span {
             display: inline;
         }

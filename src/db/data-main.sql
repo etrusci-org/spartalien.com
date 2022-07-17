@@ -1438,7 +1438,7 @@ INSERT INTO "exit" ("id","linkText","url") VALUES (1,'Conservation Drones','//co
  (4,'Music Declares Emergency','//musicdeclares.net'),
  (5,'Pestalozzi Children''s Foundation','//pestalozzi.ch'),
  (6,'Schweizerische Tiermeldezentrale','//stmz.ch'),
- (7,'War Child','//warchild.org.uk'),
+ (7,'Internet Archive','//archive.org'),
  (8,'<1','//lessthanone.bandcamp.com'),
  (9,'Angel Ruediger','//open.spotify.com/artist/3Xp2zhqhMeT9j9bNIeyZWU'),
  (10,'Cyber Shaman','//cyber-shaman.bandcamp.com'),
