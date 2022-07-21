@@ -26,7 +26,7 @@ if ($stuffByID) {
             return sprintf('
                 <a href="%2$s" class="imagepreview"><span class="lazycode">%1$s</span></a>
                 ',
-                jenc($v),
+                jsonEncode($v),
                 $v['slug'],
                 sprintf('stuff-%1$s', $stuff['id']),
             );
@@ -35,20 +35,20 @@ if ($stuffByID) {
             return sprintf('
                 <div class="videobox"><span class="lazycode">%1$s</span></div>
                 ',
-                jenc($v)
+                jsonEncode($v)
             );
         }
         else if ($v['type'] == 'audio') {
             return sprintf(
                 '%2$s<br><span class="lazycode">%1$s</span>',
-                jenc($v),
+                jsonEncode($v),
                 basename($v['slug']),
             );
         }
         else {
             return sprintf(
                 '<span class="lazycode">%1$s</span>',
-                jenc($v)
+                jsonEncode($v)
             );
         }
     }, $stuff['media']));

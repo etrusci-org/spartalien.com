@@ -187,13 +187,13 @@ if ($releaseByID) {
         print(
             implode(' ', array_map(function(array $v): string {
                 if ($v['type'] == 'image') {
-                    return sprintf('<a href="%1$s" class="imagepreview"><span class="lazycode">%2$s</span></a>', $v['slug'], jenc($v));
+                    return sprintf('<a href="%1$s" class="imagepreview"><span class="lazycode">%2$s</span></a>', $v['slug'], jsonEncode($v));
                 }
                 else if ($v['type'] == 'video' || $v['type'] == 'youtubeVideo' || $v['type'] == 'youtubePlaylist') {
-                    return sprintf('<div class="videobox"><span class="lazycode">%1$s</span></div>', jenc($v));
+                    return sprintf('<div class="videobox"><span class="lazycode">%1$s</span></div>', jsonEncode($v));
                 }
                 else {
-                    return sprintf('<span class="lazycode">%1$s</span>', jenc($v));
+                    return sprintf('<span class="lazycode">%1$s</span>', jsonEncode($v));
                 }
             }, $rls['relatedMedia']))
         );

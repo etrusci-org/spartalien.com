@@ -2,8 +2,8 @@
 require_once __DIR__.'/lib/vendor/WebRouter.php';
 require_once __DIR__.'/lib/vendor/WebApp.php';
 require_once __DIR__.'/lib/vendor/DatabaseSQLite3.php';
-require_once __DIR__.'/lib/vendor/jdec.php';
-require_once __DIR__.'/lib/vendor/jenc.php';
+require_once __DIR__.'/lib/vendor/jsonDecode.php';
+require_once __DIR__.'/lib/vendor/jsonEncode.php';
 
 require_once __DIR__.'/conf.php';
 require_once __DIR__.'/version.php';
