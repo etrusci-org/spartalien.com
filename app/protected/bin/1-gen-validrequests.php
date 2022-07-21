@@ -1,6 +1,6 @@
 <?php
 require __DIR__.'/../conf.php';
-require_once __DIR__.'/../lib/vendor/jenc.php';
+require_once __DIR__.'/../lib/vendor/jsonEncode.php';
 
 $validRequests = array();
 

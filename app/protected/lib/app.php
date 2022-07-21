@@ -39,7 +39,7 @@ class App extends WebApp {
                 $data = $this->DB->query($q);
 
                 foreach ($data as $k => $v) {
-                    $data[$k]['items'] = jdec($v['items']);
+                    $data[$k]['items'] = jsonDecode($v['items']);
                 }
                 break;
 
@@ -61,7 +61,7 @@ class App extends WebApp {
                     $data = $this->DB->querySingle($q, $v);
 
                     if ($data) {
-                        $data['items'] = jdec($data['items']);
+                        $data['items'] = jsonDecode($data['items']);
                     }
                 }
                 break;
@@ -125,8 +125,8 @@ class App extends WebApp {
                 $data = $this->DB->query($q, $v);
 
                 foreach ($data as $k => $v) {
-                    $data[$k]['artist'] = $this->getArtistByID(jdec($v['artistIDs']));
-                    $data[$k]['audioIDs'] = jdec($v['audioIDs']);
+                    $data[$k]['artist'] = $this->getArtistByID(jsonDecode($v['artistIDs']));
+                    $data[$k]['audioIDs'] = jsonDecode($v['audioIDs']);
                     $data[$k]['trackCount'] = count($data[$k]['audioIDs']);
                 }
                 break;
@@ -175,14 +175,14 @@ class App extends WebApp {
 
                     if ($dump) {
                         $data  = $dump;
-                        $data['artist'] = $this->getArtistByID(jdec($data['artistIDs']));
-                        $data['audioIDs'] = jdec($data['audioIDs']);
+                        $data['artist'] = $this->getArtistByID(jsonDecode($data['artistIDs']));
+                        $data['audioIDs'] = jsonDecode($data['audioIDs']);
                         $data['tracklist'] = $this->getAudioByID($data['audioIDs']);
                         $data['trackCount'] = count($data['tracklist']);
                         $data['description'] = $this->parseLazyInput($data['description']);
-                        $data['credits'] = jdec($data['credits']);
-                        $data['thanks'] = jdec($data['thanks']);
-                        $data['relatedMedia'] = jdec($data['relatedMedia']);
+                        $data['credits'] = jsonDecode($data['credits']);
+                        $data['thanks'] = jsonDecode($data['thanks']);
+                        $data['relatedMedia'] = jsonDecode($data['relatedMedia']);
                     }
                 }
                 break;
@@ -275,7 +275,7 @@ class App extends WebApp {
             );
             $dump = $this->DB->querySingle($q, $v);
             if ($dump) {
-                $dump['artist'] = $this->getArtistByID(jdec($dump['artistIDs']));
+                $dump['artist'] = $this->getArtistByID(jsonDecode($dump['artistIDs']));
                 $dump['audioRuntimeString'] = $this->secondsToString($dump['audioRuntime']);
                 $dump['bandcampURL'] = ($dump['bandcampSlug']) ? sprintf('%s%s', $dump['bandcampHost'], $dump['bandcampSlug']) : null;
                 $dump['spotifyURL'] = ($dump['spotifySlug']) ? sprintf('%s%s', $dump['spotifyHost'], $dump['spotifySlug']) : null;
@@ -291,7 +291,7 @@ class App extends WebApp {
                 $dump = $this->DB->querySingle($q, $v);
 
                 if ($dump) {
-                    $dump['artist'] = $this->getArtistByID(jdec($dump['artistIDs']));
+                    $dump['artist'] = $this->getArtistByID(jsonDecode($dump['artistIDs']));
                     $dump['audioRuntimeString'] = $this->secondsToString($dump['audioRuntime']);
                     $dump['bandcampURL'] = ($dump['bandcampSlug']) ? sprintf('%s%s', $dump['bandcampHost'], $dump['bandcampSlug']) : null;
                     $dump['spotifyURL'] = ($dump['spotifySlug']) ? sprintf('%s%s', $dump['spotifyHost'], $dump['spotifySlug']) : null;
@@ -471,8 +471,8 @@ class App extends WebApp {
 
                 if ($r) {
                     foreach ($r as $k => $v) {
-                        $r[$k]['tags'] = jdec($v['tags']);
-                        $r[$k]['media'] = jdec($v['media']);
+                        $r[$k]['tags'] = jsonDecode($v['tags']);
+                        $r[$k]['media'] = jsonDecode($v['media']);
                     }
 
                     $data = $r;
@@ -509,8 +509,8 @@ class App extends WebApp {
                     $dump = $this->DB->querySingle($q, $v);
 
                     if ($dump) {
-                        $dump['tags'] = jdec($dump['tags']);
-                        $dump['media'] = jdec($dump['media']);
+                        $dump['tags'] = jsonDecode($dump['tags']);
+                        $dump['media'] = jsonDecode($dump['media']);
                         $data = $dump;
                     }
                 }
@@ -542,7 +542,7 @@ class App extends WebApp {
 
                 if ($dump) {
                     foreach ($dump as $k => $v) {
-                        $dump[$k]['media'] = jdec($v['media']);
+                        $dump[$k]['media'] = jsonDecode($v['media']);
                     }
 
                     $data = $dump;
@@ -577,7 +577,7 @@ class App extends WebApp {
                     $dump = $this->DB->querySingle($q, $v);
 
                     if ($dump) {
-                        $dump['media'] = jdec($dump['media']);
+                        $dump['media'] = jsonDecode($dump['media']);
                         $data = $dump;
                     }
                 }

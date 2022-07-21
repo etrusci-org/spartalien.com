@@ -25,7 +25,7 @@ if ($visualByID) {
         if ($v['type'] == 'image') {
             return sprintf(
                 '<a href="%2$s" class="imagepreview"><span class="lazycode">%1$s</span></a>',
-                jenc($v),
+                jsonEncode($v),
                 $v['slug'],
                 sprintf('visual-%1$s', $vis['id']),
             );
@@ -33,7 +33,7 @@ if ($visualByID) {
         else {
             return sprintf(
                 '<span class="lazycode">%1$s</span>',
-                jenc($v)
+                jsonEncode($v)
             );
         }
     }, $vis['media']));

@@ -10,7 +10,7 @@
     </p>
 
     <p>
-        <textarea class="code" readonly>route: <?php print(jenc($this->route)); ?></textarea>
+        <textarea class="code" readonly>route: <?php print(jsonEncode($this->route)); ?></textarea>
     </p>
 
     <div class="videobox">

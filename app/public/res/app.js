@@ -1,5 +1,5 @@
 import { LazyMedia } from './vendor/LazyMedia.js';
-import { Scur } from './vendor/scur.js';
+import { Scur } from './vendor/Scur.js';
 import { addTargetToExtLinks } from './vendor/addTargetToExtLinks.js';
 import { ImagePreview } from './ImagePreview.js';
 import { RandomQuoteTyper } from './RandomQuoteTyper.js';
