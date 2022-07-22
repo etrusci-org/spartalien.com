@@ -1,13 +1,4 @@
 <?php
-/*
-On content change:
-- adjust validRequestPatterns and run app/protected/gen-validrequests.php (run build task to do so)
-
-Before deploy:
-- set APP_PRODUCTION_MODE to true
-- comment-out the files redirect in app/public/.htaccess
----------------------------------------------- */
-
 define('APP_MODE_PRODUCTION', false);
 
 error_reporting(E_ALL);
@@ -40,7 +31,7 @@ $conf = array(
     ),
 
     'validateRequests' => true,
-    'validRequestPatterns' => array( # after updating these patterns, run app/protected/gen-validrequests.php once to generate app/protected/cache/valid-requests.php which is required in app/protected/init.php
+    'validRequestPatterns' => array(
         '', // index
         'music',
         'music/id:[1-33]',

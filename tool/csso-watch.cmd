@@ -5,6 +5,6 @@ csso ^
     --stat ^
     --comments none ^
     --input-source-map auto ^
-    --source-map none ^
+    --source-map file ^
     --input ./tmp/style.css ^
     --output ./app/public/res/style.min.css

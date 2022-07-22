@@ -1,4 +1,4 @@
-export const randomQuotes: RandomQuoteArrayType = [
+export const quotes = [
     { author: `Albert Einstein`, text: `The most beautiful experience we can have is the mysterious. It is the fundamental emotion that stands at the cradle of true art and true science.` },
     { author: `Aldous Huxley`, text: `After silence, that which comes nearest to expressing the inexpressible is music.` },
     { author: `Alex Gaskarth`, text: `Life's greatest tragedy is not that it will someday end, but that most only live to follow directions and sometimes we end up totally lost.` },
@@ -44,7 +44,6 @@ export const randomQuotes: RandomQuoteArrayType = [
     { author: `Pablo Picasso`, text: `Every child is an artist. The problem is how to remain an artist once he grows up.` },
     { author: `Pablo Picasso`, text: `Everything you can imagine is real.` },
     { author: `Pablo Picasso`, text: `Only put off until tomorrow what you are willing to die having left undone.` },
-    { author: `Plato`, text: `Every heart sings a song, incomplete, until another heart whispers back. Those who wish to sing always find a song. At the touch of a lover, everyone becomes a poet.` },
     { author: `Prince`, text: `Hard to say what's right when all I wanna do is wrong.` },
     { author: `Rick Riordan`, text: `You might as well ask an artist to explain his art, or ask a poet to explain his poem. It defeats the purpose. The meaning is only clear thorough the search.` },
     { author: `Robert Frost`, text: `Forgive, O Lord, my little jokes on Thee. And I'll forgive Thy great big one on me.` },
@@ -58,4 +57,4 @@ export const randomQuotes: RandomQuoteArrayType = [
     { author: `Tupac Shakur`, text: `People tend to choke that which they do not understand.` },
     { author: `Tupac Shakur`, text: `Reality is wrong. Dreams are for the real.` },
     { author: `Victor Hugo`, text: `Music expresses that which cannot be put into words and that which cannot remain silent.` },
-]
+];

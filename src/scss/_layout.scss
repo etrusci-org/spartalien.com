@@ -403,16 +403,19 @@ footer {
 }
 
 
-
-
-.randomQuoteTyper {
+.introSplash {
     font-family: $font-serif;
     font-size: 2rem;
     margin-top: 3rem;
+}
 
+
+.randomQuoteTyper {
     &.doneTyping {
         cursor: help;
     }
+
+    // .primeMirror {}
 }
 
 

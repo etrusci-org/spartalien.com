@@ -38,8 +38,6 @@
 
 
     <script src="res/main.js?v=<?php print(VERSION['js']); ?>" type="module"></script>
-
-
 </body>
 </html>
 <!--

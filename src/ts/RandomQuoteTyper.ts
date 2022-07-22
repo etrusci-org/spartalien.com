@@ -1,4 +1,4 @@
-import { randomQuotes } from './randomQuotes.js'
+import { quotes } from './quotes.js'
 
 
 export const RandomQuoteTyper: RandomQuoteTyperInterface = {
@@ -19,7 +19,7 @@ export const RandomQuoteTyper: RandomQuoteTyperInterface = {
         if (RandomQuoteTyper.typerID) return
 
         if (this.queue.length == 0) {
-            this.queue = [...this._fys(randomQuotes)]
+            this.queue = [...this._fys(quotes)]
         }
 
         this.quote = this.queue.pop() || null

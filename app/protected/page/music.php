@@ -199,8 +199,6 @@ if ($releaseByID) {
         );
         print('</div>'); // /.box
     }
-
-    // print('<pre>'); print_r($rls); print('</pre>');
 }
 
 

@@ -7,7 +7,8 @@ body {
 
 
 textarea,
-code {
+code,
+.code {
     color: $color-80;
 }
 
@@ -149,9 +150,16 @@ img {
 }
 
 
-.randomQuoteTyper {
+
+.introSplash {
     color: $color-27;
 }
+
+
+
+// .randomQuoteTyper {
+//     .primeMirror {}
+// }
 
 
 

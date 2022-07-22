@@ -119,11 +119,3 @@ Open `app/public/index.php` to change the require path back to `../protected/ini
 ```sh
 rm app/protected/cache/*.html
 ```
-
----
-
-- [README](README.md)
-- [LICENSE](LICENSE.md)
-- [INSTALL](INSTALL.md) ←
-- [UPDATE](UPDATE.md)
-- [BRAIN](BRAIN.md)
