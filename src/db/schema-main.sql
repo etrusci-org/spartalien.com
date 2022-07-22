@@ -46,8 +46,8 @@ CREATE TABLE IF NOT EXISTS "p420trackHistory" (
 	"timeStart"	INTEGER,
 	"artistName"	TEXT,
 	"trackName"	TEXT,
-	FOREIGN KEY("sessionNum") REFERENCES "p420session"("sessionNum"),
-	PRIMARY KEY("id" AUTOINCREMENT)
+	PRIMARY KEY("id" AUTOINCREMENT),
+	FOREIGN KEY("sessionNum") REFERENCES "p420session"("sessionNum")
 );
 DROP TABLE IF EXISTS "visual";
 CREATE TABLE IF NOT EXISTS "visual" (
@@ -104,8 +104,8 @@ CREATE TABLE IF NOT EXISTS "audioRelease" (
 	"bandcampSlug"	TEXT,
 	"spotifyHost"	TEXT DEFAULT '//open.spotify.com',
 	"spotifySlug"	TEXT,
-	FOREIGN KEY("audioReleaseTypeID") REFERENCES "audioReleaseType"("id"),
+	PRIMARY KEY("id" AUTOINCREMENT),
 	FOREIGN KEY("labelID") REFERENCES "label"("id"),
-	PRIMARY KEY("id" AUTOINCREMENT)
+	FOREIGN KEY("audioReleaseTypeID") REFERENCES "audioReleaseType"("id")
 );
 COMMIT;
