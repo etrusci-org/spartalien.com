@@ -22,8 +22,7 @@
             </p>
             <p>&copy; 2016-<?php print(date('Y')); ?> SPARTALIEN.COM</p>
             <p>
-                [<a href="<?php print($this->routeURL('sitemap')); ?>">Lost?</a>]
-                [<a href="<?php print($this->routeURL('exit')); ?>">&rarr;</a>]
+                <a href="<?php print($this->routeURL('exit')); ?>">[&rarr;]</a>
             </p>
         </footer>
     <?php

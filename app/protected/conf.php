@@ -51,7 +51,6 @@ $conf = array(
         'news/id:[1-53]',
         'news.atom',
         'about',
-        'sitemap',
         'exit',
     ),
 

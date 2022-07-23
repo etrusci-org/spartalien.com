@@ -3,6 +3,7 @@ ServerSignature Off
 Options -Indexes
 Options -MultiViews
 
+AddType application/xml      .xml
 AddType application/atom+xml .atom
 
 RewriteEngine On

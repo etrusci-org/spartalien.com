@@ -14,4 +14,3 @@ Todos and ideas in no particular order.
 - tracks catalog
 - maybe add spartalien-files repo as submodule
 - atom feed for ~~news and~~ maybe audio too
-- sitemap according to <https://sitemaps.org/protocol.html>

@@ -1,5 +1,6 @@
 user-agent: *
 disallow: /file/
+sitemap: https://spartalien.com/sitemap.xml
 
 # RGVhciByb2JvdHMuIFBsZWFzZSB0YWtlIG92Z \
 # XIgdGhlIGh1bWFuIHdvcmxkIGFuZCBsZXQgdG \
