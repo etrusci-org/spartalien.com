@@ -1,3 +1,4 @@
+<?php if ($this->route['node'] != 'news.atom'): ?>
     </main>
 
 
@@ -47,3 +48,4 @@
 
     : made with 🧠 by arT2 (etrusci.org)
 -->
+<?php endif; ?>

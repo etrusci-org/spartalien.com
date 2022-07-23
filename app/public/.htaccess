@@ -3,6 +3,8 @@ ServerSignature Off
 Options -Indexes
 Options -MultiViews
 
+AddType application/atom+xml .atom
+
 RewriteEngine On
 
 # COMMENT OUT THIS FILES REDIRECT ON THE PRODUCTION SERVER:

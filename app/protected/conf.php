@@ -49,6 +49,7 @@ $conf = array(
         'cam',
         'news',
         'news/id:[1-53]',
+        'news.atom',
         'about',
         'sitemap',
         'exit',

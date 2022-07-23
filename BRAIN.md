@@ -13,5 +13,5 @@ Todos and ideas in no particular order.
 - add new related media to audioRelease
 - tracks catalog
 - maybe add spartalien-files repo as submodule
-- rss for news and maybe audio too
+- atom feed for ~~news and~~ maybe audio too
 - sitemap according to <https://sitemaps.org/protocol.html>

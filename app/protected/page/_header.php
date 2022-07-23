@@ -1,3 +1,4 @@
+<?php if ($this->route['node'] != 'news.atom'): ?>
 <!DOCTYPE html>
 <html lang="<?php print($this->conf['locale']); ?>">
 <head>
@@ -18,6 +19,8 @@
     <meta property="og:description" content="<?php print($this->conf['ogDescription']); ?>">
     <meta property="og:type" content="<?php print($this->conf['ogType']); ?>">
     <meta property="og:image" content="<?php print($this->conf['baseURL']); ?>res/og.jpg?v=<?php print(VERSION['og']); ?>">
+
+    <link rel="alternate" href="news.atom" type="application/atom+xml" title="News Atom Feed">
 
     <link rel="icon" href="favicon.ico?v=<?php print(VERSION['favicon']); ?>" type="image/x-icon">
 
@@ -48,3 +51,4 @@
 
 
     <main>
+<?php endif; ?>
