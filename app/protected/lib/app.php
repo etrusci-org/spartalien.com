@@ -588,7 +588,7 @@ class App extends WebApp {
     }
 
 
-    protected function getExit(string $mode, array $kwargs=array()): array {
+    protected function getExit(string $mode): array {
         $data = array();
 
         switch ($mode) {
@@ -611,7 +611,6 @@ class App extends WebApp {
                     $data = $dump;
                 }
                 break;
-
         }
 
         return $data;
