@@ -11,10 +11,12 @@ if (!$newsByID) {
         <div class="box">
             <h2>NOTABLE UPDATES AND CHANGES</h2>
             <a href="%1$s" class="btn">Newsletter</a>
-            <a href="%2$s" class="btn">Twitter</a>
-            <a href="%3$s" class="btn">Instagram</a>
+            <a href="%2$s" class="btn">Atom Feed</a>
+            <a href="%3$s" class="btn">Twitter</a>
+            <a href="%4$s" class="btn">Instagram</a>
         </div>',
         $this->conf['elsewhere']['newsletter'][1],
+        $this->routeURL('news.atom'),
         $this->conf['elsewhere']['twitter'][1],
         $this->conf['elsewhere']['instagram'][1],
     );

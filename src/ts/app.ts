@@ -9,13 +9,9 @@ export const App: AppInterface = {
     main(routeRequest = '') {
         console.log(`SPARTALIEN.COM${(routeRequest) ? ` :: ${routeRequest}` : ``}`)
 
-        // LazyMedia.debug = true
         LazyMedia.embed()
-
         Scur.deobElements()
-
         addTargetToExtLinks()
-
         ImagePreview.init()
 
         if (routeRequest == '') {
@@ -28,7 +24,7 @@ export const App: AppInterface = {
 
                 setTimeout(() => {
                     RandomQuoteTyper.typeQuote()
-                }, 2_000)
+                }, 3_100)
             }
         }
     },

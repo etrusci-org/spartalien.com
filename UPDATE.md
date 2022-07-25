@@ -28,11 +28,3 @@ rm -v /home/protected/v8.app/cache/*.html
 ssh spartalien
 /home/protected/v8.app/bin/maint-end.sh
 ```
-
----
-
-- [README](README.md)
-- [LICENSE](LICENSE.md)
-- [INSTALL](INSTALL.md)
-- [UPDATE](UPDATE.md) ←
-- [BRAIN](BRAIN.md)

@@ -13,11 +13,5 @@ Todos and ideas in no particular order.
 - add new related media to audioRelease
 - tracks catalog
 - maybe add spartalien-files repo as submodule
-
----
-
-- [README](README.md)
-- [LICENSE](LICENSE.md)
-- [INSTALL](INSTALL.md)
-- [UPDATE](UPDATE.md)
-- [BRAIN](BRAIN.md) ←
+- atom feed for ~~news and~~ maybe audio too
+- maybe simple site wide search

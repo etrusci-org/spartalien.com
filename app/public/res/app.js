@@ -19,7 +19,7 @@ export const App = {
                 });
                 setTimeout(() => {
                     RandomQuoteTyper.typeQuote();
-                }, 2000);
+                }, 3100);
             }
         }
     },

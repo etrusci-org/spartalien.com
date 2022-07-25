@@ -1,3 +1,4 @@
+<?php if ($this->route['node'] != 'news.atom'): ?>
     </main>
 
 
@@ -21,8 +22,7 @@
             </p>
             <p>&copy; 2016-<?php print(date('Y')); ?> SPARTALIEN.COM</p>
             <p>
-                [<a href="<?php print($this->routeURL('sitemap')); ?>">Lost?</a>]
-                [<a href="<?php print($this->routeURL('exit')); ?>">&rarr;</a>]
+                <a href="<?php print($this->routeURL('exit')); ?>">[&rarr;]</a>
             </p>
         </footer>
     <?php
@@ -38,8 +38,6 @@
 
 
     <script src="res/main.js?v=<?php print(VERSION['js']); ?>" type="module"></script>
-
-
 </body>
 </html>
 <!--
@@ -49,3 +47,4 @@
 
     : made with 🧠 by arT2 (etrusci.org)
 -->
+<?php endif; ?>

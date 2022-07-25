@@ -1,4 +1,4 @@
-export const randomQuotes: RandomQuoteArrayType = [
+export const quotes: QuoteArrayType = [
     { author: `Albert Einstein`, text: `The most beautiful experience we can have is the mysterious. It is the fundamental emotion that stands at the cradle of true art and true science.` },
     { author: `Aldous Huxley`, text: `After silence, that which comes nearest to expressing the inexpressible is music.` },
     { author: `Alex Gaskarth`, text: `Life's greatest tragedy is not that it will someday end, but that most only live to follow directions and sometimes we end up totally lost.` },
@@ -44,11 +44,11 @@ export const randomQuotes: RandomQuoteArrayType = [
     { author: `Pablo Picasso`, text: `Every child is an artist. The problem is how to remain an artist once he grows up.` },
     { author: `Pablo Picasso`, text: `Everything you can imagine is real.` },
     { author: `Pablo Picasso`, text: `Only put off until tomorrow what you are willing to die having left undone.` },
-    { author: `Plato`, text: `Every heart sings a song, incomplete, until another heart whispers back. Those who wish to sing always find a song. At the touch of a lover, everyone becomes a poet.` },
     { author: `Prince`, text: `Hard to say what's right when all I wanna do is wrong.` },
     { author: `Rick Riordan`, text: `You might as well ask an artist to explain his art, or ask a poet to explain his poem. It defeats the purpose. The meaning is only clear thorough the search.` },
     { author: `Robert Frost`, text: `Forgive, O Lord, my little jokes on Thee. And I'll forgive Thy great big one on me.` },
     { author: `Sarah Williams`, text: `Though my soul may set in darkness, it will rise in perfect light; I have loved the stars too fondly to be fearful of the night.` },
+    { author: `SPARTALIEN`, text: `Remember, that times and situations change, but your heart doesn't have to necessarily.` },
     { author: `Stella Adler`, text: `Life beats down and crushes the soul and art reminds you that you have one.` },
     { author: `Timothy Leary`, text: `...as a guide and protection. Trust your divinity, trust your brain.` },
     { author: `Timothy Leary`, text: `The goals of an intelligent life, according to Socrates, is to pursue the philosophic quest - to increase one's knowledge of self and world.` },

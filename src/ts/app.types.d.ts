@@ -2,12 +2,21 @@ interface AppInterface {
     main(routeRequest: string): void
 }
 
+interface ImagePreviewInterface {
+    targetSelector: string
+    nodeSelector: string
+    target: HTMLDivElement | null
+    nodes: NodeListOf<HTMLAnchorElement> | null
+    init(): void
+    close(event: Event): void
+}
+
 interface RandomQuoteTyperInterface {
     typingSpeed: number
     targetSelector: string
     target: HTMLDivElement | HTMLParagraphElement | HTMLSpanElement | HTMLAnchorElement | null
-    queue: RandomQuoteItemType[]
-    quote: RandomQuoteItemType
+    queue: QuoteItemType[]
+    quote: QuoteItemType
     typerID: number | null
     init(): void
     typeQuote(): void
@@ -15,6 +24,6 @@ interface RandomQuoteTyperInterface {
     _fys(arr: any[]): any[] // https://en.wikipedia.org/wiki/Fisher-Yates_algorithm
 }
 
-type RandomQuoteItemType = { author: string, text: string } | null
+type QuoteItemType = { author: string, text: string } | null
 
-type RandomQuoteArrayType = RandomQuoteItemType[]
+type QuoteArrayType = QuoteItemType[]
