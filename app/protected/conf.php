@@ -42,7 +42,7 @@ $conf = array(
         'visual',
         'visual/id:[1-41]',
         'stuff',
-        'stuff/id:[1-22]',
+        'stuff/id:[1-23]',
         'planet420',
         'planet420/session/num:[1-40]',
         'planet420/artists',
