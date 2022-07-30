@@ -24,7 +24,6 @@ export const App: AppInterface = {
             }
 
             setTimeout(() => {
-                RandomQuoteTyper.typingSpeed = 20
                 RandomQuoteTyper.init()
                 if (RandomQuoteTyper.target) {
                     RandomQuoteTyper.typeQuote()

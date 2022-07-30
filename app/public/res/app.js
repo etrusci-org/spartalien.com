@@ -19,7 +19,6 @@ export const App = {
                 pm.innerHTML = `${num}<span class="code">|</span>${numx}`;
             }
             setTimeout(() => {
-                RandomQuoteTyper.typingSpeed = 20;
                 RandomQuoteTyper.init();
                 if (RandomQuoteTyper.target) {
                     RandomQuoteTyper.typeQuote();
