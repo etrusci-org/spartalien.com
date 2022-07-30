@@ -23,17 +23,17 @@ export const App: AppInterface = {
                 pm.innerHTML = `${num}<span class="code">|</span>${numx}`
             }
 
-            RandomQuoteTyper.init()
-            if (RandomQuoteTyper.target) {
-                RandomQuoteTyper.target.addEventListener('click', (event) => {
+            setTimeout(() => {
+                RandomQuoteTyper.typingSpeed = 20
+                RandomQuoteTyper.init()
+                if (RandomQuoteTyper.target) {
                     RandomQuoteTyper.typeQuote()
-                    event.preventDefault()
-                })
-
-                setTimeout(() => {
-                    RandomQuoteTyper.typeQuote()
-                }, 3_100)
-            }
+                    RandomQuoteTyper.target.addEventListener('click', (event) => {
+                        RandomQuoteTyper.typeQuote()
+                        event.preventDefault()
+                    })
+                }
+            }, 3_100)
         }
     },
 }
