@@ -18,16 +18,16 @@ export const App = {
                 let numx = num.toString().split('').reverse().join('');
                 pm.innerHTML = `${num}<span class="code">|</span>${numx}`;
             }
-            RandomQuoteTyper.init();
-            if (RandomQuoteTyper.target) {
-                RandomQuoteTyper.target.addEventListener('click', (event) => {
+            setTimeout(() => {
+                RandomQuoteTyper.init();
+                if (RandomQuoteTyper.target) {
                     RandomQuoteTyper.typeQuote();
-                    event.preventDefault();
-                });
-                setTimeout(() => {
-                    RandomQuoteTyper.typeQuote();
-                }, 3100);
-            }
+                    RandomQuoteTyper.target.addEventListener('click', (event) => {
+                        RandomQuoteTyper.typeQuote();
+                        event.preventDefault();
+                    });
+                }
+            }, 3100);
         }
     },
 };
