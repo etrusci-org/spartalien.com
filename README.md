@@ -8,4 +8,3 @@ This repository was made public mainly for the curious and transparency purposes
 
 - [README](README.md) ←
 - [LICENSE](LICENSE.md)
-- [BRAIN](BRAIN.md)
