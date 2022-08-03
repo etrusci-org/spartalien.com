@@ -1,10 +1,10 @@
 # LICENSE
 
-Everything, unless noted otherwise: **Copyright 2016-2022 SPARTALIEN.COM**
+Everything, unless noted otherwise: **Copyright 2016-2022 Marc A. Micoli (spartalien.com)**
 
-✗ You are **not allowed** to host, distribute or otherwise replicate this website and its contents elsewhere.
+You are **not allowed** to publicly host, distribute or otherwise replicate this website and its contents elsewhere.
 
-✓ You are allowed to re-use parts of the source code I've wrote. E.g. if you find a function that works for your project.
+You are allowed to re-use parts of the source code I've wrote. E.g. if you find a function that works for your project.
 
 ---
 
@@ -28,4 +28,3 @@ Thanks to *Unknown Author* for:
 
 - [README](README.md)
 - [LICENSE](LICENSE.md) ←
-- [BRAIN](BRAIN.md)
