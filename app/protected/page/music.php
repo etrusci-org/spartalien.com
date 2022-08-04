@@ -220,7 +220,7 @@ if ($releaseList) {
 
     foreach ($releaseList as $v) {
         printf('
-            <div class="row">
+            <div class="row text-align-center">
                 <a href="%2$s"%8$s>
                     <img src="file/cover/%1$s-tn.jpg" alt="cover art" class="fluid" loading="lazy"><br>
                     %3$s

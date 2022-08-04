@@ -12,14 +12,39 @@ interface ScurInterface {
 export const Scur: ScurInterface = {
     s: '745d328ed27746ca8803c4ba1571dd731418365f67fe41c7ad9765981fcac618',
 
-
     // ob(data) {
-    //     return this._r(btoa(this._r(data + this.s)))
+    //     let hash = this._r(btoa(this._r(this.s + data)))
+
+    //     let dump: number[] = []
+    //     hash.split('').forEach((v) => {
+    //         dump.push(v.charCodeAt(0))
+    //     })
+    //     hash = dump.join('|')
+
+    //     return hash
     // },
 
 
     deob(data) {
-        return this._r(atob(this._r(data))).replace(this.s, '')
+        let dump: string[] = []
+        data.split('|').forEach((v) => {
+            dump.push(String.fromCharCode(parseInt(v)))
+        })
+
+        let text = this._r(
+            atob(
+                this._r(
+                    dump.join('')
+                )
+            )
+        )
+
+        if (text.indexOf(this.s) == -1) {
+            console.error('Invalid or missing salt.')
+            return data
+        }
+
+        return text.replace(this.s, '')
     },
 
 

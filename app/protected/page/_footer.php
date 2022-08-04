@@ -6,21 +6,20 @@
     if ($this->route['node'] != 'index'):
     ?>
         <footer>
-            <p class="elsewhere">
+            <p>
+                &copy; 2016-<?php print(date('Y')); ?> SPARTALIEN.COM
+            </p>
+            <p>
                 <?php
                 foreach ($this->conf['elsewhere'] as $k => $v) {
                     printf('
-                        <a href="%1$s" title="%5$s">%2$s<span>%3$s</span>%4$s</a>',
+                        <a href="%1$s">%2$s</a> ',
                         $v[1],
-                        substr($v[0], 0, 1),
-                        substr($v[0], 1, -1),
-                        substr($v[0], -1, 1),
                         $v[0],
                     );
                 }
                 ?>
             </p>
-            <p>&copy; 2016-<?php print(date('Y')); ?> SPARTALIEN.COM</p>
             <p>
                 <a href="<?php print($this->routeURL('exit')); ?>">[&rarr;]</a>
             </p>
