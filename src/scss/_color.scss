@@ -112,6 +112,15 @@ img {
 }
 
 
+.grid {
+    .row {
+        &:hover,
+        &:focus {
+            background-color: $color-10;
+        }
+    }
+}
+
 
 
 .lazycode {

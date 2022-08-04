@@ -75,7 +75,7 @@ if ($visualList) {
 
     foreach ($visualList as $v) {
         printf('
-            <div class="row">
+            <div class="row text-align-center">
                 <a href="%1$s"%6$s>
                     <img src="%2$s" alt="%3$s" loading="lazy"><br>
                     %3$s

@@ -158,6 +158,10 @@ footer {
     padding: 0 1rem 1rem 1rem;
     margin-top: 25rem;
     margin-bottom: 2rem;
+
+    p {
+        margin-bottom: 1.5rem;
+    }
 }
 
 
@@ -199,23 +203,12 @@ footer {
 .grid {
     box-sizing: border-box;
 
-    .row {
-        &:hover,
-        &:focus {
-            background-color: $color-10;
-        }
-    }
-
     &.simple {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-auto-rows: auto;
         column-gap: 1.5rem;
         row-gap: 1.5rem;
-
-        .row {
-            text-align: center;
-        }
     }
 }
 
@@ -238,6 +231,7 @@ footer {
 
 
 
+
 .text-align-right {
     text-align: right;
 }
@@ -251,26 +245,6 @@ footer {
 
 .nobr {
     white-space: nowrap;
-}
-
-
-
-
-.elsewhere {
-    a {
-        margin-left: .25rem;
-        margin-right: .25rem;
-        span {
-            display: none;
-        }
-    }
-
-    &:hover,
-    &:focus {
-        span {
-            display: inline;
-        }
-    }
 }
 
 

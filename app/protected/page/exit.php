@@ -19,7 +19,7 @@ print('<div class="box">');
 print('<div class="grid simple">');
 
 print(implode('', array_map(function(array $v): string {
-    return sprintf('<div class="row"><a href="%1$s" title="%1$s">%2$s</a></div>', $v['url'], $v['linkText']);
+    return sprintf('<div class="row text-align-center"><a href="%1$s" title="%1$s">%2$s</a></div>', $v['url'], $v['linkText']);
 }, $exitList)));
 
 print('</div>');
