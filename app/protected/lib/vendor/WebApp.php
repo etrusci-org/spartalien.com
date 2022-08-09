@@ -43,7 +43,8 @@ class WebApp {
             is_file($cacheFile) &&
             (time() - filemtime($cacheFile)) <= $this->conf['cacheTTL']
         ) {
-            require $cacheFile;
+            $cacheOutput = file_get_contents($cacheFile);
+            print($cacheOutput);
         }
         else {
             ob_start();
