@@ -50,6 +50,7 @@ export const quotes: QuoteArrayType = [
     { author: `Sarah Williams`, text: `Though my soul may set in darkness, it will rise in perfect light; I have loved the stars too fondly to be fearful of the night.` },
     { author: `SPARTALIEN`, text: `Remember, that times and situations change, but your heart doesn't have to necessarily.` },
     { author: `Stella Adler`, text: `Life beats down and crushes the soul and art reminds you that you have one.` },
+    { author: `The Narrator of The Stanley Parable`, text: `Perhaps his goal had not been to understand, but to let go.` },
     { author: `Timothy Leary`, text: `...as a guide and protection. Trust your divinity, trust your brain.` },
     { author: `Timothy Leary`, text: `The goals of an intelligent life, according to Socrates, is to pursue the philosophic quest - to increase one's knowledge of self and world.` },
     { author: `Timothy Leary`, text: `The universe is an intelligence test.` },
