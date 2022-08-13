@@ -658,37 +658,4 @@ class App extends WebApp {
 
         return sprintf('%d:%02d', $dur['m'], $dur['s']);
     }
-
-
-    static protected function getLatestRepositoryTag(string $owner, string $repo, string $token=''): string|bool {
-        $apiURLPattern = 'https://api.github.com/repos/%1$s/%2$s/tags?per_page=1';
-        $headers = array(
-            'Accept: application/vnd.github+json',
-            sprintf('User-Agent: %1$s', $owner),
-        );
-
-        if ($token) {
-            $headers[] = sprintf('Authorization: token %1$s', $token);
-        }
-
-        $curl = curl_init();
-        curl_setopt($curl, CURLOPT_URL, sprintf($apiURLPattern, $owner, $repo));
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($curl, CURLOPT_HEADER, false);
-        curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-        $result = curl_exec($curl);
-        curl_close($curl);
-
-        if (!$result) {
-            return false;
-        }
-
-        $result = jsonDecode($result);
-
-        if (!isset($result[0]) || !isset($result[0]['name'])) {
-            return false;
-        }
-
-        return $result[0]['name'];
-    }
 }
