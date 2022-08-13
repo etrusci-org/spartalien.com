@@ -23,9 +23,6 @@
             <p>
                 <a href="<?php print($this->routeURL('exit')); ?>">[&rarr;]</a>
             </p>
-            <p>
-                <a href="https://github.com/etrusci-org/spartalien.com/blob/main/README.md"><?php print($this->getLatestRepositoryTag('etrusci-org', 'spartalien.com')); ?></a>
-            </p>
         </footer>
     <?php
     endif;
