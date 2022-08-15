@@ -56,6 +56,7 @@ export const quotes: QuoteArrayType = [
     { author: `Timothy Leary`, text: `The universe is an intelligence test.` },
     { author: `Timothy Leary`, text: `Think for yourself. Question authority.` },
     { author: `Tom Petty`, text: `Excuse me if I have some place in my mind where I go time to time.` },
+    { author: `Tom Waits`, text: `I like beautiful melodies telling me terrible things.` },
     { author: `Tupac Shakur`, text: `People tend to choke that which they do not understand.` },
     { author: `Tupac Shakur`, text: `Reality is wrong. Dreams are for the real.` },
     { author: `Victor Hugo`, text: `Music expresses that which cannot be put into words and that which cannot remain silent.` },
