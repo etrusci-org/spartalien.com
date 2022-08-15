@@ -222,7 +222,7 @@ if ($releaseList) {
         printf('
             <div class="row text-align-center">
                 <a href="%2$s"%8$s>
-                    <img src="file/cover/%1$s-tn.jpg" alt="cover art" class="fluid" loading="lazy"><br>
+                    <img src="file/cover/%1$s-tn.jpg" alt="cover art" loading="lazy"><br>
                     %3$s
                 </a><br>
                 %4$s, %5$s, %6$s%7$s
