@@ -248,6 +248,13 @@ class App extends WebApp {
             );
         }
 
+        // dj mixes
+        $filter[] = array(
+            'DJ Mixes',
+            $this->routeURL('djmixes'),
+            null,
+        );
+
         return $filter;
     }
 
