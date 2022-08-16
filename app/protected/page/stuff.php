@@ -21,48 +21,51 @@ if (!$stuffByID) {
 if ($stuffByID) {
     $stuff = $stuffByID;
 
-    $lazymedia = implode(' ', array_map(function(array $v) use ($stuff): string {
-        if ($v['type'] == 'image') {
-            return sprintf('
-                <a href="%2$s" class="imagepreview"><span class="lazycode">%1$s</span></a>
-                ',
-                jsonEncode($v),
-                $v['slug'],
-                sprintf('stuff-%1$s', $stuff['id']),
-            );
-        }
-        else if ($v['type'] == 'video' || $v['type'] == 'youtubeVideo') {
-            return sprintf('
-                <div class="videobox"><span class="lazycode">%1$s</span></div>
-                ',
-                jsonEncode($v)
-            );
-        }
-        else if ($v['type'] == 'audio') {
-            return sprintf(
-                '%2$s<br><span class="lazycode">%1$s</span>',
-                jsonEncode($v),
-                basename($v['slug']),
-            );
-        }
-        else {
-            return sprintf(
-                '<span class="lazycode">%1$s</span>',
-                jsonEncode($v)
-            );
-        }
-    }, $stuff['media']));
+    $lazymedia = null;
+    if ($stuff['media']) {
+        $lazymedia = implode(' ', array_map(function(array $v) use ($stuff): string {
+            if ($v['type'] == 'image') {
+                return sprintf('
+                    <a href="%2$s" class="imagepreview"><span class="lazycode">%1$s</span></a>
+                    ',
+                    jsonEncode($v),
+                    $v['slug'],
+                    sprintf('stuff-%1$s', $stuff['id']),
+                );
+            }
+            else if ($v['type'] == 'video' || $v['type'] == 'youtubeVideo') {
+                return sprintf('
+                    <div class="videobox"><span class="lazycode">%1$s</span></div>
+                    ',
+                    jsonEncode($v)
+                );
+            }
+            else if ($v['type'] == 'audio') {
+                return sprintf(
+                    '%2$s<br><span class="lazycode">%1$s</span>',
+                    jsonEncode($v),
+                    basename($v['slug']),
+                );
+            }
+            else {
+                return sprintf(
+                    '<span class="lazycode">%1$s</span>',
+                    jsonEncode($v)
+                );
+            }
+        }, $stuff['media']));
+    }
 
     printf('
         <div class="box">
             <h2>%1$s</h2>
             %2$s
         </div>
-        <div class="box">%3$s</div>
+        %3$s
         ',
         $stuff['stuffName'],
         ($stuff['description']) ? sprintf('<p>%1$s</p>', $this->parseLazyInput($stuff['description'])) : '',
-        ($lazymedia) ? $lazymedia : '',
+        ($lazymedia) ? sprintf('<div class="box">%1$s</div>', $lazymedia) : '',
     );
 
 
