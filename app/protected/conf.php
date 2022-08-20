@@ -43,7 +43,7 @@ $conf = array(
         'visual/id:[1-41]',
         'djmixes',
         'stuff',
-        'stuff/id:[1-25]',
+        'stuff/id:[1-26]',
         'planet420',
         'planet420/session/num:[1-40]',
         'planet420/artists',
