@@ -1402,7 +1402,14 @@ I contributed track 1.','[{"slug":"//kaisekidigital.bandcamp.com/album/bento-box
 
 Released 2018-10-24 on [url=//lessthanone.bandcamp.com]<1[/url].
 
-I contributed track 116 + 117.','[{"slug":"//lessthanone.bandcamp.com/album/the-fencepost-reclamation-project-volume-5?action=buy","text":"BUY","type":"link"},{"slug":"file/compilation/lessthanone-fencepost-reclamation-5.jpg","type":"image"},{"slug":"692713614","trackCount":141,"type":"bandcampAlbum"}]');
+I contributed track 116 + 117.','[{"slug":"//lessthanone.bandcamp.com/album/the-fencepost-reclamation-project-volume-5?action=buy","text":"BUY","type":"link"},{"slug":"file/compilation/lessthanone-fencepost-reclamation-5.jpg","type":"image"},{"slug":"692713614","trackCount":141,"type":"bandcampAlbum"}]'),
+ (26,'[featured on] SFTS - The Backrooms Comp','If you''re not careful and you noclip out of reality in the wrong areas, you''ll end up in the Backrooms, where it''s nothing but the stink of old moist carpet, the madness of mono-yellow, the endless background noise of fluorescent lights at maximum hum-buzz, and approximately six hundred million square miles of randomly segmented empty rooms to be trapped in. God save you if you hear something wandering around nearby, because it sure as hell has heard you."
+
+Based on a concept created by 4chan, 35 artists took part in this compilation to make the listener feel as if they are experiencing the never-ending dimensions of the backrooms.
+
+Released 2022-08-19 on [url=//soundsforthesoul.bandcamp.com]Sounds for the Soul Records[/url].
+
+I contributed track 5.','[{"slug":"//soundsforthesoul.bandcamp.com/album/sfts-the-backrooms-comp?action=buy","text":"BUY","type":"link"},{"slug":"file/compilation/soundsforthesoul-the-backrooms-comp.jpg","type":"image"},{"slug":"1319476427","trackCount":35,"type":"bandcampAlbum"}]');
 INSERT INTO "p420session" ("id","sessionNum","sessionDate","sessionDur","mixcloudHost","mixcloudSlug") VALUES (1,1,'2021-05-04',10370,'//mixcloud.com',NULL),
  (2,2,'2021-05-06',10371,'//mixcloud.com','/lowtechman/planet-4202/'),
  (3,3,'2021-05-09',13173,'//mixcloud.com','/lowtechman/planet-4203/'),
