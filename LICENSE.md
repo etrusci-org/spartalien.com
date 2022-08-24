@@ -1,6 +1,6 @@
 # LICENSE
 
-Everything, unless noted otherwise: **Copyright 2016-2022 Marc A. Micoli (spartalien.com)**
+Everything, unless noted otherwise: **Copyright 2016-2022 SPARTALIEN (spartalien.com)**
 
 You are **not allowed** to publicly host, distribute or otherwise replicate this website and its contents elsewhere.
 

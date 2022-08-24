@@ -26,6 +26,7 @@ export const quotes: QuoteArrayType = [
     { author: `Friedrich Nietzsche`, text: `We have art in order not to die of the truth.` },
     { author: `Friedrich Nietzsche`, text: `Without music, life would be a mistake.` },
     { author: `Friedrich Nietzsche`, text: `You must have chaos within you to give birth to a dancing star.` },
+    { author: `G-Eazy`, text: `It all depends on what you value. Figure this out on your own, nobody shows you how to.` },
     { author: `George Bernard Shaw`, text: `Without art, the crudeness of reality would make the world unbearable.` },
     { author: `George Eliot`, text: `Life seems to go on without effort when I am filled with music.` },
     { author: `Gerard Way`, text: `Would you destroy something perfect in order to make it beautiful?` },

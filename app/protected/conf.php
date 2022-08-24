@@ -28,6 +28,7 @@ $conf = array(
         array('cam', 'CAM'),
         array('news', 'NEWS'),
         array('about', 'ABOUT'),
+        array('exit', 'EXIT'),
     ),
 
     'validateRequests' => true,
