@@ -50,7 +50,7 @@ $conf = array(
         'planet420/artists',
         'cam',
         'news',
-        'news/id:[1-53]',
+        'news/id:[1-59]',
         'news.atom',
         'about',
         'exit',
