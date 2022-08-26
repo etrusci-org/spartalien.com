@@ -16,8 +16,10 @@ date_default_timezone_set($conf['timezone']);
 $App = new App($conf);
 $App->validateRequest();
 
-if ($App->route['node'] == 'news.atom') {
-    header('Content-Type: application/atom+xml; charset=utf-8');
+switch($App->route['node']) {
+    case 'news.atom':
+        header('Content-Type: application/atom+xml; charset=utf-8');
+        break;
 }
 
 $App->renderOutput();
