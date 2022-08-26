@@ -16,10 +16,24 @@ date_default_timezone_set($conf['timezone']);
 $App = new App($conf);
 $App->validateRequest();
 
-switch($App->route['node']) {
-    case 'news.atom':
-        header('Content-Type: application/atom+xml; charset=utf-8');
-        break;
+
+$openDB = false;
+foreach ($conf['preRenderSettings'] as $node => $nodeSettings) {
+
+    if ($node == $App->route['node']) {
+
+        if (isset($nodeSettings['headers'])) {
+            foreach ($nodeSettings['headers'] as $v) {
+                header($v);
+            }
+        }
+
+        if (isset($nodeSettings['openDB'])) {
+            $openDB = $nodeSettings['openDB'];
+        }
+    }
+
 }
 
-$App->renderOutput();
+
+$App->renderOutput(openDB: $openDB);

@@ -28,7 +28,7 @@ class WebApp {
     }
 
 
-    public function renderOutput(): void {
+    public function renderOutput(false|string $openDB=false): void {
         $pageFile = sprintf('%s/%s.php', $this->conf['pageDir'], $this->route['node']);
         $cacheFile = sprintf('%s/%s.html', $this->conf['cacheDir'], $this->cacheID);
 
@@ -49,15 +49,19 @@ class WebApp {
         else {
             ob_start();
 
-            $this->DB->open();
+            if ($openDB) {
+                $this->DB->open(rw: ($openDB == 'r') ? false : true);
+            }
 
             require $this->conf['pageDir'].'/_header.php';
             require $pageFile;
             require $this->conf['pageDir'].'/_footer.php';
 
-            $outputBuffer = ob_get_contents();
+            if ($openDB) {
+                $this->DB->close();
+            }
 
-            $this->DB->close();
+            $outputBuffer = ob_get_contents();
 
             ob_end_clean();
 

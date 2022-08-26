@@ -56,6 +56,37 @@ $conf = array(
         'exit',
     ),
 
+    'preRenderSettings' => array(
+        'music' => array(
+            // 'headers' => array(),
+            'openDB' => 'r',
+        ),
+        'visual' => array(
+            // 'headers' => array(),
+            'openDB' => 'r',
+        ),
+        'stuff' => array(
+            // 'headers' => array(),
+            'openDB' => 'r',
+        ),
+        'exit' => array(
+            // 'headers' => array(),
+            'openDB' => 'r',
+        ),
+        'planet420' => array(
+            // 'headers' => array(),
+            'openDB' => 'r',
+        ),
+        'news' => array(
+            // 'headers' => array(),
+            'openDB' => 'r',
+        ),
+        'news.atom' => array(
+            'headers' => array('Content-Type: application/atom+xml; charset=utf-8'),
+            'openDB' => 'r',
+        ),
+    ),
+
     'elsewhere' => array(
         'newsletter' => ['Newsletter', '//eepurl.com/dqYlHr'],
         'bandcamp' => ['Bandcamp', '//spartalien.bandcamp.com'],
