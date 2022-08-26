@@ -36,10 +36,13 @@ class App extends WebApp {
                 FROM news
                 ORDER BY postedOn DESC;';
 
-                $data = $this->DB->query($q);
+                $dump = $this->DB->query($q);
 
-                foreach ($data as $k => $v) {
-                    $data[$k]['items'] = jsonDecode($v['items']);
+                if ($dump) {
+                    $data = $dump;
+                    foreach ($data as $k => $v) {
+                        $data[$k]['items'] = jsonDecode($v['items']);
+                    }
                 }
                 break;
 
@@ -58,9 +61,9 @@ class App extends WebApp {
                         array('id', $this->route['var']['id'], SQLITE3_TEXT),
                     );
 
-                    $data = $this->DB->querySingle($q, $v);
-
-                    if ($data) {
+                    $dump = $this->DB->querySingle($q, $v);
+                    if ($dump) {
+                        $data = $dump;
                         $data['items'] = jsonDecode($data['items']);
                     }
                 }
@@ -122,12 +125,15 @@ class App extends WebApp {
                     $w
                 );
 
-                $data = $this->DB->query($q, $v);
+                $dump = $this->DB->query($q, $v);
 
-                foreach ($data as $k => $v) {
-                    $data[$k]['artist'] = $this->getArtistByID(jsonDecode($v['artistIDs']));
-                    $data[$k]['audioIDs'] = jsonDecode($v['audioIDs']);
-                    $data[$k]['trackCount'] = count($data[$k]['audioIDs']);
+                if ($dump) {
+                    $data = $dump;
+                    foreach ($data as $k => $v) {
+                        $data[$k]['artist'] = $this->getArtistByID(jsonDecode($v['artistIDs']));
+                        $data[$k]['audioIDs'] = jsonDecode($v['audioIDs']);
+                        $data[$k]['trackCount'] = count($data[$k]['audioIDs']);
+                    }
                 }
                 break;
 
@@ -210,50 +216,54 @@ class App extends WebApp {
         LEFT JOIN audioReleaseType ON audioReleaseType.id = audioRelease.audioReleaseTypeID
         ORDER BY audioReleaseType.typeName ASC;';
         $dump = $this->DB->query($q);
-        foreach ($dump as $v) {
-            $v['releaseType'] = str_replace('Digital ', '', $v['releaseType']);
+        if ($dump) {
+            foreach ($dump as $v) {
+                $v['releaseType'] = str_replace('Digital ', '', $v['releaseType']);
+                $filter[] = array(
+                    $v['releaseType'],
+                    $this->routeURL(sprintf('music/type:%s', strtolower($v['releaseType']))),
+                    isset($this->route['var']['type']) && strtolower($this->route['var']['type']) == strtolower($v['releaseType']),
+                );
+            }
+
+            // collab
             $filter[] = array(
-                $v['releaseType'],
-                $this->routeURL(sprintf('music/type:%s', strtolower($v['releaseType']))),
-                isset($this->route['var']['type']) && strtolower($this->route['var']['type']) == strtolower($v['releaseType']),
+                'Collab',
+                $this->routeURL('music/collab'),
+                in_array('collab', $this->route['flag']),
+            );
+
+            // free to download
+            $filter[] = array(
+                'FreeDL',
+                $this->routeURL('music/freedl'),
+                in_array('freedl', $this->route['flag']),
+            );
+
+            // years
+            $q = '
+            SELECT DISTINCT
+                substr(releasedOn, 1, 4) AS year
+            FROM audioRelease
+            ORDER BY releasedOn DESC;';
+            $dump = $this->DB->query($q);
+            if ($dump) {
+                foreach ($dump as $v) {
+                    $filter[] = array(
+                        $v['year'],
+                        $this->routeURL(sprintf('music/year:%s', $v['year'])),
+                        isset($this->route['var']['year']) && $this->route['var']['year'] == $v['year'],
+                    );
+                }
+            }
+
+            // dj mixes
+            $filter[] = array(
+                'DJ Mixes',
+                $this->routeURL('djmixes'),
+                null,
             );
         }
-
-        // collab
-        $filter[] = array(
-            'Collab',
-            $this->routeURL('music/collab'),
-            in_array('collab', $this->route['flag']),
-        );
-
-        // free to download
-        $filter[] = array(
-            'FreeDL',
-            $this->routeURL('music/freedl'),
-            in_array('freedl', $this->route['flag']),
-        );
-
-        // years
-        $q = '
-        SELECT DISTINCT
-            substr(releasedOn, 1, 4) AS year
-        FROM audioRelease
-        ORDER BY releasedOn DESC;';
-        $dump = $this->DB->query($q);
-        foreach ($dump as $v) {
-            $filter[] = array(
-                $v['year'],
-                $this->routeURL(sprintf('music/year:%s', $v['year'])),
-                isset($this->route['var']['year']) && $this->route['var']['year'] == $v['year'],
-            );
-        }
-
-        // dj mixes
-        $filter[] = array(
-            'DJ Mixes',
-            $this->routeURL('djmixes'),
-            null,
-        );
 
         return $filter;
     }
@@ -379,7 +389,10 @@ class App extends WebApp {
                     p420session.sessionNum DESC;
                 ';
 
-                $data = $this->DB->query($q);
+                $dump = $this->DB->query($q);
+                if ($dump) {
+                    $data = $dump;
+                }
                 break;
 
             case 'sessionByID':
@@ -406,7 +419,10 @@ class App extends WebApp {
                         array('sessionNum', $sessionNum, SQLITE3_INTEGER),
                     );
 
-                    $data = $this->DB->querySingle($q, $v);
+                    $dump = $this->DB->querySingle($q, $v);
+                    if ($dump) {
+                        $data = $dump;
+                    }
                 }
                 break;
 
@@ -429,7 +445,10 @@ class App extends WebApp {
                         array('sessionNum', $sessionNum, SQLITE3_INTEGER),
                     );
 
-                    $data = $this->DB->query($q, $v);
+                    $dump = $this->DB->query($q, $v);
+                    if ($dump) {
+                        $data = $dump;
+                    }
                 }
                 break;
 
@@ -445,7 +464,10 @@ class App extends WebApp {
                         artistNameLC ASC;
                     ';
 
-                    $data = $this->DB->query($q);
+                    $dump = $this->DB->query($q);
+                    if ($dump) {
+                        $data = $dump;
+                    }
                 }
                 break;
 

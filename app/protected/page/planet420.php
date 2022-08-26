@@ -33,7 +33,7 @@ if (!$artistsList && !$sessionByID) {
             }</span>
         </div>
         ',
-        $hoursToListen,
+        (isset($hoursToListen)) ? $hoursToListen : 'many',
         $this->routeURL('cam'),
         $this->routeURL('planet420/artists'),
     );
