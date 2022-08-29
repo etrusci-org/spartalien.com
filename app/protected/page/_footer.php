@@ -20,9 +20,6 @@
                 }
                 ?>
             </p>
-            <p>
-                <a href="<?php print($this->routeURL('exit')); ?>">[&rarr;]</a>
-            </p>
         </footer>
     <?php
     endif;
