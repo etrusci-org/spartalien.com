@@ -11,6 +11,184 @@ class App extends WebApp {
     }
 
 
+    protected function getSearchResult(int $queryLengthMin = 3, int $queryLengthMax = 30): array {
+        $query = (isset($_POST['query'])) ? strtolower(trim($_POST['query'])) : null;
+        $cacheFile = null;
+        $searchResult = array(
+            'query' => null,
+            'resultCountTotal' => 0,
+            'result' => array(),
+        );
+
+        if (isset($_POST['search']) &&
+            isset($query) &&
+            !empty($query) &&
+            strlen($query) >= $queryLengthMin &&
+            strlen($query) <= $queryLengthMax
+        ) {
+            $searchResult['query'] = $query;
+            $cacheFile = sprintf('%s/searchresult-%s.json', $this->conf['cacheDir'], hash('ripemd160', $query));
+
+            if ($this->conf['cachingEnabled'] && file_exists($cacheFile)) { // no ttl needed since we just delete the cache when content changes
+                $searchResult = jsonDecode(file_get_contents($cacheFile));
+            }
+            else {
+                // audioRelease
+                $q = '
+                SELECT
+                    audioRelease.id,
+                    audioRelease.audioIDs,
+                    audioRelease.releaseName,
+                    audioRelease.bandcampID,
+                    audioRelease.bandcampHost,
+                    audioRelease.bandcampSlug,
+                    audioRelease.spotifyHost,
+                    audioRelease.spotifySlug,
+                    audioReleaseType.typeName AS releaseType
+                FROM
+                    audioRelease
+                LEFT JOIN
+                    audioReleaseType ON audioReleaseType.id = audioRelease.audioReleaseTypeID
+                WHERE
+                    LOWER(audioRelease.releaseName) LIKE :query
+                ORDER
+                    BY LOWER(audioRelease.releaseName) ASC;';
+                $v = array(
+                    array('query', sprintf('%%%1$s%%', $query), SQLITE3_TEXT),
+                );
+                $r = $this->DB->query($q, $v);
+                if ($r) {
+                    foreach ($r as $k => $v) {
+                        $r[$k]['trackCount'] = count(jsonDecode($v['audioIDs']));
+                    }
+                    $searchResult['result']['audioRelease']['resultCount'] = count($r);
+                    $searchResult['result']['audioRelease']['items'] = $r;
+                }
+
+                // audio
+                $q = '
+                SELECT
+                    id,
+                    audioName,
+                    bandcampID,
+                    bandcampHost,
+                    bandcampSlug,
+                    spotifyHost,
+                    spotifySlug
+                FROM
+                    audio
+                WHERE
+                    LOWER(audioName) LIKE :query
+                ORDER BY
+                    LOWER(audioName) ASC;';
+                $v = array(
+                    array('query', sprintf('%%%1$s%%', $query), SQLITE3_TEXT),
+                );
+                $r = $this->DB->query($q, $v);
+                if ($r) {
+                    $searchResult['result']['audio']['resultCount'] = count($r);
+                    $searchResult['result']['audio']['items'] = $r;
+                }
+
+                // visual
+                $q = '
+                SELECT
+                    id, visualName
+                FROM
+                    visual
+                WHERE
+                    LOWER(visualName) LIKE :query
+                ORDER BY
+                    LOWER(visualName) ASC;';
+                $v = array(
+                    array('query', sprintf('%%%1$s%%', $query), SQLITE3_TEXT),
+                );
+                $r = $this->DB->query($q, $v);
+                if ($r) {
+                    $searchResult['result']['visual']['resultCount'] = count($r);
+                    $searchResult['result']['visual']['items'] = $r;
+                }
+
+                // stuff
+                $q = '
+                SELECT
+                    id, stuffName
+                FROM
+                    stuff
+                WHERE
+                    LOWER(stuffName) LIKE :query
+                ORDER BY
+                    LOWER(stuffName) ASC;';
+                $v = array(
+                    array('query', sprintf('%%%1$s%%', $query), SQLITE3_TEXT),
+                );
+                $r = $this->DB->query($q, $v);
+                if ($r) {
+                    $searchResult['result']['stuff']['resultCount'] = count($r);
+                    $searchResult['result']['stuff']['items'] = $r;
+                }
+
+                // news
+                $q = '
+                SELECT
+                    id,
+                    postedOn,
+                    items
+                FROM
+                    news
+                WHERE
+                    LOWER(items) LIKE :query
+                ORDER BY
+                    postedOn DESC;';
+                $v = array(
+                    array('query', sprintf('%%%1$s%%', $query), SQLITE3_TEXT),
+                );
+                $r = $this->DB->query($q, $v);
+                if ($r) {
+                    foreach ($r as $k => $v) {
+                        $r[$k]['items'] = jsonDecode($v['items']);
+                    }
+                    $searchResult['result']['news']['resultCount'] = count($r);
+                    $searchResult['result']['news']['items'] = $r;
+                }
+
+                // planet420
+                $q = '
+                SELECT DISTINCT
+                    sessionNum,
+                    timeStart,
+                    artistName,
+                    trackName
+                FROM
+                    p420trackHistory
+                WHERE
+                    LOWER(artistName) LIKE :query OR
+                    LOWER(trackName) LIKE :query
+                ORDER BY
+                    LOWER(artistName) ASC, LOWER(trackName) ASC;';
+                $v = array(
+                    array('query', sprintf('%%%1$s%%', $query), SQLITE3_TEXT),
+                );
+                $r = $this->DB->query($q, $v);
+                if ($r) {
+                    $searchResult['result']['planet420']['resultCount'] = count($r);
+                    $searchResult['result']['planet420']['items'] = $r;
+                }
+            }
+        }
+
+        $searchResult['resultCountTotal'] = array_sum(array_map(function(array $v): int {
+            return $v['resultCount'];
+        }, $searchResult['result']));
+
+        if ($this->conf['cachingEnabled'] && $cacheFile && $searchResult['resultCountTotal'] > 0) {
+            file_put_contents($cacheFile, jsonEncode($searchResult), LOCK_EX);
+        }
+
+        return $searchResult;
+    }
+
+
     protected function getNavHTML(string $separator=' &middot; '): string {
         return implode($separator, array_map(function(array $v): string {
             return sprintf(

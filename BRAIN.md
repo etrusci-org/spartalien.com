@@ -2,6 +2,10 @@
 
 Todos and ideas in no particular order.
 
+- interviews should be "featured on"
+- stuff/ [featured on] add martina's playlist
+    https://open.spotify.com/playlist/2ZMHB9cATYVoCfJNq1XgFa
+    https://open.spotify.com/playlist/76N7Pb1bVUtnUNQY7WaoQv
 - texting
 - bio
 - doc

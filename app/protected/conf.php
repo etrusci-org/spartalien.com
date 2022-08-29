@@ -10,7 +10,7 @@ $conf = array(
     'cacheDir' => __DIR__.'/cache',
     'cachingEnabled' => false,
     'cacheTTL' => 60,
-    'cacheExcludedNodes' => array(),
+    'cacheExcludedNodes' => array('search'),
     'rewriteURL' => true,
 
     // Custom vars:
@@ -54,6 +54,7 @@ $conf = array(
         'news.atom',
         'about',
         'exit',
+        'search',
     ),
 
     'preRenderSettings' => array(
@@ -83,6 +84,9 @@ $conf = array(
         ),
         'news.atom' => array(
             'headers' => array('Content-Type: application/atom+xml; charset=utf-8'),
+            'openDB' => 'r',
+        ),
+        'search' => array(
             'openDB' => 'r',
         ),
     ),

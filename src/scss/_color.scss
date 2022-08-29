@@ -6,16 +6,27 @@ body {
 }
 
 
+input,
 textarea,
 code,
 .code {
     color: $color-80;
 }
 
+input,
 textarea {
     background-color: $color-10;
+
+    &:hover,
+    &:focus {
+        color: $color-30;
+        background-color: $color-27;
+    }
 }
 
+input {
+    background-color: $color-25;
+}
 
 h1,
 h2,
