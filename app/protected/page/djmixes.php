@@ -2,7 +2,7 @@
 $MixcloudData = new MixcloudData();
 $MixcloudData->cacheDir = $this->conf['cacheDir'];
 $MixcloudData->errorFile = $this->conf['cacheDir'].'/mixcloud-error.log';
-$MixcloudData->cacheTTL = $this->conf['cacheTTL'];
+$MixcloudData->cacheTTL = 31_536_000_000;
 
 $user = $MixcloudData->getUser('lowtechman');
 $cloudcasts = $MixcloudData->getCloudcasts('lowtechman');
