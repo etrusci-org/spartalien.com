@@ -58,28 +58,25 @@ $conf = array(
     ),
 
     'preRenderSettings' => array(
+        'index' => array(
+            'openDB' => 'r',
+        ),
         'music' => array(
-            // 'headers' => array(),
             'openDB' => 'r',
         ),
         'visual' => array(
-            // 'headers' => array(),
             'openDB' => 'r',
         ),
         'stuff' => array(
-            // 'headers' => array(),
             'openDB' => 'r',
         ),
         'exit' => array(
-            // 'headers' => array(),
             'openDB' => 'r',
         ),
         'planet420' => array(
-            // 'headers' => array(),
             'openDB' => 'r',
         ),
         'news' => array(
-            // 'headers' => array(),
             'openDB' => 'r',
         ),
         'news.atom' => array(
