@@ -55,6 +55,7 @@ $conf = array(
         'about',
         'exit',
         'search',
+        'privacy',
     ),
 
     'preRenderSettings' => array(
