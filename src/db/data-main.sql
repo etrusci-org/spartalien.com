@@ -56,7 +56,7 @@ INSERT INTO "news" ("id","postedOn","items") VALUES (1,'2016-03-24','["New music
  (45,'2021-01-01','["New music: [route=music/id:27]FLOATING HIGH[/route]","New merchandise: [route=stuff/id:19]Memory S9M5, FLOATING HIGH Limited Edition CD-R[/route]","New merchandise: [route=stuff/id:20]Memory S9M6, FLOATING HIGH Limited Edition USB-Stick[/route]"]'),
  (46,'2021-01-13','["New sample pack: [route=stuff/id:22]S9SP2 - Trip Construction Kit 1[/route]"]'),
  (47,'2021-03-19','["New page: [route=visual]visual[/route]"]'),
- (48,'2021-03-22','["[route=stuff/id:11]Interview[/route] by Shikantaza Art"]'),
+ (48,'2021-03-22','["Featured on: [route=stuff/id:11]Shikantaza Creativity Interview[/route]"]'),
  (49,'2021-05-07','["New music: [route=music/id:28]Uncertain[/route]"]'),
  (50,'2021-06-07','["New music: [route=music/id:29]THE BAND WITH THE DRUMMER WHO KNEW ONLY ONE RHYTHM[/route]"]'),
  (51,'2021-08-13','["New music: [route=music/id:30]Flux[/route]"]'),
