@@ -67,7 +67,9 @@ INSERT INTO "news" ("id","postedOn","items") VALUES (1,'2016-03-24','["New music
  (56,'2020-11-18','["Featured on: [route=stuff/id:9]MighTV[/route]"]'),
  (57,'2020-11-29','["Featured on: [route=stuff/id:9]MighTV[/route]"]'),
  (58,'2022-03-27','["Featured on: [route=stuff/id:14]Resonate on CAMP Radio[/route]"]'),
- (59,'2022-03-06','["Featured on: [route=stuff/id:13]Spooky Kitten Records'' WHiTMiRE Reviews Music[/route]"]');
+ (59,'2022-03-06','["Featured on: [route=stuff/id:13]Spooky Kitten Records'' WHiTMiRE Reviews Music[/route]"]'),
+ (60,'2022-03-03','["Featured on: [route=stuff/id:27]Martina''s \"The Only Way Is Up\" Spotify Playlist[/route]"]'),
+ (61,'2022-04-20','["Featured on: [route=stuff/id:28]Martina''s \"Add Some Music To Your Day\" Spotify Playlist[/route]"]');
 INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (1,'Continuoduction',396,'[1]','2223569284','//spartalien.bandcamp.com','/track/continuoduction','//open.spotify.com','/track/2Clx7jPmYSA21DbB0FKxUR'),
  (2,'I''ll Embrace You Again In Space',418,'[1]','1079688660','//spartalien.bandcamp.com','/track/ill-embrace-you-again-in-space','//open.spotify.com','/track/3QmCKvjLtKXS4vQD6822rf'),
  (3,'Realize It''s Just A Ride',360,'[1]','4004833542','//spartalien.bandcamp.com','/track/realize-its-just-a-ride','//open.spotify.com','/track/7LwAhr4FxPmxhsM0X4C2h6'),
@@ -1415,7 +1417,13 @@ Based on a concept created by 4chan, 35 artists took part in this compilation to
 
 Released 2022-08-19 on [url=//soundsforthesoul.bandcamp.com]Sounds for the Soul Records[/url].
 
-I contributed track 5.','[{"slug":"//soundsforthesoul.bandcamp.com/album/sfts-the-backrooms-comp?action=buy","text":"BUY","type":"link"},{"slug":"file/compilation/soundsforthesoul-the-backrooms-comp.jpg","type":"image"},{"slug":"1319476427","trackCount":35,"type":"bandcampAlbum"}]');
+I contributed track 5.','[{"slug":"//soundsforthesoul.bandcamp.com/album/sfts-the-backrooms-comp?action=buy","text":"BUY","type":"link"},{"slug":"file/compilation/soundsforthesoul-the-backrooms-comp.jpg","type":"image"},{"slug":"1319476427","trackCount":35,"type":"bandcampAlbum"}]'),
+ (27,'[featured on] Martina''s "The Only Way Is Up" Spotify Playlist','Martina creates weekly playlists. You can find more playlists on her [url=https://open.spotify.com/user/m0o63p2xyamfpkw2xg4mw26nc]Spotify profile[/url].
+
+I contributed track 2.','[{"slug":"//open.spotify.com/playlist/76N7Pb1bVUtnUNQY7WaoQv","text":"Listen on Spotify","type":"link"}]'),
+ (28,'[featured on] Martina''s "Add Some Music To Your Day" Spotify Playlist','Martina creates weekly playlists. You can find more playlists on her [url=https://open.spotify.com/user/m0o63p2xyamfpkw2xg4mw26nc]Spotify profile[/url].
+
+I contributed track 1.','[{"slug":"//open.spotify.com/playlist/2ZMHB9cATYVoCfJNq1XgFa","text":"Listen on Spotify","type":"link"}]');
 INSERT INTO "p420session" ("id","sessionNum","sessionDate","sessionDur","mixcloudHost","mixcloudSlug") VALUES (1,1,'2021-05-04',10370,'//mixcloud.com',NULL),
  (2,2,'2021-05-06',10371,'//mixcloud.com','/lowtechman/planet-4202/'),
  (3,3,'2021-05-09',13173,'//mixcloud.com','/lowtechman/planet-4203/'),
@@ -1487,7 +1495,8 @@ INSERT INTO "exit" ("id","linkText","url") VALUES (1,'Conservation Drones','//co
  (29,'Stevie Lee Price','//twitter.com/STEVIELEEPRICE'),
  (30,'Kaiseki Digital','//kaisekidigital.bandcamp.com'),
  (31,'ayefelon','//ayefelon.bandcamp.com'),
- (32,'Sounds for the Soul Records','//soundsforthesoul.bandcamp.com');
+ (32,'Sounds for the Soul Records','//soundsforthesoul.bandcamp.com'),
+ (33,'Martina''s Spotify Playlists','//open.spotify.com/user/m0o63p2xyamfpkw2xg4mw26nc/playlists');
 INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (1,'[1]','Continuoduction','[1]',NULL,1,'2016-03-24',NULL,'The marking of a fresh start.','["Cover art photo - NASA (nasa.gov)"]','[]','[{"slug":"QZovE8JDsXU","type":"youtubeVideo"}]',1,'2223569284','//spartalien.bandcamp.com','/track/continuoduction','//open.spotify.com','/track/2Clx7jPmYSA21DbB0FKxUR'),
  (2,'[2]','I''ll Embrace You Again In Space','[1]',NULL,1,'2016-10-13',NULL,'Thinking of the moment and place when the time''s over.','["Cover art photo - NASA (nasa.gov)"]','[]','[{"slug":"cC4vSYqYbYA","type":"youtubeVideo"}]',0,'1079688660','//spartalien.bandcamp.com','/track/ill-embrace-you-again-in-space','//open.spotify.com','/track/3QmCKvjLtKXS4vQD6822rf'),
  (3,'[3]','Realize It''s Just A Ride','[1]',NULL,1,'2017-03-13',NULL,'Don''t be afraid.','["Speech - Dr. Timothy Leary (leary.com)"]','[]','[{"slug":"cC4vSYqYbYA","type":"youtubeVideo"}]',0,'1079688660','//spartalien.bandcamp.com','/track/ill-embrace-you-again-in-space','//open.spotify.com','/track/3QmCKvjLtKXS4vQD6822rf'),
