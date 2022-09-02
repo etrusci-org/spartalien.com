@@ -50,20 +50,14 @@ if ($searchResult['resultCountTotal'] > 0) {
     foreach ($searchResult['result'] as $type => $result) {
         print('<div class="box">');
         printf('<h3>%1$s</h3>', $typeTitle[$type]);
+        print('<ul>');
 
         // audioRelease
         if ($type == 'audioRelease') {
             foreach ($result['items'] as $v) {
-                printf('
-                    <div>
-                        <a href="%1$s">%2$s</a> &middot; <span class="meta">%5$s %6$s %7$s</span>
-                        <span class="lazycode">{
-                            "type": "bandcamp%3$s",
-                            "slug": "%4$s"
-                        }</span>
-                    </div>',
+                printf('<li><a href="%1$s">%2$s</a> &middot; <span class="meta">%5$s &middot; %6$s %7$s</span></li>',
                     $this->routeURL(sprintf('music/id:%1$s', $v['id'])),
-                    $v['releaseName'],
+                    str_ireplace($searchResult['query'], sprintf('<span class="strmatch">%1$s</span>', $searchResult['query']), $v['releaseName']),
                     ($v['trackCount'] > 1) ? 'Album' : 'Track',
                     $v['bandcampID'],
                     $v['releaseType'],
@@ -76,15 +70,8 @@ if ($searchResult['resultCountTotal'] > 0) {
         // audio
         if ($type == 'audio') {
             foreach ($result['items'] as $v) {
-                printf('
-                    <div>
-                        %1$s &middot; <span class="meta">%3$s %4$s</span>
-                        <span class="lazycode">{
-                            "type": "bandcampTrack",
-                            "slug": "%2$s"
-                        }</span>
-                    </div>',
-                    $v['audioName'],
+                printf('<li>%1$s &middot; <span class="meta">%3$s %4$s</span></li>',
+                    str_ireplace($searchResult['query'], sprintf('<span class="strmatch">%1$s</span>', $searchResult['query']), $v['audioName']),
                     $v['bandcampID'],
                     ($v['bandcampSlug']) ? sprintf('<a href="%1$s%2$s"><img src="res/vendor/ico-bandcamp.svg" alt="%3$s on Bandcamp" title="%3$s on Bandcamp"></a>', $v['bandcampHost'], $v['bandcampSlug'], $v['audioName']) : '',
                     ($v['spotifySlug']) ? sprintf('<a href="%1$s%2$s"><img src="res/vendor/ico-spotify.svg" alt="%3$s on Spotify" title="%3$s on Spotify"></a>', $v['spotifyHost'], $v['spotifySlug'], $v['audioName']) : '',
@@ -94,31 +81,21 @@ if ($searchResult['resultCountTotal'] > 0) {
 
         // visual
         if ($type == 'visual') {
-            print('<div class="grid simple">');
             foreach ($result['items'] as $v) {
-                printf('
-                    <div>
-                        <a href="%1$s">%2$s<br>
-                            <img src="%3$s" alt="%2$s" loading="lazy">
-                        </a>
-                    </div>',
+                printf('<li><a href="%1$s">%2$s</a></li>',
                     $this->routeURL(sprintf('visual/id:%1$s', $v['id'])),
-                    $v['visualName'],
+                    str_ireplace($searchResult['query'], sprintf('<span class="strmatch">%1$s</span>', $searchResult['query']), $v['visualName']),
                     sprintf('file/visual/%1$s-tn.jpg', $v['id']),
                 );
             }
-            print('</div>');
         }
 
         // stuff
         if ($type == 'stuff') {
             foreach ($result['items'] as $v) {
-                printf('
-                    <p>
-                        <a href="%1$s">%2$s</a>
-                    </p>',
+                printf('<li><a href="%1$s">%2$s</a></li>',
                     $this->routeURL(sprintf('stuff/id:%1$s', $v['id'])),
-                    $v['stuffName'],
+                    str_ireplace($searchResult['query'], sprintf('<span class="strmatch">%1$s</span>', $searchResult['query']), $v['stuffName']),
                 );
             }
         }
@@ -126,14 +103,14 @@ if ($searchResult['resultCountTotal'] > 0) {
         // news
         if ($type == 'news') {
             foreach ($result['items'] as $v) {
-                $newsItems = array_map(function(string $v): string {
-                    return $this->parseLazyInput($v);
+                $newsItems = array_map(function(string $v) use ($searchResult): string {
+
+                    $v = $this->parseLazyInput($v);
+                    $v = str_ireplace($searchResult['query'], sprintf('<span class="strmatch">%1$s</span>', $searchResult['query']), $v);
+                    return $v;
                 }, $v['items']);
 
-                printf('
-                    <p>
-                        <a href="%1$s">%2$s</a> &middot; %3$s
-                    </p>',
+                printf('<li><a href="%1$s">%2$s</a> &middot; %3$s</li>',
                     $this->routeURL(sprintf('news/id:%1$s', $v['id'])),
                     $v['postedOn'],
                     implode(' + ', $newsItems),
@@ -144,20 +121,17 @@ if ($searchResult['resultCountTotal'] > 0) {
         // planet420
         if ($type == 'planet420') {
             foreach ($result['items'] as $v) {
-                printf('
-                    <p>
-                        <a href="%2$s">%3$s - %4$s</a>
-                        (@%5$s in session <a href="%2$s">#%1$s</a>)
-                    </p>',
+                printf('<li>%3$s - %4$s &middot; @%5$s in <a href="%2$s">Session #%1$s</a></li>',
                     $v['sessionNum'],
                     $this->routeURL(sprintf('planet420/session/num:%1$s', $v['sessionNum'])),
-                    $v['artistName'],
-                    $v['trackName'],
+                    str_ireplace($searchResult['query'], sprintf('<span class="strmatch">%1$s</span>', $searchResult['query']), $v['artistName']),
+                    str_ireplace($searchResult['query'], sprintf('<span class="strmatch">%1$s</span>', $searchResult['query']), $v['trackName']),
                     $this->secondsToString($v['timeStart']),
                 );
             }
         }
 
+        print('</ul>');
         print('</div>');
     }
 }
