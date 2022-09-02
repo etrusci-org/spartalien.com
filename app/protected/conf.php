@@ -44,42 +44,40 @@ $conf = array(
         'visual/id:[1-41]',
         'djmixes',
         'stuff',
-        'stuff/id:[1-26]',
+        'stuff/id:[1-28]',
         'planet420',
         'planet420/session/num:[1-40]',
         'planet420/artists',
         'cam',
         'news',
-        'news/id:[1-59]',
+        'news/id:[1-61]',
         'news.atom',
         'about',
         'exit',
         'search',
+        'privacy',
     ),
 
     'preRenderSettings' => array(
+        'index' => array(
+            'openDB' => 'r',
+        ),
         'music' => array(
-            // 'headers' => array(),
             'openDB' => 'r',
         ),
         'visual' => array(
-            // 'headers' => array(),
             'openDB' => 'r',
         ),
         'stuff' => array(
-            // 'headers' => array(),
             'openDB' => 'r',
         ),
         'exit' => array(
-            // 'headers' => array(),
             'openDB' => 'r',
         ),
         'planet420' => array(
-            // 'headers' => array(),
             'openDB' => 'r',
         ),
         'news' => array(
-            // 'headers' => array(),
             'openDB' => 'r',
         ),
         'news.atom' => array(

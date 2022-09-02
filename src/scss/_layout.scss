@@ -299,6 +299,13 @@ footer {
         width: 100%;
         min-width: 170px;
         height: 120px;
+
+        &.withCover {
+            width: 350px;
+            height: 350px;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
     &.bandcampAlbum {
@@ -390,20 +397,10 @@ footer {
 
 
 .introSplash {
-    font-family: $font-serif;
     font-size: 2rem;
-    margin-top: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
-
-
-.randomQuoteTyper {
-    &.doneTyping {
-        cursor: help;
-    }
-
-    // .primeMirror {}
-}
-
 
 
 

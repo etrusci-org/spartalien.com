@@ -7,9 +7,8 @@
     ?>
         <footer>
             <p>
-                <a href="<?php print($this->routeURL('search')); ?>">
-                    <img src="res/ico-lookingglass.svg" alt="search" title="search...">
-                </a>
+                <a href="<?php print($this->routeURL('search')); ?>">Search</a>  &middot;
+                <a href="<?php print($this->routeURL('privacy')); ?>">Privacy</a>
             </p>
             <p>
                 &copy; 2016-<?php print(date('Y')); ?> SPARTALIEN.COM
