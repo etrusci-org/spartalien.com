@@ -14,7 +14,7 @@ printf('
 
         <form action="%1$s" method="post">
             <p>
-                <input type="text" size="21" minlength="3" maxlength="30" name="query" placeholder="y o u r  q u e r y . . ." required>
+                <input type="text" size="21" minlength="3" maxlength="30" name="query" placeholder="y o u r  q u e r y . . ." required autofocus>
                 <input type="submit" name="search" value="search">
             </p>
         </form>',
@@ -22,14 +22,16 @@ printf('
     );
 
     if (isset($_POST['search'])) {
-        printf('
-            <p>
-                <code>%1$d</code> %2$s for <code>%3$s</code>
-            </p>',
-            $searchResult['resultCountTotal'],
-            ngettext('result', 'results', $searchResult['resultCountTotal']),
-            (isset($_POST['query'])) ? trim($_POST['query']) : '',
-        );
+        if (!$searchResult['query']) {
+            print('<p class="error">You must enter a search term to make this work. Minimum 3 and maximum 30 characters.</p>');
+        }
+        else {
+            printf('<p><code>%1$d</code> %2$s for <code>%3$s</code></p>',
+                $searchResult['resultCountTotal'],
+                ngettext('result', 'results', $searchResult['resultCountTotal']),
+                (isset($_POST['query'])) ? trim($_POST['query']) : '',
+            );
+        }
     }
 
 print('</div>');

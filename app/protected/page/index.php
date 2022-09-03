@@ -1,29 +1,35 @@
 <?php
-$q = 'SELECT bandcampID FROM audio ORDER BY RANDOM() ASC;';
-$r = $this->DB->query($q);
-$audio = '[]';
-if ($r) {
-    $audio = array_map(function(array $v): string {
-        return $v['bandcampID'];
-    }, $r);
-    $audio = json_encode($audio);
+$trackList = array();
+
+$releaseList = $this->getAudio('releaseList');
+foreach ($releaseList as $k => $v) {
+    $trackList = array_merge($trackList, array_map(function(array $t) use ($v): array {
+        $t = array(
+            'audioID' => $t['id'],
+            'audioName' => $t['audioName'],
+            'bandcampID' => $t['bandcampID'],
+            'releaseType' => $v['releaseType'],
+            'releaseName' => $v['releaseName'],
+            'releaseRoute' => $this->routeURL(sprintf('music/id:%1$s', $v['id'])),
+        );
+        return $t;
+    }, $this->getAudioByID($v['audioIDs'])));
 }
+
+$trackList = jsonEncode($trackList, JSON_THROW_ON_ERROR | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
 ?>
 
 
-<div class="introSplash text-align-center">
-    Welcome!
+
+
+<div class="text-align-center">
+    <div class="random-audio"></div>
 </div>
 
 
-<div class="random-audio text-align-center"></div>
+
+
+
 <script>
-    const audio = <?php print($audio.PHP_EOL); ?>
-    let audioTarget = document.querySelector('.random-audio')
-    let bandcampID = audio[Math.floor(Math.random() * audio.length)]
-    audioTarget.innerHTML = `
-    <p>Not sure where to start? Here's a random track:</p>
-    <iframe class="lazymedia bandcampTrack withCover" src="//bandcamp.com/EmbeddedPlayer/track=${bandcampID}/size=large/bgcol=2b2b2b/linkcol=ffffff/minimal=true/transparent=true/"></iframe>
-    <a class="btn" href="<?php print($this->routeURL('music')); ?>">more music &rarr;</a>
-    `
+    const trackList = <?php print($trackList.PHP_EOL); ?>
 </script>

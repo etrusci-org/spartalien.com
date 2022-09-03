@@ -300,6 +300,10 @@ footer {
         min-width: 170px;
         height: 120px;
 
+        &.small {
+            height: 42px;
+        }
+
         &.withCover {
             width: 350px;
             height: 350px;
@@ -393,13 +397,6 @@ footer {
     img {
         max-height: 600px;
     }
-}
-
-
-.introSplash {
-    font-size: 2rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
 }
 
 

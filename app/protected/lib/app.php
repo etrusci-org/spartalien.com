@@ -182,7 +182,7 @@ class App extends WebApp {
         }, $searchResult['result']));
 
         if ($this->conf['cachingEnabled'] && $cacheFile && $searchResult['resultCountTotal'] > 0) {
-            file_put_contents($cacheFile, jsonEncode($searchResult), LOCK_EX);
+            file_put_contents($cacheFile, jsonEncode($searchResult, JSON_THROW_ON_ERROR | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES), LOCK_EX);
         }
 
         return $searchResult;

@@ -19,6 +19,8 @@ Thanks to [Icons8](https://icons8.com) for:
 
 - `app/public/res/vendor/ico-bandcamp.svg` ([Universal Multimedia Licensing Agreement For Icons8](https://intercom.help/icons8-7fb7577e8170/en/articles/5534926-universal-multimedia-licensing-agreement-for-icons8))
 - `app/public/res/vendor/ico-spotify.svg` ([Universal Multimedia Licensing Agreement For Icons8](https://intercom.help/icons8-7fb7577e8170/en/articles/5534926-universal-multimedia-licensing-agreement-for-icons8))
+- `app/public/res/vendor/ico-search.svg` ([Universal Multimedia Licensing Agreement For Icons8](https://intercom.help/icons8-7fb7577e8170/en/articles/5534926-universal-multimedia-licensing-agreement-for-icons8))
+- `app/public/res/vendor/ico-exit.svg` ([Universal Multimedia Licensing Agreement For Icons8](https://intercom.help/icons8-7fb7577e8170/en/articles/5534926-universal-multimedia-licensing-agreement-for-icons8))
 
 Thanks to *Unknown Author* for:
 
