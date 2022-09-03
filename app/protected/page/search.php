@@ -22,14 +22,16 @@ printf('
     );
 
     if (isset($_POST['search'])) {
-        printf('
-            <p>
-                <code>%1$d</code> %2$s for <code>%3$s</code>
-            </p>',
-            $searchResult['resultCountTotal'],
-            ngettext('result', 'results', $searchResult['resultCountTotal']),
-            (isset($_POST['query'])) ? trim($_POST['query']) : '',
-        );
+        if (!$searchResult['query']) {
+            print('<p class="error">You must enter a search term to make this work. Minimum 3 and maximum 30 characters.</p>');
+        }
+        else {
+            printf('<p><code>%1$d</code> %2$s for <code>%3$s</code></p>',
+                $searchResult['resultCountTotal'],
+                ngettext('result', 'results', $searchResult['resultCountTotal']),
+                (isset($_POST['query'])) ? trim($_POST['query']) : '',
+            );
+        }
     }
 
 print('</div>');
