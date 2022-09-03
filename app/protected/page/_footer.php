@@ -7,10 +7,6 @@
     ?>
         <footer>
             <p>
-                <a href="<?php print($this->routeURL('search')); ?>">Search</a>  &middot;
-                <a href="<?php print($this->routeURL('privacy')); ?>">Privacy</a>
-            </p>
-            <p>
                 &copy; 2016-<?php print(date('Y')); ?> SPARTALIEN.COM
             </p>
             <p>
@@ -23,6 +19,9 @@
                     );
                 }
                 ?>
+            </p>
+            <p>
+                <a href="<?php print($this->routeURL('privacy')); ?>">Privacy</a>
             </p>
         </footer>
     <?php
