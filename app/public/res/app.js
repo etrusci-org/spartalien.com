@@ -24,11 +24,10 @@ export const App = {
         let randomTrack = trackList[Math.floor(Math.random() * trackList.length)];
         if (!randomTrack)
             return;
-        target.innerHTML = `<em>Not sure where to start?</em>`;
+        target.innerHTML = `<p><em>Not sure where to start?</em></p>`;
         setTimeout(() => {
             target.innerHTML += `
-            <em>Here's a random track:</em><br>
-            <br>
+            <p><em>Here's a random track:</em></p>
             <h2><a href="${randomTrack.releaseRoute}">${randomTrack.audioName}</a></h2>
             <p>
                 from the ${randomTrack.releaseType}
