@@ -14,7 +14,7 @@ printf('
 
         <form action="%1$s" method="post">
             <p>
-                <input type="text" size="21" minlength="3" maxlength="30" name="query" placeholder="y o u r  q u e r y . . ." required>
+                <input type="text" size="21" minlength="3" maxlength="30" name="query" placeholder="y o u r  q u e r y . . ." required autofocus>
                 <input type="submit" name="search" value="search">
             </p>
         </form>',
