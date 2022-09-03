@@ -43,8 +43,8 @@
             <h1>%1$s</h1>
             <nav>
                 %2$s &middot;
-                <a href="%3$s"><img src="res/vendor/ico-search.svg" alt="SEARCH"></a>
-                <a href="%4$s"><img src="res/vendor/ico-exit.svg" alt="EXIT"></a>
+                <a href="%3$s"><img src="res/vendor/ico-search.svg" alt="SEARCH" title="SEARCH"></a>
+                <a href="%4$s"><img src="res/vendor/ico-exit.svg" alt="EXIT" title="EXIT"></a>
             </nav>
             ',
             ($this->route['node'] == 'index') ? '<img src="res/logo-small.png" alt="SPARTALIEN" title="SPARTALIEN">' : '<a href="./">SPARTALIEN</a>',
