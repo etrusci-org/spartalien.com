@@ -45,7 +45,7 @@ $conf = array(
         'stuff',
         'stuff/id:[1-28]',
         'planet420',
-        'planet420/session/num:[1-40]',
+        'planet420/session/num:[1-41]',
         'planet420/artists',
         'cam',
         'news',
