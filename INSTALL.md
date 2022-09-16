@@ -2,6 +2,26 @@
 
 How to initially install the website on the production server.
 
+- [Preparations](#preparations)
+  - [1. Edit Configuration](#1-edit-configuration)
+  - [2. Purge Cache](#2-purge-cache)
+  - [3. Generate Valid Requests File](#3-generate-valid-requests-file)
+  - [4. Prime Cache (Optional)](#4-prime-cache-optional)
+  - [5. Disable Files Redirect RewriteRule](#5-disable-files-redirect-rewriterule)
+  - [6. Edit App Entry Path](#6-edit-app-entry-path)
+  - [7. Turn On Maintenance Mode On The Production Server](#7-turn-on-maintenance-mode-on-the-production-server)
+- [Upload](#upload)
+  - [1. Upload Protected App Files](#1-upload-protected-app-files)
+  - [2. Set Permissions For Protected App Files](#2-set-permissions-for-protected-app-files)
+  - [3. Upload Public App Files](#3-upload-public-app-files)
+  - [4. Upload Static Files](#4-upload-static-files)
+  - [5. Turn Off Maintenance Mode On The Production Server](#5-turn-off-maintenance-mode-on-the-production-server)
+- [Undo Local Changes To Continue Development](#undo-local-changes-to-continue-development)
+  - [1. Disable Production Mode](#1-disable-production-mode)
+  - [2. Enable Files Redirect RewriteRule](#2-enable-files-redirect-rewriterule)
+  - [3. Edit App Entry Path](#3-edit-app-entry-path)
+  - [4. Purge Cache (Optional)](#4-purge-cache-optional)
+
 ---
 
 ## Preparations
