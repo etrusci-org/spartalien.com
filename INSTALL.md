@@ -10,24 +10,25 @@ How to initially install the website on the production server.
 
 Open `app/protected/conf.php` to make final edits and set `APP_MODE_PRODUCTION` to `true`. Make sure the production mode overwrites at the end of the file fit the remote server.
 
-### 2. Delete Cached Files
+### 2. Purge Cache
 
 ```sh
-rm app/protected/cache/*.html
-rm app/protected/cache/*.php
+rm app/protected/cache/*.*
 ```
 
 ### 3. Generate Valid Requests File
 
 Run `php app/protected/bin/1-gen-validrequests.php`. This will generate and write valid routes to `app/protected/cache/validrequests.php`.
+This command is saved in `.vscode/tasks.json` and could also be run with `CTRL+SHIFT+B`.
 
-### 4. Prime The Cache (Optional)
+### 4. Prime Cache (Optional)
 
 Run `php app/protected/bin/2-gen-cache.php`. This will read `app/protected/cache/validrequests.php` and generate cache files from those routes in `app/protected/cache/`.
+This only makes sense if we are sure that all the pages will be requested before the next cache cleaning. Skip this and save some initial space.
 
 ### 5. Disable Files Redirect RewriteRule
 
-Open `app/public/.htaccess` to comment-out the rewrite rule for the files redirect.
+Open `app/public/.htaccess` to comment-out the rewrite rule line for the files redirect.
 
 ### 6. Edit App Entry Path
 
@@ -70,23 +71,28 @@ chmod 664 /home/protected/v8.app/db/*
 
 ### 3. Upload Public App Files
 
+<!-- Skip `index.php` -->
+<!-- app/public/index.php    ->  /home/public/index-real.php    (!!! skip this and upload it at the end of the install procedure if index-maint.php is already in use) -->
+
 ```text
 app/public/res/         ->  /home/public/res/
 app/public/.htaccess    ->  /home/public/.htaccess
 app/public/favicon.ico  ->  /home/public/favicon.ico
-app/public/index.php    ->  /home/public/index.php    (ommit this and upload it at the end of the install procedure if index-maint.php is already in use)
+app/public/index.php    ->  /home/public/index-real.php    (note the "-real" suffix!)
 app/public/robots.txt   ->  /home/public/robots.txt
+app/public/sitemap.xml  ->  /home/public/sitemap.xml
 ```
 
-### 4. Set Permissions for Public App Files
+<!-- ### 4. Set Permissions for Public App Files
 
 ```sh
 ssh spartalien
 chgrp web /home/public/index.php
-```
+``` -->
 
-### 5. Upload Files [Repo](https://github.com/etrusci-org/spartalien.com-files)
+### 5. Upload Static Files
 
+Repo: <https://github.com/etrusci-org/spartalien.com-files>
 ```text
 spartalien.com-files/file/  ->  /home/public/file/
 ```
@@ -108,14 +114,15 @@ Open `app/protected/conf.php` to set `APP_MODE_PRODUCTION` back to `false`.
 
 ### 2. Enable Files Redirect RewriteRule
 
-Open `app/public/.htaccess` to comment-out the rewrite rule for the files redirect.
+Open `app/public/.htaccess` to uncomment the rewrite rule for the files redirect.
 
 ### 3. Edit App Entry Path
 
 Open `app/public/index.php` to change the require path back to `../protected/init.php`.
 
-### 4. Delete Locally Cached Route Files (Optional)
+### 4. Purge Cache (Optional)
 
 ```sh
-rm app/protected/cache/*.html
+rm app/protected/cache/*.*
 ```
+You can keep `app/protected/cache/validrequests.php` unless you edited `$conf.validRequestPatterns` in `app/protected/conf.php` during the installation process.
