@@ -71,9 +71,6 @@ chmod 664 /home/protected/v8.app/db/*
 
 ### 3. Upload Public App Files
 
-<!-- Skip `index.php` -->
-<!-- app/public/index.php    ->  /home/public/index-real.php    (!!! skip this and upload it at the end of the install procedure if index-maint.php is already in use) -->
-
 ```text
 app/public/res/         ->  /home/public/res/
 app/public/.htaccess    ->  /home/public/.htaccess
@@ -83,21 +80,14 @@ app/public/robots.txt   ->  /home/public/robots.txt
 app/public/sitemap.xml  ->  /home/public/sitemap.xml
 ```
 
-<!-- ### 4. Set Permissions for Public App Files
-
-```sh
-ssh spartalien
-chgrp web /home/public/index.php
-``` -->
-
-### 5. Upload Static Files
+### 4. Upload Static Files
 
 Repo: <https://github.com/etrusci-org/spartalien.com-files>
 ```text
 spartalien.com-files/file/  ->  /home/public/file/
 ```
 
-### 6. Turn Off Maintenance Mode On The Production Server
+### 5. Turn Off Maintenance Mode On The Production Server
 
 ```sh
 ssh spartalien
