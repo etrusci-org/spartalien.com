@@ -15,11 +15,13 @@ ssh spartalien
 
 Upload whatever has changed. Make sure permissions are kept or set correctly on new files.
 
-## 3. Delete Cached Route Files
+## 3. Purge Cache
+
+Keep `/home/protected/v8.app/cache/validrequests.php` or overwrite if updated.
 
 ```sh
 ssh spartalien
-rm -v /home/protected/v8.app/cache/*.html
+rm -v /home/protected/v8.app/cache/*.*
 ```
 
 ## 4. Turn Off Maintenance Mode On The Production Server

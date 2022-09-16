@@ -13,3 +13,4 @@ Todos and ideas in no particular order.
 - maybe add spartalien-files repo as submodule
 - atom feed for ~~news and~~ maybe audio too
 - maybe simple site wide search
+- somehow automate import quotes into streamelements for !quote command
