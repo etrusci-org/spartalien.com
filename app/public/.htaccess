@@ -8,7 +8,7 @@ AddType application/atom+xml .atom
 
 RewriteEngine On
 
-# COMMENT OUT THIS FILES REDIRECT ON THE PRODUCTION SERVER:
+# FILES REDIRECT FOR DEV ENV:
 RewriteRule ^file(/.*)?$ /spartalien.com-files/file$1 [R=302,L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
