@@ -5,6 +5,9 @@
         },
         {
             "path": "..\\..\\spartalien.com-files"
+        },
+        {
+            "path": "../../spartalien.com-discord"
         }
     ]
 }
