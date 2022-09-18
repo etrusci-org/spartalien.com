@@ -213,7 +213,12 @@ if ($releaseList) {
     print('<div class="box">');
 
     if ($releaseByID) {
-        print('<h3>MORE MUSIC ...</h3>');
+        printf('
+            <h3>MORE MUSIC ...</h3>
+            %1$s
+            ',
+            $releaseFilterHTML,
+        );
     }
 
     print('<div class="grid simple">');
