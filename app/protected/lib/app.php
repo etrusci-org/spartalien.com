@@ -383,7 +383,7 @@ class App extends WebApp {
         $filter[] = array(
             'All',
             $this->routeURL('music'),
-            empty($this->route['var']) && empty($this->route['flag']),
+            (empty($this->route['var']) && empty($this->route['flag'])) || isset($this->route['var']['id']),
         );
 
         // types

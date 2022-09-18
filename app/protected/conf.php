@@ -96,6 +96,7 @@ $conf = array(
         'mixcloud' => ['Mixcloud', '//mixcloud.com/lowtechman'],
         'discogs' => ['Discogs', '//discogs.com/artist/5977226'],
         'twitch' => ['Twitch', '//twitch.tv/spartalien'],
+        'discord' => ['Discord', '//spartalien.com/discord'],
         'twitter' => ['Twitter', '//twitter.com/spartalien'],
         'instagram' => ['Instagram', '//instagram.com/spartalien'],
     ),
