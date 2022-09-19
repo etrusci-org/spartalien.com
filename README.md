@@ -1,6 +1,6 @@
 # spartalien.com
 
-![Website](https://img.shields.io/website?url=https://spartalien.com) ![GitHub issues](https://img.shields.io/github/issues-raw/etrusci-org/spartalien.com) ![GitHub last commit](https://img.shields.io/github/last-commit/etrusci-org/spartalien.com)
+![Website](https://img.shields.io/website?url=https://spartalien.com) ![GitHub issues](https://img.shields.io/github/issues-raw/etrusci-org/spartalien.com)
 
 This is the source code of SPARTALIEN's [website](https://spartalien.com). It was made public mainly for the curious and transparency purposes. Please read the [LICENSE](LICENSE.md) for further information.
 
