@@ -50,7 +50,7 @@ class MixcloudData {
             }
 
             if ($this->cacheTTL >= 0) {
-                file_put_contents($cacheFile, json_encode($this->ram['data'], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT), LOCK_EX);
+                file_put_contents($cacheFile, json_encode($this->ram['data'], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES), LOCK_EX);
             }
         }
         else {
