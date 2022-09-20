@@ -55,6 +55,8 @@ $conf = array(
         'exit',
         'search',
         'privacy',
+        'api/get:audio/id:[1-141]',
+        'api/get:visual/id:[1-41]',
     ),
 
     'preRenderSettings' => array(
@@ -84,6 +86,10 @@ $conf = array(
             'openDB' => 'r',
         ),
         'search' => array(
+            'openDB' => 'r',
+        ),
+        'api' => array(
+            'headers' => array('Content-Type: application/json; charset=utf-8'),
             'openDB' => 'r',
         ),
     ),

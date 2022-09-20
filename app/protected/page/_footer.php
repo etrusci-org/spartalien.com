@@ -1,4 +1,9 @@
-<?php if ($this->route['node'] != 'news.atom'): ?>
+<?php
+if (
+    $this->route['node'] != 'news.atom' &&
+    $this->route['node'] != 'api'
+):
+?>
     </main>
 
 
