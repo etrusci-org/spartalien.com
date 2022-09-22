@@ -2,16 +2,20 @@ import { LazyMedia } from './vendor/LazyMedia.js';
 import { Scur } from './vendor/Scur.js';
 import { addTargetToExtLinks } from './vendor/addTargetToExtLinks.js';
 import { ImagePreview } from './ImagePreview.js';
+import { RandomQuoteTyper } from './RandomQuoteTyper.js';
 export const App = {
     main(routeRequest = '') {
         console.log(`SPARTALIEN.COM${(routeRequest) ? ` :: ${routeRequest}` : ``}`);
         if (routeRequest == '') {
             if (trackList) {
-                let randomAudioTarget = document.querySelector('.random-audio') || null;
                 setTimeout(() => {
+                    let randomAudioTarget = document.querySelector('.random-audio') || null;
                     this.loadRandomTrack(randomAudioTarget);
                 }, 3000);
             }
+            setTimeout(() => {
+                this.loadRandomQuote();
+            }, 15000);
         }
         LazyMedia.embed();
         Scur.deobElements();
@@ -33,8 +37,22 @@ export const App = {
                 from the ${randomTrack.releaseType}
                 <a href="${randomTrack.releaseRoute}">${randomTrack.releaseName}</a>
             </p>
-            <iframe class="lazymedia bandcampTrack small" src="https://bandcamp.com/EmbeddedPlayer/track=${randomTrack.bandcampID}/size=small/bgcol=2b2b2b/linkcol=cccccc/artwork=true/transparent=true/"></iframe>
+            [embed goes here]<!--<iframe class="lazymedia bandcampTrack small" src="https://bandcamp.com/EmbeddedPlayer/track=${randomTrack.bandcampID}/size=small/bgcol=2b2b2b/linkcol=cccccc/artwork=true/transparent=true/"></iframe>-->
             `;
-        }, 3000);
-    }
+        }, 2500);
+    },
+    loadRandomQuote() {
+        if (!quotes)
+            return;
+        RandomQuoteTyper.targetSelector = '.random-quote';
+        RandomQuoteTyper.typingSpeed = 60;
+        RandomQuoteTyper.init();
+        if (!RandomQuoteTyper.target)
+            return;
+        RandomQuoteTyper.target.addEventListener('click', (event) => {
+            RandomQuoteTyper.typeQuote();
+            event.preventDefault();
+        }, false);
+        RandomQuoteTyper.typeQuote();
+    },
 };

@@ -365,6 +365,15 @@ footer {
 
 
 
+.random-quote {
+    font-style: italic;
+    font-size: 1.2rem;
+
+    &.doneTyping {
+        cursor: pointer;
+    }
+}
+
 
 
 .imagepreviewTarget {

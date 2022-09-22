@@ -2,24 +2,31 @@ import { LazyMedia } from './vendor/LazyMedia.js'
 import { Scur } from './vendor/Scur.js'
 import { addTargetToExtLinks } from './vendor/addTargetToExtLinks.js'
 import { ImagePreview } from './ImagePreview.js'
+// import { quotes } from './quotes.js'
+import { RandomQuoteTyper } from './RandomQuoteTyper.js'
 
 
 export const App: AppInterface = {
     main(routeRequest = '') {
         console.log(`SPARTALIEN.COM${(routeRequest) ? ` :: ${routeRequest}` : ``}`)
 
-        // index page
+        // do this only on index page
         if (routeRequest == '') {
             // @ts-ignore: trackList is defined in app/protected/page/index.php
             if (trackList) {
-                let randomAudioTarget: HTMLDivElement|null = document.querySelector('.random-audio') || null
-
                 setTimeout(() => {
+                    let randomAudioTarget: HTMLDivElement|null = document.querySelector('.random-audio') || null
                     this.loadRandomTrack(randomAudioTarget)
                 }, 3_000)
             }
+
+            setTimeout(() => {
+                this.loadRandomQuote()
+            }, 15_000)
+
         }
 
+        // do this everywhere
         LazyMedia.embed()
         Scur.deobElements()
         ImagePreview.init()
@@ -44,8 +51,26 @@ export const App: AppInterface = {
                 from the ${randomTrack.releaseType}
                 <a href="${randomTrack.releaseRoute}">${randomTrack.releaseName}</a>
             </p>
-            <iframe class="lazymedia bandcampTrack small" src="https://bandcamp.com/EmbeddedPlayer/track=${randomTrack.bandcampID}/size=small/bgcol=2b2b2b/linkcol=cccccc/artwork=true/transparent=true/"></iframe>
+            [embed goes here]<!--<iframe class="lazymedia bandcampTrack small" src="https://bandcamp.com/EmbeddedPlayer/track=${randomTrack.bandcampID}/size=small/bgcol=2b2b2b/linkcol=cccccc/artwork=true/transparent=true/"></iframe>-->
             `
-        }, 3_000)
-    }
+        }, 2_500)
+    },
+
+    loadRandomQuote() {
+        // @ts-ignore
+        if (!quotes) return
+
+        RandomQuoteTyper.targetSelector = '.random-quote'
+        RandomQuoteTyper.typingSpeed = 60
+        RandomQuoteTyper.init()
+
+        if (!RandomQuoteTyper.target) return;
+
+        RandomQuoteTyper.target.addEventListener('click', (event) => {
+            RandomQuoteTyper.typeQuote()
+            event.preventDefault()
+        }, false)
+
+        RandomQuoteTyper.typeQuote()
+    },
 }

@@ -24,6 +24,7 @@ $trackList = jsonEncode($trackList, JSON_THROW_ON_ERROR | JSON_UNESCAPED_UNICODE
 
 <div class="text-align-center">
     <div class="random-audio"></div>
+    <div class="random-quote"></div>
 </div>
 
 
@@ -32,4 +33,8 @@ $trackList = jsonEncode($trackList, JSON_THROW_ON_ERROR | JSON_UNESCAPED_UNICODE
 
 <script>
     const trackList = <?php print($trackList.PHP_EOL); ?>
+</script>
+
+<script type="module">
+    import { quotes } from './res/quotes.js'
 </script>
