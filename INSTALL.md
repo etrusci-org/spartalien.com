@@ -33,7 +33,7 @@ Open `app/protected/conf.php` to make final edits and set `APP_MODE_PRODUCTION` 
 ### 2. Purge Cache
 
 ```sh
-rm app/protected/cache/*.*
+rm -v /home/protected/v8.app/cache/*
 ```
 
 ### 3. Generate Valid Requests File

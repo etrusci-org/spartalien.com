@@ -21,7 +21,9 @@ Keep `/home/protected/v8.app/cache/validrequests.php` or overwrite if updated.
 
 ```sh
 ssh spartalien
-rm -v /home/protected/v8.app/cache/*.*
+rm -v /home/protected/v8.app/cache/mixcloud-*
+rm -v /home/protected/v8.app/cache/route-*
+rm -v /home/protected/v8.app/cache/searchresult-*
 ```
 
 ## 4. Turn Off Maintenance Mode On The Production Server
