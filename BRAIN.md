@@ -14,3 +14,6 @@ Todos and ideas in no particular order.
 - atom feed for ~~news and~~ maybe audio too
 - maybe simple site wide search
 - somehow automate import quotes into streamelements for !quote command
+- load only required methods for a page, e.g. decouple a lot from app.php and move that into the page files or separate module files, keep shared stuff in app or separate shared module
+- cache version.php
+- morespacer.svg should be downward pointing arrows
