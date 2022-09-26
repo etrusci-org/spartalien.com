@@ -1,5 +1,8 @@
 <?php
-define('VERSION', array(
+declare(strict_types=1);
+
+
+define('VERSION', [
     'favicon' => filemtime('favicon.ico'),
     'og' => filemtime('res/og.jpg'),
     'css' => filemtime('res/style.min.css'),
@@ -10,4 +13,4 @@ define('VERSION', array(
             glob('res/*.js'),
             glob('res/vendor/*.js'),
         ))),
-));
+]);
