@@ -89,7 +89,9 @@ class WebApp {
     }
 
 
-    public function routeURL(string $request = ''): string {
+    public function routeURL(string $request = '', array $stringValues = []): string {
+        $request = vsprintf($request, $stringValues);
+
         if ($this->conf['rewriteURL']) {
             return $request;
         }
