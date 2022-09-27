@@ -40,14 +40,14 @@ print('</div>');
 
 
 if ($searchResult['resultCountTotal'] > 0) {
-    $typeTitle = array(
+    $typeTitle = [
         'audioRelease' => 'MUSIC RELEASES',
         'audio' => 'MUSIC TRACKS',
         'visual' => 'VISUAL',
         'stuff' => 'STUFF',
         'news' => 'NEWS',
         'planet420' => 'PLANET 420 TRACK HISTORY',
-    );
+    ];
 
     foreach ($searchResult['result'] as $type => $result) {
         print('<div class="box">');
