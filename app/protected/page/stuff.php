@@ -92,7 +92,7 @@ if ($stuffList) {
         printf('
             <li><a href="%1$s"%3$s>%2$s</a></li>
             ',
-            $this->routeURL(sprintf('stuff/id:%1$s', $v['id'])),
+            $this->routeURL('stuff/id:%s', [$v['id']]),
             $v['stuffName'],
             (isset($this->route['var']['id']) && $this->route['var']['id'] == $v['id']) ? ' class="active"' : '',
         );
