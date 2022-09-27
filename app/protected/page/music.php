@@ -234,7 +234,7 @@ if ($releaseList) {
             </div>
             ',
             $v['id'],
-            $this->routeURL(sprintf('music/id:%s', $v['id'])),
+            $this->routeURL('music/id:%s', [$v['id']]),
             $v['releaseName'],
             $v['releaseType'],
             sprintf(ngettext('%s track', '%s tracks', $v['trackCount']), $v['trackCount']),
