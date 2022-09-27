@@ -1,7 +1,7 @@
 @echo off
 
 :: etrusci-org/nifty/main
-curl -o ./app/protected/lib/vendor/WebApp.php             https://raw.githubusercontent.com/etrusci-org/nifty/b4f161db016ad484529980582d942f7a0cc52c74/php/WebApp.php
+:: outdated: curl -o ./app/protected/lib/vendor/WebApp.php             https://raw.githubusercontent.com/etrusci-org/nifty/b4f161db016ad484529980582d942f7a0cc52c74/php/WebApp.php
 curl -o ./app/protected/lib/vendor/WebRouter.php          https://raw.githubusercontent.com/etrusci-org/nifty/b4f161db016ad484529980582d942f7a0cc52c74/php/WebRouter.php
 curl -o ./app/protected/lib/vendor/DatabaseSQLite3.php    https://raw.githubusercontent.com/etrusci-org/nifty/b4f161db016ad484529980582d942f7a0cc52c74/php/DatabaseSQLite3.php
 curl -o ./app/protected/lib/vendor/MixcloudData.php       https://raw.githubusercontent.com/etrusci-org/nifty/b4f161db016ad484529980582d942f7a0cc52c74/php/MixcloudData.php
