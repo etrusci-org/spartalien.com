@@ -399,7 +399,7 @@ class App extends WebApp {
                 $v['releaseType'] = str_replace('Digital ', '', $v['releaseType']);
                 $filter[] = [
                     $v['releaseType'],
-                    $this->routeURL(sprintf('music/type:%s', strtolower($v['releaseType']))),
+                    $this->routeURL('music/type:%s', [strtolower($v['releaseType'])]),
                     isset($this->route['var']['type']) && strtolower($this->route['var']['type']) == strtolower($v['releaseType']),
                 ];
             }
@@ -429,7 +429,7 @@ class App extends WebApp {
                 foreach ($dump as $v) {
                     $filter[] = [
                         $v['year'],
-                        $this->routeURL(sprintf('music/year:%s', $v['year'])),
+                        $this->routeURL('music/year:%s', [$v['year']]),
                         isset($this->route['var']['year']) && $this->route['var']['year'] == $v['year'],
                     ];
                 }
