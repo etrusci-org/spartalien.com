@@ -2,7 +2,7 @@
 require __DIR__.'/../conf.php';
 require_once __DIR__.'/../lib/vendor/jsonEncode.php';
 
-$validRequests = array();
+$validRequests = [];
 
 printf('parsing %d route patterns...'.PHP_EOL, count($conf['validRequestPatterns']));
 
@@ -34,7 +34,7 @@ foreach ($conf['validRequestPatterns'] as $requestPattern) {
 
 printf('baked %d valid request strings...'.PHP_EOL, count($validRequests));
 
-$validRequests = sprintf('<?php define(\'VALID_REQUESTS\', array(%1$s)); ?>'.PHP_EOL, implode(',', $validRequests));
+$validRequests = sprintf('<?php define(\'VALID_REQUESTS\', [%1$s]); ?>'.PHP_EOL, implode(',', $validRequests));
 
 file_put_contents(__DIR__.'/../cache/validrequests.php', $validRequests);
 
