@@ -14,11 +14,11 @@ class App extends WebApp {
     protected function getSearchResult(int $queryLengthMin = 3, int $queryLengthMax = 30): array {
         $query = (isset($_POST['query'])) ? strtolower(trim($_POST['query'])) : null;
         $cacheFile = null;
-        $searchResult = array(
+        $searchResult = [
             'query' => null,
             'resultCountTotal' => 0,
-            'result' => array(),
-        );
+            'result' => [],
+        ];
 
         if (isset($_POST['search']) &&
             isset($query) &&
@@ -53,9 +53,9 @@ class App extends WebApp {
                     LOWER(audioRelease.releaseName) LIKE :query
                 ORDER
                     BY LOWER(audioRelease.releaseName) ASC;';
-                $v = array(
-                    array('query', sprintf('%%%1$s%%', $query), SQLITE3_TEXT),
-                );
+                $v = [
+                    ['query', sprintf('%%%1$s%%', $query), SQLITE3_TEXT],
+                ];
                 $r = $this->DB->query($q, $v);
                 if ($r) {
                     foreach ($r as $k => $v) {
@@ -81,9 +81,9 @@ class App extends WebApp {
                     LOWER(audioName) LIKE :query
                 ORDER BY
                     LOWER(audioName) ASC;';
-                $v = array(
-                    array('query', sprintf('%%%1$s%%', $query), SQLITE3_TEXT),
-                );
+                $v = [
+                    ['query', sprintf('%%%1$s%%', $query), SQLITE3_TEXT],
+                ];
                 $r = $this->DB->query($q, $v);
                 if ($r) {
                     $searchResult['result']['audio']['resultCount'] = count($r);
@@ -100,9 +100,9 @@ class App extends WebApp {
                     LOWER(visualName) LIKE :query
                 ORDER BY
                     LOWER(visualName) ASC;';
-                $v = array(
-                    array('query', sprintf('%%%1$s%%', $query), SQLITE3_TEXT),
-                );
+                $v = [
+                    ['query', sprintf('%%%1$s%%', $query), SQLITE3_TEXT],
+                ];
                 $r = $this->DB->query($q, $v);
                 if ($r) {
                     $searchResult['result']['visual']['resultCount'] = count($r);
@@ -119,9 +119,9 @@ class App extends WebApp {
                     LOWER(stuffName) LIKE :query
                 ORDER BY
                     LOWER(stuffName) ASC;';
-                $v = array(
-                    array('query', sprintf('%%%1$s%%', $query), SQLITE3_TEXT),
-                );
+                $v = [
+                    ['query', sprintf('%%%1$s%%', $query), SQLITE3_TEXT],
+                ];
                 $r = $this->DB->query($q, $v);
                 if ($r) {
                     $searchResult['result']['stuff']['resultCount'] = count($r);
@@ -140,9 +140,9 @@ class App extends WebApp {
                     LOWER(items) LIKE :query
                 ORDER BY
                     postedOn DESC;';
-                $v = array(
-                    array('query', sprintf('%%%1$s%%', $query), SQLITE3_TEXT),
-                );
+                $v = [
+                    ['query', sprintf('%%%1$s%%', $query), SQLITE3_TEXT],
+                ];
                 $r = $this->DB->query($q, $v);
                 if ($r) {
                     foreach ($r as $k => $v) {
@@ -166,9 +166,9 @@ class App extends WebApp {
                     LOWER(trackName) LIKE :query
                 ORDER BY
                     LOWER(artistName) ASC, LOWER(trackName) ASC;';
-                $v = array(
-                    array('query', sprintf('%%%1$s%%', $query), SQLITE3_TEXT),
-                );
+                $v = [
+                    ['query', sprintf('%%%1$s%%', $query), SQLITE3_TEXT],
+                ];
                 $r = $this->DB->query($q, $v);
                 if ($r) {
                     $searchResult['result']['planet420']['resultCount'] = count($r);
@@ -202,7 +202,7 @@ class App extends WebApp {
 
 
     protected function getNews(string $mode): array {
-        $data = array();
+        $data = [];
 
         switch ($mode) {
             case 'list':
@@ -235,9 +235,9 @@ class App extends WebApp {
                     WHERE id = :id
                     ORDER BY postedOn DESC;';
 
-                    $v = array(
-                        array('id', $this->route['var']['id'], SQLITE3_TEXT),
-                    );
+                    $v = [
+                        ['id', $this->route['var']['id'], SQLITE3_TEXT],
+                    ];
 
                     $dump = $this->DB->querySingle($q, $v);
                     if ($dump) {
@@ -252,18 +252,18 @@ class App extends WebApp {
     }
 
 
-    protected function getAudio(string $mode, array $kwargs=array()): array {
-        $data = array();
+    protected function getAudio(string $mode, array $kwargs=[]): array {
+        $data = [];
 
         switch ($mode) {
             case 'releaseList':
                 $w = '';
-                $v = array();
+                $v = [];
 
                 // type
                 if (isset($this->route['var']['type'])) {
                     $w = sprintf('WHERE lower(audioReleaseType.typeName) = :type');
-                    $v[] = array('type', strtolower($this->route['var']['type']), SQLITE3_TEXT);
+                    $v[] = ['type', strtolower($this->route['var']['type']), SQLITE3_TEXT];
                 }
 
                 // collab
@@ -279,7 +279,7 @@ class App extends WebApp {
                 // year
                 if (isset($this->route['var']['year'])) {
                     $w = 'WHERE substr(audioRelease.releasedOn, 1, 4) = :year OR substr(audioRelease.updatedOn, 1, 4) = :year';
-                    $v[] = array('year', $this->route['var']['year'], SQLITE3_TEXT);
+                    $v[] = ['year', $this->route['var']['year'], SQLITE3_TEXT];
                 }
 
                 $q = sprintf('
@@ -351,9 +351,9 @@ class App extends WebApp {
                     LEFT JOIN audioReleaseType ON audioReleaseType.id = audioRelease.audioReleaseTypeID
                     WHERE audioRelease.id = :id;';
 
-                    $v = array(
-                        array('id', $id, SQLITE3_INTEGER),
-                    );
+                    $v = [
+                        ['id', $id, SQLITE3_INTEGER],
+                    ];
 
                     $dump = $this->DB->querySingle($q, $v);
 
@@ -377,14 +377,14 @@ class App extends WebApp {
 
 
     protected function getAudioFilter(): array {
-        $filter = array();
+        $filter = [];
 
         // all
-        $filter[] = array(
+        $filter[] = [
             'All',
             $this->routeURL('music'),
             (empty($this->route['var']) && empty($this->route['flag'])) || isset($this->route['var']['id']),
-        );
+        ];
 
         // types
         $q = '
@@ -397,26 +397,26 @@ class App extends WebApp {
         if ($dump) {
             foreach ($dump as $v) {
                 $v['releaseType'] = str_replace('Digital ', '', $v['releaseType']);
-                $filter[] = array(
+                $filter[] = [
                     $v['releaseType'],
                     $this->routeURL(sprintf('music/type:%s', strtolower($v['releaseType']))),
                     isset($this->route['var']['type']) && strtolower($this->route['var']['type']) == strtolower($v['releaseType']),
-                );
+                ];
             }
 
             // collab
-            $filter[] = array(
+            $filter[] = [
                 'Collab',
                 $this->routeURL('music/collab'),
                 in_array('collab', $this->route['flag']),
-            );
+            ];
 
             // free to download
-            $filter[] = array(
+            $filter[] = [
                 'FreeDL',
                 $this->routeURL('music/freedl'),
                 in_array('freedl', $this->route['flag']),
-            );
+            ];
 
             // years
             $q = '
@@ -427,20 +427,20 @@ class App extends WebApp {
             $dump = $this->DB->query($q);
             if ($dump) {
                 foreach ($dump as $v) {
-                    $filter[] = array(
+                    $filter[] = [
                         $v['year'],
                         $this->routeURL(sprintf('music/year:%s', $v['year'])),
                         isset($this->route['var']['year']) && $this->route['var']['year'] == $v['year'],
-                    );
+                    ];
                 }
             }
 
             // dj mixes
-            $filter[] = array(
+            $filter[] = [
                 'DJ Mixes',
                 $this->routeURL('djmixes'),
                 null,
-            );
+            ];
         }
 
         return $filter;
@@ -448,7 +448,7 @@ class App extends WebApp {
 
 
     protected function getAudioByID(int|array $id): array {
-        $data = array();
+        $data = [];
 
         $q = '
         SELECT
@@ -465,9 +465,9 @@ class App extends WebApp {
         WHERE id = :id;';
 
         if (is_int($id)) {
-            $v = array(
-                array('id', $id, SQLITE3_INTEGER),
-            );
+            $v = [
+                ['id', $id, SQLITE3_INTEGER],
+            ];
             $dump = $this->DB->querySingle($q, $v);
             if ($dump) {
                 $dump['artist'] = $this->getArtistByID(jsonDecode($dump['artistIDs']));
@@ -480,9 +480,9 @@ class App extends WebApp {
 
         if (is_array($id)) {
             foreach ($id as $v) {
-                $v = array(
-                    array('id', $v, SQLITE3_INTEGER),
-                );
+                $v = [
+                    ['id', $v, SQLITE3_INTEGER],
+                ];
                 $dump = $this->DB->querySingle($q, $v);
 
                 if ($dump) {
@@ -500,7 +500,7 @@ class App extends WebApp {
 
 
     protected function getArtistByID(int|array $id): array {
-        $data = array();
+        $data = [];
 
         $q = '
         SELECT
@@ -511,9 +511,9 @@ class App extends WebApp {
         WHERE id = :id;';
 
         if (is_int($id)) {
-            $v = array(
-                array('id', $id, SQLITE3_INTEGER),
-            );
+            $v = [
+                ['id', $id, SQLITE3_INTEGER],
+            ];
             $dump = $this->DB->querySingle($q, $v);
             if ($dump) {
                 $data = $dump;
@@ -522,9 +522,9 @@ class App extends WebApp {
 
         if (is_array($id)) {
             foreach ($id as $i) {
-                $v = array(
-                    array('id', $i, SQLITE3_INTEGER),
-                );
+                $v = [
+                    ['id', $i, SQLITE3_INTEGER],
+                ];
                 $dump = $this->DB->querySingle($q, $v);
                 if ($dump) {
                     $data[] = $dump;
@@ -536,8 +536,8 @@ class App extends WebApp {
     }
 
 
-    protected function getPlanet420(string $mode, array $kwargs=array()): array {
-        $data = array();
+    protected function getPlanet420(string $mode, array $kwargs=[]): array {
+        $data = [];
 
         $sessionNum = null;
         if (isset($kwargs['num'])) {
@@ -593,9 +593,9 @@ class App extends WebApp {
                         p420session.sessionNum;
                     ';
 
-                    $v = array(
-                        array('sessionNum', $sessionNum, SQLITE3_INTEGER),
-                    );
+                    $v = [
+                        ['sessionNum', $sessionNum, SQLITE3_INTEGER],
+                    ];
 
                     $dump = $this->DB->querySingle($q, $v);
                     if ($dump) {
@@ -619,9 +619,9 @@ class App extends WebApp {
                         timeStart ASC;
                     ';
 
-                    $v = array(
-                        array('sessionNum', $sessionNum, SQLITE3_INTEGER),
-                    );
+                    $v = [
+                        ['sessionNum', $sessionNum, SQLITE3_INTEGER],
+                    ];
 
                     $dump = $this->DB->query($q, $v);
                     if ($dump) {
@@ -655,8 +655,8 @@ class App extends WebApp {
     }
 
 
-    protected function getVisual(string $mode, array $kwargs=array()): array {
-        $data = array();
+    protected function getVisual(string $mode, array $kwargs=[]): array {
+        $data = [];
 
         switch ($mode) {
 
@@ -709,9 +709,9 @@ class App extends WebApp {
                     WHERE
                         id = :id;';
 
-                    $v = array(
-                        array('id', $id, SQLITE3_INTEGER),
-                    );
+                    $v = [
+                        ['id', $id, SQLITE3_INTEGER],
+                    ];
 
                     $dump = $this->DB->querySingle($q, $v);
 
@@ -728,8 +728,8 @@ class App extends WebApp {
     }
 
 
-    protected function getStuff(string $mode, array $kwargs=array()): array {
-        $data = array();
+    protected function getStuff(string $mode, array $kwargs=[]): array {
+        $data = [];
 
         switch ($mode) {
             case 'list':
@@ -777,9 +777,9 @@ class App extends WebApp {
                     WHERE
                         id = :id;';
 
-                    $v = array(
-                        array('id', $id, SQLITE3_INTEGER),
-                    );
+                    $v = [
+                        ['id', $id, SQLITE3_INTEGER],
+                    ];
 
                     $dump = $this->DB->querySingle($q, $v);
 
@@ -796,7 +796,7 @@ class App extends WebApp {
 
 
     protected function getExit(string $mode): array {
-        $data = array();
+        $data = [];
 
         switch ($mode) {
             case 'list':
@@ -825,21 +825,21 @@ class App extends WebApp {
 
 
     protected function parseLazyInput(string $input): string|array|null {
-        $patterns = array(
+        $patterns = [
             '/\n/', // linefeed
             '/\[b\](.*?)\[\/b\]/', // [b]bold[/b]
             '/\[i\](.*?)\[\/i\]/', // [i]italic[/i]
             '/\[url=(.*?)\](.*?)\[\/url\]/', // [url=link_url]link_text[/url]
             '/\[route=(.*?)\](.*?)\[\/route\]/', // [route=route_request]link_text[/route]
-        );
+        ];
 
-        $replacements = array(
+        $replacements = [
             '<br>',
             '<strong>$1</strong>',
             '<em>$1</em>',
             '<a href="$1" rel="nofollow">$2</a>',
             sprintf('<a href="%1$s">%2$s</a>', $this->routeURL('$1'), '$2'),
-        );
+        ];
 
         return preg_replace($patterns, $replacements, $input);
     }
@@ -848,12 +848,12 @@ class App extends WebApp {
     static protected function secondsToString(int $seconds): string {
         $s = max(0, $seconds);
 
-        $dur = array(
+        $dur = [
             'd' => floor($s / (3600 * 24)),
             'h' => floor($s % (3600 * 24) / 3600),
             'm' => floor($s % 3600 / 60),
             's' => floor($s % 60),
-        );
+        ];
 
         if ($dur['d'] > 0) {
             return sprintf('%d:%02d:%02d:%02d', $dur['d'], $dur['h'], $dur['m'], $dur['s']);
