@@ -20,19 +20,7 @@ print('<?xml version="1.0" encoding="utf-8"?>'.PHP_EOL);
         $items = implode(' + ', array_map(function(string $v): string {
             return $this->parseLazyInput($v);
         }, $v['items']));
-        printf('
-            <entry>
-                <title>NEWS FROM %3$s</title>
-                <link href="%2$s"/>
-                <id>tag:spartalien.com,%3$s:news-%1$s</id>
-                <updated>%3$sT00:00:00Z</updated>
-                <author>
-                    <name>SPARTALIEN</name>
-                </author>
-                <content>
-                    %4$s
-                </content>
-            </entry>',
+        printf('<entry><title>NEWS FROM %3$s</title><link href="%2$s"/><id>tag:spartalien.com,%3$s:news-%1$s</id><updated>%3$sT00:00:00Z</updated><author><name>SPARTALIEN</name></author><content>%4$s</content></entry>',
             $v['id'],
             sprintf('%1$s%2$s', $this->conf['baseURL'], $this->routeURL('news/id:%s', [$v['id']])),
             $v['postedOn'],
