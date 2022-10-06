@@ -71,7 +71,7 @@ if ($newsList) {
                 %4$s
             </li>',
             $v['postedOn'],
-            $this->routeURL(sprintf('news/id:%s', $v['id'])),
+            $this->routeURL('news/id:%s', [$v['id']]),
             (isset($this->route['var']['id']) && $this->route['var']['id'] == $v['id']) ? ' class="active"' : '',
             $items,
         );

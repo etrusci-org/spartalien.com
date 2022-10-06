@@ -65,16 +65,16 @@ if ($releaseByID) {
     );
 
 
+    // meta nfo
     print('<div class="meta">');
-        // meta nfo
-        print(implode(', ', array_filter(array(
-            $rls['releaseType'],
-            sprintf(ngettext('%s track', '%s tracks', $rls['trackCount']), $rls['trackCount']),
-            (count($rls['artist']) > 1) ? 'Collaboration' : null,
-            sprintf('Released %1$s', $rls['releasedOn']),
-            ($rls['updatedOn']) ? sprintf('Updated %s', $rls['updatedOn']) : null,
-            ($rls['labelName']) ? sprintf('Label %s', sprintf('<a href="%1$s">%2$s</a>', $rls['labelURL'], $rls['labelName'])) : null,
-        ))));
+    print(implode(', ', array_filter([
+        $rls['releaseType'],
+        sprintf(ngettext('%s track', '%s tracks', $rls['trackCount']), $rls['trackCount']),
+        (count($rls['artist']) > 1) ? 'Collaboration' : null,
+        sprintf('Released %1$s', $rls['releasedOn']),
+        ($rls['updatedOn']) ? sprintf('Updated %s', $rls['updatedOn']) : null,
+        ($rls['labelName']) ? sprintf('Label %s', sprintf('<a href="%1$s">%2$s</a>', $rls['labelURL'], $rls['labelName'])) : null,
+    ])));
     print('</div>');
 
 
@@ -234,7 +234,7 @@ if ($releaseList) {
             </div>
             ',
             $v['id'],
-            $this->routeURL(sprintf('music/id:%s', $v['id'])),
+            $this->routeURL('music/id:%s', [$v['id']]),
             $v['releaseName'],
             $v['releaseType'],
             sprintf(ngettext('%s track', '%s tracks', $v['trackCount']), $v['trackCount']),

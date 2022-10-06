@@ -1,17 +1,17 @@
 <?php
-$trackList = array();
+$trackList = [];
 
 $releaseList = $this->getAudio('releaseList');
 foreach ($releaseList as $k => $v) {
     $trackList = array_merge($trackList, array_map(function(array $t) use ($v): array {
-        $t = array(
+        $t = [
             'audioID' => $t['id'],
             'audioName' => $t['audioName'],
             'bandcampID' => $t['bandcampID'],
             'releaseType' => $v['releaseType'],
             'releaseName' => $v['releaseName'],
-            'releaseRoute' => $this->routeURL(sprintf('music/id:%1$s', $v['id'])),
-        );
+            'releaseRoute' => $this->routeURL('music/id:%1$s', [$v['id']]),
+        ];
         return $t;
     }, $this->getAudioByID($v['audioIDs'])));
 }
