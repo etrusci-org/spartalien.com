@@ -83,8 +83,8 @@ if ($visualList) {
                 %4$s, %5$s
             </div>
             ',
-            $this->routeURL(sprintf('visual/id:%1$s', $v['id'])),
-            sprintf('file/visual/%1$s-tn.jpg', $v['id']),
+            $this->routeURL('visual/id:%s', [$v['id']]),
+            sprintf('file/visual/%s-tn.jpg', $v['id']),
             $v['visualName'],
             implode(' ', $v['tags']),
             $v['createdOn'],

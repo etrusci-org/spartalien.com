@@ -163,7 +163,7 @@ if ($archiveList) {
             $v['trackCount'],
             $this->secondsToString($v['sessionDur']),
             $v['sessionDate'],
-            $this->routeURL(sprintf('planet420/session/num:%s', $v['sessionNum'])),
+            $this->routeURL('planet420/session/num:%s', [$v['sessionNum']]),
             (isset($this->route['var']['num']) && $this->route['var']['num'] == $v['sessionNum']) ? ' class="active"' : '',
         );
     }

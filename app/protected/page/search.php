@@ -40,14 +40,14 @@ print('</div>');
 
 
 if ($searchResult['resultCountTotal'] > 0) {
-    $typeTitle = array(
+    $typeTitle = [
         'audioRelease' => 'MUSIC RELEASES',
         'audio' => 'MUSIC TRACKS',
         'visual' => 'VISUAL',
         'stuff' => 'STUFF',
         'news' => 'NEWS',
         'planet420' => 'PLANET 420 TRACK HISTORY',
-    );
+    ];
 
     foreach ($searchResult['result'] as $type => $result) {
         print('<div class="box">');
@@ -58,7 +58,7 @@ if ($searchResult['resultCountTotal'] > 0) {
         if ($type == 'audioRelease') {
             foreach ($result['items'] as $v) {
                 printf('<li><a href="%1$s">%2$s</a> &middot; <span class="meta">%5$s &middot; %6$s %7$s</span></li>',
-                    $this->routeURL(sprintf('music/id:%1$s', $v['id'])),
+                    $this->routeURL('music/id:%s', [$v['id']]),
                     str_ireplace($searchResult['query'], sprintf('<span class="strmatch">%1$s</span>', $searchResult['query']), $v['releaseName']),
                     ($v['trackCount'] > 1) ? 'Album' : 'Track',
                     $v['bandcampID'],
@@ -85,7 +85,7 @@ if ($searchResult['resultCountTotal'] > 0) {
         if ($type == 'visual') {
             foreach ($result['items'] as $v) {
                 printf('<li><a href="%1$s">%2$s</a></li>',
-                    $this->routeURL(sprintf('visual/id:%1$s', $v['id'])),
+                    $this->routeURL('visual/id:%s', [$v['id']]),
                     str_ireplace($searchResult['query'], sprintf('<span class="strmatch">%1$s</span>', $searchResult['query']), $v['visualName']),
                     sprintf('file/visual/%1$s-tn.jpg', $v['id']),
                 );
@@ -96,7 +96,7 @@ if ($searchResult['resultCountTotal'] > 0) {
         if ($type == 'stuff') {
             foreach ($result['items'] as $v) {
                 printf('<li><a href="%1$s">%2$s</a></li>',
-                    $this->routeURL(sprintf('stuff/id:%1$s', $v['id'])),
+                    $this->routeURL('stuff/id:%s', [$v['id']]),
                     str_ireplace($searchResult['query'], sprintf('<span class="strmatch">%1$s</span>', $searchResult['query']), $v['stuffName']),
                 );
             }
@@ -113,7 +113,7 @@ if ($searchResult['resultCountTotal'] > 0) {
                 }, $v['items']);
 
                 printf('<li><a href="%1$s">%2$s</a> &middot; %3$s</li>',
-                    $this->routeURL(sprintf('news/id:%1$s', $v['id'])),
+                    $this->routeURL('news/id:%s', [$v['id']]),
                     $v['postedOn'],
                     implode(' + ', $newsItems),
                 );
@@ -125,7 +125,7 @@ if ($searchResult['resultCountTotal'] > 0) {
             foreach ($result['items'] as $v) {
                 printf('<li>%3$s - %4$s &middot; @%5$s in <a href="%2$s">Session #%1$s</a></li>',
                     $v['sessionNum'],
-                    $this->routeURL(sprintf('planet420/session/num:%1$s', $v['sessionNum'])),
+                    $this->routeURL('planet420/session/num:%s', [$v['sessionNum']]),
                     str_ireplace($searchResult['query'], sprintf('<span class="strmatch">%1$s</span>', $searchResult['query']), $v['artistName']),
                     str_ireplace($searchResult['query'], sprintf('<span class="strmatch">%1$s</span>', $searchResult['query']), $v['trackName']),
                     $this->secondsToString($v['timeStart']),
