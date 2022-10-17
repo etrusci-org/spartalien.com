@@ -8,6 +8,6 @@ csso \
     --stat \
     --comments none \
     --input-source-map auto \
-    --source-map none \
+    --source-map file \
     --input $input \
     --output $output
