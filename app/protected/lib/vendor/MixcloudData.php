@@ -1,7 +1,4 @@
 <?php
-// ----------------
-// WORK IN PROGRESS
-// ----------------
 declare(strict_types=1);
 
 
@@ -29,7 +26,7 @@ class MixcloudData {
             $curl = curl_init($url);
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
-            if (isset($this->ram['nextRequestOn']) && $this->ram['nextRequestOn'] >= microtime(true)) {
+            if (isset($this->ram['nextRequestOn']) && $this->ram['nextRequestOn'] > microtime(true)) {
                 time_sleep_until($this->ram['nextRequestOn']);
             }
             $data = curl_exec($curl);

@@ -27,13 +27,7 @@
         {
             "label": "tsc-watch",
             "type": "shell",
-            "command": "./tool/tsc-watch.cmd",
-            "options": {
-                "shell": {
-                    "executable": "powershell.exe",
-                    "args": []
-                }
-            },
+            "command": "./tool/tsc-watch.sh",
             "isBackground": true,
             "problemMatcher": [],
             "presentation": {
@@ -43,13 +37,7 @@
         {
             "label": "sass-watch",
             "type": "shell",
-            "command": "./tool/sass-watch.cmd",
-            "options": {
-                "shell": {
-                    "executable": "powershell.exe",
-                    "args": []
-                }
-            },
+            "command": "./tool/sass-watch.sh",
             "isBackground": true,
             "problemMatcher": [],
             "presentation": {
@@ -59,13 +47,7 @@
         {
             "label": "csso-watch",
             "type": "shell",
-            "command": "./tool/csso-watch.cmd",
-            "options": {
-                "shell": {
-                    "executable": "powershell.exe",
-                    "args": []
-                }
-            },
+            "command": "./tool/csso-watch.sh",
             "isBackground": true,
             "problemMatcher": [],
             "presentation": {
@@ -75,13 +57,7 @@
         {
             "label": "gen-validrequests",
             "type": "shell",
-            "command": "D:/xampp/php/php.exe ./app/protected/bin/1-gen-validrequests.php",
-            "options": {
-                "shell": {
-                    "executable": "powershell.exe",
-                    "args": []
-                }
-            },
+            "command": "php ./app/protected/bin/1-gen-validrequests.php",
             "isBackground": true,
             "problemMatcher": [],
             "presentation": {

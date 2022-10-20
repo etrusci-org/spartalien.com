@@ -1,6 +1,6 @@
-@echo off
+#!/usr/bin/env bash
 
-:: etrusci-org/nifty/main
+# etrusci-org/nifty/main
 curl -o ./app/protected/lib/vendor/WebApp.php             https://raw.githubusercontent.com/etrusci-org/nifty/9482f9b0a3e4b08a56972c806706dcefe9ec8128/php/WebApp.php
 curl -o ./app/protected/lib/vendor/WebRouter.php          https://raw.githubusercontent.com/etrusci-org/nifty/b4f161db016ad484529980582d942f7a0cc52c74/php/WebRouter.php
 curl -o ./app/protected/lib/vendor/DatabaseSQLite3.php    https://raw.githubusercontent.com/etrusci-org/nifty/b4f161db016ad484529980582d942f7a0cc52c74/php/DatabaseSQLite3.php
