@@ -262,7 +262,7 @@ class App extends WebApp {
 
                 // type
                 if (isset($this->route['var']['type'])) {
-                    $w = sprintf('WHERE lower(audioReleaseType.typeName) = :type');
+                    $w = 'WHERE lower(audioReleaseType.typeName) = :type';
                     $v[] = ['type', strtolower($this->route['var']['type']), SQLITE3_TEXT];
                 }
 
