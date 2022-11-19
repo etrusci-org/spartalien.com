@@ -29,11 +29,9 @@ if ($releaseByID) {
     // prepare stuff
     $rls = $releaseByID;
 
-    $platformBtnTpl = '<a href="%1$s" class="btn">%2$s</a>';
-
     $bandcampBtn = '';
     if ($rls['bandcampSlug']) {
-        $bandcampBtn = sprintf($platformBtnTpl,
+        $bandcampBtn = sprintf('<a href="%1$s" class="btn" title="Bandcamp"><img src="res/vendor/ico-bandcamp.svg"> %2$s</a>',
             $rls['bandcampHost'].$rls['bandcampSlug'].'?action=buy&from=embed',
             ($rls['freeToDownload']) ? 'FREE DOWNLOAD' : 'BUY',
         );
@@ -41,7 +39,7 @@ if ($releaseByID) {
 
     $spotifyBtn = '';
     if ($rls['spotifySlug']) {
-        $spotifyBtn = sprintf($platformBtnTpl,
+        $spotifyBtn = sprintf('<a href="%1$s" class="btn" title="Spotify"><img src="res/vendor/ico-spotify.svg"> %2$s</a>',
             $rls['spotifyHost'].$rls['spotifySlug'],
             'STREAM',
         );
@@ -224,6 +222,11 @@ if ($releaseList) {
     print('<div class="grid simple">');
 
     foreach ($releaseList as $v) {
+
+        if (!$v['releasedOn']) {
+            continue;
+        }
+
         printf('
             <div class="row text-align-center">
                 <a href="%2$s"%8$s>

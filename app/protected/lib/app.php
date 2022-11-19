@@ -423,6 +423,7 @@ class App extends WebApp {
             SELECT DISTINCT
                 substr(releasedOn, 1, 4) AS year
             FROM audioRelease
+            WHERE releasedOn IS NOT NULL
             ORDER BY releasedOn DESC;';
             $dump = $this->DB->query($q);
             if ($dump) {
