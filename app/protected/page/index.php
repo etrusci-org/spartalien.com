@@ -3,6 +3,10 @@ $trackList = [];
 
 $releaseList = $this->getAudio('releaseList');
 foreach ($releaseList as $k => $v) {
+    if (!$v['releasedOn']) {
+        continue;
+    }
+
     $trackList = array_merge($trackList, array_map(function(array $t) use ($v): array {
         $t = [
             'audioID' => $t['id'],

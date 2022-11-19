@@ -3,6 +3,7 @@ INSERT INTO "artist" ("id","artistName","artistURL") VALUES (1,'SPARTALIEN','//s
 INSERT INTO "artist" ("id","artistName","artistURL") VALUES (2,'Esblendet','//esblendet.ch');
 INSERT INTO "artist" ("id","artistName","artistURL") VALUES (3,'Stevie Lee Price','//twitter.com/STEVIELEEPRICE');
 INSERT INTO "artist" ("id","artistName","artistURL") VALUES (4,'ediblewaves','//ediblewaves.bandcamp.com');
+INSERT INTO "artist" ("id","artistName","artistURL") VALUES (5,'Orochi Hanma','//twitch.tv/orochihanma');
 INSERT INTO "audioReleaseType" ("id","typeName") VALUES (1,'Single');
 INSERT INTO "audioReleaseType" ("id","typeName") VALUES (2,'EP');
 INSERT INTO "audioReleaseType" ("id","typeName") VALUES (3,'Album');
@@ -62,7 +63,7 @@ INSERT INTO "news" ("id","postedOn","items") VALUES (50,'2021-06-07','["New musi
 INSERT INTO "news" ("id","postedOn","items") VALUES (51,'2021-08-13','["New music: [route=music/id:30]Flux[/route]"]');
 INSERT INTO "news" ("id","postedOn","items") VALUES (52,'2021-08-31','["New music: [route=music/id:31]ediblewaves - Haphe (SPARTALIEN''s Wicca Remix)[/route]"]');
 INSERT INTO "news" ("id","postedOn","items") VALUES (53,'2021-09-22','["New music: [route=music/id:32]UNTOLD STORIES[/route]","New music: [route=music/id:33]UNTOLD STORIES (Doomer''s Delight)[/route]"]');
-INSERT INTO "news" ("id","postedOn","items") VALUES (54,'2022-08-19','["Featured on: [route=stuff/id:26]SFTS - The Backrooms Comp[/route]"]');
+INSERT INTO "news" ("id","postedOn","items") VALUES (54,'2022-08-19','["Featured on: [route=stuff/id:26]SFTS: The Backrooms Comp[/route]"]');
 INSERT INTO "news" ("id","postedOn","items") VALUES (55,'2021-04-10','["Featured on: [route=stuff/id:12]ediblewaves'' YouTube Channel[/route]"]');
 INSERT INTO "news" ("id","postedOn","items") VALUES (56,'2020-11-18','["Featured on: [route=stuff/id:9]MighTV[/route]"]');
 INSERT INTO "news" ("id","postedOn","items") VALUES (57,'2020-11-29','["Featured on: [route=stuff/id:9]MighTV[/route]"]');
@@ -70,6 +71,7 @@ INSERT INTO "news" ("id","postedOn","items") VALUES (58,'2022-03-27','["Featured
 INSERT INTO "news" ("id","postedOn","items") VALUES (59,'2022-03-06','["Featured on: [route=stuff/id:13]Spooky Kitten Records'' WHiTMiRE Reviews Music[/route]"]');
 INSERT INTO "news" ("id","postedOn","items") VALUES (60,'2022-03-03','["Featured on: [route=stuff/id:27]Martina''s \"The Only Way Is Up\" Spotify Playlist[/route]"]');
 INSERT INTO "news" ("id","postedOn","items") VALUES (61,'2022-04-20','["Featured on: [route=stuff/id:28]Martina''s \"Add Some Music To Your Day\" Spotify Playlist[/route]"]');
+INSERT INTO "news" ("id","postedOn","items") VALUES (62,'2022-11-18','["Featured on: [route=stuff/id:29]SFTS: Experimental Ambient Compilation[/route]"]');
 INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (1,'Continuoduction',396,'[1]','2223569284','//spartalien.bandcamp.com','/track/continuoduction','//open.spotify.com','/track/2Clx7jPmYSA21DbB0FKxUR');
 INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (2,'I''ll Embrace You Again In Space',418,'[1]','1079688660','//spartalien.bandcamp.com','/track/ill-embrace-you-again-in-space','//open.spotify.com','/track/3QmCKvjLtKXS4vQD6822rf');
 INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (3,'Realize It''s Just A Ride',360,'[1]','4004833542','//spartalien.bandcamp.com','/track/realize-its-just-a-ride','//open.spotify.com','/track/7LwAhr4FxPmxhsM0X4C2h6');
@@ -211,6 +213,15 @@ INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","b
 INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (139,'Doomer''s Delight: Chapter 1',3324,'[1]','3516440910','//spartalien.bandcamp.com','/track/doomers-delight-chapter-1','//open.spotify.com','/track/3UVuargrscLQKAv7QCETnW');
 INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (140,'Doomer''s Delight: Chapter 2',2452,'[1]','3277061765','//spartalien.bandcamp.com','/track/doomers-delight-chapter-2','//open.spotify.com','/track/7reeFcYzOTzxSE8ruZ7KMS');
 INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (141,'Doomer''s Delight: Chapter 3',1812,'[1]','1653084213','//spartalien.bandcamp.com','/track/doomers-delight-chapter-3','//open.spotify.com','/track/1JktcLRqQL5kWDHG39Cxfa');
+INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (142,'Four Four Three',122,'[1]','1977301269','//spartalien.bandcamp.com','/track/four-four-three','//open.spotify.com',NULL);
+INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (143,'City Lights',134,'[1]','2062537666','//spartalien.bandcamp.com','/track/city-lights','//open.spotify.com',NULL);
+INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (144,'Final Adventure',121,'[1]','1133167014','//spartalien.bandcamp.com','/track/final-adventure','//open.spotify.com',NULL);
+INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (145,'El Loco',124,'[1]','612204742','//spartalien.bandcamp.com','/track/el-loco','//open.spotify.com',NULL);
+INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (146,'Tracked',99,'[1]','4212700537','//spartalien.bandcamp.com','/track/tracked','//open.spotify.com',NULL);
+INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (147,'Smoking Sea',224,'[1]','2967327075','//spartalien.bandcamp.com','/track/smoking-sea','//open.spotify.com',NULL);
+INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (148,'Four Four Three (We Ded Version)',122,'[1]','3035376497','//spartalien.bandcamp.com','/track/four-four-three-we-ded-version','//open.spotify.com',NULL);
+INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (149,'Final Adventure (Not A Tale Version)',121,'[1]','2767209598','//spartalien.bandcamp.com','/track/final-adventure-not-a-tale-version','//open.spotify.com',NULL);
+INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (150,'Smoking Sea (feat. Orochi Hanma)',227,'[1,5]','3571265655','//spartalien.bandcamp.com','/track/smoking-sea-feat-orochi-hanma','//open.spotify.com',NULL);
 INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1,1,0,'DJ Shadow','Lost And Found');
 INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (2,1,426,'Mo'' Horizons','Walk Into Space - Pt.1&11');
 INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (3,1,601,'Tosca','Chocolate Elvis (Baby Mammoth Version 2)');
@@ -1320,142 +1331,147 @@ INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (8,'X Minute
 INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (9,'[featured on] MighTV','The [url=//might.digital]Might[/url] crew invited me to create some music on their [url=//twitch.tv/might_live]livestream[/url].','[{"slug":"XWlvvSPq9E8","type":"youtubeVideo"},{"slug":"TTJBrAWgoNA","type":"youtubeVideo"}]');
 INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (10,'GhostTownTunes Jingles','Voiceovers/Jingles made for [url=//twitch.tv/ghosttowntunes]GhostTownTunes[/url].','[{"slug":"file/gtt-jingles/gtt-jingle-1.mp3","type":"audio"},{"slug":"file/gtt-jingles/gtt-jingle-1-neithernoisenordub.mp3","type":"audio"},{"slug":"file/gtt-jingles/gtt-jingle-1-nonoise.mp3","type":"audio"}]');
 INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (11,'[featured on] Shikantaza Creativity Interview','[url=//shikantaza.cyberpunkonline.net]Shikantaza Art[/url] asked me to answer some questions.','[{"attr":[["target","_blank"]],"slug":"file/shikantaza-creativity-interview-iii-spartalien.html","text":"Shikantaza Creativity Interview III","type":"link"}]');
-INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (12,'[featured on] ediblewaves'' YouTube Channel','ediblewaves [i]aka[/i] Klangachse invited me to hang out on his livestream.
-Also check out his [url=//ediblewaves.bandcamp.com]Bandcamp page[/url] and [url=https://www.youtube.com/channel/UClkNMKbwgzH8f26xJQy9fxg]YouTube channel[/url].
-
+INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (12,'[featured on] ediblewaves'' YouTube Channel','ediblewaves [i]aka[/i] Klangachse invited me to hang out on his livestream.
+Also check out his [url=//ediblewaves.bandcamp.com]Bandcamp page[/url] and [url=https://www.youtube.com/channel/UClkNMKbwgzH8f26xJQy9fxg]YouTube channel[/url].
+
 Starts at: 0:24:04','[{"slug":"syK2wY3uTpk","timeStart":1444,"type":"youtubeVideo"}]');
-INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (13,'[featured on] Spooky Kitten Records'' WHiTMiRE Reviews Music','[url=//spookykittenrecords.net]Michael Whitmire[/url] played [route=music/id:30]Flux (feat. Stevie Lee Price)[/route] on his music review show.
-
+INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (13,'[featured on] Spooky Kitten Records'' WHiTMiRE Reviews Music','[url=//spookykittenrecords.net]Michael Whitmire[/url] played [route=music/id:30]Flux (feat. Stevie Lee Price)[/route] on his music review show.
+
 Starts at: 1:46:27','[{"slug":"UsBWgNRUCyM","timeStart":6387,"type":"youtubeVideo"}]');
 INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (14,'[featured on] Resonate on CAMP Radio','[url=//theargentgrub.co.uk]David Carpenter[/url] (The Argent Grub) included [route=music/id:22]Rainbows & Unicorns[/route] in the Resonate playlist.','[{"slug":"/camp_fr/resonate-27th-march-2022/","type":"mixcloudMix"},{"slug":"//stream.resonate.coop/u/18562/playlist/resonate-2022-03-27-camp-radio","text":"Playlist on resonate.coop","type":"link"}]');
-INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (15,'[merchandise] Artefact S9M1, MONOLOG Limited Edition','Type: USB Flash Drive + Digital Album
-Released: 2018-06-10
-
-In May 2018, aerchologists have discovered five objects from an undisclosed location.
-All of the objects are made of an unknown black material and have the shape of a triangle. The border is painted white.
-On top, on the lower end of the triangles, a pattern of dots is visible. Every triangle has its own pattern. Theories evolved quickly around the dots and the most common one is, that these could be some sort of counter.
-Above the dot patterns, a small electronic device with an aluminum case is plugged into a rectangular slot.
-Above this slot, a twisted line points to the upper corner of the triangle. The aerchologists where startled when they found out that these strangely glow in the dark.
-
-A few days after the initial discovery, scientists found out that the aluminum devices in the slot are storage devices. Here is what they could decode:
-- MONOLOG album in three different file formats: WAV, FLAC, MP3
-- MONOLOG album to stream and download on Bandcamp.
-- PDF file with the album information and lyrics.
-- High resoultion album cover.
-- Bonus album track- and promo art.
-- Art, documents, photos and videos to watch/read while/after listening to the album.
-
+INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (15,'[merchandise] Artefact S9M1, MONOLOG Limited Edition','Type: USB Flash Drive + Digital Album
+Released: 2018-06-10
+
+In May 2018, aerchologists have discovered five objects from an undisclosed location.
+All of the objects are made of an unknown black material and have the shape of a triangle. The border is painted white.
+On top, on the lower end of the triangles, a pattern of dots is visible. Every triangle has its own pattern. Theories evolved quickly around the dots and the most common one is, that these could be some sort of counter.
+Above the dot patterns, a small electronic device with an aluminum case is plugged into a rectangular slot.
+Above this slot, a twisted line points to the upper corner of the triangle. The aerchologists where startled when they found out that these strangely glow in the dark.
+
+A few days after the initial discovery, scientists found out that the aluminum devices in the slot are storage devices. Here is what they could decode:
+- MONOLOG album in three different file formats: WAV, FLAC, MP3
+- MONOLOG album to stream and download on Bandcamp.
+- PDF file with the album information and lyrics.
+- High resoultion album cover.
+- Bonus album track- and promo art.
+- Art, documents, photos and videos to watch/read while/after listening to the album.
+
 Digital release is [route=music/id:13]there[/route].','[{"slug":"//spartalien.bandcamp.com/merch/artefact-s9m1-monolog-limited-edition?action=buy","text":"SOLD OUT","type":"link"},{"slug":"file/merch-monolog/1.jpg","type":"image"},{"slug":"file/merch-monolog/2.jpg","type":"image"},{"slug":"file/merch-monolog/3.jpg","type":"image"},{"slug":"file/merch-monolog/4.jpg","type":"image"},{"slug":"file/merch-monolog/5.jpg","type":"image"},{"slug":"file/merch-monolog/6.jpg","type":"image"},{"slug":"file/merch-monolog/7.png","type":"image"}]');
-INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (16,'[merchandise] Memoria S9M2, 2358 Limited Edition','Type: Audio-CD + Digital Album
-Released: 2019-08-13
-
-"They all feel the same."
-
-This is the limited CD edition of the 2358 album. Limited edition of 7.
-
-Contains:
-- 2358 album Audio-CD.
-- 2358 album to stream and download on Bandcamp.
-- Original character drawing (Pencil, 12x12cm).
-- CD Jewel Case with handwritten front and back Inlay.
-- A real four-leaved clover.
-- Love.
-
+INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (16,'[merchandise] Memoria S9M2, 2358 Limited Edition','Type: Audio-CD + Digital Album
+Released: 2019-08-13
+
+"They all feel the same."
+
+This is the limited CD edition of the 2358 album. Limited edition of 7.
+
+Contains:
+- 2358 album Audio-CD.
+- 2358 album to stream and download on Bandcamp.
+- Original character drawing (Pencil, 12x12cm).
+- CD Jewel Case with handwritten front and back Inlay.
+- A real four-leaved clover.
+- Love.
+
 Digital release is [route=music/id:16]there[/route].','[{"slug":"//spartalien.bandcamp.com/merch/memoria-s9m2-2358-limited-edition?action=buy","text":"BUY","type":"link"},{"slug":"file/merch-2358/all.jpg","type":"image"},{"slug":"file/merch-2358/package1of7.jpg","type":"image"},{"slug":"file/merch-2358/package2of7.jpg","type":"image"},{"slug":"file/merch-2358/package3of7.jpg","type":"image"},{"slug":"file/merch-2358/package4of7.jpg","type":"image"},{"slug":"file/merch-2358/package5of7.jpg","type":"image"},{"slug":"file/merch-2358/package6of7.jpg","type":"image"},{"slug":"file/merch-2358/package7of7.jpg","type":"image"}]');
-INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (17,'[merchandise] Logo T-Shirt, S9M3','Type: T-Shirt
-Released: 2020-07-06
-
-Official logo on a comfortable unisex T-Shirt.
-
-Material: 100% Cotton, Oeko-Tex Standard 100
-Colors: black on white, white on black
-Sizes: small, medium, large
-Weight: 145 g/m²
+INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (17,'[merchandise] Logo T-Shirt, S9M3','Type: T-Shirt
+Released: 2020-07-06
+
+Official logo on a comfortable unisex T-Shirt.
+
+Material: 100% Cotton, Oeko-Tex Standard 100
+Colors: black on white, white on black
+Sizes: small, medium, large
+Weight: 145 g/m²
 Washing: max. 40°C, inside-out, similiar colors, don''t iron over the print','[{"slug":"//spartalien.bandcamp.com/merch/logo-t-shirt-s9m3?action=buy","text":"BUY","type":"link"},{"slug":"file/merch-tshirt/1.jpg","type":"image"},{"slug":"file/merch-tshirt/2.jpg","type":"image"},{"slug":"file/merch-tshirt/3.jpg","type":"image"},{"slug":"file/merch-tshirt/4.jpg","type":"image"},{"slug":"file/merch-tshirt/5.jpg","type":"image"}]');
-INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (18,'[merchandise] Logo Sticker, S9M4','Type: Sticker
-Released: 2020-07-22
-
-Official logo on a Sticker.
-
-Colors: black on white, white on black
+INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (18,'[merchandise] Logo Sticker, S9M4','Type: Sticker
+Released: 2020-07-22
+
+Official logo on a Sticker.
+
+Colors: black on white, white on black
 Sizes: 58x70mm, 62x82mm, 80x100mm','[{"slug":"//spartalien.bandcamp.com/merch/logo-sticker-s9m4?action=buy","text":"BUY","type":"link"},{"slug":"file/merch-sticker/whiteonblack.jpg","type":"image"},{"slug":"file/merch-sticker/blackonwhite.jpg","type":"image"}]');
-INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (19,'[merchandise] Memory S9M5, FLOATING HIGH Limited Edition CD-R','Type: Audio CD + Digital Album
-Released: 2021-01-01
-
-This is the limited CD edition of the FLOATING HIGH album. Limited edition of 5.
-
-Contains:
-- FLOATING HIGH album Audio-CD.
-- FLOATING HIGH album to stream and download on Bandcamp.
-- Includes bonus track: A Night With My Imaginary Friend.
-- CD jewel case, cover and disc printed, handwritten tracklist.
-
+INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (19,'[merchandise] Memory S9M5, FLOATING HIGH Limited Edition CD-R','Type: Audio CD + Digital Album
+Released: 2021-01-01
+
+This is the limited CD edition of the FLOATING HIGH album. Limited edition of 5.
+
+Contains:
+- FLOATING HIGH album Audio-CD.
+- FLOATING HIGH album to stream and download on Bandcamp.
+- Includes bonus track: A Night With My Imaginary Friend.
+- CD jewel case, cover and disc printed, handwritten tracklist.
+
 Digital release is [route=music/id:27]there[/route].','[{"slug":"//spartalien.bandcamp.com/merch/memory-s9m5-floating-high-limited-edition-cd-r?action=buy","text":"SOLD OUT","type":"link"},{"slug":"file/merch-floatinghigh-cd/1.jpg","type":"image"},{"slug":"file/merch-floatinghigh-cd/2.jpg","type":"image"},{"slug":"file/merch-floatinghigh-cd/8.jpg","type":"image"},{"slug":"file/merch-floatinghigh-cd/3.jpg","type":"image"},{"slug":"file/merch-floatinghigh-cd/4.jpg","type":"image"},{"slug":"file/merch-floatinghigh-cd/5.jpg","type":"image"},{"slug":"file/merch-floatinghigh-cd/6.jpg","type":"image"},{"slug":"file/merch-floatinghigh-cd/7.jpg","type":"image"}]');
-INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (20,'[merchandise] Memory S9M6, FLOATING HIGH Limited Edition USB-Stick','Type: USB Flash Drive + Digital Album
-Released: 2021-01-01
-
-This is the limited USB-Stick edition of the FLOATING HIGH album. Limited edition of 7.
-
-Contains:
-- FLOATING HIGH album in three different file formats: WAV, FLAC, MP3
-- FLOATING HIGH album to stream and download on Bandcamp.
-- Includes bonus track: A Night With My Imaginary Friend.
-- Metal cast USB-Stick (16GB, USB 3.1, FAT32, Win/Mac/Linux).
-- Unique piece of wood to use as a stand for the USB-Stick. All were cut from the same tree branch.
-- Cover art in different sizes including high resolution.
-- Photos to watch while listening to the album.
-
-[b]Warning[/b] for allergy sufferers: Wood was treated with a bit of coconut fat.
-
+INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (20,'[merchandise] Memory S9M6, FLOATING HIGH Limited Edition USB-Stick','Type: USB Flash Drive + Digital Album
+Released: 2021-01-01
+
+This is the limited USB-Stick edition of the FLOATING HIGH album. Limited edition of 7.
+
+Contains:
+- FLOATING HIGH album in three different file formats: WAV, FLAC, MP3
+- FLOATING HIGH album to stream and download on Bandcamp.
+- Includes bonus track: A Night With My Imaginary Friend.
+- Metal cast USB-Stick (16GB, USB 3.1, FAT32, Win/Mac/Linux).
+- Unique piece of wood to use as a stand for the USB-Stick. All were cut from the same tree branch.
+- Cover art in different sizes including high resolution.
+- Photos to watch while listening to the album.
+
+[b]Warning[/b] for allergy sufferers: Wood was treated with a bit of coconut fat.
+
 Digital release is [route=music/id:27]there[/route].','[{"slug":"//spartalien.bandcamp.com/merch/memory-s9m6-floating-high-limited-edition-usb-stick?action=buy","text":"BUY","type":"link"},{"slug":"file/merch-floatinghigh-usb/1.jpg","type":"image"},{"slug":"file/merch-floatinghigh-usb/2.jpg","type":"image"},{"slug":"file/merch-floatinghigh-usb/3.jpg","type":"image"}]');
-INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (21,'[samplepack] S9SP1 - 2358 Sample Pack','Type: Sample Pack
-Released: 2020-09-08
-License: non-exclusive + royalty free
-Total samples: 888
-Format: WAV
-Bitdepth: 24
-Samplerate: 48''000
-Uncompressed size: 259 MB
-
-888 samples originally recorded and edited in August 2018, for the album 2358.
-Please see [url=file/samplepack-2358/INFO.html]INFO.html[/url] for (a lot) more information.
+INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (21,'[samplepack] S9SP1 - 2358 Sample Pack','Type: Sample Pack
+Released: 2020-09-08
+License: non-exclusive + royalty free
+Total samples: 888
+Format: WAV
+Bitdepth: 24
+Samplerate: 48''000
+Uncompressed size: 259 MB
+
+888 samples originally recorded and edited in August 2018, for the album 2358.
+Please see [url=file/samplepack-2358/INFO.html]INFO.html[/url] for (a lot) more information.
 Previews include white noise so ripping makes no sense. Purchased downloads will not have this. You will get a ZIP file with all samples as individual WAV files.','[{"slug":"//spartalien.bandcamp.com/album/s9sp1-2358-sample-pack?action=buy","text":"BUY","type":"link"},{"slug":"file/samplepack-2358/cover.jpg","type":"image"},{"slug":"4205248668","trackCount":7,"type":"bandcampAlbum"}]');
-INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (22,'[samplepack] S9SP2 - Trip Construction Kit 1','Type: Sample Pack
-Released: 2021-01-13
-License: non-exclusive + royalty free
-Total samples: 135
-Format: WAV
-Bitdepth: 24
-Samplerate: 48''000
-Uncompressed size: 3.26 GB
-
-135 trippy samples for you to create something new out of it ;-) Dark and sometimes noisy but also melodic and rhythmic. Often with a psychedelic touch.
-All previews were created with these samples. Feel free to send me yours and it may get added to the list. The only rule is: use only samples from the pack as source for the preview.
+INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (22,'[samplepack] S9SP2 - Trip Construction Kit 1','Type: Sample Pack
+Released: 2021-01-13
+License: non-exclusive + royalty free
+Total samples: 135
+Format: WAV
+Bitdepth: 24
+Samplerate: 48''000
+Uncompressed size: 3.26 GB
+
+135 trippy samples for you to create something new out of it ;-) Dark and sometimes noisy but also melodic and rhythmic. Often with a psychedelic touch.
+All previews were created with these samples. Feel free to send me yours and it may get added to the list. The only rule is: use only samples from the pack as source for the preview.
 Please see [url=file/samplepack-tck1/INFO.txt]INFO.txt[/url] for more information.','[{"slug":"//spartalien.bandcamp.com/album/s9sp2-trip-construction-kit-1?action=buy","text":"FREE DOWNLOAD","type":"link"},{"slug":"//freesound.org/people/SPARTALIEN/packs/34122","text":"Official Mirror on freesound.org","type":"link"},{"slug":"file/samplepack-tck1/cover.jpg","type":"image"},{"slug":"2056130812","trackCount":11,"type":"bandcampAlbum"}]');
 INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (23,'Music Videos','All music videos in one place. Sorted chronologically from newest to oldest.','[{"slug":"mseAapnJomY","type":"youtubeVideo"},{"slug":"mE4p5UV62sw","type":"youtubeVideo"},{"slug":"FUErhO5OW1M","type":"youtubeVideo"},{"slug":"4HLmwToUeXw","type":"youtubeVideo"},{"slug":"D3Ud0r4eVAI","type":"youtubeVideo"},{"slug":"h0U94dfeDig","type":"youtubeVideo"},{"slug":"qzoyH1sxyTE","type":"youtubeVideo"},{"slug":"D0GvSMubkFw","type":"youtubeVideo"},{"slug":"EwzH5ggyp8o","type":"youtubeVideo"},{"slug":"cRHFzY99dto","type":"youtubeVideo"},{"slug":"rXBqQgStAa8","type":"youtubeVideo"},{"slug":"bIkI9L_eC8o","type":"youtubeVideo"},{"slug":"voQh6jUyByo","type":"youtubeVideo"},{"slug":"voQh6jUyByo","type":"youtubeVideo"},{"slug":"Rc1cSKHdXK4","type":"youtubeVideo"},{"slug":"e38lxhkfrXE","type":"youtubeVideo"},{"slug":"jjpsrGAH1Vk","type":"youtubeVideo"},{"slug":"Yf_Q5zuvdOQ","type":"youtubeVideo"},{"slug":"EbiUIUY7Juo","type":"youtubeVideo"},{"slug":"KYNIayrc074","type":"youtubeVideo"},{"slug":"v3aCJysvutk","type":"youtubeVideo"},{"slug":"cC4vSYqYbYA","type":"youtubeVideo"},{"slug":"QZovE8JDsXU","type":"youtubeVideo"}]');
-INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (24,'[featured on] Bento Box, Vol. 2','A second delicious dose of Kaiseki Digital for your enjoyment.
-
-Released 2019-03-29 on [url=//kaisekidigital.bandcamp.com]Kaiseki Digital[/url].
-
+INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (24,'[featured on] Bento Box, Vol. 2','A second delicious dose of Kaiseki Digital for your enjoyment.
+
+Released 2019-03-29 on [url=//kaisekidigital.bandcamp.com]Kaiseki Digital[/url].
+
 I contributed track 1.','[{"slug":"//kaisekidigital.bandcamp.com/album/bento-box-vol-2-2?action=buy","text":"BUY","type":"link"},{"slug":"file/compilation/kaiseki-digital-bento-box-2.jpg","type":"image"},{"slug":"1720724288","trackCount":17,"type":"bandcampAlbum"}]');
-INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (25,'[featured on] the fencepost reclamation project volume 5','This is the fifth volume of an open-ended remix project of Fencepost material originally released by Evelyn Records in 2002.
-
-Released 2018-10-24 on [url=//lessthanone.bandcamp.com]<1[/url].
-
+INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (25,'[featured on] the fencepost reclamation project volume 5','This is the fifth volume of an open-ended remix project of Fencepost material originally released by Evelyn Records in 2002.
+
+Released 2018-10-24 on [url=//lessthanone.bandcamp.com]<1[/url].
+
 I contributed track 116 + 117.','[{"slug":"//lessthanone.bandcamp.com/album/the-fencepost-reclamation-project-volume-5?action=buy","text":"BUY","type":"link"},{"slug":"file/compilation/lessthanone-fencepost-reclamation-5.jpg","type":"image"},{"slug":"692713614","trackCount":141,"type":"bandcampAlbum"}]');
-INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (26,'[featured on] SFTS - The Backrooms Comp','If you''re not careful and you noclip out of reality in the wrong areas, you''ll end up in the Backrooms, where it''s nothing but the stink of old moist carpet, the madness of mono-yellow, the endless background noise of fluorescent lights at maximum hum-buzz, and approximately six hundred million square miles of randomly segmented empty rooms to be trapped in. God save you if you hear something wandering around nearby, because it sure as hell has heard you."
-
-Based on a concept created by 4chan, 35 artists took part in this compilation to make the listener feel as if they are experiencing the never-ending dimensions of the backrooms.
-
-Released 2022-08-19 on [url=//soundsforthesoul.bandcamp.com]Sounds for the Soul Records[/url].
-
+INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (26,'[featured on] SFTS: The Backrooms Comp','If you''re not careful and you noclip out of reality in the wrong areas, you''ll end up in the Backrooms, where it''s nothing but the stink of old moist carpet, the madness of mono-yellow, the endless background noise of fluorescent lights at maximum hum-buzz, and approximately six hundred million square miles of randomly segmented empty rooms to be trapped in. God save you if you hear something wandering around nearby, because it sure as hell has heard you."
+
+Based on a concept created by 4chan, 35 artists took part in this compilation to make the listener feel as if they are experiencing the never-ending dimensions of the backrooms.
+
+Released 2022-08-19 on [url=//soundsforthesoul.bandcamp.com]Sounds for the Soul Records[/url].
+
 I contributed track 5.','[{"slug":"//soundsforthesoul.bandcamp.com/album/sfts-the-backrooms-comp?action=buy","text":"BUY","type":"link"},{"slug":"file/compilation/soundsforthesoul-the-backrooms-comp.jpg","type":"image"},{"slug":"1319476427","trackCount":35,"type":"bandcampAlbum"}]');
-INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (27,'[featured on] Martina''s "The Only Way Is Up" Spotify Playlist','Martina creates weekly playlists. You can find more playlists on her [url=https://open.spotify.com/user/m0o63p2xyamfpkw2xg4mw26nc]Spotify profile[/url].
-
+INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (27,'[featured on] Martina''s "The Only Way Is Up" Spotify Playlist','Martina creates weekly playlists. You can find more playlists on her [url=https://open.spotify.com/user/m0o63p2xyamfpkw2xg4mw26nc]Spotify profile[/url].
+
 I contributed track 2.','[{"slug":"//open.spotify.com/playlist/76N7Pb1bVUtnUNQY7WaoQv","text":"Listen on Spotify","type":"link"}]');
-INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (28,'[featured on] Martina''s "Add Some Music To Your Day" Spotify Playlist','Martina creates weekly playlists. You can find more playlists on her [url=https://open.spotify.com/user/m0o63p2xyamfpkw2xg4mw26nc]Spotify profile[/url].
-
+INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (28,'[featured on] Martina''s "Add Some Music To Your Day" Spotify Playlist','Martina creates weekly playlists. You can find more playlists on her [url=https://open.spotify.com/user/m0o63p2xyamfpkw2xg4mw26nc]Spotify profile[/url].
+
 I contributed track 1.','[{"slug":"//open.spotify.com/playlist/2ZMHB9cATYVoCfJNq1XgFa","text":"Listen on Spotify","type":"link"}]');
+INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (29,'[featured on] SFTS: Experimental Ambient Compilation','Another fine compilation from Sounds for the Soul Records. This time exploring experimental ambient.
+
+Released 2022-11-18 on [url=//soundsforthesoul.bandcamp.com]Sounds for the Soul Records[/url].
+
+I contributed track 7.','[{"slug":"//soundsforthesoul.bandcamp.com/album/sfts-experimental-ambient-compilation?action=buy","text":"BUY","type":"link"},{"slug":"file/compilation/soundsforthesoul-experimental-ambient-comp.jpg","type":"image"},{"slug":"3359373587","trackCount":39,"type":"bandcampAlbum"}]');
 INSERT INTO "p420session" ("id","sessionNum","sessionDate","sessionDur","mixcloudHost","mixcloudSlug") VALUES (1,1,'2021-05-04',10370,'//mixcloud.com',NULL);
 INSERT INTO "p420session" ("id","sessionNum","sessionDate","sessionDur","mixcloudHost","mixcloudSlug") VALUES (2,2,'2021-05-06',10371,'//mixcloud.com','/lowtechman/planet-4202/');
 INSERT INTO "p420session" ("id","sessionNum","sessionDate","sessionDur","mixcloudHost","mixcloudSlug") VALUES (3,3,'2021-05-09',13173,'//mixcloud.com','/lowtechman/planet-4203/');
@@ -1530,6 +1546,7 @@ INSERT INTO "exit" ("id","linkText","url") VALUES (30,'Kaiseki Digital','//kaise
 INSERT INTO "exit" ("id","linkText","url") VALUES (31,'ayefelon','//ayefelon.bandcamp.com');
 INSERT INTO "exit" ("id","linkText","url") VALUES (32,'Sounds for the Soul Records','//soundsforthesoul.bandcamp.com');
 INSERT INTO "exit" ("id","linkText","url") VALUES (33,'Martina''s Spotify Playlists','//open.spotify.com/user/m0o63p2xyamfpkw2xg4mw26nc/playlists');
+INSERT INTO "exit" ("id","linkText","url") VALUES (34,'Mind of La E','//mindoflae.com');
 INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (1,'[1]','Continuoduction','[1]',NULL,1,'2016-03-24',NULL,'The marking of a fresh start.','["Cover art photo - NASA (nasa.gov)"]','[]','[{"slug":"QZovE8JDsXU","type":"youtubeVideo"}]',1,'2223569284','//spartalien.bandcamp.com','/track/continuoduction','//open.spotify.com','/track/2Clx7jPmYSA21DbB0FKxUR');
 INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (2,'[2]','I''ll Embrace You Again In Space','[1]',NULL,1,'2016-10-13',NULL,'Thinking of the moment and place when the time''s over.','["Cover art photo - NASA (nasa.gov)"]','[]','[{"slug":"cC4vSYqYbYA","type":"youtubeVideo"}]',0,'1079688660','//spartalien.bandcamp.com','/track/ill-embrace-you-again-in-space','//open.spotify.com','/track/3QmCKvjLtKXS4vQD6822rf');
 INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (3,'[3]','Realize It''s Just A Ride','[1]',NULL,1,'2017-03-13',NULL,'Don''t be afraid.','["Speech - Dr. Timothy Leary (leary.com)"]','[]','[{"slug":"cC4vSYqYbYA","type":"youtubeVideo"}]',0,'1079688660','//spartalien.bandcamp.com','/track/ill-embrace-you-again-in-space','//open.spotify.com','/track/3QmCKvjLtKXS4vQD6822rf');
@@ -1542,63 +1559,64 @@ INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID",
 INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (10,'[10]','Martina','[1]',NULL,1,'2017-09-22',NULL,'Being back in town for a moment.','["Cover art photo - A.N.A.M.F. (anamf.it)"]','[]','[]',0,'924988911','//spartalien.bandcamp.com','/track/martina','//open.spotify.com','/track/6FSbzkJMMxfi9o2QopDW2W');
 INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (11,'[11]','Time','[1]',NULL,1,'2017-10-22',NULL,'When you stop the time for a moment.','[]','[]','[]',0,'2055198430','//spartalien.bandcamp.com','/track/time','//open.spotify.com','/track/3AGRNrD23jzBOThTUGvygn');
 INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (12,'[12]','Every Day','[1]',NULL,1,'2018-02-27',NULL,'Dedicating this track to all the lonely robots in space.','["Cover art photo - NASA (nasa.gov)"]','[]','[{"slug":"hbqMU8nkFNs","type":"youtubeVideo"}]',0,'30233859','//spartalien.bandcamp.com','/track/every-day','//open.spotify.com','/track/3XStzziKE8h0Hzw6cT5OAd');
-INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (13,'[13,14,15,16,17,18,19,20,21,22,23,24,25]','MONOLOG','[1]',NULL,3,'2018-05-13',NULL,'Stereophonic pictures recorded by a brain. A deep dive into the abyss of instincts. A honest and unfiltered output of the feelings from an alien that has lost his star map. Trying to dismantle the potential answers to unanswered questions. Faith. Loss. Nostalgia. Change. Life. Death. For you and them. All of us.
-
+INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (13,'[13,14,15,16,17,18,19,20,21,22,23,24,25]','MONOLOG','[1]',NULL,3,'2018-05-13',NULL,'Stereophonic pictures recorded by a brain. A deep dive into the abyss of instincts. A honest and unfiltered output of the feelings from an alien that has lost his star map. Trying to dismantle the potential answers to unanswered questions. Faith. Loss. Nostalgia. Change. Life. Death. For you and them. All of us.
+
 Limited physical edition is [route=stuff/id:15]there[/route].','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between October 2017 and February 2018.","Speech - Movie \"Plan 9 from Outer Space\" (tracks: 1, 4, 7, 10, 11, 13)","Vocals - Esblendet (track: 11)","Didgeridoo - Esblendet (tracks: 1, 4, 7, 13)"]','["Lots of vibes to Esblendet for... everything. I love you."]','[]',0,'2581651186','//spartalien.bandcamp.com','/album/monolog','//open.spotify.com','/album/2KnU3c5IXpYtHsdJLYS47D');
 INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (14,'[26]','Searching','[1]',NULL,1,'2018-08-13',NULL,'When you stop satisfying expectations and embrace the beginning of the end.','[]','[]','[]',0,'1571954667','//spartalien.bandcamp.com','/track/searching','//open.spotify.com','/track/0zFZIbuKaLJ0bm9MecHfk0');
 INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (15,'[27,28,29,30]','THE GREAT FILTER','[1]',NULL,2,'2018-08-31',NULL,'When humans get blinded by reality, we must tell them the truth.','["Recorded, composed, mixed and mastered by SPARTALIEN","Speech - Robert Jamison (track: 1)","Speech - John Maynard (track: 2)","Speech - Dr. Carolin Rosin (track: 3)","Speech - Robert Hastings (track: 4)"]','[]','[]',0,'3617310353','//spartalien.bandcamp.com','/album/the-great-filter','//open.spotify.com','/album/052gFoANpMCUET2C21MUqh');
-INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (16,'[31,32,33,34,35,36,37,38,39,40,41,42,43]','2358','[1]',NULL,3,'2019-03-13',NULL,'You wander and stumble. Through space and time. Literally. Soul searching and yearning for the one thing nobody has ever seen, but most have felt... Suddenly, something flickers from the glare of your slowly dying flashlight. "That''s not what I''m looking for!", you think. Nonetheless, your ingrained curiosity is stronger... It''s an ancient recording device with some magnetic cassette tapes lying right beside it.; dust-layered, it kind of looks like it was left here on purpose... One tape is still loaded in the recorder deck. "Whatever! It''s 2 minutes to midnight anyway.", you think - and hit the play button.
-
+INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (16,'[31,32,33,34,35,36,37,38,39,40,41,42,43]','2358','[1]',NULL,3,'2019-03-13',NULL,'You wander and stumble. Through space and time. Literally. Soul searching and yearning for the one thing nobody has ever seen, but most have felt... Suddenly, something flickers from the glare of your slowly dying flashlight. "That''s not what I''m looking for!", you think. Nonetheless, your ingrained curiosity is stronger... It''s an ancient recording device with some magnetic cassette tapes lying right beside it.; dust-layered, it kind of looks like it was left here on purpose... One tape is still loaded in the recorder deck. "Whatever! It''s 2 minutes to midnight anyway.", you think - and hit the play button.
+
 Limited physical edition is [route=stuff/id:16]there[/route].','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between August 2018 and March 2019.","Speech - Dr. Jordan B Peterson (jordanbpeterson.com), from the \"2017 Personality 04/05: Heroic and Shamanic Initiations\" lecture (youtube.com/watch?v=wLc_MC7NQek) (track: 2)","Kid calling sample - Klankbeeld (freesound.org/people/klankbeeld) (track: 6)","Didgeridoo - Esblendet (track: 8)","Background vocals - Esblendet (track: 12)"]','[]','[{"slug":"Yf_Q5zuvdOQ","type":"youtubeVideo"},{"slug":"Roib2OdFF2U","type":"youtubeVideo"}]',0,'1596302206','//spartalien.bandcamp.com','/album/2358','//open.spotify.com','/album/74TE0Q53NLubkkZyHm8bNJ');
-INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (17,'[44]','Frozen Memories','[1]',1,1,'2019-03-29',NULL,'Do you remember, when everything was moving?
-
+INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (17,'[44]','Frozen Memories','[1]',1,1,'2019-03-29',NULL,'Do you remember, when everything was moving?
+
 Made for [route=stuff/id:24]Bento Box Vol. 2[/route].','[]','[]','[]',0,'286448283','//spartalien.bandcamp.com','/track/frozen-memories','//open.spotify.com','/track/6rSSRx7JdtdWdbNn7gS5Pl');
-INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (18,'[45,46,47,50,51,52,53,59,62,76]','BRAIN I/O','[1]',NULL,3,'2019-06-09','2020-07-13','Very personal and raw mind exploration.
-
-New output will be added over time to this album...
+INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (18,'[45,46,47,50,51,52,53,59,62,76]','BRAIN I/O','[1]',NULL,3,'2019-06-09','2020-07-13','Very personal and raw mind exploration.
+
+New output will be added over time to this album...
 2019-06-09: #1, 2019-06-13: #2, 2019-07-02: #3, 2019-07-12: #4, 2019-07-20: #5, 2019-08-15: #6, 2019-12-12: #7, 2019-12-28: #8, 2020-04-23: #9, 2020-07-13: #10','["Didgeridoo - Esblendet (track: 9)","Some Vocals - Esblendet (track: 9)"]','[]','[{"slug":"PLGOlCfPCyZ4HXSGHqzH54kjHcIc79tJC5","type":"youtubePlaylist"},{"slug":"FUErhO5OW1M","type":"youtubeVideo"}]',0,'2810895713','//spartalien.bandcamp.com','/album/brain-i-o','//open.spotify.com','/playlist/2LF6a2ASNVlKiutk1tADG9');
-INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (19,'[48]','They Shot My Friend','[1]',2,1,'2019-07-07',NULL,'Dedicated to Sina. Rest in peace my friend. I will neither forget nor forgive what they did to you.
-
+INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (19,'[48]','They Shot My Friend','[1]',2,1,'2019-07-07',NULL,'Dedicated to Sina. Rest in peace my friend. I will neither forget nor forgive what they did to you.
+
 Made for [route=stuff/id:25]the fencepost reclamation project volume 5[/route].','["Some foley samples from the Fencepost material originally released by Evelyn Records in 2002 provided by <1 (lessthanone.bandcamp.com)"]','[]','[]',0,'3891255445','//spartalien.bandcamp.com','/track/they-shot-my-friend','//open.spotify.com','/track/6gcULl01jPOsWwn2EwVWHM');
-INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (20,'[49]','The Sad Lightness Of Being','[1]',2,1,'2019-07-07',NULL,'A story about being strong, but still vulnerable.
-
+INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (20,'[49]','The Sad Lightness Of Being','[1]',2,1,'2019-07-07',NULL,'A story about being strong, but still vulnerable.
+
 Made for [route=stuff/id:25]the fencepost reclamation project volume 5[/route].','["Some foley samples from the Fencepost material originally released by Evelyn Records in 2002 provided by <1 (lessthanone.bandcamp.com)"]','[]','[]',0,'2901018221','//spartalien.bandcamp.com','/track/the-sad-lightness-of-being','//open.spotify.com','/track/2onyU5yxSx9FhxtBgGoykG');
 INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (21,'[54,55,56,57]','KEEN','[1]',NULL,2,'2019-12-13',NULL,'History is over and the future is just an idea.','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) in November 2019."]','[]','[{"slug":"OLAK5uy_kzqRHNeABeBfON3ukcbuzvUWAWYbw8TQ4","type":"youtubePlaylist"}]',0,'2895888302','//spartalien.bandcamp.com','/album/keen','//open.spotify.com','/album/7iQax3iHA9OilsTq9dM2nl');
 INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (22,'[58]','SPARTALIEN & Esblendet - Rainbows & Unicorns','[1,2]',NULL,1,'2019-12-23',NULL,'For your mellow (xmas) days.','["Pan Drum - Esblendet","Guzheng - Esblendet","Cover Unicorn - Unknown Artist","Cover Rainbow Texture - kitti851"]','[]','[]',1,'2223839995','//spartalien.bandcamp.com','/track/rainbows-unicorns','//open.spotify.com','/track/3flUCe6A3SQWJ86hMP0xpU');
-INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (23,'[60,61]','LET IT ALL GO, Volume 1','[1]',NULL,3,'2020-02-13',NULL,'Sit back and relax. Breathe slowly. Try to focus on one thought at a time. Let your emotions flow, but do not let them overwhelm you. Deconstruct your thoughts. Study each little part. Understand, or accept your confusion for now. You do not have energy. You are energy. Everything is here. In your mind. Peace, you can find. Repeat.
-
+INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (23,'[60,61]','LET IT ALL GO, Volume 1','[1]',NULL,3,'2020-02-13',NULL,'Sit back and relax. Breathe slowly. Try to focus on one thought at a time. Let your emotions flow, but do not let them overwhelm you. Deconstruct your thoughts. Study each little part. Understand, or accept your confusion for now. You do not have energy. You are energy. Everything is here. In your mind. Peace, you can find. Repeat.
+
 Purchases on Bandcamp include 24bit/48kHz versions of both the Original and Waveless Mix.','[]','[]','[{"slug":"D0GvSMubkFw","type":"youtubeVideo"},{"slug":"a8GS5Iw0UyU","type":"youtubeVideo"}]',0,'3162557576','//spartalien.bandcamp.com','/album/let-it-all-go-volume-1','//open.spotify.com','/album/5tQQhtJuFAa1IjOnBNLLzX');
-INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (24,'[63,64,65,66,67,68,69,70,71,72,73,74,75]','1996','[1]',NULL,3,'2020-06-26',NULL,'When the past never ends.
-The future never begins.
-One can only be.
-Forever young.
-
+INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (24,'[63,64,65,66,67,68,69,70,71,72,73,74,75]','1996','[1]',NULL,3,'2020-06-26',NULL,'When the past never ends.
+The future never begins.
+One can only be.
+Forever young.
+
 When you listen to this album, remember that times and situations change, but your heart doesn''t have to necessarily.','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between March and June 2020."]','[]','[]',0,'3288578507','//spartalien.bandcamp.com','/album/1996','//open.spotify.com','/album/2ASJu0rQC3x7WiCwBN0VuL');
-INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (25,'[77,78,79,80]','LET IT ALL GO, Volume 2','[1]',NULL,3,'2020-09-03',NULL,'Sit back and relax. Breathe slowly. Try to focus on one thought at a time. Let your emotions flow, but do not let them overwhelm you. Deconstruct your thoughts. Study each little part. Understand, or accept your confusion for now. You do not have energy. You are energy. Everything is here. In your mind. Peace, you can find. Repeat.
-
+INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (25,'[77,78,79,80]','LET IT ALL GO, Volume 2','[1]',NULL,3,'2020-09-03',NULL,'Sit back and relax. Breathe slowly. Try to focus on one thought at a time. Let your emotions flow, but do not let them overwhelm you. Deconstruct your thoughts. Study each little part. Understand, or accept your confusion for now. You do not have energy. You are energy. Everything is here. In your mind. Peace, you can find. Repeat.
+
 Track 2 (Binaural Headphone Mix) should be listened on good stereo headphones or it may sound strange. It has binaural beats operating at a frequency of ~1-2Hz (delta pattern).','[]','[]','[{"slug":"4HLmwToUeXw","type":"youtubeVideo"}]',0,'587722148','//spartalien.bandcamp.com','/album/let-it-all-go-volume-2','//open.spotify.com','/album/0HPDjHHVdD4Es2gSckjK3r');
 INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (26,'[1,9,10,11,15,24,33,44,58,32,77]','CHILL TRACKS 2016-2020','[1]',NULL,3,'2020-12-13',NULL,'A selection of chill tracks from my back catalog 2016-2020. I hope you find some relaxation at the end of this unusual year.','[]','[]','[]',0,'131808411','//spartalien.bandcamp.com','/album/chill-tracks-2016-2020','//open.spotify.com','/album/1Ak6UIUqcEN9xtzoB4r3ya');
-INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (27,'[81,82,83,84,85,86,87,88,89,90,91]','FLOATING HIGH','[1]',NULL,3,'2021-01-01',NULL,'A magic wooden bench.
-Trees.
-Wild animals.
-You.
-And the cloudy sky.
-
-Digital and physical album purchases on Bandcamp include the bonus track "A Night With My Imaginary Friend".
-
+INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (27,'[81,82,83,84,85,86,87,88,89,90,91]','FLOATING HIGH','[1]',NULL,3,'2021-01-01',NULL,'A magic wooden bench.
+Trees.
+Wild animals.
+You.
+And the cloudy sky.
+
+Digital and physical album purchases on Bandcamp include the bonus track "A Night With My Imaginary Friend".
+
 Limited physical editions are [route=stuff/id:19]there[/route] and [route=stuff/id:20]there[/route].','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between September and December 2020."]','[]','[]',0,'1204865255','//spartalien.bandcamp.com','/album/floating-high','//open.spotify.com','/album/7rpbLuknkFeNBOscxZ5djs');
 INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (28,'[92]','Uncertain','[1]',NULL,1,'2021-05-07',NULL,'A song about our future.','["Most nature samples - DJs for Climate Action and Greenpeace (djs4ca.com/climate-sample-pack)"]','["DJs for Climate Action and Greenpeace for taking action."]','[]',0,'2666379051','//spartalien.bandcamp.com','/track/uncertain','//open.spotify.com','/track/4A9uz51yEBcHImxUXnhABw');
 INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (29,'[93,94,95,96]','THE BAND WITH THE DRUMMER WHO KNEW ONLY ONE RHYTHM','[1]',NULL,2,'2021-06-07',NULL,'A small band plays in a smoky open air club. Their instruments are slightly out of tune. But the crowd doesn''t care. Out of tune experiences is what they got used to.','[]','["Special thanks to the Might crew (might.digital) who started the creation process of these tracks."]','[]',0,'2317686308','//spartalien.bandcamp.com','/album/the-band-with-the-drummer-who-knew-only-one-rhythm','//open.spotify.com','/album/5GO8DT7O6oqhAz4Mwblslp');
 INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (30,'[97,98,99]','Flux','[1,3]',NULL,1,'2021-08-13',NULL,'Everything. Nothing. Doesn''t matter. You just float. Somewhere. Sometime.','["Vocals - Stevie Lee Price (track: 1)","Lyrics - Stevie Lee Price (track: 1)","Ocean Photo in Coverart - Rachel Claire"]','[]','[{"attr":[["target","_blank"]],"slug":"file/flux-lyrics.html","text":"Lyrics.html","type":"link"},{"slug":"mE4p5UV62sw","type":"youtubeVideo"}]',0,'2224755430','//spartalien.bandcamp.com','/album/flux','//open.spotify.com','/album/7nngUQbyI6LtVUA1JEJmiL');
 INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (31,'[100]','ediblewaves - Haphe (SPARTALIEN''s Wicca Remix)','[4,1]',NULL,4,'2021-08-31',NULL,'A spooky remix of the track [url=//ediblewaves.bandcamp.com/track/haphe]Haphe[/url] made upon request for [url=//ediblewaves.bandcamp.com]ediblewaves[/url].','["Original track \"Haphe\" by ediblewaves (ediblewaves.bandcamp.com)."]','[]','[]',1,'563831413','//spartalien.bandcamp.com','/track/haphe-spartaliens-wicca-remix','//open.spotify.com',NULL);
-INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (32,'[101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138]','UNTOLD STORIES','[1]',NULL,3,'2021-09-22',NULL,'Do you know that feeling, when you hear a sound, and you suddenly feel like you''re in another place? When a sound triggers a feeling, or a memory? And then, when the sound is gone, and the world turns silent, you miss the sound?
-
-This body of work is quiet, but also loud, and very emotional. Raw, but not rushed, feelings. Intentionally improvised moments to get lost in.
-
+INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (32,'[101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138]','UNTOLD STORIES','[1]',NULL,3,'2021-09-22',NULL,'Do you know that feeling, when you hear a sound, and you suddenly feel like you''re in another place? When a sound triggers a feeling, or a memory? And then, when the sound is gone, and the world turns silent, you miss the sound?
+
+This body of work is quiet, but also loud, and very emotional. Raw, but not rushed, feelings. Intentionally improvised moments to get lost in.
+
 There is also a "[route=music/id:33]Doomer''s Delight[/route]" special edition.','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between July and August 2021."]','[]','[{"slug":"mseAapnJomY","type":"youtubeVideo"},{"slug":"file/untold-stories/mood-gfx-1.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-2.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-3.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-4.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-5.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-6.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-7.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-8.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-9.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-10.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-11.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-12.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-13.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-14.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-15.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-16.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-17.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-18.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-19.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-20.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-21.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-22.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-23.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-24.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-25.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-26.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-27.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-28.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-29.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-30.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-31.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-32.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-33.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-34.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-35.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-36.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-37.jpg","type":"image"},{"slug":"file/untold-stories/mood-gfx-38.jpg","type":"image"}]',0,'1766454808','//spartalien.bandcamp.com','/album/untold-stories','//open.spotify.com','/album/5Z09PSUcbZioMV7UvRv7yw');
-INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (33,'[139,140,141]','UNTOLD STORIES (Doomer''s Delight)','[1]',NULL,3,'2021-09-22',NULL,'Do you know that feeling, when you hear a sound, and you suddenly feel like you''re in another place? When a sound triggers a feeling, or a memory? And then, when the sound is gone, and the world turns silent, you miss the sound?
-
-This body of work is quiet, but also loud, and very emotional. Raw, but not rushed, feelings. Intentionally improvised moments to get lost in.
-
+INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (33,'[139,140,141]','UNTOLD STORIES (Doomer''s Delight)','[1]',NULL,3,'2021-09-22',NULL,'Do you know that feeling, when you hear a sound, and you suddenly feel like you''re in another place? When a sound triggers a feeling, or a memory? And then, when the sound is gone, and the world turns silent, you miss the sound?
+
+This body of work is quiet, but also loud, and very emotional. Raw, but not rushed, feelings. Intentionally improvised moments to get lost in.
+
 This is a special edition of [route=music/id:32]UNTOLD STORIES[/route].','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between July and August 2021."]','[]','[]',0,'762897740','//spartalien.bandcamp.com','/album/untold-stories-doomers-delight','//open.spotify.com','/album/3MBt8QE1l8kCWBW6QaM71e');
+INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (34,'[142,143,144,145,146,147,148,149,150]','OKAY, BUT CAN YOU RAP TO THIS?','[1]',NULL,3,NULL,NULL,'Some fun tracks to get back into it. Thank you for still being here.','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between June and October 2022.","Lyrics - Orochi Hanma (track: 9)","Vocals - Orochi Hanma (track: 9)"]','[]','[{"attr":[["target","_blank"]],"slug":"file/smoking-sea-lyrics.html","text":"Smoking-Sea-Lyrics.html","type":"link"}]',0,'4047724916','//spartalien.bandcamp.com','/album/okay-but-can-you-rap-to-this','//open.spotify.com',NULL);
 COMMIT;
