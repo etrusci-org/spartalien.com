@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 class App extends WebApp {
     public function validateRequest(): void {
-        // set node to 404 if invalid request
+        // set node and response code to 404 if invalid request
         if (!in_array(trim($this->route['request'], ' /'), VALID_REQUESTS)) {
             $this->route['node'] = '404';
+            http_response_code(404);
         }
     }
 
