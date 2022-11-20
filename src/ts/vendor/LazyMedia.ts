@@ -113,9 +113,9 @@ export const LazyMedia: LazyMediaInterface = {
         twitchChat: '//twitch.tv/embed/{SLUG}',
     },
     bandcampAlbumHeight: {
-        header: 120,
-        trackRow: 33,
-        bottomBar: 50,
+        header: 119,
+        trackRow: 32,
+        bottomBar: 64,
     },
     spotifyAlbumHeight: {
         header: 80,
