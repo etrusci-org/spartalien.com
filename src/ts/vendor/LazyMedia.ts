@@ -8,6 +8,9 @@ interface LazyMediaInterface {
         video: string
         bandcampTrack: string
         bandcampAlbum: string
+        spotifyTrack: string
+        spotifyAlbum: string
+        spotifyPlaylist: string
         mixcloudMix: string
         mixcloudPlaylist: string
         youtubeVideo: string
@@ -16,10 +19,20 @@ interface LazyMediaInterface {
         twitchChat: string
     }
     bandcampAlbumHeight: {
-        header: number,
-        trackRow: number,
-        bottomBar: number,
-    },
+        header: number
+        trackRow: number
+        bottomBar: number
+    }
+    spotifyAlbumHeight: {
+        header: number
+        trackRow: number
+        bottomBar: number
+    }
+    spotifyPlaylistHeight: {
+        header: number
+        trackRow: number
+        bottomBar: number
+    }
     embed(): void
     bake(code: lazyCodeType, targetNode: HTMLElement): HTMLElement | null
     bakeLink(code: lazyCodeType): HTMLAnchorElement | null
@@ -28,6 +41,9 @@ interface LazyMediaInterface {
     bakeVideo(code: lazyCodeType): HTMLVideoElement | null
     bakeBandcampTrack(code: lazyCodeType): HTMLIFrameElement | null
     bakeBandcampAlbum(code: lazyCodeType): HTMLIFrameElement | null
+    bakeSpotifyTrack(code: lazyCodeType): HTMLIFrameElement | null
+    bakeSpotifyAlbum(code: lazyCodeType): HTMLIFrameElement | null
+    bakeSpotifyPlaylist(code: lazyCodeType): HTMLIFrameElement | null
     bakeMixcloudMix(code: lazyCodeType): HTMLIFrameElement | null
     bakeMixcloudPlaylist(code: lazyCodeType): HTMLIFrameElement | null
     bakeYoutubeVideo(code: lazyCodeType): HTMLIFrameElement | null
@@ -47,6 +63,7 @@ type lazyCodeType = {
     text?: string // for: link
     trackCount?: number // for: bandcampAlbum
     timeStart?: number // for: youtubeVideo
+    disableTheme?: boolean // for: spotifyTrack, spotifyAlbum, spotifyPlaylist
 }
 
 
@@ -61,6 +78,11 @@ export const LazyMedia: LazyMediaInterface = {
         bandcamp
             track slug: <track_id>
             album slug: <album_id>
+
+        spotify
+            track slug: <track_id>
+            album slug: <album_id>
+            playlilst slug: <album_id>
 
         mixcloud
             mix slug: /<profile>/<show>/
@@ -80,10 +102,13 @@ export const LazyMedia: LazyMediaInterface = {
         video: '{SLUG}',
         bandcampTrack: '//bandcamp.com/EmbeddedPlayer/track={SLUG}/size=large/artwork=none/bgcol=2b2b2b/linkcol=cccccc/tracklist=false/transparent=true/',
         bandcampAlbum: '//bandcamp.com/EmbeddedPlayer/album={SLUG}/size=large/artwork=none/bgcol=2b2b2b/linkcol=cccccc/tracklist=true/transparent=true/',
+        spotifyTrack: '//open.spotify.com/embed/track/{SLUG}',
+        spotifyAlbum: '//open.spotify.com/embed/album/{SLUG}',
+        spotifyPlaylist: '//open.spotify.com/embed/playlist/{SLUG}',
         mixcloudMix: '//mixcloud.com/widget/iframe/?feed={SLUG}&hide_cover=1',
         mixcloudPlaylist: '//mixcloud.com/widget/iframe/?feed={SLUG}&hide_cover=1',
-        youtubeVideo: '//youtube.com/embed/{SLUG}?modestbranding=1&rel=0&widget_referrer=example.org',
-        youtubePlaylist: '//youtube.com/embed/videoseries?list={SLUG}&modestbranding=1&rel=0&widget_referrer=example.org',
+        youtubeVideo: '//youtube.com/embed/{SLUG}?modestbranding=1&rel=0',
+        youtubePlaylist: '//youtube.com/embed/videoseries?list={SLUG}&modestbranding=1&rel=0',
         twitchStream: '//player.twitch.tv/?muted=false&autoplay=true&channel={SLUG}',
         twitchChat: '//twitch.tv/embed/{SLUG}',
     },
@@ -91,6 +116,16 @@ export const LazyMedia: LazyMediaInterface = {
         header: 120,
         trackRow: 33,
         bottomBar: 50,
+    },
+    spotifyAlbumHeight: {
+        header: 80,
+        trackRow: 31,
+        bottomBar: 10,
+    },
+    spotifyPlaylistHeight: {
+        header: 80,
+        trackRow: 50,
+        bottomBar: 10,
     },
 
 
@@ -129,6 +164,9 @@ export const LazyMedia: LazyMediaInterface = {
         if (code.type == 'video') e = this.bakeVideo(code)
         if (code.type == 'bandcampTrack') e = this.bakeBandcampTrack(code)
         if (code.type == 'bandcampAlbum') e = this.bakeBandcampAlbum(code)
+        if (code.type == 'spotifyTrack') e = this.bakeSpotifyTrack(code)
+        if (code.type == 'spotifyAlbum') e = this.bakeSpotifyAlbum(code)
+        if (code.type == 'spotifyPlaylist') e = this.bakeSpotifyPlaylist(code)
         if (code.type == 'mixcloudMix') e = this.bakeMixcloudMix(code)
         if (code.type == 'mixcloudPlaylist') e = this.bakeMixcloudPlaylist(code)
         if (code.type == 'youtubeVideo') e = this.bakeYoutubeVideo(code)
@@ -270,6 +308,50 @@ export const LazyMedia: LazyMediaInterface = {
 
         if (code.trackCount) {
             e.style.height = `${Math.round(this.bandcampAlbumHeight.header + (this.bandcampAlbumHeight.trackRow * code.trackCount) + this.bandcampAlbumHeight.bottomBar)}px`
+        }
+
+        return e
+    },
+
+
+    bakeSpotifyTrack(code) {
+        let e = document.createElement('iframe')
+
+        if (code.disableTheme) this.slugTpl.spotifyTrack = `${this.slugTpl.spotifyTrack}?theme=0`
+
+        e.setAttribute('loading', 'lazy')
+        e.setAttribute('src', this.slugTpl.spotifyTrack.replace('{SLUG}', code.slug))
+
+        return e
+    },
+
+
+    bakeSpotifyAlbum(code) {
+        let e = document.createElement('iframe')
+
+        if (code.disableTheme) this.slugTpl.spotifyAlbum = `${this.slugTpl.spotifyAlbum}?theme=0`
+
+        e.setAttribute('loading', 'lazy')
+        e.setAttribute('src', this.slugTpl.spotifyAlbum.replace('{SLUG}', code.slug))
+
+        if (code.trackCount) {
+            e.style.height = `${Math.round(this.spotifyAlbumHeight.header + (this.spotifyAlbumHeight.trackRow * code.trackCount) + this.spotifyAlbumHeight.bottomBar)}px`
+        }
+
+        return e
+    },
+
+
+    bakeSpotifyPlaylist(code) {
+        let e = document.createElement('iframe')
+
+        if (code.disableTheme) this.slugTpl.spotifyPlaylist = `${this.slugTpl.spotifyPlaylist}?theme=0`
+
+        e.setAttribute('loading', 'lazy')
+        e.setAttribute('src', this.slugTpl.spotifyPlaylist.replace('{SLUG}', code.slug))
+
+        if (code.trackCount) {
+            e.style.height = `${Math.round(this.spotifyPlaylistHeight.header + (this.spotifyPlaylistHeight.trackRow * code.trackCount) + this.spotifyPlaylistHeight.bottomBar)}px`
         }
 
         return e

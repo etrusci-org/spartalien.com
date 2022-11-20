@@ -8,10 +8,13 @@ export const LazyMedia = {
         video: '{SLUG}',
         bandcampTrack: '//bandcamp.com/EmbeddedPlayer/track={SLUG}/size=large/artwork=none/bgcol=2b2b2b/linkcol=cccccc/tracklist=false/transparent=true/',
         bandcampAlbum: '//bandcamp.com/EmbeddedPlayer/album={SLUG}/size=large/artwork=none/bgcol=2b2b2b/linkcol=cccccc/tracklist=true/transparent=true/',
+        spotifyTrack: '//open.spotify.com/embed/track/{SLUG}',
+        spotifyAlbum: '//open.spotify.com/embed/album/{SLUG}',
+        spotifyPlaylist: '//open.spotify.com/embed/playlist/{SLUG}',
         mixcloudMix: '//mixcloud.com/widget/iframe/?feed={SLUG}&hide_cover=1',
         mixcloudPlaylist: '//mixcloud.com/widget/iframe/?feed={SLUG}&hide_cover=1',
-        youtubeVideo: '//youtube.com/embed/{SLUG}?modestbranding=1&rel=0&widget_referrer=example.org',
-        youtubePlaylist: '//youtube.com/embed/videoseries?list={SLUG}&modestbranding=1&rel=0&widget_referrer=example.org',
+        youtubeVideo: '//youtube.com/embed/{SLUG}?modestbranding=1&rel=0',
+        youtubePlaylist: '//youtube.com/embed/videoseries?list={SLUG}&modestbranding=1&rel=0',
         twitchStream: '//player.twitch.tv/?muted=false&autoplay=true&channel={SLUG}',
         twitchChat: '//twitch.tv/embed/{SLUG}',
     },
@@ -19,6 +22,16 @@ export const LazyMedia = {
         header: 120,
         trackRow: 33,
         bottomBar: 50,
+    },
+    spotifyAlbumHeight: {
+        header: 80,
+        trackRow: 31,
+        bottomBar: 10,
+    },
+    spotifyPlaylistHeight: {
+        header: 80,
+        trackRow: 50,
+        bottomBar: 10,
     },
     embed() {
         if (this.debug)
@@ -57,6 +70,12 @@ export const LazyMedia = {
             e = this.bakeBandcampTrack(code);
         if (code.type == 'bandcampAlbum')
             e = this.bakeBandcampAlbum(code);
+        if (code.type == 'spotifyTrack')
+            e = this.bakeSpotifyTrack(code);
+        if (code.type == 'spotifyAlbum')
+            e = this.bakeSpotifyAlbum(code);
+        if (code.type == 'spotifyPlaylist')
+            e = this.bakeSpotifyPlaylist(code);
         if (code.type == 'mixcloudMix')
             e = this.bakeMixcloudMix(code);
         if (code.type == 'mixcloudPlaylist')
@@ -160,6 +179,36 @@ export const LazyMedia = {
         e.setAttribute('src', this.slugTpl.bandcampAlbum.replace('{SLUG}', code.slug));
         if (code.trackCount) {
             e.style.height = `${Math.round(this.bandcampAlbumHeight.header + (this.bandcampAlbumHeight.trackRow * code.trackCount) + this.bandcampAlbumHeight.bottomBar)}px`;
+        }
+        return e;
+    },
+    bakeSpotifyTrack(code) {
+        let e = document.createElement('iframe');
+        if (code.disableTheme)
+            this.slugTpl.spotifyTrack = `${this.slugTpl.spotifyTrack}?theme=0`;
+        e.setAttribute('loading', 'lazy');
+        e.setAttribute('src', this.slugTpl.spotifyTrack.replace('{SLUG}', code.slug));
+        return e;
+    },
+    bakeSpotifyAlbum(code) {
+        let e = document.createElement('iframe');
+        if (code.disableTheme)
+            this.slugTpl.spotifyAlbum = `${this.slugTpl.spotifyAlbum}?theme=0`;
+        e.setAttribute('loading', 'lazy');
+        e.setAttribute('src', this.slugTpl.spotifyAlbum.replace('{SLUG}', code.slug));
+        if (code.trackCount) {
+            e.style.height = `${Math.round(this.spotifyAlbumHeight.header + (this.spotifyAlbumHeight.trackRow * code.trackCount) + this.spotifyAlbumHeight.bottomBar)}px`;
+        }
+        return e;
+    },
+    bakeSpotifyPlaylist(code) {
+        let e = document.createElement('iframe');
+        if (code.disableTheme)
+            this.slugTpl.spotifyPlaylist = `${this.slugTpl.spotifyPlaylist}?theme=0`;
+        e.setAttribute('loading', 'lazy');
+        e.setAttribute('src', this.slugTpl.spotifyPlaylist.replace('{SLUG}', code.slug));
+        if (code.trackCount) {
+            e.style.height = `${Math.round(this.spotifyPlaylistHeight.header + (this.spotifyPlaylistHeight.trackRow * code.trackCount) + this.spotifyPlaylistHeight.bottomBar)}px`;
         }
         return e;
     },
