@@ -161,6 +161,12 @@ img {
         background-image: none;
         color-scheme: dark;
     }
+
+    &.spotifyTrack,
+    &.spotifyAlbum,
+    &.spotifyPlaylist {
+        background-color: transparent;
+    }
 }
 
 

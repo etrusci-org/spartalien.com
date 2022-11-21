@@ -1,6 +1,6 @@
 interface AppInterface {
     main(routeRequest: string): void
-    loadRandomTrack(target: HTMLDivElement|null): void
+    // loadRandomTrack(target: HTMLDivElement|null): void
 }
 
 interface ImagePreviewInterface {
