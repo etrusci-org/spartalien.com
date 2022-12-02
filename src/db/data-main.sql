@@ -67,12 +67,13 @@ INSERT INTO "news" ("id","postedOn","items") VALUES (54,'2022-08-19','["Featured
 INSERT INTO "news" ("id","postedOn","items") VALUES (55,'2021-04-10','["Featured on: [route=stuff/id:12]ediblewaves'' YouTube Channel[/route]"]');
 INSERT INTO "news" ("id","postedOn","items") VALUES (56,'2020-11-18','["Featured on: [route=stuff/id:9]MighTV[/route]"]');
 INSERT INTO "news" ("id","postedOn","items") VALUES (57,'2020-11-29','["Featured on: [route=stuff/id:9]MighTV[/route]"]');
-INSERT INTO "news" ("id","postedOn","items") VALUES (58,'2022-03-27','["Featured on: [route=stuff/id:14]Resonate on CAMP Radio[/route]"]');
+INSERT INTO "news" ("id","postedOn","items") VALUES (58,'2022-03-27','["Featured on: [route=stuff/id:14]Resonate on CAMP Radio 2022-03-27[/route]"]');
 INSERT INTO "news" ("id","postedOn","items") VALUES (59,'2022-03-06','["Featured on: [route=stuff/id:13]Spooky Kitten Records'' WHiTMiRE Reviews Music[/route]"]');
 INSERT INTO "news" ("id","postedOn","items") VALUES (60,'2022-03-03','["Featured on: [route=stuff/id:27]Martina''s \"The Only Way Is Up\" Spotify Playlist[/route]"]');
 INSERT INTO "news" ("id","postedOn","items") VALUES (61,'2022-04-20','["Featured on: [route=stuff/id:28]Martina''s \"Add Some Music To Your Day\" Spotify Playlist[/route]"]');
 INSERT INTO "news" ("id","postedOn","items") VALUES (62,'2022-11-18','["Featured on: [route=stuff/id:29]SFTS: Experimental Ambient Compilation[/route]"]');
 INSERT INTO "news" ("id","postedOn","items") VALUES (63,'2022-11-23','["New music: [route=music/id:34]OKAY, BUT CAN YOU RAP TO THIS?[/route]"]');
+INSERT INTO "news" ("id","postedOn","items") VALUES (64,'2022-12-04','["Featured on: [route=stuff/id:30]Resonate on CAMP Radio 2022-12-04[/route]"]');
 INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (1,'Continuoduction',396,'[1]','2223569284','//spartalien.bandcamp.com','/track/continuoduction','//open.spotify.com','/track/2Clx7jPmYSA21DbB0FKxUR');
 INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (2,'I''ll Embrace You Again In Space',418,'[1]','1079688660','//spartalien.bandcamp.com','/track/ill-embrace-you-again-in-space','//open.spotify.com','/track/3QmCKvjLtKXS4vQD6822rf');
 INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (3,'Realize It''s Just A Ride',360,'[1]','4004833542','//spartalien.bandcamp.com','/track/realize-its-just-a-ride','//open.spotify.com','/track/7LwAhr4FxPmxhsM0X4C2h6');
