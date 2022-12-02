@@ -50,7 +50,7 @@ $conf['validRequestPatterns'] = [
     'planet420/artists',
     'cam',
     'news',
-    'news/id:[1-63]',
+    'news/id:[1-64]',
     'news.atom',
     'about',
     'exit',
