@@ -31,18 +31,18 @@
 
     <div class="imagepreviewTarget"></div>
 
-    <script>
-        const routeRequest = '<?php print($this->route['request']); ?>'
+    <script type="module">
+        import { App } from './res/app.js?v=<?php print(VERSION['js']); ?>'
+        window.addEventListener('load', () => {
+            App.main('<?php print($this->route['request']); ?>')
+        }, false)
     </script>
-
-
-    <script src="res/main.js?v=<?php print(VERSION['js']); ?>" type="module"></script>
 </body>
 </html>
 <!--
     / <?php print(($this->route['request']) ? $this->route['request'] : 'index'); ?>
 
-    > output baked on: <?php print(date('Y-m-d H:i:s T')); ?>
+    > output baked on: <?php print(date('Y-m-d H:i:s e')); ?>
 
     : made with 🧠 by arT2 (etrusci.org)
 -->

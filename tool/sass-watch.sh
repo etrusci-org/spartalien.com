@@ -8,5 +8,5 @@ sass \
     --update \
     --style expanded \
     --charset \
-    --source-map \
+    --no-source-map \
     $input:$output

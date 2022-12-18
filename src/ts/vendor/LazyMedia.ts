@@ -132,13 +132,13 @@ export const LazyMedia: LazyMediaInterface = {
     embed() {
         if (this.debug) console.group('LazyMedia')
 
-        let targetNodes = document.querySelectorAll(this.selector)
+        const targetNodes = document.querySelectorAll(this.selector)
 
         targetNodes.forEach(targetNode => {
             if (targetNode instanceof HTMLElement) {
                 try {
-                    let code: lazyCodeType = JSON.parse(targetNode.innerText)
-                    let e = this.bake(code, targetNode)
+                    const code: lazyCodeType = JSON.parse(targetNode.innerText)
+                    const e = this.bake(code, targetNode)
 
                     if (e) {
                         if (this.debug) console.debug('targetNode:', targetNode, '\nlazycode:', code, '\nbaked element:', e)
@@ -220,7 +220,7 @@ export const LazyMedia: LazyMediaInterface = {
 
 
     bakeLink(code) {
-        let e = document.createElement('a')
+        const e = document.createElement('a')
 
         e.setAttribute('href', this.slugTpl.link.replace('{SLUG}', code.slug))
 
@@ -236,7 +236,7 @@ export const LazyMedia: LazyMediaInterface = {
 
 
     bakeImage(code) {
-        let e = document.createElement('img')
+        const e = document.createElement('img')
 
         e.setAttribute('loading', 'lazy')
         e.setAttribute('src', this.slugTpl.image.replace('{SLUG}', code.slug))
@@ -247,14 +247,14 @@ export const LazyMedia: LazyMediaInterface = {
 
 
     bakeAudio(code) {
-        let e  = document.createElement('audio')
-        let e2 = document.createElement('source')
+        const e  = document.createElement('audio')
+        const e2 = document.createElement('source')
 
         e.setAttribute('preload', 'metadata')
         e.setAttribute('controls', 'controls')
 
         e2.setAttribute('src', this.slugTpl.audio.replace('{SLUG}', code.slug))
-        let audioType = this.guessHTMLAudioTypeByExt(code.slug)
+        const audioType = this.guessHTMLAudioTypeByExt(code.slug)
         if (audioType) {
             e2.setAttribute('type', audioType)
         }
@@ -266,15 +266,15 @@ export const LazyMedia: LazyMediaInterface = {
 
 
     bakeVideo(code) {
-        let e  = document.createElement('video')
-        let e2 = document.createElement('source')
+        const e  = document.createElement('video')
+        const e2 = document.createElement('source')
 
         e.setAttribute('preload', 'metadata')
         e.setAttribute('controls', 'controls')
         e.setAttribute('playsinline', 'playsinline')
 
         e2.setAttribute('src', this.slugTpl.video.replace('{SLUG}', code.slug))
-        let videoType = this.guessHTMLVideoTypeByExt(code.slug)
+        const videoType = this.guessHTMLVideoTypeByExt(code.slug)
         if (videoType) {
             e2.setAttribute('type', videoType)
         }
@@ -286,7 +286,7 @@ export const LazyMedia: LazyMediaInterface = {
 
 
     bakeBandcampTrack(code) {
-        let e = document.createElement('iframe')
+        const e = document.createElement('iframe')
 
         e.setAttribute('loading', 'lazy')
         e.setAttribute('src', this.slugTpl.bandcampTrack.replace('{SLUG}', code.slug))
@@ -296,7 +296,7 @@ export const LazyMedia: LazyMediaInterface = {
 
 
     bakeBandcampAlbum(code) {
-        let e = document.createElement('iframe')
+        const e = document.createElement('iframe')
 
         if (!code.trackCount) {
             e.classList.add('noTracklist')
@@ -315,7 +315,7 @@ export const LazyMedia: LazyMediaInterface = {
 
 
     bakeSpotifyTrack(code) {
-        let e = document.createElement('iframe')
+        const e = document.createElement('iframe')
 
         if (code.disableTheme) this.slugTpl.spotifyTrack = `${this.slugTpl.spotifyTrack}?theme=0`
 
@@ -327,7 +327,7 @@ export const LazyMedia: LazyMediaInterface = {
 
 
     bakeSpotifyAlbum(code) {
-        let e = document.createElement('iframe')
+        const e = document.createElement('iframe')
 
         if (code.disableTheme) this.slugTpl.spotifyAlbum = `${this.slugTpl.spotifyAlbum}?theme=0`
 
@@ -343,7 +343,7 @@ export const LazyMedia: LazyMediaInterface = {
 
 
     bakeSpotifyPlaylist(code) {
-        let e = document.createElement('iframe')
+        const e = document.createElement('iframe')
 
         if (code.disableTheme) this.slugTpl.spotifyPlaylist = `${this.slugTpl.spotifyPlaylist}?theme=0`
 
@@ -359,7 +359,7 @@ export const LazyMedia: LazyMediaInterface = {
 
 
     bakeMixcloudMix(code) {
-        let e = document.createElement('iframe')
+        const e = document.createElement('iframe')
 
         e.setAttribute('loading', 'lazy')
         e.setAttribute('src', this.slugTpl.mixcloudMix.replace('{SLUG}', code.slug))
@@ -369,7 +369,7 @@ export const LazyMedia: LazyMediaInterface = {
 
 
     bakeMixcloudPlaylist(code) {
-        let e = document.createElement('iframe')
+        const e = document.createElement('iframe')
 
         e.setAttribute('loading', 'lazy')
         e.setAttribute('src', this.slugTpl.mixcloudPlaylist.replace('{SLUG}', code.slug))
@@ -379,7 +379,7 @@ export const LazyMedia: LazyMediaInterface = {
 
 
     bakeYoutubeVideo(code) {
-        let e = document.createElement('iframe')
+        const e = document.createElement('iframe')
 
         if (code.timeStart) this.slugTpl.youtubeVideo = `${this.slugTpl.youtubeVideo}&start=${code.timeStart}`
 
@@ -393,7 +393,7 @@ export const LazyMedia: LazyMediaInterface = {
 
 
     bakeYoutubePlaylist(code) {
-        let e = document.createElement('iframe')
+        const e = document.createElement('iframe')
 
         e.setAttribute('loading', 'lazy')
         e.setAttribute('src', this.slugTpl.youtubePlaylist.replace('{SLUG}', code.slug))
@@ -407,7 +407,7 @@ export const LazyMedia: LazyMediaInterface = {
 
 
     bakeTwitchStream(code) {
-        let e = document.createElement('iframe')
+        const e = document.createElement('iframe')
 
         e.setAttribute('loading', 'lazy')
         e.setAttribute('src', this.slugTpl.twitchStream.replace('{SLUG}', code.slug))
@@ -418,7 +418,7 @@ export const LazyMedia: LazyMediaInterface = {
 
 
     bakeTwitchChat(code) {
-        let e = document.createElement('iframe')
+        const e = document.createElement('iframe')
 
         e.setAttribute('loading', 'lazy')
         e.setAttribute('src', this.slugTpl.twitchChat.replace('{SLUG}', code.slug))
@@ -429,7 +429,7 @@ export const LazyMedia: LazyMediaInterface = {
 
     guessHTMLAudioTypeByExt(filename) {
         let audioType = null
-        let audioExt = filename.split('.').pop()
+        const audioExt = filename.split('.').pop()
 
         if (audioExt == 'mp3') {
             audioType = 'audio/mpeg'
@@ -449,7 +449,7 @@ export const LazyMedia: LazyMediaInterface = {
 
     guessHTMLVideoTypeByExt(filename) {
         let videoType = null
-        let videoExt = filename.split('.').pop()
+        const videoExt = filename.split('.').pop()
 
         if (videoExt == 'mp4') {
             videoType = 'video/mp4'

@@ -10,8 +10,8 @@ export const ImagePreview = {
             return;
         this.nodes.forEach((nodeElement) => {
             nodeElement.addEventListener('click', (event) => {
-                let img = new Image();
-                let imgSrc = nodeElement.getAttribute('href');
+                const img = new Image();
+                const imgSrc = nodeElement.getAttribute('href');
                 if (!imgSrc)
                     return;
                 img.setAttribute('src', imgSrc);

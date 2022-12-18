@@ -7,7 +7,7 @@ csso \
     --watch \
     --stat \
     --comments none \
-    --input-source-map auto \
-    --source-map file \
+    --input-source-map none \
+    --source-map none \
     --input $input \
     --output $output

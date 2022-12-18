@@ -1,11 +1,20 @@
 export const Scur = {
     s: '745d328ed27746ca8803c4ba1571dd731418365f67fe41c7ad9765981fcac618',
+    ob(data) {
+        let hash = this._r(btoa(this._r(this.s + data)));
+        const dump = [];
+        hash.split('').forEach((v) => {
+            dump.push(v.charCodeAt(0));
+        });
+        hash = dump.join('|');
+        return hash;
+    },
     deob(data) {
-        let dump = [];
+        const dump = [];
         data.split('|').forEach((v) => {
             dump.push(String.fromCharCode(parseInt(v)));
         });
-        let text = this._r(atob(this._r(dump.join(''))));
+        const text = this._r(atob(this._r(dump.join(''))));
         if (text.indexOf(this.s) == -1) {
             console.error('Invalid or missing salt.');
             return data;
@@ -13,7 +22,7 @@ export const Scur = {
         return text.replace(this.s, '');
     },
     deobElements() {
-        let nodeList = document.querySelectorAll('[data-scur]');
+        const nodeList = document.querySelectorAll('[data-scur]');
         if (nodeList instanceof NodeList) {
             nodeList.forEach(node => {
                 if (node instanceof HTMLElement &&

@@ -1,6 +1,6 @@
 interface ScurInterface {
     s: string
-    // ob(data: string): string
+    ob(data: string): string
     deob(data: string): string
     deobElements(): void
     _r(data: string): string
@@ -12,26 +12,26 @@ interface ScurInterface {
 export const Scur: ScurInterface = {
     s: '745d328ed27746ca8803c4ba1571dd731418365f67fe41c7ad9765981fcac618',
 
-    // ob(data) {
-    //     let hash = this._r(btoa(this._r(this.s + data)))
+    ob(data) {
+        let hash = this._r(btoa(this._r(this.s + data)))
 
-    //     let dump: number[] = []
-    //     hash.split('').forEach((v) => {
-    //         dump.push(v.charCodeAt(0))
-    //     })
-    //     hash = dump.join('|')
+        const dump: number[] = []
+        hash.split('').forEach((v) => {
+            dump.push(v.charCodeAt(0))
+        })
+        hash = dump.join('|')
 
-    //     return hash
-    // },
+        return hash
+    },
 
 
     deob(data) {
-        let dump: string[] = []
+        const dump: string[] = []
         data.split('|').forEach((v) => {
             dump.push(String.fromCharCode(parseInt(v)))
         })
 
-        let text = this._r(
+        const text = this._r(
             atob(
                 this._r(
                     dump.join('')
@@ -49,7 +49,7 @@ export const Scur: ScurInterface = {
 
 
     deobElements() {
-        let nodeList = document.querySelectorAll('[data-scur]')
+        const nodeList = document.querySelectorAll('[data-scur]')
         if (nodeList instanceof NodeList) {
             nodeList.forEach(node => {
                 if (
