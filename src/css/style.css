@@ -1,0 +1,544 @@
+@font-face {
+  font-family: "Share Tech";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("vendor/share-tech-v17-latin-regular.woff2") format("woff2"), url("vendor/share-tech-v17-latin-regular.woff") format("woff");
+}
+html,
+body,
+header,
+main,
+nav,
+div,
+h1,
+h2,
+h3,
+label,
+input,
+textarea,
+p,
+ul,
+li,
+hr,
+table,
+thead,
+body,
+tr,
+th,
+td,
+a,
+iframe,
+img,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  text-rendering: geometricPrecision;
+}
+
+a,
+input,
+textarea {
+  outline: none;
+}
+
+iframe,
+img,
+audio,
+video,
+textarea {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Share Tech", Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+  line-height: 1.4;
+}
+
+body,
+input,
+textarea,
+code {
+  font-size: 0.875rem;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: 0.125rem;
+}
+
+h1 {
+  font-size: 1.7rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+h2,
+h3 {
+  margin: 0 0 0.25rem;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type=text],
+input[type=submit] {
+  padding: 0.5rem;
+  margin: 0 0.25rem 0 0;
+}
+
+input[type=submit] {
+  font-weight: bold;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+textarea {
+  width: 100%;
+  height: 9.5rem;
+  padding: 0.5rem;
+}
+
+textarea,
+code {
+  font-family: monospace;
+  line-height: 1.2;
+  display: inline-block;
+  white-space: pre;
+}
+
+p,
+ul,
+table,
+iframe {
+  margin: 0 0 0.33rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+table {
+  text-align: left;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+th {
+  font-weight: bold;
+}
+
+li,
+th,
+td {
+  vertical-align: top;
+  padding: 0.125rem 1rem 0.125rem 0;
+}
+li:last-child,
+th:last-child,
+td:last-child {
+  padding: 0.125rem 0;
+}
+
+img[src*="/ico-"] {
+  display: inline-block;
+  width: auto;
+  height: 1rem;
+  margin: 0 0.25rem 0.25rem 0;
+  vertical-align: middle;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+}
+a:hover, a:focus, a:active {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+}
+
+header {
+  position: static;
+  padding: 0.5rem;
+  margin: 0 0 2rem;
+  text-align: center;
+  z-index: 1000;
+}
+header img {
+  width: 100%;
+  max-width: 149px;
+  height: auto;
+}
+
+main {
+  min-width: 320px;
+  max-width: 600px;
+  padding: 0 1rem 1rem;
+  margin: 0 auto;
+  z-index: 500;
+}
+
+footer {
+  text-align: center;
+  padding: 0 1rem 1rem;
+  margin: 25rem 0 2rem;
+}
+footer p {
+  margin: 0 0 1.5rem;
+}
+
+.box {
+  box-sizing: border-box;
+  padding: 1rem 1rem 0.75rem;
+  margin: 0 0 2rem;
+}
+
+.moreSpacer {
+  height: 20rem;
+  margin: 0 0 2rem;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.meta {
+  font-size: 0.8125rem;
+}
+
+.release h2 {
+  text-align: center;
+}
+.release .meta {
+  text-align: center;
+  margin: 0 0 2rem;
+}
+
+.grid {
+  box-sizing: border-box;
+}
+.grid.simple {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  column-gap: 1.5rem;
+  row-gap: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.25rem 0.5rem;
+  margin: 0 0.25rem 0.5rem 0;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.nobr {
+  white-space: nowrap;
+}
+
+.lazycode {
+  display: block;
+  padding: 0.25rem 0.25rem 0.25rem 1.5rem;
+  margin: 0 0 1rem;
+  background-size: 1rem;
+  background-position: 0.25rem 50%;
+  background-repeat: no-repeat;
+}
+
+.lazymedia {
+  display: block;
+  margin: 0 0 1rem;
+  background-size: 1rem;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.lazymedia:last-child {
+  margin: 0 0 0.5rem;
+}
+.lazymedia.audio {
+  width: 100%;
+  height: 2rem;
+}
+.lazymedia.image, .lazymedia.video {
+  margin: 0 auto;
+}
+.lazymedia.bandcampTrack {
+  width: 100%;
+  min-width: 170px;
+  height: 120px;
+}
+.lazymedia.bandcampTrack.small {
+  height: 42px;
+}
+.lazymedia.bandcampTrack.withCover {
+  width: 350px;
+  height: 350px;
+  margin: 0 auto;
+}
+.lazymedia.bandcampAlbum {
+  width: 100%;
+  min-width: 370px;
+  height: 208px;
+  min-height: 208px;
+}
+.lazymedia.bandcampAlbum.noTracklist {
+  min-width: 250px;
+  height: 120px;
+  min-height: 120px;
+}
+.lazymedia.spotifyTrack {
+  width: 100%;
+  min-width: 300px;
+  height: 80px;
+  min-height: 80px;
+}
+.lazymedia.spotifyAlbum, .lazymedia.spotifyPlaylist {
+  width: 100%;
+  min-width: 300px;
+  height: 352px;
+  min-height: 80px;
+}
+.lazymedia.mixcloudMix, .lazymedia.mixcloudPlaylist {
+  width: 100%;
+  height: 180px;
+}
+.lazymedia.twitchChat {
+  width: 100%;
+  height: 350px;
+}
+
+.videobox {
+  position: relative;
+  padding: 56.25% 0 0;
+  overflow: hidden;
+  margin: 0 0 1rem;
+}
+.videobox:last-child {
+  margin: 0 0 0.5rem;
+}
+.videobox .lazymedia {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.imagepreviewTarget {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+  text-align: center;
+  cursor: zoom-out;
+}
+.imagepreviewTarget.open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagepreviewTarget img {
+  max-width: 100%;
+  max-height: 100%;
+  border: 20px solid;
+}
+
+.imagepreview {
+  cursor: zoom-in;
+}
+.imagepreview img {
+  max-height: 600px;
+}
+
+.noscript {
+  font-weight: bold;
+  text-align: center;
+  padding: 0.5rem 1rem;
+}
+
+body {
+  color: hsl(0deg, 0%, 60%);
+  background-color: hsl(0deg, 0%, 5%);
+}
+
+input,
+textarea,
+code,
+.code {
+  color: hsl(203deg, 15%, 47%);
+}
+
+input,
+textarea {
+  background-color: hsl(0deg, 0%, 9%);
+}
+input:hover, input:focus,
+textarea:hover,
+textarea:focus {
+  color: hsl(0deg, 0%, 60%);
+  background-color: hsl(0deg, 0%, 20%);
+}
+
+input {
+  background-color: hsl(0deg, 0%, 17%);
+}
+
+h1,
+h2,
+h3 {
+  color: hsl(0deg, 0%, 80%);
+}
+
+header {
+  background-color: hsl(0deg, 0%, 0%);
+  box-shadow: 0px 0px 15px 5px hsl(0deg, 0%, 0%);
+}
+
+ul li:hover, ul li:focus {
+  color: hsl(77deg, 75%, 41%);
+  background-color: hsl(0deg, 0%, 9%);
+}
+
+table tr:hover td {
+  color: hsl(77deg, 75%, 41%);
+  background-color: hsl(0deg, 0%, 9%);
+}
+
+a:visited, a:link {
+  color: hsl(0deg, 0%, 80%);
+}
+a:hover, a:focus, a:active {
+  color: hsl(77deg, 75%, 41%);
+}
+
+a.active {
+  color: hsl(77deg, 75%, 41%);
+}
+
+.strmatch {
+  color: hsl(77deg, 27%, 64%);
+}
+
+.error {
+  color: hsl(19deg, 78%, 45%);
+}
+
+.box {
+  background-color: hsl(0deg, 0%, 11%);
+  box-shadow: 0px 0px 10px 0px hsl(0deg, 0%, 0%);
+}
+
+.moreSpacer {
+  background-image: url("morespacer.svg");
+}
+
+.btn {
+  background-color: hsl(0deg, 0%, 11%);
+  box-shadow: 0px 0px 3px 0px hsl(0deg, 0%, 0%);
+}
+.btn:hover, .btn:focus, .btn.active {
+  color: hsl(77deg, 75%, 41%);
+  background-color: hsl(0deg, 0%, 17%);
+  cursor: pointer;
+}
+
+img[src*="/ico-"] {
+  opacity: 0.5;
+}
+img[src*="/ico-"]:hover {
+  opacity: 1;
+}
+
+.grid .row:hover, .grid .row:focus {
+  background-color: hsl(0deg, 0%, 9%);
+}
+
+.lazycode {
+  color: hsl(203deg, 15%, 47%);
+  background-color: hsl(0deg, 0%, 9%);
+  background-image: url("loading.gif");
+}
+
+.lazymedia {
+  background-color: hsl(0deg, 0%, 9%);
+  background-image: url("loading.gif");
+}
+.lazymedia.link, .lazymedia.video {
+  background-color: transparent;
+  background-image: none;
+}
+.lazymedia.audio {
+  background-color: hsl(0deg, 0%, 60%);
+  background-image: none;
+  color-scheme: dark;
+}
+.lazymedia.spotifyTrack, .lazymedia.spotifyAlbum, .lazymedia.spotifyPlaylist {
+  background-color: transparent;
+}
+
+.imagepreviewTarget {
+  background-color: hsl(0deg, 0%, 5%);
+}
+.imagepreviewTarget img {
+  border-color: hsl(0deg, 0%, 11%);
+  box-shadow: 0px 0px 10px 0px hsl(0deg, 0%, 0%);
+}
+
+.noscript {
+  color: hsl(19deg, 78%, 45%);
+  background-color: hsl(0deg, 0%, 0%);
+}
+
+@media screen and (min-height: 400px) {
+  header {
+    position: sticky;
+    top: 0;
+  }
+}
+@media screen and (min-width: 560px) {
+  body,
+textarea,
+code {
+    font-size: 0.9375rem;
+  }
+  img[src^="res/ico-"] {
+    height: 1.125rem;
+  }
+  header h1,
+header nav {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  header h1 {
+    margin-right: 1.5rem;
+  }
+  .grid.simple {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
