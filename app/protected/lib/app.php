@@ -556,8 +556,6 @@ class App extends WebApp {
                     p420session.sessionNum,
                     p420session.sessionDate,
                     p420session.sessionDur,
-                    p420session.mixcloudHost,
-                    p420session.mixcloudSlug,
                     COUNT(p420trackHistory.sessionNum) AS trackCount
                 FROM
                     p420session
