@@ -253,7 +253,7 @@ class App extends WebApp {
     }
 
 
-    protected function getAudio(string $mode, array $kwargs=[]): array {
+    protected function getAudio(string $mode, /* array $kwargs=[] */): array {
         $data = [];
 
         switch ($mode) {
@@ -317,15 +317,16 @@ class App extends WebApp {
                 break;
 
             case 'releaseByID':
-                $id = null;
-                if (isset($kwargs['id'])) {
-                    $id = intval($kwargs['id']);
-                }
-                elseif (isset($this->route['var']['id'])) {
-                    $id = intval($this->route['var']['id']);
-                }
+                // $id = null;
+                // if (isset($kwargs['id'])) {
+                //     $id = intval($kwargs['id']);
+                // }
+                // elseif (isset($this->route['var']['id'])) {
+                //     $id = intval($this->route['var']['id']);
+                // }
 
-                if ($id) {
+                // if ($id) {
+                if (isset($this->route['var']['id'])) {
                     $q = '
                     SELECT
                         audioRelease.id,
@@ -353,7 +354,7 @@ class App extends WebApp {
                     WHERE audioRelease.id = :id;';
 
                     $v = [
-                        ['id', $id, SQLITE3_INTEGER],
+                        ['id', $this->route['var']['id'], SQLITE3_INTEGER],
                     ];
 
                     $dump = $this->DB->querySingle($q, $v);
@@ -538,14 +539,18 @@ class App extends WebApp {
     }
 
 
-    protected function getPlanet420(string $mode, array $kwargs=[]): array {
+    protected function getPlanet420(string $mode, /* array $kwargs=[] */): array {
         $data = [];
 
+        // $sessionNum = null;
+        // if (isset($kwargs['num'])) {
+        //     $sessionNum = intval($kwargs['num']);
+        // }
+        // elseif (in_array('session', $this->route['flag']) && isset($this->route['var']['num'])) {
+        //     $sessionNum = intval($this->route['var']['num']);
+        // }
         $sessionNum = null;
-        if (isset($kwargs['num'])) {
-            $sessionNum = intval($kwargs['num']);
-        }
-        elseif (in_array('session', $this->route['flag']) && isset($this->route['var']['num'])) {
+        if (in_array('session', $this->route['flag']) && isset($this->route['var']['num'])) {
             $sessionNum = intval($this->route['var']['num']);
         }
 
@@ -655,7 +660,7 @@ class App extends WebApp {
     }
 
 
-    protected function getVisual(string $mode, array $kwargs=[]): array {
+    protected function getVisual(string $mode, /* array $kwargs=[] */): array {
         $data = [];
 
         switch ($mode) {
@@ -687,15 +692,15 @@ class App extends WebApp {
                 break;
 
             case 'byID':
-                $id = null;
-                if (isset($kwargs['id'])) {
-                    $id = intval($kwargs['id']);
-                }
-                elseif (isset($this->route['var']['id'])) {
-                    $id = intval($this->route['var']['id']);
-                }
-
-                if ($id) {
+                // $id = null;
+                // if (isset($kwargs['id'])) {
+                //     $id = intval($kwargs['id']);
+                // }
+                // elseif (isset($this->route['var']['id'])) {
+                //     $id = intval($this->route['var']['id']);
+                // }
+                // if ($id) {
+                if (isset($this->route['var']['id'])) {
                     $q = '
                     SELECT
                         id,
@@ -710,7 +715,7 @@ class App extends WebApp {
                         id = :id;';
 
                     $v = [
-                        ['id', $id, SQLITE3_INTEGER],
+                        ['id', $this->route['var']['id'], SQLITE3_INTEGER],
                     ];
 
                     $dump = $this->DB->querySingle($q, $v);
@@ -728,7 +733,7 @@ class App extends WebApp {
     }
 
 
-    protected function getStuff(string $mode, array $kwargs=[]): array {
+    protected function getStuff(string $mode, /* array $kwargs=[] */): array {
         $data = [];
 
         switch ($mode) {
@@ -757,15 +762,16 @@ class App extends WebApp {
                 break;
 
             case 'byID':
-                $id = null;
-                if (isset($kwargs['id'])) {
-                    $id = intval($kwargs['id']);
-                }
-                elseif (isset($this->route['var']['id'])) {
-                    $id = intval($this->route['var']['id']);
-                }
+                // $id = null;
+                // if (isset($kwargs['id'])) {
+                //     $id = intval($kwargs['id']);
+                // }
+                // elseif (isset($this->route['var']['id'])) {
+                //     $id = intval($this->route['var']['id']);
+                // }
 
-                if ($id) {
+                // if ($id) {
+                if (isset($this->route['var']['id'])) {
                     $q = '
                     SELECT
                         id,
@@ -778,7 +784,7 @@ class App extends WebApp {
                         id = :id;';
 
                     $v = [
-                        ['id', $id, SQLITE3_INTEGER],
+                        ['id', $this->route['var']['id'], SQLITE3_INTEGER],
                     ];
 
                     $dump = $this->DB->querySingle($q, $v);
