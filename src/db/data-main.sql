@@ -1280,6 +1280,19 @@ INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trac
 INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1054,41,7541,'BROCKBEATS','I need');
 INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1055,41,7689,'Ennio Morricone','A Goodbye To Friends');
 INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1056,41,7837,'Nas','The Set Up');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1057,42,0,'The Isolationist','The Rocket');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1058,42,3,'Faze Action','Moving Cities (Cinematic Orchestra Remix)');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1059,42,464,'Sukia vs. DJ Food','Feel''n You & Me');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1060,42,820,'DJ Krush And Toshinori Kondo','Mu - Chu');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1061,42,1072,'Stress Assassin','Roof Meet');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1062,42,1417,'Watershell','Aquamotive (Liqui-dub)');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1063,42,1756,'Amon Tobin','Dream Sequence');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1064,42,2173,'Achecorporation','Bd Bd');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1065,42,2435,'833-45','Schumann Resonance / New Star');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1066,42,2687,'3tronik','Verwirrung');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1067,42,3015,'The Infesticons','Figurine Theme');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1068,42,3251,'Busta Rhymes','There''s Only One Year Left!!!');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1069,42,3383,'Crepusculum','End Of The Community');
 INSERT INTO "visual" ("id","createdOn","visualName","description","tags","media") VALUES (1,'2000','S.O.I.A.',NULL,'["static"]','[{"slug":"file/visual/2000-soia.jpg","type":"image"}]');
 INSERT INTO "visual" ("id","createdOn","visualName","description","tags","media") VALUES (2,'2002','What does your soul look like? (Part 1-5)',NULL,'["static"]','[{"slug":"file/visual/2002-what_like-part1.jpg","type":"image"},{"slug":"file/visual/2002-what_like-part2.jpg","type":"image"},{"slug":"file/visual/2002-what_like-part3.jpg","type":"image"},{"slug":"file/visual/2002-what_like-part4.jpg","type":"image"},{"slug":"file/visual/2002-what_like-part5.jpg","type":"image"}]');
 INSERT INTO "visual" ("id","createdOn","visualName","description","tags","media") VALUES (3,'2002','TripZ v6 theme concept',NULL,'["static"]','[{"slug":"file/visual/2002-tripz_v6_unifit.jpg","type":"image"}]');
@@ -1516,6 +1529,7 @@ INSERT INTO "p420session" ("id","sessionNum","sessionDate","sessionDur","mixclou
 INSERT INTO "p420session" ("id","sessionNum","sessionDate","sessionDur","mixcloudHost","mixcloudSlug") VALUES (39,39,'2022-06-26',5660,'//mixcloud.com','/lowtechman/planet-42039/');
 INSERT INTO "p420session" ("id","sessionNum","sessionDate","sessionDur","mixcloudHost","mixcloudSlug") VALUES (40,40,'2022-07-16',7026,'//mixcloud.com','/lowtechman/planet-42040/');
 INSERT INTO "p420session" ("id","sessionNum","sessionDate","sessionDur","mixcloudHost","mixcloudSlug") VALUES (41,41,'2022-09-15',8084,'//mixcloud.com','/lowtechman/planet-42041/');
+INSERT INTO "p420session" ("id","sessionNum","sessionDate","sessionDur","mixcloudHost","mixcloudSlug") VALUES (42,42,'2022-12-12',3653,'//mixcloud.com','/lowtechman/planet-42042/');
 INSERT INTO "exit" ("id","linkText","url") VALUES (1,'Conservation Drones','//conservationdrones.org');
 INSERT INTO "exit" ("id","linkText","url") VALUES (2,'Earthship Biotecture','//earthshipglobal.com');
 INSERT INTO "exit" ("id","linkText","url") VALUES (3,'Four Paws','//four-paws.org');
