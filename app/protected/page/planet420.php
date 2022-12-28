@@ -105,13 +105,13 @@ if ($sessionByID) {
                 <td><a href="//duckduckgo.com/?q=%4$s+artist">%2$s</a></td>
                 <td><a href="//duckduckgo.com/?q=%5$s+song">%3$s</a></td>
             </tr>
-        ',
-        $this->secondsToString($v['timeStart']),
-        $v['artistName'],
-        $v['trackName'],
-        urlencode($v['artistName']),
-        urlencode(sprintf('%s - %s', $v['artistName'], $v['trackName'])),
-       );
+            ',
+            $this->secondsToString($v['timeStart']),
+            $v['artistName'],
+            $v['trackName'],
+            urlencode($v['artistName']),
+            urlencode(sprintf('%s - %s', $v['artistName'], $v['trackName'])),
+        );
     }
 
     print('</tbody>');
