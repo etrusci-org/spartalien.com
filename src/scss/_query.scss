@@ -37,6 +37,10 @@
         &.simple {
             grid-template-columns: 1fr 1fr 1fr;
         }
+
+        &.two {
+            grid-template-columns: 1fr 1fr;
+        }
     }
 }
 
