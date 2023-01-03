@@ -24,14 +24,14 @@ export const LazyMedia = {
         bottomBar: 64,
     },
     spotifyAlbumHeight: {
-        header: 80,
-        trackRow: 31,
-        bottomBar: 10,
+        header: 200,
+        trackRow: 51,
+        bottomBar: 25,
     },
     spotifyPlaylistHeight: {
-        header: 80,
-        trackRow: 50,
-        bottomBar: 10,
+        header: 200,
+        trackRow: 51,
+        bottomBar: 25,
     },
     embed() {
         if (this.debug)
