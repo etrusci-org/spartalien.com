@@ -105,8 +105,8 @@ export const LazyMedia: LazyMediaInterface = {
         spotifyTrack: '//open.spotify.com/embed/track/{SLUG}',
         spotifyAlbum: '//open.spotify.com/embed/album/{SLUG}',
         spotifyPlaylist: '//open.spotify.com/embed/playlist/{SLUG}',
-        mixcloudMix: '//mixcloud.com/widget/iframe/?feed={SLUG}&hide_cover=1',
-        mixcloudPlaylist: '//mixcloud.com/widget/iframe/?feed={SLUG}&hide_cover=1',
+        mixcloudMix: '//www.mixcloud.com/widget/iframe/?feed={SLUG}&hide_cover=1',
+        mixcloudPlaylist: '//www.mixcloud.com/widget/iframe/?feed={SLUG}&hide_cover=1',
         youtubeVideo: '//youtube.com/embed/{SLUG}?modestbranding=1&rel=0',
         youtubePlaylist: '//youtube.com/embed/videoseries?list={SLUG}&modestbranding=1&rel=0',
         twitchStream: '//player.twitch.tv/?muted=false&autoplay=true&channel={SLUG}',
@@ -118,14 +118,14 @@ export const LazyMedia: LazyMediaInterface = {
         bottomBar: 64,
     },
     spotifyAlbumHeight: {
-        header: 80,
-        trackRow: 31,
-        bottomBar: 10,
+        header: 200,
+        trackRow: 51,
+        bottomBar: 25,
     },
     spotifyPlaylistHeight: {
-        header: 80,
-        trackRow: 50,
-        bottomBar: 10,
+        header: 200,
+        trackRow: 51,
+        bottomBar: 25,
     },
 
 
