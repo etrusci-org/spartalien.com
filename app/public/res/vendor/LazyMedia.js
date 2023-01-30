@@ -17,6 +17,7 @@ export const LazyMedia = {
         youtubePlaylist: '//youtube.com/embed/videoseries?list={SLUG}&modestbranding=1&rel=0',
         twitchStream: '//player.twitch.tv/?muted=false&autoplay=true&channel={SLUG}',
         twitchChat: '//twitch.tv/embed/{SLUG}',
+        odyseeVideo: '//odysee.com/$/embed/{SLUG}',
     },
     bandcampAlbumHeight: {
         header: 119,
@@ -88,6 +89,8 @@ export const LazyMedia = {
             e = this.bakeTwitchStream(code);
         if (code.type == 'twitchChat')
             e = this.bakeTwitchChat(code);
+        if (code.type == 'odyseeVideo')
+            e = this.bakeOdyseeVideo(code);
         if (e) {
             e.classList.add(...targetNode.classList);
             e.classList.remove(this.selector.substring(1));
@@ -240,7 +243,6 @@ export const LazyMedia = {
         e.setAttribute('src', this.slugTpl.youtubePlaylist.replace('{SLUG}', code.slug));
         e.setAttribute('allowfullscreen', 'allowfullscreen');
         e.setAttribute('playsinline', 'playsinline');
-        console.log('e :>> ', e);
         return e;
     },
     bakeTwitchStream(code) {
@@ -254,6 +256,14 @@ export const LazyMedia = {
         const e = document.createElement('iframe');
         e.setAttribute('loading', 'lazy');
         e.setAttribute('src', this.slugTpl.twitchChat.replace('{SLUG}', code.slug));
+        return e;
+    },
+    bakeOdyseeVideo(code) {
+        const e = document.createElement('iframe');
+        e.setAttribute('loading', 'lazy');
+        e.setAttribute('src', this.slugTpl.odyseeVideo.replace('{SLUG}', code.slug));
+        e.setAttribute('allowfullscreen', 'allowfullscreen');
+        e.setAttribute('playsinline', 'playsinline');
         return e;
     },
     guessHTMLAudioTypeByExt(filename) {
