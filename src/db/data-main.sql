@@ -1519,6 +1519,21 @@ Released 2022-11-18 on [url=//soundsforthesoul.bandcamp.com]Sounds for the Soul 
 
 I contributed track 7.','[{"slug":"//soundsforthesoul.bandcamp.com/album/sfts-experimental-ambient-compilation?action=buy","text":"BUY","type":"link"},{"slug":"file/compilation/soundsforthesoul-experimental-ambient-comp.jpg","type":"image"},{"slug":"3359373587","trackCount":39,"type":"bandcampAlbum"}]');
 INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (30,'[featured on] Resonate on CAMP Radio 2022-12-04','[url=//theargentgrub.co.uk]The Argent Grub[/url] included [route=music/id:30]Flux (feat. Stevie Lee Price)[/route] in the Resonate playlist.','[{"slug":"/camp_fr/resonate-04th-december-2022/","type":"mixcloudMix"},{"slug":"//stream.resonate.coop/u/18562/playlist/2022-12-04-resonate-on-camp-radio","text":"Playlist on resonate.coop","type":"link"}]');
+INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (31,'TOTAL FUCKING MADNESS','TOTAL FUCKING MADNESS
+TOTAL FUCKING MADNESS
+TOTAL FUCKING MADNESS
+TOTAL FUCKING MADNESS
+TOTAL FUCKING MADNESS
+TOTAL FUCKING MADNESS
+
+00:00 Intro
+00:32 Level 1
+05:28 Level 2
+10:00 Level 3
+14:06 Level 4
+17:48 Level 5
+21:06 Level 6
+23:58 Outro','[{"slug":"https://odysee.com/@spartalien:2/total-fucking-madness:8","text":"Watch on Odysee without age-restriction","type":"link"},{"slug":"eq_I5Oq603M","type":"youtubeVideo"}]');
 INSERT INTO "p420session" ("id","sessionNum","sessionDate","sessionDur","mixcloudHost","mixcloudSlug") VALUES (1,1,'2021-05-04',10370,'//mixcloud.com',NULL);
 INSERT INTO "p420session" ("id","sessionNum","sessionDate","sessionDur","mixcloudHost","mixcloudSlug") VALUES (2,2,'2021-05-06',10371,'//mixcloud.com','/lowtechman/planet-4202/');
 INSERT INTO "p420session" ("id","sessionNum","sessionDate","sessionDur","mixcloudHost","mixcloudSlug") VALUES (3,3,'2021-05-09',13173,'//mixcloud.com','/lowtechman/planet-4203/');
