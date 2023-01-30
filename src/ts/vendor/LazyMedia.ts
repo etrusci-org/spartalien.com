@@ -17,6 +17,7 @@ interface LazyMediaInterface {
         youtubePlaylist: string
         twitchStream: string
         twitchChat: string
+        odyseeVideo: string
     }
     bandcampAlbumHeight: {
         header: number
@@ -50,6 +51,7 @@ interface LazyMediaInterface {
     bakeYoutubePlaylist(code: lazyCodeType): HTMLIFrameElement | null
     bakeTwitchStream(code: lazyCodeType): HTMLIFrameElement | null
     bakeTwitchChat(code: lazyCodeType): HTMLIFrameElement | null
+    bakeOdyseeVideo(code: lazyCodeType): HTMLIFrameElement | null
     guessHTMLAudioTypeByExt(filename: string): string | null
     guessHTMLVideoTypeByExt(filename: string): string | null
 }
@@ -95,6 +97,9 @@ export const LazyMedia: LazyMediaInterface = {
         twitch
             stream slug: <channel>&parent=<your_domain>
             chat slug: <channel>/chat?[darkpopout&]parent=<your_domain>
+
+        odysee
+            video slug: <user_id>/<video_id>
         */
         link: '{SLUG}',
         image: '{SLUG}',
@@ -111,6 +116,7 @@ export const LazyMedia: LazyMediaInterface = {
         youtubePlaylist: '//youtube.com/embed/videoseries?list={SLUG}&modestbranding=1&rel=0',
         twitchStream: '//player.twitch.tv/?muted=false&autoplay=true&channel={SLUG}',
         twitchChat: '//twitch.tv/embed/{SLUG}',
+        odyseeVideo: '//odysee.com/$/embed/{SLUG}',
     },
     bandcampAlbumHeight: {
         header: 119,
@@ -173,6 +179,7 @@ export const LazyMedia: LazyMediaInterface = {
         if (code.type == 'youtubePlaylist') e = this.bakeYoutubePlaylist(code)
         if (code.type == 'twitchStream') e = this.bakeTwitchStream(code)
         if (code.type == 'twitchChat') e = this.bakeTwitchChat(code)
+        if (code.type == 'odyseeVideo') e = this.bakeOdyseeVideo(code)
 
         // post process baked elements
         if (e) {
@@ -400,8 +407,6 @@ export const LazyMedia: LazyMediaInterface = {
         e.setAttribute('allowfullscreen', 'allowfullscreen')
         e.setAttribute('playsinline', 'playsinline')
 
-        console.log('e :>> ', e);
-
         return e
     },
 
@@ -422,6 +427,18 @@ export const LazyMedia: LazyMediaInterface = {
 
         e.setAttribute('loading', 'lazy')
         e.setAttribute('src', this.slugTpl.twitchChat.replace('{SLUG}', code.slug))
+
+        return e
+    },
+
+
+    bakeOdyseeVideo(code) {
+        const e = document.createElement('iframe')
+
+        e.setAttribute('loading', 'lazy')
+        e.setAttribute('src', this.slugTpl.odyseeVideo.replace('{SLUG}', code.slug))
+        e.setAttribute('allowfullscreen', 'allowfullscreen')
+        e.setAttribute('playsinline', 'playsinline')
 
         return e
     },

@@ -33,7 +33,7 @@ if ($stuffByID) {
                     sprintf('stuff-%1$s', $stuff['id']),
                 );
             }
-            else if ($v['type'] == 'video' || $v['type'] == 'youtubeVideo') {
+            else if ($v['type'] == 'video' || $v['type'] == 'youtubeVideo' || $v['type'] == 'youtubePlaylist' || $v['type'] == 'odyseeVideo') {
                 return sprintf('
                     <div class="videobox"><span class="lazycode">%1$s</span></div>
                     ',

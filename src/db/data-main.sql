@@ -1418,7 +1418,7 @@ Contains:
 - A real four-leaved clover.
 - Love.
 
-Digital release is [route=music/id:16]there[/route].','[{"slug":"//spartalien.bandcamp.com/merch/memoria-s9m2-2358-limited-edition?action=buy","text":"BUY","type":"link"},{"slug":"file/merch-2358/all.jpg","type":"image"},{"slug":"file/merch-2358/package1of7.jpg","type":"image"},{"slug":"file/merch-2358/package2of7.jpg","type":"image"},{"slug":"file/merch-2358/package3of7.jpg","type":"image"},{"slug":"file/merch-2358/package4of7.jpg","type":"image"},{"slug":"file/merch-2358/package5of7.jpg","type":"image"},{"slug":"file/merch-2358/package6of7.jpg","type":"image"},{"slug":"file/merch-2358/package7of7.jpg","type":"image"}]');
+Digital release is [route=music/id:16]there[/route].','[{"slug":"//spartalien.bandcamp.com/merch/memoria-s9m2-2358-limited-edition?action=buy","text":"BUY","type":"link"},{"slug":"stuff/id:6","text":"Making of video","type":"link"},{"slug":"file/merch-2358/all.jpg","type":"image"},{"slug":"file/merch-2358/package1of7.jpg","type":"image"},{"slug":"file/merch-2358/package2of7.jpg","type":"image"},{"slug":"file/merch-2358/package3of7.jpg","type":"image"},{"slug":"file/merch-2358/package4of7.jpg","type":"image"},{"slug":"file/merch-2358/package5of7.jpg","type":"image"},{"slug":"file/merch-2358/package6of7.jpg","type":"image"},{"slug":"file/merch-2358/package7of7.jpg","type":"image"}]');
 INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (17,'[merchandise] Logo T-Shirt, S9M3','Type: T-Shirt
 Released: 2020-07-06
 
@@ -1519,6 +1519,21 @@ Released 2022-11-18 on [url=//soundsforthesoul.bandcamp.com]Sounds for the Soul 
 
 I contributed track 7.','[{"slug":"//soundsforthesoul.bandcamp.com/album/sfts-experimental-ambient-compilation?action=buy","text":"BUY","type":"link"},{"slug":"file/compilation/soundsforthesoul-experimental-ambient-comp.jpg","type":"image"},{"slug":"3359373587","trackCount":39,"type":"bandcampAlbum"}]');
 INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (30,'[featured on] Resonate on CAMP Radio 2022-12-04','[url=//theargentgrub.co.uk]The Argent Grub[/url] included [route=music/id:30]Flux (feat. Stevie Lee Price)[/route] in the Resonate playlist.','[{"slug":"/camp_fr/resonate-04th-december-2022/","type":"mixcloudMix"},{"slug":"//stream.resonate.coop/u/18562/playlist/2022-12-04-resonate-on-camp-radio","text":"Playlist on resonate.coop","type":"link"}]');
+INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (31,'TOTAL FUCKING MADNESS','TOTAL FUCKING MADNESS
+TOTAL FUCKING MADNESS
+TOTAL FUCKING MADNESS
+TOTAL FUCKING MADNESS
+TOTAL FUCKING MADNESS
+TOTAL FUCKING MADNESS
+
+00:00 Intro
+00:32 Level 1
+05:28 Level 2
+10:00 Level 3
+14:06 Level 4
+17:48 Level 5
+21:06 Level 6
+23:58 Outro','[{"slug":"@spartalien:2/total-fucking-madness:8","type":"odyseeVideo"},{"slug":"eq_I5Oq603M","type":"youtubeVideo"}]');
 INSERT INTO "p420session" ("id","sessionNum","sessionDate","sessionDur","mixcloudHost","mixcloudSlug") VALUES (1,1,'2021-05-04',10370,'//mixcloud.com',NULL);
 INSERT INTO "p420session" ("id","sessionNum","sessionDate","sessionDur","mixcloudHost","mixcloudSlug") VALUES (2,2,'2021-05-06',10371,'//mixcloud.com','/lowtechman/planet-4202/');
 INSERT INTO "p420session" ("id","sessionNum","sessionDate","sessionDur","mixcloudHost","mixcloudSlug") VALUES (3,3,'2021-05-09',13173,'//mixcloud.com','/lowtechman/planet-4203/');
