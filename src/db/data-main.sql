@@ -1418,7 +1418,7 @@ Contains:
 - A real four-leaved clover.
 - Love.
 
-Digital release is [route=music/id:16]there[/route].','[{"slug":"//spartalien.bandcamp.com/merch/memoria-s9m2-2358-limited-edition?action=buy","text":"BUY","type":"link"},{"slug":"file/merch-2358/all.jpg","type":"image"},{"slug":"file/merch-2358/package1of7.jpg","type":"image"},{"slug":"file/merch-2358/package2of7.jpg","type":"image"},{"slug":"file/merch-2358/package3of7.jpg","type":"image"},{"slug":"file/merch-2358/package4of7.jpg","type":"image"},{"slug":"file/merch-2358/package5of7.jpg","type":"image"},{"slug":"file/merch-2358/package6of7.jpg","type":"image"},{"slug":"file/merch-2358/package7of7.jpg","type":"image"}]');
+Digital release is [route=music/id:16]there[/route].','[{"slug":"//spartalien.bandcamp.com/merch/memoria-s9m2-2358-limited-edition?action=buy","text":"BUY","type":"link"},{"slug":"stuff/id:6","text":"Making of video","type":"link"},{"slug":"file/merch-2358/all.jpg","type":"image"},{"slug":"file/merch-2358/package1of7.jpg","type":"image"},{"slug":"file/merch-2358/package2of7.jpg","type":"image"},{"slug":"file/merch-2358/package3of7.jpg","type":"image"},{"slug":"file/merch-2358/package4of7.jpg","type":"image"},{"slug":"file/merch-2358/package5of7.jpg","type":"image"},{"slug":"file/merch-2358/package6of7.jpg","type":"image"},{"slug":"file/merch-2358/package7of7.jpg","type":"image"}]');
 INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (17,'[merchandise] Logo T-Shirt, S9M3','Type: T-Shirt
 Released: 2020-07-06
 
@@ -1533,7 +1533,7 @@ TOTAL FUCKING MADNESS
 14:06 Level 4
 17:48 Level 5
 21:06 Level 6
-23:58 Outro','[{"slug":"https://odysee.com/@spartalien:2/total-fucking-madness:8","text":"Watch on Odysee without age-restriction","type":"link"},{"slug":"eq_I5Oq603M","type":"youtubeVideo"}]');
+23:58 Outro','[{"slug":"@spartalien:2/total-fucking-madness:8","type":"odyseeVideo"},{"slug":"eq_I5Oq603M","type":"youtubeVideo"}]');
 INSERT INTO "p420session" ("id","sessionNum","sessionDate","sessionDur","mixcloudHost","mixcloudSlug") VALUES (1,1,'2021-05-04',10370,'//mixcloud.com',NULL);
 INSERT INTO "p420session" ("id","sessionNum","sessionDate","sessionDur","mixcloudHost","mixcloudSlug") VALUES (2,2,'2021-05-06',10371,'//mixcloud.com','/lowtechman/planet-4202/');
 INSERT INTO "p420session" ("id","sessionNum","sessionDate","sessionDur","mixcloudHost","mixcloudSlug") VALUES (3,3,'2021-05-09',13173,'//mixcloud.com','/lowtechman/planet-4203/');
