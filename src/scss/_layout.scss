@@ -413,6 +413,12 @@ footer {
 .imagepreview {
     cursor: zoom-in;
 
+    display: inline-block;
+    margin-bottom: 1rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+
     img {
         max-height: 600px;
     }

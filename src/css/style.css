@@ -378,6 +378,11 @@ footer p {
 
 .imagepreview {
   cursor: zoom-in;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+.imagepreview:last-child {
+  margin-bottom: 0;
 }
 .imagepreview img {
   max-height: 600px;
