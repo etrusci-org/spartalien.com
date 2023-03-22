@@ -25,7 +25,7 @@ $conf['nav'] = [
     ['music', 'MUSIC'],
     ['visual', 'VISUAL'],
     ['stuff', 'STUFF'],
-    ['planet420', 'P420'],
+    ['planet420', 'PLANET 420'],
     ['cam', 'CAM'],
     ['news', 'NEWS'],
     ['about', 'ABOUT'],
@@ -46,7 +46,7 @@ $conf['validRequestPatterns'] = [
     'stuff',
     'stuff/id:[1-31]',
     'planet420',
-    'planet420/session/num:[1-43]',
+    'planet420/session/num:[1-44]',
     'planet420/artists',
     'cam',
     'news',
@@ -97,6 +97,7 @@ $conf['elsewhere'] = [
     'spotify' => ['Spotify', '//open.spotify.com/artist/553FKlcVkf1YFU6dl129Ef'],
     'resonate' => ['Resonate', '//stream.resonate.coop/artist/20951'],
     'mixcloud' => ['Mixcloud', '//mixcloud.com/lowtechman'],
+    'soundcloud' => ['SoundCloud', '//soundcloud.com/spartalien'],
     'twitch' => ['Twitch', '//twitch.tv/spartalien'],
     'odysee' => ['Odysee', '//odysee.com/@spartalien:2'],
     'youtube' => ['YouTube', '//youtube.com/@spartalien-com'],
@@ -104,6 +105,7 @@ $conf['elsewhere'] = [
     'discord' => ['Discord', '//spartalien.com/discord'],
     'instagram' => ['Instagram', '//instagram.com/spartalien'],
     'twitter' => ['Twitter', '//twitter.com/spartalien'],
+    'lastfm' => ['Last.fm', '//last.fm/user/spartalien'],
 ];
 
 $conf['cachePrimingURL'] = $conf['baseURL'];
