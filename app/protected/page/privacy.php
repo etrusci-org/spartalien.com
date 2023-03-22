@@ -1,7 +1,7 @@
 <div class="box">
     <h2>PRIVACY ON SPARTALIEN.COM</h2>
     <p>
-        Last Update: 2022-09-02.
+        Last Update: 2023-03-14.
         Feel free to
         <a data-scur="51|81|84|78|107|78|106|77|52|85|71|90|121|99|122|78|48|89|122|89|104|104|68|79|119|77|122|89|48|73|87|89|120|85|122|78|120|81|71|90|51|77|84|77|48|69|68|79|122|89|84|78|109|90|122|78|109|86|71|78|120|77|50|78|104|82|87|79|51|89|84|78|53|103|84|77|109|78|87|89|106|90|84|77|52|48|87|89|112|120|71|100|118|112|84|97|117|90|50|98|65|78|72|99|104|74|72|100|104|120|87|97|108|53|109|76|106|57|87|98">send me an email<noscript> (JavaScript required)</noscript></a>
         if you have any questions.
@@ -22,8 +22,9 @@
 
 <div class="box">
     <h3>TRACKERS</h3>
-    <p>There are no third-party trackers installed on this website.</p>
+    <p>There are no third-party trackers installed on spartalien.com.</p>
     <p>Embedded content (e.g. Music and Video players) can temporarily introduce some on the pages they are loaded.</p>
+    <p>In the <a href="//eepurl.com/dqYlHr">newsletter</a> opens and clicks get tracked. Using <a href="//mailchimp.com">Mailchimp</a> as a mailinglist provider.</p>
 </div>
 
 

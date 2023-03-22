@@ -25,7 +25,7 @@ if (!$releaseByID) {
 
 
 // release by id
-if ($releaseByID) {
+if ($releaseByID && $releaseByID['releasedOn']) {
     // prepare stuff
     $rls = $releaseByID;
 
@@ -100,11 +100,13 @@ if ($releaseByID) {
         printf('
             <span class="lazycode">{
                 "type": "bandcamp%1$s",
-                "slug": "%2$s"
+                "slug": "%2$s",
+                "trackCount": %3$s
             }</span>
             ',
             ($rls['trackCount'] > 1) ? 'Album' : 'Track',
             $rls['bandcampID'],
+            $rls['trackCount'],
         );
     }
 
