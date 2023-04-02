@@ -12,6 +12,86 @@ class App extends WebApp {
     }
 
 
+    public function getPageTitle(): string {
+        $pageTitle = $this->route['request'];
+
+        switch ($this->route['node']) {
+            case 'music':
+                if (isset($this->route['var']['id'])) {
+                    $q = 'SELECT releaseName FROM audioRelease WHERE id = :id LIMIT 1;';
+                    $v = [
+                        ['id', $this->route['var']['id'], SQLITE3_INTEGER],
+                    ];
+                    $r = $this->DB->querySingle($q, $v);
+                    if ($r) {
+                        $pageTitle = $r['releaseName'];
+                    }
+                }
+            break;
+
+            case 'visual':
+                if (isset($this->route['var']['id'])) {
+                    $q = 'SELECT visualName FROM visual WHERE id = :id LIMIT 1;';
+                    $v = [
+                        ['id', $this->route['var']['id'], SQLITE3_INTEGER],
+                    ];
+                    $r = $this->DB->querySingle($q, $v);
+                    if ($r) {
+                        $pageTitle = $r['visualName'];
+                    }
+                }
+            break;
+
+            case 'stuff':
+                if (isset($this->route['var']['id'])) {
+                    $q = 'SELECT stuffName FROM stuff WHERE id = :id LIMIT 1;';
+                    $v = [
+                        ['id', $this->route['var']['id'], SQLITE3_INTEGER],
+                    ];
+                    $r = $this->DB->querySingle($q, $v);
+                    if ($r) {
+                        $pageTitle = $r['stuffName'];
+                    }
+                }
+            break;
+
+            case 'planet420':
+                if (isset($this->route['var']['num'])) {
+                    $q = 'SELECT sessionNum, sessionDate FROM p420session WHERE sessionNum = :num LIMIT 1;';
+                    $v = [
+                        ['num', $this->route['var']['num'], SQLITE3_INTEGER],
+                    ];
+                    $r = $this->DB->querySingle($q, $v);
+                    if ($r) {
+                        $pageTitle = sprintf('Planet 420.%s / %s',
+                            $r['sessionNum'],
+                            $r['sessionDate'],
+                        );
+                    }
+                }
+            break;
+
+            case 'news':
+                if (isset($this->route['var']['id'])) {
+                    $q = 'SELECT postedOn FROM news WHERE id = :id LIMIT 1;';
+                    $v = [
+                        ['id', $this->route['var']['id'], SQLITE3_INTEGER],
+                    ];
+                    $r = $this->DB->querySingle($q, $v);
+                    if ($r) {
+                        $pageTitle = sprintf('news from %s', $r['postedOn']);
+                    }
+                }
+            break;
+        }
+
+        return sprintf('%s :: %s',
+            $this->conf['siteTitle'],
+            $pageTitle,
+        );
+    }
+
+
     protected function getSearchResult(int $queryLengthMin = 3, int $queryLengthMax = 30): array {
         $query = (isset($_POST['query'])) ? strtolower(trim($_POST['query'])) : null;
         $cacheFile = null;
