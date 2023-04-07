@@ -17,17 +17,7 @@
 <div class="box">
     <h2>ELSEWHERE</h2>
     <p>
-        <?php
-        foreach ($this->conf['elsewhere'] as $v) {
-            if (strtolower($v[0]) == 'newsletter') continue;
-            printf(
-                '
-                <a class="btn" href="%2$s">%1$s</a>',
-                $v[0],
-                $v[1],
-            );
-        }
-        ?>
+        <?php $this->printElsewhereButtons(); ?>
     </p>
 </div>
 

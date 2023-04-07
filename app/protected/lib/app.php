@@ -906,6 +906,19 @@ class App extends WebApp {
     }
 
 
+    protected function printElsewhereButtons(): void {
+        foreach ($this->conf['elsewhere'] as $v) {
+            if (strtolower($v[0]) == 'newsletter') continue;
+            printf(
+                '
+                <a class="btn" href="%2$s">%1$s</a>',
+                $v[0],
+                $v[1],
+            );
+        }
+    }
+
+
     static protected function secondsToString(int $seconds): string {
         $s = max(0, $seconds);
 
