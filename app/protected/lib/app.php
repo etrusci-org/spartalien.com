@@ -499,6 +499,13 @@ class App extends WebApp {
                 in_array('freedl', $this->route['flag']),
             ];
 
+            // dj mixes
+            $filter[] = [
+                'DJ Mixes',
+                $this->routeURL('djmixes'),
+                null,
+            ];
+
             // years
             $q = '
             SELECT DISTINCT
@@ -516,13 +523,6 @@ class App extends WebApp {
                     ];
                 }
             }
-
-            // dj mixes
-            $filter[] = [
-                'DJ Mixes',
-                $this->routeURL('djmixes'),
-                null,
-            ];
         }
 
         return $filter;

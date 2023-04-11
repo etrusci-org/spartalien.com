@@ -50,10 +50,6 @@ $latestAudioReleaseID = $match[1];
         RandomQuoteTyper.typeQuote()
     }
 
-    setInterval(() => {
-        RandomQuoteTyper.typeQuote()
-    }, 60_000)
-
     randomQuoteReload.addEventListener('click', (event) => {
         event.preventDefault()
         RandomQuoteTyper.typeQuote()
