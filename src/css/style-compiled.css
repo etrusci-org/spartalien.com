@@ -125,7 +125,7 @@ p,
 ul,
 table,
 iframe {
-  margin: 0 0 0.33rem;
+  margin: 0 0 0.33rem 0;
 }
 
 ul {
@@ -155,6 +155,10 @@ td:last-child {
   padding: 0.125rem 0;
 }
 
+td img[src*="/ico-"] {
+  margin: 0 0 0 0.5rem;
+}
+
 img[src*="/ico-"] {
   display: inline-block;
   width: auto;
@@ -169,6 +173,9 @@ a:link, a:visited {
 a:hover, a:focus, a:active {
   text-decoration-line: underline;
   text-decoration-style: dotted;
+}
+a.btn {
+  text-decoration: none;
 }
 
 header {
@@ -248,8 +255,8 @@ footer p {
 .btn {
   display: inline-block;
   text-align: center;
-  vertical-align: middle;
-  padding: 0.25rem 0.5rem;
+  vertical-align: text-top;
+  padding: 0.25rem 0.5rem 0.11rem 0.5rem;
   margin: 0 0.25rem 0.5rem 0;
 }
 
