@@ -479,6 +479,9 @@ a.active {
   background-color: hsl(0deg, 0%, 17%);
   cursor: pointer;
 }
+.btn:hover img[src*="/ico-"], .btn:focus img[src*="/ico-"], .btn.active img[src*="/ico-"] {
+  opacity: 1;
+}
 
 img[src*="/ico-"] {
   opacity: 0.5;
