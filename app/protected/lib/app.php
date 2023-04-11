@@ -13,7 +13,7 @@ class App extends WebApp {
 
 
     public function getPageTitle(): string {
-        $pageTitle = $this->route['request'];
+        $pageTitle = sprintf('/%s', $this->route['request']);
 
         if (
             $this->route['node'] == 'music' &&
@@ -94,7 +94,7 @@ class App extends WebApp {
         else {
             return sprintf('%s :: %s',
                 $this->conf['siteTitle'],
-                ucwords($pageTitle),
+                $pageTitle,
             );
         }
     }
@@ -906,9 +906,11 @@ class App extends WebApp {
     }
 
 
-    protected function printElsewhereButtons(): void {
+    protected function printElsewhereButtons(array $exclude=[]): void {
         foreach ($this->conf['elsewhere'] as $v) {
-            if (strtolower($v[0]) == 'newsletter') continue;
+
+            if (in_array(strtolower($v[0]), $exclude)) continue;
+
             printf(
                 '
                 <a class="btn" href="%2$s">%1$s</a>',

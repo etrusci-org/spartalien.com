@@ -6,7 +6,7 @@ $latestAudioReleaseID = $match[1];
 
 <div class="grid two text-align-center">
     <div>
-        <p>LATEST MUSIC RELEASE</p>
+        <h3>LATEST MUSIC RELEASE</h3>
         <p>
             <a href="<?php print($this->routeURL('music/id:%s', [$latestAudioReleaseID])); ?>">
                 <img src="file/cover/<?php print($latestAudioReleaseID); ?>-med.jpg" alt="cover art">
@@ -15,23 +15,24 @@ $latestAudioReleaseID = $match[1];
     </div>
 
     <div>
-        <p>JOIN INSIDER CLUB</p>
-        <a href="http://eepurl.com/dqYlHr">
-            <img src="res/newsletter-qr.png" alt="qrcode">
-        </a>
+        <h3>JOIN INSIDER CLUB</h3>
+        <p>
+            <a href="<?php print($this->conf['elsewhere']['newsletter'][1]); ?>"><img src="res/newsletter-qr.png" alt="qrcode"></a>
+            </p>
     </div>
 
     <div>
-        <p>ELSEWHERE</p>
+        <h3>ELSEWHERE</h3>
         <p>
             <?php $this->printElsewhereButtons(); ?>
         </p>
     </div>
 
     <div>
-        <p>RANDOM QUOTE <small>(<a href="#" class="random-quote-reload">reload</a>)</small></p>
+        <h3>RANDOM QUOTE</h3>
         <noscript><div class="noscript">JavaScript required</div></noscript>
-        <div class="random-quote-target"></div>
+        <p class="random-quote-target"></p>
+        <p><small>(<a href="#" class="random-quote-reload">reload</a>)</small></p>
     </div>
 </div>
 
@@ -51,7 +52,7 @@ $latestAudioReleaseID = $match[1];
 
     setInterval(() => {
         RandomQuoteTyper.typeQuote()
-    }, 600_000)
+    }, 60_000)
 
     randomQuoteReload.addEventListener('click', (event) => {
         event.preventDefault()
