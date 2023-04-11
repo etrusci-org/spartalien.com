@@ -113,6 +113,12 @@ a.active {
         color: $color-60;
         background-color: $color-25;
         cursor: pointer;
+
+        img {
+            &[src*='/ico-'] {
+                opacity: 1;
+            }
+        }
     }
 }
 
