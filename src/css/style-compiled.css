@@ -125,7 +125,7 @@ p,
 ul,
 table,
 iframe {
-  margin: 0 0 0.33rem 0;
+  margin: 0 0 0.33rem;
 }
 
 ul {
@@ -256,7 +256,7 @@ footer p {
   display: inline-block;
   text-align: center;
   vertical-align: text-top;
-  padding: 0.25rem 0.5rem 0.11rem 0.5rem;
+  padding: 0.25rem 0.5rem 0.11rem;
   margin: 0 0.25rem 0.5rem 0;
 }
 
