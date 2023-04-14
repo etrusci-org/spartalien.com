@@ -361,6 +361,11 @@ footer p {
   margin: 0;
 }
 
+.thumb {
+  width: auto;
+  height: 80px;
+}
+
 .imagepreviewTarget {
   display: none;
   position: fixed;

@@ -6,6 +6,7 @@ error_reporting(E_ALL);
 // Mandatory WebApp vars:
 $conf = [
     'dbFile' => __DIR__.'/db/main.sqlite3',
+    'dbD6File' => __DIR__.'/db/myd6.sqlite3',
     'pageDir' => __DIR__.'/page',
     'cacheDir' => __DIR__.'/cache',
     'cachingEnabled' => false,
@@ -56,6 +57,7 @@ $conf['validRequestPatterns'] = [
     'exit',
     'search',
     'privacy',
+    'crates',
 ];
 
 $conf['preRenderSettings'] = [
@@ -116,7 +118,6 @@ $conf['metaGenerator'] = 'Brain';
 $conf['metaDescription'] = 'SPARTALIEN\'s Website';
 $conf['metaKeywords'] = 'SPARTALIEN, arT2, lowtechman, multimedia, digital, art, music, audio, video, soundtrack, visual, code, experimental, original';
 
-$conf['ogTitle'] = $conf['siteTitle'];
 $conf['ogDescription'] = $conf['metaDescription'];
 $conf['ogType'] = 'website';
 
