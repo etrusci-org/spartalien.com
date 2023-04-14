@@ -12,6 +12,94 @@ class App extends WebApp {
     }
 
 
+    public function getPageTitle(): string {
+        $pageTitle = sprintf('/%s', $this->route['request']);
+
+        if (
+            $this->route['node'] == 'music' &&
+            isset($this->route['var']['id'])
+        ) {
+            $q = 'SELECT releaseName FROM audioRelease WHERE id = :id LIMIT 1;';
+            $v = [
+                ['id', $this->route['var']['id'], SQLITE3_INTEGER],
+            ];
+            $r = $this->DB->querySingle($q, $v);
+            if ($r) {
+                $pageTitle = $r['releaseName'];
+            }
+        }
+
+        if (
+            $this->route['node'] == 'visual' &&
+            isset($this->route['var']['id'])
+        ) {
+            $q = 'SELECT visualName FROM visual WHERE id = :id LIMIT 1;';
+            $v = [
+                ['id', $this->route['var']['id'], SQLITE3_INTEGER],
+            ];
+            $r = $this->DB->querySingle($q, $v);
+            if ($r) {
+                $pageTitle = $r['visualName'];
+            }
+        }
+
+        if (
+            $this->route['node'] == 'stuff' &&
+            isset($this->route['var']['id'])
+        ) {
+            $q = 'SELECT stuffName FROM stuff WHERE id = :id LIMIT 1;';
+            $v = [
+                ['id', $this->route['var']['id'], SQLITE3_INTEGER],
+            ];
+            $r = $this->DB->querySingle($q, $v);
+            if ($r) {
+                $pageTitle = $r['stuffName'];
+            }
+        }
+
+        if (
+            $this->route['node'] == 'planet420' &&
+            isset($this->route['var']['num'])
+        ) {
+            $q = 'SELECT sessionNum, sessionDate FROM p420session WHERE sessionNum = :num LIMIT 1;';
+            $v = [
+                ['num', $this->route['var']['num'], SQLITE3_INTEGER],
+            ];
+            $r = $this->DB->querySingle($q, $v);
+            if ($r) {
+                $pageTitle = sprintf('Planet 420.%s / %s',
+                    $r['sessionNum'],
+                    $r['sessionDate'],
+                );
+            }
+        }
+
+        if (
+            $this->route['node'] == 'news' &&
+            isset($this->route['var']['id'])
+        ) {
+            $q = 'SELECT postedOn FROM news WHERE id = :id LIMIT 1;';
+            $v = [
+                ['id', $this->route['var']['id'], SQLITE3_INTEGER],
+            ];
+            $r = $this->DB->querySingle($q, $v);
+            if ($r) {
+                $pageTitle = sprintf('News from %s', $r['postedOn']);
+            }
+        }
+
+        if ($this->route['node'] == 'index') {
+            return $this->conf['siteTitle'];
+        }
+        else {
+            return sprintf('%s :: %s',
+                $this->conf['siteTitle'],
+                $pageTitle,
+            );
+        }
+    }
+
+
     protected function getSearchResult(int $queryLengthMin = 3, int $queryLengthMax = 30): array {
         $query = (isset($_POST['query'])) ? strtolower(trim($_POST['query'])) : null;
         $cacheFile = null;
@@ -411,6 +499,13 @@ class App extends WebApp {
                 in_array('freedl', $this->route['flag']),
             ];
 
+            // dj mixes
+            $filter[] = [
+                'DJ Mixes',
+                $this->routeURL('djmixes'),
+                null,
+            ];
+
             // years
             $q = '
             SELECT DISTINCT
@@ -428,13 +523,6 @@ class App extends WebApp {
                     ];
                 }
             }
-
-            // dj mixes
-            $filter[] = [
-                'DJ Mixes',
-                $this->routeURL('djmixes'),
-                null,
-            ];
         }
 
         return $filter;
@@ -815,6 +903,21 @@ class App extends WebApp {
         ];
 
         return preg_replace($patterns, $replacements, $input);
+    }
+
+
+    protected function printElsewhereButtons(array $exclude=[]): void {
+        foreach ($this->conf['elsewhere'] as $v) {
+
+            if (in_array(strtolower($v[0]), $exclude)) continue;
+
+            printf(
+                '
+                <a class="btn" href="%2$s">%1$s</a>',
+                $v[0],
+                $v[1],
+            );
+        }
     }
 
 

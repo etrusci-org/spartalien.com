@@ -82,9 +82,9 @@ export const LazyMedia: LazyMediaInterface = {
             album slug: <album_id>
 
         spotify
-            track slug: <track_id>
-            album slug: <album_id>
-            playlilst slug: <album_id>
+            track slug: /track/<track_id>
+            album slug: /album/<album_id>
+            playlist slug: /playlist/<playlist_id>
 
         mixcloud
             mix slug: /<profile>/<show>/
@@ -107,9 +107,9 @@ export const LazyMedia: LazyMediaInterface = {
         video: '{SLUG}',
         bandcampTrack: '//bandcamp.com/EmbeddedPlayer/track={SLUG}/size=large/artwork=none/bgcol=2b2b2b/linkcol=cccccc/tracklist=false/transparent=true/',
         bandcampAlbum: '//bandcamp.com/EmbeddedPlayer/album={SLUG}/size=large/artwork=none/bgcol=2b2b2b/linkcol=cccccc/tracklist=true/transparent=true/',
-        spotifyTrack: '//open.spotify.com/embed/track/{SLUG}',
-        spotifyAlbum: '//open.spotify.com/embed/album/{SLUG}',
-        spotifyPlaylist: '//open.spotify.com/embed/playlist/{SLUG}',
+        spotifyTrack: '//open.spotify.com/embed{SLUG}',
+        spotifyAlbum: '//open.spotify.com/embed{SLUG}',
+        spotifyPlaylist: '//open.spotify.com/embed{SLUG}',
         mixcloudMix: '//www.mixcloud.com/widget/iframe/?feed={SLUG}&hide_cover=1',
         mixcloudPlaylist: '//www.mixcloud.com/widget/iframe/?feed={SLUG}&hide_cover=1',
         youtubeVideo: '//youtube.com/embed/{SLUG}?modestbranding=1&rel=0',

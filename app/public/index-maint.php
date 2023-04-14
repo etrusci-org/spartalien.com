@@ -22,6 +22,7 @@
     <p>
         [ <a href="https://spartalien.bandcamp.com" target="_blank">Bandcamp</a> |
         <a href="https://open.spotify.com/artist/553FKlcVkf1YFU6dl129Ef" target="_blank">Spotify</a> |
+        <a href="https://instagram.com/spartalien" target="_blank">Instagram</a> |
         <a href="https://twitter.com/spartalien" target="_blank">Twitter</a> ]
     </p>
 </body>

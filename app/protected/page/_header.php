@@ -14,7 +14,7 @@
     <meta name="description" content="<?php print($this->conf['metaDescription']); ?>">
     <meta name="keywords" content="<?php print($this->conf['metaKeywords']); ?>">
 
-    <meta property="og:title" content="<?php print($this->conf['ogTitle']); ?>">
+    <meta property="og:title" content="<?php print($this->getPageTitle()); ?>">
     <meta property="og:url" content="<?php print($this->conf['baseURL']); ?>">
     <meta property="og:description" content="<?php print($this->conf['ogDescription']); ?>">
     <meta property="og:type" content="<?php print($this->conf['ogType']); ?>">
@@ -31,7 +31,7 @@
 
     <link rel="stylesheet" href="res/style.min.css?v=<?php print(VERSION['css']); ?>">
 
-    <title><?php print($this->conf['siteTitle']); ($this->route['request']) ? print(' :: '.$this->route['request']) : ''; ?></title>
+    <title><?php print($this->getPageTitle()); ?></title>
 </head>
 <body>
     <noscript><div class="noscript">Consider enabling JavaScript or features like audio and video players won't work. (<a href="//enable-javascript.com" target="_blank">instructions</a>)</div></noscript>

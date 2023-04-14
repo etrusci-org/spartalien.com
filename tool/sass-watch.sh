@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 input="./src/scss/style.scss"
-output="./src/css/style.css"
+output="./src/css/style-compiled.css"
 
 sass \
     --watch \
