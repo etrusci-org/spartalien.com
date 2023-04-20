@@ -74,6 +74,7 @@ INSERT INTO "news" ("id","postedOn","items") VALUES (61,'2022-04-20','["Featured
 INSERT INTO "news" ("id","postedOn","items") VALUES (62,'2022-11-18','["Featured on: [route=stuff/id:29]SFTS: Experimental Ambient Compilation[/route]"]');
 INSERT INTO "news" ("id","postedOn","items") VALUES (63,'2022-11-23','["New music: [route=music/id:34]OKAY, BUT CAN YOU RAP TO THIS?[/route]"]');
 INSERT INTO "news" ("id","postedOn","items") VALUES (64,'2022-12-04','["Featured on: [route=stuff/id:30]Resonate on CAMP Radio 2022-12-04[/route]"]');
+INSERT INTO "news" ("id","postedOn","items") VALUES (65,'2023-04-21','["New music: [route=music/id:35]WARM SUMMER EVENING[/route]"]');
 INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (1,'Continuoduction',396,'[1]','2223569284','//spartalien.bandcamp.com','/track/continuoduction','//open.spotify.com','/track/2Clx7jPmYSA21DbB0FKxUR');
 INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (2,'I''ll Embrace You Again In Space',418,'[1]','1079688660','//spartalien.bandcamp.com','/track/ill-embrace-you-again-in-space','//open.spotify.com','/track/3QmCKvjLtKXS4vQD6822rf');
 INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (3,'Realize It''s Just A Ride',360,'[1]','4004833542','//spartalien.bandcamp.com','/track/realize-its-just-a-ride','//open.spotify.com','/track/7LwAhr4FxPmxhsM0X4C2h6');
@@ -164,7 +165,7 @@ INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","b
 INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (88,'Rusty Playground',388,'[1]','4134745160','//spartalien.bandcamp.com','/track/rusty-playground','//open.spotify.com','/track/0ftEwQnHTdNwCz2muSMQMb');
 INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (89,'Pull',232,'[1]','2179157149','//spartalien.bandcamp.com','/track/pull','//open.spotify.com','/track/0DGO8z59f3hKa4ajszpfdg');
 INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (90,'You Are Not Them',335,'[1]','699116923','//spartalien.bandcamp.com','/track/you-are-not-them','//open.spotify.com','/track/5OhmXlLolp4wTUy7H4ZFxF');
-INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (91,'A Night With My Imaginary Friend',351,'[1]','2565743237','//spartalien.bandcamp.com','/track/a-night-with-my-imaginary-friend','//open.spotify.com',NULL);
+INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (91,'[Bonus Track] A Night With My Imaginary Friend',351,'[1]','2565743237','//spartalien.bandcamp.com','/track/a-night-with-my-imaginary-friend','//open.spotify.com',NULL);
 INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (92,'Uncertain',268,'[1]','2666379051','//spartalien.bandcamp.com','/track/uncertain','//open.spotify.com','/track/4A9uz51yEBcHImxUXnhABw');
 INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (93,'Anomaly',204,'[1]','3744985228','//spartalien.bandcamp.com','/track/anomaly','//open.spotify.com','/track/01W2H0tACbOKrTbB5ryfvO');
 INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (94,'Secret',247,'[1]','2569236346','//spartalien.bandcamp.com','/track/secret','//open.spotify.com','/track/6tGh0r6YeWdCZIjOI7ZmDI');
@@ -224,6 +225,17 @@ INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","b
 INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (148,'Four Four Three (We Ded Version)',122,'[1]','3035376497','//spartalien.bandcamp.com','/track/four-four-three-we-ded-version','//open.spotify.com','/track/1kNC0ai1R7VUHSfq5lWK52');
 INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (149,'Final Adventure (Not A Tale Version)',121,'[1]','2767209598','//spartalien.bandcamp.com','/track/final-adventure-not-a-tale-version','//open.spotify.com','/track/0M8W2PyMIQxHtqTaZ4hnvV');
 INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (150,'Smoking Sea (feat. Orochi Hanma)',227,'[1,5]','3571265655','//spartalien.bandcamp.com','/track/smoking-sea-feat-orochi-hanma','//open.spotify.com','/track/1R8hHZc8kwnk2waV0k6WBm');
+INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (151,'Compost Heap Triangle',164,'[1]','3269640172','//spartalien.bandcamp.com','/track/compost-heap-triangle','//open.spotify.com',NULL);
+INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (152,'To Return Home',278,'[1]','901818364','//spartalien.bandcamp.com','/track/to-return-home','//open.spotify.com',NULL);
+INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (153,'The Memory',298,'[1]','2584054182','//spartalien.bandcamp.com','/track/the-memory','//open.spotify.com',NULL);
+INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (154,'Biting Wind',330,'[1]','2504749629','//spartalien.bandcamp.com','/track/biting-wind','//open.spotify.com',NULL);
+INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (155,'With Darkness Comes Clarity',194,'[1]','3523773437','//spartalien.bandcamp.com','/track/with-darkness-comes-clarity','//open.spotify.com',NULL);
+INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (156,'Full Moon',365,'[1]','2021050379','//spartalien.bandcamp.com','/track/full-moon','//open.spotify.com',NULL);
+INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (157,'His Task',346,'[1]','3215503086','//spartalien.bandcamp.com','/track/his-task','//open.spotify.com',NULL);
+INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (158,'Knees On The Floor',206,'[1]','184290529','//spartalien.bandcamp.com','/track/knees-on-the-floor','//open.spotify.com',NULL);
+INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (159,'Never Arriving',148,'[1]','2249844393','//spartalien.bandcamp.com','/track/never-arriving','//open.spotify.com',NULL);
+INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (160,'Collective Departure',183,'[1]','2886079451','//spartalien.bandcamp.com','/track/collective-departure','//open.spotify.com',NULL);
+INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (161,'[Bonus Track] I Have Seen The Shadow Again',366,'[1]','1234562531','//spartalien.bandcamp.com','/track/i-have-seen-the-shadow-again','//open.spotify.com',NULL);
 INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1,1,0,'DJ Shadow','Lost And Found');
 INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (2,1,426,'Mo'' Horizons','Walk Into Space - Pt.1&11');
 INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (3,1,601,'Tosca','Chocolate Elvis (Baby Mammoth Version 2)');
@@ -1324,6 +1336,28 @@ INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trac
 INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1098,43,8807,'Herwig Holzmann','... Everything From Changing');
 INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1099,43,9217,'The Four Owls','Life In The Balance Ft. Jam Baxter');
 INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1100,43,9486,'Zero 7','Likufanele');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1101,44,0,'Skalpel','Break In');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1102,44,338,'Audio Lotion','Voodoo Velvet');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1103,44,815,'Early Groovers','Odds Of Getting Diced Or Sliced');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1104,44,1100,'Groove Armada','Dusk You And Me');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1105,44,1433,'Nightmares On Wax','Morse');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1106,44,1783,'A.O.S.','History (Repeats Itself) (Edit)');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1107,44,1909,'Kosma','Aquarium');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1108,44,2537,'Cypress Hill','Spark Another Owl');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1109,44,2739,'Flanger','Endless Summer');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1110,44,3022,'Carbon Based Lifeforms','Comsat');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1111,44,3433,'Deaf Center','Dial');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1112,44,3770,'Fernando Lagreca','Red Sun Hair');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1113,44,4002,'Nova Viator','Gorey Empire Defence');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1114,44,4235,'DJ Food','Aerosolilique Pts 1-3');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1115,44,4552,'Asian Dub Foundation','Jericho (Capa D Dub)');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1116,44,4887,'Puddu Varano','Finger Trip');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1117,44,5127,'Rae & Christian','Catch A Rude Awakening');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1118,44,5318,'Plaid','Little People');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1119,44,5540,'Quantic','Time Is The Enemy');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1120,44,5756,'researcher','Long Ago Comet');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1121,44,6026,'~~~','Tones Of Our Troubles');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1122,44,6138,'Romeo Rucha','Let Me Out of Here');
 INSERT INTO "visual" ("id","createdOn","visualName","description","tags","media") VALUES (1,'2000','S.O.I.A.',NULL,'["static"]','[{"slug":"file/visual/2000-soia.jpg","type":"image"}]');
 INSERT INTO "visual" ("id","createdOn","visualName","description","tags","media") VALUES (2,'2002','What does your soul look like? (Part 1-5)',NULL,'["static"]','[{"slug":"file/visual/2002-what_like-part1.jpg","type":"image"},{"slug":"file/visual/2002-what_like-part2.jpg","type":"image"},{"slug":"file/visual/2002-what_like-part3.jpg","type":"image"},{"slug":"file/visual/2002-what_like-part4.jpg","type":"image"},{"slug":"file/visual/2002-what_like-part5.jpg","type":"image"}]');
 INSERT INTO "visual" ("id","createdOn","visualName","description","tags","media") VALUES (3,'2002','TripZ v6 theme concept',NULL,'["static"]','[{"slug":"file/visual/2002-tripz_v6_unifit.jpg","type":"image"}]');
@@ -1577,6 +1611,7 @@ INSERT INTO "p420session" ("id","sessionNum","sessionDate","sessionDur","mixclou
 INSERT INTO "p420session" ("id","sessionNum","sessionDate","sessionDur","mixcloudHost","mixcloudSlug") VALUES (41,41,'2022-09-15',8084,'//mixcloud.com','/lowtechman/planet-42041/');
 INSERT INTO "p420session" ("id","sessionNum","sessionDate","sessionDur","mixcloudHost","mixcloudSlug") VALUES (42,42,'2022-12-12',3653,'//mixcloud.com','/lowtechman/planet-42042/');
 INSERT INTO "p420session" ("id","sessionNum","sessionDate","sessionDur","mixcloudHost","mixcloudSlug") VALUES (43,43,'2023-01-27',9839,'//mixcloud.com','/lowtechman/planet-42043/');
+INSERT INTO "p420session" ("id","sessionNum","sessionDate","sessionDur","mixcloudHost","mixcloudSlug") VALUES (44,44,'2023-03-22',6234,'//mixcloud.com','/lowtechman/planet-42044/');
 INSERT INTO "exit" ("id","linkText","url") VALUES (1,'Conservation Drones','//conservationdrones.org');
 INSERT INTO "exit" ("id","linkText","url") VALUES (2,'Earthship Biotecture','//earthshipglobal.com');
 INSERT INTO "exit" ("id","linkText","url") VALUES (3,'Four Paws','//four-paws.org');
@@ -1616,9 +1651,15 @@ INSERT INTO "exit" ("id","linkText","url") VALUES (36,'The Argent Grub','//thear
 INSERT INTO "exit" ("id","linkText","url") VALUES (37,'CAMP','//www.campfr.com');
 INSERT INTO "exit" ("id","linkText","url") VALUES (38,'Orochi Hanma','//www.twitch.tv/orochihanma');
 INSERT INTO "exit" ("id","linkText","url") VALUES (39,'SomaFM','//somafm.com');
+INSERT INTO "exit" ("id","linkText","url") VALUES (40,'Scotopia','//scotopia.co.uk');
+INSERT INTO "exit" ("id","linkText","url") VALUES (41,'scene.org File Archive','//files.scene.org');
+INSERT INTO "exit" ("id","linkText","url") VALUES (42,'MusiX','//www.musix.com');
+INSERT INTO "exit" ("id","linkText","url") VALUES (43,'House of Sound','//www.houseofsound.ch');
+INSERT INTO "exit" ("id","linkText","url") VALUES (44,'Mp3tag','//mp3tag.de');
+INSERT INTO "exit" ("id","linkText","url") VALUES (45,'Foobar2000','//foobar2000.org');
 INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (1,'[1]','Continuoduction','[1]',NULL,1,'2016-03-24',NULL,'The marking of a fresh start.','["Cover art photo - NASA (nasa.gov)"]','[]','[{"slug":"QZovE8JDsXU","type":"youtubeVideo"}]',1,'2223569284','//spartalien.bandcamp.com','/track/continuoduction','//open.spotify.com','/track/2Clx7jPmYSA21DbB0FKxUR');
 INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (2,'[2]','I''ll Embrace You Again In Space','[1]',NULL,1,'2016-10-13',NULL,'Thinking of the moment and place when the time''s over.','["Cover art photo - NASA (nasa.gov)"]','[]','[{"slug":"cC4vSYqYbYA","type":"youtubeVideo"}]',0,'1079688660','//spartalien.bandcamp.com','/track/ill-embrace-you-again-in-space','//open.spotify.com','/track/3QmCKvjLtKXS4vQD6822rf');
-INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (3,'[3]','Realize It''s Just A Ride','[1]',NULL,1,'2017-03-13',NULL,'Don''t be afraid.','["Speech - Dr. Timothy Leary (leary.com)"]','[]','[{"slug":"cC4vSYqYbYA","type":"youtubeVideo"}]',0,'1079688660','//spartalien.bandcamp.com','/track/ill-embrace-you-again-in-space','//open.spotify.com','/track/3QmCKvjLtKXS4vQD6822rf');
+INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (3,'[3]','Realize It''s Just A Ride','[1]',NULL,1,'2017-03-13',NULL,'Don''t be afraid.','["Speech - Dr. Timothy Leary (leary.com)"]','[]','[{"slug":"v3aCJysvutk","type":"youtubeVideo"}]',0,'4004833542','//spartalien.bandcamp.com','/track/realize-its-just-a-ride','//open.spotify.com','/track/6R28LmtWTwaggp496VUZKN');
 INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (4,'[4]','Nature''s Song','[1]',NULL,1,'2017-06-18',NULL,'You should listen to her more often.','["Speech - Alan Watts (alanwatts.org)","Cover art photo - Unknown Photographer (it''s a Bush TV22)"]','[]','[{"slug":"KYNIayrc074","type":"youtubeVideo"}]',0,'1367673093','//spartalien.bandcamp.com','/track/natures-song','//open.spotify.com','/track/0Fnu4vn6XsiUpI2ECJyr5K');
 INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (5,'[5]','Following The Calling','[1]',NULL,1,'2017-06-20',NULL,'Gloomy days and bittersweet memories.','["Additional Harp strings - Esblendet (esblendet.ch)"]','[]','[]',0,'2940566208','//spartalien.bandcamp.com','/track/following-the-calling','//open.spotify.com','/track/5DlhcOQXlUESTOhNWL4wQ5');
 INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (6,'[6]','Digging In Memories','[1]',NULL,1,'2017-07-03',NULL,'It all started with a simple thought.','[]','[]','[]',0,'2839011968','//spartalien.bandcamp.com','/track/digging-in-memories','//open.spotify.com','/track/5JmknWTUqtJZ2Qhb3MMoCo');
@@ -1687,5 +1728,41 @@ INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID",
 This body of work is quiet, but also loud, and very emotional. Raw, but not rushed, feelings. Intentionally improvised moments to get lost in.
 
 This is a special edition of [route=music/id:32]UNTOLD STORIES[/route].','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between July and August 2021."]','[]','[]',0,'762897740','//spartalien.bandcamp.com','/album/untold-stories-doomers-delight','//open.spotify.com','/album/3MBt8QE1l8kCWBW6QaM71e');
-INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (34,'[142,143,144,145,146,147,148,149,150]','OKAY, BUT CAN YOU RAP TO THIS?','[1]',NULL,3,'2022-11-23',NULL,'Some fun tracks to get back into it. Thank you for still being here.','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between June and October 2022.","Lyrics - Orochi Hanma (track: 9)","Vocals - Orochi Hanma (track: 9)"]','[]','[{"attr":[["target","_blank"]],"slug":"file/smoking-sea-lyrics.html","text":"Smoking-Sea-Lyrics.html","type":"link"}]',0,'4047724916','//spartalien.bandcamp.com','/album/okay-but-can-you-rap-to-this','//open.spotify.com','/album/4CXDCmlFrKxbmQjkEINHQa');
+INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (34,'[142,143,144,145,146,147,148,149,150]','OKAY, BUT CAN YOU RAP TO THIS?','[1]',NULL,3,'2022-11-23',NULL,'Some fun tracks to get back into it. Thank you for still being here.','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between June and October 2022.","Lyrics - Orochi Hanma (track: 9)","Vocals - Orochi Hanma (track: 9)"]','[]','[{"attr":[["target","_blank"]],"slug":"file/smoking-sea-lyrics.html","text":"Smoking-Sea-Lyrics.html","type":"link"},{"slug":"//stream.resonate.coop/artist/20951/release/okay-but-can-you-rap-to-this","text":"OKAY, BUT CAN YOU RAP TO THIS? on Resonate","type":"link"}]',0,'4047724916','//spartalien.bandcamp.com','/album/okay-but-can-you-rap-to-this','//open.spotify.com','/album/4CXDCmlFrKxbmQjkEINHQa');
+INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (35,'[151,152,153,154,155,156,157,158,159,160,161]','WARM SUMMER EVENING','[1]',NULL,3,'2023-04-21',NULL,'It is a warm summer evening.
+A light breeze blows gently over the brushwood-covered fields.
+Clouds drift across the dusky sky and thicken into a black carpet as night approaches.
+
+With darkness comes clarity.
+For a short while, all thoughts, like a waterfall, flow inexorably downwards.
+Silent images flicker before the closed eyes.
+Suddenly, the memory.
+Their departure.
+His task.
+
+The emptiness that fills everything when a heart breaks.
+The realisation that nothing can be changed.
+The hope of being allowed to return home soon.
+
+Knees on the floor.
+Breathing calmly.
+The silent call, loud.
+
+Twelve figures manifest in a circle.
+The thirteen are complete again.
+
+An approving nod.
+A final embrace.
+A collective departure.
+Each in a different direction.
+
+It is a cold winter evening.
+A biting wind blows mercilessly across the snow-covered fields.
+The sky is cloudless and the moon is full.
+
+
+Digital album purchases on Bandcamp include the bonus track "I Have Seen The Shadow Again". 
+
+
+This album is currently a Bandcamp exclusive until it will be released to other major music platforms on May 11, 2023. Will send another Newsletter then.','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between November 2022 and March 2023."]','[]','[{"slug":"PLGOlCfPCyZ4EHWNjgL5g5bRG6bur9dUXf","type":"youtubePlaylist"}]',0,'73692186','//spartalien.bandcamp.com','/album/warm-summer-evening','//open.spotify.com',NULL);
 COMMIT;
