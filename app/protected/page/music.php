@@ -254,20 +254,27 @@ if ($releaseList) {
 }
 
 
-print('
+printf('
     <div class="box">
         <p>
             You can also find my music on
-            <a href="https://spartalien.bandcamp.com">Bandcamp</a>,
-            <a href="https://open.spotify.com/artist/553FKlcVkf1YFU6dl129Ef">Spotify</a>,
-            <a href="https://music.amazon.com/artists/B07FYWLY7Z">Amazon</a>,
-            <a href="https://music.apple.com/artist/spartalien/1455263028">Apple</a>,
-            <a href="https://www.deezer.com/artist/50523232">Deezer</a>,
-            <a href="https://www.youtube.com/channel/UCXwYExlRqK_oeUocuKkhRUw">YouTube</a>
-            and many other music platforms. Just search for "SPARTALIEN".
+            <a href="%1$s">Bandcamp</a>,
+            <a href="%2$s">Spotify</a>,
+            <a href="%3$s">Amazon</a>,
+            <a href="%4$s">Apple</a>,
+            <a href="%5$s">Deezer</a>,
+            <a href="%6$s">YouTube</a>
+            and many other music platforms. Just search for "SPARTALIEN" on your favorite one.
         </p>
         <p>
-            If you decide to buy some of my music (thank you!), consider doing so on <a href="https://spartalien.bandcamp.com">Bandcamp</a>,
+            If you decide to buy some of my music (thank you!), consider doing so on <a href="%1$s">Bandcamp</a>,
             since only there I can include bonus material and stuff for digital releases.
         </p>
-    </div>');
+    </div>',
+    $this->conf['elsewhere']['bandcamp'][1],
+    $this->conf['elsewhere']['spotify'][1],
+    $this->conf['elsewhere']['amazon'][1],
+    $this->conf['elsewhere']['apple'][1],
+    $this->conf['elsewhere']['deezer'][1],
+    $this->conf['elsewhere']['youtube'][1],
+);
