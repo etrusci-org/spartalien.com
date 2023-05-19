@@ -1657,6 +1657,7 @@ INSERT INTO "exit" ("id","linkText","url") VALUES (42,'MusiX','//www.musix.com')
 INSERT INTO "exit" ("id","linkText","url") VALUES (43,'House of Sound','//www.houseofsound.ch');
 INSERT INTO "exit" ("id","linkText","url") VALUES (44,'Mp3tag','//mp3tag.de');
 INSERT INTO "exit" ("id","linkText","url") VALUES (45,'Foobar2000','//foobar2000.org');
+INSERT INTO "exit" ("id","linkText","url") VALUES (46,'iMusician','//imusician.app/signup?referral_token=Lriyz1h7DIHUCK1I');
 INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (1,'[1]','Continuoduction','[1]',NULL,1,'2016-03-24',NULL,'The marking of a fresh start.','["Cover art photo - NASA (nasa.gov)"]','[]','[{"slug":"QZovE8JDsXU","type":"youtubeVideo"}]',1,'2223569284','//spartalien.bandcamp.com','/track/continuoduction','//open.spotify.com','/track/2Clx7jPmYSA21DbB0FKxUR');
 INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (2,'[2]','I''ll Embrace You Again In Space','[1]',NULL,1,'2016-10-13',NULL,'Thinking of the moment and place when the time''s over.','["Cover art photo - NASA (nasa.gov)"]','[]','[{"slug":"cC4vSYqYbYA","type":"youtubeVideo"}]',0,'1079688660','//spartalien.bandcamp.com','/track/ill-embrace-you-again-in-space','//open.spotify.com','/track/3QmCKvjLtKXS4vQD6822rf');
 INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (3,'[3]','Realize It''s Just A Ride','[1]',NULL,1,'2017-03-13',NULL,'Don''t be afraid.','["Speech - Dr. Timothy Leary (leary.com)"]','[]','[{"slug":"v3aCJysvutk","type":"youtubeVideo"}]',0,'4004833542','//spartalien.bandcamp.com','/track/realize-its-just-a-ride','//open.spotify.com','/track/6R28LmtWTwaggp496VUZKN');
@@ -1761,8 +1762,5 @@ A biting wind blows mercilessly across the snow-covered fields.
 The sky is cloudless and the moon is full.
 
 
-Digital album purchases on Bandcamp include the bonus track "I Have Seen The Shadow Again". 
-
-
-This album is currently a Bandcamp exclusive until it will be released to other major music platforms on May 11, 2023. Will send another Newsletter then.','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between November 2022 and March 2023."]','[]','[{"slug":"PLGOlCfPCyZ4EHWNjgL5g5bRG6bur9dUXf","type":"youtubePlaylist"}]',0,'73692186','//spartalien.bandcamp.com','/album/warm-summer-evening','//open.spotify.com','/album/3faemmsL9qLqKsCz1Oa2lv');
+Digital album purchases on Bandcamp include the bonus track "I Have Seen The Shadow Again".','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between November 2022 and March 2023."]','[]','[{"slug":"PLGOlCfPCyZ4EHWNjgL5g5bRG6bur9dUXf","type":"youtubePlaylist"}]',0,'73692186','//spartalien.bandcamp.com','/album/warm-summer-evening','//open.spotify.com','/album/3faemmsL9qLqKsCz1Oa2lv');
 COMMIT;
