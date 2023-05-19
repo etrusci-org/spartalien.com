@@ -1761,8 +1761,5 @@ A biting wind blows mercilessly across the snow-covered fields.
 The sky is cloudless and the moon is full.
 
 
-Digital album purchases on Bandcamp include the bonus track "I Have Seen The Shadow Again". 
-
-
-This album is currently a Bandcamp exclusive until it will be released to other major music platforms on May 11, 2023. Will send another Newsletter then.','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between November 2022 and March 2023."]','[]','[{"slug":"PLGOlCfPCyZ4EHWNjgL5g5bRG6bur9dUXf","type":"youtubePlaylist"}]',0,'73692186','//spartalien.bandcamp.com','/album/warm-summer-evening','//open.spotify.com','/album/3faemmsL9qLqKsCz1Oa2lv');
+Digital album purchases on Bandcamp include the bonus track "I Have Seen The Shadow Again".','["Recorded, composed, mixed and mastered by SPARTALIEN (spartalien.com) between November 2022 and March 2023."]','[]','[{"slug":"PLGOlCfPCyZ4EHWNjgL5g5bRG6bur9dUXf","type":"youtubePlaylist"}]',0,'73692186','//spartalien.bandcamp.com','/album/warm-summer-evening','//open.spotify.com','/album/3faemmsL9qLqKsCz1Oa2lv');
 COMMIT;
