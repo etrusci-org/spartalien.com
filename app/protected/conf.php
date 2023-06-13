@@ -35,7 +35,7 @@ $conf['validateRequests'] = true;
 $conf['validRequestPatterns'] = [
     '', // index
     'music',
-    'music/id:[1-35]',
+    'music/id:[1-37]',
     'music/type:[album|ep|remix|single]',
     'music/year:[2016-2023]',
     'music/collab',
