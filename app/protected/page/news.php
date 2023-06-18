@@ -26,7 +26,7 @@ if (!$newsByID) {
 
 
 // news by id
-if ($newsByID) {
+if ($newsByID && $newsByID['postedOn']) {
     $nws = $newsByID;
 
     $items = implode(' ', array_map(function(string $v): string {
@@ -61,6 +61,11 @@ if ($newsList) {
     print('<ul>');
 
     foreach ($newsList as $v) {
+
+        if (!$v['postedOn']) {
+            continue;
+        }
+
         $items = implode(' + ', array_map(function($v) {
             return $this->parseLazyInput($v);
         }, $v['items']));

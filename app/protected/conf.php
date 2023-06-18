@@ -35,7 +35,7 @@ $conf['validateRequests'] = true;
 $conf['validRequestPatterns'] = [
     '', // index
     'music',
-    'music/id:[1-35]',
+    'music/id:[1-36]',
     'music/type:[album|ep|remix|single]',
     'music/year:[2016-2023]',
     'music/collab',
@@ -50,7 +50,7 @@ $conf['validRequestPatterns'] = [
     'planet420/artists',
     'cam',
     'news',
-    'news/id:[1-65]',
+    'news/id:[1-66]',
     'news.atom',
     'about',
     'exit',
