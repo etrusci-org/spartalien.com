@@ -46,7 +46,7 @@ $conf['validRequestPatterns'] = [
     'stuff',
     'stuff/id:[1-31]',
     'planet420',
-    'planet420/session/num:[1-44]',
+    'planet420/session/num:[1-45]',
     'planet420/artists',
     'cam',
     'news',
