@@ -267,8 +267,11 @@ printf('
             and many other music platforms. Just search for "SPARTALIEN" on your favorite one.
         </p>
         <p>
-            If you decide to buy some of my music (thank you!), consider doing so on <a href="%1$s">Bandcamp</a>,
+            If you decide to buy some of my music or merchandise (thank you!), consider doing so on <a href="%1$s">Bandcamp</a>,
             since only there I can include bonus material and stuff for digital releases.
+        </p>
+        <p>
+            Of course you can always write me an email and order directly from me.
         </p>
     </div>',
     $this->conf['elsewhere']['bandcamp'][1],
