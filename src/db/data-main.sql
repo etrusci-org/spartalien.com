@@ -1534,7 +1534,7 @@ Contains:
 
 [b]Warning[/b] for allergy sufferers: Wood was treated with a bit of coconut fat.
 
-Digital release is [route=music/id:27]there[/route].','[{"slug":"//spartalien.bandcamp.com/merch/memory-s9m6-floating-high-limited-edition-usb-stick?action=buy","text":"SOLD OUT","type":"link"},{"slug":"file/merch-floatinghigh-usb/1.jpg","type":"image"},{"slug":"file/merch-floatinghigh-usb/2.jpg","type":"image"},{"slug":"file/merch-floatinghigh-usb/3.jpg","type":"image"}]');
+Digital release is [route=music/id:27]there[/route].','[{"slug":"//spartalien.bandcamp.com/merch/memory-s9m6-floating-high-limited-edition-usb-stick?action=buy","text":"BUY","type":"link"},{"slug":"file/merch-floatinghigh-usb/1.jpg","type":"image"},{"slug":"file/merch-floatinghigh-usb/2.jpg","type":"image"},{"slug":"file/merch-floatinghigh-usb/3.jpg","type":"image"}]');
 INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (21,'[samplepack] S9SP1 - 2358 Sample Pack','Type: Sample Pack
 Released: 2020-09-08
 License: non-exclusive + royalty free
