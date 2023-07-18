@@ -68,7 +68,7 @@ INSERT INTO "news" ("id","postedOn","items") VALUES (55,'2021-04-10','["Featured
 INSERT INTO "news" ("id","postedOn","items") VALUES (56,'2020-11-18','["Featured on: [route=stuff/id:9]MighTV[/route]"]');
 INSERT INTO "news" ("id","postedOn","items") VALUES (57,'2020-11-29','["Featured on: [route=stuff/id:9]MighTV[/route]"]');
 INSERT INTO "news" ("id","postedOn","items") VALUES (58,'2022-03-27','["Featured on: [route=stuff/id:14]Resonate on CAMP Radio 2022-03-27[/route]"]');
-INSERT INTO "news" ("id","postedOn","items") VALUES (59,'2022-03-06','["Featured on: [route=stuff/id:13]Spooky Kitten Records'' WHiTMiRE Reviews Music[/route]"]');
+INSERT INTO "news" ("id","postedOn","items") VALUES (59,'2022-03-06','["Featured on: [route=stuff/id:13]Spooky Kitten Records'' WHiTMiRE Reviews Music: Episode 26[/route]"]');
 INSERT INTO "news" ("id","postedOn","items") VALUES (60,'2022-03-03','["Featured on: [route=stuff/id:27]Martina''s \"The Only Way Is Up\" Spotify Playlist[/route]"]');
 INSERT INTO "news" ("id","postedOn","items") VALUES (61,'2022-04-20','["Featured on: [route=stuff/id:28]Martina''s \"Add Some Music To Your Day\" Spotify Playlist[/route]"]');
 INSERT INTO "news" ("id","postedOn","items") VALUES (62,'2022-11-18','["Featured on: [route=stuff/id:29]SFTS: Experimental Ambient Compilation[/route]"]');
@@ -76,6 +76,9 @@ INSERT INTO "news" ("id","postedOn","items") VALUES (63,'2022-11-23','["New musi
 INSERT INTO "news" ("id","postedOn","items") VALUES (64,'2022-12-04','["Featured on: [route=stuff/id:30]Resonate on CAMP Radio 2022-12-04[/route]"]');
 INSERT INTO "news" ("id","postedOn","items") VALUES (65,'2023-04-21','["New music: [route=music/id:35]WARM SUMMER EVENING[/route]"]');
 INSERT INTO "news" ("id","postedOn","items") VALUES (66,'2023-06-17','["New music: [route=music/id:36]THE DYING SPACESHIP SYMPHONY[/route]"]');
+INSERT INTO "news" ("id","postedOn","items") VALUES (67,'2023-07-13','["New music: [route=music/id:37]Yellow Soul Grinder[/route]"]');
+INSERT INTO "news" ("id","postedOn","items") VALUES (68,'2023-07-15','["Featured on: [route=stuff/id:32]SFTS: The Backrooms Comp : Level 2[/route]"]');
+INSERT INTO "news" ("id","postedOn","items") VALUES (69,'2023-05-27','["Featured on: [route=stuff/id:33]Spooky Kitten Records'' WHiTMiRE Reviews Music: Episode 76[/route]"]');
 INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (1,'Continuoduction',396,'[1]','2223569284','//spartalien.bandcamp.com','/track/continuoduction','//open.spotify.com','/track/2Clx7jPmYSA21DbB0FKxUR');
 INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (2,'I''ll Embrace You Again In Space',418,'[1]','1079688660','//spartalien.bandcamp.com','/track/ill-embrace-you-again-in-space','//open.spotify.com','/track/3QmCKvjLtKXS4vQD6822rf');
 INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (3,'Realize It''s Just A Ride',360,'[1]','4004833542','//spartalien.bandcamp.com','/track/realize-its-just-a-ride','//open.spotify.com','/track/7LwAhr4FxPmxhsM0X4C2h6');
@@ -247,7 +250,7 @@ INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","b
 INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (169,'The Dying Spaceship Symphony: Part 8',3600,'[1]','4010167109','//spartalien.bandcamp.com','/track/the-dying-spaceship-symphony-part-8','//open.spotify.com',NULL);
 INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (170,'The Dying Spaceship Symphony: Part 9',3600,'[1]','801143427','//spartalien.bandcamp.com','/track/the-dying-spaceship-symphony-part-9','//open.spotify.com',NULL);
 INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (171,'The Dying Spaceship Symphony: Part 10',3600,'[1]','2382100258','//spartalien.bandcamp.com','/track/the-dying-spaceship-symphony-part-10','//open.spotify.com',NULL);
-INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (172,'Yellow Soul Grinder',600,'[1]','1255097516','//spartalien.bandcamp.com','/track/yellow-soul-grinder','//open.spotify.com',NULL);
+INSERT INTO "audio" ("id","audioName","audioRuntime","artistIDs","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (172,'Yellow Soul Grinder',600,'[1]','1255097516','//spartalien.bandcamp.com','/track/yellow-soul-grinder','//open.spotify.com','/track/2n76dGZUojcVJ1nsN72Mro');
 INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1,1,0,'DJ Shadow','Lost And Found');
 INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (2,1,426,'Mo'' Horizons','Walk Into Space - Pt.1&11');
 INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (3,1,601,'Tosca','Chocolate Elvis (Baby Mammoth Version 2)');
@@ -1370,6 +1373,27 @@ INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trac
 INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1120,44,5756,'researcher','Long Ago Comet');
 INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1121,44,6026,'~~~','Tones Of Our Troubles');
 INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1122,44,6138,'Romeo Rucha','Let Me Out of Here');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1123,45,0,'Romeo Rucha','Unaware');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1124,45,79,'Amon Tobin','One Day In My Garden');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1125,45,388,'Kruder & Dorfmeister','Definition');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1126,45,654,'Hint','Re:Percussions');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1127,45,1002,'Uniquetunes','Disconnecting People (Live At Studio)');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1128,45,1251,'Peace Orchestra','Domination');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1129,45,1703,'Eivind Aarset','Superstrings');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1130,45,2172,'NHØP','Jeg Gik Mig Ud En Sommerdag');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1131,45,2518,'Bonobo','Change Down');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1132,45,2743,'Scarlet Hideout','Sijat');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1133,45,2940,'Ugly Heroes','Daisies');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1134,45,3127,'Torch','Als Ich Zur Schule Ging');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1135,45,3430,'Amon Tobin','Verbal (Boom Bip Remix)');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1136,45,3711,'Transient','Dont'' Sweat It');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1137,45,3962,'Silencide','Fairground Art Museum');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1138,45,4160,'Danny Kreutzfeldt','Hall (Redubbed)');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1139,45,4730,'3tronik','Have A Nice Day');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1140,45,4882,'Able','Meander Posse');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1141,45,5145,'we could die here','death');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1142,45,5309,'Dzihan & Kamien','Drophere feat. Ma.dita');
+INSERT INTO "p420trackHistory" ("id","sessionNum","timeStart","artistName","trackName") VALUES (1143,45,5591,'Cowboy Junkies','Sweet Jane (Edit)');
 INSERT INTO "visual" ("id","createdOn","visualName","description","tags","media") VALUES (1,'2000','S.O.I.A.',NULL,'["static"]','[{"slug":"file/visual/2000-soia.jpg","type":"image"}]');
 INSERT INTO "visual" ("id","createdOn","visualName","description","tags","media") VALUES (2,'2002','What does your soul look like? (Part 1-5)',NULL,'["static"]','[{"slug":"file/visual/2002-what_like-part1.jpg","type":"image"},{"slug":"file/visual/2002-what_like-part2.jpg","type":"image"},{"slug":"file/visual/2002-what_like-part3.jpg","type":"image"},{"slug":"file/visual/2002-what_like-part4.jpg","type":"image"},{"slug":"file/visual/2002-what_like-part5.jpg","type":"image"}]');
 INSERT INTO "visual" ("id","createdOn","visualName","description","tags","media") VALUES (3,'2002','TripZ v6 theme concept',NULL,'["static"]','[{"slug":"file/visual/2002-tripz_v6_unifit.jpg","type":"image"}]');
@@ -1427,7 +1451,7 @@ INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (12,'[featur
 Also check out his [url=//ediblewaves.bandcamp.com]Bandcamp page[/url] and [url=https://www.youtube.com/channel/UClkNMKbwgzH8f26xJQy9fxg]YouTube channel[/url].
 
 Starts at: 0:24:04','[{"slug":"syK2wY3uTpk","timeStart":1444,"type":"youtubeVideo"}]');
-INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (13,'[featured on] Spooky Kitten Records'' WHiTMiRE Reviews Music','[url=//spookykittenrecords.net]Michael Whitmire[/url] played [route=music/id:30]Flux (feat. Stevie Lee Price)[/route] on his music review show.
+INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (13,'[featured on] Spooky Kitten Records'' WHiTMiRE Reviews Music: Episode 26','[url=//www.youtube.com/@SpookyKittenRecords]Michael Whitmire[/url] played [route=music/id:30]Flux (feat. Stevie Lee Price)[/route] on his music review show.
 
 Starts at: 1:46:27','[{"slug":"UsBWgNRUCyM","timeStart":6387,"type":"youtubeVideo"}]');
 INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (14,'[featured on] Resonate on CAMP Radio 2022-03-27','[url=//theargentgrub.co.uk]The Argent Grub[/url] included [route=music/id:22]Rainbows & Unicorns[/route] in the Resonate playlist.','[{"slug":"/camp_fr/resonate-27th-march-2022/","type":"mixcloudMix"},{"slug":"//stream.resonate.coop/u/18562/playlist/resonate-2022-03-27-camp-radio","text":"Playlist on resonate.coop","type":"link"}]');
@@ -1580,6 +1604,14 @@ TOTAL FUCKING MADNESS
 17:48 Level 5
 21:06 Level 6
 23:58 Outro','[{"slug":"@spartalien:2/total-fucking-madness:8","type":"odyseeVideo"},{"slug":"eq_I5Oq603M","type":"youtubeVideo"}]');
+INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (32,'[featured on] SFTS: The Backrooms Comp : Level 2','"Enter into another level of the endless labyrinth."
+
+Released 2023-07-15 on [url=//soundsforthesoul.bandcamp.com]Sounds for the Soul Records[/url].
+
+I contributed track 36.','[{"slug":"//soundsforthesoul.bandcamp.com/album/sfts-the-backrooms-comp-level-2?action=buy","text":"BUY","type":"link"},{"slug":"file/compilation/soundsforthesoul-the-backrooms-comp-level-2.jpg","type":"image"},{"slug":"78435677","trackCount":43,"type":"bandcampAlbum"}]');
+INSERT INTO "stuff" ("id","stuffName","description","media") VALUES (33,'[featured on] Spooky Kitten Records'' WHiTMiRE Reviews Music: Episode 76','[url=//www.youtube.com/@SpookyKittenRecords]Michael Whitmire[/url] played [route=music/id:35]Biting Wind[/route] on his music review show.
+
+Starts at: 0:28:26','[{"slug":"4cGDNeS81lg","timeStart":1706,"type":"youtubeVideo"}]');
 INSERT INTO "p420session" ("id","sessionNum","sessionDate","sessionDur","mixcloudHost","mixcloudSlug") VALUES (1,1,'2021-05-04',10370,'//mixcloud.com',NULL);
 INSERT INTO "p420session" ("id","sessionNum","sessionDate","sessionDur","mixcloudHost","mixcloudSlug") VALUES (2,2,'2021-05-06',10371,'//mixcloud.com','/lowtechman/planet-4202/');
 INSERT INTO "p420session" ("id","sessionNum","sessionDate","sessionDur","mixcloudHost","mixcloudSlug") VALUES (3,3,'2021-05-09',13173,'//mixcloud.com','/lowtechman/planet-4203/');
@@ -1624,6 +1656,7 @@ INSERT INTO "p420session" ("id","sessionNum","sessionDate","sessionDur","mixclou
 INSERT INTO "p420session" ("id","sessionNum","sessionDate","sessionDur","mixcloudHost","mixcloudSlug") VALUES (42,42,'2022-12-12',3653,'//mixcloud.com','/lowtechman/planet-42042/');
 INSERT INTO "p420session" ("id","sessionNum","sessionDate","sessionDur","mixcloudHost","mixcloudSlug") VALUES (43,43,'2023-01-27',9839,'//mixcloud.com','/lowtechman/planet-42043/');
 INSERT INTO "p420session" ("id","sessionNum","sessionDate","sessionDur","mixcloudHost","mixcloudSlug") VALUES (44,44,'2023-03-22',6234,'//mixcloud.com','/lowtechman/planet-42044/');
+INSERT INTO "p420session" ("id","sessionNum","sessionDate","sessionDur","mixcloudHost","mixcloudSlug") VALUES (45,45,'2023-06-23',5792,'//mixcloud.com','/lowtechman/planet-42045/');
 INSERT INTO "exit" ("id","linkText","url") VALUES (1,'Conservation Drones','//conservationdrones.org');
 INSERT INTO "exit" ("id","linkText","url") VALUES (2,'Earthship Biotecture','//earthshipglobal.com');
 INSERT INTO "exit" ("id","linkText","url") VALUES (3,'Four Paws','//four-paws.org');
@@ -1670,6 +1703,7 @@ INSERT INTO "exit" ("id","linkText","url") VALUES (43,'House of Sound','//www.ho
 INSERT INTO "exit" ("id","linkText","url") VALUES (44,'Mp3tag','//mp3tag.de');
 INSERT INTO "exit" ("id","linkText","url") VALUES (45,'Foobar2000','//foobar2000.org');
 INSERT INTO "exit" ("id","linkText","url") VALUES (46,'iMusician','//imusician.app/signup?referral_token=Lriyz1h7DIHUCK1I');
+INSERT INTO "exit" ("id","linkText","url") VALUES (47,'Spooky Kitten Records','//www.youtube.com/@SpookyKittenRecords');
 INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (1,'[1]','Continuoduction','[1]',NULL,1,'2016-03-24',NULL,'The marking of a fresh start.','["Cover art photo - NASA (nasa.gov)"]','[]','[{"slug":"QZovE8JDsXU","type":"youtubeVideo"}]',1,'2223569284','//spartalien.bandcamp.com','/track/continuoduction','//open.spotify.com','/track/2Clx7jPmYSA21DbB0FKxUR');
 INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (2,'[2]','I''ll Embrace You Again In Space','[1]',NULL,1,'2016-10-13',NULL,'Thinking of the moment and place when the time''s over.','["Cover art photo - NASA (nasa.gov)"]','[]','[{"slug":"cC4vSYqYbYA","type":"youtubeVideo"}]',0,'1079688660','//spartalien.bandcamp.com','/track/ill-embrace-you-again-in-space','//open.spotify.com','/track/3QmCKvjLtKXS4vQD6822rf');
 INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (3,'[3]','Realize It''s Just A Ride','[1]',NULL,1,'2017-03-13',NULL,'Don''t be afraid.','["Speech - Dr. Timothy Leary (leary.com)"]','[]','[{"slug":"v3aCJysvutk","type":"youtubeVideo"}]',0,'4004833542','//spartalien.bandcamp.com','/track/realize-its-just-a-ride','//open.spotify.com','/track/6R28LmtWTwaggp496VUZKN');
@@ -1779,8 +1813,8 @@ INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID",
 
 
 Bandcamp exclusive.','[]','[]','[]',1,'2972069926','//spartalien.bandcamp.com','/album/the-dying-spaceship-symphony','//open.spotify.com',NULL);
-INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (37,'[172]','Yellow Soul Grinder','[1]',NULL,1,NULL,NULL,'It was already too late before it started to consume you.
+INSERT INTO "audioRelease" ("id","audioIDs","releaseName","artistIDs","labelID","audioReleaseTypeID","releasedOn","updatedOn","description","credits","thanks","relatedMedia","freeToDownload","bandcampID","bandcampHost","bandcampSlug","spotifyHost","spotifySlug") VALUES (37,'[172]','Yellow Soul Grinder','[1]',NULL,1,'2023-07-13',NULL,'It was already too late before it started to consume you.
 
 
-Made for SFTS - The Backrooms Comp 2.','[]','[]','[]',0,'1255097516','//spartalien.bandcamp.com','/track/yellow-soul-grinder','//open.spotify.com',NULL);
+Made for [route=stuff/id:32]SFTS: The Backrooms Comp : Level 2[/route].','[]','[]','[]',0,'1255097516','//spartalien.bandcamp.com','/track/yellow-soul-grinder','//open.spotify.com','/track/2n76dGZUojcVJ1nsN72Mro');
 COMMIT;
