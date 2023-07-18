@@ -93,8 +93,8 @@ CREATE TABLE IF NOT EXISTS "audioRelease" (
 	"bandcampSlug"	TEXT,
 	"spotifyHost"	TEXT DEFAULT '//open.spotify.com',
 	"spotifySlug"	TEXT,
-	FOREIGN KEY("audioReleaseTypeID") REFERENCES "audioReleaseType"("id"),
 	PRIMARY KEY("id" AUTOINCREMENT),
+	FOREIGN KEY("audioReleaseTypeID") REFERENCES "audioReleaseType"("id"),
 	FOREIGN KEY("labelID") REFERENCES "label"("id")
 );
 COMMIT;
