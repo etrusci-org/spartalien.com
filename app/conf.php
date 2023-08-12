@@ -10,7 +10,7 @@ $conf = [];
 $conf['site_title'] = 'SPARTALIEN';
 $conf['site_url_scheme'] = 'http';
 $conf['site_domain'] = 'localhost';
-$conf['site_dir']    = '/spartalien.com-v9/app/public/';
+$conf['site_dir']    = '/spartalien.com/app/public/';
 $conf['site_url']    = $conf['site_url_scheme'].'://'.$conf['site_domain'].$conf['site_dir'];
 $conf['site_timezone'] = 'Europe/Zurich';
 
