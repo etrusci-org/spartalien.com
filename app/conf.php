@@ -29,7 +29,7 @@ $conf['valid_requests_file'] = $APP_DIR.'/cache/valid_requests.php';
 
 // ----------------------------------------------------------------------------
 
-$conf['caching_ttl'] = -1;
+$conf['caching_ttl'] = 86400;
 $conf['validate_requests'] = true;
 
 // ----------------------------------------------------------------------------
@@ -62,6 +62,11 @@ $conf['valid_request_patterns'] = [
             'val1' => 'id',
         ],
     ],
+    [
+        'route' => '/^mixtapes$/',
+        'valuesTable' => '',
+        'valuesCol' => [],
+    ],
 ];
 
 // ----------------------------------------------------------------------------
@@ -90,6 +95,11 @@ $conf['pre_render_settings'] = [
     ],
     'music' => [
         'class_file' => 'audio',
+        'headers' => [],
+        'page_files' => [],
+    ],
+    'mixtapes' => [
+        'class_file' => 'mixtapes',
         'headers' => [],
         'page_files' => [],
     ],

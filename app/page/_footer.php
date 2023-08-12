@@ -16,7 +16,14 @@
         // Scur.deobElements()
         // LazyMedia.embed()
         // ImgPrev.init()
+
+        const anchors = document.querySelectorAll('a')
+        anchors.forEach(e => {
+            if (e.hostname && document.location.hostname != e.hostname) {
+                e.setAttribute('target', '_blank')
+            }
+        })
     </script>
 
-</body>
+    </body>
 </html>
