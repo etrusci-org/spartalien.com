@@ -6,8 +6,9 @@ Larger than mobile. Handle default screen size in _layout.
 
 // sm:
 @media screen and (min-width: 576px) {
-    body, h1, code, pre, .font-mono { font-size: calc(14px + (26 - 14) * ((100vw - 576px) / (1536 - 576))); }
-    h2 { font-size: calc(17px + (29 - 17) * ((100vw - 576px) / (1536 - 576))); }
+    body, h1, code, pre /*, .font-mono*/ { font-size: calc(14px + (24 - 14) * ((100vw - 576px) / (1536 - 576))); }
+    h2 { font-size: calc(24px + (34 - 24) * ((100vw - 576px) / (1536 - 576))); }
+    h3 { font-size: calc(20px + (30 - 20) * ((100vw - 576px) / (1536 - 576))); }
 }
 
 
@@ -25,6 +26,7 @@ Larger than mobile. Handle default screen size in _layout.
 
 // xxl:
 @media screen and (min-width: 1536px) {
-    body, h1, code, pre, .font-mono { font-size: 26px; }
-    h2 { font-size: 29px; }
+    body, h1, code, pre /*, .font-mono*/ { font-size: 24px; }
+    h2 { font-size: 34px; }
+    h3 { font-size: 30px; }
 }

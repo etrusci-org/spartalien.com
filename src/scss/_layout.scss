@@ -2,13 +2,18 @@
 Mobile first. Handle larger screen sizes in _query.
 */
 
-body, h1, code, pre, .font-mono {
+body, h1, code, pre/*, .font-mono*/ {
     font-size: 14px;
 }
 
 
 h2 {
-    font-size: 17px;
+    font-size: 24px;
+}
+
+
+h3 {
+    font-size: 20px;
 }
 
 
