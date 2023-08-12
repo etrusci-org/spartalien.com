@@ -1,0 +1,68 @@
+{
+    "version": "2.0.0",
+    "presentation": {
+        "echo": false,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": true
+    },
+    "tasks": [
+        {
+            "label": "spartalien.com build",
+            "dependsOn": [
+                "bake_app_files",
+                "watch_sass",
+                "watch_csso",
+                "watch_ts",
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
+        },
+        {
+            "label": "bake_app_files",
+            "type": "shell",
+            "command": "./bake_app_files.sh",
+            "isBackground": true,
+            "problemMatcher": [],
+            "presentation": {
+                "group": "devtools"
+            }
+        },
+        {
+            "label": "watch_sass",
+            "type": "shell",
+            "command": "./watch_sass.sh",
+            "isBackground": true,
+            "problemMatcher": [],
+            "presentation": {
+                "group": "devtools"
+            }
+        },
+        {
+            "label": "watch_csso",
+            "type": "shell",
+            "command": "./watch_csso.sh",
+            "isBackground": true,
+            "problemMatcher": [],
+            "presentation": {
+                "group": "devtools"
+            }
+        },
+        {
+            "label": "watch_ts",
+            "type": "shell",
+            "command": "./watch_ts.sh",
+            "isBackground": true,
+            "problemMatcher": [],
+            "presentation": {
+                "group": "devtools"
+            }
+        },
+    ]
+}

@@ -1,0 +1,32 @@
+# Because script kiddies
+ServerSignature Off
+
+
+# UTF-8 ftw
+AddDefaultCharset UTF-8
+
+
+<IfModule mod_rewrite.c>
+
+    # Prevent automatic directory listing
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    # Enable URL rewrite
+    RewriteEngine On
+
+    # Files redirect for dev env
+    RewriteRule ^file(/.*)?$ /spartalien.com-files/file$1 [R=302,L]
+
+    # Fix trailing slashes on non-directories
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Send requests to index.php if not an existing file or directory
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(?!index\.php)(.*)$ index.php?route=$1 [L]
+
+</IfModule>
