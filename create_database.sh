@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-schemafile="./src/db/schema.sql"
+initfile="./src/db/init.txt"
 dbfile="./app/db/main.sqlite3"
 
 if [ -f $dbfile ]; then
@@ -8,4 +8,4 @@ if [ -f $dbfile ]; then
     exit 1
 fi
 
-sqlite3 -init $schemafile $dbfile
+sqlite3 -init $initfile $dbfile

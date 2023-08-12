@@ -1,0 +1,253 @@
+/*--- Remote imports ------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+/*--- Reset ---------------------------------------------*/
+body,
+header, main, footer, nav,
+h1, h2, h3,
+div, p,
+pre, code,
+table, thead, tbody, tfoot, tr, th, td,
+iframe, img, audio, video,
+hr,
+a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+
+body {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-weight: normal;
+  line-height: 1;
+  font-family: sans-serif;
+  text-underline-offset: 4px;
+  text-rendering: geometricPrecision;
+  overflow-wrap: break-word;
+  tab-size: 4;
+  cursor: default;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  display: block;
+}
+
+a {
+  outline: none;
+}
+
+iframe,
+img,
+audio,
+video {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/*--- Layout ----------------------------------------------
+Mobile first. Handle larger screen sizes in _query.
+*/
+body, h1, code, pre {
+  font-size: 14px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+body {
+  font-family: "Share Tech", sans-serif;
+}
+
+h1, h2, h3,
+pre, code,
+.font-mono {
+  font-family: "Share Tech Mono", monospace;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+table thead tr th {
+  padding: 0 1rem 1rem 0;
+}
+table tbody tr td {
+  padding: 0 1rem 0.5rem 0;
+  border-bottom: 1px dotted;
+}
+
+a:link, a:visited {
+  text-decoration-line: none;
+  text-decoration-style: dotted;
+}
+a:hover, a:focus, a:active {
+  text-decoration-line: underline;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+
+hr {
+  width: 100%;
+  height: 0;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid;
+}
+hr.wide {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+  column-gap: 1rem;
+  margin-bottom: 3rem;
+  padding: 0.5rem 1rem;
+  line-height: 1.5;
+}
+header nav a {
+  display: inline-block;
+  margin-right: 0.75rem;
+}
+header nav a::before {
+  content: "/";
+}
+header h1 {
+  text-align: right;
+  letter-spacing: 0.5rem;
+}
+
+main {
+  width: 100%;
+  max-width: 1700px;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+main h2 {
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+main h3 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+footer {
+  margin-top: 20rem;
+  padding: 1rem;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.lazycode {
+  display: block;
+}
+
+.imgprev {
+  cursor: zoom-in;
+}
+
+.imgprev-target {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+  text-align: center;
+  cursor: zoom-out;
+}
+.imgprev-target.open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imgprev-target img {
+  max-width: 100%;
+  max-height: 100%;
+  border: 20px solid;
+}
+
+/*--- Color ---------------------------------------------*/
+body {
+  color: hsl(0deg, 0%, 59%);
+  background-color: hsl(0deg, 0%, 7%);
+}
+
+table tbody tr td {
+  border-color: hsl(0deg, 0%, 40%);
+}
+table tbody tr:hover td, table tbody tr:focus td {
+  border-color: hsl(77deg, 75%, 41%);
+}
+
+a:link, a:visited {
+  color: hsl(0deg, 0%, 79%);
+}
+a:hover, a:focus, a:active {
+  color: hsl(77deg, 75%, 41%);
+  text-decoration-color: hsl(77deg, 75%, 41%);
+}
+a.active {
+  color: hsl(77deg, 75%, 41%);
+}
+
+header {
+  background-color: hsl(0deg, 0%, 15%);
+}
+header nav a::before {
+  color: hsl(0deg, 0%, 48%);
+}
+
+footer {
+  background-color: hsl(0deg, 0%, 24%);
+}
+
+/*--- Query ---------------------------------------------
+Larger than mobile. Handle default screen size in _layout.
+*/
+@media screen and (min-width: 576px) {
+  body, h1, code, pre {
+    font-size: calc(14px + 10 * (100vw - 576px) / 960);
+  }
+  h2 {
+    font-size: calc(24px + 10 * (100vw - 576px) / 960);
+  }
+  h3 {
+    font-size: calc(20px + 10 * (100vw - 576px) / 960);
+  }
+}
+@media screen and (min-width: 1536px) {
+  body, h1, code, pre {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 34px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+}

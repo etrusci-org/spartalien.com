@@ -948,6 +948,7 @@ INSERT INTO rls_dist (rls_id, platform, url) VALUES (34, 'spotify', 'https://ope
 INSERT INTO rls_dist (rls_id, platform, url) VALUES (35, 'bandcamp', 'https://spartalien.bandcamp.com/album/warm-summer-evening');
 INSERT INTO rls_dist (rls_id, platform, url) VALUES (35, 'spotify', 'https://open.spotify.com/album/3faemmsL9qLqKsCz1Oa2lv');
 INSERT INTO rls_dist (rls_id, platform, url) VALUES (36, 'bandcamp', 'https://spartalien.bandcamp.com/album/the-dying-spaceship-symphony');
+INSERT INTO rls_dist (rls_id, platform, url) VALUES (37, 'bandcamp', 'https://spartalien.bandcamp.com/track/yellow-soul-grinder');
 INSERT INTO rls_dist (rls_id, platform, url) VALUES (37, 'spotify', 'https://open.spotify.com/track/2n76dGZUojcVJ1nsN72Mro');
 
 

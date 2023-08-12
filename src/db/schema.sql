@@ -31,7 +31,8 @@ CREATE TABLE track (
     bandcamp_id TEXT DEFAULT NULL,
 
     FOREIGN KEY (artist_id) REFERENCES artist(id),
-    PRIMARY KEY (id AUTOINCREMENT)
+    PRIMARY KEY (id AUTOINCREMENT),
+    UNIQUE (bandcamp_id)
 );
 
 
@@ -70,7 +71,8 @@ CREATE TABLE rls (
     FOREIGN KEY (rls_type_id) REFERENCES rls_type(id),
     FOREIGN KEY (label_id) REFERENCES label(id),
     PRIMARY KEY (id AUTOINCREMENT),
-    UNIQUE (name)
+    UNIQUE (name),
+    UNIQUE (bandcamp_id)
 );
 
 
