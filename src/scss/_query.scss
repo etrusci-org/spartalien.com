@@ -1,0 +1,30 @@
+/*--- Query ---------------------------------------------
+Larger than mobile. Handle default screen size in _layout.
+*/
+
+// font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+
+// sm:
+@media screen and (min-width: 576px) {
+    body, h1, code, pre, .font-mono { font-size: calc(14px + (26 - 14) * ((100vw - 576px) / (1536 - 576))); }
+    h2 { font-size: calc(17px + (29 - 17) * ((100vw - 576px) / (1536 - 576))); }
+}
+
+
+// md:
+// @media screen and (min-width: 768px) {}
+
+
+// lg:
+// @media screen and (min-width: 1024px) {}
+
+
+// xl:
+// @media screen and (min-width: 1280px) {}
+
+
+// xxl:
+@media screen and (min-width: 1536px) {
+    body, h1, code, pre, .font-mono { font-size: 26px; }
+    h2 { font-size: 29px; }
+}
