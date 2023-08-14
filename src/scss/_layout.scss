@@ -1,56 +1,168 @@
-/*--- Layout ----------------------------------------------
-Mobile first. Handle larger screen sizes in _query.
-*/
+/*--- Layout ---*/
 
-body, h1, code, pre/*, .font-mono*/ {
+.layout {
+    padding: 1rem;
+    display: grid;
+    grid-template-areas:
+        'header'
+        'content'
+        'footer';
+
+    .layout-header {
+        grid-area: header;
+        margin-bottom: 3rem;
+    }
+
+    .layout-content {
+        grid-area: content;
+        margin-right: .5rem;
+    }
+
+    .layout-footer {
+        grid-area: footer;
+        margin-top: 20rem;
+    }
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+
+.grid-rls {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'coverart'
+        'info'
+        'player'
+        'tracklist'
+        'credits'
+        'media';
+    column-gap: 2rem;
+    row-gap: 2rem;
+
+    .rls-coverart {
+        grid-area: coverart;
+        img { max-width: 500px; }
+    }
+
+    .rls-info {
+        grid-area: info;
+    }
+
+    .rls-player {
+        grid-area: player;
+    }
+
+    .rls-tracklist {
+        grid-area: tracklist;
+    }
+
+    .rls-credits {
+        grid-area: credits;
+    }
+
+    .rls-media {
+        grid-area: media;
+    }
+
+}
+
+
+
+
+
+
+
+
+header {
+    margin-bottom: .5rem;
+    text-align: center;
+}
+
+
+nav {
+    text-align: center;
+
+    li {
+        display: inline-block;
+    }
+}
+
+
+main {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+
+// footer {}
+
+
+
+
+
+
+
+
+body {
+    font-family: $font-main;
+}
+
+
+code, pre, .lazycode {
+    font-family: $font-mono;
+}
+
+
+body, code, pre {
     font-size: 14px;
 }
 
 
+h1 {
+    font-size: 18px;
+}
+
+
 h2 {
-    font-size: 24px;
+    font-size: 22px;
+    margin-bottom: 2rem;
 }
 
 
 h3 {
-    font-size: 20px;
+    font-size: 18px;
+    margin-top: 1.5rem;
+    margin-bottom: .25rem;
 }
 
 
-body {
-    font-family: 'Share Tech', sans-serif;
+p, ul, pre {
+    line-height: 1.5;
 }
 
 
-h1, h2, h3,
-pre, code,
-.font-mono {
-    font-family: 'Share Tech Mono', monospace;
-}
+p, ul {
+    margin-bottom: .5rem;
 
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: left;
-
-    thead {
-        // position: sticky;
-        // top: 0;
-        tr {
-            th {
-                padding: 0 1rem 1rem 0;
-            }
-        }
+    &:last-child {
+        margin-bottom: 0;
     }
+}
 
-    tbody {
-        tr {
-            td {
-                padding: 0 1rem .5rem 0;
-                border-bottom: 1px dotted;
-            }
-        }
+
+ul {
+    list-style-type: none;
+
+    ul {
+        list-style-type: circle;
+        margin-left: 2.5rem;
     }
 }
 
@@ -59,113 +171,36 @@ a {
     &:link,
     &:visited {
         text-decoration-line: none;
-        text-decoration-style: dotted;
     }
 
     &:hover,
     &:focus,
     &:active {
         text-decoration-line: underline;
+        text-decoration-style: dotted;
     }
 }
 
 
-// pre,
-// code {
-//     font-size: 0.85rem;
-// }
 
 
-p {
-    margin-bottom: 1rem;
-
-    &:last-child {
-        margin-bottom: 0;
-    }
-}
 
 
-hr {
+.fluid {
     width: 100%;
-    height: 0;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid;
-
-    &.wide {
-        margin-top: 8rem;
-        margin-bottom: 8rem;
-    }
-}
-
-
-header {
-    display: grid;
-    grid-template-columns: 9fr 1fr;
-    column-gap: 1rem;
-    margin-bottom: 3rem;
-    padding: .5rem 1rem;
-    line-height: 1.5;
-
-    nav {
-        a {
-            display: inline-block;
-            margin-right: .75rem;
-
-            &::before {
-                content: '/';
-            }
-        }
-    }
-
-    h1 {
-        text-align: right;
-        letter-spacing: .5rem;
-    }
-}
-
-
-main {
-    width: 100%;
-    max-width: 1700px;
-    padding: 0 1rem;
-    margin: 0 auto;
-
-    h2 {
-        font-weight: bold;
-        margin-bottom: 2rem;
-    }
-
-    h3 {
-        font-weight: bold;
-        margin-bottom: 1rem;
-    }
-}
-
-
-footer {
-    margin-top: 20rem;
-    padding: 1rem;
-}
-
-
-
-.text-align-right {
-    text-align: right;
+    height: auto;
 }
 
 
 
 
 
-.lazycode {
-    display: block;
-    // padding: .25rem .25rem .25rem 1.5rem;
-    // margin: 0 0 1rem;
-    // background-size: 1rem;
-    // background-position: .25rem 50%;
-    // background-repeat: no-repeat;
-}
+
+
+
+
+
+
 
 
 // .lazymedia {
@@ -177,16 +212,6 @@ footer {
 
 //     &:last-child {
 //         margin:  0 0 .5rem;
-//     }
-
-//     &.audio {
-//         width: 100%;
-//         height: 2rem;
-//     }
-
-//     &.image,
-//     &.video {
-//         margin: 0 auto;
 //     }
 
 //     &.bandcampTrack {
@@ -219,97 +244,4 @@ footer {
 //             min-height: 120px;
 //         }
 //     }
-
-//     &.spotifyTrack {
-//         width: 100%;
-//         min-width: 300px;
-//         height: 80px;
-//         min-height: 80px;
-//     }
-
-//     &.spotifyAlbum,
-//     &.spotifyPlaylist {
-//         width: 100%;
-//         min-width: 300px;
-//         height: 352px;
-//         min-height: 80px;
-//     }
-
-//     &.mixcloudMix,
-//     &.mixcloudPlaylist {
-//         width: 100%;
-//         height: 180px;
-//     }
-
-//     &.twitchChat {
-//         width: 100%;
-//         height: 600px;
-//     }
 // }
-
-
-
-
-
-
-// .videobox {  // to use with .lazymedia as child for keeping the w/h ratio when resizing content
-//     position: relative;
-//     padding: 56.25% 0 0; // 16:9
-//     overflow: hidden;
-//     // margin: 0 0 1rem;
-
-//     // &:last-child {
-//     //     margin: 0 0 .5rem;
-//     // }
-
-//     .lazymedia {
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         width: 100%;
-//         height: 100%;
-//         margin: 0;
-//     }
-// }
-
-
-
-
-.imgprev {
-    // display: inline-block;
-    // margin-bottom: 1rem;
-    cursor: zoom-in;
-
-    // &:last-child {
-    //     margin-bottom: 0;
-    // }
-
-    // img {
-    //     max-height: 600px;
-    // }
-}
-
-
-.imgprev-target {
-    display: none;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 2000;
-    text-align: center;
-    cursor: zoom-out;
-
-    &.open {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    img {
-        max-width: 100%;
-        max-height: 100%;
-        border: 20px solid;
-    }
-}

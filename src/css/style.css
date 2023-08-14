@@ -1,20 +1,37 @@
-/*--- Remote imports ------------------------------------*/
-@import url("https://fonts.googleapis.com/css2?family=Share+Tech&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
-/*--- Reset ---------------------------------------------*/
-body,
-header, main, footer, nav,
+/*--- SPARTALIEN.com ---*/ /*--- Font ---*/
+@font-face {
+  font-display: swap;
+  font-family: "Share Tech";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./share-tech-v17-latin-regular.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Share Tech Mono";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./share-tech-mono-v15-latin-regular.woff2") format("woff2");
+}
+/*--- Var ---*/ /*--- Reset ---*/
+html, body,
+noscript,
+div, header, nav, main, footer,
 h1, h2, h3,
-div, p,
-pre, code,
-table, thead, tbody, tfoot, tr, th, td,
-iframe, img, audio, video,
-hr,
-a {
+code, pre,
+p, ul, li,
+a,
+img,
+iframe {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
 }
 
 body {
@@ -31,223 +48,257 @@ body {
   cursor: default;
 }
 
-body {
-  width: 100%;
-  height: 100%;
-}
-
-main {
+header, main, nav, footer {
   display: block;
 }
 
 a {
   outline: none;
+  cursor: crosshair;
 }
 
-iframe,
-img,
-audio,
-video {
+img, iframe {
   max-width: 100%;
-  box-sizing: border-box;
 }
 
-/*--- Layout ----------------------------------------------
-Mobile first. Handle larger screen sizes in _query.
-*/
-body, h1, code, pre {
-  font-size: 14px;
+iframe {
+  display: block;
 }
 
-h2 {
-  font-size: 24px;
+/*--- Layout ---*/
+.layout {
+  padding: 1rem;
+  display: grid;
+  grid-template-areas: "header" "content" "footer";
+}
+.layout .layout-header {
+  grid-area: header;
+  margin-bottom: 3rem;
+}
+.layout .layout-content {
+  grid-area: content;
+  margin-right: 0.5rem;
+}
+.layout .layout-footer {
+  grid-area: footer;
+  margin-top: 20rem;
 }
 
-h3 {
-  font-size: 20px;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+
+.grid-rls {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "coverart" "info" "player" "tracklist" "credits" "media";
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+.grid-rls .rls-coverart {
+  grid-area: coverart;
+}
+.grid-rls .rls-coverart img {
+  max-width: 500px;
+}
+.grid-rls .rls-info {
+  grid-area: info;
+}
+.grid-rls .rls-player {
+  grid-area: player;
+}
+.grid-rls .rls-tracklist {
+  grid-area: tracklist;
+}
+.grid-rls .rls-credits {
+  grid-area: credits;
+}
+.grid-rls .rls-media {
+  grid-area: media;
+}
+
+header {
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+nav {
+  text-align: center;
+}
+nav li {
+  display: inline-block;
+}
+
+main {
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 body {
   font-family: "Share Tech", sans-serif;
 }
 
-h1, h2, h3,
-pre, code,
-.font-mono {
+code, pre, .lazycode {
   font-family: "Share Tech Mono", monospace;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
+body, code, pre {
+  font-size: 14px;
 }
-table thead tr th {
-  padding: 0 1rem 1rem 0;
+
+h1 {
+  font-size: 18px;
 }
-table tbody tr td {
-  padding: 0 1rem 0.5rem 0;
-  border-bottom: 1px dotted;
+
+h2 {
+  font-size: 22px;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 18px;
+  margin-top: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+p, ul, pre {
+  line-height: 1.5;
+}
+
+p, ul {
+  margin-bottom: 0.5rem;
+}
+p:last-child, ul:last-child {
+  margin-bottom: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+ul ul {
+  list-style-type: circle;
+  margin-left: 2.5rem;
 }
 
 a:link, a:visited {
   text-decoration-line: none;
-  text-decoration-style: dotted;
 }
 a:hover, a:focus, a:active {
   text-decoration-line: underline;
+  text-decoration-style: dotted;
 }
 
-p {
-  margin-bottom: 1rem;
-}
-p:last-child {
-  margin-bottom: 0;
-}
-
-hr {
+.fluid {
   width: 100%;
-  height: 0;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  border-bottom: 1px solid;
-}
-hr.wide {
-  margin-top: 8rem;
-  margin-bottom: 8rem;
+  height: auto;
 }
 
-header {
-  display: grid;
-  grid-template-columns: 9fr 1fr;
-  column-gap: 1rem;
-  margin-bottom: 3rem;
-  padding: 0.5rem 1rem;
-  line-height: 1.5;
-}
-header nav a {
-  display: inline-block;
-  margin-right: 0.75rem;
-}
-header nav a::before {
-  content: "/";
-}
-header h1 {
-  text-align: right;
-  letter-spacing: 0.5rem;
-}
-
-main {
-  width: 100%;
-  max-width: 1700px;
-  padding: 0 1rem;
-  margin: 0 auto;
-}
-main h2 {
-  font-weight: bold;
-  margin-bottom: 2rem;
-}
-main h3 {
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-footer {
-  margin-top: 20rem;
-  padding: 1rem;
-}
-
-.text-align-right {
-  text-align: right;
-}
-
-.lazycode {
-  display: block;
-}
-
-.imgprev {
-  cursor: zoom-in;
-}
-
-.imgprev-target {
-  display: none;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 2000;
-  text-align: center;
-  cursor: zoom-out;
-}
-.imgprev-target.open {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.imgprev-target img {
-  max-width: 100%;
-  max-height: 100%;
-  border: 20px solid;
-}
-
-/*--- Color ---------------------------------------------*/
+/*--- Color ---*/
 body {
   color: hsl(0deg, 0%, 59%);
   background-color: hsl(0deg, 0%, 7%);
 }
 
-table tbody tr td {
-  border-color: hsl(0deg, 0%, 40%);
-}
-table tbody tr:hover td, table tbody tr:focus td {
-  border-color: hsl(77deg, 75%, 41%);
-}
-
-a:link, a:visited {
-  color: hsl(0deg, 0%, 79%);
-}
-a:hover, a:focus, a:active {
-  color: hsl(77deg, 75%, 41%);
-  text-decoration-color: hsl(77deg, 75%, 41%);
-}
-a.active {
-  color: hsl(77deg, 75%, 41%);
-}
-
-header {
-  background-color: hsl(0deg, 0%, 15%);
-}
-header nav a::before {
+code, pre, .lazycode {
   color: hsl(0deg, 0%, 48%);
 }
 
-footer {
-  background-color: hsl(0deg, 0%, 24%);
+header h1 a:link, header h1 a:visited {
+  color: hsl(0deg, 0%, 89%);
 }
 
-/*--- Query ---------------------------------------------
-Larger than mobile. Handle default screen size in _layout.
-*/
+h2 {
+  color: hsl(0deg, 0%, 69%);
+}
+
+h3 {
+  color: hsl(0deg, 0%, 40%);
+}
+
+a:link, a:visited {
+  color: hsl(77deg, 75%, 24%);
+}
+a:hover, a:focus, a:active, a.active {
+  color: hsl(77deg, 75%, 41%);
+  text-decoration-color: hsl(77deg, 75%, 41%);
+}
+
+*::selection {
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(77deg, 75%, 20%);
+}
+
+/*--- Query ---*/
 @media screen and (min-width: 576px) {
-  body, h1, code, pre {
-    font-size: calc(14px + 10 * (100vw - 576px) / 960);
+  body, code, pre {
+    font-size: calc(14px + 6 * (100vw - 576px) / 960);
+  }
+  h1 {
+    font-size: calc(18px + 10 * (100vw - 576px) / 960);
   }
   h2 {
-    font-size: calc(24px + 10 * (100vw - 576px) / 960);
+    font-size: calc(22px + 10 * (100vw - 576px) / 960);
   }
   h3 {
-    font-size: calc(20px + 10 * (100vw - 576px) / 960);
+    font-size: calc(18px + 10 * (100vw - 576px) / 960);
+  }
+  .layout {
+    grid-template-columns: min-content auto;
+    grid-template-areas: "header content" "footer footer";
+  }
+  .layout .layout-header {
+    margin-right: 4rem;
+    margin-bottom: 0;
+  }
+  .layout .layout-content {
+    margin-right: 1rem;
+  }
+  header {
+    margin-top: 0.17rem;
+    margin-bottom: 2rem;
+    text-align: right;
+  }
+  nav li {
+    text-align: right;
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .grid-rls {
+    grid-template-columns: 500px auto;
+    grid-template-areas: "coverart info" "player   tracklist" "credits  credits" "media    media";
+  }
+}
+@media screen and (min-width: 1280px) {
+  .grid {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 @media screen and (min-width: 1536px) {
-  body, h1, code, pre {
-    font-size: 24px;
+  body, code, pre {
+    font-size: 20px;
+  }
+  h1 {
+    font-size: 28px;
   }
   h2 {
-    font-size: 34px;
+    font-size: 32px;
   }
   h3 {
-    font-size: 30px;
+    font-size: 28px;
+  }
+  .grid {
+    grid-template-columns: repeat(6, 1fr);
   }
 }

@@ -1,27 +1,4 @@
-/*--- Color ---------------------------------------------*/
-
-$color-brand-hilite: hsl(77, 75%, 41%);
-$color-gray-50:  hsl(0, 0%, 95%);
-$color-gray-100: hsl(0, 0%, 89%);
-$color-gray-150: hsl(0, 0%, 84%);
-$color-gray-200: hsl(0, 0%, 79%);
-$color-gray-250: hsl(0, 0%, 74%);
-$color-gray-300: hsl(0, 0%, 69%);
-$color-gray-350: hsl(0, 0%, 64%);
-$color-gray-400: hsl(0, 0%, 59%);
-$color-gray-450: hsl(0, 0%, 53%);
-$color-gray-500: hsl(0, 0%, 48%);
-$color-gray-550: hsl(0, 0%, 43%);
-$color-gray-600: hsl(0, 0%, 40%);
-$color-gray-650: hsl(0, 0%, 34%);
-$color-gray-700: hsl(0, 0%, 29%);
-$color-gray-750: hsl(0, 0%, 24%);
-$color-gray-800: hsl(0, 0%, 20%);
-$color-gray-850: hsl(0, 0%, 15%);
-$color-gray-900: hsl(0, 0%, 11%);
-$color-gray-950: hsl(0, 0%, 7%);
-
-
+/*--- Color ---*/
 
 body {
     color: $color-gray-400;
@@ -29,59 +6,49 @@ body {
 }
 
 
-table {
-    tbody {
-        tr {
-            td {
-                border-color: $color-gray-600;
-            }
+code, pre, .lazycode {
+    color: $color-gray-500;
+}
 
-            &:hover,
-            &:focus {
-                td {
-                    border-color: $color-brand-hilite;
-                }
-            }
+
+header {
+    h1 a {
+        &:link,
+        &:visited {
+            color: $color-gray-100;
         }
     }
+}
+
+
+
+h2 {
+    color: $color-gray-300;
+}
+
+
+h3 {
+    color: $color-gray-600;
 }
 
 
 a {
     &:link,
     &:visited {
-        color: $color-gray-200;
+        color: $color-brand-200;
     }
 
     &:hover,
     &:focus,
-    &:active {
-        color: $color-brand-hilite;
-        text-decoration-color: $color-brand-hilite;
-    }
-
+    &:active,
     &.active {
-        color: $color-brand-hilite;
+        color: $color-brand-50;
+        text-decoration-color: $color-brand-50;
     }
 }
 
 
-header {
-    background-color: $color-gray-850;
-
-    nav {
-        a {
-            &::before {
-                color: $color-gray-500;
-            }
-        }
-    }
-}
-
-
-// main {}
-
-
-footer {
-    background-color: $color-gray-750;
+*::selection {
+    color: $color-white;
+    background-color: $color-brand-250;
 }

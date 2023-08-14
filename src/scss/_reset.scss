@@ -1,31 +1,24 @@
-/*--- Reset ---------------------------------------------*/
+/*--- Reset ---*/
 
-// *,
-// *::before,
-// *::after {
-//     box-sizing: border-box;
-// }
-
-// ::before,
-// ::after {
-//     text-decoration: inherit;
-//     vertical-align: inherit;
-// }
-
-
-body,
-header, main, footer, nav,
+html, body,
+noscript,
+div, header, nav, main, footer,
 h1, h2, h3,
-div, p,
-pre, code,
-table, thead, tbody, tfoot, tr, th, td,
-iframe, img, audio, video,
-hr,
-a {
+code, pre,
+p, ul, li,
+a,
+img,
+iframe {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     border: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -44,28 +37,22 @@ body {
 }
 
 
-body {
-    width: 100%;
-    height: 100%;
-}
-
-
-main {
+header, main, nav, footer {
     display: block;
 }
 
 
 a {
     outline: none;
+    cursor: crosshair;
 }
 
 
-
-iframe,
-img,
-audio,
-video {
+img, iframe {
     max-width: 100%;
-    // height: auto; // this would set height to 0 in Edge, TODO: investigate
-    box-sizing: border-box;
+}
+
+
+iframe {
+    display: block;
 }

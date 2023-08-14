@@ -1,12 +1,30 @@
-    </main>
+            </main>
+        </div><!--/.layout-content-->
 
 
-    <footer>
-        &copy; <?php print(date('Y')); ?>
-    </footer>
+        <div class="layout-footer">
+            <footer>
+                &copy; <?php print(date('Y').' '.$this->conf['site_title']); ?>
+            </footer>
+        </div>
+
+    </div><!--/.layout-->
 
 
-    <div class="imgprev-target"></div>
+
+
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+    <!-- <div class="imgprev-target"></div> -->
 
 
     <script type="module">
@@ -17,13 +35,9 @@
         // LazyMedia.embed()
         // ImgPrev.init()
 
-        const anchors = document.querySelectorAll('a')
-        anchors.forEach(e => {
-            if (e.hostname && document.location.hostname != e.hostname) {
-                e.setAttribute('target', '_blank')
-            }
-        })
+        // document.querySelectorAll('a').forEach(e => {
+        //     if (e.hostname && document.location.hostname != e.hostname) {
+        //         e.setAttribute('target', '_blank')
+        //     }
+        // })
     </script>
-
-    </body>
-</html>

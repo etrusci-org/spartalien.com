@@ -1,32 +1,77 @@
-/*--- Query ---------------------------------------------
-Larger than mobile. Handle default screen size in _layout.
-*/
+/*--- Query ---*/
 
-// font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+// fluid font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
 
 // sm:
 @media screen and (min-width: 576px) {
-    body, h1, code, pre /*, .font-mono*/ { font-size: calc(14px + (24 - 14) * ((100vw - 576px) / (1536 - 576))); }
-    h2 { font-size: calc(24px + (34 - 24) * ((100vw - 576px) / (1536 - 576))); }
-    h3 { font-size: calc(20px + (30 - 20) * ((100vw - 576px) / (1536 - 576))); }
+    body, code, pre { font-size: calc(14px + (20 - 14) * ((100vw - 576px) / (1536 - 576))); }
+    h1 { font-size: calc(18px + (28 - 18) * ((100vw - 576px) / (1536 - 576))); }
+    h2 { font-size: calc(22px + (32 - 22) * ((100vw - 576px) / (1536 - 576))); }
+    h3 { font-size: calc(18px + (28 - 18) * ((100vw - 576px) / (1536 - 576))); }
+
+    .layout {
+        grid-template-columns: min-content auto;
+        grid-template-areas:
+            'header content'
+            'footer footer';
+
+        .layout-header {
+            margin-right: 4rem;
+            margin-bottom: 0;
+        }
+
+        .layout-content {
+            margin-right: 1rem;
+        }
+    }
+
+    header {
+        margin-top: .17rem;
+        margin-bottom: 2rem;
+        text-align: right;
+    }
+
+    nav {
+        li {
+            text-align: right;
+            display: block;
+        }
+    }
 }
 
 
 // md:
-// @media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+    .grid { grid-template-columns: repeat(3, 1fr); }
+}
 
 
 // lg:
-// @media screen and (min-width: 1024px) {}
+@media screen and (min-width: 1024px) {
+    .grid { grid-template-columns: repeat(4, 1fr); }
+
+    .grid-rls {
+        grid-template-columns: 500px auto;
+        grid-template-areas:
+            'coverart info'
+            'player   tracklist'
+            'credits  credits'
+            'media    media';
+    }
+}
 
 
 // xl:
-// @media screen and (min-width: 1280px) {}
+@media screen and (min-width: 1280px) {
+    .grid { grid-template-columns: repeat(5, 1fr); }
+}
 
 
 // xxl:
 @media screen and (min-width: 1536px) {
-    body, h1, code, pre /*, .font-mono*/ { font-size: 24px; }
-    h2 { font-size: 34px; }
-    h3 { font-size: 30px; }
+    body, code, pre { font-size: 20px; }
+    h1 { font-size: 28px; }
+    h2 { font-size: 32px; }
+    h3 { font-size: 28px; }
+    .grid { grid-template-columns: repeat(6, 1fr); }
 }
