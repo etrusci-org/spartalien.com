@@ -166,6 +166,9 @@ class Core
         else if ($this->Router->route['node'] == $this->Router->default_route['node']) {
             $title = $this->conf['site_title'];
         }
+        else if ($this->Router->route['node'] == $this->Router->error_node) {
+            $title = '!Error.404:'.$this->Router->route['request'].$sep.$this->conf['site_title'];
+        }
         else {
             $title = $this->Router->route['request'].$sep.$this->conf['site_title'];
         }

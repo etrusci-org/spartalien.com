@@ -23,4 +23,4 @@ $Mixcloud->getUser('lowtechman');
 $Mixcloud->getCloudcasts('lowtechman');
 
 
-print(microtime(true).' baked version ('.array_sum(array_map(function(string $v): int { return filesize($v); }, glob($conf['cache_dir'].'/mixcloud-*'))).' bytes)'.PHP_EOL);
+print(microtime(true).' baked mixcloud ('.array_sum(array_map(function(string $v): int { return filesize($v); }, glob($conf['cache_dir'].'/mixcloud-*'))).' bytes)'.PHP_EOL);

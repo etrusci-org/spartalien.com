@@ -29,7 +29,7 @@ $conf['valid_requests_file'] = $APP_DIR.'/cache/valid_requests.php';
 
 // ----------------------------------------------------------------------------
 
-$conf['caching_ttl'] = 86400;
+$conf['caching_ttl'] = -1;
 $conf['validate_requests'] = true;
 
 // ----------------------------------------------------------------------------
@@ -89,12 +89,12 @@ $conf['pre_render_settings'] = [
     //     'page_files' => [],
     // ],
     'catalog' => [
-        'class_file' => 'audio',
+        'class_file' => 'music',
         'headers' => [],
         'page_files' => [],
     ],
     'music' => [
-        'class_file' => 'audio',
+        'class_file' => 'music',
         'headers' => [],
         'page_files' => [],
     ],
