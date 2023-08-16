@@ -1,58 +1,96 @@
 /*--- Reset ---*/
 
-html, body,
+@use '../css/vendor/modern-normalize-2.0.0/modern-normalize.css';
+
+
+html,
+body,
 noscript,
-div, header, nav, main, footer,
-h1, h2, h3,
-code, pre,
-p, ul, li,
+header,
+nav,
+main,
+section,
+footer,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+table,
+thead,
+tbody,
+tr,
+th,
+td,
+code,
+pre,
 a,
-img,
-iframe {
+::before,
+::after {
     margin: 0;
     padding: 0;
-    border: 0;
-    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: currentColor;
 }
 
 
-body {
-    width: 100%;
-    height: 100%;
-}
-
-
-body {
-    -webkit-tap-highlight-color: transparent;
-    -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-    font-weight: normal;
+html {
     line-height: 1;
-    font-family: sans-serif;
-    text-underline-offset: 4px;
-    text-rendering: geometricPrecision;
-    overflow-wrap: break-word;
+    -webkit-text-size-adjust: 100%;
+    -moz-tab-size: 4;
     tab-size: 4;
-    cursor: default;
 }
 
 
-header, main, nav, footer {
+header,
+nav,
+main,
+section,
+footer {
     display: block;
+}
+
+
+h1,
+h2,
+h3,
+th,
+code,
+pre {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+
+ul {
+    list-style: none;
+    padding-inline: 0;
+}
+
+
+table {
+    text-align: left;
+    border-collapse: collapse;
+}
+
+
+pre {
+    max-width: 100%;
+    overflow: scroll;
 }
 
 
 a {
-    outline: none;
-    cursor: crosshair;
+    color: inherit;
+    text-decoration: inherit;
 }
 
 
-img, iframe {
-    max-width: 100%;
-}
-
-
-iframe {
+img {
     display: block;
+    width: 100%;
+    max-inline-size: 100%;
+    height: auto;
 }

@@ -6,49 +6,88 @@ body {
 }
 
 
-code, pre, .lazycode {
-    color: $color-gray-500;
+a {
+    color: #557fb9;
+}
+
+
+.active {
+    color: #55b9a2;
 }
 
 
 header {
-    h1 a {
-        &:link,
-        &:visited {
-            color: $color-gray-100;
-        }
+    border-width: 1px;
+    border-color: rgba(255, 0, 0, 0.16);
+}
+
+
+main {
+    border-width: 1px;
+    border-color: rgba(0, 128, 0, 0.187);
+
+    nav {
+        border-width: 1px;
+        border-color: rgba(255, 255, 0, 0.251);
     }
 }
 
 
-
-h2 {
-    color: $color-gray-300;
+section {
+    border-width: 1px;
+    border-color: rgba(255, 0, 242, 0.16);
 }
 
 
-h3 {
-    color: $color-gray-600;
+footer {
+    border-width: 1px;
+    border-color: rgba(0, 0, 255, 0.233);
 }
 
 
-a {
-    &:link,
-    &:visited {
-        color: $color-brand-200;
-    }
-
-    &:hover,
-    &:focus,
-    &:active,
-    &.active {
-        color: $color-brand-50;
-        text-decoration-color: $color-brand-50;
-    }
-}
+// code, pre, .lazycode {
+//     color: $color-gray-500;
+// }
 
 
-*::selection {
-    color: $color-white;
-    background-color: $color-brand-250;
-}
+// header {
+//     h1 a {
+//         &:link,
+//         &:visited {
+//             color: $color-gray-100;
+//         }
+//     }
+// }
+
+
+
+// h2 {
+//     color: $color-gray-300;
+// }
+
+
+// h3 {
+//     color: $color-gray-600;
+// }
+
+
+// a {
+//     &:link,
+//     &:visited {
+//         color: $color-brand-200;
+//     }
+
+//     &:hover,
+//     &:focus,
+//     &:active,
+//     &.active {
+//         color: $color-brand-50;
+//         text-decoration-color: $color-brand-50;
+//     }
+// }
+
+
+// *::selection {
+//     color: $color-white;
+//     background-color: $color-brand-250;
+// }

@@ -5,7 +5,7 @@ namespace s9com;
 
 class Page extends Core
 {
-    protected function get_mixcloud_data(string $type, string $username): array
+    protected function get_mixcloud_data(string $type): array
     {
         $cache_file = $this->conf['cache_dir'].'/mixcloud-lowtechman-'.$type.'.json';
 

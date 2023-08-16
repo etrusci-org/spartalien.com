@@ -240,4 +240,32 @@ class Core
 
         return $ip;
     }
+
+
+    public static function _lazytext(string $text): string
+    {
+        $patterns = [
+            '/\[url=(.*?)\](.*?)\[\/url\]/', // [url=link_url]link_text[/url]
+            '/\n/', // linefeed
+            '/\*\*(.*?)\*\*/i', // bold text
+            '/\*(.*?)\*/i', // italic text
+            '/~~(.*?)~~/i', // struck through text
+        ];
+
+        $replacements = [
+            '<a href="$1">$2</a>',
+            '<br>',
+            '<strong>$1</strong>',
+            '<em>$1</em>',
+            '<s>$1</s>',
+        ];
+
+        $text = htmlspecialchars($text);
+
+        $text = nl2br($text, false);
+
+        $text = preg_replace($patterns, $replacements, $text);
+
+        return $text;
+    }
 }

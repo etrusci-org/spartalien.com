@@ -40,15 +40,29 @@ $conf['validate_requests'] = true;
 // Same applies to Router::error_node.
 
 $conf['valid_request_patterns'] = [
-    // [
-    //     'route' => '/^about$/',
-    //     'valuesTable' => '',
-    //     'valuesCol' => [],
-    // ],
+    [
+        'route' => '/^about$/',
+        'valuesTable' => '',
+        'valuesCol' => [],
+    ],
     [
         'route' => '/^catalog$/',
         'valuesTable' => '',
         'valuesCol' => [],
+    ],
+    [
+        'route' => '/^catalog\/id:{val1}$/',
+        'valuesTable' => 'track',
+        'valuesCol' => [
+            'val1' => 'id',
+        ],
+    ],
+    [
+        'route' => '/^artist\/id:{val1}$/',
+        'valuesTable' => 'artist',
+        'valuesCol' => [
+            'val1' => 'id',
+        ],
     ],
     [
         'route' => '/^music$/',
@@ -67,6 +81,18 @@ $conf['valid_request_patterns'] = [
         'valuesTable' => '',
         'valuesCol' => [],
     ],
+    [
+        'route' => '/^news$/',
+        'valuesTable' => '',
+        'valuesCol' => [],
+    ],
+    [
+        'route' => '/^news\/id:{val1}$/',
+        'valuesTable' => 'news',
+        'valuesCol' => [
+            'val1' => 'id',
+        ],
+    ],
 ];
 
 // ----------------------------------------------------------------------------
@@ -83,12 +109,17 @@ $conf['pre_render_settings'] = [
         'headers' => [],
         'page_files' => [],
     ],
-    // 'about' => [
-    //     'class_file' => '',
-    //     'headers' => [],
-    //     'page_files' => [],
-    // ],
+    'about' => [
+        'class_file' => '',
+        'headers' => [],
+        'page_files' => [],
+    ],
     'catalog' => [
+        'class_file' => 'music',
+        'headers' => [],
+        'page_files' => [],
+    ],
+    'artist' => [
         'class_file' => 'music',
         'headers' => [],
         'page_files' => [],
@@ -100,6 +131,11 @@ $conf['pre_render_settings'] = [
     ],
     'mixtapes' => [
         'class_file' => 'mixtapes',
+        'headers' => [],
+        'page_files' => [],
+    ],
+    'news' => [
+        'class_file' => 'news',
         'headers' => [],
         'page_files' => [],
     ],

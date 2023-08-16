@@ -5,7 +5,7 @@
     font-family: 'Share Tech';
     font-style: normal;
     font-weight: 400;
-    src: url('./share-tech-v17-latin-regular.woff2') format('woff2');
+    src: url('./vendor/share-tech-v17-latin-regular.woff2') format('woff2');
 }
 
 
@@ -14,5 +14,42 @@
     font-family: 'Share Tech Mono';
     font-style: normal;
     font-weight: 400;
-    src: url('./share-tech-mono-v15-latin-regular.woff2') format('woff2');
+    src: url('./vendor/share-tech-mono-v15-latin-regular.woff2') format('woff2');
+}
+
+
+body {
+    font-size: 14px;
+    font-family: $font-main;
+}
+
+
+h1 {
+    font-size: 14px;
+}
+
+
+h2 {
+    font-size: 22px;
+}
+
+
+h3 {
+    font-size: 16px;
+}
+
+
+h1,
+h2,
+h3,
+th,
+strong {
+    font-weight: bolder;
+}
+
+
+code,
+pre,
+.font-mono {
+    font-family: $font-mono;
 }

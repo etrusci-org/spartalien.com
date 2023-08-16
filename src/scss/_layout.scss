@@ -1,154 +1,67 @@
 /*--- Layout ---*/
 
-.layout {
-    padding: 1rem;
-    display: grid;
-    grid-template-areas:
-        'header'
-        'content'
-        'footer';
-
-    .layout-header {
-        grid-area: header;
-        margin-bottom: 3rem;
-    }
-
-    .layout-content {
-        grid-area: content;
-        margin-right: .5rem;
-    }
-
-    .layout-footer {
-        grid-area: footer;
-        margin-top: 20rem;
-    }
+p, ul, pre, table {
+    line-height: 1.5;
 }
-
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 2rem;
-    row-gap: 2rem;
-}
-
-
-.grid-rls {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-        'coverart'
-        'info'
-        'player'
-        'tracklist'
-        'credits'
-        'media';
-    column-gap: 2rem;
-    row-gap: 2rem;
-
-    .rls-coverart {
-        grid-area: coverart;
-        img { max-width: 500px; }
-    }
-
-    .rls-info {
-        grid-area: info;
-    }
-
-    .rls-player {
-        grid-area: player;
-    }
-
-    .rls-tracklist {
-        grid-area: tracklist;
-    }
-
-    .rls-credits {
-        grid-area: credits;
-    }
-
-    .rls-media {
-        grid-area: media;
-    }
-
-}
-
-
-
-
-
-
 
 
 header {
-    margin-bottom: .5rem;
-    text-align: center;
-}
+    // display: grid;
+    // grid-template-columns: auto min-content;
+    // column-gap: 2rem;
+    // align-items: start;
 
+    padding: 1rem;
+    margin-bottom: 3rem;
 
-nav {
-    text-align: center;
-
-    li {
+    nav li {
         display: inline-block;
     }
 }
 
 
 main {
-    max-width: 1500px;
-    margin: 0 auto;
+    max-width: 1100px;
+    padding: 0 1rem;
+    margin: 0 auto 3rem auto;
 }
 
 
-// footer {}
+section {
+    margin-bottom: 3rem;
 
+    &:last-child {
+        margin-bottom: 0;
+    }
 
-
-
-
-
-
-
-body {
-    font-family: $font-main;
+    &.more {
+        margin-top: 20rem;
+    }
 }
 
 
-code, pre, .lazycode {
-    font-family: $font-mono;
-}
-
-
-body, code, pre {
-    font-size: 14px;
+footer {
+    padding: 0 1rem 1rem 1rem;
 }
 
 
 h1 {
-    font-size: 18px;
+    letter-spacing: 3px;
 }
 
 
 h2 {
-    font-size: 22px;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 
 h3 {
-    font-size: 18px;
-    margin-top: 1.5rem;
-    margin-bottom: .25rem;
+    margin-bottom: .5rem;
 }
 
 
-p, ul, pre {
-    line-height: 1.5;
-}
-
-
-p, ul {
+p,
+ul {
     margin-bottom: .5rem;
 
     &:last-child {
@@ -157,91 +70,22 @@ p, ul {
 }
 
 
-ul {
-    list-style-type: none;
-
-    ul {
-        list-style-type: circle;
-        margin-left: 2.5rem;
-    }
-}
-
-
-a {
-    &:link,
-    &:visited {
-        text-decoration-line: none;
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-        text-decoration-line: underline;
-        text-decoration-style: dotted;
-    }
-}
-
-
-
-
-
-
-.fluid {
+table {
     width: 100%;
-    height: auto;
+
+    th {
+        padding-bottom: .5rem;
+        white-space: nowrap;
+    }
+
+    th,
+    td {
+        padding-right: 2rem;
+        vertical-align: top;
+    }
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-// .lazymedia {
-//     display: block;
-//     margin: 0 0 1rem;
-//     background-size: 1rem;
-//     background-position: 50% 50%;
-//     background-repeat: no-repeat;
-
-//     &:last-child {
-//         margin:  0 0 .5rem;
-//     }
-
-//     &.bandcampTrack {
-//         width: 100%;
-//         min-width: 170px;
-//         height: 120px;
-
-//         &.small {
-//             height: 42px;
-//         }
-
-//         &.withCover {
-//             width: 350px;
-//             height: 350px;
-//             margin: 0 auto;
-//         }
-//     }
-
-//     &.bandcampAlbum {
-//         width: 100%;
-
-//         // with tracklist:
-//         min-width: 370px;
-//         height: 208px;
-//         min-height: 208px;
-
-//         &.noTracklist {
-//             min-width: 250px;
-//             height: 120px;
-//             min-height: 120px;
-//         }
-//     }
-// }
+.text-align-right {
+    text-align: right;
+}

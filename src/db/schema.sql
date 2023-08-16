@@ -122,4 +122,22 @@ CREATE TABLE rls_dist (
 );
 
 
+CREATE TABLE news (
+    id       INTEGER NOT NULL,
+    pub_date TEXT NOT NULL,
+
+    PRIMARY KEY (id AUTOINCREMENT),
+    UNIQUE (pub_date)
+);
+
+
+CREATE TABLE news_text (
+    news_id INTEGER NOT NULL,
+    text    TEXT NOT NULL,
+
+    FOREIGN KEY (news_id) REFERENCES news(id),
+    PRIMARY KEY (news_id, text)
+);
+
+
 COMMIT;

@@ -13,6 +13,7 @@ require $APP_DIR.'/lib/mixcloud.php';
 
 $Mixcloud = new MixcloudData();
 $Mixcloud->cacheDir = $conf['cache_dir'];
+$Mixcloud->cacheTTL = 86400;
 $Mixcloud->errorFile = $conf['log_dir'].'/mixcloud-error.log';
 $Mixcloud->requestDelay = 1.0;
 $Mixcloud->pagingLimit = 100;
