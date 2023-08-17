@@ -1,6 +1,9 @@
 <?php
-$user = $this->get_mixcloud_data('user');
-$cloudcasts = $this->get_mixcloud_data('cloudcasts');
+$cache_file_user       = $this->conf['cache_dir'].'/mixcloud-lowtechman-user.json';
+$cache_file_cloudcasts = $this->conf['cache_dir'].'/mixcloud-lowtechman-cloudcasts.json';
+
+$user           = $this->_json_dec(file_get_contents($cache_file_user));
+$cloudcast_list = $this->_json_dec(file_get_contents($cache_file_cloudcasts));
 ?>
 
 
@@ -10,7 +13,7 @@ $cloudcasts = $this->get_mixcloud_data('cloudcasts');
 <section>
     <p>
         Find me on Mixcloud:
-        <a href="<?php printf('https://mixcloud.com/lowtechman/uploads/?order=latest', $user['url']); ?>"><?php print(str_replace('https://www.', '', trim($user['url'], '/'))); ?></a>
+        <a href="<?php printf('https://www.mixcloud.com/lowtechman/uploads/?order=latest', $user['url']); ?>"><?php print(str_replace('https://www.', '', trim($user['url'], '/'))); ?></a>
     </p>
     <ul>
         <li><?php print($user['cloudcast_count']); ?> Uploads</li>
@@ -20,13 +23,31 @@ $cloudcasts = $this->get_mixcloud_data('cloudcasts');
 
 
 <section>
-    <?php
-    foreach ($cloudcasts as $v) {
-        // printf('<a href="%2$s" title="%1$s"><img src="%3$s" alt="%1$s" loading="lazy"></a>',
-        printf('<a href="%2$s" title="%1$s" target="_blank">%1$s</a> ',
-            $v['name'],
-            $v['url'],
-            $v['pictures']['large'],
-        );}
-    ?>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Tags</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            foreach ($cloudcast_list as $v) {
+                if (str_starts_with($v['slug'], 'planet-420')) continue;
+                printf('
+                    <tr>
+                        <td><a href="%1$s" target="_blank">%2$s</a></td>
+                        <td>%3$s</td>
+                        <td>%4$s</td>
+                    </tr>',
+                    $v['url'],
+                    $v['name'],
+                    implode(', ', array_map(function(array $v) { return strtolower($v['name']); }, $v['tags'])),
+                    date('Y-m-d', strtotime($v['created_time'])),
+                );
+            }
+            ?>
+        </tbody>
+    </table>
 </section>

@@ -144,6 +144,51 @@ class Core
     {
         $title = '';
 
+        // node: news
+        if (
+            $this->Router->route['node'] == 'news' &&
+            isset($this->Router->route['var']['id'])
+        ) {
+            if ($r = $this->DB->query_single(
+                'SELECT news.pub_date FROM news WHERE id = :id LIMIT 1;',
+                [
+                    ['id', $this->Router->route['var']['id'], SQLITE3_INTEGER],
+                ]
+            )) {
+                $title = $r['pub_date'];
+            };
+        }
+
+        // node: artist
+        if (
+            $this->Router->route['node'] == 'artist' &&
+            isset($this->Router->route['var']['id'])
+        ) {
+            if ($r = $this->DB->query_single(
+                'SELECT artist.name FROM artist WHERE id = :id LIMIT 1;',
+                [
+                    ['id', $this->Router->route['var']['id'], SQLITE3_INTEGER],
+                ]
+            )) {
+                $title = $r['name'];
+            };
+        }
+
+        // node: catalog
+        if (
+            $this->Router->route['node'] == 'catalog' &&
+            isset($this->Router->route['var']['id'])
+        ) {
+            if ($r = $this->DB->query_single(
+                'SELECT track.name FROM track WHERE id = :id LIMIT 1;',
+                [
+                    ['id', $this->Router->route['var']['id'], SQLITE3_INTEGER],
+                ]
+            )) {
+                $title = $r['name'];
+            };
+        }
+
         // node: music
         if (
             $this->Router->route['node'] == 'music' &&

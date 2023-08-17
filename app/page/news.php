@@ -33,12 +33,13 @@ if (isset($this->Router->route['var']['id'])) {
         foreach ($news_list as $v) {
             printf('
                 <li>
-                    <a href="./news/id:%1$s">%2$s</a> &middot;
+                    <a href="./news/id:%1$s"%4$s>%2$s</a> &middot;
                     %3$s
                 </li>',
                 $v['news_id'],
                 $v['news_pub_date'],
                 $this->_lazytext($v['news_text']),
+                (isset($this->Router->route['var']['id']) && $this->Router->route['var']['id'] == $v['news_id']) ? ' class="active"' : '',
             );
         }
         ?>

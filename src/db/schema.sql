@@ -140,4 +140,45 @@ CREATE TABLE news_text (
 );
 
 
+CREATE TABLE p420_session (
+    num          INTEGER NOT NULL,
+    pub_date     TEXT NOT NULL,
+    runtime      INTEGER NOT NULL,
+    mixcloud_url TEXT DEFAULT NULL,
+
+    PRIMARY KEY (num, mixcloud_url)
+);
+
+
+CREATE TABLE p420_tracklist (
+    session_num INTEGER NOT NULL,
+    start_time  INTEGER NOT NULL,
+    artist      TEXT NOT NULL,
+    track       TEXT NOT NULL,
+
+    FOREIGN KEY (session_num) REFERENCES p420_session(num),
+    PRIMARY KEY (session_num, start_time)
+);
+
+
+CREATE TABLE mention (
+    id          INTEGER NOT NULL,
+    title       TEXT NOT NULL,
+    description TEXT DEFAULT NULL,
+
+    PRIMARY KEY (id AUTOINCREMENT),
+    UNIQUE (title),
+    UNIQUE (description)
+);
+
+
+CREATE TABLE mention_media (
+    mention_id INTEGER NOT NULL,
+    code       TEXT NOT NULL,
+
+    FOREIGN KEY (mention_id) REFERENCES mention(id),
+    PRIMARY KEY (mention_id, code)
+);
+
+
 COMMIT;

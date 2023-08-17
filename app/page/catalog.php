@@ -43,8 +43,8 @@ if (isset($this->Router->route['var']['id'])) {
             <?php
             foreach ($track_list as $v) {
                 printf('
-                    <tr%6$s>
-                        <td><a href="./catalog/id:%1$s">%2$s</a></td>
+                    <tr>
+                        <td><a href="./catalog/id:%1$s"%6$s>%2$s</a></td>
                         <td><a href="./artist/id:%4$s">%5$s</a></td>
                         <td class="text-align-right font-mono">%3$s</td>
                         <td class="text-align-right font-mono">%1$s</td>
