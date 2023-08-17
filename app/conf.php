@@ -87,10 +87,34 @@ $conf['valid_request_patterns'] = [
         'valuesCol' => [],
     ],
     [
+        'route' => '/^mention$/',
+        'valuesTable' => '',
+        'valuesCol' => [],
+    ],
+    [
+        'route' => '/^mention\/id:{val1}$/',
+        'valuesTable' => 'mention',
+        'valuesCol' => [
+            'val1' => 'id',
+        ],
+    ],
+    [
         'route' => '/^news\/id:{val1}$/',
         'valuesTable' => 'news',
         'valuesCol' => [
             'val1' => 'id',
+        ],
+    ],
+    [
+        'route' => '/^planet420$/',
+        'valuesTable' => '',
+        'valuesCol' => [],
+    ],
+    [
+        'route' => '/^planet420\/session:{val1}$/',
+        'valuesTable' => 'p420_session',
+        'valuesCol' => [
+            'val1' => 'num',
         ],
     ],
 ];
@@ -130,12 +154,22 @@ $conf['pre_render_settings'] = [
         'page_files' => [],
     ],
     'mixtapes' => [
-        'class_file' => 'mixtapes',
+        'class_file' => '',
         'headers' => [],
         'page_files' => [],
     ],
     'news' => [
         'class_file' => 'news',
+        'headers' => [],
+        'page_files' => [],
+    ],
+    'mention' => [
+        'class_file' => 'mention',
+        'headers' => [],
+        'page_files' => [],
+    ],
+    'planet420' => [
+        'class_file' => 'p420',
         'headers' => [],
         'page_files' => [],
     ],
