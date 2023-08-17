@@ -7,16 +7,68 @@ $conf = [];
 
 // ----------------------------------------------------------------------------
 
+$conf['error_reporting_level'] = E_ALL;
+
+// ----------------------------------------------------------------------------
+
 $conf['site_title'] = 'SPARTALIEN';
 $conf['site_url_scheme'] = 'http';
 $conf['site_domain'] = 'localhost';
 $conf['site_dir']    = '/spartalien.com/app/public/';
 $conf['site_url']    = $conf['site_url_scheme'].'://'.$conf['site_domain'].$conf['site_dir'];
 $conf['site_timezone'] = 'Europe/Zurich';
-
-// ----------------------------------------------------------------------------
-
-$conf['error_reporting_level'] = E_ALL;
+$conf['site_nav'] = [
+    // [
+    //     'link' => '.',
+    //     'link_text' => 'Home',
+    //     'base_node' => 'home',
+    // ],
+    [
+        'link' => './music',
+        'link_text' => 'Music Releases',
+        'base_node' => 'music',
+    ],
+    [
+        'link' => './catalog',
+        'link_text' => 'Tracks Catalog',
+        'base_node' => 'catalog',
+    ],
+    [
+        'link' => './physical',
+        'link_text' => 'Physical Things',
+        'base_node' => 'physical',
+    ],
+    [
+        'link' => './planet420',
+        'link_text' => 'Planet 420 Mixtapes',
+        'base_node' => 'planet420',
+    ],
+    [
+        'link' => './mixtape',
+        'link_text' => 'Other Mixtapes',
+        'base_node' => 'mixtape',
+    ],
+    [
+        'link' => './tool',
+        'link_text' => 'Creative Tools',
+        'base_node' => 'tool',
+    ],
+    [
+        'link' => './mention',
+        'link_text' => 'Mentions',
+        'base_node' => 'mention',
+    ],
+    [
+        'link' => './news',
+        'link_text' => 'News',
+        'base_node' => 'news',
+    ],
+    [
+        'link' => './about',
+        'link_text' => 'About',
+        'base_node' => 'about',
+    ],
+];
 
 // ----------------------------------------------------------------------------
 
@@ -77,7 +129,31 @@ $conf['valid_request_patterns'] = [
         ],
     ],
     [
-        'route' => '/^mixtapes$/',
+        'route' => '/^physical$/',
+        'valuesTable' => '',
+        'valuesCol' => [],
+    ],
+    [
+        'route' => '/^physical\/id:{val1}$/',
+        'valuesTable' => 'phy',
+        'valuesCol' => [
+            'val1' => 'id',
+        ],
+    ],
+    [
+        'route' => '/^tool$/',
+        'valuesTable' => '',
+        'valuesCol' => [],
+    ],
+    // // [
+    // //     'route' => '/^tool\/id:{val1}$/',
+    // //     'valuesTable' => 'tool',
+    // //     'valuesCol' => [
+    // //         'val1' => 'id',
+    // //     ],
+    // // ],
+    [
+        'route' => '/^mixtape$/',
         'valuesTable' => '',
         'valuesCol' => [],
     ],
@@ -153,7 +229,17 @@ $conf['pre_render_settings'] = [
         'headers' => [],
         'page_files' => [],
     ],
-    'mixtapes' => [
+    'physical' => [
+        'class_file' => 'physical',
+        'headers' => [],
+        'page_files' => [],
+    ],
+    'tool' => [
+        'class_file' => '',
+        'headers' => [],
+        'page_files' => [],
+    ],
+    'mixtape' => [
         'class_file' => '',
         'headers' => [],
         'page_files' => [],
@@ -182,25 +268,7 @@ $conf['pre_render_settings'] = [
     // ],
 ];
 
-// ----------------------------------------------------------------------------
-// Session stuff
+// // ----------------------------------------------------------------------------
+// // Template stuff
 
-// $conf['session_key'] = 'com.spartalien.v9.1';
-
-// $conf['session_options'] = [
-//     'cookie_lifetime' => 86400 * 365 * 1000,
-//     'cookie_domain'   => $conf['site_domain'],
-//     'cookie_path'     => $conf['site_dir'],
-//     'cookie_secure'   => ($conf['site_url_scheme'] != 'https') ? false : true,
-//     'cookie_httponly' => true,
-//     'cookie_samesite' => 'Strict',
-// ];
-
-// $conf['session_default'] = [
-//     'nickname' => null,
-// ];
-
-// ----------------------------------------------------------------------------
-// Template stuff
-
-$conf['default_css_file'] = './res/style.min.css';
+// $conf['default_css_file'] = './res/style.min.css';

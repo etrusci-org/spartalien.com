@@ -68,7 +68,7 @@ $Logger = new Logger($conf['log_dir']);
 
 
 // Init app
-if (!$node_page_class_file || !is_file($node_page_class_file)) {
+if (!$node_page_class_file) {
     $App = new Core($conf, $version, $DB, $Router, $Logger);
 }
 else {

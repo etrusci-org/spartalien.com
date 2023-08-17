@@ -11,10 +11,10 @@ class Page extends Core
         $dump = $this->DB->query('
             SELECT
                 mention.id AS mention_id,
-                mention.title AS mention_title,
+                mention.subject AS mention_subject,
                 mention.description AS mention_description
             FROM mention
-            ORDER BY mention.title ASC;'
+            ORDER BY mention.subject ASC;'
         );
 
         return $dump ?? [];
@@ -26,17 +26,17 @@ class Page extends Core
         $dump = $this->DB->query_single('
             SELECT
                 mention.id AS mention_id,
-                mention.title AS mention_title,
+                mention.subject AS mention_subject,
                 mention.description AS mention_description
             FROM mention
             WHERE mention_id = :mention_id
-            ORDER BY mention.title ASC;',
+            ORDER BY mention.subject ASC;',
             [
                 ['mention_id', $mention_id, SQLITE3_INTEGER],
             ]
         );
 
-        $dump['mention_media'] = $this->get_mention_media($mention_id);
+        $dump['mention_media'] = $this->get_media($mention_id);
 
         ksort($dump);
 
@@ -44,7 +44,7 @@ class Page extends Core
     }
 
 
-    protected function get_mention_media(int $mention_id): array
+    protected function get_media(int $mention_id): array
     {
         $dump = $this->DB->query('
             SELECT
@@ -57,9 +57,9 @@ class Page extends Core
             ]
         );
 
-        foreach ($dump as $k => $v) {
-            ksort($dump[$k]);
-        }
+        return array_map(function(array $v): string {
+            return $v['mention_media_code'];
+        }, $dump) ?? [];
 
         return $dump ?? [];
     }

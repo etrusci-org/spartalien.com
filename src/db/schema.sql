@@ -122,6 +122,25 @@ CREATE TABLE rls_dist (
 );
 
 
+CREATE TABLE phy (
+    id          INTEGER NOT NULL,
+    name        TEXT NOT NULL,
+    description TEXT DEFAULT NULL,
+
+    PRIMARY KEY (id AUTOINCREMENT),
+    UNIQUE (name)
+);
+
+
+CREATE TABLE phy_media (
+    phy_id INTEGER NOT NULL,
+    code   TEXT NOT NULL,
+
+    FOREIGN KEY (phy_id) REFERENCES phy(id),
+    PRIMARY KEY (phy_id, code)
+);
+
+
 CREATE TABLE news (
     id       INTEGER NOT NULL,
     pub_date TEXT NOT NULL,
@@ -137,6 +156,25 @@ CREATE TABLE news_text (
 
     FOREIGN KEY (news_id) REFERENCES news(id),
     PRIMARY KEY (news_id, text)
+);
+
+
+CREATE TABLE mention (
+    id          INTEGER NOT NULL,
+    subject     TEXT NOT NULL,
+    description TEXT DEFAULT NULL,
+
+    PRIMARY KEY (id AUTOINCREMENT),
+    UNIQUE (subject)
+);
+
+
+CREATE TABLE mention_media (
+    mention_id INTEGER NOT NULL,
+    code       TEXT NOT NULL,
+
+    FOREIGN KEY (mention_id) REFERENCES mention(id),
+    PRIMARY KEY (mention_id, code)
 );
 
 
@@ -158,26 +196,6 @@ CREATE TABLE p420_tracklist (
 
     FOREIGN KEY (session_num) REFERENCES p420_session(num),
     PRIMARY KEY (session_num, start_time)
-);
-
-
-CREATE TABLE mention (
-    id          INTEGER NOT NULL,
-    title       TEXT NOT NULL,
-    description TEXT DEFAULT NULL,
-
-    PRIMARY KEY (id AUTOINCREMENT),
-    UNIQUE (title),
-    UNIQUE (description)
-);
-
-
-CREATE TABLE mention_media (
-    mention_id INTEGER NOT NULL,
-    code       TEXT NOT NULL,
-
-    FOREIGN KEY (mention_id) REFERENCES mention(id),
-    PRIMARY KEY (mention_id, code)
 );
 
 

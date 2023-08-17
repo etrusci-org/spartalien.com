@@ -298,6 +298,7 @@ table {
   border-collapse: collapse;
 }
 
+table,
 pre {
   max-width: 100%;
   overflow: scroll;
@@ -372,6 +373,7 @@ header {
 }
 header nav li {
   display: inline-block;
+  margin-right: 1rem;
 }
 
 main {

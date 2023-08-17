@@ -204,6 +204,21 @@ class Core
             };
         }
 
+        // node: planet420
+        if (
+            $this->Router->route['node'] == 'planet420' &&
+            isset($this->Router->route['var']['session'])
+        ) {
+            if ($r = $this->DB->query_single(
+                'SELECT num FROM p420_session WHERE num = :session LIMIT 1;',
+                [
+                    ['session', $this->Router->route['var']['session'], SQLITE3_INTEGER],
+                ]
+            )) {
+                $title = 'Planet 420.'.$r['num'];
+            };
+        }
+
         // bake final title with what we got until here
         if ($title) {
             $title = $title.$sep.$this->Router->route['request'].$sep.$this->conf['site_title'];

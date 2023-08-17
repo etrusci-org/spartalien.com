@@ -952,6 +952,56 @@ INSERT INTO rls_dist (rls_id, platform, url) VALUES (37, 'bandcamp', 'https://sp
 INSERT INTO rls_dist (rls_id, platform, url) VALUES (37, 'spotify', 'https://open.spotify.com/track/2n76dGZUojcVJ1nsN72Mro');
 
 
+INSERT INTO phy (name) VALUES ('Artefact S9M1');
+INSERT INTO phy (name) VALUES ('Memoria S9M2, 2358 Limited Edition');
+INSERT INTO phy (name) VALUES ('Logo T-Shirt, S9M3');
+INSERT INTO phy (name) VALUES ('Logo Sticker, S9M4');
+INSERT INTO phy (name) VALUES ('Memory S9M5, FLOATING HIGH Limited Edition CD-R');
+INSERT INTO phy (name) VALUES ('Memory S9M6, FLOATING HIGH Limited Edition USB-Stick');
+
+
+INSERT INTO phy_media (phy_id, code) VALUES (1, '{"type": "link", "slug": "https://spartalien.bandcamp.com/merch/artefact-s9m1-monolog-limited-edition?action=buy", "text": "SOLD OUT"}');
+INSERT INTO phy_media (phy_id, code) VALUES (1, '{"type": "image", "slug": "./file/merch-monolog/1.jpg"}');
+INSERT INTO phy_media (phy_id, code) VALUES (1, '{"type": "image", "slug": "./file/merch-monolog/2.jpg"}');
+INSERT INTO phy_media (phy_id, code) VALUES (1, '{"type": "image", "slug": "./file/merch-monolog/3.jpg"}');
+INSERT INTO phy_media (phy_id, code) VALUES (1, '{"type": "image", "slug": "./file/merch-monolog/4.jpg"}');
+INSERT INTO phy_media (phy_id, code) VALUES (1, '{"type": "image", "slug": "./file/merch-monolog/5.jpg"}');
+INSERT INTO phy_media (phy_id, code) VALUES (1, '{"type": "image", "slug": "./file/merch-monolog/6.jpg"}');
+INSERT INTO phy_media (phy_id, code) VALUES (1, '{"type": "image", "slug": "./file/merch-monolog/7.jpg"}');
+INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "link", "slug": "https://spartalien.bandcamp.com/merch/memoria-s9m2-2358-limited-edition?action=buy", "text": "BUY"}');
+INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "link", "slug": "./stuff/id:6", "text": "Making of video"}');
+INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "image", "slug": "./file/merch-2358/all.jpg"}');
+INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "image", "slug": "./file/merch-2358/package1of7.jpg"}');
+INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "image", "slug": "./file/merch-2358/package2of7.jpg"}');
+INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "image", "slug": "./file/merch-2358/package3of7.jpg"}');
+INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "image", "slug": "./file/merch-2358/package4of7.jpg"}');
+INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "image", "slug": "./file/merch-2358/package5of7.jpg"}');
+INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "image", "slug": "./file/merch-2358/package6of7.jpg"}');
+INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "image", "slug": "./file/merch-2358/package7of7.jpg"}');
+INSERT INTO phy_media (phy_id, code) VALUES (3, '{"type":"link", "slug": "https://spartalien.bandcamp.com/merch/logo-t-shirt-s9m3?action=buy", "text": "BUY"}');
+INSERT INTO phy_media (phy_id, code) VALUES (3, '{"type": "image", "slug": "./file/merch-tshirt/1.jpg"}');
+INSERT INTO phy_media (phy_id, code) VALUES (3, '{"type": "image", "slug": "./file/merch-tshirt/2.jpg"}');
+INSERT INTO phy_media (phy_id, code) VALUES (3, '{"type": "image", "slug": "./file/merch-tshirt/3.jpg"}');
+INSERT INTO phy_media (phy_id, code) VALUES (3, '{"type": "image", "slug": "./file/merch-tshirt/4.jpg"}');
+INSERT INTO phy_media (phy_id, code) VALUES (3, '{"type": "image", "slug": "./file/merch-tshirt/5.jpg"}');
+INSERT INTO phy_media (phy_id, code) VALUES (4, '{"type": "link", "slug": "https://spartalien.bandcamp.com/merch/logo-sticker-s9m4?action=buy", "text": "BUY"}');
+INSERT INTO phy_media (phy_id, code) VALUES (4, '{"type": "image", "slug": "./file/merch-sticker/whiteonblack.jpg"}');
+INSERT INTO phy_media (phy_id, code) VALUES (4, '{"type": "image", "slug": "./file/merch-sticker/blackonwhite.jpg"}');
+INSERT INTO phy_media (phy_id, code) VALUES (5, '{"type": "link", "slug": "https://spartalien.bandcamp.com/merch/memory-s9m5-floating-high-limited-edition-cd-r?action=buy", "text": "SOLD OUT"}');
+INSERT INTO phy_media (phy_id, code) VALUES (5, '{"type": "image", "slug": "./file/merch-floatinghigh-cd/1.jpg"}');
+INSERT INTO phy_media (phy_id, code) VALUES (5, '{"type": "image", "slug": "./file/merch-floatinghigh-cd/2.jpg"}');
+INSERT INTO phy_media (phy_id, code) VALUES (5, '{"type": "image", "slug": "./file/merch-floatinghigh-cd/8.jpg"}');
+INSERT INTO phy_media (phy_id, code) VALUES (5, '{"type": "image", "slug": "./file/merch-floatinghigh-cd/3.jpg"}');
+INSERT INTO phy_media (phy_id, code) VALUES (5, '{"type": "image", "slug": "./file/merch-floatinghigh-cd/4.jpg"}');
+INSERT INTO phy_media (phy_id, code) VALUES (5, '{"type": "image", "slug": "./file/merch-floatinghigh-cd/5.jpg"}');
+INSERT INTO phy_media (phy_id, code) VALUES (5, '{"type": "image", "slug": "./file/merch-floatinghigh-cd/6.jpg"}');
+INSERT INTO phy_media (phy_id, code) VALUES (5, '{"type": "image", "slug": "./file/merch-floatinghigh-cd/7.jpg"}');
+INSERT INTO phy_media (phy_id, code) VALUES (6, '{"type": "link", "slug": "https://spartalien.bandcamp.com/merch/memory-s9m6-floating-high-limited-edition-usb-stick?action=buy", "text": "BUY"}');
+INSERT INTO phy_media (phy_id, code) VALUES (6, '{"type": "image", "slug": "./file/merch-floatinghigh-usb/1.jpg"}');
+INSERT INTO phy_media (phy_id, code) VALUES (6, '{"type": "image", "slug": "./file/merch-floatinghigh-usb/2.jpg"}');
+INSERT INTO phy_media (phy_id, code) VALUES (6, '{"type": "image", "slug": "./file/merch-floatinghigh-usb/3.jpg"}');
+
+
 INSERT INTO news (pub_date) VALUES ('2016-03-24');
 INSERT INTO news (pub_date) VALUES ('2016-10-13');
 INSERT INTO news (pub_date) VALUES ('2017-03-13');
@@ -1101,20 +1151,20 @@ INSERT INTO news_text (news_id, text) VALUES (68, 'Featured on: [url=./stuff/id:
 INSERT INTO news_text (news_id, text) VALUES (69, 'Featured on: [url=./stuff/id:33]Spooky Kitten Records'' WHiTMiRE Reviews Music: Episode 76[/url]');
 
 
-INSERT INTO mention (title, description) VALUES ('MighTV', NULL);
-INSERT INTO mention (title, description) VALUES ('Shikantaza Creativity Interview', NULL);
-INSERT INTO mention (title, description) VALUES ('ediblewaves'' YouTube Channel', NULL);
-INSERT INTO mention (title, description) VALUES ('Spooky Kitten Records'' WHiTMiRE Reviews Music: Episode 26', NULL);
-INSERT INTO mention (title, description) VALUES ('Resonate on CAMP Radio 2022-03-27', NULL);
-INSERT INTO mention (title, description) VALUES ('Bento Box, Vol. 2', NULL);
-INSERT INTO mention (title, description) VALUES ('the fencepost reclamation project volume 5', NULL);
-INSERT INTO mention (title, description) VALUES ('SFTS: The Backrooms Comp', NULL);
-INSERT INTO mention (title, description) VALUES ('Martina''s "The Only Way Is Up" Spotify Playlist', NULL);
-INSERT INTO mention (title, description) VALUES ('Martina''s "Add Some Music To Your Day" Spotify Playlist', NULL);
-INSERT INTO mention (title, description) VALUES ('SFTS: Experimental Ambient Compilation', NULL);
-INSERT INTO mention (title, description) VALUES ('Resonate on CAMP Radio 2022-12-04', NULL);
-INSERT INTO mention (title, description) VALUES ('SFTS: The Backrooms Comp : Level 2', NULL);
-INSERT INTO mention (title, description) VALUES ('Spooky Kitten Records'' WHiTMiRE Reviews Music: Episode 76', NULL);
+INSERT INTO mention (subject, description) VALUES ('MighTV', NULL);
+INSERT INTO mention (subject, description) VALUES ('Shikantaza Creativity Interview', NULL);
+INSERT INTO mention (subject, description) VALUES ('ediblewaves'' YouTube Channel', NULL);
+INSERT INTO mention (subject, description) VALUES ('Spooky Kitten Records'' WHiTMiRE Reviews Music: Episode 26', NULL);
+INSERT INTO mention (subject, description) VALUES ('Resonate on CAMP Radio 2022-03-27', NULL);
+INSERT INTO mention (subject, description) VALUES ('Bento Box, Vol. 2', NULL);
+INSERT INTO mention (subject, description) VALUES ('the fencepost reclamation project volume 5', NULL);
+INSERT INTO mention (subject, description) VALUES ('SFTS: The Backrooms Comp', NULL);
+INSERT INTO mention (subject, description) VALUES ('Martina''s "The Only Way Is Up" Spotify Playlist', NULL);
+INSERT INTO mention (subject, description) VALUES ('Martina''s "Add Some Music To Your Day" Spotify Playlist', NULL);
+INSERT INTO mention (subject, description) VALUES ('SFTS: Experimental Ambient Compilation', NULL);
+INSERT INTO mention (subject, description) VALUES ('Resonate on CAMP Radio 2022-12-04', NULL);
+INSERT INTO mention (subject, description) VALUES ('SFTS: The Backrooms Comp : Level 2', NULL);
+INSERT INTO mention (subject, description) VALUES ('Spooky Kitten Records'' WHiTMiRE Reviews Music: Episode 76', NULL);
 
 
 INSERT INTO mention_media (mention_id, code) VALUES (1, '{"type": "youtubeVideo", "slug": "TTJBrAWgoNA"}');
@@ -1122,25 +1172,25 @@ INSERT INTO mention_media (mention_id, code) VALUES (2, '{"type": "link", "slug"
 INSERT INTO mention_media (mention_id, code) VALUES (3, '{"type": "youtubeVideo", "slug": "syK2wY3uTpk", "timeStart": 1444}');
 INSERT INTO mention_media (mention_id, code) VALUES (4, '{"type": "youtubeVideo", "slug": "UsBWgNRUCyM", "timeStart": 6387}');
 INSERT INTO mention_media (mention_id, code) VALUES (5, '{"type": "mixcloudMix", "slug": "/camp_fr/resonate-27th-march-2022/"}');
-INSERT INTO mention_media (mention_id, code) VALUES (5, '{"type": "link", "slug": "//stream.resonate.coop/u/18562/playlist/resonate-2022-03-27-camp-radio", "text": "Playlist on resonate.coop"}');
-INSERT INTO mention_media (mention_id, code) VALUES (6, '{"type": "link", "slug": "//kaisekidigital.bandcamp.com/album/bento-box-vol-2-2?action=buy", "text": "BUY"}');
+INSERT INTO mention_media (mention_id, code) VALUES (5, '{"type": "link", "slug": "https://stream.resonate.coop/u/18562/playlist/resonate-2022-03-27-camp-radio", "text": "Playlist on resonate.coop"}');
+INSERT INTO mention_media (mention_id, code) VALUES (6, '{"type": "link", "slug": "https://kaisekidigital.bandcamp.com/album/bento-box-vol-2-2?action=buy", "text": "BUY"}');
 INSERT INTO mention_media (mention_id, code) VALUES (6, '{"type": "image", "slug": "./file/compilation/kaiseki-digital-bento-box-2.jpg"}');
 INSERT INTO mention_media (mention_id, code) VALUES (6, '{"type": "bandcampAlbum", "slug": "1720724288", "trackCount": 17}');
-INSERT INTO mention_media (mention_id, code) VALUES (7, '{"type": "link", "slug": "//lessthanone.bandcamp.com/album/the-fencepost-reclamation-project-volume-5?action=buy", "text": "BUY"}');
+INSERT INTO mention_media (mention_id, code) VALUES (7, '{"type": "link", "slug": "https://lessthanone.bandcamp.com/album/the-fencepost-reclamation-project-volume-5?action=buy", "text": "BUY"}');
 INSERT INTO mention_media (mention_id, code) VALUES (7, '{"type": "image", "slug": "./file/compilation/lessthanone-fencepost-reclamation-5.jpg"}');
 INSERT INTO mention_media (mention_id, code) VALUES (7, '{"type": "bandcampAlbum", "slug": "692713614", "trackCount": 141}');
-INSERT INTO mention_media (mention_id, code) VALUES (8, '{"type": "link", "slug": "//soundsforthesoul.bandcamp.com/album/sfts-the-backrooms-comp?action=buy", "text": "BUY"}');
+INSERT INTO mention_media (mention_id, code) VALUES (8, '{"type": "link", "slug": "https://soundsforthesoul.bandcamp.com/album/sfts-the-backrooms-comp?action=buy", "text": "BUY"}');
 INSERT INTO mention_media (mention_id, code) VALUES (8, '{"type": "image", "slug": "./file/compilation/soundsforthesoul-the-backrooms-comp.jpg"}');
 INSERT INTO mention_media (mention_id, code) VALUES (8, '{"type": "bandcampAlbum", "slug": "1319476427", "trackCount": 35}');
-INSERT INTO mention_media (mention_id, code) VALUES (9, '{"type": "link", "slug": "//open.spotify.com/playlist/76N7Pb1bVUtnUNQY7WaoQv", "text": "Listen on Spotify"}');
-INSERT INTO mention_media (mention_id, code) VALUES (10, '{"type": "link", "slug": "//open.spotify.com/playlist/2ZMHB9cATYVoCfJNq1XgFa", "text": "Listen on Spotify"}');
-INSERT INTO mention_media (mention_id, code) VALUES (11, '{"type": "link", "slug": "//soundsforthesoul.bandcamp.com/album/sfts-experimental-ambient-compilation?action=buy", "text": "BUY"}');
+INSERT INTO mention_media (mention_id, code) VALUES (9, '{"type": "link", "slug": "https://open.spotify.com/playlist/76N7Pb1bVUtnUNQY7WaoQv", "text": "Listen on Spotify"}');
+INSERT INTO mention_media (mention_id, code) VALUES (10, '{"type": "link", "slug": "https://open.spotify.com/playlist/2ZMHB9cATYVoCfJNq1XgFa", "text": "Listen on Spotify"}');
+INSERT INTO mention_media (mention_id, code) VALUES (11, '{"type": "link", "slug": "https://soundsforthesoul.bandcamp.com/album/sfts-experimental-ambient-compilation?action=buy", "text": "BUY"}');
 INSERT INTO mention_media (mention_id, code) VALUES (11, '{"type": "image", "slug": "./file/compilation/soundsforthesoul-experimental-ambient-comp.jpg"}');
 INSERT INTO mention_media (mention_id, code) VALUES (11, '{"type": "bandcampAlbum", "slug": "3359373587", "trackCount": 39}');
 INSERT INTO mention_media (mention_id, code) VALUES (12, '{"type": "mixcloudMix", "slug": "/camp_fr/resonate-04th-december-2022/"}');
-INSERT INTO mention_media (mention_id, code) VALUES (12, '{"type": "link", "slug": "//stream.resonate.coop/u/18562/playlist/2022-12-04-resonate-on-camp-radio", "text": "Playlist on resonate.coop"}');
-INSERT INTO mention_media (mention_id, code) VALUES (13, '{"type": "link", "slug": "//soundsforthesoul.bandcamp.com/album/sfts-the-backrooms-comp-level-2?action=buy", "text": "BUY"}');
-INSERT INTO mention_media (mention_id, code) VALUES (13, '{"type": "image", "slug": "file/compilation/soundsforthesoul-the-backrooms-comp-level-2.jpg"}');
+INSERT INTO mention_media (mention_id, code) VALUES (12, '{"type": "link", "slug": "https://stream.resonate.coop/u/18562/playlist/2022-12-04-resonate-on-camp-radio", "text": "Playlist on resonate.coop"}');
+INSERT INTO mention_media (mention_id, code) VALUES (13, '{"type": "link", "slug": "https://soundsforthesoul.bandcamp.com/album/sfts-the-backrooms-comp-level-2?action=buy", "text": "BUY"}');
+INSERT INTO mention_media (mention_id, code) VALUES (13, '{"type": "image", "slug": "./file/compilation/soundsforthesoul-the-backrooms-comp-level-2.jpg"}');
 INSERT INTO mention_media (mention_id, code) VALUES (13, '{"type": "bandcampAlbum", "slug": "78435677", "trackCount": 43}');
 INSERT INTO mention_media (mention_id, code) VALUES (14, '{"type": "youtubeVideo", "slug": "4cGDNeS81lg", "timeStart": 1706}');
 
