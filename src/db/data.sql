@@ -1009,7 +1009,7 @@ INSERT INTO stuff (name) VALUES ('Track 32/2');
 INSERT INTO stuff (name) VALUES ('Wallpapers 2020-01');
 INSERT INTO stuff (name) VALUES ('Making of Memoria S9M2, 2358 Limited Edition');
 INSERT INTO stuff (name) VALUES ('X Minutes of Peace');
-INSERT INTO stuff (name) VALUES ('GhostTownTunes Jingles');
+INSERT INTO stuff (name) VALUES ('GhostTownTunes Voice-Over');
 INSERT INTO stuff (name) VALUES ('TOTAL FUCKING MADNESS');
 
 

@@ -29,6 +29,11 @@ $conf['site_nav'] = [
         'base_node' => 'music',
     ],
     [
+        'link' => './musicvideo',
+        'link_text' => 'Music Videos',
+        'base_node' => 'musicvideo',
+    ],
+    [
         'link' => './catalog',
         'link_text' => 'Tracks Catalog',
         'base_node' => 'catalog',
@@ -134,6 +139,11 @@ $conf['valid_request_patterns'] = [
         ],
     ],
     [
+        'route' => '/^musicvideo$/',
+        'valuesTable' => '',
+        'valuesCol' => [],
+    ],
+    [
         'route' => '/^physical$/',
         'valuesTable' => '',
         'valuesCol' => [],
@@ -154,6 +164,13 @@ $conf['valid_request_patterns'] = [
         'route' => '/^stuff$/',
         'valuesTable' => '',
         'valuesCol' => [],
+    ],
+    [
+        'route' => '/^stuff\/id:{val1}$/',
+        'valuesTable' => 'stuff',
+        'valuesCol' => [
+            'val1' => 'id',
+        ],
     ],
     [
         'route' => '/^mixtape$/',
@@ -229,6 +246,11 @@ $conf['pre_render_settings'] = [
     ],
     'music' => [
         'class_file' => 'music',
+        'headers' => [],
+        'page_files' => [],
+    ],
+    'musicvideo' => [
+        'class_file' => '',
         'headers' => [],
         'page_files' => [],
     ],
