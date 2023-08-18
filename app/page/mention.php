@@ -29,7 +29,7 @@ if (isset($this->Router->route['var']['id'])) {
     <?php
     // var_dump($mention_list);
     foreach ($mention_list as $v) {
-        printf('<a href="./mention/id:%1$s"%3$s>%2s</a> ',
+        printf('<a href="./mention/id:%1$s"%3$s>%2$s</a> ',
             $v['mention_id'],
             $v['mention_subject'],
             (isset($this->Router->route['var']['id']) && $this->Router->route['var']['id'] == $v['mention_id']) ? ' class="active"' : '',

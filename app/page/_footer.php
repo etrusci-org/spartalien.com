@@ -9,10 +9,10 @@
 
     <script type="module">
         import { Scur } from './res/scur.js?v=<?php print($this->version['js']); ?>';
-        // import { LazyMedia } from './res/lazymedia.js?v=<?php print($this->version['js']); ?>';
+        import { LazyMedia } from './res/lazymedia.js?v=<?php print($this->version['js']); ?>';
         // import { ImgPrev } from './res/imgprev.js?v=<?php print($this->version['js']); ?>';
         Scur.deobElements()
-        // LazyMedia.embed()
+        LazyMedia.embed()
         // ImgPrev.init()
 
         // document.querySelectorAll('a').forEach(e => {

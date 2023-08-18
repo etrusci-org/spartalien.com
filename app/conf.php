@@ -18,11 +18,11 @@ $conf['site_dir']    = '/spartalien.com/app/public/';
 $conf['site_url']    = $conf['site_url_scheme'].'://'.$conf['site_domain'].$conf['site_dir'];
 $conf['site_timezone'] = 'Europe/Zurich';
 $conf['site_nav'] = [
-    // [
-    //     'link' => '.',
-    //     'link_text' => 'Home',
-    //     'base_node' => 'home',
-    // ],
+    [
+        'link' => '.',
+        'link_text' => 'Home',
+        'base_node' => 'home',
+    ],
     [
         'link' => './music',
         'link_text' => 'Music Releases',
@@ -52,6 +52,11 @@ $conf['site_nav'] = [
         'link' => './tool',
         'link_text' => 'Creative Tools',
         'base_node' => 'tool',
+    ],
+    [
+        'link' => './stuff',
+        'link_text' => 'Stuff',
+        'base_node' => 'stuff',
     ],
     [
         'link' => './mention',
@@ -145,13 +150,11 @@ $conf['valid_request_patterns'] = [
         'valuesTable' => '',
         'valuesCol' => [],
     ],
-    // // [
-    // //     'route' => '/^tool\/id:{val1}$/',
-    // //     'valuesTable' => 'tool',
-    // //     'valuesCol' => [
-    // //         'val1' => 'id',
-    // //     ],
-    // // ],
+    [
+        'route' => '/^stuff$/',
+        'valuesTable' => '',
+        'valuesCol' => [],
+    ],
     [
         'route' => '/^mixtape$/',
         'valuesTable' => '',
@@ -236,6 +239,11 @@ $conf['pre_render_settings'] = [
     ],
     'tool' => [
         'class_file' => '',
+        'headers' => [],
+        'page_files' => [],
+    ],
+    'stuff' => [
+        'class_file' => 'stuff',
         'headers' => [],
         'page_files' => [],
     ],
