@@ -83,6 +83,11 @@ $conf['site_nav'] = [
         'link_text' => 'About',
         'base_node' => 'about',
     ],
+    [
+        'link' => './exit',
+        'link_text' => 'Exit',
+        'base_node' => 'exit',
+    ],
 ];
 
 // ----------------------------------------------------------------------------
@@ -230,6 +235,11 @@ $conf['valid_request_patterns'] = [
             'val1' => 'num',
         ],
     ],
+    [
+        'route' => '/^exit$/',
+        'valuesTable' => '',
+        'valuesCol' => [],
+    ],
 ];
 
 // ----------------------------------------------------------------------------
@@ -301,6 +311,13 @@ $conf['pre_render_settings'] = [
         'headers' => [],
         'page_files' => [],
     ],
+    // 'news.atom' => [
+    //     'class_file' => '',
+    //     'headers' => [
+    //         'Content-Type: application/atom+xml; charset=utf-8'
+    //     ],
+    //     'page_files' => ['_header_news.atom', '*node', '_footer_news.atom']
+    // ],
     'mention' => [
         'class_file' => 'mention',
         'headers' => [],
@@ -311,13 +328,11 @@ $conf['pre_render_settings'] = [
         'headers' => [],
         'page_files' => [],
     ],
-    // 'news.atom' => [
-    //     'class_file' => '',
-    //     'headers' => [
-    //         'Content-Type: application/atom+xml; charset=utf-8'
-    //     ],
-    //     'page_files' => ['_header_news.atom', '*node', '_footer_news.atom']
-    // ],
+    'exit' => [
+        'class_file' => '',
+        'headers' => [],
+        'page_files' => [],
+    ],
 ];
 
 // // ----------------------------------------------------------------------------

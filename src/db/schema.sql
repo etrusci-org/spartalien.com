@@ -238,4 +238,14 @@ CREATE TABLE p420_tracklist (
 );
 
 
+CREATE TABLE exit (
+    id          INTEGER NOT NULL,
+    text        TEXT NOT NULL,
+    description TEXT DEFAULT NULL,
+    url         TEXT DEFAULT NULL,
+
+    PRIMARY KEY (id AUTOINCREMENT),
+    UNIQUE (url)
+);
+
 COMMIT;

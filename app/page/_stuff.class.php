@@ -60,7 +60,5 @@ class Page extends Core
         return array_map(function(array $v): string {
             return $v['stuff_media_code'];
         }, $dump) ?? [];
-
-        return $dump ?? [];
     }
 }

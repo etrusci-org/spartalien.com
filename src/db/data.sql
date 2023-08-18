@@ -2576,4 +2576,53 @@ INSERT INTO p420_tracklist(session_num, start_time, artist, track) VALUES (45, 5
 INSERT INTO p420_tracklist(session_num, start_time, artist, track) VALUES (45, 5591, 'Cowboy Junkies', 'Sweet Jane (Edit)');
 
 
+INSERT INTO exit (text, url) VALUES ('Conservation Drones', 'https://conservationdrones.org');
+INSERT INTO exit (text, url) VALUES ('Earthship Biotecture', 'https://earthshipglobal.com');
+INSERT INTO exit (text, url) VALUES ('Four Paws', 'https://four-paws.org');
+INSERT INTO exit (text, url) VALUES ('Music Declares Emergency', 'https://musicdeclares.net');
+INSERT INTO exit (text, url) VALUES ('Pestalozzi Children''s Foundation', 'https://pestalozzi.ch');
+INSERT INTO exit (text, url) VALUES ('Schweizerische Tiermeldezentrale', 'https://stmz.ch');
+INSERT INTO exit (text, url) VALUES ('Internet Archive', 'https://archive.org');
+INSERT INTO exit (text, url) VALUES ('<1', 'https://lessthanone.bandcamp.com');
+INSERT INTO exit (text, url) VALUES ('Angel Ruediger', 'https://open.spotify.com/artist/3Xp2zhqhMeT9j9bNIeyZWU');
+INSERT INTO exit (text, url) VALUES ('Cyber Shaman', 'https://cyber-shaman.bandcamp.com');
+INSERT INTO exit (text, url) VALUES ('DepthCruiser', 'https://www.depthcruiser.com');
+INSERT INTO exit (text, url) VALUES ('Dorian Iten', 'https://dorian-iten.com');
+INSERT INTO exit (text, url) VALUES ('HOLLOWLOVE', 'https://hollowlove.com');
+INSERT INTO exit (text, url) VALUES ('Lens', 'https://lensmakesart.com');
+INSERT INTO exit (text, url) VALUES ('melodywhore', 'https://melodywhore.com');
+INSERT INTO exit (text, url) VALUES ('Plike', 'https://plike.bandcamp.com');
+INSERT INTO exit (text, url) VALUES ('Radio Dark Tunnel', 'https://radio-dark-tunnel.net');
+INSERT INTO exit (text, url) VALUES ('Sara Jayne Crow', 'https://straypoodle.wordpress.com');
+INSERT INTO exit (text, url) VALUES ('Tengushee', 'https://tengushee.com');
+INSERT INTO exit (text, url) VALUES ('Submarine Broadcasting Company', 'https://submarinebroadcastingco.bandcamp.com');
+INSERT INTO exit (text, url) VALUES ('Minimal_Drone*GRL', 'https://minimaldronegrl.bandcamp.com');
+INSERT INTO exit (text, url) VALUES ('ediblewaves', 'https://ediblewaves.bandcamp.com');
+INSERT INTO exit (text, url) VALUES ('Shikantaza Art', 'https://shikantaza.cyberpunkonline.net');
+INSERT INTO exit (text, url) VALUES ('Occupy White Walls', 'https://www.oww.io');
+INSERT INTO exit (text, url) VALUES ('The Creative Passport', 'https://www.creativepassport.net');
+INSERT INTO exit (text, url) VALUES ('GhostTownTunes', 'https://twitch.tv/ghosttowntunes');
+INSERT INTO exit (text, url) VALUES ('DJOZeroO', 'https://twitch.tv/djozeroo');
+INSERT INTO exit (text, url) VALUES ('cruelcoppinger', 'https://cruelcoppinger.tumblr.com');
+INSERT INTO exit (text, url) VALUES ('Stevie Lee Price', 'https://twitter.com/STEVIELEEPRICE');
+INSERT INTO exit (text, url) VALUES ('Kaiseki Digital', 'https://kaisekidigital.bandcamp.com');
+INSERT INTO exit (text, url) VALUES ('ayefelon', 'https://ayefelon.bandcamp.com');
+INSERT INTO exit (text, url) VALUES ('Sounds for the Soul Records', 'https://soundsforthesoul.bandcamp.com');
+INSERT INTO exit (text, url) VALUES ('Martina''s Spotify Playlists', 'https://open.spotify.com/user/m0o63p2xyamfpkw2xg4mw26nc/playlists');
+INSERT INTO exit (text, url) VALUES ('Mind Of La E', 'https://mindoflae.com');
+INSERT INTO exit (text, url) VALUES ('Resonate', 'https://resonate.coop');
+INSERT INTO exit (text, url) VALUES ('The Argent Grub', 'https://theargentgrub.co.uk');
+INSERT INTO exit (text, url) VALUES ('CAMP', 'https://www.campfr.com');
+INSERT INTO exit (text, url) VALUES ('Orochi Hanma', 'https://www.twitch.tv/orochihanma');
+INSERT INTO exit (text, url) VALUES ('SomaFM', 'https://somafm.com');
+INSERT INTO exit (text, url) VALUES ('Scotopia', 'https://scotopia.co.uk');
+INSERT INTO exit (text, url) VALUES ('scene.org File Archive', 'https://files.scene.org');
+INSERT INTO exit (text, url) VALUES ('MusiX', 'https://www.musix.com');
+INSERT INTO exit (text, url) VALUES ('House of Sound', 'https://www.houseofsound.ch');
+INSERT INTO exit (text, url) VALUES ('Mp3tag', 'https://mp3tag.de');
+INSERT INTO exit (text, url) VALUES ('Foobar2000', 'https://foobar2000.org');
+INSERT INTO exit (text, url) VALUES ('iMusician', 'https://imusician.app/signup?referral_token=Lriyz1h7DIHUCK1I');
+INSERT INTO exit (text, url) VALUES ('Spooky Kitten Records', 'https://www.youtube.com/@SpookyKittenRecords');
+
+
 COMMIT;
