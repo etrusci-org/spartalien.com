@@ -39,6 +39,11 @@ $conf['site_nav'] = [
         'base_node' => 'catalog',
     ],
     [
+        'link' => './visual',
+        'link_text' => 'Visuals',
+        'base_node' => 'visual',
+    ],
+    [
         'link' => './physical',
         'link_text' => 'Physical Things',
         'base_node' => 'physical',
@@ -156,6 +161,18 @@ $conf['valid_request_patterns'] = [
         ],
     ],
     [
+        'route' => '/^visual$/',
+        'valuesTable' => '',
+        'valuesCol' => [],
+    ],
+    [
+        'route' => '/^visual\/id:{val1}$/',
+        'valuesTable' => 'visual',
+        'valuesCol' => [
+            'val1' => 'id',
+        ],
+    ],
+    [
         'route' => '/^tool$/',
         'valuesTable' => '',
         'valuesCol' => [],
@@ -256,6 +273,11 @@ $conf['pre_render_settings'] = [
     ],
     'physical' => [
         'class_file' => 'physical',
+        'headers' => [],
+        'page_files' => [],
+    ],
+    'visual' => [
+        'class_file' => 'visual',
         'headers' => [],
         'page_files' => [],
     ],

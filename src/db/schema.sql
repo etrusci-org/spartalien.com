@@ -141,6 +141,26 @@ CREATE TABLE phy_media (
 );
 
 
+CREATE TABLE visual (
+    id          INTEGER NOT NULL,
+    pub_date    TEXT NOT NULL,
+    name        TEXT NOT NULL,
+    description TEXT DEFAULT NULL,
+
+    PRIMARY KEY (id AUTOINCREMENT),
+    UNIQUE (name)
+);
+
+
+CREATE TABLE visual_media (
+    visual_id INTEGER NOT NULL,
+    code      TEXT NOT NULL,
+
+    FOREIGN KEY (visual_id) REFERENCES visual(id),
+    PRIMARY KEY (visual_id, code)
+);
+
+
 CREATE TABLE stuff (
     id          INTEGER NOT NULL,
     name        TEXT NOT NULL,
@@ -158,7 +178,6 @@ CREATE TABLE stuff_media (
     FOREIGN KEY (stuff_id) REFERENCES stuff(id),
     PRIMARY KEY (stuff_id, code)
 );
-
 
 
 CREATE TABLE news (
