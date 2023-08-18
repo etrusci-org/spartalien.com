@@ -86,3 +86,7 @@ interface ImgPrevInterface {
     init(): void
     close(event: Event): void
 }
+
+
+type BGColorFader_queue_type = string[]
+type BGColorFader_color_list_type = string[]
