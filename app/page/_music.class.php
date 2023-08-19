@@ -25,7 +25,34 @@ class Page extends Core
     }
 
 
-    protected function get_track_list(?int $rls_id = null): array
+    protected function get_catalog_track_list(): array
+    {
+        $dump = $this->DB->query('
+            SELECT
+                track.id AS track_id,
+                track.name AS track_name,
+                track.runtime AS track_runtime,
+                artist.id AS artist_id,
+                artist.name AS artist_name
+            FROM track
+            LEFT JOIN artist ON artist.id = track.artist_id
+            ORDER BY LOWER(track.name) ASC;'
+        );
+
+        foreach ($dump as $k => $v) {
+            $dump[$k]['track_runtime_human'] = $this->_seconds_to_dhms($dump[$k]['track_runtime']);
+            $dump[$k]['track_credit'] = $this->get_credit('track', $dump[$k]['track_id']);
+            $dump[$k]['track_dist'] = $this->get_dist('track', $dump[$k]['track_id']);
+            $dump[$k]['track_dist_link'] = $this->bake_dist_links($dump[$k]['track_dist']);
+
+            ksort($dump[$k]);
+        }
+
+        return $dump ?? [];
+    }
+
+
+    protected function get_rls_track_list(int $rls_id): array
     {
         $where = '';
         $order = 'ORDER BY track.name ASC;';
@@ -150,7 +177,7 @@ class Page extends Core
         );
 
         $dump['rls_coverart_file'] = $this->get_rls_coverart_file_path($dump['rls_id']);
-        $dump['rls_track_list'] = $this->get_track_list($dump['rls_id']);
+        $dump['rls_track_list'] = $this->get_rls_track_list($dump['rls_id']);
         $dump['rls_track_count'] = count($dump['rls_track_list']);
         $dump['rls_media'] = $this->get_media('rls', $dump['rls_id']);
         $dump['rls_credit'] = $this->get_credit('rls', $dump['rls_id']);

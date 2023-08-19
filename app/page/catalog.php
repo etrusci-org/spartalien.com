@@ -1,6 +1,6 @@
 <?php
 // $track_list = [];
-$track_list = $this->get_track_list();
+$track_list = $this->get_catalog_track_list();
 
 $track = [];
 if (isset($this->Router->route['var']['id'])) {
