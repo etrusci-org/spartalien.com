@@ -18,75 +18,65 @@ $conf['site_dir']    = '/spartalien.com/app/public/';
 $conf['site_url']    = $conf['site_url_scheme'].'://'.$conf['site_domain'].$conf['site_dir'];
 $conf['site_timezone'] = 'Europe/Zurich';
 $conf['site_nav'] = [
-    [
+    'home' => [
         'link' => '.',
         'link_text' => 'Home',
-        'base_node' => 'home',
     ],
-    [
+    'music' => [
         'link' => './music',
         'link_text' => 'Music Releases',
-        'base_node' => 'music',
     ],
-    [
+    'musicvideo' => [
         'link' => './musicvideo',
         'link_text' => 'Music Videos',
-        'base_node' => 'musicvideo',
     ],
-    [
+    'catalog' => [
         'link' => './catalog',
         'link_text' => 'Tracks Catalog',
-        'base_node' => 'catalog',
     ],
-    [
+    'visual' => [
         'link' => './visual',
         'link_text' => 'Visuals',
-        'base_node' => 'visual',
     ],
-    [
+    'physical' => [
         'link' => './physical',
         'link_text' => 'Physical Things',
-        'base_node' => 'physical',
     ],
-    [
+    'planet420' => [
         'link' => './planet420',
         'link_text' => 'Planet 420 Mixtapes',
-        'base_node' => 'planet420',
     ],
-    [
+    'mixtape' => [
         'link' => './mixtape',
         'link_text' => 'Other Mixtapes',
-        'base_node' => 'mixtape',
     ],
-    [
+    'tool' => [
         'link' => './tool',
         'link_text' => 'Creative Tools',
-        'base_node' => 'tool',
     ],
-    [
+    'stuff' => [
         'link' => './stuff',
         'link_text' => 'Stuff',
-        'base_node' => 'stuff',
     ],
-    [
+    'mention' => [
         'link' => './mention',
         'link_text' => 'Mentions',
-        'base_node' => 'mention',
     ],
-    [
+    'news' => [
         'link' => './news',
         'link_text' => 'News',
-        'base_node' => 'news',
     ],
-    [
+    'about' => [
         'link' => './about',
         'link_text' => 'About',
-        'base_node' => 'about',
     ],
-    [
+    'exit' => [
         'link' => './exit',
         'link_text' => 'Exit',
-        'base_node' => 'exit',
+    ],
+    '404test' => [
+        'link' => './no-existing-page',
+        'link_text' => '404test',
     ],
 ];
 

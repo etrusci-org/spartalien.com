@@ -57,8 +57,10 @@ class Page extends Core
             ]
         );
 
-        return array_map(function(array $v): string {
-            return $v['mention_media_code'];
-        }, $dump) ?? [];
+        // return array_map(function(array $v): string{
+        //     return $v['mention_media_code'];
+        // }, $dump) ?? [];
+
+        return array_map(fn(array $v): string => $v['mention_media_code'], $dump);
     }
 }

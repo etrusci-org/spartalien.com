@@ -50,7 +50,7 @@ class Page extends Core
         );
 
         $dump['session_runtime_human'] = $this->_seconds_to_dhms($dump['session_runtime']);
-        $dump['session_tracklist'] = $this->get_tracklist($dump['session_num']);
+        $dump['session_track_list'] = $this->get_tracklist($dump['session_num']);
 
         ksort($dump);
 

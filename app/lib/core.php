@@ -142,109 +142,205 @@ class Core
 
     protected function get_page_title(string $sep = ' &middot;&middot;&middot; '): string
     {
-        $title = '';
-
-        // node: news
+        // Full title if route is neither default node or error404
         if (
-            $this->Router->route['node'] == 'news' &&
-            isset($this->Router->route['var']['id'])
+            $this->Router->route['node'] != $this->Router->default_route['node']
+            && $this->Router->route['node'] != $this->Router->error_node
         ) {
-            if ($r = $this->DB->query_single(
-                'SELECT news.pub_date FROM news WHERE id = :id LIMIT 1;',
-                [
-                    ['id', $this->Router->route['var']['id'], SQLITE3_INTEGER],
-                ]
-            )) {
-                $title = $r['pub_date'];
-            };
+            $page_title = $this->conf['site_nav'][$this->Router->route['node']]['link_text'];
+
+            if ($this->Router->route['node'] == 'music' && isset($this->Router->route['var']['id'])) {
+                $dump = $this->DB->query_single('SELECT name FROM rls WHERE id = :id LIMIT 1;', [['id', $this->Router->route['var']['id'], SQLITE3_INTEGER]]);
+                $page_title = $dump['name'].$sep.$page_title;
+            }
+
+            if ($this->Router->route['node'] == 'catalog' && isset($this->Router->route['var']['id'])) {
+                $dump = $this->DB->query_single('SELECT name FROM track WHERE id = :id LIMIT 1;', [['id', $this->Router->route['var']['id'], SQLITE3_INTEGER]]);
+                $page_title = $dump['name'].$sep.$page_title;
+            }
+
+            if ($this->Router->route['node'] == 'visual' && isset($this->Router->route['var']['id'])) {
+                $dump = $this->DB->query_single('SELECT name FROM visual WHERE id = :id LIMIT 1;', [['id', $this->Router->route['var']['id'], SQLITE3_INTEGER]]);
+                $page_title = $dump['name'].$sep.$page_title;
+            }
+
+            if ($this->Router->route['node'] == 'physical' && isset($this->Router->route['var']['id'])) {
+                $dump = $this->DB->query_single('SELECT name FROM phy WHERE id = :id LIMIT 1;', [['id', $this->Router->route['var']['id'], SQLITE3_INTEGER]]);
+                $page_title = $dump['name'].$sep.$page_title;
+            }
+
+            if ($this->Router->route['node'] == 'planet420' && isset($this->Router->route['var']['session'])) {
+                $dump = $this->DB->query_single('SELECT num FROM p420_session WHERE num = :num LIMIT 1;', [['num', $this->Router->route['var']['session'], SQLITE3_INTEGER]]);
+                $page_title = 'Planet 420.'.$dump['num'].$sep.$page_title;
+            }
+
+            if ($this->Router->route['node'] == 'stuff' && isset($this->Router->route['var']['id'])) {
+                $dump = $this->DB->query_single('SELECT name FROM stuff WHERE id = :id LIMIT 1;', [['id', $this->Router->route['var']['id'], SQLITE3_INTEGER]]);
+                $page_title = $dump['name'].$sep.$page_title;
+            }
+
+            if ($this->Router->route['node'] == 'mention' && isset($this->Router->route['var']['id'])) {
+                $dump = $this->DB->query_single('SELECT subject FROM mention WHERE id = :id LIMIT 1;', [['id', $this->Router->route['var']['id'], SQLITE3_INTEGER]]);
+                $page_title = $dump['subject'].$sep.$page_title;
+            }
+
+            if ($this->Router->route['node'] == 'news' && isset($this->Router->route['var']['id'])) {
+                $dump = $this->DB->query_single('SELECT pub_date FROM news WHERE id = :id LIMIT 1;', [['id', $this->Router->route['var']['id'], SQLITE3_INTEGER]]);
+                $page_title = 'News from '.$dump['pub_date'].$sep.$page_title;
+            }
+
+            return
+                $page_title
+                .$sep
+                .$this->conf['site_title']
+                .$sep
+                .'/'
+                .$this->Router->route['request'];
         }
 
-        // node: artist
-        if (
-            $this->Router->route['node'] == 'artist' &&
-            isset($this->Router->route['var']['id'])
-        ) {
-            if ($r = $this->DB->query_single(
-                'SELECT artist.name FROM artist WHERE id = :id LIMIT 1;',
-                [
-                    ['id', $this->Router->route['var']['id'], SQLITE3_INTEGER],
-                ]
-            )) {
-                $title = $r['name'];
-            };
+        // Special title if route is error404
+        if ($this->Router->route['node'] == $this->Router->error_node) {
+            return 'Error 404'.$sep.$this->conf['site_title'];
         }
 
-        // node: catalog
-        if (
-            $this->Router->route['node'] == 'catalog' &&
-            isset($this->Router->route['var']['id'])
-        ) {
-            if ($r = $this->DB->query_single(
-                'SELECT track.name FROM track WHERE id = :id LIMIT 1;',
-                [
-                    ['id', $this->Router->route['var']['id'], SQLITE3_INTEGER],
-                ]
-            )) {
-                $title = $r['name'];
-            };
-        }
+        // Only site title if we reach this line
+        return $this->conf['site_title'];
 
-        // node: music
-        if (
-            $this->Router->route['node'] == 'music' &&
-            isset($this->Router->route['var']['id'])
-        ) {
-            if ($r = $this->DB->query_single(
-                'SELECT rls.name FROM rls WHERE id = :id LIMIT 1;',
-                [
-                    ['id', $this->Router->route['var']['id'], SQLITE3_INTEGER],
-                ]
-            )) {
-                $title = $r['name'];
-            };
-        }
 
-        // node: planet420
-        if (
-            $this->Router->route['node'] == 'planet420' &&
-            isset($this->Router->route['var']['session'])
-        ) {
-            if ($r = $this->DB->query_single(
-                'SELECT num FROM p420_session WHERE num = :session LIMIT 1;',
-                [
-                    ['session', $this->Router->route['var']['session'], SQLITE3_INTEGER],
-                ]
-            )) {
-                $title = 'Planet 420.'.$r['num'];
-            };
-        }
 
-        // bake final title with what we got until here
-        if ($title) {
-            $title = $title.$sep.$this->Router->route['request'].$sep.$this->conf['site_title'];
-        }
-        else if ($this->Router->route['node'] == $this->Router->default_route['node']) {
-            $title = $this->conf['site_title'];
-        }
-        else if ($this->Router->route['node'] == $this->Router->error_node) {
-            $title = '!Error.404:'.$this->Router->route['request'].$sep.$this->conf['site_title'];
-        }
-        else {
-            $title = $this->Router->route['request'].$sep.$this->conf['site_title'];
-        }
 
-        return $title;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // ----- v1
+
+        // $title = '';
+
+        // // node: news
+        // if (
+        //     $this->Router->route['node'] == 'news' &&
+        //     isset($this->Router->route['var']['id'])
+        // ) {
+        //     if ($r = $this->DB->query_single(
+        //         'SELECT news.pub_date FROM news WHERE id = :id LIMIT 1;',
+        //         [
+        //             ['id', $this->Router->route['var']['id'], SQLITE3_INTEGER],
+        //         ]
+        //     )) {
+        //         $title = $r['pub_date'];
+        //     };
+        // }
+
+        // // node: artist
+        // if (
+        //     $this->Router->route['node'] == 'artist' &&
+        //     isset($this->Router->route['var']['id'])
+        // ) {
+        //     if ($r = $this->DB->query_single(
+        //         'SELECT artist.name FROM artist WHERE id = :id LIMIT 1;',
+        //         [
+        //             ['id', $this->Router->route['var']['id'], SQLITE3_INTEGER],
+        //         ]
+        //     )) {
+        //         $title = $r['name'];
+        //     };
+        // }
+
+        // // node: catalog
+        // if (
+        //     $this->Router->route['node'] == 'catalog' &&
+        //     isset($this->Router->route['var']['id'])
+        // ) {
+        //     if ($r = $this->DB->query_single(
+        //         'SELECT track.name FROM track WHERE id = :id LIMIT 1;',
+        //         [
+        //             ['id', $this->Router->route['var']['id'], SQLITE3_INTEGER],
+        //         ]
+        //     )) {
+        //         $title = $r['name'];
+        //     };
+        // }
+
+        // // node: music
+        // if (
+        //     $this->Router->route['node'] == 'music' &&
+        //     isset($this->Router->route['var']['id'])
+        // ) {
+        //     if ($r = $this->DB->query_single(
+        //         'SELECT rls.name FROM rls WHERE id = :id LIMIT 1;',
+        //         [
+        //             ['id', $this->Router->route['var']['id'], SQLITE3_INTEGER],
+        //         ]
+        //     )) {
+        //         $title = $r['name'];
+        //     };
+        // }
+
+        // // node: planet420
+        // if (
+        //     $this->Router->route['node'] == 'planet420' &&
+        //     isset($this->Router->route['var']['session'])
+        // ) {
+        //     if ($r = $this->DB->query_single(
+        //         'SELECT num FROM p420_session WHERE num = :session LIMIT 1;',
+        //         [
+        //             ['session', $this->Router->route['var']['session'], SQLITE3_INTEGER],
+        //         ]
+        //     )) {
+        //         $title = 'Planet 420.'.$r['num'];
+        //     };
+        // }
+
+        // // bake final title with what we got until here
+        // if ($title) {
+        //     $title = $title.$sep.$this->Router->route['request'].$sep.$this->conf['site_title'];
+        // }
+        // else if ($this->Router->route['node'] == $this->Router->default_route['node']) {
+        //     $title = $this->conf['site_title'];
+        // }
+        // else if ($this->Router->route['node'] == $this->Router->error_node) {
+        //     $title = '!Error.404:'.$this->Router->route['request'].$sep.$this->conf['site_title'];
+        // }
+        // else {
+        //     $title = $this->Router->route['request'].$sep.$this->conf['site_title'];
+        // }
+
+        // return $title;
     }
 
 
     protected function print_site_nav(): void
     {
         print('<ul>');
-        foreach ($this->conf['site_nav'] as $v) {
+        foreach ($this->conf['site_nav'] as $k => $v) {
             printf('<li><a href="%1$s"%3$s>%2$s</a></li>',
                 $v['link'],
                 $v['link_text'],
-                ($this->Router->route['node'] == $v['base_node']) ? ' class="active"' : '',
+                ($this->Router->route['node'] == $k) ? ' class="active"' : '',
             );
         }
         print('</ul>');

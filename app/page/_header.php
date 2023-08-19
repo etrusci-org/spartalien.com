@@ -13,18 +13,16 @@
 <body>
     <noscript>Javascript required</noscript>
 
-
     <header>
         <h1>
             <a href="."><?php print($this->conf['site_title']); ?></a>
-            <small class="font-mono">/<?php print($this->Router->route['request']); ?></small>
         </h1>
 
         <nav>
             <?php $this->print_site_nav(); ?>
         </nav>
 
-
+        <div class="font-mono">/<?php print($this->Router->route['request']); ?></div>
     </header>
 
 
