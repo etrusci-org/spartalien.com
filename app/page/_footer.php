@@ -2,21 +2,17 @@
 
 
     <footer>
-        <nav>
-            <?php $this->print_site_nav(); ?>
-        </nav>
-
         <p>&copy; <?php print(date('Y') . ' ' . $this->conf['site_title']); ?></p>
     </footer>
 
 
 
-    <script type="module">
-        import { Scur } from './res/scur.js?v=<?php print($this->version['js']); ?>'
+    <!-- <script type="module">
+        // import { Scur } from './res/scur.js?v=<?php print($this->version['js']); ?>'
         // import { LazyMedia } from './res/lazymedia.js?v=<?php print($this->version['js']); ?>'
         // import { ImgPrev } from './res/imgprev.js?v=<?php print($this->version['js']); ?>'
         // import { BGColorFader } from './res/bgcolorfader.js?v=<?php print($this->version['js']); ?>'
-        Scur.deobElements()
+        // Scur.deobElements()
         // LazyMedia.embed()
         // ImgPrev.init()
 
@@ -34,10 +30,8 @@
         //     '0d0d0d',
         //     '0f0f0f',
         // ])
-
         // bgfader.start()
-
-    </script>
+    </script> -->
 
 
 </body>

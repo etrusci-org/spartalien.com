@@ -12,17 +12,17 @@ require $APP_DIR.'/conf.php';
 
 $dump = [];
 
-$dump[] = "'css' => ".array_sum(
+$dump[] = "'css'=>".array_sum(
     array_map(function(string $v): int {
         return filemtime($v);
     }, glob($APP_DIR.'/public/res/*.css')));
 
-$dump[] = "'js' => ".array_sum(
+$dump[] = "'js'=>".array_sum(
     array_map(function(string $v): int {
         return filemtime($v);
     }, glob($APP_DIR.'/public/res/*.js')));
 
-$dump = sprintf('<?php $version = [%s]; ?>'.PHP_EOL, implode(', ', $dump));
+$dump = sprintf('<?php $version=[%s]; ?>'.PHP_EOL, implode(',', $dump));
 
 file_put_contents($conf['version_file'], $dump, LOCK_EX);
 

@@ -59,7 +59,7 @@ $dump = [];
 foreach ($valid_requests as $v) {
     $dump[] = "'".$v."'";
 }
-$dump = sprintf('<?php $valid_requests = [%s]; ?>'.PHP_EOL, implode(', ', $dump));
+$dump = sprintf('<?php $valid_requests=[%s]; ?>'.PHP_EOL, implode(',', $dump));
 
 file_put_contents($valid_requests_file, $dump, LOCK_EX);
 
