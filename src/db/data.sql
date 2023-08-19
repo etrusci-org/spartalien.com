@@ -7,6 +7,7 @@ INSERT INTO artist (name, url) VALUES ('Esblendet', 'https://esblendet.ch');
 INSERT INTO artist (name, url) VALUES ('Stevie Lee Price', 'https://twitter.com/STEVIELEEPRICE');
 INSERT INTO artist (name, url) VALUES ('ediblewaves', 'https://ediblewaves.bandcamp.com');
 INSERT INTO artist (name, url) VALUES ('Orochi Hanma', 'https://twitch.tv/orochihanma');
+INSERT INTO artist (name, url) VALUES ('arT2', 'https://etrusci.org');
 
 
 INSERT INTO label (name, url) VALUES ('Kaiseki Digital', 'https://kaisekidigital.bandcamp.com');
@@ -192,6 +193,20 @@ INSERT INTO track (artist_id, name, runtime, bandcamp_id) VALUES (1, 'The Dying 
 INSERT INTO track (artist_id, name, runtime, bandcamp_id) VALUES (1, 'The Dying Spaceship Symphony: Part 9', 3600, '801143427');
 INSERT INTO track (artist_id, name, runtime, bandcamp_id) VALUES (1, 'The Dying Spaceship Symphony: Part 10', 3600, '2382100258');
 INSERT INTO track (artist_id, name, runtime, bandcamp_id) VALUES (1, 'Yellow Soul Grinder', 600, '1255097516');
+INSERT INTO track (artist_id, name, runtime, bandcamp_id) VALUES (7, 'Slow Adventure', 101, '3237485840');
+INSERT INTO track (artist_id, name, runtime, bandcamp_id) VALUES (7, 'The Answer', 175, '3066226194');
+INSERT INTO track (artist_id, name, runtime, bandcamp_id) VALUES (7, 'Dirty TripRock', 331, '1157409039');
+INSERT INTO track (artist_id, name, runtime, bandcamp_id) VALUES (7, 'Moskau Dance', 236, '3461497364');
+INSERT INTO track (artist_id, name, runtime, bandcamp_id) VALUES (7, 'Killing Someone', 220, '3605497168');
+INSERT INTO track (artist_id, name, runtime, bandcamp_id) VALUES (7, 'Ambient Source', 378, '3666563588');
+INSERT INTO track (artist_id, name, runtime, bandcamp_id) VALUES (7, 'The Trip Construction Kit', 395, '2289975069');
+INSERT INTO track (artist_id, name, runtime, bandcamp_id) VALUES (7, 'We''re Wearing Sunglasses', 326, '4137232325');
+INSERT INTO track (artist_id, name, runtime, bandcamp_id) VALUES (7, 'She, Gina & I', 272, '2219573675');
+INSERT INTO track (artist_id, name, runtime, bandcamp_id) VALUES (7, 'Dying Ambient Drone', 319, '4236043337');
+INSERT INTO track (artist_id, name, runtime, bandcamp_id) VALUES (7, 'Late-Night J', 262, '2965941599');
+INSERT INTO track (artist_id, name, runtime, bandcamp_id) VALUES (7, 'Chicken vs. Overdrive', 96, '2244230942');
+INSERT INTO track (artist_id, name, runtime, bandcamp_id) VALUES (7, 'All I Know', 395, '1864935083');
+INSERT INTO track (artist_id, name, runtime, bandcamp_id) VALUES (7, 'Intrutrolude', 254, '949326331');
 
 
 INSERT INTO track_credit (track_id, line) VALUES (3, 'Speech - Dr. Timothy Leary (leary.com)');
@@ -224,7 +239,7 @@ INSERT INTO track_credit (track_id, line) VALUES (36, 'Kid calling sample - Klan
 INSERT INTO track_credit (track_id, line) VALUES (38, 'Didgeridoo - Esblendet');
 INSERT INTO track_credit (track_id, line) VALUES (42, 'Background vocals - Esblendet');
 INSERT INTO track_credit (track_id, line) VALUES (62, 'Didgeridoo - Esblendet');
-INSERT INTO track_credit (track_id, line) VALUES (62, 'Some Vocals - Esblendet');
+INSERT INTO track_credit (track_id, line) VALUES (62, 'Some vocals - Esblendet');
 INSERT INTO track_credit (track_id, line) VALUES (48, 'Some foley samples from the Fencepost material originally released by Evelyn Records in 2002 provided by <1 (lessthanone.bandcamp.com)');
 INSERT INTO track_credit (track_id, line) VALUES (49, 'Some foley samples from the Fencepost material originally released by Evelyn Records in 2002 provided by <1 (lessthanone.bandcamp.com)');
 INSERT INTO track_credit (track_id, line) VALUES (58, 'Pan Drum - Esblendet');
@@ -235,6 +250,7 @@ INSERT INTO track_credit (track_id, line) VALUES (97, 'Vocals - Stevie Lee Price
 INSERT INTO track_credit (track_id, line) VALUES (100, 'Original track "Haphe" by Klangachse aka ediblewaves (ediblewaves.bandcamp.com)');
 INSERT INTO track_credit (track_id, line) VALUES (150, 'Lyrics - Orochi Hanma');
 INSERT INTO track_credit (track_id, line) VALUES (150, 'Vocals - Orochi Hanma');
+INSERT INTO track_credit (track_id, line) VALUES (184, 'Some vocals - Claire W.');
 
 
 INSERT INTO rls (artist_id, rls_type_id, label_id, name, pub_date, upd_date, is_freedl, bandcamp_id) VALUES (1, 1, NULL, 'Continuoduction', '2016-03-24', NULL, 1, '2223569284');
@@ -274,6 +290,7 @@ INSERT INTO rls (artist_id, rls_type_id, label_id, name, pub_date, upd_date, is_
 INSERT INTO rls (artist_id, rls_type_id, label_id, name, pub_date, upd_date, is_freedl, bandcamp_id) VALUES (1, 3, NULL, 'WARM SUMMER EVENING', '2023-04-21', NULL, 0, '73692186');
 INSERT INTO rls (artist_id, rls_type_id, label_id, name, pub_date, upd_date, is_freedl, bandcamp_id) VALUES (1, 3, NULL, 'THE DYING SPACESHIP SYMPHONY', '2023-06-17', NULL, 1, '2972069926');
 INSERT INTO rls (artist_id, rls_type_id, label_id, name, pub_date, upd_date, is_freedl, bandcamp_id) VALUES (1, 1, 3, 'Yellow Soul Grinder', '2023-07-13', NULL, 0, '1255097516');
+INSERT INTO rls (artist_id, rls_type_id, label_id, name, pub_date, upd_date, is_freedl, bandcamp_id) VALUES (7, 3, NULL, 'Sound.Ex 1', '2004-10-05', NULL, 1, '2619863095');
 
 
 INSERT INTO rls_credit (rls_id, line) VALUES (1, 'Coverart photo - NASA (nasa.gov)');
@@ -481,6 +498,20 @@ INSERT INTO rls_tracklist (rls_id, track_id) VALUES (36, 169);
 INSERT INTO rls_tracklist (rls_id, track_id) VALUES (36, 170);
 INSERT INTO rls_tracklist (rls_id, track_id) VALUES (36, 171);
 INSERT INTO rls_tracklist (rls_id, track_id) VALUES (37, 172);
+INSERT INTO rls_tracklist (rls_id, track_id) VALUES (38, 173);
+INSERT INTO rls_tracklist (rls_id, track_id) VALUES (38, 174);
+INSERT INTO rls_tracklist (rls_id, track_id) VALUES (38, 175);
+INSERT INTO rls_tracklist (rls_id, track_id) VALUES (38, 176);
+INSERT INTO rls_tracklist (rls_id, track_id) VALUES (38, 177);
+INSERT INTO rls_tracklist (rls_id, track_id) VALUES (38, 178);
+INSERT INTO rls_tracklist (rls_id, track_id) VALUES (38, 179);
+INSERT INTO rls_tracklist (rls_id, track_id) VALUES (38, 180);
+INSERT INTO rls_tracklist (rls_id, track_id) VALUES (38, 181);
+INSERT INTO rls_tracklist (rls_id, track_id) VALUES (38, 182);
+INSERT INTO rls_tracklist (rls_id, track_id) VALUES (38, 183);
+INSERT INTO rls_tracklist (rls_id, track_id) VALUES (38, 184);
+INSERT INTO rls_tracklist (rls_id, track_id) VALUES (38, 185);
+INSERT INTO rls_tracklist (rls_id, track_id) VALUES (38, 186);
 
 
 INSERT INTO rls_media (rls_id, code) VALUES (1, '{"type": "youtubeVideo", "slug": "QZovE8JDsXU"}');
@@ -543,6 +574,8 @@ INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./f
 INSERT INTO rls_media (rls_id, code) VALUES (34, '{"type": "link", "slug": "./file/smoking-sea-lyrics.html", "text": "Smoking-Sea-Lyrics.html", "attr": [["target","_blank"]]}');
 INSERT INTO rls_media (rls_id, code) VALUES (34, '{"type": "link", "slug": "https://stream.resonate.coop/artist/20951/release/okay-but-can-you-rap-to-this", "text": "OKAY, BUT CAN YOU RAP TO THIS? on Resonate"}');
 INSERT INTO rls_media (rls_id, code) VALUES (35, '{"type": "youtubePlaylist", "slug": "PLGOlCfPCyZ4EHWNjgL5g5bRG6bur9dUXf"}');
+INSERT INTO rls_media (rls_id, code) VALUES (38, '{"type": "image", "slug": "./file/old-soundex/00-arT2-Sound.Ex-front.jpg"}');
+INSERT INTO rls_media (rls_id, code) VALUES (38, '{"type": "image", "slug": "./file/old-soundex/00-arT2-Sound.Ex-back.jpg"}');
 
 
 INSERT INTO track_dist (track_id, platform, url) VALUES (1, 'bandcamp', 'https://spartalien.bandcamp.com/track/continuoduction');
@@ -876,6 +909,32 @@ INSERT INTO track_dist (track_id, platform, url) VALUES (170, 'bandcamp', 'https
 INSERT INTO track_dist (track_id, platform, url) VALUES (171, 'bandcamp', 'https://spartalien.bandcamp.com/track/the-dying-spaceship-symphony-part-10');
 INSERT INTO track_dist (track_id, platform, url) VALUES (172, 'bandcamp', 'https://spartalien.bandcamp.com/track/yellow-soul-grinder');
 INSERT INTO track_dist (track_id, platform, url) VALUES (172, 'spotify', 'https://open.spotify.com/track/2n76dGZUojcVJ1nsN72Mro');
+INSERT INTO track_dist (track_id, platform, url) VALUES (173, 'bandcamp', 'https://spartalien.bandcamp.com/track/slow-adventure');
+INSERT INTO track_dist (track_id, platform, url) VALUES (173, 'internet archive', 'https://archive.org/download/arT2-Sound.Ex_1/01-arT2-Slow_Adventure.mp3');
+INSERT INTO track_dist (track_id, platform, url) VALUES (174, 'bandcamp', 'https://spartalien.bandcamp.com/track/the-answer');
+INSERT INTO track_dist (track_id, platform, url) VALUES (174, 'internet archive', 'https://archive.org/download/arT2-Sound.Ex_1/02-arT2-The_Answer.mp3');
+INSERT INTO track_dist (track_id, platform, url) VALUES (175, 'bandcamp', 'https://spartalien.bandcamp.com/track/dirty-triprock');
+INSERT INTO track_dist (track_id, platform, url) VALUES (175, 'internet archive', 'https://archive.org/download/arT2-Sound.Ex_1/03-arT2-Dirty_TripRock.mp3');
+INSERT INTO track_dist (track_id, platform, url) VALUES (176, 'bandcamp', 'https://spartalien.bandcamp.com/track/moskau-dance');
+INSERT INTO track_dist (track_id, platform, url) VALUES (176, 'internet archive', 'https://archive.org/download/arT2-Sound.Ex_1/04-arT2-Moskau_Dance.mp3');
+INSERT INTO track_dist (track_id, platform, url) VALUES (177, 'bandcamp', 'https://spartalien.bandcamp.com/track/killing-someone');
+INSERT INTO track_dist (track_id, platform, url) VALUES (177, 'internet archive', 'https://archive.org/download/arT2-Sound.Ex_1/05-arT2-Killing_Someone.mp3');
+INSERT INTO track_dist (track_id, platform, url) VALUES (178, 'bandcamp', 'https://spartalien.bandcamp.com/track/ambient-source');
+INSERT INTO track_dist (track_id, platform, url) VALUES (178, 'internet archive', 'https://archive.org/download/arT2-Sound.Ex_1/06-arT2-Ambient_Source.mp3');
+INSERT INTO track_dist (track_id, platform, url) VALUES (179, 'bandcamp', 'https://spartalien.bandcamp.com/track/the-trip-construction-kit');
+INSERT INTO track_dist (track_id, platform, url) VALUES (179, 'internet archive', 'https://archive.org/download/arT2-Sound.Ex_1/07-arT2-The_Trip_Construction_Kit.mp3');
+INSERT INTO track_dist (track_id, platform, url) VALUES (180, 'bandcamp', 'https://spartalien.bandcamp.com/track/were-wearing-sunglasses');
+INSERT INTO track_dist (track_id, platform, url) VALUES (180, 'internet archive', 'https://archive.org/download/arT2-Sound.Ex_1/08-arT2-Were_Wearing_Sunglasses.mp3');
+INSERT INTO track_dist (track_id, platform, url) VALUES (181, 'bandcamp', 'https://spartalien.bandcamp.com/track/she-gina-i');
+INSERT INTO track_dist (track_id, platform, url) VALUES (181, 'internet archive', 'https://archive.org/download/arT2-Sound.Ex_1/09-arT2-She_Gina_And_I.mp3');
+INSERT INTO track_dist (track_id, platform, url) VALUES (182, 'bandcamp', 'https://spartalien.bandcamp.com/track/dying-ambient-drone');
+INSERT INTO track_dist (track_id, platform, url) VALUES (182, 'internet archive', 'https://archive.org/download/arT2-Sound.Ex_1/10-arT2-Dying_Ambient_Drone.mp3');
+INSERT INTO track_dist (track_id, platform, url) VALUES (183, 'bandcamp', 'https://spartalien.bandcamp.com/track/late-night-j');
+INSERT INTO track_dist (track_id, platform, url) VALUES (183, 'internet archive', 'https://archive.org/download/arT2-Sound.Ex_1/11-arT2-Late-Night_J.mp3');
+INSERT INTO track_dist (track_id, platform, url) VALUES (184, 'bandcamp', 'https://spartalien.bandcamp.com/track/chicken-vs-overdrive');
+INSERT INTO track_dist (track_id, platform, url) VALUES (184, 'internet archive', 'https://archive.org/download/arT2-Sound.Ex_1/12-arT2_feat_Claire-Chicken_vs_Overdrive.mp3');
+INSERT INTO track_dist (track_id, platform, url) VALUES (185, 'bandcamp', 'https://spartalien.bandcamp.com/track/all-i-know');
+INSERT INTO track_dist (track_id, platform, url) VALUES (186, 'bandcamp', 'https://spartalien.bandcamp.com/track/intrutrolude');
 
 
 INSERT INTO rls_dist (rls_id, platform, url) VALUES (1, 'bandcamp', 'https://spartalien.bandcamp.com/track/continuoduction');
@@ -950,6 +1009,9 @@ INSERT INTO rls_dist (rls_id, platform, url) VALUES (35, 'spotify', 'https://ope
 INSERT INTO rls_dist (rls_id, platform, url) VALUES (36, 'bandcamp', 'https://spartalien.bandcamp.com/album/the-dying-spaceship-symphony');
 INSERT INTO rls_dist (rls_id, platform, url) VALUES (37, 'bandcamp', 'https://spartalien.bandcamp.com/track/yellow-soul-grinder');
 INSERT INTO rls_dist (rls_id, platform, url) VALUES (37, 'spotify', 'https://open.spotify.com/track/2n76dGZUojcVJ1nsN72Mro');
+INSERT INTO rls_dist (rls_id, platform, url) VALUES (38, 'bandcamp', 'https://spartalien.bandcamp.com/album/sound-ex-1');
+INSERT INTO rls_dist (rls_id, platform, url) VALUES (38, 'internet archive', 'https://archive.org/details/arT2-Sound.Ex_1/');
+INSERT INTO rls_dist (rls_id, platform, url) VALUES (38, 'mixcloud', 'https://www.mixcloud.com/lowtechman/old-sound-experiments/');
 
 
 INSERT INTO phy (name) VALUES ('Artefact S9M1');
@@ -1338,7 +1400,7 @@ INSERT INTO news_text (news_id, text) VALUES (66, 'New music: [url=./music/id:36
 INSERT INTO news_text (news_id, text) VALUES (67, 'New music: [url=./music/id:37]Yellow Soul Grinder[/url]');
 INSERT INTO news_text (news_id, text) VALUES (68, 'Featured on: [url=./stuff/id:32]SFTS: The Backrooms Comp : Level 2[/url]');
 INSERT INTO news_text (news_id, text) VALUES (69, 'Featured on: [url=./stuff/id:33]Spooky Kitten Records'' WHiTMiRE Reviews Music: Episode 76[/url]');
-
+-- TODO/LATER: news "added old sound.ex to release list"
 
 INSERT INTO mention (subject, description) VALUES ('MighTV', NULL);
 INSERT INTO mention (subject, description) VALUES ('Shikantaza Creativity Interview', NULL);
