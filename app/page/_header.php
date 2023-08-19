@@ -21,17 +21,7 @@
         </h1>
 
         <nav>
-            <ul>
-                <?php
-                foreach ($this->conf['site_nav'] as $v) {
-                    printf('<li><a href="%1$s"%3$s>%2$s</a></li>',
-                        $v['link'],
-                        $v['link_text'],
-                        ($this->Router->route['node'] == $v['base_node']) ? ' class="active"' : '',
-                    );
-                }
-                ?>
-            </ul>
+            <?php $this->print_site_nav(); ?>
         </nav>
 
 

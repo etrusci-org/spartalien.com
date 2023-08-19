@@ -237,6 +237,20 @@ class Core
     }
 
 
+    protected function print_site_nav(): void
+    {
+        print('<ul>');
+        foreach ($this->conf['site_nav'] as $v) {
+            printf('<li><a href="%1$s"%3$s>%2$s</a></li>',
+                $v['link'],
+                $v['link_text'],
+                ($this->Router->route['node'] == $v['base_node']) ? ' class="active"' : '',
+            );
+        }
+        print('</ul>');
+    }
+
+
     public static function _json_dec(string $json, int $flags = JSON_THROW_ON_ERROR): array|null {
         return json_decode(json: $json, associative: true, depth: 512, flags: $flags);
     }
