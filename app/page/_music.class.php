@@ -41,9 +41,6 @@ class Page extends Core
 
         foreach ($dump as $k => $v) {
             $dump[$k]['track_runtime_human'] = $this->_seconds_to_dhms($dump[$k]['track_runtime']);
-            $dump[$k]['track_credit'] = $this->get_credit('track', $dump[$k]['track_id']);
-            $dump[$k]['track_dist'] = $this->get_dist('track', $dump[$k]['track_id']);
-            $dump[$k]['track_dist_link'] = $this->bake_dist_links($dump[$k]['track_dist']);
 
             ksort($dump[$k]);
         }
