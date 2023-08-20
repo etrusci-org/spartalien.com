@@ -7,6 +7,7 @@ $conf = [];
 
 // ----------------------------------------------------------------------------
 
+$conf['maintenance_mode'] = false;
 $conf['error_reporting_level'] = E_ALL;
 
 // ----------------------------------------------------------------------------
@@ -26,14 +27,14 @@ $conf['site_nav'] = [
         'link' => './music',
         'link_text' => 'Music Releases',
     ],
-    'musicvideo' => [
-        'link' => './musicvideo',
-        'link_text' => 'Music Videos',
-    ],
     'catalog' => [
         'link' => './catalog',
         'link_text' => 'Tracks Catalog',
     ],
+    // 'musicvideo' => [
+    //     'link' => './musicvideo',
+    //     'link_text' => 'Music Videos',
+    // ],
     'visual' => [
         'link' => './visual',
         'link_text' => 'Visuals',
@@ -102,30 +103,30 @@ $conf['validate_requests'] = true;
 // Same applies to Router::error_node.
 
 $conf['valid_request_patterns'] = [
-    [
-        'route' => '/^api$/',
-        'valuesTable' => '',
-        'valuesCol' => [],
-    ],
-    [
-        'route' => '/^api\/get:(track_list|release_list)$/',
-        'valuesTable' => '',
-        'valuesCol' => [],
-    ],
-    [
-        'route' => '/^api\/get:track\/id:{val1}$/',
-        'valuesTable' => 'track',
-        'valuesCol' => [
-            'val1' => 'id',
-        ],
-    ],
-    [
-        'route' => '/^api\/get:release\/id:{val1}$/',
-        'valuesTable' => 'rls',
-        'valuesCol' => [
-            'val1' => 'id',
-        ],
-    ],
+    // [
+    //     'route' => '/^api$/',
+    //     'valuesTable' => '',
+    //     'valuesCol' => [],
+    // ],
+    // [
+    //     'route' => '/^api\/get:(track_list|release_list)$/',
+    //     'valuesTable' => '',
+    //     'valuesCol' => [],
+    // ],
+    // [
+    //     'route' => '/^api\/get:track\/id:{val1}$/',
+    //     'valuesTable' => 'track',
+    //     'valuesCol' => [
+    //         'val1' => 'id',
+    //     ],
+    // ],
+    // [
+    //     'route' => '/^api\/get:release\/id:{val1}$/',
+    //     'valuesTable' => 'rls',
+    //     'valuesCol' => [
+    //         'val1' => 'id',
+    //     ],
+    // ],
     [
         'route' => '/^about$/',
         'valuesTable' => '',
@@ -162,11 +163,11 @@ $conf['valid_request_patterns'] = [
             'val1' => 'id',
         ],
     ],
-    [
-        'route' => '/^musicvideo$/',
-        'valuesTable' => '',
-        'valuesCol' => [],
-    ],
+    // [
+    //     'route' => '/^musicvideo$/',
+    //     'valuesTable' => '',
+    //     'valuesCol' => [],
+    // ],
     [
         'route' => '/^physical$/',
         'valuesTable' => '',
@@ -265,13 +266,13 @@ $conf['pre_render_settings'] = [
         'headers' => [],
         'page_files' => [],
     ],
-    'api' => [
-        'class_file' => 'music',
-        'headers' => [
-            'Content-Type: application/json; charset=utf-8'
-        ],
-        'page_files' => ['*node'],
-    ],
+    // 'api' => [
+    //     'class_file' => 'music',
+    //     'headers' => [
+    //         'Content-Type: application/json; charset=utf-8'
+    //     ],
+    //     'page_files' => ['*node'],
+    // ],
     'home' => [
         'class_file' => '',
         'headers' => [],
@@ -297,11 +298,11 @@ $conf['pre_render_settings'] = [
         'headers' => [],
         'page_files' => [],
     ],
-    'musicvideo' => [
-        'class_file' => '',
-        'headers' => [],
-        'page_files' => [],
-    ],
+    // 'musicvideo' => [
+    //     'class_file' => '',
+    //     'headers' => [],
+    //     'page_files' => [],
+    // ],
     'physical' => [
         'class_file' => 'physical',
         'headers' => [],

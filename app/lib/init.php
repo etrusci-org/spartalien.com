@@ -7,6 +7,14 @@ $APP_DIR = realpath(__DIR__.'/..');
 
 
 require $APP_DIR.'/conf.php';
+
+
+if ($conf['maintenance_mode']) {
+    print('website maintenance - please try again in a few minutes');
+    exit(0);
+}
+
+
 require $APP_DIR.'/lib/core.php';
 require $APP_DIR.'/lib/database.php';
 require $APP_DIR.'/lib/router.php';
