@@ -31,10 +31,6 @@ $conf['site_nav'] = [
         'link' => './catalog',
         'link_text' => 'Tracks Catalog',
     ],
-    // 'musicvideo' => [
-    //     'link' => './musicvideo',
-    //     'link_text' => 'Music Videos',
-    // ],
     'visual' => [
         'link' => './visual',
         'link_text' => 'Visuals',
@@ -163,11 +159,6 @@ $conf['valid_request_patterns'] = [
             'val1' => 'id',
         ],
     ],
-    // [
-    //     'route' => '/^musicvideo$/',
-    //     'valuesTable' => '',
-    //     'valuesCol' => [],
-    // ],
     [
         'route' => '/^physical$/',
         'valuesTable' => '',
@@ -298,11 +289,6 @@ $conf['pre_render_settings'] = [
         'headers' => [],
         'page_files' => [],
     ],
-    // 'musicvideo' => [
-    //     'class_file' => '',
-    //     'headers' => [],
-    //     'page_files' => [],
-    // ],
     'physical' => [
         'class_file' => 'physical',
         'headers' => [],

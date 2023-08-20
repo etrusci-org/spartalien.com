@@ -1105,6 +1105,28 @@ INSERT INTO visual (name, pub_date) VALUES ('Lost memory', '2021');
 INSERT INTO visual (name, pub_date) VALUES ('Tunnel B21.4.3', '2021');
 INSERT INTO visual (name, pub_date) VALUES ('E dote Baum am Abgrund', '2021');
 INSERT INTO visual (name, pub_date) VALUES ('Subweird 1', '2021');
+INSERT INTO visual (name, pub_date) VALUES ('Continuoduction', '2017-08-25');
+INSERT INTO visual (name, pub_date) VALUES ('I''ll Embrace You Again In Space', '2018-05-24');
+INSERT INTO visual (name, pub_date) VALUES ('Realize It''s Just A Ride', '2018-05-24');
+INSERT INTO visual (name, pub_date) VALUES ('Nature''s Song', '2018-03-24');
+INSERT INTO visual (name, pub_date) VALUES ('Random Morning Piano Doodles', '2019-02-10');
+INSERT INTO visual (name, pub_date) VALUES ('Paenitentia', '2019-06-03');
+INSERT INTO visual (name, pub_date) VALUES ('Brain I/O #1', '2019-06-09');
+INSERT INTO visual (name, pub_date) VALUES ('Brain I/O #2', '2019-07-13');
+INSERT INTO visual (name, pub_date) VALUES ('Brain I/O #3', '2019-07-02');
+INSERT INTO visual (name, pub_date) VALUES ('Brain I/O #4', '2019-07-12');
+INSERT INTO visual (name, pub_date) VALUES ('Brain I/O #5', '2019-07-20');
+INSERT INTO visual (name, pub_date) VALUES ('Brain I/O #6', '2019-08-15');
+INSERT INTO visual (name, pub_date) VALUES ('Brain I/O #7', '2019-12-12');
+INSERT INTO visual (name, pub_date) VALUES ('Brain I/O #8', '2019-12-28');
+INSERT INTO visual (name, pub_date) VALUES ('Let It All Go, Volume 1', '2020-02-13');
+INSERT INTO visual (name, pub_date) VALUES ('Brain I/O #9', '2020-04-23');
+INSERT INTO visual (name, pub_date) VALUES ('Slomo Intros', '2020-05-02');
+INSERT INTO visual (name, pub_date) VALUES ('Brain I/O #10', '2020-07-13');
+INSERT INTO visual (name, pub_date) VALUES ('Let It All Go, Volume 2', '2020-12-10');
+INSERT INTO visual (name, pub_date) VALUES ('4+ Hours of Dark Experimental Ambient and Noise Music | BRAIN I/O', '2021-03-05');
+INSERT INTO visual (name, pub_date) VALUES ('SPARTALIEN - Flux (feat. Stevie Lee Price)', '2021-08-13');
+INSERT INTO visual (name, pub_date) VALUES ('Calming Stress Relief Music for Meditation, Reflection, and Solitude | UNTOLD STORIES', '2021-10-03');
 
 
 INSERT INTO visual_media (visual_id, code) VALUES (1, '{"type":"image", "slug": "./file/visual/2000-soia.jpg"}');
@@ -1165,6 +1187,28 @@ INSERT INTO visual_media (visual_id, code) VALUES (38, '{"type": "video", "slug"
 INSERT INTO visual_media (visual_id, code) VALUES (39, '{"type": "video", "slug": "./file/visual/2021-tunnel_b21_4_3.mp4", "attr": [["poster", "./file/visual/39-tn.jpg"], ["autoplay", "autoplay"], ["loop", "loop"]]}');
 INSERT INTO visual_media (visual_id, code) VALUES (40, '{"type": "image", "slug": "./file/visual/2021-e_dote_baum_am_abgrund-web.png"}');
 INSERT INTO visual_media (visual_id, code) VALUES (41, '{"type": "video", "slug": "./file/visual/2021-subweird1.mp4", "attr": [["poster", "./file/visual/41-tn.jpg"], ["autoplay", "autoplay"], ["loop", "loop"]]}');
+INSERT INTO visual_media (visual_id, code) VALUES (42, '{"type": "youtubeVideo", "slug": "QZovE8JDsXU"}');
+INSERT INTO visual_media (visual_id, code) VALUES (43, '{"type": "youtubeVideo", "slug": "cC4vSYqYbYA"}');
+INSERT INTO visual_media (visual_id, code) VALUES (44, '{"type": "youtubeVideo", "slug": "v3aCJysvutk"}');
+INSERT INTO visual_media (visual_id, code) VALUES (45, '{"type": "youtubeVideo", "slug": "EbiUIUY7Juo"}');
+INSERT INTO visual_media (visual_id, code) VALUES (46, '{"type": "youtubeVideo", "slug": "EbiUIUY7Juo"}');
+INSERT INTO visual_media (visual_id, code) VALUES (47, '{"type": "youtubeVideo", "slug": "Yf_Q5zuvdOQ"}');
+INSERT INTO visual_media (visual_id, code) VALUES (48, '{"type": "youtubeVideo", "slug": "jjpsrGAH1Vk"}');
+INSERT INTO visual_media (visual_id, code) VALUES (49, '{"type": "youtubeVideo", "slug": "e38lxhkfrXE"}');
+INSERT INTO visual_media (visual_id, code) VALUES (50, '{"type": "youtubeVideo", "slug": "Rc1cSKHdXK4"}');
+INSERT INTO visual_media (visual_id, code) VALUES (51, '{"type": "youtubeVideo", "slug": "voQh6jUyByo"}');
+INSERT INTO visual_media (visual_id, code) VALUES (52, '{"type": "youtubeVideo", "slug": "bIkI9L_eC8o"}');
+INSERT INTO visual_media (visual_id, code) VALUES (53, '{"type": "youtubeVideo", "slug": "rXBqQgStAa8"}');
+INSERT INTO visual_media (visual_id, code) VALUES (54, '{"type": "youtubeVideo", "slug": "cRHFzY99dto"}');
+INSERT INTO visual_media (visual_id, code) VALUES (55, '{"type": "youtubeVideo", "slug": "EwzH5ggyp8o"}');
+INSERT INTO visual_media (visual_id, code) VALUES (56, '{"type": "youtubeVideo", "slug": "D0GvSMubkFw"}');
+INSERT INTO visual_media (visual_id, code) VALUES (57, '{"type": "youtubeVideo", "slug": "qzoyH1sxyTE"}');
+INSERT INTO visual_media (visual_id, code) VALUES (58, '{"type": "youtubeVideo", "slug": "h0U94dfeDig"}');
+INSERT INTO visual_media (visual_id, code) VALUES (59, '{"type": "youtubeVideo", "slug": "D3Ud0r4eVAI"}');
+INSERT INTO visual_media (visual_id, code) VALUES (60, '{"type": "youtubeVideo", "slug": "4HLmwToUeXw"}');
+INSERT INTO visual_media (visual_id, code) VALUES (61, '{"type": "youtubeVideo", "slug": "FUErhO5OW1M"}');
+INSERT INTO visual_media (visual_id, code) VALUES (62, '{"type": "youtubeVideo", "slug": "mE4p5UV62sw"}');
+INSERT INTO visual_media (visual_id, code) VALUES (63, '{"type": "youtubeVideo", "slug": "mseAapnJomY"}');
 
 
 INSERT INTO stuff (name) VALUES ('Promo Art 2018-03');

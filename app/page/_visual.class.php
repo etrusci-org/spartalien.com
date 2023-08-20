@@ -14,7 +14,7 @@ class Page extends Core
                 visual.name AS visual_name,
                 visual.description AS visual_description
             FROM visual
-            ORDER BY visual.name ASC;'
+            ORDER BY visual.pub_date DESC;'
         );
 
         return $dump ?? [];
@@ -30,12 +30,13 @@ class Page extends Core
                 visual.description AS visual_description
             FROM visual
             WHERE visual_id = :visual_id
-            ORDER BY visual.name ASC;',
+            ORDER BY visual.pub_date DESC;',
             [
                 ['visual_id', $visual_id, SQLITE3_INTEGER],
             ]
         );
 
+        $dump['preview_image_file'] = $this->get_preview_image_file_path($visual_id);
         $dump['visual_media'] = $this->get_media($visual_id);
 
         ksort($dump);
@@ -60,5 +61,24 @@ class Page extends Core
         return array_map(function(array $v): string {
             return $v['visual_media_code'];
         }, $dump) ?? [];
+    }
+
+
+    protected function get_preview_image_file_path(int $visual_id, ?string $size = null): array | string
+    {
+        $tn  = 'file/preview/visual/'.$visual_id.'-tn.jpg';
+        $med = 'file/preview/visual/'.$visual_id.'-med.jpg';
+        $big = 'file/preview/visual/'.$visual_id.'-big.png';
+
+        return match($size) {
+            'tn' => $tn,
+            'med' => $med,
+            'big' => $big,
+            default => [
+                'tn' => $tn,
+                'med' => $med,
+                'big' => $big,
+            ],
+        };
     }
 }

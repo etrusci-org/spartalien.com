@@ -272,9 +272,9 @@ class Page extends Core
     protected function get_rls_coverart_file_path(int $rls_id, ?string $size = null): array | string
     {
 
-        $tn  = 'file/cover/'.$rls_id.'-tn.jpg';
-        $med = 'file/cover/'.$rls_id.'-med.jpg';
-        $big = 'file/cover/'.$rls_id.'-big.png';
+        $tn  = 'file/preview/rls/'.$rls_id.'-tn.jpg';
+        $med = 'file/preview/rls/'.$rls_id.'-med.jpg';
+        $big = 'file/preview/rls/'.$rls_id.'-big.png';
 
         return match($size) {
             'tn' => $tn,
