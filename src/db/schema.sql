@@ -223,7 +223,8 @@ CREATE TABLE p420_session (
     runtime      INTEGER NOT NULL,
     mixcloud_url TEXT DEFAULT NULL,
 
-    PRIMARY KEY (num, mixcloud_url)
+    PRIMARY KEY (num),
+    UNIQUE (mixcloud_url)
 );
 
 
