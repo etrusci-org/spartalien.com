@@ -5,6 +5,9 @@ $visual = [];
 if (isset($this->Router->route['var']['id'])) {
     $visual = $this->get_visual((int) $this->Router->route['var']['id']);
 }
+
+// var_dump($visual);
+// var_dump($visual_list);
 ?>
 
 

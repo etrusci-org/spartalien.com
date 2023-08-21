@@ -17,6 +17,11 @@ class Page extends Core
             ORDER BY visual.pub_date DESC;'
         );
 
+        foreach ($dump as $k => $v) {
+            $dump[$k]['visual_preview_image'] = $this->_get_preview_image_paths('visual', $v['visual_id']);
+            ksort($dump[$k]);
+        }
+
         return $dump ?? [];
     }
 
@@ -36,8 +41,8 @@ class Page extends Core
             ]
         );
 
-        $dump['preview_image_file'] = $this->get_preview_image_file_path($visual_id);
-        $dump['visual_media'] = $this->get_media($visual_id);
+        $dump['visual_preview_image'] = $this->_get_preview_image_paths('visual', $dump['visual_id']);
+        $dump['visual_media'] = $this->get_media($dump['visual_id']);
 
         ksort($dump);
 
@@ -64,21 +69,21 @@ class Page extends Core
     }
 
 
-    protected function get_preview_image_file_path(int $visual_id, ?string $size = null): array | string
-    {
-        $tn  = 'file/preview/visual/'.$visual_id.'-tn.jpg';
-        $med = 'file/preview/visual/'.$visual_id.'-med.jpg';
-        $big = 'file/preview/visual/'.$visual_id.'-big.png';
+    // protected function get_preview_image_file_path(int $visual_id, ?string $size = null): array | string
+    // {
+    //     $tn  = 'file/preview/visual/'.$visual_id.'-tn.jpg';
+    //     $med = 'file/preview/visual/'.$visual_id.'-med.jpg';
+    //     $big = 'file/preview/visual/'.$visual_id.'-big.png';
 
-        return match($size) {
-            'tn' => $tn,
-            'med' => $med,
-            'big' => $big,
-            default => [
-                'tn' => $tn,
-                'med' => $med,
-                'big' => $big,
-            ],
-        };
-    }
+    //     return match($size) {
+    //         'tn' => $tn,
+    //         'med' => $med,
+    //         'big' => $big,
+    //         default => [
+    //             'tn' => $tn,
+    //             'med' => $med,
+    //             'big' => $big,
+    //         ],
+    //     };
+    // }
 }
