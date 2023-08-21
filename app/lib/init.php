@@ -51,8 +51,8 @@ if ($conf['validate_requests']) {
 
 
 // Process pre-render settings
-$node_page_class_file = null;
-$node_page_files = null;
+$node_middleware_files = [];
+$node_page_files = [];
 
 $node_settings = $conf['pre_render_settings'][$Router->route['node']];
 
@@ -62,8 +62,10 @@ if ($node_settings['headers']) {
     }
 }
 
-if ($node_settings['class_file']) {
-    $node_page_class_file = $conf['page_dir'].'/_'.$node_settings['class_file'].'.class.php';
+if ($node_settings['middleware_files']) {
+    foreach ($node_settings['middleware_files'] as $v) {
+        $node_middleware_files[] = $APP_DIR.'/'.$v;
+    }
 }
 
 if ($node_settings['page_files']) {
@@ -76,11 +78,13 @@ $Logger = new Logger($conf['log_dir']);
 
 
 // Init app
-if (!$node_page_class_file) {
-    $App = new Core($conf, $version, $DB, $Router, $Logger);
+if (!$node_middleware_files) {
+        $App = new Core($conf, $version, $DB, $Router, $Logger);
 }
 else {
-    require $node_page_class_file;
+    foreach ($node_middleware_files as $v) {
+        require $v;
+    }
     $App = new Page($conf, $version, $DB, $Router, $Logger);
 }
 

@@ -253,97 +253,92 @@ $conf['valid_request_patterns'] = [
 
 $conf['pre_render_settings'] = [
     'error404' => [
-        'class_file' => '',
         'headers' => [],
+        'middleware_files' => [],
         'page_files' => [],
     ],
     // 'api' => [
-    //     'class_file' => 'music',
     //     'headers' => [
     //         'Content-Type: application/json; charset=utf-8'
     //     ],
+    //     'middleware_files' =>[ 'music'],
     //     'page_files' => ['*node'],
     // ],
     'home' => [
-        'class_file' => '',
         'headers' => [],
+        'middleware_files' => [],
         'page_files' => [],
     ],
     'about' => [
-        'class_file' => '',
         'headers' => [],
+        'middleware_files' => [],
         'page_files' => [],
     ],
     'catalog' => [
-        'class_file' => 'music',
         'headers' => [],
+        'middleware_files' => ['page/_music.class.php'],
         'page_files' => [],
     ],
     'artist' => [
-        'class_file' => 'music',
         'headers' => [],
+        'middleware_files' => ['page/_music.class.php'],
         'page_files' => [],
     ],
     'music' => [
-        'class_file' => 'music',
         'headers' => [],
+        'middleware_files' => ['page/_music.class.php'],
         'page_files' => [],
     ],
     'physical' => [
-        'class_file' => 'physical',
         'headers' => [],
+        'middleware_files' => ['page/_physical.class.php'],
         'page_files' => [],
     ],
     'visual' => [
-        'class_file' => 'visual',
         'headers' => [],
+        'middleware_files' => ['page/_visual.class.php'],
         'page_files' => [],
     ],
     'tool' => [
-        'class_file' => '',
         'headers' => [],
+        'middleware_files' => [],
         'page_files' => [],
     ],
     'stuff' => [
-        'class_file' => 'stuff',
         'headers' => [],
+        'middleware_files' => ['page/_stuff.class.php'],
         'page_files' => [],
     ],
     'mixtape' => [
-        'class_file' => '',
         'headers' => [],
+        'middleware_files' => [],
         'page_files' => [],
     ],
     'news' => [
-        'class_file' => 'news',
         'headers' => [],
+        'middleware_files' => ['page/_news.class.php'],
         'page_files' => [],
     ],
     // 'news.atom' => [
-    //     'class_file' => '',
     //     'headers' => [
     //         'Content-Type: application/atom+xml; charset=utf-8'
     //     ],
+    //     'middleware_files' =>[ ''],
     //     'page_files' => ['_header_news.atom', '*node', '_footer_news.atom']
     // ],
     'mention' => [
-        'class_file' => 'mention',
         'headers' => [],
+        'middleware_files' => ['mention'],
         'page_files' => [],
     ],
     'planet420' => [
-        'class_file' => 'p420',
         'headers' => [],
+        'middleware_files' => ['page/_p420.class.php'],
         'page_files' => [],
     ],
     'exit' => [
-        'class_file' => '',
         'headers' => [],
+        'middleware_files' => [],
         'page_files' => [],
     ],
 ];
-
-// // ----------------------------------------------------------------------------
-// // Template stuff
-
-// $conf['default_css_file'] = './res/style.min.css';
