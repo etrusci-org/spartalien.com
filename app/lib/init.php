@@ -10,7 +10,7 @@ require $APP_DIR.'/conf.php';
 
 
 if ($conf['maintenance_mode']) {
-    print('website maintenance - please try again in a few minutes');
+    include $conf['page_dir'].'/_maintenance.php';
     exit(0);
 }
 
