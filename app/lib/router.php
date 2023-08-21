@@ -86,7 +86,7 @@ class Router
     }
 
 
-    public function validate_request(): void
+    public function validate_request(): bool
     {
         $valid = false;
 
@@ -107,6 +107,8 @@ class Router
             $this->route['node'] = $this->error_node;
             http_response_code(404);
         }
+
+        return $valid;
     }
 
 
