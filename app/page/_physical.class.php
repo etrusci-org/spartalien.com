@@ -15,7 +15,10 @@ class Page extends Core
             ORDER BY phy.id DESC;'
         );
 
-        ksort($dump);
+        foreach ($dump as $k => $v) {
+            $dump[$k]['phy_preview_image'] = $this->_get_preview_image_paths('phy', $v['phy_id']);
+            ksort($dump[$k]);
+        }
 
         return $dump ?? [];
     }
@@ -36,8 +39,8 @@ class Page extends Core
             ]
         );
 
+        $dump['phy_preview_image'] = $this->_get_preview_image_paths('phy', $dump['phy_id']);
         $dump['phy_media'] = $this->get_media($phy_id);
-
         ksort($dump);
 
         return $dump ?? [];

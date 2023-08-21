@@ -438,4 +438,28 @@ class Core
 
         return $text;
     }
+
+
+    public static function _get_preview_image_paths(string $type, int $id, ?string $size = null): array | string
+    {
+        $path = match($type) {
+            'rls' => 'file/preview/rls/',
+            'phy' => 'file/preview/phy/',
+        };
+
+        $tn  = $path.$id.'-tn.jpg';
+        $med = $path.$id.'-med.jpg';
+        $big = $path.$id.'-big.png';
+
+        return match($size) {
+            'tn' => $tn,
+            'med' => $med,
+            'big' => $big,
+            default => [
+                'tn' => $tn,
+                'med' => $med,
+                'big' => $big,
+            ],
+        };
+    }
 }

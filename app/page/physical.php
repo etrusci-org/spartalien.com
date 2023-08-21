@@ -6,6 +6,7 @@ if (isset($this->Router->route['var']['id'])) {
     $phy = $this->get_phy((int) $this->Router->route['var']['id']);
 }
 
+// var_dump($phy);
 // var_dump($phy_list);
 ?>
 
@@ -30,7 +31,7 @@ if (isset($this->Router->route['var']['id'])) {
 
     <?php
     foreach ($phy_list as $v) {
-        printf('<a href="./physical/id:%1$s"%3$s> ./file/cover/physical/%1$s-tn.jpg</a> ',
+        printf('<a href="./physical/id:%1$s"%3$s>%2$s</a> ',
             $v['phy_id'],
             $v['phy_name'],
             (isset($this->Router->route['var']['id']) && $this->Router->route['var']['id'] == $v['phy_id']) ? ' class="active"' : '',

@@ -30,7 +30,7 @@ class Page extends Core
         );
 
         foreach ($dump as $k => $v) {
-            $dump[$k]['rls_coverart_file'] = $this->get_rls_coverart_file_path($v['rls_id']);
+            $dump[$k]['rls_preview_image'] = $this->_get_preview_image_paths('rls', $v['rls_id']);
             $dump[$k]['rls_is_freedl'] = boolval($dump[$k]['rls_is_freedl']);
             ksort($dump[$k]);
         }
@@ -67,7 +67,7 @@ class Page extends Core
         );
 
 
-        $dump['rls_coverart_file'] = $this->get_rls_coverart_file_path($dump['rls_id']);
+        $dump['rls_preview_image'] = $this->_get_preview_image_paths('rls', $dump['rls_id']);
         $dump['rls_is_freedl'] = boolval($dump['rls_is_freedl']);
         $dump['rls_track_list'] = $this->get_rls_track_list($dump['rls_id']);
         $dump['rls_track_count'] = count($dump['rls_track_list']);
@@ -269,22 +269,22 @@ class Page extends Core
     // }
 
 
-    protected function get_rls_coverart_file_path(int $rls_id, ?string $size = null): array | string
-    {
+    // protected function get_rls_images_path(int $rls_id, ?string $size = null): array | string
+    // {
 
-        $tn  = 'file/preview/rls/'.$rls_id.'-tn.jpg';
-        $med = 'file/preview/rls/'.$rls_id.'-med.jpg';
-        $big = 'file/preview/rls/'.$rls_id.'-big.png';
+    //     $tn  = 'file/preview/rls/'.$rls_id.'-tn.jpg';
+    //     $med = 'file/preview/rls/'.$rls_id.'-med.jpg';
+    //     $big = 'file/preview/rls/'.$rls_id.'-big.png';
 
-        return match($size) {
-            'tn' => $tn,
-            'med' => $med,
-            'big' => $big,
-            default => [
-                'tn' => $tn,
-                'med' => $med,
-                'big' => $big,
-            ],
-        };
-    }
+    //     return match($size) {
+    //         'tn' => $tn,
+    //         'med' => $med,
+    //         'big' => $big,
+    //         default => [
+    //             'tn' => $tn,
+    //             'med' => $med,
+    //             'big' => $big,
+    //         ],
+    //     };
+    // }
 }
