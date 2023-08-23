@@ -11,10 +11,11 @@ class Page extends Core
         $dump = $this->DB->query('
             SELECT
                 visual.id AS visual_id,
+                visual.pub_date AS visual_pub_date,
                 visual.name AS visual_name,
                 visual.description AS visual_description
             FROM visual
-            ORDER BY visual.pub_date DESC;'
+            ORDER BY visual.pub_date DESC, visual.id DESC;'
         );
 
         foreach ($dump as $k => $v) {
@@ -31,6 +32,7 @@ class Page extends Core
         $dump = $this->DB->query_single('
             SELECT
                 visual.id AS visual_id,
+                visual.pub_date AS visual_pub_date,
                 visual.name AS visual_name,
                 visual.description AS visual_description
             FROM visual
@@ -67,23 +69,4 @@ class Page extends Core
             return $v['visual_media_code'];
         }, $dump) ?? [];
     }
-
-
-    // protected function get_preview_image_file_path(int $visual_id, ?string $size = null): array | string
-    // {
-    //     $tn  = 'file/preview/visual/'.$visual_id.'-tn.jpg';
-    //     $med = 'file/preview/visual/'.$visual_id.'-med.jpg';
-    //     $big = 'file/preview/visual/'.$visual_id.'-big.png';
-
-    //     return match($size) {
-    //         'tn' => $tn,
-    //         'med' => $med,
-    //         'big' => $big,
-    //         default => [
-    //             'tn' => $tn,
-    //             'med' => $med,
-    //             'big' => $big,
-    //         ],
-    //     };
-    // }
 }

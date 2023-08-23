@@ -29,13 +29,19 @@ if (isset($this->Router->route['var']['id'])) {
 
     <?php endif; ?>
 
-    <?php
-    foreach ($rls_list as $v) {
-        printf('<a href="./music/id:%1$s"%3$s>%2$s</a> ',
-            $v['rls_id'],
-            $v['rls_name'],
-            (isset($this->Router->route['var']['id']) && $this->Router->route['var']['id'] == $v['rls_id']) ? ' class="active"' : '',
-        );
-    }
-    ?>
+    <div class="gallery grid">
+        <?php
+        foreach ($rls_list as $v) {
+            printf('
+                <a href="./music/id:%1$s" title="%2$s"%4$s>
+                    <img src="%3$s" loading="lazy" alt="preview image">
+                </a>',
+                $v['rls_id'],
+                $v['rls_name'],
+                $v['rls_preview_image']['tn'],
+                (isset($this->Router->route['var']['id']) && $this->Router->route['var']['id'] == $v['rls_id']) ? ' class="active"' : '',
+            );
+        }
+        ?>
+    </div>
 </section>

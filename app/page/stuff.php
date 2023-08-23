@@ -12,17 +12,17 @@ if (isset($this->Router->route['var']['id'])) {
 <section>
     <?php if (!$stuff) : ?>
 
-        <h2>stuffs</h2>
+        <h2>Stuff</h2>
 
     <?php else: ?>
 
-        <h2>stuff: <?php print($stuff['stuff_name']); ?></h2>
+        <h2>Stuff: <?php print($stuff['stuff_name']); ?></h2>
 
         <pre><?php print_r($stuff); ?></pre>
 
         </section>
         <section class="more">
-        <h3>More stuffs ...</h3>
+        <h3>More Stuff ...</h3>
 
     <?php endif; ?>
 

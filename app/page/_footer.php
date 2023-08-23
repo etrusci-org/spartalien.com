@@ -3,6 +3,7 @@
 
     <footer>
         <p>&copy; <?php print(date('Y') . ' ' . $this->conf['site_title']); ?></p>
+        <p><a href="https://github.com/etrusci-org/spartalien.com/pull/108" target="_blank">PR</a></p>
     </footer>
 
 

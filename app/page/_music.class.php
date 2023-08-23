@@ -5,8 +5,10 @@ namespace s9com;
 
 class Page extends Core
 {
-    protected function get_rls_list(): array
+    protected function get_rls_list(?int $limit = null): array
     {
+        $query_limit = ($limit) ? 'LIMIT '.$limit : '';
+
         $dump = $this->DB->query('
             SELECT
                 rls.id AS rls_id,
@@ -26,7 +28,8 @@ class Page extends Core
             FROM rls
             LEFT JOIN rls_type ON rls_type.id = rls.rls_type_id
             LEFT JOIN artist ON artist.id = rls.artist_id
-            ORDER BY rls_list_order DESC;',
+            ORDER BY rls_list_order DESC
+            '.$query_limit.';',
         );
 
         foreach ($dump as $k => $v) {
@@ -235,56 +238,4 @@ class Page extends Core
 
         return $dump ?? [];
     }
-
-
-    // protected function get_catalog_track_list(): array
-    // {
-    //     $dump = $this->DB->query('
-    //         SELECT
-    //             track.id AS track_id,
-    //             track.name AS track_name,
-    //             track.runtime AS track_runtime,
-    //             artist.id AS artist_id,
-    //             artist.name AS artist_name
-    //         FROM track
-    //         LEFT JOIN artist ON artist.id = track.artist_id
-    //         ORDER BY LOWER(track.name) ASC;'
-    //     );
-
-    //     foreach ($dump as $k => $v) {
-    //         $dump[$k]['track_runtime_human'] = $this->_seconds_to_dhms($dump[$k]['track_runtime']);
-
-    //         ksort($dump[$k]);
-    //     }
-
-    //     return $dump ?? [];
-    // }
-
-
-    // protected function bake_dist_links(array $dist): array
-    // {
-    //     return array_map(function(array $v) {
-    //         return '<a href="'.$v['url'].'">'.ucwords($v['platform']).'</a>';
-    //     }, $dist) ?? [];
-    // }
-
-
-    // protected function get_rls_images_path(int $rls_id, ?string $size = null): array | string
-    // {
-
-    //     $tn  = 'file/preview/rls/'.$rls_id.'-tn.jpg';
-    //     $med = 'file/preview/rls/'.$rls_id.'-med.jpg';
-    //     $big = 'file/preview/rls/'.$rls_id.'-big.png';
-
-    //     return match($size) {
-    //         'tn' => $tn,
-    //         'med' => $med,
-    //         'big' => $big,
-    //         default => [
-    //             'tn' => $tn,
-    //             'med' => $med,
-    //             'big' => $big,
-    //         ],
-    //     };
-    // }
 }

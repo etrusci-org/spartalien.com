@@ -71,10 +71,6 @@ $conf['site_nav'] = [
         'link' => './exit',
         'link_text' => 'Exit',
     ],
-    '404test' => [
-        'link' => './no-existing-page',
-        'link_text' => '404test',
-    ],
 ];
 
 // ----------------------------------------------------------------------------
@@ -266,7 +262,9 @@ $conf['pre_render_settings'] = [
     // ],
     'home' => [
         'headers' => [],
-        'middleware_files' => [],
+        'middleware_files' => [
+            'page/_music.class.php',
+        ],
         'page_files' => [],
     ],
     'about' => [
@@ -328,7 +326,7 @@ $conf['pre_render_settings'] = [
     // ],
     'mention' => [
         'headers' => [],
-        'middleware_files' => ['mention'],
+        'middleware_files' => ['page/_mention.class.php'],
         'page_files' => [],
     ],
     'planet420' => [

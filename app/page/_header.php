@@ -22,7 +22,7 @@
             <?php $this->print_site_nav(); ?>
         </nav>
 
-        <div class="font-mono">/<?php print($this->Router->route['request']); ?></div>
+        <!-- <div class="font-mono">/<?php print($this->Router->route['request']); ?></div> -->
     </header>
 
 

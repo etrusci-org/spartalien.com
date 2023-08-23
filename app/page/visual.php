@@ -29,13 +29,20 @@ if (isset($this->Router->route['var']['id'])) {
 
     <?php endif; ?>
 
-    <?php
-    foreach ($visual_list as $v) {
-        printf('<a href="./visual/id:%1$s"%3$s>%2$s</a> ',
-            $v['visual_id'],
-            $v['visual_name'],
-            (isset($this->Router->route['var']['id']) && $this->Router->route['var']['id'] == $v['visual_id']) ? ' class="active"' : '',
-        );
-    }
-    ?>
+    <div class="gallery grid">
+    <!-- <div class="gallery flex"> -->
+        <?php
+        foreach ($visual_list as $v) {
+            printf('
+                <a href="./visual/id:%1$s" title="%2$s"%4$s>
+                    <img src="%3$s" loading="lazy" alt="preview image">
+                </a> ',
+                $v['visual_id'],
+                $v['visual_name'],
+                $v['visual_preview_image']['tn'],
+                (isset($this->Router->route['var']['id']) && $this->Router->route['var']['id'] == $v['visual_id']) ? ' class="active"' : '',
+            );
+        }
+        ?>
+    </div>
 </section>

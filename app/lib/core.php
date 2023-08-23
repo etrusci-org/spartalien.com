@@ -142,7 +142,7 @@ class Core
 
     protected function get_page_title(string $sep = ' &middot;&middot;&middot; '): string
     {
-        // Full title if route is neither default node or error404
+        // Full title if route is neither default node nor error404
         if (
             $this->Router->route['node'] != $this->Router->default_route['node']
             && $this->Router->route['node'] != $this->Router->error_node
@@ -205,131 +205,6 @@ class Core
 
         // Only site title if we reach this line
         return $this->conf['site_title'];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // ----- v1
-
-        // $title = '';
-
-        // // node: news
-        // if (
-        //     $this->Router->route['node'] == 'news' &&
-        //     isset($this->Router->route['var']['id'])
-        // ) {
-        //     if ($r = $this->DB->query_single(
-        //         'SELECT news.pub_date FROM news WHERE id = :id LIMIT 1;',
-        //         [
-        //             ['id', $this->Router->route['var']['id'], SQLITE3_INTEGER],
-        //         ]
-        //     )) {
-        //         $title = $r['pub_date'];
-        //     };
-        // }
-
-        // // node: artist
-        // if (
-        //     $this->Router->route['node'] == 'artist' &&
-        //     isset($this->Router->route['var']['id'])
-        // ) {
-        //     if ($r = $this->DB->query_single(
-        //         'SELECT artist.name FROM artist WHERE id = :id LIMIT 1;',
-        //         [
-        //             ['id', $this->Router->route['var']['id'], SQLITE3_INTEGER],
-        //         ]
-        //     )) {
-        //         $title = $r['name'];
-        //     };
-        // }
-
-        // // node: catalog
-        // if (
-        //     $this->Router->route['node'] == 'catalog' &&
-        //     isset($this->Router->route['var']['id'])
-        // ) {
-        //     if ($r = $this->DB->query_single(
-        //         'SELECT track.name FROM track WHERE id = :id LIMIT 1;',
-        //         [
-        //             ['id', $this->Router->route['var']['id'], SQLITE3_INTEGER],
-        //         ]
-        //     )) {
-        //         $title = $r['name'];
-        //     };
-        // }
-
-        // // node: music
-        // if (
-        //     $this->Router->route['node'] == 'music' &&
-        //     isset($this->Router->route['var']['id'])
-        // ) {
-        //     if ($r = $this->DB->query_single(
-        //         'SELECT rls.name FROM rls WHERE id = :id LIMIT 1;',
-        //         [
-        //             ['id', $this->Router->route['var']['id'], SQLITE3_INTEGER],
-        //         ]
-        //     )) {
-        //         $title = $r['name'];
-        //     };
-        // }
-
-        // // node: planet420
-        // if (
-        //     $this->Router->route['node'] == 'planet420' &&
-        //     isset($this->Router->route['var']['session'])
-        // ) {
-        //     if ($r = $this->DB->query_single(
-        //         'SELECT num FROM p420_session WHERE num = :session LIMIT 1;',
-        //         [
-        //             ['session', $this->Router->route['var']['session'], SQLITE3_INTEGER],
-        //         ]
-        //     )) {
-        //         $title = 'Planet 420.'.$r['num'];
-        //     };
-        // }
-
-        // // bake final title with what we got until here
-        // if ($title) {
-        //     $title = $title.$sep.$this->Router->route['request'].$sep.$this->conf['site_title'];
-        // }
-        // else if ($this->Router->route['node'] == $this->Router->default_route['node']) {
-        //     $title = $this->conf['site_title'];
-        // }
-        // else if ($this->Router->route['node'] == $this->Router->error_node) {
-        //     $title = '!Error.404:'.$this->Router->route['request'].$sep.$this->conf['site_title'];
-        // }
-        // else {
-        //     $title = $this->Router->route['request'].$sep.$this->conf['site_title'];
-        // }
-
-        // return $title;
     }
 
 
@@ -337,7 +212,7 @@ class Core
     {
         print('<ul>');
         foreach ($this->conf['site_nav'] as $k => $v) {
-            printf('<li><a href="%1$s"%3$s>%2$s</a></li>',
+            printf('<li>/<a href="%1$s"%3$s>%2$s</a></li>',
                 $v['link'],
                 $v['link_text'],
                 ($this->Router->route['node'] == $k) ? ' class="active"' : '',
