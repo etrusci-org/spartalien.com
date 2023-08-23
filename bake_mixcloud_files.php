@@ -11,17 +11,11 @@ require $APP_DIR.'/conf.php';
 require $APP_DIR.'/lib/mixcloud.php';
 
 
-$Mixcloud = new MixcloudData();
-$Mixcloud->cacheDir = $conf['cache_dir'];
-$Mixcloud->cacheTTL = 86400;
-$Mixcloud->errorFile = $conf['log_dir'].'/mixcloud-error.log';
-$Mixcloud->requestDelay = 1.0;
-$Mixcloud->pagingLimit = 100;
-// print_r($Mixcloud);
+$Mixcloud = new Mixcloud();
+$Mixcloud->cache_dir = $conf['cache_dir'];
 
-
-$Mixcloud->getUser('lowtechman');
-$Mixcloud->getCloudcasts('lowtechman');
+$Mixcloud->fetch_cloudcasts('lowtechman');
+$Mixcloud->fetch_user('lowtechman');
 
 
 print(microtime(true).' baked mixcloud ('.array_sum(array_map(function(string $v): int { return filesize($v); }, glob($conf['cache_dir'].'/mixcloud-*'))).' bytes)'.PHP_EOL);
