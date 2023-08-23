@@ -36,6 +36,14 @@ main {
 section {
     border-width: 1px;
     border-color: rgba(255, 0, 242, 0.16);
+
+    section {
+        border-color: rgba(255, 213, 0, 0.272);
+
+        section {
+            border-color: rgba(13, 255, 0, 0.16);
+        }
+    }
 }
 
 

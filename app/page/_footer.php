@@ -8,13 +8,13 @@
 
 
 
-    <!-- <script type="module">
+    <script type="module">
         // import { Scur } from './res/scur.js?v=<?php print($this->version['js']); ?>'
-        // import { LazyMedia } from './res/lazymedia.js?v=<?php print($this->version['js']); ?>'
+        import { LazyMedia } from './res/lazymedia.js?v=<?php print($this->version['js']); ?>'
         // import { ImgPrev } from './res/imgprev.js?v=<?php print($this->version['js']); ?>'
         // import { BGColorFader } from './res/bgcolorfader.js?v=<?php print($this->version['js']); ?>'
         // Scur.deobElements()
-        // LazyMedia.embed()
+        LazyMedia.embed()
         // ImgPrev.init()
 
         // document.querySelectorAll('a').forEach(e => {
@@ -32,7 +32,7 @@
         //     '0f0f0f',
         // ])
         // bgfader.start()
-    </script> -->
+    </script>
 
 
 </body>

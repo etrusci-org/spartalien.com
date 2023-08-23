@@ -31,7 +31,7 @@ main {
 
 
 section {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 
     &:last-child {
         margin-bottom: 0;
@@ -74,7 +74,8 @@ ul {
 
 
 table {
-    width: 100%;
+    // width: 100%;
+    width: auto;
 
     th {
         padding-bottom: .5rem;
@@ -86,6 +87,58 @@ table {
         padding-right: 2rem;
         vertical-align: top;
     }
+}
+
+
+.rls {
+    .head {
+        text-align: center;
+
+        .coverart {
+            margin-bottom: 1.5rem;
+
+            img {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        h2 {
+            margin-bottom: .5rem;
+        }
+
+        .meta {
+            color: $color-gray-500;
+        }
+    }
+
+    .player {
+
+        .lazycode,
+        iframe {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        // .tracklist {
+        //     margin-top: 1rem;
+
+        //     table {
+        //         margin-left: auto;
+        //         margin-right: auto;
+        //     }
+        // }
+    }
+
+
+    .description {
+        // margin-top: 2.5rem;
+        text-align: left;
+    }
+
+    // .credit {}
+
+    // .media {}
 }
 
 

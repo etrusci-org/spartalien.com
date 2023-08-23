@@ -1,18 +1,11 @@
-body {
-    font-family: sans-serif;
-}
-a {
-    text-decoration: none;
-}
-
 @import '_var';
 
-// @import '_reset';
+@import '_reset';
 
-// @import '_font';
+@import '_font';
 
-// @import '_layout';
+@import '_layout';
 
 @import '_color';
 
-// @import '_query';
+@import '_query';
