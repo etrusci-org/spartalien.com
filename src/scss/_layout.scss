@@ -1,23 +1,41 @@
 /*--- Layout ---*/
 // mobile first, handle larger screensizes in _query
 
+p { line-height: 1.75; }
+ul { line-height: 1.75; }
+nav ul { line-height: 1; }
+table { line-height: 2; }
+pre { line-height: 1.5; }
+
 
 header {
-    padding-top: 1rem;
+    padding-top: 1.25rem;
     padding-bottom: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
     margin-bottom: 2rem;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
 }
 
 
 nav ul li {
     display: inline-block;
     margin-right: .75rem;
-    margin-bottom: .75rem;
 
     &:last-child {
         margin-right: 0;
+    }
+
+    a {
+        &:link,
+        &:visited {
+            text-decoration-line: none;
+        }
+
+        &::before {
+            content: '/';
+        }
     }
 }
 
@@ -30,12 +48,6 @@ main {
     margin-left: auto;
     margin-right: auto;
 
-    p,
-    ul,
-    pre {
-        line-height: 1.5;
-    }
-
     img {
         max-height: 80vh;
     }
@@ -43,10 +55,14 @@ main {
 
 
 footer {
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    margin-top: 40rem;
+    margin-top: 95vh;
+
+    nav {
+        margin-bottom: 1rem;
+    }
 }
 
 
@@ -54,12 +70,13 @@ footer {
 
 
 h1 {
-    letter-spacing: 3px;
+    display: none;
 }
 
 
 h2 {
     margin-bottom: 6rem;
+    letter-spacing: .25rem;
 }
 
 
@@ -91,6 +108,22 @@ ul {
 }
 
 
+table {
+    // width: 100%;
+
+    th {
+        padding-bottom: .5rem;
+        white-space: nowrap;
+    }
+
+    th,
+    td {
+        padding-right: 4rem;
+        vertical-align: top;
+    }
+}
+
+
 a {
     outline: none;
 
@@ -110,8 +143,13 @@ a {
     &.active {
         text-decoration-line: underline;
         text-decoration-style: double;
+
+        img {
+            border-width: 1px;
+        }
     }
 
+    &[href^='//']::after,
     &[href^='http://']::after,
     &[href^='https://']::after {
         content: '⇗';
@@ -162,8 +200,14 @@ a {
 
 
 
+.text-align-right {
+    text-align: right;
+}
 
 
+.letter-spacing-sm {
+    letter-spacing: .25rem;
+}
 
 
 

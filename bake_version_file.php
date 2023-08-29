@@ -10,19 +10,21 @@ $APP_DIR = realpath(__DIR__.'/app');
 require $APP_DIR.'/conf.php';
 
 
-$dump = [];
+$dump = '';
 
-$dump[] = "'css'=>".array_sum(
+$dump .= "'db' => ".filemtime($conf['db_file']).",".PHP_EOL;
+
+$dump .= "'css' => ".array_sum(
     array_map(function(string $v): int {
         return filemtime($v);
-    }, glob($APP_DIR.'/public/res/*.css')));
+    }, glob($APP_DIR.'/public/res/*.css'))).",".PHP_EOL;
 
-$dump[] = "'js'=>".array_sum(
+$dump .= "'js' => ".array_sum(
     array_map(function(string $v): int {
         return filemtime($v);
-    }, glob($APP_DIR.'/public/res/*.js')));
+    }, glob($APP_DIR.'/public/res/*.js'))).",".PHP_EOL;
 
-$dump = sprintf('<?php $version=[%s]; ?>'.PHP_EOL, implode(',', $dump));
+$dump = '<?php $version = ['.PHP_EOL.$dump.']; ?>';
 
 file_put_contents($conf['version_file'], $dump, LOCK_EX);
 

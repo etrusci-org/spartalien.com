@@ -3,10 +3,20 @@
 
     <footer>
         <nav>
-            <?php $this->print_site_nav(); ?>
+            <?php $this->print_site_nav(with_site_title: true); ?>
         </nav>
-        <p>&copy; <?php print(date('Y') . ' ' . $this->conf['site_title']); ?></p>
-        <p><a href="https://github.com/etrusci-org/spartalien.com/pull/108" target="_blank">PR</a></p>
+
+        <div class="grid content">
+            <p>
+                &copy; <?php print(date('Y')); ?>
+            </p>
+
+            <ul class="text-align-right">
+                <li><a href="./privacy">Privacy</a></li>
+                <li><a href="//github.com/etrusci-org/spartalien.com" target="_blank">Source</a></li>
+                <li><a href="//github.com/etrusci-org/spartalien.com/pull/108" target="_blank">PR</a></li>
+            </ul>
+        </div>
     </footer>
 
 
@@ -27,12 +37,10 @@
         // })
 
         // const bgfader = new BGColorFader([
-        //     '121212',
-        //     '0f0f0f',
-        //     '0d0d0d',
-        //     '0a0a0a',
-        //     '0d0d0d',
-        //     '0f0f0f',
+        //     'hsl(0, 0%, 7%)',
+        //     'hsl(0, 0%, 8%)',
+        //     'hsl(0, 0%, 9%)',
+        //     // 'hsl(0, 0%, 11%)',
         // ])
         // bgfader.start()
     </script>

@@ -12,23 +12,18 @@ if (isset($this->Router->route['var']['id'])) {
 ?>
 
 
-<section>
-
-    <?php if (!$track) : ?>
-
-        <h2>Tracks Catalog</h2>
-
-    <?php else: ?>
-
+<?php if ($track): ?>
+    <section>
         <h2>Track: <?php print($track['track_name']); ?></h2>
 
         <pre><?php print_r($track); ?></pre>
+    </section>
+<?php endif; ?>
 
-        </section>
-        <section class="more">
-            <h3>More Tracks ...</h3>
 
-    <?php endif; ?>
+
+<section <?php print(($track) ? 'class="more"' : ''); ?>>
+    <?php print((!$track) ? '<h2>Tracks Catalog</h2>' : '<h3>More Tracks ...</h3>'); ?>
 
     <table>
         <thead>
@@ -36,7 +31,6 @@ if (isset($this->Router->route['var']['id'])) {
                 <th>Track</th>
                 <th>Artist</th>
                 <th class="text-align-right">Runtime</th>
-                <th class="text-align-right">DBID</th>
             </tr>
         </thead>
         <tbody>
@@ -47,7 +41,6 @@ if (isset($this->Router->route['var']['id'])) {
                         <td><a href="./catalog/id:%1$s"%6$s>%2$s</a></td>
                         <td><a href="./artist/id:%4$s">%5$s</a></td>
                         <td class="text-align-right font-mono">%3$s</td>
-                        <td class="text-align-right font-mono">%1$s</td>
                     </tr>',
                     $v['track_id'],
                     $v['track_name'],
@@ -60,5 +53,4 @@ if (isset($this->Router->route['var']['id'])) {
             ?>
         </tbody>
     </table>
-
 </section>

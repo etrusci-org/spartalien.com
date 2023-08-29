@@ -1,5 +1,65 @@
 /*--- Color ---*/
 
+body {
+    color: $color-gray-450;
+    background-color: $color-gray-997;
+}
+
+
+header {
+    color: $color-gray-100;
+    background-color: $color-gray-999;
+    border-bottom-color: $color-gray-600;
+}
+
+
+h2 {
+    color: $color-gray-500;
+}
+
+
+h3 {
+    color: $color-gray-300;
+}
+
+
+a {
+    &:link,
+    &:visited {
+        color: $color-gray-300;
+    }
+
+    &:hover,
+    &:active {
+        color: $color-brand-50;
+        text-decoration-color: $color-gray-300;
+    }
+
+    &:focus,
+    &.active {
+        color: $color-brand-50;
+        text-decoration-color: $color-brand-50;
+
+        img {
+            border-color: $color-brand-50;
+        }
+    }
+
+    &[href^='//']::after,
+    &[href^='http://']::after,
+    &[href^='https://']::after {
+        color: $color-gray-600;
+    }
+}
+
+
+
+
+
+
+
+
+// bak-------------------------------------------
 
 // header {
 //     border-width: 1px;
@@ -128,7 +188,7 @@
 // // }
 
 
-// // *::selection {
-// //     color: $color-white;
-// //     background-color: $color-brand-250;
-// // }
+// *::selection {
+//     color: $color-white;
+//     background-color: $color-brand-150;
+// }

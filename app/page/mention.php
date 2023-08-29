@@ -8,26 +8,19 @@ if (isset($this->Router->route['var']['id'])) {
 ?>
 
 
-
-<section>
-    <?php if (!$mention) : ?>
-
-        <h2>Mentions</h2>
-
-    <?php else: ?>
-
+<?php if ($mention): ?>
+    <section>
         <h2>Mention: <?php print($mention['mention_subject']); ?></h2>
 
         <pre><?php print_r($mention); ?></pre>
+    </section>
+<?php endif; ?>
 
-        </section>
-        <section class="more">
-        <h3>More Mentions ...</h3>
 
-    <?php endif; ?>
+<section <?php print(($mention) ? 'class="more"' : ''); ?>>
+    <?php print((!$mention) ? '<h2>Mentions</h2>' : '<h3>More Mentions ...</h3>'); ?>
 
     <?php
-    // var_dump($mention_list);
     foreach ($mention_list as $v) {
         printf('<a href="./mention/id:%1$s"%3$s>%2$s</a> ',
             $v['mention_id'],

@@ -19,17 +19,17 @@ p,
 ul,
 li,
 span,
-// table,
-// thead,
-// tbody,
-// tr,
-// th,
-// td,
+table,
+thead,
+tbody,
+tr,
+th,
+td,
 code,
 pre,
 a,
 img,
-// iframe,
+iframe,
 video,
 ::before,
 ::after {
@@ -63,7 +63,7 @@ footer {
 h1,
 h2,
 h3,
-// th,
+th,
 code,
 pre {
     font-size: inherit;
@@ -77,13 +77,13 @@ ul {
 }
 
 
-// table {
-//     text-align: left;
-//     border-collapse: collapse;
-// }
+table {
+    text-align: left;
+    border-collapse: collapse;
+}
 
 
-// table,
+table,
 pre {
     max-width: 100%;
     overflow: scroll;
@@ -97,7 +97,7 @@ a {
 
 
 img,
-// iframe,
+iframe,
 video {
     display: block;
     max-width: 100%;

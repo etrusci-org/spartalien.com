@@ -12,7 +12,7 @@ class Page extends Core
                 p420_session.num AS session_num,
                 p420_session.pub_date AS session_pub_date,
                 p420_session.runtime AS session_runtime,
-                p420_session.mixcloud_url AS session_mixcloud_url,
+                p420_session.mixcloud_key AS session_mixcloud_key,
                 COUNT(p420_tracklist.session_num) AS session_track_count
             FROM p420_session
             LEFT JOIN p420_tracklist ON p420_tracklist.session_num = p420_session.num
@@ -37,7 +37,7 @@ class Page extends Core
                 p420_session.num AS session_num,
                 p420_session.pub_date AS session_pub_date,
                 p420_session.runtime AS session_runtime,
-                p420_session.mixcloud_url AS session_mixcloud_url,
+                p420_session.mixcloud_key AS session_mixcloud_key,
                 COUNT(p420_tracklist.session_num) AS session_track_count
             FROM p420_session
             LEFT JOIN p420_tracklist ON p420_tracklist.session_num = p420_session.num
@@ -50,7 +50,7 @@ class Page extends Core
         );
 
         $dump['session_runtime_human'] = $this->_seconds_to_dhms($dump['session_runtime']);
-        $dump['session_track_list'] = $this->get_tracklist($dump['session_num']);
+        $dump['session_track_list'] = $this->get_session_track_list($dump['session_num']);
 
         ksort($dump);
 
@@ -58,7 +58,7 @@ class Page extends Core
     }
 
 
-    protected function get_tracklist(int $session_num): array
+    protected function get_session_track_list(int $session_num): array
     {
         $dump = $this->DB->query('
             SELECT

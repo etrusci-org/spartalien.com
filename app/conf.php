@@ -84,7 +84,7 @@ $conf['valid_requests_file'] = $APP_DIR.'/cache/valid_requests.php';
 
 // ----------------------------------------------------------------------------
 
-$conf['caching_ttl'] = 3600 * 24;
+$conf['caching_ttl'] = -1;
 $conf['validate_requests'] = true;
 
 // ----------------------------------------------------------------------------
@@ -331,7 +331,7 @@ $conf['pre_render_settings'] = [
     ],
     'planet420' => [
         'headers' => [],
-        'middleware_files' => ['page/_p420.class.php'],
+        'middleware_files' => ['page/_planet420.class.php'],
         'page_files' => [],
     ],
     'exit' => [

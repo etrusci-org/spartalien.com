@@ -8,23 +8,17 @@ if (isset($this->Router->route['var']['id'])) {
 ?>
 
 
-
-<section>
-    <?php if (!$stuff) : ?>
-
-        <h2>Miscellaneous Stuff</h2>
-
-    <?php else: ?>
-
+<?php if ($stuff): ?>
+    <section>
         <h2>Stuff: <?php print($stuff['stuff_name']); ?></h2>
 
         <pre><?php print_r($stuff); ?></pre>
+    </section>
+<?php endif; ?>
 
-        </section>
-        <section class="more">
-        <h3>More Stuff ...</h3>
 
-    <?php endif; ?>
+<section <?php print(($stuff) ? 'class="more"' : ''); ?>>
+    <?php print((!$stuff) ? '<h2>Miscellaneous Stuff</h2>' : '<h3>More Stuff ...</h3>'); ?>
 
     <?php
     foreach ($stuff_list as $v) {

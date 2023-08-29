@@ -14,12 +14,10 @@
     <noscript>Javascript required</noscript>
 
     <header>
+        <h1><?php print($this->conf['site_title']); ?></h1>
         <nav>
-            <?php $this->print_site_nav(); ?>
+            <?php $this->print_site_nav(with_site_title: true); ?>
         </nav>
-
-        <!-- <div class="font-mono">/<?php print($this->Router->route['request']); ?></div> -->
     </header>
-
 
     <main>

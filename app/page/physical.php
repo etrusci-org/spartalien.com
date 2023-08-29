@@ -12,22 +12,17 @@ if (isset($this->Router->route['var']['id'])) {
 
 
 
-<section>
-    <?php if (!$phy) : ?>
-
-        <h2>Physical Things</h2>
-
-    <?php else: ?>
-
-        <h2>Thing: <?php print($phy['phy_name']); ?></h2>
+<?php if ($phy): ?>
+    <section>
+        <h2>Physical: <?php print($phy['phy_name']); ?></h2>
 
         <pre><?php print_r($phy); ?></pre>
+    </section>
+<?php endif; ?>
 
-        </section>
-        <section class="more">
-        <h3>More Music Releases ...</h3>
 
-    <?php endif; ?>
+<section <?php print(($phy) ? 'class="more"' : ''); ?>>
+    <?php print((!$phy) ? '<h2>Physical Things</h2>' : '<h3>More Things ...</h3>'); ?>
 
     <?php
     foreach ($phy_list as $v) {

@@ -88,5 +88,5 @@ interface ImgPrevInterface {
 }
 
 
-type BGColorFader_queue_type = string[]
-type BGColorFader_color_list_type = string[]
+// type BGColorFader_queue_type = string[]
+// type BGColorFader_color_list_type = string[]

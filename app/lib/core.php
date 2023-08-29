@@ -196,16 +196,21 @@ class Core
     }
 
 
-    protected function print_site_nav(): void
+    protected function print_site_nav(bool $with_site_title = false): void
     {
-        printf('
-            <ul>
-                <li><h1>%1$s</h1></li>',
-                $this->conf['site_title'],
-        );
+        if ($with_site_title) {
+            printf('
+                <ul>
+                    <li class="letter-spacing-sm"><strong>%1$s</strong></li>',
+                    $this->conf['site_title'],
+            );
+        }
+        else {
+            print('<ul>');
+        }
 
         foreach ($this->conf['site_nav'] as $k => $v) {
-            printf('<li>/<a href="%1$s" title="%2$s"%3$s>%2$s</a></li>',
+            printf('<li><a href="%1$s" title="%2$s"%3$s>%2$s</a></li>',
                 $v['link'],
                 $v['link_text'],
                 ($this->Router->route['node'] == $k) ? ' class="active"' : '',

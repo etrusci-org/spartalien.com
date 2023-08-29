@@ -55,11 +55,12 @@ foreach ($valid_request_patterns as $pattern) {
     }
 }
 
-$dump = [];
+$dump = '';
 foreach ($valid_requests as $v) {
-    $dump[] = "'".$v."'";
+    $dump .= "'".$v."',".PHP_EOL;
 }
-$dump = sprintf('<?php $valid_requests=[%s]; ?>'.PHP_EOL, implode(',', $dump));
+
+$dump = '<?php $valid_requests = ['.PHP_EOL.$dump.']; ?>';
 
 file_put_contents($valid_requests_file, $dump, LOCK_EX);
 

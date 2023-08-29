@@ -11,23 +11,17 @@ if (isset($this->Router->route['var']['id'])) {
 ?>
 
 
-
-<section>
-    <?php if (!$visual) : ?>
-
-        <h2>Visuals For You, Them, And Me</h2>
-
-    <?php else: ?>
-
+<?php if ($visual): ?>
+    <section>
         <h2>Visual: <?php print($visual['visual_name']); ?></h2>
 
         <pre><?php print_r($visual); ?></pre>
+    </section>
+<?php endif; ?>
 
-        </section>
-        <section class="more">
-        <h3>More visuals ...</h3>
 
-    <?php endif; ?>
+<section <?php print(($visual) ? 'class="more"' : ''); ?>>
+    <?php print((!$visual) ? '<h2>Visuals For You, Them, And Me</h2>' : '<h3>More Visuals ...</h3>'); ?>
 
     <div class="grid">
         <?php
