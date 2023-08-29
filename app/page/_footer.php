@@ -12,11 +12,11 @@
 
 
     <script type="module">
-        // import { Scur } from './res/scur.js?v=<?php print($this->version['js']); ?>'
+        import { Scur } from './res/scur.js?v=<?php print($this->version['js']); ?>'
         // import { LazyMedia } from './res/lazymedia.js?v=<?php print($this->version['js']); ?>'
         // import { ImgPrev } from './res/imgprev.js?v=<?php print($this->version['js']); ?>'
         // import { BGColorFader } from './res/bgcolorfader.js?v=<?php print($this->version['js']); ?>'
-        // Scur.deobElements()
+        Scur.deobElements()
         // LazyMedia.embed()
         // ImgPrev.init()
 

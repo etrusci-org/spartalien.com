@@ -24,7 +24,7 @@ nav ul li {
 
 main {
     min-width: 300px;
-    max-width: 1200px;
+    max-width: 1000px;
     padding-left: 1rem;
     padding-right: 1rem;
     margin-left: auto;
@@ -124,7 +124,7 @@ a {
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: minmax(100px, 1fr);
+    grid-template-rows: minmax(auto, 1fr);
     column-gap: 2rem;
     row-gap: 2rem;
 
@@ -137,6 +137,7 @@ a {
     &.content {
         grid-template-columns: 1fr;
         column-gap: 4rem;
+        row-gap: 3rem;
 
         img {
             width: 100%;

@@ -94,9 +94,11 @@ unset(
     $conf, // from conf.php
     $version, // from version_file
     $valid_requests, // from valid_requests_file
-    $DB, // DB
-    $Router, // Router
-    $Logger, // Logger
+    $DB,
+    $Router,
+    $Logger,
+    $node_middleware_files,
+    $node_settings,
 );
 
 

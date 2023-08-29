@@ -41,18 +41,6 @@ class Core
             $cache_file = $this->conf['cache_dir'].'/cached_'.$cache_id.'.php';
         }
 
-        // // Always load brains if they exists
-        // $global_brain_file = $this->conf['page_dir'].'/_brain.php';
-        // $page_brain_file = $this->conf['page_dir'].'/_'.$this->Router->route['node'].'.brain.php';
-
-        // if (is_file($global_brain_file)) {
-        //     require $global_brain_file;
-        // }
-
-        // if (is_file($page_brain_file)) {
-        //     require $page_brain_file;
-        // }
-
         // Load fast if caching is disabled
         if ($this->conf['caching_ttl'] < 0) {
             ob_start();

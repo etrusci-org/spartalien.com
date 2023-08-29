@@ -34,7 +34,7 @@ class Page extends Core
             FROM news_text
             LEFT JOIN news ON news.id = news_text.news_id
             WHERE news_text.news_id = :news_id
-            ORDER BY news.pub_date DESC;',
+            ORDER BY news_text.ROWID ASC;',
             [
                 ['news_id', $news_id, SQLITE3_INTEGER],
             ]
