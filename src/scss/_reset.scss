@@ -1,6 +1,6 @@
 /*--- Reset ---*/
 
-@use '../css/vendor/modern-normalize-2.0.0/modern-normalize.css';
+@use '../vendor/modern-normalize-2.0.0/modern-normalize.css';
 
 
 html,
@@ -10,6 +10,7 @@ header,
 nav,
 main,
 section,
+// article,
 footer,
 h1,
 h2,
@@ -17,15 +18,19 @@ h3,
 p,
 ul,
 li,
-table,
-thead,
-tbody,
-tr,
-th,
-td,
+span,
+// table,
+// thead,
+// tbody,
+// tr,
+// th,
+// td,
 code,
 pre,
 a,
+img,
+// iframe,
+video,
 ::before,
 ::after {
     margin: 0;
@@ -38,6 +43,7 @@ a,
 
 html {
     line-height: 1;
+    text-underline-offset: 3px;
     -webkit-text-size-adjust: 100%;
     -moz-tab-size: 4;
     tab-size: 4;
@@ -48,6 +54,7 @@ header,
 nav,
 main,
 section,
+// article,
 footer {
     display: block;
 }
@@ -56,7 +63,7 @@ footer {
 h1,
 h2,
 h3,
-th,
+// th,
 code,
 pre {
     font-size: inherit;
@@ -70,13 +77,13 @@ ul {
 }
 
 
-table {
-    text-align: left;
-    border-collapse: collapse;
-}
+// table {
+//     text-align: left;
+//     border-collapse: collapse;
+// }
 
 
-table,
+// table,
 pre {
     max-width: 100%;
     overflow: scroll;
@@ -90,9 +97,9 @@ a {
 
 
 img,
-iframe {
+// iframe,
+video {
     display: block;
-    // width: 100%;
     max-width: 100%;
     height: auto;
 }

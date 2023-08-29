@@ -14,7 +14,7 @@ if (isset($this->Router->route['var']['id'])) {
 
     <?php if (!$news) : ?>
 
-        <h2>News</h2>
+        <h2>Notable Updates And Changes</h2>
 
     <?php else: ?>
 

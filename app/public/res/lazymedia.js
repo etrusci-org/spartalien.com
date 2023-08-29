@@ -1,5 +1,5 @@
 export const LazyMedia = {
-    debug: true,
+    debug: false,
     selector: '.lazycode',
     slugTpl: {
         link: '{SLUG}',

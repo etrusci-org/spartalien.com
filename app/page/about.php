@@ -1,4 +1,10 @@
-<h2>About</h2>
+<h2>About Me, Myself & I</h2>
+
+
+<section>
+    <h3>In A Nutshell</h3>
+    <p>Multimedia experimenter / Music addict / Human</p>
+</section>
 
 
 <section>

@@ -12,35 +12,32 @@ if (isset($this->Router->route['var']['id'])) {
 
 
 
-<section>
 
-    <?php if (!$rls) : ?>
+<?php
+if ($rls) {
+    include $this->conf['page_dir'].'/_music_rls.php';
+}
+?>
 
-        <h2>Music Releases</h2>
 
-    <?php else: ?>
 
-        <?php include $this->conf['page_dir'].'/_music_rls.php'; ?>
+<section <?php print(($rls) ? 'class="more"' : ''); ?>>
 
-        </section>
-        <section class="more">
-        <h3>More Music Releases ...</h3>
+    <?php print((!$rls) ? '<h2>Music For You, Them, And Me</h2>' : '<h3>More Music ...</h3>'); ?>
 
-    <?php endif; ?>
-
-    <div class="gallery grid">
+    <div class="grid">
         <?php
-        // foreach ($rls_list as $v) {
-        //     printf('
-        //         <a href="./music/id:%1$s" title="%2$s"%4$s>
-        //             <img src="%3$s" loading="lazy" alt="preview image">
-        //         </a>',
-        //         $v['rls_id'],
-        //         $v['rls_name'],
-        //         $v['rls_preview_image']['tn'],
-        //         (isset($this->Router->route['var']['id']) && $this->Router->route['var']['id'] == $v['rls_id']) ? ' class="active"' : '',
-        //     );
-        // }
+        foreach ($rls_list as $v) {
+            printf('
+                <a href="./music/id:%1$s" title="%2$s"%4$s>
+                    <img src="%3$s" loading="lazy" alt="preview image">
+                </a>',
+                $v['rls_id'],
+                $v['rls_name'],
+                $v['rls_preview_image']['tn'],
+                (isset($this->Router->route['var']['id']) && $this->Router->route['var']['id'] == $v['rls_id']) ? ' class="active"' : '',
+            );
+        }
         ?>
     </div>
 

@@ -14,10 +14,6 @@
     <noscript>Javascript required</noscript>
 
     <header>
-        <h1>
-            <a href="."><?php print($this->conf['site_title']); ?></a>
-        </h1>
-
         <nav>
             <?php $this->print_site_nav(); ?>
         </nav>

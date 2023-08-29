@@ -73,6 +73,12 @@ class Page extends Core
             ]
         );
 
+        foreach ($dump as $k => $v) {
+            $dump[$k]['track_start_time_human'] = $this->_seconds_to_dhms($v['track_start_time']);
+
+            ksort($dump[$k]);
+        }
+
         return $dump ?? [];
     }
 }

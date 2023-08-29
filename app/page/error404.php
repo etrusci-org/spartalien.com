@@ -6,11 +6,8 @@
         is invalid.
         The content may have been deleted or moved to another location.
     </p>
-</section>
 
-
-<section>
-    <span class="lazycode">{
+    <div class="lazycode">{
         "type": "video",
         "slug": "./res/vendor/error404.mp4",
         "attr": [
@@ -18,7 +15,7 @@
             ["loop", "loop"],
             ["controls", false]
         ]
-    }</span>
+    }</div>
 </section>
 
 

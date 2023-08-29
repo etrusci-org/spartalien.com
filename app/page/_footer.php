@@ -2,6 +2,9 @@
 
 
     <footer>
+        <nav>
+            <?php $this->print_site_nav(); ?>
+        </nav>
         <p>&copy; <?php print(date('Y') . ' ' . $this->conf['site_title']); ?></p>
         <p><a href="https://github.com/etrusci-org/spartalien.com/pull/108" target="_blank">PR</a></p>
     </footer>
@@ -10,11 +13,11 @@
 
     <script type="module">
         // import { Scur } from './res/scur.js?v=<?php print($this->version['js']); ?>'
-        import { LazyMedia } from './res/lazymedia.js?v=<?php print($this->version['js']); ?>'
+        // import { LazyMedia } from './res/lazymedia.js?v=<?php print($this->version['js']); ?>'
         // import { ImgPrev } from './res/imgprev.js?v=<?php print($this->version['js']); ?>'
         // import { BGColorFader } from './res/bgcolorfader.js?v=<?php print($this->version['js']); ?>'
         // Scur.deobElements()
-        LazyMedia.embed()
+        // LazyMedia.embed()
         // ImgPrev.init()
 
         // document.querySelectorAll('a').forEach(e => {

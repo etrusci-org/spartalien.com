@@ -20,56 +20,56 @@ $conf['site_url'] = $conf['site_url_scheme'].'://'.$conf['site_domain'].$conf['s
 $conf['site_timezone'] = 'Europe/Zurich';
 $conf['site_nav'] = [
     'home' => [
-        'link' => '.',
-        'link_text' => 'Home',
+        'link' => './',
+        'link_text' => 'home',
     ],
     'music' => [
         'link' => './music',
-        'link_text' => 'Music Releases',
+        'link_text' => 'music',
     ],
     'catalog' => [
         'link' => './catalog',
-        'link_text' => 'Tracks Catalog',
+        'link_text' => 'catalog',
     ],
     'visual' => [
         'link' => './visual',
-        'link_text' => 'Visuals',
+        'link_text' => 'visual',
     ],
     'physical' => [
         'link' => './physical',
-        'link_text' => 'Physical Things',
+        'link_text' => 'physical',
     ],
     'planet420' => [
         'link' => './planet420',
-        'link_text' => 'Planet 420 Mixtapes',
+        'link_text' => 'planet420',
     ],
     'mixtape' => [
         'link' => './mixtape',
-        'link_text' => 'Other Mixtapes',
+        'link_text' => 'mixtape',
     ],
     'tool' => [
         'link' => './tool',
-        'link_text' => 'Creative Tools',
+        'link_text' => 'tool',
     ],
     'stuff' => [
         'link' => './stuff',
-        'link_text' => 'Stuff',
+        'link_text' => 'stuff',
     ],
     'mention' => [
         'link' => './mention',
-        'link_text' => 'Mentions',
+        'link_text' => 'mention',
     ],
     'news' => [
         'link' => './news',
-        'link_text' => 'News',
+        'link_text' => 'news',
     ],
     'about' => [
         'link' => './about',
-        'link_text' => 'About',
+        'link_text' => 'about',
     ],
     'exit' => [
         'link' => './exit',
-        'link_text' => 'Exit',
+        'link_text' => 'exit',
     ],
 ];
 

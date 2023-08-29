@@ -2,54 +2,164 @@
 
 @font-face {
     font-display: swap;
-    font-family: 'Share Tech';
+    font-family: 'Noto Sans';
     font-style: normal;
     font-weight: 400;
-    src: url('./vendor/share-tech-v17-latin-regular.woff2') format('woff2');
+    src: url('./vendor/noto-sans-v30-latin-regular.woff2') format('woff2');
 }
 
 
 @font-face {
     font-display: swap;
-    font-family: 'Share Tech Mono';
+    font-family: 'Noto Sans Mono';
+    font-style: normal;
+    font-weight: 100;
+    src: url('./vendor/noto-sans-mono-v27-latin-100.woff2') format('woff2');
+}
+
+
+@font-face {
+    font-display: swap;
+    font-family: 'Noto Sans Mono';
     font-style: normal;
     font-weight: 400;
-    src: url('./vendor/share-tech-mono-v15-latin-regular.woff2') format('woff2');
+    src: url('./vendor/noto-sans-mono-v27-latin-regular.woff2') format('woff2');
+}
+
+
+@font-face {
+    font-display: swap;
+    font-family: 'Noto Sans Mono';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./vendor/noto-sans-mono-v27-latin-700.woff2') format('woff2');
 }
 
 
 body {
-    font-size: 14px;
     font-family: $font-main;
-}
-
-
-h1 {
-    font-size: 14px;
-}
-
-
-h2 {
-    font-size: 22px;
-}
-
-
-h3 {
-    font-size: 16px;
+    font-size: $font-size-default-min;
+    font-weight: 400;
 }
 
 
 h1,
 h2,
-h3,
-th,
-strong {
-    font-weight: bolder;
+h3 {
+    font-family: $font-mono;
+}
+
+
+h1 {
+    font-size: $font-size-default-min;
+    font-weight: 700;
+}
+
+
+h2 {
+    font-size: $font-size-h2-min;
+    font-weight: 100;
+}
+
+
+h3 {
+    font-size: $font-size-h3-min;
+    font-weight: 400;
 }
 
 
 code,
 pre,
-.font-mono {
+.font-mono,
+.lazycode {
     font-family: $font-mono;
+    font-weight: 400;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// @font-face {
+//     font-display: swap;
+//     font-family: 'Share Tech';
+//     font-style: normal;
+//     font-weight: 400;
+//     src: url('./vendor/share-tech-v17-latin-regular.woff2') format('woff2');
+// }
+
+
+// @font-face {
+//     font-display: swap;
+//     font-family: 'Share Tech Mono';
+//     font-style: normal;
+//     font-weight: 400;
+//     src: url('./vendor/share-tech-mono-v15-latin-regular.woff2') format('woff2');
+// }
+
+
+// body {
+//     font-size: $font-size-default-min;
+//     font-family: $font-main;
+// }
+
+
+// h1 {
+//     font-size: $font-size-default-min;
+// }
+
+
+// h2 {
+//     font-size: $font-size-h2-min;
+// }
+
+
+// h3 {
+//     font-size: $font-size-h3-min;
+// }
+
+
+// h1,
+// h2,
+// h3,
+// th,
+// strong {
+//     font-weight: bolder;
+// }
+
+
+// code,
+// pre,
+// .font-mono {
+//     font-family: $font-mono;
+// }

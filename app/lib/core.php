@@ -210,14 +210,20 @@ class Core
 
     protected function print_site_nav(): void
     {
-        print('<ul>');
+        printf('
+            <ul>
+                <li><h1>%1$s</h1></li>',
+                $this->conf['site_title'],
+        );
+
         foreach ($this->conf['site_nav'] as $k => $v) {
-            printf('<li>/<a href="%1$s"%3$s>%2$s</a></li>',
+            printf('<li>/<a href="%1$s" title="%2$s"%3$s>%2$s</a></li>',
                 $v['link'],
                 $v['link_text'],
                 ($this->Router->route['node'] == $k) ? ' class="active"' : '',
             );
         }
+
         print('</ul>');
     }
 

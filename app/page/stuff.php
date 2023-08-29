@@ -12,7 +12,7 @@ if (isset($this->Router->route['var']['id'])) {
 <section>
     <?php if (!$stuff) : ?>
 
-        <h2>Stuff</h2>
+        <h2>Miscellaneous Stuff</h2>
 
     <?php else: ?>
 

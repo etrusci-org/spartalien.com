@@ -1,5 +1,5 @@
 export const LazyMedia: LazyMediaInterface = {
-    debug: true,
+    debug: false,
     selector: '.lazycode',
     slugTpl: {
         /* brain for docs:

@@ -15,7 +15,7 @@ if (isset($this->Router->route['var']['id'])) {
 <section>
     <?php if (!$visual) : ?>
 
-        <h2>Visuals</h2>
+        <h2>Visuals For You, Them, And Me</h2>
 
     <?php else: ?>
 
@@ -29,8 +29,7 @@ if (isset($this->Router->route['var']['id'])) {
 
     <?php endif; ?>
 
-    <div class="gallery grid">
-    <!-- <div class="gallery flex"> -->
+    <div class="grid">
         <?php
         foreach ($visual_list as $v) {
             printf('
