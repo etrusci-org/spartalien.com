@@ -60,49 +60,43 @@
 
 
 <section>
-    <h3>RaidTrain</h3>
+    <div class="grid content">
+        <div>
+            <h3>RaidTrain</h3>
+            <p>Quickly create a time slot overview webpage for your Twitch raid train event and such activities.</p>
+            <ul>
+                <li><a href="https://github.com/etrusci-org/raidtrain/#readme" target="_blank">README + Source at GitHub</a></li>
+            </ul>
+        </div>
 
-    <p>Quickly create a time slot overview webpage for your Twitch raid train event and such activities.</p>
+        <div>
+            <h3>Olay</h3>
+            <p>Live stream overlay stuff for use as Browser-Source in OBS Studio.</p>
+            <ul>
+                <li><a href="https://github.com/etrusci-org/olay/#readme" target="_blank">README + Source at GitHub</a></li>
+            </ul>
+        </div>
 
-    <ul>
-        <li><a href="https://github.com/etrusci-org/raidtrain/#readme" target="_blank">README + Source at GitHub</a></li>
-    </ul>
-</section>
+        <div>
+            <h3>LoopExtender</h3>
+            <p>
+                Create m3u playlist files for OBS VLC Video Source.
+            </p>
+            <ul>
+                <li><a href="https://github.com/etrusci-org/loopextender/#readme" target="_blank">README + Source at GitHub</a></li>
+            </ul>
+        </div>
 
+        <div>
+            <h3>Jayze</h3>
+            <p>
+                A tool to generate data.
+                For your projects or just to watch it flow in the terminal.
+            </p>
 
-<section>
-    <h3>Olay</h3>
-
-    <p>Live stream overlay stuff for use as Browser-Source in OBS Studio.</p>
-
-    <ul>
-        <li><a href="https://github.com/etrusci-org/olay/#readme" target="_blank">README + Source at GitHub</a></li>
-    </ul>
-</section>
-
-
-<section>
-    <h3>LoopExtender</h3>
-
-    <p>
-    Create m3u playlist files for OBS VLC Video Source.
-    </p>
-
-    <ul>
-        <li><a href="https://github.com/etrusci-org/loopextender/#readme" target="_blank">README + Source at GitHub</a></li>
-    </ul>
-</section>
-
-
-<section>
-    <h3>Jayze</h3>
-
-    <p>
-        A tool to generate data.
-        For your projects or just to watch it flow in the terminal.
-    </p>
-
-    <ul>
-        <li><a href="https://github.com/etrusci-org/jayze/#readme" target="_blank">README + Source at GitHub</a></li>
-    </ul>
+            <ul>
+                <li><a href="https://github.com/etrusci-org/jayze/#readme" target="_blank">README + Source at GitHub</a></li>
+            </ul>
+        </div>
+    </div>
 </section>

@@ -3,9 +3,14 @@
 $track_list = $this->get_catalog_track_list();
 
 $track = [];
-if (isset($this->Router->route['var']['id'])) {
-    $track = $this->get_track((int) $this->Router->route['var']['id']);
-    // $track['artist_description'] = 'foo bar moo foo bar moo foo bar moo foo bar moo foo bar moo foo bar moo foo bar moo foo bar moo foo bar moo foo bar moo foo bar moo foo bar moo foo bar moo cow';
+if (isset($this->Router->route['var']['track'])) {
+    $track = $this->get_track((int) $this->Router->route['var']['track']);
+}
+
+
+$artist = [];
+if (isset($this->Router->route['var']['artist'])) {
+    $artist = $this->get_artist((int) $this->Router->route['var']['artist']);
 }
 
 // var_dump($track_list);
@@ -21,9 +26,17 @@ if (isset($this->Router->route['var']['id'])) {
 <?php endif; ?>
 
 
+<?php if ($artist): ?>
+    <section>
+        <h2>Artist: <?php print($artist['artist_name']); ?></h2>
 
-<section <?php print(($track) ? 'class="more"' : ''); ?>>
-    <?php print((!$track) ? '<h2>Tracks Catalog</h2>' : '<h3>More Tracks ...</h3>'); ?>
+        <pre><?php print_r($artist); ?></pre>
+    </section>
+<?php endif; ?>
+
+
+<section <?php print(($track || $artist) ? 'class="more"' : ''); ?>>
+    <?php print((!$track && !$artist) ? '<h2>Tracks Catalog</h2>' : '<h3>More Tracks ...</h3>'); ?>
 
     <table>
         <thead>
@@ -38,8 +51,8 @@ if (isset($this->Router->route['var']['id'])) {
             foreach ($track_list as $v) {
                 printf('
                     <tr>
-                        <td><a href="./catalog/id:%1$s"%6$s>%2$s</a></td>
-                        <td><a href="./artist/id:%4$s">%5$s</a></td>
+                        <td><a href="./catalog/track:%1$s"%6$s>%2$s</a></td>
+                        <td><a href="./catalog/artist:%4$s">%5$s</a></td>
                         <td class="text-align-right font-mono">%3$s</td>
                     </tr>',
                     $v['track_id'],

@@ -15,7 +15,15 @@ if (isset($this->Router->route['var']['id'])) {
     <section>
         <h2>News from <?php print($news[0]['news_pub_date']); ?></h2>
 
-        <pre><?php print_r($news); ?></pre>
+        <?php
+        foreach ($news as $v) {
+            printf('<p>%1$s</p>',
+                $this->_lazytext($v['news_text']),
+            );
+        }
+        ?>
+
+        <!-- <pre><?php print_r($news); ?></pre> -->
     </section>
 <?php endif; ?>
 

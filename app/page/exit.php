@@ -15,7 +15,7 @@ $exit_list = $this->DB->query('
 
 
 <section>
-    <div class="grid content">
+    <div class="grid max3">
         <?php
         foreach ($exit_list as $v) {
             printf('
@@ -34,6 +34,5 @@ $exit_list = $this->DB->query('
 
 
 <section>
-    The list is randomized from time to time. If you find your site linked here and want to have it updated or removed, let me know.
+    The list order is randomized from time to time. If you find your site linked here and want to have it updated or removed, let me know.
 </section>
-<!-- <pre><?php print_r($exit_list); ?></pre> -->

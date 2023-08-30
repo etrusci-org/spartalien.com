@@ -12,6 +12,7 @@
             </p>
 
             <ul class="text-align-right">
+                <li><a href="./purchases">Purchases</a></li>
                 <li><a href="./privacy">Privacy</a></li>
                 <li><a href="//github.com/etrusci-org/spartalien.com" target="_blank">Source</a></li>
                 <li><a href="//github.com/etrusci-org/spartalien.com/pull/108" target="_blank">PR</a></li>

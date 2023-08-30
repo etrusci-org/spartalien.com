@@ -130,14 +130,14 @@ $conf['valid_request_patterns'] = [
         'valuesCol' => [],
     ],
     [
-        'route' => '/^catalog\/id:{val1}$/',
+        'route' => '/^catalog\/track:{val1}$/',
         'valuesTable' => 'track',
         'valuesCol' => [
             'val1' => 'id',
         ],
     ],
     [
-        'route' => '/^artist\/id:{val1}$/',
+        'route' => '/^catalog\/artist:{val1}$/',
         'valuesTable' => 'artist',
         'valuesCol' => [
             'val1' => 'id',
@@ -277,11 +277,11 @@ $conf['pre_render_settings'] = [
         'middleware_files' => ['page/_music.class.php'],
         'page_files' => [],
     ],
-    'artist' => [
-        'headers' => [],
-        'middleware_files' => ['page/_music.class.php'],
-        'page_files' => [],
-    ],
+    // 'artist' => [
+    //     'headers' => [],
+    //     'middleware_files' => ['page/_music.class.php'],
+    //     'page_files' => [],
+    // ],
     'music' => [
         'headers' => [],
         'middleware_files' => ['page/_music.class.php'],

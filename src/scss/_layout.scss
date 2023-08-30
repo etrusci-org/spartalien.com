@@ -13,7 +13,7 @@ header {
     padding-bottom: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     border-bottom-width: 1px;
     border-bottom-style: dotted;
 }
@@ -42,7 +42,7 @@ nav ul li {
 
 main {
     min-width: 300px;
-    max-width: 1000px;
+    max-width: 1200px;
     padding-left: 1rem;
     padding-right: 1rem;
     margin-left: auto;
@@ -93,9 +93,18 @@ section {
     }
 
     &.more {
-        margin-top: 20rem;
+        margin-top: 30rem;
     }
 }
+
+
+// article {
+//     margin-bottom: 8rem;
+
+//     &:last-child {
+//         margin-bottom: 0;
+//     }
+// }
 
 
 p,
@@ -161,7 +170,7 @@ a {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: minmax(auto, 1fr);
     column-gap: 2rem;
     row-gap: 2rem;
@@ -172,10 +181,14 @@ a {
         object-fit: cover;
     }
 
+    &.max3 {
+        grid-template-columns: 1fr;
+    }
+
     &.content {
         grid-template-columns: 1fr;
         column-gap: 4rem;
-        row-gap: 3rem;
+        row-gap: 8rem;
 
         img {
             width: 100%;

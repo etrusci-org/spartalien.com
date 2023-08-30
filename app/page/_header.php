@@ -11,13 +11,18 @@
     <title><?php print($this->get_page_title()); ?></title>
 </head>
 <body>
-    <noscript>Javascript required</noscript>
-
     <header>
         <h1><?php print($this->conf['site_title']); ?></h1>
         <nav>
             <?php $this->print_site_nav(with_site_title: true); ?>
         </nav>
     </header>
+
+    <noscript>
+        <div>
+            Consider enabling JavaScript or features like audio and video players won't work.
+            <a href="//enable-javascript.com" target="_blank">Find instructions there</a>.
+        </div>
+    </noscript>
 
     <main>
