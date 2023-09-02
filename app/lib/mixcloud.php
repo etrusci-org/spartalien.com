@@ -10,15 +10,15 @@ class Mixcloud
         public string $cache_dir = __DIR__,
         public int $cache_ttl = 86400,
         public string $api_base_url = 'https://api.mixcloud.com',
-        public float $api_request_delay = 1.0,
+        public float $api_request_delay = 2.0,
         public int $api_paging_limit = 100,
-        protected ?array $buffer = null,
+        private null|array $buffer = null,
     ) {}
 
 
     public function fetch_cloudcasts(string $user_name): array
     {
-        $this->buffer = null;
+        $this->reset_buffer();
         $url = sprintf('%1$s/%2$s/cloudcasts/?limit=%3$s&offset=0', $this->api_base_url, $user_name, $this->api_paging_limit);
         $cacheFile = sprintf('%1$s/mixcloud-%2$s-cloudcasts.json', $this->cache_dir, $user_name);
         return $this->fetch_data($url, $cacheFile);
@@ -27,7 +27,7 @@ class Mixcloud
 
     public function fetch_comments(string $user_name): array
     {
-        $this->buffer = null;
+        $this->reset_buffer();
         $url = sprintf('%1$s/%2$s/comments/?limit=%3$s&offset=0', $this->api_base_url, $user_name, $this->api_paging_limit);
         $cacheFile = sprintf('%1$s/mixcloud-%2$s-comments.json', $this->cache_dir, $user_name);
         return $this->fetch_data($url, $cacheFile);
@@ -36,7 +36,7 @@ class Mixcloud
 
     public function fetch_favorites(string $user_name): array
     {
-        $this->buffer = null;
+        $this->reset_buffer();
         $url = sprintf('%1$s/%2$s/favorites/?limit=%3$s&offset=0', $this->api_base_url, $user_name, $this->api_paging_limit);
         $cacheFile = sprintf('%1$s/mixcloud-%2$s-favorites.json', $this->cache_dir, $user_name);
         return $this->fetch_data($url, $cacheFile);
@@ -45,7 +45,7 @@ class Mixcloud
 
     public function fetch_feed(string $user_name): array
     {
-        $this->buffer = null;
+        $this->reset_buffer();
         $url = sprintf('%1$s/%2$s/feed/?limit=%3$s&offset=0', $this->api_base_url, $user_name, $this->api_paging_limit);
         $cacheFile = sprintf('%1$s/mixcloud-%2$s-feed.json', $this->cache_dir, $user_name);
         return $this->fetch_data($url, $cacheFile);
@@ -54,7 +54,7 @@ class Mixcloud
 
     public function fetch_followers(string $user_name): array
     {
-        $this->buffer = null;
+        $this->reset_buffer();
         $url = sprintf('%1$s/%2$s/followers/?limit=%3$s&offset=0', $this->api_base_url, $user_name, $this->api_paging_limit);
         $cacheFile = sprintf('%1$s/mixcloud-%2$s-followers.json', $this->cache_dir, $user_name);
         return $this->fetch_data($url, $cacheFile);
@@ -63,7 +63,7 @@ class Mixcloud
 
     public function fetch_following(string $user_name): array
     {
-        $this->buffer = null;
+        $this->reset_buffer();
         $url = sprintf('%1$s/%2$s/following/?limit=%3$s&offset=0', $this->api_base_url, $user_name, $this->api_paging_limit);
         $cacheFile = sprintf('%1$s/mixcloud-%2$s-following.json', $this->cache_dir, $user_name);
         return $this->fetch_data($url, $cacheFile);
@@ -72,7 +72,7 @@ class Mixcloud
 
     public function fetch_listens(string $user_name): array
     {
-        $this->buffer = null;
+        $this->reset_buffer();
         $url = sprintf('%1$s/%2$s/listens/?limit=%3$s&offset=0', $this->api_base_url, $user_name, $this->api_paging_limit);
         $cacheFile = sprintf('%1$s/mixcloud-%2$s-listens.json', $this->cache_dir, $user_name);
         return $this->fetch_data($url, $cacheFile);
@@ -81,7 +81,7 @@ class Mixcloud
 
     public function fetch_playlists(string $user_name): array
     {
-        $this->buffer = null;
+        $this->reset_buffer();
         $url = sprintf('%1$s/%2$s/playlists/?limit=%3$s&offset=0', $this->api_base_url, $user_name, $this->api_paging_limit);
         $cacheFile = sprintf('%1$s/mixcloud-%2$s-playlists.json', $this->cache_dir, $user_name);
         return $this->fetch_data($url, $cacheFile);
@@ -90,7 +90,7 @@ class Mixcloud
 
     public function fetch_show(string $user_name, string $show_slug): array
     {
-        $this->buffer = null;
+        $this->reset_buffer();
         $api_url = sprintf('%1$s/%2$s/%3$s/?metadata=1', $this->api_base_url, $user_name, $show_slug);
         $cache_file = sprintf('%1$s/mixcloud-%2$s-show-%3$s.json', $this->cache_dir, $user_name, $show_slug);
         return $this->fetch_data($api_url, $cache_file);
@@ -99,14 +99,20 @@ class Mixcloud
 
     public function fetch_user(string $user_name): array
     {
-        $this->buffer = null;
+        $this->reset_buffer();
         $api_url = sprintf('%1$s/%2$s/?metadata=1', $this->api_base_url, $user_name);
         $cache_file = sprintf('%1$s/mixcloud-%2$s-user.json', $this->cache_dir, $user_name);
         return $this->fetch_data($api_url, $cache_file);
     }
 
 
-    protected function fetch_data(string $api_url, string $cache_file): array
+    private function reset_buffer(): void
+    {
+        $this->buffer = null;
+    }
+
+
+    private function fetch_data(string $api_url, string $cache_file): array
     {
         $this->buffer ??= [
             'next_request_on' => microtime(true),

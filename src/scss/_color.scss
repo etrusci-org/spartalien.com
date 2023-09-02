@@ -1,56 +1,3 @@
-/*--- Color ---*/
-
-body {
-    color: $color-gray-450;
-    background-color: $color-gray-997;
-}
-
-
-header {
-    color: $color-gray-100;
-    background-color: $color-gray-999;
-    border-bottom-color: $color-gray-600;
-}
-
-
-h2 {
-    color: $color-gray-500;
-}
-
-
-h3 {
-    color: $color-gray-300;
-}
-
-
-a {
-    &:link,
-    &:visited {
-        color: $color-gray-300;
-    }
-
-    &:hover,
-    &:active {
-        color: $color-brand-50;
-        text-decoration-color: $color-gray-300;
-    }
-
-    &:focus,
-    &.active {
-        color: $color-brand-50;
-        text-decoration-color: $color-brand-50;
-
-        img {
-            border-color: $color-brand-50;
-        }
-    }
-
-    &[href^='//']::after,
-    &[href^='http://']::after,
-    &[href^='https://']::after {
-        color: $color-gray-600;
-    }
-}
 
 
 
@@ -59,136 +6,212 @@ a {
 
 
 
-// bak-------------------------------------------
-
-// header {
-//     border-width: 1px;
-//     border-color: red;
-// }
-
-
-// main {
-//     border-width: 1px;
-//     border-color: green;
-
-//     nav {
-//         border-width: 1px;
-//         border-color: yellow;
-//     }
-// }
-
-// footer {
-//     border-width: 1px;
-//     border-color: blue;
-// }
 
 
 
-// section {
-//     border-width: 1px;
-//     border-color: rgba(255, 0, 242, 0.5);
-// }
 
 
 
+
+
+
+
+// /*--- Color ---*/
 
 // body {
-//     color: $color-gray-400;
-//     background-color: $color-gray-950;
+//     color: $color-gray-450;
+//     background-color: $color-gray-997;
+// }
+
+
+// header {
+//     color: $color-gray-100;
+//     background-color: $color-gray-999;
+//     border-bottom-color: $color-gray-600;
+// }
+
+
+// h2 {
+//     color: $color-gray-500;
+// }
+
+
+// h3 {
+//     color: $color-gray-300;
 // }
 
 
 // a {
-//     color: #557fb9;
-// }
-
-
-// .active {
-//     color: #55b9a2;
-// }
-
-
-// header {
-//     border-width: 1px;
-//     border-color: rgba(255, 0, 0, 0.16);
-// }
-
-
-// main {
-//     border-width: 1px;
-//     border-color: rgba(255, 0, 0, 0.16);
-
-//     nav {
-//         border-width: 1px;
-//         border-color: rgba(255, 0, 0, 0.16);
+//     &:link,
+//     &:visited {
+//         color: $color-gray-300;
 //     }
-// }
 
+//     &:hover,
+//     &:active {
+//         color: $color-brand-50;
+//         text-decoration-color: $color-gray-300;
+//     }
 
-// section {
-//     // background-color: #333;
-//     border-width: 1px;
-//     border-color: rgba(255, 0, 242, 0.16);
+//     &:focus,
+//     &.active {
+//         color: $color-brand-50;
+//         text-decoration-color: $color-brand-50;
 
-//     section {
-//         border-color: rgba(255, 213, 0, 0.272);
-
-//         section {
-//             border-color: rgba(13, 255, 0, 0.16);
+//         img {
+//             border-color: $color-brand-50;
 //         }
 //     }
+
+//     &[href^='//']::after,
+//     &[href^='http://']::after,
+//     &[href^='https://']::after {
+//         color: $color-gray-600;
+//     }
 // }
 
 
-// footer {
-//     border-width: 1px;
-//     border-color: rgba(0, 0, 255, 0.233);
-// }
 
 
-// // code, pre, .lazycode {
-// //     color: $color-gray-500;
+
+
+
+
+
+
+
+
+
+// // bak-------------------------------------------
+
+// // header {
+// //     border-width: 1px;
+// //     border-color: red;
+// // }
+
+
+// // main {
+// //     border-width: 1px;
+// //     border-color: green;
+
+// //     nav {
+// //         border-width: 1px;
+// //         border-color: yellow;
+// //     }
+// // }
+
+// // footer {
+// //     border-width: 1px;
+// //     border-color: blue;
+// // }
+
+
+
+// // section {
+// //     border-width: 1px;
+// //     border-color: rgba(255, 0, 242, 0.5);
+// // }
+
+
+
+
+// // body {
+// //     color: $color-gray-400;
+// //     background-color: $color-gray-950;
+// // }
+
+
+// // a {
+// //     color: #557fb9;
+// // }
+
+
+// // .active {
+// //     color: #55b9a2;
 // // }
 
 
 // // header {
-// //     h1 a {
-// //         &:link,
-// //         &:visited {
-// //             color: $color-gray-100;
+// //     border-width: 1px;
+// //     border-color: rgba(255, 0, 0, 0.16);
+// // }
+
+
+// // main {
+// //     border-width: 1px;
+// //     border-color: rgba(255, 0, 0, 0.16);
+
+// //     nav {
+// //         border-width: 1px;
+// //         border-color: rgba(255, 0, 0, 0.16);
+// //     }
+// // }
+
+
+// // section {
+// //     // background-color: #333;
+// //     border-width: 1px;
+// //     border-color: rgba(255, 0, 242, 0.16);
+
+// //     section {
+// //         border-color: rgba(255, 213, 0, 0.272);
+
+// //         section {
+// //             border-color: rgba(13, 255, 0, 0.16);
 // //         }
 // //     }
 // // }
 
 
-
-// // h2 {
-// //     color: $color-gray-300;
+// // footer {
+// //     border-width: 1px;
+// //     border-color: rgba(0, 0, 255, 0.233);
 // // }
 
 
-// // h3 {
-// //     color: $color-gray-600;
+// // // code, pre, .lazycode {
+// // //     color: $color-gray-500;
+// // // }
+
+
+// // // header {
+// // //     h1 a {
+// // //         &:link,
+// // //         &:visited {
+// // //             color: $color-gray-100;
+// // //         }
+// // //     }
+// // // }
+
+
+
+// // // h2 {
+// // //     color: $color-gray-300;
+// // // }
+
+
+// // // h3 {
+// // //     color: $color-gray-600;
+// // // }
+
+
+// // // a {
+// // //     &:link,
+// // //     &:visited {
+// // //         color: $color-brand-200;
+// // //     }
+
+// // //     &:hover,
+// // //     &:focus,
+// // //     &:active,
+// // //     &.active {
+// // //         color: $color-brand-50;
+// // //         text-decoration-color: $color-brand-50;
+// // //     }
+// // // }
+
+
+// // *::selection {
+// //     color: $color-white;
+// //     background-color: $color-brand-150;
 // // }
-
-
-// // a {
-// //     &:link,
-// //     &:visited {
-// //         color: $color-brand-200;
-// //     }
-
-// //     &:hover,
-// //     &:focus,
-// //     &:active,
-// //     &.active {
-// //         color: $color-brand-50;
-// //         text-decoration-color: $color-brand-50;
-// //     }
-// // }
-
-
-// *::selection {
-//     color: $color-white;
-//     background-color: $color-brand-150;
-// }

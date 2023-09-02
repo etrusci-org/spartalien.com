@@ -35,34 +35,34 @@ $conf['site_nav'] = [
         'link' => './visual',
         'link_text' => 'visual',
     ],
-    'physical' => [
-        'link' => './physical',
-        'link_text' => 'physical',
-    ],
-    'planet420' => [
-        'link' => './planet420',
-        'link_text' => 'planet420',
-    ],
-    'mixtape' => [
-        'link' => './mixtape',
-        'link_text' => 'mixtape',
-    ],
-    'tool' => [
-        'link' => './tool',
-        'link_text' => 'tool',
-    ],
-    'stuff' => [
-        'link' => './stuff',
-        'link_text' => 'stuff',
-    ],
-    'mention' => [
-        'link' => './mention',
-        'link_text' => 'mention',
-    ],
-    'news' => [
-        'link' => './news',
-        'link_text' => 'news',
-    ],
+    // 'physical' => [
+    //     'link' => './physical',
+    //     'link_text' => 'physical',
+    // ],
+    // 'planet420' => [
+    //     'link' => './planet420',
+    //     'link_text' => 'planet420',
+    // ],
+    // 'mixtape' => [
+    //     'link' => './mixtape',
+    //     'link_text' => 'mixtape',
+    // ],
+    // 'tool' => [
+    //     'link' => './tool',
+    //     'link_text' => 'tool',
+    // ],
+    // 'stuff' => [
+    //     'link' => './stuff',
+    //     'link_text' => 'stuff',
+    // ],
+    // 'mention' => [
+    //     'link' => './mention',
+    //     'link_text' => 'mention',
+    // ],
+    // 'news' => [
+    //     'link' => './news',
+    //     'link_text' => 'news',
+    // ],
     'about' => [
         'link' => './about',
         'link_text' => 'about',
@@ -95,30 +95,6 @@ $conf['validate_requests'] = true;
 // Same applies to Router::error_node.
 
 $conf['valid_request_patterns'] = [
-    // [
-    //     'route' => '/^api$/',
-    //     'valuesTable' => '',
-    //     'valuesCol' => [],
-    // ],
-    // [
-    //     'route' => '/^api\/get:(track_list|release_list)$/',
-    //     'valuesTable' => '',
-    //     'valuesCol' => [],
-    // ],
-    // [
-    //     'route' => '/^api\/get:track\/id:{val1}$/',
-    //     'valuesTable' => 'track',
-    //     'valuesCol' => [
-    //         'val1' => 'id',
-    //     ],
-    // ],
-    // [
-    //     'route' => '/^api\/get:release\/id:{val1}$/',
-    //     'valuesTable' => 'rls',
-    //     'valuesCol' => [
-    //         'val1' => 'id',
-    //     ],
-    // ],
     [
         'route' => '/^about$/',
         'valuesTable' => '',
@@ -155,18 +131,18 @@ $conf['valid_request_patterns'] = [
             'val1' => 'id',
         ],
     ],
-    [
-        'route' => '/^physical$/',
-        'valuesTable' => '',
-        'valuesCol' => [],
-    ],
-    [
-        'route' => '/^physical\/id:{val1}$/',
-        'valuesTable' => 'phy',
-        'valuesCol' => [
-            'val1' => 'id',
-        ],
-    ],
+    // [
+    //     'route' => '/^physical$/',
+    //     'valuesTable' => '',
+    //     'valuesCol' => [],
+    // ],
+    // [
+    //     'route' => '/^physical\/id:{val1}$/',
+    //     'valuesTable' => 'phy',
+    //     'valuesCol' => [
+    //         'val1' => 'id',
+    //     ],
+    // ],
     [
         'route' => '/^visual$/',
         'valuesTable' => '',
@@ -179,64 +155,64 @@ $conf['valid_request_patterns'] = [
             'val1' => 'id',
         ],
     ],
-    [
-        'route' => '/^tool$/',
-        'valuesTable' => '',
-        'valuesCol' => [],
-    ],
-    [
-        'route' => '/^stuff$/',
-        'valuesTable' => '',
-        'valuesCol' => [],
-    ],
-    [
-        'route' => '/^stuff\/id:{val1}$/',
-        'valuesTable' => 'stuff',
-        'valuesCol' => [
-            'val1' => 'id',
-        ],
-    ],
-    [
-        'route' => '/^mixtape$/',
-        'valuesTable' => '',
-        'valuesCol' => [],
-    ],
-    [
-        'route' => '/^news$/',
-        'valuesTable' => '',
-        'valuesCol' => [],
-    ],
-    [
-        'route' => '/^mention$/',
-        'valuesTable' => '',
-        'valuesCol' => [],
-    ],
-    [
-        'route' => '/^mention\/id:{val1}$/',
-        'valuesTable' => 'mention',
-        'valuesCol' => [
-            'val1' => 'id',
-        ],
-    ],
-    [
-        'route' => '/^news\/id:{val1}$/',
-        'valuesTable' => 'news',
-        'valuesCol' => [
-            'val1' => 'id',
-        ],
-    ],
-    [
-        'route' => '/^planet420$/',
-        'valuesTable' => '',
-        'valuesCol' => [],
-    ],
-    [
-        'route' => '/^planet420\/session:{val1}$/',
-        'valuesTable' => 'p420_session',
-        'valuesCol' => [
-            'val1' => 'num',
-        ],
-    ],
+    // [
+    //     'route' => '/^tool$/',
+    //     'valuesTable' => '',
+    //     'valuesCol' => [],
+    // ],
+    // [
+    //     'route' => '/^stuff$/',
+    //     'valuesTable' => '',
+    //     'valuesCol' => [],
+    // ],
+    // [
+    //     'route' => '/^stuff\/id:{val1}$/',
+    //     'valuesTable' => 'stuff',
+    //     'valuesCol' => [
+    //         'val1' => 'id',
+    //     ],
+    // ],
+    // [
+    //     'route' => '/^mixtape$/',
+    //     'valuesTable' => '',
+    //     'valuesCol' => [],
+    // ],
+    // [
+    //     'route' => '/^news$/',
+    //     'valuesTable' => '',
+    //     'valuesCol' => [],
+    // ],
+    // [
+    //     'route' => '/^mention$/',
+    //     'valuesTable' => '',
+    //     'valuesCol' => [],
+    // ],
+    // [
+    //     'route' => '/^mention\/id:{val1}$/',
+    //     'valuesTable' => 'mention',
+    //     'valuesCol' => [
+    //         'val1' => 'id',
+    //     ],
+    // ],
+    // [
+    //     'route' => '/^news\/id:{val1}$/',
+    //     'valuesTable' => 'news',
+    //     'valuesCol' => [
+    //         'val1' => 'id',
+    //     ],
+    // ],
+    // [
+    //     'route' => '/^planet420$/',
+    //     'valuesTable' => '',
+    //     'valuesCol' => [],
+    // ],
+    // [
+    //     'route' => '/^planet420\/session:{val1}$/',
+    //     'valuesTable' => 'p420_session',
+    //     'valuesCol' => [
+    //         'val1' => 'num',
+    //     ],
+    // ],
     [
         'route' => '/^exit$/',
         'valuesTable' => '',
@@ -253,18 +229,9 @@ $conf['pre_render_settings'] = [
         'middleware_files' => [],
         'page_files' => [],
     ],
-    // 'api' => [
-    //     'headers' => [
-    //         'Content-Type: application/json; charset=utf-8'
-    //     ],
-    //     'middleware_files' =>[ 'music'],
-    //     'page_files' => ['*node'],
-    // ],
     'home' => [
         'headers' => [],
-        'middleware_files' => [
-            'page/_music.class.php',
-        ],
+        'middleware_files' => [],
         'page_files' => [],
     ],
     'about' => [
@@ -277,63 +244,51 @@ $conf['pre_render_settings'] = [
         'middleware_files' => ['page/_music.class.php'],
         'page_files' => [],
     ],
-    // 'artist' => [
-    //     'headers' => [],
-    //     'middleware_files' => ['page/_music.class.php'],
-    //     'page_files' => [],
-    // ],
     'music' => [
         'headers' => [],
         'middleware_files' => ['page/_music.class.php'],
         'page_files' => [],
     ],
-    'physical' => [
-        'headers' => [],
-        'middleware_files' => ['page/_physical.class.php'],
-        'page_files' => [],
-    ],
+    // 'physical' => [
+    //     'headers' => [],
+    //     'middleware_files' => ['page/_physical.class.php'],
+    //     'page_files' => [],
+    // ],
     'visual' => [
         'headers' => [],
         'middleware_files' => ['page/_visual.class.php'],
         'page_files' => [],
     ],
-    'tool' => [
-        'headers' => [],
-        'middleware_files' => [],
-        'page_files' => [],
-    ],
-    'stuff' => [
-        'headers' => [],
-        'middleware_files' => ['page/_stuff.class.php'],
-        'page_files' => [],
-    ],
-    'mixtape' => [
-        'headers' => [],
-        'middleware_files' => [],
-        'page_files' => [],
-    ],
-    'news' => [
-        'headers' => [],
-        'middleware_files' => ['page/_news.class.php'],
-        'page_files' => [],
-    ],
-    // 'news.atom' => [
-    //     'headers' => [
-    //         'Content-Type: application/atom+xml; charset=utf-8'
-    //     ],
-    //     'middleware_files' =>[ ''],
-    //     'page_files' => ['_header_news.atom', '*node', '_footer_news.atom']
+    // 'tool' => [
+    //     'headers' => [],
+    //     'middleware_files' => [],
+    //     'page_files' => [],
     // ],
-    'mention' => [
-        'headers' => [],
-        'middleware_files' => ['page/_mention.class.php'],
-        'page_files' => [],
-    ],
-    'planet420' => [
-        'headers' => [],
-        'middleware_files' => ['page/_planet420.class.php'],
-        'page_files' => [],
-    ],
+    // 'stuff' => [
+    //     'headers' => [],
+    //     'middleware_files' => ['page/_stuff.class.php'],
+    //     'page_files' => [],
+    // ],
+    // 'mixtape' => [
+    //     'headers' => [],
+    //     'middleware_files' => [],
+    //     'page_files' => [],
+    // ],
+    // 'news' => [
+    //     'headers' => [],
+    //     'middleware_files' => ['page/_news.class.php'],
+    //     'page_files' => [],
+    // ],
+    // 'mention' => [
+    //     'headers' => [],
+    //     'middleware_files' => ['page/_mention.class.php'],
+    //     'page_files' => [],
+    // ],
+    // 'planet420' => [
+    //     'headers' => [],
+    //     'middleware_files' => ['page/_planet420.class.php'],
+    //     'page_files' => [],
+    // ],
     'exit' => [
         'headers' => [],
         'middleware_files' => [],

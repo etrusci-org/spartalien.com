@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,17 +12,17 @@
 </head>
 <body>
     <header>
-        <h1><?php print($this->conf['site_title']); ?></h1>
         <nav>
-            <?php $this->print_site_nav(with_site_title: true); ?>
+            <h1><?php print($this->conf['site_title']); ?></h1>
+            <?php print($this->get_site_nav_html(separator: '')); ?>
         </nav>
     </header>
 
-    <noscript>
-        <div>
-            Consider enabling JavaScript or features like audio and video players won't work.
-            <a href="//enable-javascript.com" target="_blank">Find instructions there</a>.
-        </div>
-    </noscript>
 
     <main>
+        <noscript>
+            <p class="noscript">
+                Consider enabling JavaScript or features like audio and video players won't work.
+                <a href="//enable-javascript.com" target="_blank">Find instructions there</a>.
+            </p>
+        </noscript>

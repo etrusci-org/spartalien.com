@@ -1,10 +1,9 @@
-/*--- Var ---*/
+$font-family-main: 'Share Tech';
+$font-family-mono: 'Share Tech Mono';
+$font-family-deco: 'Noto Sans';
 
-$font-main: 'Noto Sans', sans-serif;
-$font-mono: 'Noto Sans Mono', monospace;
-
-$font-size-default-min: 14px;
-$font-size-default-min-num: 14;
+$font-size-default-min: 18px;
+$font-size-default-min-num: 18;
 $font-size-default-max: 22px;
 $font-size-default-max-num: 22;
 
@@ -13,10 +12,12 @@ $font-size-h2-min-num: 24;
 $font-size-h2-max: 36px;
 $font-size-h2-max-num: 36;
 
-$font-size-h3-min: 16px;
-$font-size-h3-min-num: 16;
-$font-size-h3-max: 28px;
-$font-size-h3-max-num: 28;
+$font-size-h3-min: 20px;
+$font-size-h3-min-num: 20;
+$font-size-h3-max: 26px;
+$font-size-h3-max-num: 26;
+
+
 
 
 $color-brand-50:  hsl(77, 75%, 41%);
@@ -55,6 +56,7 @@ $color-gray-997: hsl(0, 0%, 3%);
 $color-gray-998: hsl(0, 0%, 2%);
 $color-gray-999: hsl(0, 0%, 1%);
 
+$color-warning: hsl(27, 75%, 41%);
 
 
 
@@ -72,31 +74,26 @@ $color-gray-999: hsl(0, 0%, 1%);
 
 
 
+// /*--- Var ---*/
 
-
-
-
-
-
-//  bak ----------------------------------
-
-// $font-main: 'Share Tech', sans-serif;
-// $font-mono: 'Share Tech Mono', monospace;
+// $font-main: 'Noto Sans', sans-serif;
+// $font-mono: 'Noto Sans Mono', monospace;
 
 // $font-size-default-min: 14px;
-// $font-size-default-max: 22px;
 // $font-size-default-min-num: 14;
+// $font-size-default-max: 22px;
 // $font-size-default-max-num: 22;
 
 // $font-size-h2-min: 24px;
-// $font-size-h2-max: 36px;
 // $font-size-h2-min-num: 24;
+// $font-size-h2-max: 36px;
 // $font-size-h2-max-num: 36;
 
 // $font-size-h3-min: 16px;
-// $font-size-h3-max: 28px;
 // $font-size-h3-min-num: 16;
+// $font-size-h3-max: 28px;
 // $font-size-h3-max-num: 28;
+
 
 // $color-brand-50:  hsl(77, 75%, 41%);
 // $color-brand-100: hsl(77, 75%, 34%);
@@ -126,3 +123,82 @@ $color-gray-999: hsl(0, 0%, 1%);
 // $color-gray-850: hsl(0, 0%, 15%);
 // $color-gray-900: hsl(0, 0%, 11%);
 // $color-gray-950: hsl(0, 0%, 7%);
+
+// $color-gray-994: hsl(0, 0%, 6%);
+// $color-gray-995: hsl(0, 0%, 5%);
+// $color-gray-996: hsl(0, 0%, 4%);
+// $color-gray-997: hsl(0, 0%, 3%);
+// $color-gray-998: hsl(0, 0%, 2%);
+// $color-gray-999: hsl(0, 0%, 1%);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// //  bak ----------------------------------
+
+// // $font-main: 'Share Tech', sans-serif;
+// // $font-mono: 'Share Tech Mono', monospace;
+
+// // $font-size-default-min: 14px;
+// // $font-size-default-max: 22px;
+// // $font-size-default-min-num: 14;
+// // $font-size-default-max-num: 22;
+
+// // $font-size-h2-min: 24px;
+// // $font-size-h2-max: 36px;
+// // $font-size-h2-min-num: 24;
+// // $font-size-h2-max-num: 36;
+
+// // $font-size-h3-min: 16px;
+// // $font-size-h3-max: 28px;
+// // $font-size-h3-min-num: 16;
+// // $font-size-h3-max-num: 28;
+
+// // $color-brand-50:  hsl(77, 75%, 41%);
+// // $color-brand-100: hsl(77, 75%, 34%);
+// // $color-brand-150: hsl(77, 75%, 29%);
+// // $color-brand-200: hsl(77, 75%, 24%);
+// // $color-brand-250: hsl(77, 75%, 20%);
+
+// // $color-white: hsl(0, 0%, 100%);
+// // $color-black: hsl(0, 0%, 0%);
+
+// // $color-gray-50: hsl(0, 0%, 95%);
+// // $color-gray-100: hsl(0, 0%, 89%);
+// // $color-gray-150: hsl(0, 0%, 84%);
+// // $color-gray-200: hsl(0, 0%, 79%);
+// // $color-gray-250: hsl(0, 0%, 74%);
+// // $color-gray-300: hsl(0, 0%, 69%);
+// // $color-gray-350: hsl(0, 0%, 64%);
+// // $color-gray-400: hsl(0, 0%, 59%);
+// // $color-gray-450: hsl(0, 0%, 53%);
+// // $color-gray-500: hsl(0, 0%, 48%);
+// // $color-gray-550: hsl(0, 0%, 43%);
+// // $color-gray-600: hsl(0, 0%, 40%);
+// // $color-gray-650: hsl(0, 0%, 34%);
+// // $color-gray-700: hsl(0, 0%, 29%);
+// // $color-gray-750: hsl(0, 0%, 24%);
+// // $color-gray-800: hsl(0, 0%, 20%);
+// // $color-gray-850: hsl(0, 0%, 15%);
+// // $color-gray-900: hsl(0, 0%, 11%);
+// // $color-gray-950: hsl(0, 0%, 7%);

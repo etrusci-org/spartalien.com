@@ -12,16 +12,43 @@ if (isset($this->Router->route['var']['id'])) {
 
 
 <?php if ($visual): ?>
-    <section>
-        <h2>Visual: <?php print($visual['visual_name']); ?></h2>
+    <h2>Visual: <?php print($visual['visual_name']); ?></h2>
 
-        <pre><?php print_r($visual); ?></pre>
-    </section>
+    <!-- <div class="box"> -->
+
+    <?php
+    foreach ($visual['visual_media'] as $v) {
+        printf(
+            '<div class="box">
+                <div class="lazycode">%1$s</div>
+            </div>',
+            $v
+        );
+    }
+
+    printf(
+        '<div class="box">
+            <h3>Meta</h3>
+            <ul class="meta">
+                <li>Created in %1$s</li>
+            </ul>
+            %2$s
+        </div>',
+        substr($visual['visual_pub_date'], 0, 4),
+        ($visual['visual_description']) ? sprintf('<p>%s</p>', $this->_lazytext($visual['visual_description'])) : '',
+    );
+    ?>
+
+    <!-- </div> -->
+
+
+    <!-- <pre><?php print_r($visual); ?></pre> -->
+
 <?php endif; ?>
 
 
-<section <?php print(($visual) ? 'class="more"' : ''); ?>>
-    <?php print((!$visual) ? '<h2>Visuals For You, Them, And Me</h2>' : '<h3>More Visuals ...</h3>'); ?>
+<div <?php print(($visual) ? 'class="more"' : ''); ?>>
+    <h2><?php print((!$visual) ? 'Visuals For You, Them, And Me' : 'More Visuals ...'); ?></h2>
 
     <div class="grid">
         <?php
@@ -29,7 +56,7 @@ if (isset($this->Router->route['var']['id'])) {
             printf('
                 <a href="./visual/id:%1$s" title="%2$s"%4$s>
                     <img src="%3$s" loading="lazy" alt="preview image">
-                </a> ',
+                </a>',
                 $v['visual_id'],
                 $v['visual_name'],
                 $v['visual_preview_image']['tn'],
@@ -37,5 +64,7 @@ if (isset($this->Router->route['var']['id'])) {
             );
         }
         ?>
+
     </div>
-</section>
+
+</div>

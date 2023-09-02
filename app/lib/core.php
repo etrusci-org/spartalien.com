@@ -57,6 +57,7 @@ class Core
             $buffer = ob_get_contents();
             $buffer = str_replace('{nocache}', '', $buffer);
             $buffer = str_replace('{/nocache}', '', $buffer);
+            // $buffer = preg_replace('/^\s+/m', '', $buffer);
 
             ob_end_clean();
 
@@ -115,6 +116,8 @@ class Core
             foreach ($nocache_blocks as $block_id => $v) {
                 $buffer = str_replace($block_id, $v['replace'], $buffer);
             }
+
+            // $buffer = preg_replace('/^\s+/m', '', $buffer);
 
             // Store current buffer to file
             file_put_contents($cache_file, $buffer, LOCK_EX);
@@ -180,10 +183,10 @@ class Core
             return
                 $page_title
                 .$sep
-                .$this->conf['site_title']
-                .$sep
-                .'/'
-                .$this->Router->route['request'];
+                .$this->conf['site_title'];
+                // .$sep
+                // .'/'
+                // .$this->Router->route['request']
         }
 
         // Special title if route is error404
@@ -196,28 +199,22 @@ class Core
     }
 
 
-    protected function print_site_nav(bool $with_site_title = false): void
+    protected function get_site_nav_html(string $separator = ' &middot; '): string
     {
-        if ($with_site_title) {
-            printf('
-                <ul>
-                    <li class="letter-spacing-sm"><strong>%1$s</strong></li>',
-                    $this->conf['site_title'],
-            );
-        }
-        else {
-            print('<ul>');
-        }
+        $dump = [];
 
         foreach ($this->conf['site_nav'] as $k => $v) {
-            printf('<li><a href="%1$s" title="%2$s"%3$s>%2$s</a></li>',
+            $dump[] = sprintf('
+                <a href="%1$s" title="%2$s"%3$s>%2$s</a>',
                 $v['link'],
                 $v['link_text'],
                 ($this->Router->route['node'] == $k) ? ' class="active"' : '',
             );
         }
 
-        print('</ul>');
+        $dump = implode($separator, $dump);
+
+        return $dump;
     }
 
 
@@ -289,24 +286,30 @@ class Core
     public static function _lazytext(string $text): string
     {
         $patterns = [
-            '/\[url=(.*?)\](.*?)\[\/url\]/', // [url=link_url]link_text[/url]
-            '/\n/', // linefeed
-            '/\*\*(.*?)\*\*/i', // bold text
-            '/\*(.*?)\*/i', // italic text
-            '/~~(.*?)~~/i', // struck through text
+            // 1 - linefeed
+            '/\n/',
+            // 2 - [link_text](link_url)
+            '/\[(.*?)\]\((.*?)\)/',
+            // 3 - **bold text**
+            '/\*\*(.*?)\*\*/i',
+            // 4 - *italic text*
+            '/\*(.*?)\*/i',
+            // 5 - ~~struck through text~~
+            '/~~(.*?)~~/i',
         ];
 
         $replacements = [
-            '<a href="$1">$2</a>',
+            // 1
             '<br>',
+            // 2
+            '<a href="$2">$1</a>',
+            // 3
             '<strong>$1</strong>',
+            // 4
             '<em>$1</em>',
+            // 5
             '<s>$1</s>',
         ];
-
-        $text = htmlspecialchars($text);
-
-        $text = nl2br($text, false);
 
         $text = preg_replace($patterns, $replacements, $text);
 
@@ -316,9 +319,9 @@ class Core
 
     public static function _get_preview_image_paths(string $type, int $id, ?string $size = null): array | string
     {
-        $tn  = 'file/preview/'.$type.'/'.$id.'-tn.jpg';
-        $med = 'file/preview/'.$type.'/'.$id.'-med.jpg';
-        $big = 'file/preview/'.$type.'/'.$id.'-big.png';
+        $tn  = './file/preview/'.$type.'/'.$id.'-tn.jpg';
+        $med = './file/preview/'.$type.'/'.$id.'-med.jpg';
+        $big = './file/preview/'.$type.'/'.$id.'-big.png';
 
         return match($size) {
             'tn' => $tn,

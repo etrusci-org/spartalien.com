@@ -5,34 +5,34 @@ $exit_list = $this->DB->query('
         exit.description AS exit_description,
         exit.url AS exit_url
     FROM exit
-    ORDER BY RANDOM();
-');
-// ORDER BY LOWER(exit.text) ASC
+    ORDER BY RANDOM();'
+);
 ?>
 
 
 <h2>Selected Exit Routes</h2>
 
 
-<section>
-    <div class="grid max3">
+<div class="box">
+
+    <ul class="grid-x-3 compact-lines">
+
         <?php
         foreach ($exit_list as $v) {
             printf('
-                <div>
-                    <a href="%1$s" target="_blank" title="%3$s%1$s">%2$s</a>
-                </div>
-                ',
+                <li><a href="%1$s" target="_blank" title="%3$s%1$s">%2$s</a></li>',
                 $v['exit_url'],
                 $v['exit_text'],
                 ($v['exit_description']) ? sprintf('%1$s : ', $v['exit_description']) : '',
             );
         }
         ?>
-    </div>
-</section>
+
+    </ul>
+
+</div>
 
 
-<section>
-    The list order is randomized from time to time. If you find your site linked here and want to have it updated or removed, let me know.
-</section>
+<div class="box">
+    <small>The list order is automagically randomized from time to time. If you find your site linked here and want to have it updated or removed, let me know.</small>
+</div>

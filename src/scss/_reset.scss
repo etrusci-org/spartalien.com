@@ -1,5 +1,3 @@
-/*--- Reset ---*/
-
 @use '../vendor/modern-normalize-2.0.0/modern-normalize.css';
 
 
@@ -9,16 +7,17 @@ noscript,
 header,
 nav,
 main,
-section,
+// section,
 // article,
 footer,
+hr,
 h1,
 h2,
 h3,
 p,
 ul,
 li,
-span,
+// span,
 table,
 thead,
 tbody,
@@ -30,7 +29,7 @@ pre,
 a,
 img,
 iframe,
-video,
+// video,
 ::before,
 ::after {
     margin: 0;
@@ -53,18 +52,25 @@ html {
 header,
 nav,
 main,
-section,
+// section,
 // article,
 footer {
     display: block;
 }
 
 
-noscript,
+// hr {
+//     max-width: 100%;
+//     overflow: hidden;
+//     border-top-width: 1px;
+//     border-top-style: solid;
+// }
+
+
 h1,
 h2,
 h3,
-th,
+// th,
 code,
 pre {
     font-size: inherit;
@@ -90,17 +96,159 @@ pre {
     overflow: scroll;
 }
 
+// pre,
+// code {
+//     white-space: pre-line;
+// }
+
 
 a {
     color: inherit;
     text-decoration: inherit;
+    outline: none;
+    cursor: pointer;
 }
 
 
 img,
 iframe,
-video {
+video
+{
     display: block;
     max-width: 100%;
     height: auto;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// /*--- Reset ---*/
+
+// @use '../vendor/modern-normalize-2.0.0/modern-normalize.css';
+
+
+// html,
+// body,
+// noscript,
+// header,
+// nav,
+// main,
+// section,
+// // article,
+// footer,
+// h1,
+// h2,
+// h3,
+// p,
+// ul,
+// li,
+// span,
+// table,
+// thead,
+// tbody,
+// tr,
+// th,
+// td,
+// code,
+// pre,
+// a,
+// img,
+// iframe,
+// video,
+// ::before,
+// ::after {
+//     margin: 0;
+//     padding: 0;
+//     border-width: 0;
+//     border-style: solid;
+//     border-color: currentColor;
+// }
+
+
+// html {
+//     line-height: 1;
+//     text-underline-offset: 3px;
+//     -webkit-text-size-adjust: 100%;
+//     -moz-tab-size: 4;
+//     tab-size: 4;
+// }
+
+
+// header,
+// nav,
+// main,
+// section,
+// // article,
+// footer {
+//     display: block;
+// }
+
+
+// noscript,
+// h1,
+// h2,
+// h3,
+// th,
+// code,
+// pre {
+//     font-size: inherit;
+//     font-weight: inherit;
+// }
+
+
+// ul {
+//     list-style: none;
+//     padding-inline: 0;
+// }
+
+
+// table {
+//     text-align: left;
+//     border-collapse: collapse;
+// }
+
+
+// table,
+// pre {
+//     max-width: 100%;
+//     overflow: scroll;
+// }
+
+
+// a {
+//     color: inherit;
+//     text-decoration: inherit;
+// }
+
+
+// img,
+// iframe,
+// video {
+//     display: block;
+//     max-width: 100%;
+//     height: auto;
+// }

@@ -1,31 +1,186 @@
-/*--- Layout ---*/
-// mobile first, handle larger screensizes in _query
+/* share-tech-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Share Tech';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./vendor/share-tech-v21-latin-regular.woff2') format('woff2');
+}
 
-p { line-height: 1.75; }
-ul { line-height: 1.75; }
-nav ul { line-height: 1; }
-table { line-height: 2; }
-pre { line-height: 1.5; }
-
-
-header {
-    padding-top: 1.25rem;
-    padding-bottom: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-bottom: 3rem;
-    border-bottom-width: 1px;
-    border-bottom-style: dotted;
+/* share-tech-mono-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Share Tech Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./vendor/share-tech-mono-v15-latin-regular.woff2') format('woff2');
 }
 
 
-nav ul li {
-    display: inline-block;
-    margin-right: .75rem;
+/* noto-sans-200 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 200;
+    src: url('./vendor/noto-sans-v30-latin-200.woff2') format('woff2');
+}
 
-    &:last-child {
-        margin-right: 0;
+
+// text -------------------------------------------------------------------------
+
+body {
+    font-family: $font-family-main;
+    font-size: $font-size-default-min;
+    color: $color-gray-500;
+    background-color: $color-gray-997;
+}
+
+
+code,
+pre,
+.font-mono,
+.lazycode,
+.noscript {
+    font-family: $font-family-mono;
+    font-size: 80%;
+    color: $color-gray-550;
+}
+
+
+
+h1 {
+    font-family: $font-family-deco;
+    letter-spacing: .15rem;
+    color: $color-gray-150;
+    letter-spacing: .25rem;
+}
+
+
+h2 {
+    font-family: $font-family-deco;
+    font-size: $font-size-h2-min;
+    margin-bottom: 6rem;
+    color: $color-gray-650;
+    transition: color 5s linear;
+
+    &::first-letter {
+        color: $color-brand-200;
     }
+
+    &:hover,
+    &:focus {
+        color: $color-gray-500;
+        transition: color .25s linear;
+
+        &::first-letter {
+            color: $color-brand-50;
+        }
+    }
+}
+
+
+h3 {
+    font-family: $font-family-deco;
+    font-size: $font-size-h3-min;
+    margin-bottom: 2rem;
+    color: $color-gray-500;
+    transition: color 5s linear;
+
+    &::first-letter {
+        color: $color-gray-350;
+    }
+
+    &:hover,
+    &:focus {
+        color: $color-gray-350;
+        transition: color .25s linear;
+
+        &::first-letter {
+            color: $color-gray-100;
+        }
+    }
+}
+
+
+
+main, footer {
+    table { line-height: 2; }
+
+    p, ul, .lazymedia { line-height: 1.5; }
+
+    pre, .meta { line-height: 1.35; }
+
+    p, ul, pre, .lazycode, .lazymedia {
+        margin-bottom: 1rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+
+
+
+.meta {
+    font-family: $font-family-mono;
+    font-size: 80%;
+    margin-bottom: 2rem;
+    color: $color-gray-600;
+}
+
+
+
+
+
+
+
+
+
+
+
+// standart elements
+a {
+    &:link,
+    &:visited {
+        text-decoration-line: underline;
+        text-decoration-style: dotted;
+        color: $color-gray-400;
+    }
+
+    &:hover,
+    &:active {
+        text-decoration-line: none;
+        color: $color-brand-50;
+        text-decoration-color: $color-gray-300;
+    }
+
+    &:focus,
+    &.active {
+        text-decoration-line: underline;
+        text-decoration-style: double;
+        color: $color-brand-50;
+        text-decoration-color: $color-brand-50;
+
+        img {
+            border-width: 1px;
+            border-color: $color-brand-50;
+        }
+    }
+
+    &[href^='//']::after,
+    &[href^='http://']::after,
+    &[href^='https://']::after {
+        content: '⇗';
+        color: $color-gray-600;
+    }
+}
+
+
+nav {
+    font-family: $font-family-deco;
 
     a {
         &:link,
@@ -33,86 +188,14 @@ nav ul li {
             text-decoration-line: none;
         }
 
-        &::before {
-            content: '/';
+        &:active {
+            color: $color-white;
         }
-    }
-}
 
+        &.active {
+            text-decoration-line: underline;
 
-main {
-    min-width: 300px;
-    max-width: 1200px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-
-    img {
-        max-height: 80vh;
-    }
-}
-
-
-footer {
-    padding-bottom: 2rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-top: 95vh;
-
-    nav {
-        margin-bottom: 1rem;
-    }
-}
-
-
-
-
-
-h1 {
-    display: none;
-}
-
-
-h2 {
-    margin-bottom: 6rem;
-    letter-spacing: .25rem;
-}
-
-
-h3 {
-    margin-bottom: 2rem;
-}
-
-
-section {
-    margin-bottom: 8rem;
-
-    &:last-child {
-        margin-bottom: 0;
-    }
-
-    &.more {
-        margin-top: 30rem;
-    }
-}
-
-
-// article {
-//     margin-bottom: 8rem;
-
-//     &:last-child {
-//         margin-bottom: 0;
-//     }
-// }
-
-
-p,
-ul {
-    margin-bottom: 1rem;
-
-    &:last-child {
-        margin-bottom: 0;
+        }
     }
 }
 
@@ -121,7 +204,7 @@ table {
     // width: 100%;
 
     th {
-        padding-bottom: .5rem;
+        // padding-bottom: .5rem;
         white-space: nowrap;
     }
 
@@ -133,84 +216,183 @@ table {
 }
 
 
-a {
-    outline: none;
 
-    &:link,
-    &:visited {
-        text-decoration-line: underline;
-        text-decoration-style: dotted;
+
+
+
+
+
+
+
+
+
+
+
+
+
+// layout -------------------------------------------------------------------------
+
+header {
+    position: sticky;
+    top: 0;
+    line-height: 1;
+    padding: 1rem;
+    margin-bottom: 3rem;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: $color-brand-250;
+    background-color: $color-gray-999;
+    box-shadow: 0 5px 10px 5px $color-black;
+    z-index: 10;
+}
+
+
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: .75rem;
+    row-gap: .5rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+
+main {
+    min-width: 300px;
+    max-width: 1200px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 5;
+
+    img {
+        max-height: 70vh;
     }
+}
+
+
+footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-top: 90vh;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: $color-brand-250;
+    background-color: $color-gray-950;
+    box-shadow: 0 -5px 10px 5px $color-black;
+    opacity: .25;
+    transition: opacity .75s linear;
+    z-index: 5;
+    cursor: crosshair;
 
     &:hover,
-    &:active {
-        text-decoration-line: underline;
-        text-decoration-style: solid;
+    &:focus {
+        opacity: 1;
+        transition: opacity .1s linear;
     }
 
-    &:focus,
-    &.active {
-        text-decoration-line: underline;
-        text-decoration-style: double;
+    nav {
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
 
-        img {
-            border-width: 1px;
+    img {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        margin-bottom: 2rem;
+        opacity: .2;
+        transition: opacity 2.0s linear;
+
+        &:hover,
+        &:focus {
+            opacity: 1;
+            transition: opacity 1.500s linear;
         }
-    }
-
-    &[href^='//']::after,
-    &[href^='http://']::after,
-    &[href^='https://']::after {
-        content: '⇗';
     }
 }
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+// this grid works now well for images
+// does not need media queries
 .grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: minmax(auto, 1fr);
-    column-gap: 2rem;
-    row-gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+    align-items: stretch;
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
 
     img {
         width: auto;
         height: 100%;
         object-fit: cover;
-    }
-
-    &.max3 {
-        grid-template-columns: 1fr;
-    }
-
-    &.content {
-        grid-template-columns: 1fr;
-        column-gap: 4rem;
-        row-gap: 8rem;
-
-        img {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            object-fit: contain;
-        }
+        // box-shadow: 0 0 10px 5px $color-black;
     }
 }
 
 
-
-.rls {
-    .head {
-        margin-bottom: 4rem;
-    }
-
-    .info {
-        margin-bottom: 4rem;
-    }
+// use this for 2-3 column
+// needs media queries
+.grid-x-2,
+.grid-x-3 {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    align-items: start;
+    column-gap: 4rem;
 }
 
+
+.box {
+    max-width: fit-content;
+    padding: 1.5rem;
+    margin-bottom: 8rem;
+    border-width: 1px;
+    border-color: $color-gray-900;
+    background-color: $color-gray-950;
+    box-shadow: 0 0 10px 5px $color-black inset;
+}
+
+
+
+.more {
+    margin-top: 40vh;
+}
+
+
+
+
+
+
+
+
+.noscript {
+    color: $color-warning;
+}
+
+
+.text-align-center {
+    text-align: center;
+}
 
 
 .text-align-right {
@@ -218,8 +400,86 @@ a {
 }
 
 
-.letter-spacing-sm {
-    letter-spacing: .25rem;
+*::selection {
+    color: $color-black;
+    background-color: $color-brand-50;
+}
+
+
+
+
+
+
+
+
+
+
+.lazycode {
+    display: block;
+}
+
+
+// .lazymedia {
+//     display: block;
+//     margin-bottom: 1.5rem;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+// width - small
+@media screen and (min-width: 576px) {
+    body { font-size: calc($font-size-default-min + ($font-size-default-max-num - $font-size-default-min-num) * ((100vw - 576px) / (1536 - 576))); }
+    h2 { font-size: calc($font-size-h2-min + ($font-size-h2-max-num - $font-size-h2-min-num) * ((100vw - 576px) / (1536 - 576))); }
+    h3 { font-size: calc($font-size-h3-min + ($font-size-h3-max-num - $font-size-h3-min-num) * ((100vw - 576px) / (1536 - 576))); }
+}
+
+
+// width - medium
+@media screen and (min-width: 768px) {
+    .grid-x-2,
+    .grid-x-3 {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 8rem;
+        // margin-bottom: 8rem;
+
+        &.compact-lines { row-gap: 1.5rem; }
+
+        // .box { margin-bottom: 0; }
+    }
+}
+
+
+// width - large
+@media screen and (min-width: 1024px) {
+    .grid-x-3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+
+// width - extra large
+@media screen and (min-width: 1280px) {
+}
+
+
+// width - extra extra large
+@media screen and (min-width: 1536px) {
+    body { font-size: $font-size-default-max; }
+    h2 { font-size: $font-size-h2-max; }
+    h3 { font-size: $font-size-h3-max; }
+}
+
+
+// height - make header un-sticky
+@media screen and (max-height: 50rem) {
+    header { position: relative; }
 }
 
 
@@ -232,101 +492,118 @@ a {
 
 
 
+// /*--- Layout ---*/
+// // mobile first, handle larger screensizes in _query
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// h1, p, ul, pre, table {
-//     line-height: 1.5;
-// }
+// p { line-height: 1.75; }
+// ul { line-height: 1.75; }
+// nav ul { line-height: 1; }
+// table { line-height: 2; }
+// pre { line-height: 1.5; }
 
 
 // header {
-//     display: grid;
-//     grid-template-columns: min-content auto;
-//     column-gap: 2rem;
-//     align-items: start;
-
-//     padding: 1rem;
+//     padding-top: 1.25rem;
+//     padding-bottom: 1rem;
+//     padding-left: 1rem;
+//     padding-right: 1rem;
 //     margin-bottom: 3rem;
+//     border-bottom-width: 1px;
+//     border-bottom-style: dotted;
 // }
 
 
-// nav li {
+// nav ul li {
 //     display: inline-block;
-//     margin-right: .5rem;
+//     margin-right: .75rem;
+
+//     &:last-child {
+//         margin-right: 0;
+//     }
+
+//     a {
+//         &:link,
+//         &:visited {
+//             text-decoration-line: none;
+//         }
+
+//         &::before {
+//             content: '/';
+//         }
+//     }
 // }
 
 
 // main {
 //     min-width: 300px;
-//     max-width: 1300px;
-//     padding: 0 1rem;
-//     margin: 0 auto 3rem auto;
+//     max-width: 1200px;
+//     padding-left: 1rem;
+//     padding-right: 1rem;
+//     margin-left: auto;
+//     margin-right: auto;
+
+//     img {
+//         max-height: 80vh;
+//     }
+// }
+
+
+// footer {
+//     padding-bottom: 2rem;
+//     padding-left: 1rem;
+//     padding-right: 1rem;
+//     margin-top: 95vh;
+
+//     nav {
+//         margin-bottom: 1rem;
+//     }
+// }
+
+
+
+
+
+// h1 {
+//     display: none;
+// }
+
+
+// h2 {
+//     margin-bottom: 6rem;
+//     letter-spacing: .25rem;
+// }
+
+
+// h3 {
+//     margin-bottom: 2rem;
 // }
 
 
 // section {
-//     margin-bottom: 4rem;
+//     margin-bottom: 8rem;
 
 //     &:last-child {
 //         margin-bottom: 0;
 //     }
 
 //     &.more {
-//         margin-top: 20rem;
+//         margin-top: 30rem;
 //     }
 // }
 
 
-// footer {
-//     padding: 0 1rem 1rem 1rem;
-// }
+// // article {
+// //     margin-bottom: 8rem;
 
-
-// h1 {
-//     letter-spacing: 3px;
-// }
-
-
-// h2 {
-//     margin-bottom: 3rem;
-// }
-
-
-// h3 {
-//     margin-bottom: 1rem;
-// }
+// //     &:last-child {
+// //         margin-bottom: 0;
+// //     }
+// // }
 
 
 // p,
 // ul {
-//     margin-bottom: .5rem;
+//     margin-bottom: 1rem;
 
 //     &:last-child {
 //         margin-bottom: 0;
@@ -336,7 +613,6 @@ a {
 
 // table {
 //     // width: 100%;
-//     width: auto;
 
 //     th {
 //         padding-bottom: .5rem;
@@ -345,46 +621,90 @@ a {
 
 //     th,
 //     td {
-//         padding-right: 2rem;
+//         padding-right: 4rem;
 //         vertical-align: top;
 //     }
 // }
 
 
-// // .rls {
-// //     .head {
-// //         h2 {
-// //             margin-bottom: .5rem;
-// //         }
+// a {
+//     outline: none;
 
-// //         .meta {
-// //             color: $color-gray-500;
-// //             margin-bottom: 1.5rem;
-// //         }
+//     &:link,
+//     &:visited {
+//         text-decoration-line: underline;
+//         text-decoration-style: dotted;
+//     }
+
+//     &:hover,
+//     &:active {
+//         text-decoration-line: underline;
+//         text-decoration-style: solid;
+//     }
+
+//     &:focus,
+//     &.active {
+//         text-decoration-line: underline;
+//         text-decoration-style: double;
+
+//         img {
+//             border-width: 1px;
+//         }
+//     }
+
+//     &[href^='//']::after,
+//     &[href^='http://']::after,
+//     &[href^='https://']::after {
+//         content: '⇗';
+//     }
+// }
 
 
-// //         .coverart {
-// //             margin-bottom: 1.5rem;
-// //         }
 
-// //         .player {
-// //             .lazycode,
-// //             .lazymedia {
-// //                 width: 100%;
-// //                 max-width: 600px;
-// //                 max-height: 600px;
-// //             }
-// //         }
-// //     }
 
-// //     // .description {}
+// .grid {
+//     display: grid;
+//     grid-template-columns: repeat(2, 1fr);
+//     grid-template-rows: minmax(auto, 1fr);
+//     column-gap: 2rem;
+//     row-gap: 2rem;
 
-// //     // .tracklist {}
+//     img {
+//         width: auto;
+//         height: 100%;
+//         object-fit: cover;
+//     }
 
-// //     // .credit {}
+//     &.max3 {
+//         grid-template-columns: 1fr;
+//     }
 
-// //     // .media {}
-// // }
+//     &.content {
+//         grid-template-columns: 1fr;
+//         column-gap: 4rem;
+//         row-gap: 8rem;
+
+//         img {
+//             width: 100%;
+//             max-width: 400px;
+//             height: auto;
+//             object-fit: contain;
+//         }
+//     }
+// }
+
+
+
+// .rls {
+//     .head {
+//         margin-bottom: 4rem;
+//     }
+
+//     .info {
+//         margin-bottom: 4rem;
+//     }
+// }
+
 
 
 // .text-align-right {
@@ -392,64 +712,238 @@ a {
 // }
 
 
-// .grid {
-//     display: grid;
-//     grid-template-rows: 1fr;
-
-//     &.content {
-//         grid-template-columns: 1fr;
-//         column-gap: 2rem;
-//         row-gap: 2rem;
-//     }
-
-//     &.gallery {
-//         grid-template-columns: repeat(3, 1fr);
-//         column-gap: 1rem;
-//         row-gap: 1rem;
-
-//         img {
-//             width: auto;
-//             height: 100%;
-//             object-fit: cover;
-//         }
-//     }
+// .letter-spacing-sm {
+//     letter-spacing: .25rem;
 // }
 
 
-// .lazymedia {
-//     // display: block;
-//     // margin-bottom: 1rem;
 
-//     // &:last-child {
-//     //     margin-bottom: 0;
-//     // }
 
-//     // &.bandcampTrack {
-//     //     width: 100%;
-//     //     min-width: 170px;
-//     //     height: 120px;
 
-//     //     &.small {
-//     //         height: 42px;
-//     //     }
 
-//     //     &.withCover {
-//     //         width: 350px;
-//     //         height: 350px;
-//     //         margin: 0 auto;
-//     //     }
-//     // }
 
-//     &.bandcampAlbum {
-//         // with tracklist:
-//         min-width: 370px;
-//         height: 208px;
-//         min-height: 208px;
 
-//         // &.noTracklist {
-//         //     min-width: 250px;
-//         //     height: 120px;
-//         //     min-height: 120px;
-//         // }
-//     }
-// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // h1, p, ul, pre, table {
+// //     line-height: 1.5;
+// // }
+
+
+// // header {
+// //     display: grid;
+// //     grid-template-columns: min-content auto;
+// //     column-gap: 2rem;
+// //     align-items: start;
+
+// //     padding: 1rem;
+// //     margin-bottom: 3rem;
+// // }
+
+
+// // nav li {
+// //     display: inline-block;
+// //     margin-right: .5rem;
+// // }
+
+
+// // main {
+// //     min-width: 300px;
+// //     max-width: 1300px;
+// //     padding: 0 1rem;
+// //     margin: 0 auto 3rem auto;
+// // }
+
+
+// // section {
+// //     margin-bottom: 4rem;
+
+// //     &:last-child {
+// //         margin-bottom: 0;
+// //     }
+
+// //     &.more {
+// //         margin-top: 20rem;
+// //     }
+// // }
+
+
+// // footer {
+// //     padding: 0 1rem 1rem 1rem;
+// // }
+
+
+// // h1 {
+// //     letter-spacing: 3px;
+// // }
+
+
+// // h2 {
+// //     margin-bottom: 3rem;
+// // }
+
+
+// // h3 {
+// //     margin-bottom: 1rem;
+// // }
+
+
+// // p,
+// // ul {
+// //     margin-bottom: .5rem;
+
+// //     &:last-child {
+// //         margin-bottom: 0;
+// //     }
+// // }
+
+
+// // table {
+// //     // width: 100%;
+// //     width: auto;
+
+// //     th {
+// //         padding-bottom: .5rem;
+// //         white-space: nowrap;
+// //     }
+
+// //     th,
+// //     td {
+// //         padding-right: 2rem;
+// //         vertical-align: top;
+// //     }
+// // }
+
+
+// // // .rls {
+// // //     .head {
+// // //         h2 {
+// // //             margin-bottom: .5rem;
+// // //         }
+
+// // //         .meta {
+// // //             color: $color-gray-500;
+// // //             margin-bottom: 1.5rem;
+// // //         }
+
+
+// // //         .coverart {
+// // //             margin-bottom: 1.5rem;
+// // //         }
+
+// // //         .player {
+// // //             .lazycode,
+// // //             .lazymedia {
+// // //                 width: 100%;
+// // //                 max-width: 600px;
+// // //                 max-height: 600px;
+// // //             }
+// // //         }
+// // //     }
+
+// // //     // .description {}
+
+// // //     // .tracklist {}
+
+// // //     // .credit {}
+
+// // //     // .media {}
+// // // }
+
+
+// // .text-align-right {
+// //     text-align: right;
+// // }
+
+
+// // .grid {
+// //     display: grid;
+// //     grid-template-rows: 1fr;
+
+// //     &.content {
+// //         grid-template-columns: 1fr;
+// //         column-gap: 2rem;
+// //         row-gap: 2rem;
+// //     }
+
+// //     &.gallery {
+// //         grid-template-columns: repeat(3, 1fr);
+// //         column-gap: 1rem;
+// //         row-gap: 1rem;
+
+// //         img {
+// //             width: auto;
+// //             height: 100%;
+// //             object-fit: cover;
+// //         }
+// //     }
+// // }
+
+
+// // .lazymedia {
+// //     // display: block;
+// //     // margin-bottom: 1rem;
+
+// //     // &:last-child {
+// //     //     margin-bottom: 0;
+// //     // }
+
+// //     // &.bandcampTrack {
+// //     //     width: 100%;
+// //     //     min-width: 170px;
+// //     //     height: 120px;
+
+// //     //     &.small {
+// //     //         height: 42px;
+// //     //     }
+
+// //     //     &.withCover {
+// //     //         width: 350px;
+// //     //         height: 350px;
+// //     //         margin: 0 auto;
+// //     //     }
+// //     // }
+
+// //     &.bandcampAlbum {
+// //         // with tracklist:
+// //         min-width: 370px;
+// //         height: 208px;
+// //         min-height: 208px;
+
+// //         // &.noTracklist {
+// //         //     min-width: 250px;
+// //         //     height: 120px;
+// //         //     min-height: 120px;
+// //         // }
+// //     }
+// // }
