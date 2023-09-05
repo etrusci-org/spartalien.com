@@ -1,0 +1,145 @@
+<?php
+$session_list = $this->get_session_list();
+
+$session = [];
+if (isset($this->Router->route['var']['session'])) {
+    $session = $this->get_session((int) $this->Router->route['var']['session']);
+}
+?>
+
+
+
+
+<?php if ($session): ?>
+    <h2>Planet 420.<?php print($session['session_num']); ?></h2>
+
+    <div class="grid-x-2">
+
+        <div class="box full-width">
+            <?php
+            if ($session['session_mixcloud_key']) {
+                printf('
+                    <div class="lazycode">
+                        {"type": "mixcloudshow", "slug": "%1$s"}
+                    </div>',
+                    $session['session_mixcloud_key'],
+                );
+            }
+            else {
+                print('<p>Sorry, the recording for this one is lost.</p>');
+            }
+            ?>
+        </div>
+
+
+        <?php
+        // meta
+        printf('
+            <div class="box">
+                <h3>Meta</h3>
+                <ul class="meta">
+                    <li>Track count: %1$s</li>
+                    <li>Total runtime: %2$s [%3$ss]</li>
+                    <li>Released: %4$s</li>
+                </ul>
+            </div>',
+            $session['session_track_count'],
+            $session['session_runtime_human'],
+            $session['session_runtime'],
+            $session['session_pub_date'],
+        );
+        ?>
+    </div>
+
+
+    <div class="box">
+        <h3>Tracklist</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Start Time</th>
+                    <th>Artist</th>
+                    <th>Track</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                foreach ($session['session_track_list'] as $v) {
+                    printf(
+                        '<tr>
+                            <td>%1$s</td>
+                            <td>%2$s</td>
+                            <td>%3$s</td>
+                        </tr>',
+                        $v['track_start_time_human'],
+                        $v['artist_name'],
+                        $v['track_name'],
+                    );
+                }
+                ?>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- <pre><?php print_r($session); ?></pre> -->
+<?php endif; ?>
+
+
+
+
+<div <?php print(($session) ? 'class="more"' : ''); ?>>
+
+    <h2><?php print((!$session) ? 'Planet 420' : 'More Sessions ...'); ?></h2>
+
+    <?php if (!$session): ?>
+        <div class="box full-width">
+            <p>
+                New here? Then simply click the play button to listen to
+                87+
+                hours of selected eclectic music ...
+            </p>
+
+            <div class="lazycode">{
+                "type": "mixcloudplaylist",
+                "slug": "lowtechman/playlists/planet-420"
+            }</div>
+
+            <p>
+                ... or browse through individual sessions and their tracklists below &dArr;
+            </p>
+        </div>
+    <?php endif; ?>
+
+    <div class="box">
+        <table>
+            <thead>
+                <tr>
+                    <th>Session</th>
+                    <th>Date</th>
+                    <th>Runtime</th>
+                    <th>Tracks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                foreach ($session_list as $v) {
+                    printf('
+                        <tr>
+                            <td><a href="./planet420/session:%1$s"%6$s>%1$s</a></td>
+                            <td><a href="./planet420/session:%1$s"%6$s>%2$s</a></td>
+                            <td class="text-align-right font-mono">%3$s [%4$ss]</td>
+                            <td class="text-align-right font-mono">%5$s</td>
+                        </tr>',
+                        $v['session_num'],
+                        $v['session_pub_date'],
+                        $v['session_runtime_human'],
+                        $v['session_runtime'],
+                        $v['session_track_count'],
+                        (isset($this->Router->route['var']['session']) && $this->Router->route['var']['session'] == $v['session_num']) ? ' class="active"' : '',
+                    );
+                }
+                ?>
+            </tbody>
+        </table>
+    </div>
+</div>

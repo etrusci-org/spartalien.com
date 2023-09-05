@@ -36,10 +36,10 @@ if (isset($this->Router->route['var']['id'])) {
                 <div class="lazycode">{
                     "type": "bandcamp%1$s",
                     "slug": "%2$s",
-                    "trackCount": %3$s
+                    "trackcount": %3$s
                 }</div>
             </div>',
-            ($rls['rls_track_count'] == 1) ? 'Track' : 'Album',
+            ($rls['rls_track_count'] == 1) ? 'track' : 'album',
             $rls['rls_bandcamp_id'],
             $rls['rls_track_count'],
         );
@@ -141,7 +141,7 @@ if (isset($this->Router->route['var']['id'])) {
     }
     ?>
 
-    <!-- <pre><?php print_r($rls); ?></pre> -->
+    <pre><?php print_r($rls); ?></pre>
 <?php endif; ?>
 
 

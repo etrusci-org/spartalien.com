@@ -28,8 +28,9 @@ code,
 pre,
 a,
 img,
+audio,
+video,
 iframe,
-// video,
 ::before,
 ::after {
     margin: 0;
@@ -96,11 +97,6 @@ pre {
     overflow: scroll;
 }
 
-// pre,
-// code {
-//     white-space: pre-line;
-// }
-
 
 a {
     color: inherit;
@@ -111,9 +107,9 @@ a {
 
 
 img,
-iframe,
-video
-{
+audio,
+video,
+iframe {
     display: block;
     max-width: 100%;
     height: auto;

@@ -39,10 +39,10 @@ $conf['site_nav'] = [
     //     'link' => './physical',
     //     'link_text' => 'physical',
     // ],
-    // 'planet420' => [
-    //     'link' => './planet420',
-    //     'link_text' => 'planet420',
-    // ],
+    'planet420' => [
+        'link' => './planet420',
+        'link_text' => 'planet420',
+    ],
     // 'mixtape' => [
     //     'link' => './mixtape',
     //     'link_text' => 'mixtape',
@@ -201,18 +201,18 @@ $conf['valid_request_patterns'] = [
     //         'val1' => 'id',
     //     ],
     // ],
-    // [
-    //     'route' => '/^planet420$/',
-    //     'valuesTable' => '',
-    //     'valuesCol' => [],
-    // ],
-    // [
-    //     'route' => '/^planet420\/session:{val1}$/',
-    //     'valuesTable' => 'p420_session',
-    //     'valuesCol' => [
-    //         'val1' => 'num',
-    //     ],
-    // ],
+    [
+        'route' => '/^planet420$/',
+        'valuesTable' => '',
+        'valuesCol' => [],
+    ],
+    [
+        'route' => '/^planet420\/session:{val1}$/',
+        'valuesTable' => 'p420_session',
+        'valuesCol' => [
+            'val1' => 'num',
+        ],
+    ],
     [
         'route' => '/^exit$/',
         'valuesTable' => '',
@@ -284,11 +284,11 @@ $conf['pre_render_settings'] = [
     //     'middleware_files' => ['page/_mention.class.php'],
     //     'page_files' => [],
     // ],
-    // 'planet420' => [
-    //     'headers' => [],
-    //     'middleware_files' => ['page/_planet420.class.php'],
-    //     'page_files' => [],
-    // ],
+    'planet420' => [
+        'headers' => [],
+        'middleware_files' => ['page/_planet420.class.php'],
+        'page_files' => [],
+    ],
     'exit' => [
         'headers' => [],
         'middleware_files' => [],

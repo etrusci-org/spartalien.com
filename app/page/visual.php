@@ -14,8 +14,6 @@ if (isset($this->Router->route['var']['id'])) {
 <?php if ($visual): ?>
     <h2>Visual: <?php print($visual['visual_name']); ?></h2>
 
-    <!-- <div class="box"> -->
-
     <?php
     foreach ($visual['visual_media'] as $v) {
         printf(
@@ -30,7 +28,7 @@ if (isset($this->Router->route['var']['id'])) {
         '<div class="box">
             <h3>Meta</h3>
             <ul class="meta">
-                <li>Created in %1$s</li>
+                <li>Created: %1$s</li>
             </ul>
             %2$s
         </div>',
@@ -39,11 +37,8 @@ if (isset($this->Router->route['var']['id'])) {
     );
     ?>
 
-    <!-- </div> -->
-
 
     <!-- <pre><?php print_r($visual); ?></pre> -->
-
 <?php endif; ?>
 
 
@@ -66,5 +61,4 @@ if (isset($this->Router->route['var']['id'])) {
         ?>
 
     </div>
-
 </div>

@@ -180,7 +180,7 @@ a {
 
 
 nav {
-    font-family: $font-family-deco;
+    font-family: $font-family-mono;
 
     a {
         &:link,
@@ -192,10 +192,9 @@ nav {
             color: $color-white;
         }
 
-        &.active {
-            text-decoration-line: underline;
-
-        }
+        // &.active {
+        //     text-decoration-line: underline;
+        // }
     }
 }
 
@@ -237,7 +236,7 @@ header {
     top: 0;
     line-height: 1;
     padding: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: $color-brand-250;
@@ -370,6 +369,10 @@ footer {
     border-color: $color-gray-900;
     background-color: $color-gray-950;
     box-shadow: 0 0 10px 5px $color-black inset;
+
+    &.full-width {
+        max-width: 100%;
+    }
 }
 
 
@@ -419,12 +422,15 @@ footer {
 }
 
 
-// .lazymedia {
-//     display: block;
-//     margin-bottom: 1.5rem;
-// }
+.lazymedia {
+    display: block;
 
-
+    &.mixcloudshow,
+    &.mixcloudplaylist {
+        width: 100%;
+        height: 180px;
+    }
+}
 
 
 

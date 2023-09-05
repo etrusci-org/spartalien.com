@@ -21,10 +21,11 @@
 
 
     <script type="module">
-        // import { LazyMedia } from './res/lazymedia.js?v=<?php print($this->version['js']); ?>'
+        import { LazyMedia } from './res/lazymedia.js?v=<?php print($this->version['js']); ?>'
 
         window.addEventListener('load', () => {
-            // LazyMedia.embed()
+            const LM = new LazyMedia()
+            LM.autoembed()
 
             document.querySelectorAll('a').forEach(e => {
                 if (e.hostname && document.location.hostname != e.hostname) {

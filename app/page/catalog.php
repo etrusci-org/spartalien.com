@@ -24,7 +24,7 @@ if (isset($this->Router->route['var']['artist'])) {
     printf('
         <div class="box">
             <div class="lazycode">{
-                "type": "bandcampTrack",
+                "type": "bandcamptrack",
                 "slug": "%1$s"
             }</div>
         </div>',
@@ -39,9 +39,9 @@ if (isset($this->Router->route['var']['artist'])) {
         printf('
             <div class="box">
                 <h3>Meta</h3>
-                <ul>
+                <ul class="meta">
                     <li>Artist: <a href="./catalog/artist:%1$s">%2$s</a></li>
-                    <li>Runtime: %3$s <code>[%4$ss]</code></li>
+                    <li>Runtime: %3$s [%4$ss]</li>
                 </ul>
             </div>',
             $track['artist_id'],
@@ -129,7 +129,7 @@ if (isset($this->Router->route['var']['artist'])) {
                     <tr>
                         <th>Track</th>
                         <th>Artist</th>
-                        <th class="text-align-right">Runtime</th>
+                        <th>Runtime</th>
                     </tr>
                 </thead>
                 <tbody>
