@@ -32,6 +32,7 @@
 body {
     font-family: $font-family-main;
     font-size: $font-size-default-min;
+    text-rendering: geometricPrecision;
     color: $color-gray-500;
     background-color: $color-gray-997;
 }
@@ -443,7 +444,7 @@ footer {
     &.mixcloudshow,
     &.mixcloudplaylist {
         width: 100%;
-        height: 180px;
+        height: 181px;
     }
 }
 

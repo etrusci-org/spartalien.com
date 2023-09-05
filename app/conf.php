@@ -51,18 +51,18 @@ $conf['site_nav'] = [
     //     'link' => './tool',
     //     'link_text' => 'tool',
     // ],
-    // 'stuff' => [
-    //     'link' => './stuff',
-    //     'link_text' => 'stuff',
-    // ],
+    'stuff' => [
+        'link' => './stuff',
+        'link_text' => 'stuff',
+    ],
     // 'mention' => [
     //     'link' => './mention',
     //     'link_text' => 'mention',
     // ],
-    // 'news' => [
-    //     'link' => './news',
-    //     'link_text' => 'news',
-    // ],
+    'news' => [
+        'link' => './news',
+        'link_text' => 'news',
+    ],
     'about' => [
         'link' => './about',
         'link_text' => 'about',
@@ -160,28 +160,35 @@ $conf['valid_request_patterns'] = [
     //     'valuesTable' => '',
     //     'valuesCol' => [],
     // ],
-    // [
-    //     'route' => '/^stuff$/',
-    //     'valuesTable' => '',
-    //     'valuesCol' => [],
-    // ],
-    // [
-    //     'route' => '/^stuff\/id:{val1}$/',
-    //     'valuesTable' => 'stuff',
-    //     'valuesCol' => [
-    //         'val1' => 'id',
-    //     ],
-    // ],
+    [
+        'route' => '/^stuff$/',
+        'valuesTable' => '',
+        'valuesCol' => [],
+    ],
+    [
+        'route' => '/^stuff\/id:{val1}$/',
+        'valuesTable' => 'stuff',
+        'valuesCol' => [
+            'val1' => 'id',
+        ],
+    ],
     // [
     //     'route' => '/^mixtape$/',
     //     'valuesTable' => '',
     //     'valuesCol' => [],
     // ],
-    // [
-    //     'route' => '/^news$/',
-    //     'valuesTable' => '',
-    //     'valuesCol' => [],
-    // ],
+    [
+        'route' => '/^news$/',
+        'valuesTable' => '',
+        'valuesCol' => [],
+    ],
+    [
+        'route' => '/^news\/id:{val1}$/',
+        'valuesTable' => 'news',
+        'valuesCol' => [
+            'val1' => 'id',
+        ],
+    ],
     // [
     //     'route' => '/^mention$/',
     //     'valuesTable' => '',
@@ -190,13 +197,6 @@ $conf['valid_request_patterns'] = [
     // [
     //     'route' => '/^mention\/id:{val1}$/',
     //     'valuesTable' => 'mention',
-    //     'valuesCol' => [
-    //         'val1' => 'id',
-    //     ],
-    // ],
-    // [
-    //     'route' => '/^news\/id:{val1}$/',
-    //     'valuesTable' => 'news',
     //     'valuesCol' => [
     //         'val1' => 'id',
     //     ],
@@ -264,21 +264,21 @@ $conf['pre_render_settings'] = [
     //     'middleware_files' => [],
     //     'page_files' => [],
     // ],
-    // 'stuff' => [
-    //     'headers' => [],
-    //     'middleware_files' => ['page/_stuff.class.php'],
-    //     'page_files' => [],
-    // ],
+    'stuff' => [
+        'headers' => [],
+        'middleware_files' => ['page/_stuff.class.php'],
+        'page_files' => [],
+    ],
     // 'mixtape' => [
     //     'headers' => [],
     //     'middleware_files' => [],
     //     'page_files' => [],
     // ],
-    // 'news' => [
-    //     'headers' => [],
-    //     'middleware_files' => ['page/_news.class.php'],
-    //     'page_files' => [],
-    // ],
+    'news' => [
+        'headers' => [],
+        'middleware_files' => ['page/_news.class.php'],
+        'page_files' => [],
+    ],
     // 'mention' => [
     //     'headers' => [],
     //     'middleware_files' => ['page/_mention.class.php'],

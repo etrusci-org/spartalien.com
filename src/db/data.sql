@@ -1398,7 +1398,7 @@ INSERT INTO news_text (news_id, text) VALUES (39, 'New merchandise: [Logo Sticke
 INSERT INTO news_text (news_id, text) VALUES (40, 'My music will soon disappear from all streaming/download platforms for roughly 2-3 weeks. It will be then re-uploaded again - and should automagically reappear in your playlists and libraries. If you''re missing anything after this timeframe, let me know. In the meantime you can always stream/purchase everything through my [website](//spartalien.com) or [Bandcamp page](//spartalien.bandcamp.com).');
 INSERT INTO news_text (news_id, text) VALUES (41, 'New music: [Let It All Go, Volume 2](./music/id:25)');
 INSERT INTO news_text (news_id, text) VALUES (42, 'New sample pack: [S9SP1 - 2358 Sample Pack](./stuff/id:21)');
-INSERT INTO news_text (news_id, text) VALUES (43, 'The music is back on Spotify and other platforms, Updated the website.');
+INSERT INTO news_text (news_id, text) VALUES (43, 'The music is back on Spotify and other platforms.');
 INSERT INTO news_text (news_id, text) VALUES (43, 'Updated the website.');
 INSERT INTO news_text (news_id, text) VALUES (44, 'New compilation: [CHILL TRACKS 2016-2020](./music/id:26)');
 INSERT INTO news_text (news_id, text) VALUES (45, 'New music: [FLOATING HIGH](./music/id:27)');
