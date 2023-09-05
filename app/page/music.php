@@ -19,7 +19,7 @@ if (isset($this->Router->route['var']['id'])) {
         <?php
         // coverart
         printf('
-            <div class="box">
+            <div class="box full-width">
                 <a href="%1$s">
                     <img src="%2$s" alt="coverart">
                 </a>
@@ -32,7 +32,7 @@ if (isset($this->Router->route['var']['id'])) {
         <?php
         // player
         printf('
-            <div class="box">
+            <div class="box full-width">
                 <div class="lazycode">{
                     "type": "bandcamp%1$s",
                     "slug": "%2$s",

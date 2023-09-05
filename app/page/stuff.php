@@ -15,26 +15,14 @@ if (isset($this->Router->route['var']['id'])) {
     <h2><?php print($stuff['stuff_name']); ?></h2>
 
 
-    <div class="grid-x-2">
+    <div class="box">
         <?php
         foreach ($stuff['stuff_media'] as $v) {
-            $lazycode = $this->_json_dec($v);
-
             printf(
-                '<div class="box full-width">
-                    %3$s
-                    <div class="lazycode">{
-                        "type": "%1$s",
-                        "slug": "%2$s"
-                    }</div>
-                </div>',
-                $lazycode['type'],
-                $lazycode['slug'],
-                ($lazycode['type'] == 'audio') ? sprintf('<h3>%s</h3>', basename($lazycode['slug'])) : '',
+                '<div class="lazycode">%s</div>',
+                $v,
             );
-
         }
-        // print(implode('', array_map(fn(string $v): string => sprintf('<div class="lazycode">%s</div>', $v), $stuff['stuff_media'])));
         ?>
     </div>
 <?php endif; ?>

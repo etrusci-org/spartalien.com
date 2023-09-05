@@ -35,30 +35,30 @@ $conf['site_nav'] = [
         'link' => './visual',
         'link_text' => 'visual',
     ],
-    // 'physical' => [
-    //     'link' => './physical',
-    //     'link_text' => 'physical',
-    // ],
+    'physical' => [
+        'link' => './physical',
+        'link_text' => 'physical',
+    ],
     'planet420' => [
         'link' => './planet420',
         'link_text' => 'planet420',
     ],
-    // 'mixtape' => [
-    //     'link' => './mixtape',
-    //     'link_text' => 'mixtape',
-    // ],
-    // 'tool' => [
-    //     'link' => './tool',
-    //     'link_text' => 'tool',
-    // ],
+    'mixtape' => [
+        'link' => './mixtape',
+        'link_text' => 'mixtape',
+    ],
+    'tool' => [
+        'link' => './tool',
+        'link_text' => 'tool',
+    ],
     'stuff' => [
         'link' => './stuff',
         'link_text' => 'stuff',
     ],
-    // 'mention' => [
-    //     'link' => './mention',
-    //     'link_text' => 'mention',
-    // ],
+    'mention' => [
+        'link' => './mention',
+        'link_text' => 'mention',
+    ],
     'news' => [
         'link' => './news',
         'link_text' => 'news',
@@ -131,18 +131,18 @@ $conf['valid_request_patterns'] = [
             'val1' => 'id',
         ],
     ],
-    // [
-    //     'route' => '/^physical$/',
-    //     'valuesTable' => '',
-    //     'valuesCol' => [],
-    // ],
-    // [
-    //     'route' => '/^physical\/id:{val1}$/',
-    //     'valuesTable' => 'phy',
-    //     'valuesCol' => [
-    //         'val1' => 'id',
-    //     ],
-    // ],
+    [
+        'route' => '/^physical$/',
+        'valuesTable' => '',
+        'valuesCol' => [],
+    ],
+    [
+        'route' => '/^physical\/id:{val1}$/',
+        'valuesTable' => 'phy',
+        'valuesCol' => [
+            'val1' => 'id',
+        ],
+    ],
     [
         'route' => '/^visual$/',
         'valuesTable' => '',
@@ -155,11 +155,11 @@ $conf['valid_request_patterns'] = [
             'val1' => 'id',
         ],
     ],
-    // [
-    //     'route' => '/^tool$/',
-    //     'valuesTable' => '',
-    //     'valuesCol' => [],
-    // ],
+    [
+        'route' => '/^tool$/',
+        'valuesTable' => '',
+        'valuesCol' => [],
+    ],
     [
         'route' => '/^stuff$/',
         'valuesTable' => '',
@@ -172,11 +172,11 @@ $conf['valid_request_patterns'] = [
             'val1' => 'id',
         ],
     ],
-    // [
-    //     'route' => '/^mixtape$/',
-    //     'valuesTable' => '',
-    //     'valuesCol' => [],
-    // ],
+    [
+        'route' => '/^mixtape$/',
+        'valuesTable' => '',
+        'valuesCol' => [],
+    ],
     [
         'route' => '/^news$/',
         'valuesTable' => '',
@@ -189,18 +189,18 @@ $conf['valid_request_patterns'] = [
             'val1' => 'id',
         ],
     ],
-    // [
-    //     'route' => '/^mention$/',
-    //     'valuesTable' => '',
-    //     'valuesCol' => [],
-    // ],
-    // [
-    //     'route' => '/^mention\/id:{val1}$/',
-    //     'valuesTable' => 'mention',
-    //     'valuesCol' => [
-    //         'val1' => 'id',
-    //     ],
-    // ],
+    [
+        'route' => '/^mention$/',
+        'valuesTable' => '',
+        'valuesCol' => [],
+    ],
+    [
+        'route' => '/^mention\/id:{val1}$/',
+        'valuesTable' => 'mention',
+        'valuesCol' => [
+            'val1' => 'id',
+        ],
+    ],
     [
         'route' => '/^planet420$/',
         'valuesTable' => '',
@@ -249,41 +249,41 @@ $conf['pre_render_settings'] = [
         'middleware_files' => ['page/_music.class.php'],
         'page_files' => [],
     ],
-    // 'physical' => [
-    //     'headers' => [],
-    //     'middleware_files' => ['page/_physical.class.php'],
-    //     'page_files' => [],
-    // ],
+    'physical' => [
+        'headers' => [],
+        'middleware_files' => ['page/_physical.class.php'],
+        'page_files' => [],
+    ],
     'visual' => [
         'headers' => [],
         'middleware_files' => ['page/_visual.class.php'],
         'page_files' => [],
     ],
-    // 'tool' => [
-    //     'headers' => [],
-    //     'middleware_files' => [],
-    //     'page_files' => [],
-    // ],
+    'tool' => [
+        'headers' => [],
+        'middleware_files' => [],
+        'page_files' => [],
+    ],
     'stuff' => [
         'headers' => [],
         'middleware_files' => ['page/_stuff.class.php'],
         'page_files' => [],
     ],
-    // 'mixtape' => [
-    //     'headers' => [],
-    //     'middleware_files' => [],
-    //     'page_files' => [],
-    // ],
+    'mixtape' => [
+        'headers' => [],
+        'middleware_files' => [],
+        'page_files' => [],
+    ],
     'news' => [
         'headers' => [],
         'middleware_files' => ['page/_news.class.php'],
         'page_files' => [],
     ],
-    // 'mention' => [
-    //     'headers' => [],
-    //     'middleware_files' => ['page/_mention.class.php'],
-    //     'page_files' => [],
-    // ],
+    'mention' => [
+        'headers' => [],
+        'middleware_files' => ['page/_mention.class.php'],
+        'page_files' => [],
+    ],
     'planet420' => [
         'headers' => [],
         'middleware_files' => ['page/_planet420.class.php'],

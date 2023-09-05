@@ -22,7 +22,7 @@ if (isset($this->Router->route['var']['artist'])) {
     <?php
     // player
     printf('
-        <div class="box">
+        <div class="box full-width">
             <div class="lazycode">{
                 "type": "bandcamptrack",
                 "slug": "%1$s"
