@@ -51,7 +51,6 @@ pre,
 
 h1 {
     font-family: $font-family-deco;
-    letter-spacing: .15rem;
     color: $color-gray-150;
     letter-spacing: .25rem;
 }
@@ -179,24 +178,24 @@ a {
 }
 
 
-nav {
-    font-family: $font-family-mono;
+// nav {
+//     font-family: $font-family-mono;
 
-    a {
-        &:link,
-        &:visited {
-            text-decoration-line: none;
-        }
+//     a {
+//         &:link,
+//         &:visited {
+//             text-decoration-line: none;
+//         }
 
-        &:active {
-            color: $color-white;
-        }
+//         &:active {
+//             color: $color-white;
+//         }
 
-        // &.active {
-        //     text-decoration-line: underline;
-        // }
-    }
-}
+//         // &.active {
+//         //     text-decoration-line: underline;
+//         // }
+//     }
+// }
 
 
 table {
@@ -254,6 +253,22 @@ nav {
     row-gap: .5rem;
     align-items: flex-start;
     justify-content: flex-start;
+    font-family: $font-family-mono;
+
+    a {
+        &:link,
+        &:visited {
+            text-decoration-line: none;
+        }
+
+        &:active {
+            color: $color-white;
+        }
+
+        // &.active {
+        //     text-decoration-line: underline;
+        // }
+    }
 }
 
 
@@ -471,8 +486,7 @@ footer {
 
 
 // width - extra large
-@media screen and (min-width: 1280px) {
-}
+// @media screen and (min-width: 1280px) {}
 
 
 // width - extra extra large
