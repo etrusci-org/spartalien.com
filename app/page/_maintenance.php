@@ -1,6 +1,6 @@
 <?php
 error_reporting(0);
-date_default_timezone_set('Europe/Zurich');
+date_default_timezone_set('UTC');
 ?>
 <!DOCTYPE html>
 <html lang="en-US">

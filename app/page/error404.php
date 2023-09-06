@@ -20,7 +20,6 @@
             ]
         }</div>
     </div>
-
     <div class="box">
         <h3>Submit A Bug Report</h3>
         <p>

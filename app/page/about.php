@@ -2,7 +2,6 @@
 
 
 <div class="grid-x-2">
-
     <div class="box">
         <h3>In A Nutshell</h3>
         <p>Multimedia experimenter / Music addict / Human</p>
@@ -14,7 +13,6 @@
         </p>
     </div>
 
-
     <div class="box">
         <h3>Ways To Get In Touch</h3>
         <ul>
@@ -25,12 +23,12 @@
             </li>
         </ul>
     </div>
-
 </div>
+
 
 <div class="box">
     <h3>Why / Roots / Extended "In A Nutshell"</h3>
-    <p>(This is an excerpt from the Shikantaza Creativity Interview.)</p>
+    <div class="meta">(This is an excerpt from the Shikantaza Creativity Interview.)</div>
     <p>
         I became really infected with the digital virus around in the late 90s when I built my first computer.
         A year or two later I started taking photos and manipulating them digitally. I also had a few printed,

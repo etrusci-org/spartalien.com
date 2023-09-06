@@ -5,19 +5,16 @@ $rls = [];
 if (isset($this->Router->route['var']['id'])) {
     $rls = $this->get_rls((int) $this->Router->route['var']['id']);
 }
-
-// var_dump($rls);
-// var_dump($rls_list);
 ?>
 
 
-<?php if ($rls): ?>
 
+
+<?php if ($rls): ?>
     <h2><?php print($rls['rls_name']); ?></h2>
 
     <div class="grid-x-2">
         <?php
-        // coverart
         printf('
             <div class="box full-width">
                 <a href="%1$s">
@@ -27,10 +24,7 @@ if (isset($this->Router->route['var']['id'])) {
             $rls['rls_preview_image']['big'],
             $rls['rls_preview_image']['med'],
         );
-        ?>
 
-        <?php
-        // player
         printf('
             <div class="box full-width">
                 <div class="lazycode">{
@@ -48,7 +42,6 @@ if (isset($this->Router->route['var']['id'])) {
 
     <div class="grid-x-2">
         <?php
-        // meta + description
         printf('
             <div class="box">
                 <h3>Meta</h3>
@@ -70,7 +63,6 @@ if (isset($this->Router->route['var']['id'])) {
             ($rls['rls_description']) ? sprintf('<p>%s</p>', $this->_lazytext($rls['rls_description'])) : '',
         );
 
-        // tracklist
         print(
             '<div class="box">
                 <h3>Tracklist</h3>
@@ -93,7 +85,6 @@ if (isset($this->Router->route['var']['id'])) {
 
     <div class="grid-x-2">
         <?php
-        // credit
         $track_credit = [];
         foreach ($rls['rls_track_list'] as $t) {
             foreach ($t['track_credit'] as $c) {
@@ -114,8 +105,6 @@ if (isset($this->Router->route['var']['id'])) {
             print('</div>');
         }
 
-
-        // dist
         printf('
             <div class="box">
                 <h3>Distribution</h3>
@@ -129,7 +118,6 @@ if (isset($this->Router->route['var']['id'])) {
     </div>
 
     <?php
-    // media
     if ($rls['rls_media']) {
         printf('
             <div class="box">
@@ -140,22 +128,19 @@ if (isset($this->Router->route['var']['id'])) {
         );
     }
     ?>
-
-    <!-- <pre><?php print_r($rls); ?></pre> -->
 <?php endif; ?>
 
 
+
+
 <div <?php print(($rls) ? 'class="more"' : ''); ?>>
-
     <h2><?php print((!$rls) ? 'Music For You, Them, And Me' : 'More Music ...'); ?></h2>
-
     <div class="grid">
-
         <?php
         foreach ($rls_list as $v) {
             printf('
                 <a href="./music/id:%1$s" title="%2$s"%4$s>
-                    <img src="%3$s" loading="lazy" alt="preview image">
+                    <img src="%3$s" loading="lazy" alt="%2$s">
                 </a>',
                 $v['rls_id'],
                 $v['rls_name'],
@@ -164,7 +149,5 @@ if (isset($this->Router->route['var']['id'])) {
             );
         }
         ?>
-
     </div>
-
 </div>

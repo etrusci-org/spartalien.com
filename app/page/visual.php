@@ -5,10 +5,9 @@ $visual = [];
 if (isset($this->Router->route['var']['id'])) {
     $visual = $this->get_visual((int) $this->Router->route['var']['id']);
 }
-
-// var_dump($visual);
-// var_dump($visual_list);
 ?>
+
+
 
 
 <?php if ($visual): ?>
@@ -36,15 +35,13 @@ if (isset($this->Router->route['var']['id'])) {
         ($visual['visual_description']) ? sprintf('<p>%s</p>', $this->_lazytext($visual['visual_description'])) : '',
     );
     ?>
-
-
-    <!-- <pre><?php print_r($visual); ?></pre> -->
 <?php endif; ?>
+
+
 
 
 <div <?php print(($visual) ? 'class="more"' : ''); ?>>
     <h2><?php print((!$visual) ? 'Visuals For You, Them, And Me' : 'More Visuals ...'); ?></h2>
-
     <div class="grid">
         <?php
         foreach ($visual_list as $v) {
@@ -59,6 +56,5 @@ if (isset($this->Router->route['var']['id'])) {
             );
         }
         ?>
-
     </div>
 </div>

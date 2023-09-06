@@ -5,10 +5,9 @@ $news = [];
 if (isset($this->Router->route['var']['id'])) {
     $news = $this->get_news((int) $this->Router->route['var']['id']);
 }
-
-// var_dump($news);
-// var_dump($news_list);
 ?>
+
+
 
 
 <?php if ($news): ?>
@@ -23,17 +22,13 @@ if (isset($this->Router->route['var']['id'])) {
         }
         ?>
     </div>
-
-    <!-- <pre><?php print_r($news); ?></pre> -->
 <?php endif; ?>
 
 
 
 
 <div <?php print(($news) ? 'class="more"' : ''); ?>>
-
     <h2><?php print((!$news) ? 'Notable News & Updates' : 'More News ...'); ?></h2>
-
     <div class="box">
         <ul>
             <?php

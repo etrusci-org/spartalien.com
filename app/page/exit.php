@@ -10,13 +10,13 @@ $exit_list = $this->DB->query('
 ?>
 
 
+
+
 <h2>Selected Exit Routes</h2>
 
 
 <div class="box">
-
     <ul class="grid-x-3 compact-lines">
-
         <?php
         foreach ($exit_list as $v) {
             printf('
@@ -27,12 +27,10 @@ $exit_list = $this->DB->query('
             );
         }
         ?>
-
     </ul>
-
 </div>
 
 
 <div class="box">
-    <small>The list order is automagically randomized from time to time. If you find your site linked here and want to have it updated or removed, let me know.</small>
+    <p>The list order is automagically randomized from time to time. If you find your site linked here and want to have it updated or removed, let me know.</p>
 </div>

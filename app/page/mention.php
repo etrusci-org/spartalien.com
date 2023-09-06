@@ -10,10 +10,8 @@ if (isset($this->Router->route['var']['id'])) {
 
 
 
-
 <?php if ($mention): ?>
     <h2><?php print($mention['mention_subject']); ?></h2>
-
 
     <?php
     if ($mention['mention_description']) {
@@ -24,10 +22,7 @@ if (isset($this->Router->route['var']['id'])) {
             $this->_lazytext($mention['mention_description'])
         );
     }
-    ?>
 
-
-    <?php
     foreach ($mention['mention_media'] as $v) {
         printf(
             '<div class="box">
@@ -37,18 +32,13 @@ if (isset($this->Router->route['var']['id'])) {
         );
     }
     ?>
-
-    <!-- <pre><?php print_r($mention); ?></pre> -->
 <?php endif; ?>
 
 
 
 
-
 <div <?php print(($mention) ? 'class="more"' : ''); ?>>
-
     <h2><?php print((!$mention) ? 'Mentions' : 'More Mentions ...'); ?></h2>
-
     <div class="box">
         <ul class="grid-x-3 compact-lines">
             <?php
@@ -61,7 +51,5 @@ if (isset($this->Router->route['var']['id'])) {
             }
             ?>
         </ul>
-
-        <!-- <pre><?php print_r($mention_list); ?></pre> -->
     </div>
 </div>

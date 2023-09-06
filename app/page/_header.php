@@ -17,12 +17,7 @@
             &middot; <?php print($this->get_site_nav_html(separator: ' &middot; ')); ?>
         </nav>
 
-        <noscript>
-            <div class="noscript">
-                Consider enabling JavaScript or features like audio and video players won't work.
-                <a href="//enable-javascript.com" target="_blank">Find instructions there</a>
-            </div>
-        </noscript>
+        <noscript><div class="noscript">Consider enabling JavaScript or features like audio and video players won't work. <a href="//enable-javascript.com" target="_blank">Find instructions there</a></div></noscript>
     </header>
 
 

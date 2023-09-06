@@ -10,10 +10,8 @@ if (isset($this->Router->route['var']['id'])) {
 
 
 
-
 <?php if ($stuff): ?>
     <h2><?php print($stuff['stuff_name']); ?></h2>
-
 
     <div class="box">
         <?php
@@ -30,11 +28,8 @@ if (isset($this->Router->route['var']['id'])) {
 
 
 
-
 <div <?php print(($stuff) ? 'class="more"' : ''); ?>>
-
     <h2><?php print((!$stuff) ? 'Miscellaneous Stuff' : 'More stuff ...'); ?></h2>
-
     <div class="box">
         <ul class="grid-x-3 compact-lines">
             <?php
@@ -47,7 +42,5 @@ if (isset($this->Router->route['var']['id'])) {
             }
             ?>
         </ul>
-
-        <!-- <pre><?php print_r($stuff_list); ?></pre> -->
     </div>
 </div>

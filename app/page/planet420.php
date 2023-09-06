@@ -16,7 +16,6 @@ $total_hours_to_listen = $this->get_total_hours_to_listen($session_list);
     <h2>Planet 420.<?php print($session['session_num']); ?></h2>
 
     <div class="grid-x-2">
-
         <div class="box full-width">
             <?php
             if ($session['session_mixcloud_key']) {
@@ -33,9 +32,7 @@ $total_hours_to_listen = $this->get_total_hours_to_listen($session_list);
             ?>
         </div>
 
-
         <?php
-        // meta
         printf('
             <div class="box">
                 <h3>Meta</h3>
@@ -52,7 +49,6 @@ $total_hours_to_listen = $this->get_total_hours_to_listen($session_list);
         );
         ?>
     </div>
-
 
     <div class="box">
         <h3>Tracklist</h3>
@@ -82,17 +78,13 @@ $total_hours_to_listen = $this->get_total_hours_to_listen($session_list);
             </tbody>
         </table>
     </div>
-
-    <!-- <pre><?php print_r($session); ?></pre> -->
 <?php endif; ?>
 
 
 
 
 <div <?php print(($session) ? 'class="more"' : ''); ?>>
-
     <h2><?php print((!$session) ? 'Planet 420' : 'More Sessions ...'); ?></h2>
-
     <?php if (!$session): ?>
         <div class="box full-width">
             <p>
@@ -100,7 +92,6 @@ $total_hours_to_listen = $this->get_total_hours_to_listen($session_list);
                 <?php print($total_hours_to_listen); ?>
                 hours of selected eclectic music ...
             </p>
-
             <div class="lazycode">{
                 "type": "mixcloudplaylist",
                 "slug": "lowtechman/playlists/planet-420"
@@ -109,9 +100,7 @@ $total_hours_to_listen = $this->get_total_hours_to_listen($session_list);
     <?php endif; ?>
 
     <div class="box">
-        <p>
-            ... or browse through individual sessions and their tracklists:
-        </p>
+        <p>... or browse through individual sessions and their tracklists:</p>
         <table>
             <thead>
                 <tr>
