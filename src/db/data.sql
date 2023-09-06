@@ -529,7 +529,7 @@ INSERT INTO rls_media (rls_id, code) VALUES (22, '{"type": "link", "slug": "//st
 INSERT INTO rls_media (rls_id, code) VALUES (23, '{"type": "youtubevideo", "slug": "D0GvSMubkFw"}');
 INSERT INTO rls_media (rls_id, code) VALUES (23, '{"type": "youtubevideo", "slug": "a8GS5Iw0UyU"}');
 INSERT INTO rls_media (rls_id, code) VALUES (25, '{"type": "youtubevideo", "slug": "4HLmwToUeXw"}');
-INSERT INTO rls_media (rls_id, code) VALUES (30, '{"type": "link", "slug": "./file/flux-lyrics.html", "text": "Lyrics.html", "attr": [["target", "_blank"]]}');
+INSERT INTO rls_media (rls_id, code) VALUES (30, '{"type": "link", "slug": "./file/flux-lyrics.html", "text": "Lyrics.html", "target": "_blank"}');
 INSERT INTO rls_media (rls_id, code) VALUES (30, '{"type": "link", "slug": "//stream.resonate.coop/artist/20951/release/flux", "text": "Flux on Resonate"}');
 INSERT INTO rls_media (rls_id, code) VALUES (30, '{"type": "youtubevideo", "slug": "mE4p5UV62sw"}');
 INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "youtubevideo", "slug": "mseAapnJomY"}');
@@ -571,7 +571,7 @@ INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./f
 INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-36.jpg"}');
 INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-37.jpg"}');
 INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-38.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (34, '{"type": "link", "slug": "./file/smoking-sea-lyrics.html", "text": "Smoking-Sea-Lyrics.html", "attr": [["target","_blank"]]}');
+INSERT INTO rls_media (rls_id, code) VALUES (34, '{"type": "link", "slug": "./file/smoking-sea-lyrics.html", "text": "Smoking-Sea-Lyrics.html", "target": "_blank"}');
 INSERT INTO rls_media (rls_id, code) VALUES (34, '{"type": "link", "slug": "//stream.resonate.coop/artist/20951/release/okay-but-can-you-rap-to-this", "text": "OKAY, BUT CAN YOU RAP TO THIS? on Resonate"}');
 INSERT INTO rls_media (rls_id, code) VALUES (35, '{"type": "youtubeplaylist", "slug": "PLGOlCfPCyZ4EHWNjgL5g5bRG6bur9dUXf"}');
 INSERT INTO rls_media (rls_id, code) VALUES (38, '{"type": "image", "slug": "./file/old-soundex/00-arT2-Sound.Ex-front.jpg"}');
@@ -1451,9 +1451,9 @@ INSERT INTO mention (subject, description) VALUES ('Spooky Kitten Records'' WHiT
 
 INSERT INTO mention_media (mention_id, code) VALUES (1, '{"type": "youtubevideo", "slug": "XWlvvSPq9E8"}');
 INSERT INTO mention_media (mention_id, code) VALUES (2, '{"type": "youtubevideo", "slug": "TTJBrAWgoNA"}');
-INSERT INTO mention_media (mention_id, code) VALUES (3, '{"type": "link", "slug": "./file/shikantaza-creativity-interview-iii-spartalien.html", "text": "Shikantaza Creativity Interview III", "attr": [["target", "_blank"]]}');
-INSERT INTO mention_media (mention_id, code) VALUES (4, '{"type": "youtubevideo", "slug": "syK2wY3uTpk", "timeStart": 1444}');
-INSERT INTO mention_media (mention_id, code) VALUES (5, '{"type": "youtubevideo", "slug": "UsBWgNRUCyM", "timeStart": 6387}');
+INSERT INTO mention_media (mention_id, code) VALUES (3, '{"type": "link", "slug": "./file/shikantaza-creativity-interview-iii-spartalien.html", "text": "Shikantaza Creativity Interview III", "target": "_blank"}');
+INSERT INTO mention_media (mention_id, code) VALUES (4, '{"type": "youtubevideo", "slug": "syK2wY3uTpk", "start": 1444}');
+INSERT INTO mention_media (mention_id, code) VALUES (5, '{"type": "youtubevideo", "slug": "UsBWgNRUCyM", "start": 6387}');
 INSERT INTO mention_media (mention_id, code) VALUES (6, '{"type": "mixcloudshow", "slug": "camp_fr/resonate-27th-march-2022"}');
 INSERT INTO mention_media (mention_id, code) VALUES (6, '{"type": "link", "slug": "//stream.resonate.coop/u/18562/playlist/resonate-2022-03-27-camp-radio", "text": "Playlist on resonate.coop"}');
 INSERT INTO mention_media (mention_id, code) VALUES (7, '{"type": "link", "slug": "//kaisekidigital.bandcamp.com/album/bento-box-vol-2-2?action=buy", "text": "BUY"}');
@@ -1475,7 +1475,7 @@ INSERT INTO mention_media (mention_id, code) VALUES (13, '{"type": "link", "slug
 INSERT INTO mention_media (mention_id, code) VALUES (14, '{"type": "link", "slug": "//soundsforthesoul.bandcamp.com/album/sfts-the-backrooms-comp-level-2?action=buy", "text": "BUY"}');
 INSERT INTO mention_media (mention_id, code) VALUES (14, '{"type": "image", "slug": "./file/compilation/soundsforthesoul-the-backrooms-comp-level-2.jpg"}');
 INSERT INTO mention_media (mention_id, code) VALUES (14, '{"type": "bandcampalbum", "slug": "78435677", "trackcount": 43}');
-INSERT INTO mention_media (mention_id, code) VALUES (15, '{"type": "youtubevideo", "slug": "4cGDNeS81lg", "timeStart": 1706}');
+INSERT INTO mention_media (mention_id, code) VALUES (15, '{"type": "youtubevideo", "slug": "4cGDNeS81lg", "start": 1706}');
 
 
 INSERT INTO p420_session(num, pub_date, runtime, mixcloud_key) VALUES (1, '2021-05-04', 10370, NULL);
