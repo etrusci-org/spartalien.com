@@ -70,44 +70,6 @@ if (isset($this->Router->route['var']['id'])) {
             ($rls['rls_description']) ? sprintf('<p>%s</p>', $this->_lazytext($rls['rls_description'])) : '',
         );
 
-
-        // credit
-        $track_credit = [];
-        foreach ($rls['rls_track_list'] as $t) {
-            foreach ($t['track_credit'] as $c) {
-                $track_credit[] = sprintf('<p><code>[track %1$s]</code> %2$s</p>', $t['track_order'], $this->_lazytext($c));
-            }
-        }
-        if ($rls['rls_credit'] || $track_credit) {
-            print(
-                '<div class="box">
-                    <h3>Credits / Notes</h3>'
-            );
-            if ($rls['rls_credit']) {
-                print(implode('', array_map(fn(string $v): string => sprintf('<p>%1$s</p>', $this->_lazytext($v)), $rls['rls_credit'])));
-            }
-            if ($track_credit) {
-                print(implode('', $track_credit));
-            }
-            print('</div>');
-        }
-        ?>
-    </div>
-
-
-    <div class="grid-x-2">
-        <?php
-        // dist
-        printf('
-            <div class="box">
-                <h3>Distribution</h3>
-                <ul>
-                    %1$s
-                </ul>
-            </div>',
-            implode('', array_map(fn(array $v): string => sprintf('<li><a href="%1$s">%2$s</a></li>', $v['url'], ucwords($v['platform'])), $rls['rls_dist'])),
-        );
-
         // tracklist
         print(
             '<div class="box">
@@ -128,6 +90,44 @@ if (isset($this->Router->route['var']['id'])) {
         ?>
     </div>
 
+
+    <div class="grid-x-2">
+        <?php
+        // credit
+        $track_credit = [];
+        foreach ($rls['rls_track_list'] as $t) {
+            foreach ($t['track_credit'] as $c) {
+                $track_credit[] = sprintf('<p><code>[track %1$s]</code> %2$s</p>', $t['track_order'], $this->_lazytext($c));
+            }
+        }
+        if ($rls['rls_credit'] || $track_credit) {
+            print(
+                '<div class="box">
+                    <h3>Credits / Notes</h3>'
+            );
+            if ($rls['rls_credit']) {
+                print(implode('', array_map(fn(string $v): string => sprintf('<p>%1$s</p>', $this->_lazytext($v)), $rls['rls_credit'])));
+            }
+            if ($track_credit) {
+                print(implode('', $track_credit));
+            }
+            print('</div>');
+        }
+
+
+        // dist
+        printf('
+            <div class="box">
+                <h3>Distribution</h3>
+                <ul>
+                    %1$s
+                </ul>
+            </div>',
+            implode('', array_map(fn(array $v): string => sprintf('<li><a href="%1$s">%2$s</a></li>', $v['url'], ucwords($v['platform'])), $rls['rls_dist'])),
+        );
+        ?>
+    </div>
+
     <?php
     // media
     if ($rls['rls_media']) {
@@ -141,7 +141,7 @@ if (isset($this->Router->route['var']['id'])) {
     }
     ?>
 
-    <pre><?php print_r($rls); ?></pre>
+    <!-- <pre><?php print_r($rls); ?></pre> -->
 <?php endif; ?>
 
 
