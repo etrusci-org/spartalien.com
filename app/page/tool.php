@@ -70,7 +70,7 @@
         <h3>RaidTrain</h3>
         <p>Quickly create a time slot overview webpage for your Twitch raid train event and such activities.</p>
         <ul>
-            <li><a href="https://github.com/etrusci-org/raidtrain/#readme" target="_blank">README + Source at GitHub</a></li>
+            <li><a href="https://github.com/etrusci-org/raidtrain/#readme">README + Source at GitHub</a></li>
         </ul>
     </div>
 
@@ -78,7 +78,7 @@
         <h3>Olay</h3>
         <p>Live stream overlay stuff for use as Browser-Source in OBS Studio.</p>
         <ul>
-            <li><a href="https://github.com/etrusci-org/olay/#readme" target="_blank">README + Source at GitHub</a></li>
+            <li><a href="https://github.com/etrusci-org/olay/#readme">README + Source at GitHub</a></li>
         </ul>
     </div>
 </div>
@@ -91,7 +91,7 @@
             Create m3u playlist files for OBS VLC Video Source.
         </p>
         <ul>
-            <li><a href="https://github.com/etrusci-org/loopextender/#readme" target="_blank">README + Source at GitHub</a></li>
+            <li><a href="https://github.com/etrusci-org/loopextender/#readme">README + Source at GitHub</a></li>
         </ul>
     </div>
 
@@ -103,7 +103,7 @@
         </p>
 
         <ul>
-            <li><a href="https://github.com/etrusci-org/jayze/#readme" target="_blank">README + Source at GitHub</a></li>
+            <li><a href="https://github.com/etrusci-org/jayze/#readme">README + Source at GitHub</a></li>
         </ul>
     </div>
 </div>

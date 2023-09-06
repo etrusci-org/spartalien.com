@@ -53,7 +53,7 @@ pre,
 h1 {
     font-family: $font-family-deco;
     color: $color-gray-150;
-    letter-spacing: .25rem;
+    letter-spacing: .15rem;
 }
 
 
@@ -176,34 +176,15 @@ a {
         content: '⇗';
         color: $color-gray-600;
     }
+
+    &.img::after {
+        content: '';
+    }
 }
 
 
-// nav {
-//     font-family: $font-family-mono;
-
-//     a {
-//         &:link,
-//         &:visited {
-//             text-decoration-line: none;
-//         }
-
-//         &:active {
-//             color: $color-white;
-//         }
-
-//         // &.active {
-//         //     text-decoration-line: underline;
-//         // }
-//     }
-// }
-
-
 table {
-    // width: 100%;
-
     th {
-        // padding-bottom: .5rem;
         white-space: nowrap;
     }
 
@@ -211,6 +192,13 @@ table {
     td {
         padding-right: 4rem;
         vertical-align: top;
+    }
+
+    tr:hover,
+    tr:focus {
+        td {
+            background-color: $color-gray-900;
+        }
     }
 }
 
@@ -252,9 +240,10 @@ nav {
     flex-wrap: wrap;
     column-gap: .75rem;
     row-gap: .5rem;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
-    font-family: $font-family-mono;
+    // font-family: $font-family-mono;
+    font-family: $font-family-deco;
 
     a {
         &:link,
@@ -405,7 +394,12 @@ footer {
 
 
 .noscript {
+    display: inline-block;
     color: $color-warning;
+    padding: .25rem;
+    margin-top: 1rem;
+    border-width: 1px;
+    border-color: $color-warning;
 }
 
 

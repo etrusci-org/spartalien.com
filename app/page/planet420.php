@@ -105,14 +105,13 @@ $total_hours_to_listen = $this->get_total_hours_to_listen($session_list);
                 "type": "mixcloudplaylist",
                 "slug": "lowtechman/playlists/planet-420"
             }</div>
-
-            <p>
-                ... or browse through individual sessions and their tracklists below &dArr;
-            </p>
         </div>
     <?php endif; ?>
 
     <div class="box">
+        <p>
+            ... or browse through individual sessions and their tracklists:
+        </p>
         <table>
             <thead>
                 <tr>

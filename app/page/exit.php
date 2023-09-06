@@ -20,7 +20,7 @@ $exit_list = $this->DB->query('
         <?php
         foreach ($exit_list as $v) {
             printf('
-                <li><a href="%1$s" target="_blank" title="%3$s%1$s">%2$s</a></li>',
+                <li><a href="%1$s" title="%3$s%1$s">%2$s</a></li>',
                 $v['exit_url'],
                 $v['exit_text'],
                 ($v['exit_description']) ? sprintf('%1$s : ', $v['exit_description']) : '',

@@ -38,8 +38,8 @@ $cloudcast_list = $this->_json_dec(file_get_contents($cache_file_cloudcasts));
                 if (str_starts_with($v['slug'], 'planet-420')) continue;
                 printf(
                     '<tr>
-                        <td><a href="%1$s" target="_blank"><img src="%5$s" loading="lazy" alt="cover art"></a></td>
-                        <td><a href="%1$s" target="_blank">%2$s</a></td>
+                        <td><a href="%1$s" class="img"><img src="%5$s" loading="lazy" alt="cover art"></a></td>
+                        <td><a href="%1$s">%2$s</a></td>
                         <td>%3$s</td>
                         <td>%4$s</td>
                     </tr>',
