@@ -5,6 +5,8 @@ $session = [];
 if (isset($this->Router->route['var']['session'])) {
     $session = $this->get_session((int) $this->Router->route['var']['session']);
 }
+
+$total_hours_to_listen = $this->get_total_hours_to_listen($session_list);
 ?>
 
 
@@ -95,7 +97,7 @@ if (isset($this->Router->route['var']['session'])) {
         <div class="box full-width">
             <p>
                 New here? Then simply click the play button to listen to
-                87+
+                <?php print($total_hours_to_listen); ?>
                 hours of selected eclectic music ...
             </p>
 
@@ -115,7 +117,6 @@ if (isset($this->Router->route['var']['session'])) {
             <thead>
                 <tr>
                     <th>Session</th>
-                    <th>Date</th>
                     <th>Runtime</th>
                     <th>Tracks</th>
                 </tr>
@@ -125,15 +126,13 @@ if (isset($this->Router->route['var']['session'])) {
                 foreach ($session_list as $v) {
                     printf('
                         <tr>
-                            <td><a href="./planet420/session:%1$s"%6$s>%1$s</a></td>
-                            <td><a href="./planet420/session:%1$s"%6$s>%2$s</a></td>
-                            <td class="text-align-right font-mono">%3$s [%4$ss]</td>
-                            <td class="text-align-right font-mono">%5$s</td>
+                            <td><a href="./planet420/session:%1$s"%5$s>Planet 420.%1$s / %2$s</a></td>
+                            <td class="text-align-right font-mono">%3$s</td>
+                            <td class="text-align-right font-mono">%4$s</td>
                         </tr>',
                         $v['session_num'],
                         $v['session_pub_date'],
                         $v['session_runtime_human'],
-                        $v['session_runtime'],
                         $v['session_track_count'],
                         (isset($this->Router->route['var']['session']) && $this->Router->route['var']['session'] == $v['session_num']) ? ' class="active"' : '',
                     );

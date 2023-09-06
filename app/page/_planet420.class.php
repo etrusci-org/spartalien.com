@@ -81,4 +81,15 @@ class Page extends Core
 
         return $dump ?? [];
     }
+
+
+    protected function get_total_hours_to_listen(array $session_list): float
+    {
+        $s = array_sum(array_map(fn(array $v): int => $v['session_runtime'], $session_list));
+
+        // Substract the first session runtime because the recording is lost
+        $s -= $session_list[0]['session_runtime'];
+
+        return floor($s / 3600);
+    }
 }
