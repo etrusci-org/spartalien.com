@@ -1105,27 +1105,27 @@ INSERT INTO visual (name, pub_date, description) VALUES ('Lost memory', '2021', 
 INSERT INTO visual (name, pub_date, description) VALUES ('Tunnel B21.4.3', '2021', NULL);
 INSERT INTO visual (name, pub_date, description) VALUES ('E dote Baum am Abgrund', '2021', NULL);
 INSERT INTO visual (name, pub_date, description) VALUES ('Subweird 1', '2021', NULL);
-INSERT INTO visual (name, pub_date, description) VALUES ('Continuoduction', '2017-08-25', 'Music video for [Continuoduction](./track/id:1)');
-INSERT INTO visual (name, pub_date, description) VALUES ('I''ll Embrace You Again In Space', '2018-05-24', 'Music video for [I''ll Embrace You Again In Space](./track/id:2)');
-INSERT INTO visual (name, pub_date, description) VALUES ('Realize It''s Just A Ride', '2018-05-24', 'Music video for [Realize It''s Just A Ride](./track/id:3)');
-INSERT INTO visual (name, pub_date, description) VALUES ('Nature''s Song', '2018-03-24', 'Music video for [Nature''s Song](./track/id:4)');
+INSERT INTO visual (name, pub_date, description) VALUES ('Continuoduction', '2017-08-25', 'Music video for [Continuoduction](./catalog/track:1)');
+INSERT INTO visual (name, pub_date, description) VALUES ('I''ll Embrace You Again In Space', '2018-05-24', 'Music video for [I''ll Embrace You Again In Space](./catalog/track:2)');
+INSERT INTO visual (name, pub_date, description) VALUES ('Realize It''s Just A Ride', '2018-05-24', 'Music video for [Realize It''s Just A Ride](./catalog/track:3)');
+INSERT INTO visual (name, pub_date, description) VALUES ('Nature''s Song', '2018-03-24', 'Music video for [Nature''s Song](./catalog/track:4)');
 INSERT INTO visual (name, pub_date, description) VALUES ('Random Morning Piano Doodles', '2019-02-10', NULL);
-INSERT INTO visual (name, pub_date, description) VALUES ('Paenitentia', '2019-06-03', 'Music video for [Paenitentia](./track/id:36)');
-INSERT INTO visual (name, pub_date, description) VALUES ('Brain I/O #1', '2019-06-09', 'Music video for [Brain I/O #1](./track/id:45)');
-INSERT INTO visual (name, pub_date, description) VALUES ('Brain I/O #2', '2019-07-13', 'Music video for [Brain I/O #2](./track/id:46)');
-INSERT INTO visual (name, pub_date, description) VALUES ('Brain I/O #3', '2019-07-02', 'Music video for [Brain I/O #3](./track/id:47)');
-INSERT INTO visual (name, pub_date, description) VALUES ('Brain I/O #4', '2019-07-12', 'Music video for [Brain I/O #4](./track/id:50)');
-INSERT INTO visual (name, pub_date, description) VALUES ('Brain I/O #5', '2019-07-20', 'Music video for [Brain I/O #5](./track/id:51)');
-INSERT INTO visual (name, pub_date, description) VALUES ('Brain I/O #6', '2019-08-15', 'Music video for [Brain I/O #6](./track/id:52)');
-INSERT INTO visual (name, pub_date, description) VALUES ('Brain I/O #7', '2019-12-12', 'Music video for [Brain I/O #7](./track/id:53)');
-INSERT INTO visual (name, pub_date, description) VALUES ('Brain I/O #8', '2019-12-28', 'Music video for [Brain I/O #8](./track/id:59)');
-INSERT INTO visual (name, pub_date, description) VALUES ('Let It All Go, Volume 1', '2020-02-13', 'Music video for [Let It All Go, Volume 1](./track/id:60)');
-INSERT INTO visual (name, pub_date, description) VALUES ('Brain I/O #9', '2020-04-23', 'Music video for [Brain I/O #9](./track/id:62)');
+INSERT INTO visual (name, pub_date, description) VALUES ('Paenitentia', '2019-06-03', 'Music video for [Paenitentia](./catalog/track:36)');
+INSERT INTO visual (name, pub_date, description) VALUES ('Brain I/O #1', '2019-06-09', 'Music video for [Brain I/O #1](./catalog/track:45)');
+INSERT INTO visual (name, pub_date, description) VALUES ('Brain I/O #2', '2019-07-13', 'Music video for [Brain I/O #2](./catalog/track:46)');
+INSERT INTO visual (name, pub_date, description) VALUES ('Brain I/O #3', '2019-07-02', 'Music video for [Brain I/O #3](./catalog/track:47)');
+INSERT INTO visual (name, pub_date, description) VALUES ('Brain I/O #4', '2019-07-12', 'Music video for [Brain I/O #4](./catalog/track:50)');
+INSERT INTO visual (name, pub_date, description) VALUES ('Brain I/O #5', '2019-07-20', 'Music video for [Brain I/O #5](./catalog/track:51)');
+INSERT INTO visual (name, pub_date, description) VALUES ('Brain I/O #6', '2019-08-15', 'Music video for [Brain I/O #6](./catalog/track:52)');
+INSERT INTO visual (name, pub_date, description) VALUES ('Brain I/O #7', '2019-12-12', 'Music video for [Brain I/O #7](./catalog/track:53)');
+INSERT INTO visual (name, pub_date, description) VALUES ('Brain I/O #8', '2019-12-28', 'Music video for [Brain I/O #8](./catalog/track:59)');
+INSERT INTO visual (name, pub_date, description) VALUES ('Let It All Go, Volume 1', '2020-02-13', 'Music video for [Let It All Go, Volume 1](./catalog/track:60)');
+INSERT INTO visual (name, pub_date, description) VALUES ('Brain I/O #9', '2020-04-23', 'Music video for [Brain I/O #9](./catalog/track:62)');
 INSERT INTO visual (name, pub_date, description) VALUES ('Slomo Intros', '2020-05-02', NULL);
-INSERT INTO visual (name, pub_date, description) VALUES ('Brain I/O #10', '2020-07-13', 'Music video for [Brain I/O #10](./track/id:76)');
-INSERT INTO visual (name, pub_date, description) VALUES ('Let It All Go, Volume 2', '2020-12-10', 'Music video for [Let It All Go, Volume 2](./track/id:77)');
+INSERT INTO visual (name, pub_date, description) VALUES ('Brain I/O #10', '2020-07-13', 'Music video for [Brain I/O #10](./catalog/track:76)');
+INSERT INTO visual (name, pub_date, description) VALUES ('Let It All Go, Volume 2', '2020-12-10', 'Music video for [Let It All Go, Volume 2](./catalog/track:77)');
 INSERT INTO visual (name, pub_date, description) VALUES ('4+ Hours of Dark Experimental Ambient and Noise Music | BRAIN I/O', '2021-03-05', 'Mixed version of [BRAIN I/O #1 -](./music/id:18) #10');
-INSERT INTO visual (name, pub_date, description) VALUES ('Flux (feat. Stevie Lee Price)', '2021-08-13', 'Music video for [Flux (feat. Stevie Lee Price)](./track/id:97)');
+INSERT INTO visual (name, pub_date, description) VALUES ('Flux (feat. Stevie Lee Price)', '2021-08-13', 'Music video for [Flux (feat. Stevie Lee Price)](./catalog/track:97)');
 INSERT INTO visual (name, pub_date, description) VALUES ('Calming Stress Relief Music for Meditation, Reflection, and Solitude | UNTOLD STORIES', '2021-10-03', 'Mixed version of [UNTOLD STORIES](./music/id:32)');
 
 
@@ -1436,17 +1436,17 @@ INSERT INTO mention (subject, description) VALUES ('Live on MighTV 2020-11-18', 
 INSERT INTO mention (subject, description) VALUES ('Live on MighTV 2020-11-29', 'The [Might](//might.digital) crew invited me to create some music on their livestream.');
 INSERT INTO mention (subject, description) VALUES ('Shikantaza Creativity Interview', '[Shikantaza Art](//shikantaza.cyberpunkonline.net) asked me to answer some questions.');
 INSERT INTO mention (subject, description) VALUES ('ediblewaves'' YouTube Channel', 'ediblewaves [i]aka[/i] Klangachse invited me to hang out on his livestream.' || CHAR(10) || 'Also check out his [Bandcamp page](//ediblewaves.bandcamp.com) and [YouTube channel](//www.youtube.com/@ediblewaves8027).' || CHAR(10, 10) || 'Starts at: 0:24:04');
-INSERT INTO mention (subject, description) VALUES ('Spooky Kitten Records'' WHiTMiRE Reviews Music: Episode 26', '[Michael Whitmire](//www.youtube.com/@SpookyKittenRecords) played [Flux (feat. Stevie Lee Price)](./track/id:97) on his music review show.' || CHAR(10, 10) || 'Starts at: 1:46:27');
-INSERT INTO mention (subject, description) VALUES ('Resonate on CAMP Radio 2022-03-27', '[The Argent Grub](//theargentgrub.co.uk) included [Rainbows & Unicorns](./track/id:58) in the Resonate playlist.');
+INSERT INTO mention (subject, description) VALUES ('Spooky Kitten Records'' WHiTMiRE Reviews Music: Episode 26', '[Michael Whitmire](//www.youtube.com/@SpookyKittenRecords) played [Flux (feat. Stevie Lee Price)](./catalog/track:97) on his music review show.' || CHAR(10, 10) || 'Starts at: 1:46:27');
+INSERT INTO mention (subject, description) VALUES ('Resonate on CAMP Radio 2022-03-27', '[The Argent Grub](//theargentgrub.co.uk) included [Rainbows & Unicorns](./catalog/track:58) in the Resonate playlist.');
 INSERT INTO mention (subject, description) VALUES ('Bento Box, Vol. 2', 'A second delicious dose of Kaiseki Digital for your enjoyment.' || CHAR(10, 10) || 'Released 2019-03-29 on [Kaiseki Digital](//kaisekidigital.bandcamp.com).' || CHAR(10, 10) || 'I contributed track 1.');
 INSERT INTO mention (subject, description) VALUES ('the fencepost reclamation project volume 5', 'This is the fifth volume of an open-ended remix project of Fencepost material originally released by Evelyn Records in 2002.' || CHAR(10, 10) || 'Released 2018-10-24 on [<1](//lessthanone.bandcamp.com).' || CHAR(10, 10) || 'I contributed track 116 + 117.');
 INSERT INTO mention (subject, description) VALUES ('SFTS: The Backrooms Comp', '"If you''re not careful and you noclip out of reality in the wrong areas, you''ll end up in the Backrooms, where it''s nothing but the stink of old moist carpet, the madness of mono-yellow, the endless background noise of fluorescent lights at maximum hum-buzz, and approximately six hundred million square miles of randomly segmented empty rooms to be trapped in. God save you if you hear something wandering around nearby, because it sure as hell has heard you."' || CHAR(10, 10) || 'Based on a concept created by 4chan, 35 artists took part in this compilation to make the listener feel as if they are experiencing the never-ending dimensions of the backrooms.' || CHAR(10, 10) || 'Released 2022-08-19 on [Sounds for the Soul Records](//soundsforthesoul.bandcamp.com).' || CHAR(10, 10) || 'I contributed track 5.');
 INSERT INTO mention (subject, description) VALUES ('Martina''s "The Only Way Is Up" Spotify Playlist', 'Martina creates weekly playlists. You can find more playlists on her [Spotify profile](//open.spotify.com/user/m0o63p2xyamfpkw2xg4mw26nc).' || CHAR(10, 10) || 'I contributed track 2.');
 INSERT INTO mention (subject, description) VALUES ('Martina''s "Add Some Music To Your Day" Spotify Playlist', 'Martina creates weekly playlists. You can find more playlists on her [Spotify profile](//open.spotify.com/user/m0o63p2xyamfpkw2xg4mw26nc).' || CHAR(10, 10) || 'I contributed track 1.');
 INSERT INTO mention (subject, description) VALUES ('SFTS: Experimental Ambient Compilation', 'Another fine compilation from Sounds for the Soul Records. This time exploring experimental ambient.' || CHAR(10, 10) || 'Released 2022-11-18 on [Sounds for the Soul Records](//soundsforthesoul.bandcamp.com).' || CHAR(10, 10) || 'I contributed track 7.');
-INSERT INTO mention (subject, description) VALUES ('Resonate on CAMP Radio 2022-12-04', '[The Argent Grub](//theargentgrub.co.uk) included [Flux (feat. Stevie Lee Price)](./track/id:97) in the Resonate playlist.');
+INSERT INTO mention (subject, description) VALUES ('Resonate on CAMP Radio 2022-12-04', '[The Argent Grub](//theargentgrub.co.uk) included [Flux (feat. Stevie Lee Price)](./catalog/track:97) in the Resonate playlist.');
 INSERT INTO mention (subject, description) VALUES ('SFTS: The Backrooms Comp : Level 2', '"Enter into another level of the endless labyrinth."' || CHAR(10, 10) || 'Released 2023-07-15 on [Sounds for the Soul Records](//soundsforthesoul.bandcamp.com).' || CHAR(10, 10) || 'I contributed track 36.');
-INSERT INTO mention (subject, description) VALUES ('Spooky Kitten Records'' WHiTMiRE Reviews Music: Episode 76', '[Michael Whitmire](//www.youtube.com/@SpookyKittenRecords) played [Biting Wind](./track/id:154) on his music review show.' || CHAR(10, 10) || 'Starts at: 0:28:26');
+INSERT INTO mention (subject, description) VALUES ('Spooky Kitten Records'' WHiTMiRE Reviews Music: Episode 76', '[Michael Whitmire](//www.youtube.com/@SpookyKittenRecords) played [Biting Wind](./catalog/track:154) on his music review show.' || CHAR(10, 10) || 'Starts at: 0:28:26');
 
 
 INSERT INTO mention_media (mention_id, code) VALUES (1, '{"type": "youtubevideo", "slug": "XWlvvSPq9E8"}');
