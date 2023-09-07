@@ -250,7 +250,7 @@ INSERT INTO track_credit (track_id, line) VALUES (97, 'Vocals - Stevie Lee Price
 INSERT INTO track_credit (track_id, line) VALUES (100, 'Original track "Haphe" by Klangachse aka ediblewaves (ediblewaves.bandcamp.com)');
 INSERT INTO track_credit (track_id, line) VALUES (150, 'Lyrics - Orochi Hanma');
 INSERT INTO track_credit (track_id, line) VALUES (150, 'Vocals - Orochi Hanma');
-INSERT INTO track_credit (track_id, line) VALUES (184, 'Some vocals - Claire W.');
+INSERT INTO track_credit (track_id, line) VALUES (184, 'Some vocals - Anonymous');
 
 
 INSERT INTO rls (artist_id, rls_type_id, label_id, name, pub_date, upd_date, is_freedl, bandcamp_id, description) VALUES (1, 1, NULL, 'Continuoduction', '2016-03-24', NULL, 1, '2223569284', 'The marking of a fresh start.');
@@ -279,7 +279,7 @@ INSERT INTO rls (artist_id, rls_type_id, label_id, name, pub_date, upd_date, is_
 INSERT INTO rls (artist_id, rls_type_id, label_id, name, pub_date, upd_date, is_freedl, bandcamp_id, description) VALUES (1, 3, NULL, '1996', '2020-06-26', NULL, 0, '3288578507', 'When the past never ends.' || CHAR(10) || 'The future never begins.' || CHAR(10) || 'One can only be.' || CHAR(10) || 'Forever young.' || CHAR(10, 10) || 'When you listen to this album, remember that times and situations change, but your heart doesn''t have to necessarily.');
 INSERT INTO rls (artist_id, rls_type_id, label_id, name, pub_date, upd_date, is_freedl, bandcamp_id, description) VALUES (1, 3, NULL, 'LET IT ALL GO, Volume 2', '2020-09-03', NULL, 0, '587722148', 'Sit back and relax. Breathe slowly. Try to focus on one thought at a time. Let your emotions flow, but do not let them overwhelm you. Deconstruct your thoughts. Study each little part. Understand, or accept your confusion for now. You do not have energy. You are energy. Everything is here. In your mind. Peace, you can find. Repeat.' || CHAR(10, 10) || 'Track 2 (Binaural Headphone Mix) should be listened on good stereo headphones or it may sound strange. It has binaural beats operating at a frequency of ~1-2Hz (delta pattern).');
 INSERT INTO rls (artist_id, rls_type_id, label_id, name, pub_date, upd_date, is_freedl, bandcamp_id, description) VALUES (1, 3, NULL, 'CHILL TRACKS 2016-2020', '2020-12-13', NULL, 0, '131808411', 'A selection of chill tracks from my back catalog 2016-2020. I hope you find some relaxation at the end of this unusual year.');
-INSERT INTO rls (artist_id, rls_type_id, label_id, name, pub_date, upd_date, is_freedl, bandcamp_id, description) VALUES (1, 3, NULL, 'FLOATING HIGH', '2021-01-01', NULL, 0, '1204865255', 'A magic wooden bench.' || CHAR(10) || 'Trees.' || CHAR(10) || 'Wild animals.' || CHAR(10) || 'You.' || CHAR(10) || 'And the cloudy sky.' || CHAR(10, 10) || 'Digital and physical album purchases on Bandcamp include the bonus track "A Night With My Imaginary Friend".' || CHAR(10, 10) || 'Limited physical editions are [there](./stuff/id:19) and [there](./stuff/id:20).');
+INSERT INTO rls (artist_id, rls_type_id, label_id, name, pub_date, upd_date, is_freedl, bandcamp_id, description) VALUES (1, 3, NULL, 'FLOATING HIGH', '2021-01-01', NULL, 0, '1204865255', 'A magic wooden bench.' || CHAR(10) || 'Trees.' || CHAR(10) || 'Wild animals.' || CHAR(10) || 'You.' || CHAR(10) || 'And the cloudy sky.' || CHAR(10, 10) || 'Digital and physical album purchases on Bandcamp include the bonus track "A Night With My Imaginary Friend".' || CHAR(10, 10) || 'Limited physical editions are available as [there](./physical/id:5) and [there](./physical/id:6).');
 INSERT INTO rls (artist_id, rls_type_id, label_id, name, pub_date, upd_date, is_freedl, bandcamp_id, description) VALUES (1, 1, NULL, 'Uncertain', '2021-05-07', NULL, 0, '2666379051', 'A song about our future.');
 INSERT INTO rls (artist_id, rls_type_id, label_id, name, pub_date, upd_date, is_freedl, bandcamp_id, description) VALUES (1, 2, NULL, 'THE BAND WITH THE DRUMMER WHO KNEW ONLY ONE RHYTHM', '2021-06-07', NULL, 0, '2317686308', 'A small band plays in a smoky open air club. Their instruments are slightly out of tune. But the crowd doesn''t care. Out of tune experiences is what they got used to.');
 INSERT INTO rls (artist_id, rls_type_id, label_id, name, pub_date, upd_date, is_freedl, bandcamp_id, description) VALUES (1, 1, NULL, 'Flux', '2021-08-13', NULL, 0, '2224755430', 'Everything. Nothing. Doesn''t matter. You just float. Somewhere. Sometime.');
@@ -289,7 +289,7 @@ INSERT INTO rls (artist_id, rls_type_id, label_id, name, pub_date, upd_date, is_
 INSERT INTO rls (artist_id, rls_type_id, label_id, name, pub_date, upd_date, is_freedl, bandcamp_id, description) VALUES (1, 3, NULL, 'OKAY, BUT CAN YOU RAP TO THIS?', '2022-11-23', NULL, 0, '4047724916', 'Some fun tracks to get back into it. Thank you for still being here.');
 INSERT INTO rls (artist_id, rls_type_id, label_id, name, pub_date, upd_date, is_freedl, bandcamp_id, description) VALUES (1, 3, NULL, 'WARM SUMMER EVENING', '2023-04-21', NULL, 0, '73692186', 'It is a warm summer evening.' || CHAR(10) || 'A light breeze blows gently over the brushwood-covered fields.' || CHAR(10) || 'Clouds drift across the dusky sky and thicken into a black carpet as night approaches.' || CHAR(10, 10) || 'With darkness comes clarity.' || CHAR(10) || 'For a short while, all thoughts, like a waterfall, flow inexorably downwards.' || CHAR(10) || 'Silent images flicker before the closed eyes.' || CHAR(10) || 'Suddenly, the memory.' || CHAR(10) || 'Their departure.' || CHAR(10) || 'His task.' || CHAR(10, 10) || 'The emptiness that fills everything when a heart breaks.' || CHAR(10) || 'The realisation that nothing can be changed.' || CHAR(10) || 'The hope of being allowed to return home soon.' || CHAR(10, 10) || 'Knees on the floor.' || CHAR(10) || 'Breathing calmly.' || CHAR(10) || 'The silent call, loud.' || CHAR(10, 10) || 'Twelve figures manifest in a circle.' || CHAR(10) || 'The thirteen are complete again.' || CHAR(10, 10) || 'An approving nod.' || CHAR(10) || 'A final embrace.' || CHAR(10) || 'A collective departure.' || CHAR(10) || 'Each in a different direction.' || CHAR(10, 10) || 'It is a cold winter evening.' || CHAR(10) || 'A biting wind blows mercilessly across the snow-covered fields.' || CHAR(10) || 'The sky is cloudless and the moon is full.' || CHAR(10, 10, 10) || 'Digital album purchases on Bandcamp include the bonus track "I Have Seen The Shadow Again".');
 INSERT INTO rls (artist_id, rls_type_id, label_id, name, pub_date, upd_date, is_freedl, bandcamp_id, description) VALUES (1, 3, NULL, 'THE DYING SPACESHIP SYMPHONY', '2023-06-17', NULL, 1, '2972069926', 'The atmosphere of a moment that never seemed to end.' || CHAR(10, 10, 10) || 'Bandcamp exclusive.');
-INSERT INTO rls (artist_id, rls_type_id, label_id, name, pub_date, upd_date, is_freedl, bandcamp_id, description) VALUES (1, 1, 3, 'Yellow Soul Grinder', '2023-07-13', NULL, 0, '1255097516', 'It was already too late before it started to consume you.' || CHAR(10, 10, 10) || 'Made for [SFTS: The Backrooms Comp : Level 2](./stuff/id:32).');
+INSERT INTO rls (artist_id, rls_type_id, label_id, name, pub_date, upd_date, is_freedl, bandcamp_id, description) VALUES (1, 1, 3, 'Yellow Soul Grinder', '2023-07-13', NULL, 0, '1255097516', 'It was already too late before it started to consume you.' || CHAR(10, 10, 10) || 'Made for [SFTS: The Backrooms Comp : Level 2](./mention/id:14).');
 INSERT INTO rls (artist_id, rls_type_id, label_id, name, pub_date, upd_date, is_freedl, bandcamp_id, description) VALUES (7, 3, NULL, 'Sound.Ex 1', '2004-10-05', NULL, 1, '2619863095', 'A selection of first steps in creating my own sound (as "[arT2](./artist/id:7)" back then). 2001-2006. Experimental trips, dark passages, and a lot of mood-explanation. Whatever.. enjoy.');
 
 
@@ -1031,7 +1031,7 @@ INSERT INTO phy_media (phy_id, code) VALUES (1, '{"type": "image", "slug": "./fi
 INSERT INTO phy_media (phy_id, code) VALUES (1, '{"type": "image", "slug": "./file/phy-monolog/6.jpg"}');
 INSERT INTO phy_media (phy_id, code) VALUES (1, '{"type": "image", "slug": "./file/phy-monolog/7.jpg"}');
 INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "link", "slug": "//spartalien.bandcamp.com/merch/memoria-s9m2-2358-limited-edition?action=buy", "text": "BUY"}');
-INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "link", "slug": "stuff/id:6", "text": "Making of video"}');
+INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "link", "slug": "./stuff/id:5", "text": "Making of videos"}');
 INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "image", "slug": "./file/phy-2358/all.jpg"}');
 INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "image", "slug": "./file/phy-2358/package1of7.jpg"}');
 INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "image", "slug": "./file/phy-2358/package2of7.jpg"}');
@@ -1351,6 +1351,7 @@ INSERT INTO news (pub_date) VALUES ('2023-06-17');
 INSERT INTO news (pub_date) VALUES ('2023-07-13');
 INSERT INTO news (pub_date) VALUES ('2023-07-15');
 INSERT INTO news (pub_date) VALUES ('2023-05-27');
+INSERT INTO news (pub_date) VALUES ('2023-08-20');
 
 
 INSERT INTO news_text (news_id, text) VALUES (1, 'New music: [Continuoduction](./music/id:1)');
@@ -1367,69 +1368,69 @@ INSERT INTO news_text (news_id, text) VALUES (11, 'New music: [Martina](./music/
 INSERT INTO news_text (news_id, text) VALUES (12, 'New music: [Time](./music/id:11)');
 INSERT INTO news_text (news_id, text) VALUES (13, 'New music: [Every Day](./music/id:12)');
 INSERT INTO news_text (news_id, text) VALUES (14, 'New music: [MONOLOG](./music/id:13)');
-INSERT INTO news_text (news_id, text) VALUES (15, 'New merchandise: [Artefact S9M1, MONOLOG Limited Edition](./stuff/id:15)');
+INSERT INTO news_text (news_id, text) VALUES (15, 'New merchandise: [Artefact S9M1, MONOLOG Limited Edition](./physical/id:1)');
 INSERT INTO news_text (news_id, text) VALUES (16, 'New music: [Searching](./music/id:14)');
 INSERT INTO news_text (news_id, text) VALUES (17, 'New music: [THE GREAT FILTER](./music/id:15)');
 INSERT INTO news_text (news_id, text) VALUES (18, 'New music: [2358](./music/id:16)');
 INSERT INTO news_text (news_id, text) VALUES (19, 'New music: [Frozen Memories](./music/id:17)');
-INSERT INTO news_text (news_id, text) VALUES (19, 'Featured on: [Bento Box, Vol. 2](./stuff/id:24)');
+INSERT INTO news_text (news_id, text) VALUES (19, 'Featured on: [Bento Box, Vol. 2](./mention/id:7)');
 INSERT INTO news_text (news_id, text) VALUES (20, 'New music: [BRAIN I/O](./music/id:18)');
 INSERT INTO news_text (news_id, text) VALUES (21, 'New music: [Brain I/O #2](./music/id:18)');
 INSERT INTO news_text (news_id, text) VALUES (22, 'New music: [Brain I/O #3](./music/id:18)');
 INSERT INTO news_text (news_id, text) VALUES (23, 'New music: [They Shot My Friend](./music/id:19)');
 INSERT INTO news_text (news_id, text) VALUES (23, 'New music: [The Sad Lightness Of Being](./music/id:20)');
-INSERT INTO news_text (news_id, text) VALUES (23, 'Featured on: [the fencepost reclamation project volume 5](./stuff/id:25)');
+INSERT INTO news_text (news_id, text) VALUES (23, 'Featured on: [the fencepost reclamation project volume 5](./mention/id:8)');
 INSERT INTO news_text (news_id, text) VALUES (24, 'New music: [Brain I/O #4](./music/id:18)');
 INSERT INTO news_text (news_id, text) VALUES (25, 'New music: [Brain I/O #5](./music/id:18)');
-INSERT INTO news_text (news_id, text) VALUES (26, 'New merchandise: [Memoria S9M2, 2358 Limited Edition](./stuff/id:16)');
+INSERT INTO news_text (news_id, text) VALUES (26, 'New merchandise: [Memoria S9M2, 2358 Limited Edition](./physical/id:2)');
 INSERT INTO news_text (news_id, text) VALUES (27, 'New music: [Brain I/O #6](./music/id:18)');
 INSERT INTO news_text (news_id, text) VALUES (28, 'New music: [Brain I/O #7](./music/id:18)');
 INSERT INTO news_text (news_id, text) VALUES (29, 'New music: [KEEN](./music/id:21)');
 INSERT INTO news_text (news_id, text) VALUES (30, 'New music: [SPARTALIEN & Esblendet - Rainbows & Unicorns](./music/id:22)');
 INSERT INTO news_text (news_id, text) VALUES (31, 'New music: [Brain I/O #8](./music/id:18)');
 INSERT INTO news_text (news_id, text) VALUES (32, 'New logo!');
-INSERT INTO news_text (news_id, text) VALUES (33, 'New [Wallpapers](./stuff/id:5)');
+INSERT INTO news_text (news_id, text) VALUES (33, 'New [Wallpapers](./stuff/id:4)');
 INSERT INTO news_text (news_id, text) VALUES (34, 'New music: [Let It All Go, Volume 1](./music/id:23)');
 INSERT INTO news_text (news_id, text) VALUES (35, 'New music: [Brain I/O #9](./music/id:18)');
 INSERT INTO news_text (news_id, text) VALUES (36, 'New music: [1996](./music/id:24)');
-INSERT INTO news_text (news_id, text) VALUES (37, 'New merchandise: [Logo T-Shirt, S9M3](./stuff/id:17)');
+INSERT INTO news_text (news_id, text) VALUES (37, 'New merchandise: [Logo T-Shirt, S9M3](./physical/id:3)');
 INSERT INTO news_text (news_id, text) VALUES (38, 'New music: [Brain I/O #10](./music/id:18)');
-INSERT INTO news_text (news_id, text) VALUES (39, 'New merchandise: [Logo Sticker, S9M4](./stuff/id:18)');
+INSERT INTO news_text (news_id, text) VALUES (39, 'New merchandise: [Logo Sticker, S9M4](./physical/id:4)');
 INSERT INTO news_text (news_id, text) VALUES (40, 'My music will soon disappear from all streaming/download platforms for roughly 2-3 weeks. It will be then re-uploaded again - and should automagically reappear in your playlists and libraries. If you''re missing anything after this timeframe, let me know. In the meantime you can always stream/purchase everything through my [website](//spartalien.com) or [Bandcamp page](//spartalien.bandcamp.com).');
 INSERT INTO news_text (news_id, text) VALUES (41, 'New music: [Let It All Go, Volume 2](./music/id:25)');
-INSERT INTO news_text (news_id, text) VALUES (42, 'New sample pack: [S9SP1 - 2358 Sample Pack](./stuff/id:21)');
+INSERT INTO news_text (news_id, text) VALUES (42, 'New sample pack: [S9SP1 - 2358 Sample Pack](./tool)');
 INSERT INTO news_text (news_id, text) VALUES (43, 'The music is back on Spotify and other platforms.');
 INSERT INTO news_text (news_id, text) VALUES (43, 'Updated the website.');
 INSERT INTO news_text (news_id, text) VALUES (44, 'New compilation: [CHILL TRACKS 2016-2020](./music/id:26)');
 INSERT INTO news_text (news_id, text) VALUES (45, 'New music: [FLOATING HIGH](./music/id:27)');
-INSERT INTO news_text (news_id, text) VALUES (45, 'New merchandise: [Memory S9M5, FLOATING HIGH Limited Edition CD-R](./stuff/id:19)');
-INSERT INTO news_text (news_id, text) VALUES (45, 'New merchandise: [Memory S9M6, FLOATING HIGH Limited Edition USB-Stick](./stuff/id:20)');
-INSERT INTO news_text (news_id, text) VALUES (46, 'New sample pack: [S9SP2 - Trip Construction Kit 1](./stuff/id:22)');
+INSERT INTO news_text (news_id, text) VALUES (45, 'New merchandise: [Memory S9M5, FLOATING HIGH Limited Edition CD-R](./physical/id:5)');
+INSERT INTO news_text (news_id, text) VALUES (45, 'New merchandise: [Memory S9M6, FLOATING HIGH Limited Edition USB-Stick](./physical/id:6)');
+INSERT INTO news_text (news_id, text) VALUES (46, 'New sample pack: [S9SP2 - Trip Construction Kit 1](./tool)');
 INSERT INTO news_text (news_id, text) VALUES (47, 'New page: [visual](./visual)');
-INSERT INTO news_text (news_id, text) VALUES (48, 'Featured on: [Shikantaza Creativity Interview](./stuff/id:11)');
+INSERT INTO news_text (news_id, text) VALUES (48, 'Featured on: [Shikantaza Creativity Interview](./mention/id:3)');
 INSERT INTO news_text (news_id, text) VALUES (49, 'New music: [Uncertain](./music/id:28)');
 INSERT INTO news_text (news_id, text) VALUES (50, 'New music: [THE BAND WITH THE DRUMMER WHO KNEW ONLY ONE RHYTHM](./music/id:29)');
 INSERT INTO news_text (news_id, text) VALUES (51, 'New music: [Flux](./music/id:30)');
 INSERT INTO news_text (news_id, text) VALUES (52, 'New music: [ediblewaves - Haphe (SPARTALIEN''s Wicca Remix)](./music/id:31)');
 INSERT INTO news_text (news_id, text) VALUES (53, 'New music: [UNTOLD STORIES](./music/id:32)');
 INSERT INTO news_text (news_id, text) VALUES (53, 'New music: [UNTOLD STORIES (Doomer''s Delight)](./music/id:33)');
-INSERT INTO news_text (news_id, text) VALUES (54, 'Featured on: [SFTS: The Backrooms Comp](./stuff/id:26)');
-INSERT INTO news_text (news_id, text) VALUES (55, 'Featured on: [ediblewaves'' YouTube Channel](./stuff/id:12)');
-INSERT INTO news_text (news_id, text) VALUES (56, 'Featured on: [MighTV](./stuff/id:9)');
-INSERT INTO news_text (news_id, text) VALUES (57, 'Featured on: [MighTV](./stuff/id:9)');
-INSERT INTO news_text (news_id, text) VALUES (58, 'Featured on: [Resonate on CAMP Radio 2022-03-27](./stuff/id:14)');
-INSERT INTO news_text (news_id, text) VALUES (59, 'Featured on: [Spooky Kitten Records'' WHiTMiRE Reviews Music: Episode 26](./stuff/id:13)');
-INSERT INTO news_text (news_id, text) VALUES (60, 'Featured on: [Martina''s "The Only Way Is Up" Spotify Playlist](./stuff/id:27)');
-INSERT INTO news_text (news_id, text) VALUES (61, 'Featured on: [Martina''s "Add Some Music To Your Day" Spotify Playlist](./stuff/id:28)');
-INSERT INTO news_text (news_id, text) VALUES (62, 'Featured on: [SFTS: Experimental Ambient Compilation](./stuff/id:29)');
+INSERT INTO news_text (news_id, text) VALUES (54, 'Featured on: [SFTS: The Backrooms Comp](./mention/id:9)');
+INSERT INTO news_text (news_id, text) VALUES (55, 'Featured on: [ediblewaves'' YouTube Channel](./mention/id:4)');
+INSERT INTO news_text (news_id, text) VALUES (56, 'Featured on: [MighTV](./mention/id:1)');
+INSERT INTO news_text (news_id, text) VALUES (57, 'Featured on: [MighTV](./mention/id:2)');
+INSERT INTO news_text (news_id, text) VALUES (58, 'Featured on: [Resonate on CAMP Radio 2022-03-27](./mention/id:6)');
+INSERT INTO news_text (news_id, text) VALUES (59, 'Featured on: [Spooky Kitten Records'' WHiTMiRE Reviews Music: Episode 26](./mention/id:5)');
+INSERT INTO news_text (news_id, text) VALUES (60, 'Featured on: [Martina''s "The Only Way Is Up" Spotify Playlist](./mention/id:10)');
+INSERT INTO news_text (news_id, text) VALUES (61, 'Featured on: [Martina''s "Add Some Music To Your Day" Spotify Playlist](./mention/id:11)');
+INSERT INTO news_text (news_id, text) VALUES (62, 'Featured on: [SFTS: Experimental Ambient Compilation](./mention/id:12)');
 INSERT INTO news_text (news_id, text) VALUES (63, 'New music: [OKAY, BUT CAN YOU RAP TO THIS?](./music/id:34)');
-INSERT INTO news_text (news_id, text) VALUES (64, 'Featured on: [Resonate on CAMP Radio 2022-12-04](./stuff/id:30)');
+INSERT INTO news_text (news_id, text) VALUES (64, 'Featured on: [Resonate on CAMP Radio 2022-12-04](./mention/id:13)');
 INSERT INTO news_text (news_id, text) VALUES (65, 'New music: [WARM SUMMER EVENING](./music/id:35)');
 INSERT INTO news_text (news_id, text) VALUES (66, 'New music: [THE DYING SPACESHIP SYMPHONY](./music/id:36)');
 INSERT INTO news_text (news_id, text) VALUES (67, 'New music: [Yellow Soul Grinder](./music/id:37)');
-INSERT INTO news_text (news_id, text) VALUES (68, 'Featured on: [SFTS: The Backrooms Comp : Level 2](./stuff/id:32)');
-INSERT INTO news_text (news_id, text) VALUES (69, 'Featured on: [Spooky Kitten Records'' WHiTMiRE Reviews Music: Episode 76](./stuff/id:33)');
--- TODO/LATER: news "added old sound.ex to release list"
+INSERT INTO news_text (news_id, text) VALUES (68, 'Featured on: [SFTS: The Backrooms Comp : Level 2](./mention/id:14)');
+INSERT INTO news_text (news_id, text) VALUES (69, 'Featured on: [Spooky Kitten Records'' WHiTMiRE Reviews Music: Episode 76](./mention/id:15)');
+INSERT INTO news_text (news_id, text) VALUES (70, 'New music: [arT2 - Sound.Ex 1](./music/id:38). Just a back catalog release for completeness.');
 
 
 INSERT INTO mention (subject, description) VALUES ('Live on MighTV 2020-11-18', 'The [Might](//might.digital) crew invited me to create some music on their livestream.');
