@@ -448,7 +448,7 @@ a:focus img, a.active img {
   border-width: 1px;
   border-color: hsl(77, 75%, 41%);
 }
-a[href^="//"]::after, a[href^="http://"]::after, a[href^="https://"]::after {
+a.external::after {
   content: "⇗";
   color: hsl(0, 0%, 40%);
 }
@@ -464,9 +464,17 @@ table td {
   padding-right: 4rem;
   vertical-align: top;
 }
-table tr:hover td,
-table tr:focus td {
+table td {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+table tr td {
+  background-color: transparent;
+  transition: background-color 1s linear;
+}
+table tr:hover td, table tr:focus td {
   background-color: hsl(0, 0%, 11%);
+  transition: background-color 0.25s linear;
 }
 
 header {
@@ -548,6 +556,13 @@ footer img {
 footer img:hover, footer img:focus {
   opacity: 1;
   transition: opacity 1.5s linear;
+}
+
+img.tn {
+  min-width: 80px;
+  height: auto;
+  border-width: 1px;
+  border-color: hsl(0, 0%, 11%);
 }
 
 .grid {

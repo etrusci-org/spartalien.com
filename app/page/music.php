@@ -148,7 +148,7 @@ if (isset($this->Router->route['var']['id'])) {
         foreach ($rls_list as $v) {
             printf('
                 <a href="./music/id:%1$s" title="%2$s"%4$s>
-                    <img src="%3$s" loading="lazy" alt="%2$s">
+                    <img src="%3$s" class="tn" loading="lazy" alt="%2$s">
                 </a>',
                 $v['rls_id'],
                 $v['rls_name'],

@@ -250,7 +250,7 @@ INSERT INTO track_credit (track_id, line) VALUES (97, 'Vocals - Stevie Lee Price
 INSERT INTO track_credit (track_id, line) VALUES (100, 'Original track "Haphe" by Klangachse aka ediblewaves (ediblewaves.bandcamp.com)');
 INSERT INTO track_credit (track_id, line) VALUES (150, 'Lyrics - Orochi Hanma');
 INSERT INTO track_credit (track_id, line) VALUES (150, 'Vocals - Orochi Hanma');
-INSERT INTO track_credit (track_id, line) VALUES (184, 'Some vocals - Anonymous');
+INSERT INTO track_credit (track_id, line) VALUES (184, 'Some vocals - Claire');
 
 
 INSERT INTO rls (artist_id, rls_type_id, label_id, name, pub_date, upd_date, is_freedl, bandcamp_id, description) VALUES (1, 1, NULL, 'Continuoduction', '2016-03-24', NULL, 1, '2223569284', 'The marking of a fresh start.');

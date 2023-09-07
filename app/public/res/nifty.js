@@ -5,6 +5,7 @@ export function add_anchor_target_to_external_links(target = '_blank') {
     document.querySelectorAll('a').forEach(e => {
         if (e.hostname && document.location.hostname != e.hostname) {
             e.setAttribute('target', target);
+            e.classList.add('external');
         }
     });
 }

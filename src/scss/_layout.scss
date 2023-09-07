@@ -166,9 +166,10 @@ a {
         }
     }
 
-    &[href^='//']::after,
-    &[href^='http://']::after,
-    &[href^='https://']::after {
+    // &[href^='//']::after,
+    // &[href^='http://']::after,
+    // &[href^='https://']::after {
+    &.external::after {
         content: '⇗';
         color: $color-gray-600;
     }
@@ -190,10 +191,23 @@ table {
         vertical-align: top;
     }
 
-    tr:hover,
-    tr:focus {
+    td {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+    }
+
+    tr {
         td {
-            background-color: $color-gray-900;
+            background-color: transparent;
+            transition: background-color 1s linear;
+        }
+
+        &:hover,
+        &:focus {
+            td {
+                background-color: $color-gray-900;
+                transition: background-color .25s linear;
+            }
         }
     }
 }
@@ -317,6 +331,12 @@ footer {
 }
 
 
+img.tn {
+    min-width: 80px;
+    height: auto;
+    border-width: 1px;
+    border-color: $color-gray-900;
+}
 
 
 
@@ -416,6 +436,7 @@ footer {
 .text-align-right {
     text-align: right;
 }
+
 
 
 

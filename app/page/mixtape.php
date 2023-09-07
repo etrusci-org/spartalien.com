@@ -38,7 +38,7 @@ $cloudcast_list = $this->_json_dec(file_get_contents($cache_file_cloudcasts));
                 if (str_starts_with($v['slug'], 'planet-420')) continue;
                 printf(
                     '<tr>
-                        <td><a href="%1$s" class="img"><img src="%5$s" loading="lazy" alt="cover art"></a></td>
+                        <td><a href="%1$s" class="img"><img src="%5$s" class="tn" loading="lazy" alt="cover art"></a></td>
                         <td><a href="%1$s">%2$s</a></td>
                         <td>%3$s</td>
                         <td>%4$s</td>
@@ -47,7 +47,7 @@ $cloudcast_list = $this->_json_dec(file_get_contents($cache_file_cloudcasts));
                     $v['name'],
                     implode(', ', array_map(function(array $v) { return strtolower($v['name']); }, $v['tags'])),
                     date('Y-m-d', strtotime($v['created_time'])),
-                    $v['pictures']['large'],
+                    $v['pictures']['medium'],
                 );
             }
             ?>
