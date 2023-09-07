@@ -465,12 +465,18 @@ footer {
     .grid-x-2,
     .grid-x-3 {
         grid-template-columns: repeat(2, 1fr);
-        row-gap: 8rem;
+        // row-gap: 8rem;
         // margin-bottom: 8rem;
-
         &.compact-lines { row-gap: 1.5rem; }
-
         // .box { margin-bottom: 0; }
+    }
+
+    .grid-x-2 {
+        row-gap: 8rem;
+    }
+
+    .grid-x-3 {
+        row-gap: 0rem;
     }
 }
 
