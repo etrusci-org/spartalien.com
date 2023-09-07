@@ -138,7 +138,7 @@ class Core
             $this->Router->route['node'] != $this->Router->default_route['node']
             && $this->Router->route['node'] != $this->Router->error_node
         ) {
-            $page_title = $this->conf['site_nav'][$this->Router->route['node']]['link_text'];
+            $page_title = $this->conf['site_nav'][$this->Router->route['node']]['link_text'] ?? ucfirst($this->Router->route['node']);
 
             if ($this->Router->route['node'] == 'music' && isset($this->Router->route['var']['id'])) {
                 $dump = $this->DB->query_single('SELECT name FROM rls WHERE id = :id LIMIT 1;', [['id', $this->Router->route['var']['id'], SQLITE3_INTEGER]]);

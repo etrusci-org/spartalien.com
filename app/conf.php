@@ -218,6 +218,16 @@ $conf['valid_request_patterns'] = [
         'valuesTable' => '',
         'valuesCol' => [],
     ],
+    [
+        'route' => '/^privacy$/',
+        'valuesTable' => '',
+        'valuesCol' => [],
+    ],
+    [
+        'route' => '/^purchase$/',
+        'valuesTable' => '',
+        'valuesCol' => [],
+    ],
 ];
 
 // ----------------------------------------------------------------------------
@@ -290,6 +300,16 @@ $conf['pre_render_settings'] = [
         'page_files' => [],
     ],
     'exit' => [
+        'headers' => [],
+        'middleware_files' => [],
+        'page_files' => [],
+    ],
+    'privacy' => [
+        'headers' => [],
+        'middleware_files' => [],
+        'page_files' => [],
+    ],
+    'purchase' => [
         'headers' => [],
         'middleware_files' => [],
         'page_files' => [],
