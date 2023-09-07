@@ -3,7 +3,7 @@
 
     <footer class="text-align-center">
         <p>
-            <a href="javascript:window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });">&uArr; u p &uArr;</a>
+            <a class="scroll_to_top">&uArr; u p &uArr;</a>
         </p>
 
         <nav>
