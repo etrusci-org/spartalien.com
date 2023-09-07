@@ -29,6 +29,12 @@
 
 // text -------------------------------------------------------------------------
 
+*::selection {
+    color: $color-black;
+    background-color: $color-brand-50;
+}
+
+
 body {
     font-family: $font-family-main;
     font-size: $font-size-default-min;
@@ -90,16 +96,6 @@ h3 {
     &::first-letter {
         color: $color-gray-350;
     }
-
-    &:hover,
-    &:focus {
-        color: $color-gray-350;
-        transition: color .25s linear;
-
-        &::first-letter {
-            color: $color-gray-100;
-        }
-    }
 }
 
 
@@ -109,7 +105,7 @@ main, footer {
 
     p, ul, .lazymedia { line-height: 1.5; }
 
-    pre, .meta { line-height: 1.35; }
+    pre /*, .meta */ { line-height: 1.35; }
 
     p, ul, pre, .lazycode, .lazymedia {
         margin-bottom: 1rem;
@@ -282,7 +278,7 @@ footer {
     padding-right: 1rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    margin-top: 90vh;
+    margin-top: 85vh;
     border-top-width: 1px;
     border-top-style: solid;
     border-top-color: $color-brand-250;
@@ -378,6 +374,18 @@ footer {
     &.full-width {
         max-width: 100%;
     }
+
+    &:hover,
+    &:focus {
+        h3 {
+            color: $color-gray-350;
+            transition: color .25s linear;
+
+            &::first-letter {
+                color: $color-gray-100;
+            }
+        }
+    }
 }
 
 
@@ -410,10 +418,6 @@ footer {
 }
 
 
-*::selection {
-    color: $color-black;
-    background-color: $color-brand-50;
-}
 
 
 

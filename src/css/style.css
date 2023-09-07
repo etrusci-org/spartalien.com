@@ -1,0 +1,668 @@
+@charset "UTF-8";
+/*! modern-normalize v2.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/*
+Document
+========
+*/
+/**
+Use a better box model (opinionated).
+*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3) */
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.15; /* 1. Correct the line height in all browsers. */
+  -webkit-text-size-adjust: 100%; /* 2. Prevent adjustments of font size after orientation changes in iOS. */
+  -moz-tab-size: 4; /* 3. Use a more readable tab size (opinionated). */
+  tab-size: 4; /* 3 */
+}
+
+/*
+Sections
+========
+*/
+body {
+  margin: 0; /* Remove the margin in all browsers. */
+}
+
+/*
+Grouping content
+================
+*/
+/**
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+*/
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+}
+
+/*
+Text-level semantics
+====================
+*/
+/**
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+abbr[title] {
+  text-decoration: underline dotted;
+}
+
+/**
+Add the correct font weight in Edge and Safari.
+*/
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+small {
+  font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+Tabular data
+============
+*/
+/**
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+}
+
+/*
+Forms
+=====
+*/
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+button,
+select {
+  text-transform: none;
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+Remove the inner border and padding in Firefox.
+*/
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+Restore the focus styles unset by the previous rule.
+*/
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+Remove the additional ':invalid' styles in Firefox.
+See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
+*/
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+legend {
+  padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+progress {
+  vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+/*
+Add the correct display in Chrome and Safari.
+*/
+summary {
+  display: list-item;
+}
+
+html,
+body,
+noscript,
+header,
+nav,
+main,
+footer,
+hr,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+table,
+thead,
+tbody,
+tr,
+th,
+td,
+code,
+pre,
+a,
+img,
+audio,
+video,
+iframe,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  border-style: solid;
+  border-color: currentColor;
+}
+
+html {
+  line-height: 1;
+  text-underline-offset: 5px;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+header,
+nav,
+main,
+footer {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+code,
+pre {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul {
+  list-style: none;
+  padding-inline: 0;
+}
+
+table {
+  text-align: left;
+  border-collapse: collapse;
+}
+
+table,
+pre {
+  max-width: 100%;
+  overflow: scroll;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+  outline: none;
+  cursor: pointer;
+}
+
+img,
+audio,
+video,
+iframe {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* share-tech-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Share Tech";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./vendor/share-tech-v21-latin-regular.woff2") format("woff2");
+}
+/* share-tech-mono-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Share Tech Mono";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./vendor/share-tech-mono-v15-latin-regular.woff2") format("woff2");
+}
+/* noto-sans-200 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 200;
+  src: url("./vendor/noto-sans-v30-latin-200.woff2") format("woff2");
+}
+*::selection {
+  color: hsl(0, 0%, 0%);
+  background-color: hsl(77, 75%, 41%);
+}
+
+body {
+  font-family: "Share Tech";
+  font-size: 18px;
+  text-rendering: geometricPrecision;
+  color: hsl(0, 0%, 48%);
+  background-color: hsl(0, 0%, 3%);
+}
+
+code,
+pre,
+.font-mono,
+.lazycode,
+.noscript {
+  font-family: "Share Tech Mono";
+  font-size: 80%;
+  color: hsl(0, 0%, 43%);
+}
+
+h1 {
+  font-family: "Noto Sans";
+  color: hsl(0, 0%, 84%);
+  letter-spacing: 0.15rem;
+}
+
+h2 {
+  font-family: "Noto Sans";
+  font-size: 24px;
+  margin-bottom: 6rem;
+  color: hsl(0, 0%, 34%);
+  transition: color 5s linear;
+}
+h2::first-letter {
+  color: hsl(77, 75%, 24%);
+}
+h2:hover, h2:focus {
+  color: hsl(0, 0%, 48%);
+  transition: color 0.25s linear;
+}
+h2:hover::first-letter, h2:focus::first-letter {
+  color: hsl(77, 75%, 41%);
+}
+
+h3 {
+  font-family: "Noto Sans";
+  font-size: 20px;
+  margin-bottom: 2rem;
+  color: hsl(0, 0%, 48%);
+  transition: color 5s linear;
+}
+h3::first-letter {
+  color: hsl(0, 0%, 64%);
+}
+
+main table, footer table {
+  line-height: 2;
+}
+main p, main ul, main .lazymedia, footer p, footer ul, footer .lazymedia {
+  line-height: 1.5;
+}
+main pre, footer pre {
+  line-height: 1.35;
+}
+main p, main ul, main pre, main .lazycode, main .lazymedia, footer p, footer ul, footer pre, footer .lazycode, footer .lazymedia {
+  margin-bottom: 1rem;
+}
+main p:last-child, main ul:last-child, main pre:last-child, main .lazycode:last-child, main .lazymedia:last-child, footer p:last-child, footer ul:last-child, footer pre:last-child, footer .lazycode:last-child, footer .lazymedia:last-child {
+  margin-bottom: 0;
+}
+
+.meta {
+  font-family: "Share Tech Mono";
+  font-size: 80%;
+  margin-bottom: 2rem;
+  color: hsl(0, 0%, 40%);
+}
+
+a:link, a:visited {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  color: hsl(0, 0%, 59%);
+}
+a:hover, a:active {
+  text-decoration-line: none;
+  color: hsl(77, 75%, 41%);
+  text-decoration-color: hsl(0, 0%, 69%);
+}
+a:focus, a.active {
+  text-decoration-line: underline;
+  text-decoration-style: double;
+  color: hsl(77, 75%, 41%);
+  text-decoration-color: hsl(77, 75%, 41%);
+}
+a:focus img, a.active img {
+  border-width: 1px;
+  border-color: hsl(77, 75%, 41%);
+}
+a[href^="//"]::after, a[href^="http://"]::after, a[href^="https://"]::after {
+  content: "⇗";
+  color: hsl(0, 0%, 40%);
+}
+a.img::after {
+  content: "";
+}
+
+table th {
+  white-space: nowrap;
+}
+table th,
+table td {
+  padding-right: 4rem;
+  vertical-align: top;
+}
+table tr:hover td,
+table tr:focus td {
+  background-color: hsl(0, 0%, 11%);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  line-height: 1;
+  padding: 1rem;
+  margin-bottom: 4rem;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: hsl(77, 75%, 20%);
+  background-color: hsl(0, 0%, 1%);
+  box-shadow: 0 5px 10px 5px hsl(0, 0%, 0%);
+  z-index: 10;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 0.75rem;
+  row-gap: 0.5rem;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: "Noto Sans";
+}
+nav a:link, nav a:visited {
+  text-decoration-line: none;
+}
+nav a:active {
+  color: hsl(0, 0%, 100%);
+}
+
+main {
+  min-width: 300px;
+  max-width: 1200px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 5;
+}
+main img {
+  max-height: 70vh;
+}
+
+footer {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-top: 85vh;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: hsl(77, 75%, 20%);
+  background-color: hsl(0, 0%, 7%);
+  box-shadow: 0 -5px 10px 5px hsl(0, 0%, 0%);
+  opacity: 0.25;
+  transition: opacity 0.75s linear;
+  z-index: 5;
+  cursor: crosshair;
+}
+footer:hover, footer:focus {
+  opacity: 1;
+  transition: opacity 0.1s linear;
+}
+footer nav {
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+footer img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  opacity: 0.2;
+  transition: opacity 2s linear;
+}
+footer img:hover, footer img:focus {
+  opacity: 1;
+  transition: opacity 1.5s linear;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+  align-items: stretch;
+  column-gap: 1.5rem;
+  row-gap: 1.5rem;
+}
+.grid img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid-x-2,
+.grid-x-3 {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  align-items: start;
+  column-gap: 4rem;
+}
+
+.box {
+  max-width: fit-content;
+  padding: 1.5rem;
+  margin-bottom: 8rem;
+  border-width: 1px;
+  border-color: hsl(0, 0%, 11%);
+  background-color: hsl(0, 0%, 7%);
+  box-shadow: 0 0 10px 5px hsl(0, 0%, 0%) inset;
+}
+.box.full-width {
+  max-width: 100%;
+}
+.box:hover h3, .box:focus h3 {
+  color: hsl(0, 0%, 64%);
+  transition: color 0.25s linear;
+}
+.box:hover h3::first-letter, .box:focus h3::first-letter {
+  color: hsl(0, 0%, 89%);
+}
+
+.more {
+  margin-top: 40vh;
+}
+
+.noscript {
+  color: hsl(27, 75%, 41%);
+  padding: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.lazycode {
+  display: block;
+}
+
+.lazymedia {
+  display: block;
+}
+.lazymedia.mixcloudshow, .lazymedia.mixcloudplaylist {
+  width: 100%;
+  height: 181px;
+}
+
+@media screen and (min-width: 576px) {
+  body {
+    font-size: calc(18px + 4 * (100vw - 576px) / 960);
+  }
+  h2 {
+    font-size: calc(24px + 12 * (100vw - 576px) / 960);
+  }
+  h3 {
+    font-size: calc(20px + 6 * (100vw - 576px) / 960);
+  }
+}
+@media screen and (min-width: 768px) {
+  .grid-x-2,
+  .grid-x-3 {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 8rem;
+  }
+  .grid-x-2.compact-lines,
+  .grid-x-3.compact-lines {
+    row-gap: 1.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .grid-x-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1536px) {
+  body {
+    font-size: 22px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  h3 {
+    font-size: 26px;
+  }
+}
+@media screen and (max-height: 50rem) {
+  header {
+    position: relative;
+  }
+}
