@@ -43,7 +43,7 @@ class Page extends Core
             LEFT JOIN p420_tracklist ON p420_tracklist.session_num = p420_session.num
             WHERE p420_session.num = :session_num
             GROUP BY p420_session.num
-            ORDER BY p420_session.num DESC;',
+            LIMIT 1;',
             [
                 ['session_num', $session_num, SQLITE3_INTEGER],
             ]

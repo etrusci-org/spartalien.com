@@ -175,7 +175,7 @@ class Page extends Core
                 '.$type.'_credit.line
             FROM '.$type.'_credit
             WHERE '.$type.'_id = :id
-            ORDER BY ROWID ASC;',
+            ORDER BY '.$type.'_credit.ROWID ASC;',
             [
                 ['id', $id, SQLITE3_INTEGER],
             ]
@@ -192,7 +192,7 @@ class Page extends Core
                 '.$type.'_media.code AS media_code
             FROM '.$type.'_media
             WHERE '.$type.'_id = :id
-            ORDER BY ROWID ASC;',
+            ORDER BY '.$type.'_media.ROWID ASC;',
             [
                 ['id', $id, SQLITE3_INTEGER],
             ],
@@ -210,7 +210,7 @@ class Page extends Core
                 '.$type.'_dist.url
             FROM '.$type.'_dist
             WHERE '.$type.'_id = :id
-            ORDER BY LOWER(platform) ASC;',
+            ORDER BY LOWER('.$type.'_dist.platform) ASC;',
             [
                 ['id', $id, SQLITE3_INTEGER],
             ],

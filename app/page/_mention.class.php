@@ -14,7 +14,7 @@ class Page extends Core
                 mention.subject AS mention_subject,
                 mention.description AS mention_description
             FROM mention
-            ORDER BY mention.subject ASC;'
+            ORDER BY LOWER(mention.subject) ASC;'
         );
 
         return $dump ?? [];
@@ -30,7 +30,7 @@ class Page extends Core
                 mention.description AS mention_description
             FROM mention
             WHERE mention_id = :mention_id
-            ORDER BY mention.subject ASC;',
+            LIMIT 1;',
             [
                 ['mention_id', $mention_id, SQLITE3_INTEGER],
             ]

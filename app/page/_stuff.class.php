@@ -14,7 +14,7 @@ class Page extends Core
                 stuff.name AS stuff_name,
                 stuff.description AS stuff_description
             FROM stuff
-            ORDER BY stuff.name ASC;'
+            ORDER BY LOWER(stuff.name) ASC;'
         );
 
         return $dump ?? [];
@@ -30,7 +30,7 @@ class Page extends Core
                 stuff.description AS stuff_description
             FROM stuff
             WHERE stuff_id = :stuff_id
-            ORDER BY stuff.name ASC;',
+            LIMIT 1;',
             [
                 ['stuff_id', $stuff_id, SQLITE3_INTEGER],
             ]
@@ -51,7 +51,7 @@ class Page extends Core
                 stuff_media.code AS stuff_media_code
             FROM stuff_media
             WHERE stuff_id = :stuff_id
-            ORDER BY ROWID ASC;',
+            ORDER BY stuff_media.ROWID ASC;',
             [
                 ['stuff_id', $stuff_id, SQLITE3_INTEGER],
             ]

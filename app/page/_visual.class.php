@@ -37,7 +37,7 @@ class Page extends Core
                 visual.description AS visual_description
             FROM visual
             WHERE visual_id = :visual_id
-            ORDER BY visual.pub_date DESC;',
+            LIMIT 1;',
             [
                 ['visual_id', $visual_id, SQLITE3_INTEGER],
             ]
@@ -59,7 +59,7 @@ class Page extends Core
                 visual_media.code AS visual_media_code
             FROM visual_media
             WHERE visual_id = :visual_id
-            ORDER BY ROWID ASC;',
+            ORDER BY visual_media.ROWID ASC;',
             [
                 ['visual_id', $visual_id, SQLITE3_INTEGER],
             ]

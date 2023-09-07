@@ -54,7 +54,7 @@ class Page extends Core
                 phy_media.code AS phy_media_code
             FROM phy_media
             WHERE phy_id = :phy_id
-            ORDER BY ROWID ASC;',
+            ORDER BY phy_media.ROWID ASC;',
             [
                 ['phy_id', $phy_id, SQLITE3_INTEGER],
             ]
