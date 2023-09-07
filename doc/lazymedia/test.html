@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        /* cosmetics and test stuff */
+        body { background-color: #000; padding: 1rem; }
+        body, a { color: #ccc; }
+        video { max-height: 20vh; width: auto; }
+
+        /* classes and style examples by and for lazymedia */
+        .lazycode,
+        .lazymedia {
+            display: block;
+            margin-bottom: 2rem;
+            background-color: #093229;
+        }
+
+        .lazycode.error { color: red; }
+
+        .lazymedia.bandcamptrack {
+            width: 100%;
+            min-width: 170px;
+            max-width: 700px;
+            height: 120px;
+        }
+
+        .lazymedia.bandcampalbum {
+            width: 100%;
+            min-width: 370px;
+            max-width: 700px;
+            height: 208px;
+            min-height: 208px;
+        }
+
+        .lazymedia.bandcampalbum.notracklist {
+            min-width: 250px;
+            max-width: 700px;
+            height: 120px;
+            min-height: 120px;
+        }
+
+        .lazymedia.spotifytrack {
+            width: 100%;
+            min-width: 300px;
+            height: 80px;
+            min-height: 80px;
+        }
+
+        .lazymedia.spotifyalbum,
+        .lazymedia.spotifyplaylist {
+            width: 100%;
+            min-width: 300px;
+            height: 352px;
+            min-height: 80px;
+        }
+
+        .lazymedia.mixcloudshow,
+        .lazymedia.mixcloudplaylist {
+            width: 100%;
+            height: 180px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <script>
+        const test_elements = [
+            {
+                bad: 'code',
+            },
+            {
+                type: 'link',
+                slug: '//example.org/one',
+                // text: 'opens in new tab',
+                target: '_blank',
+                // class: ['purple'],
+                attr: [
+                    [ 'title', 'yeay' ],
+                ]
+            },
+            {
+                type: 'image',
+                slug: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=100&fm=jpg',
+                // alt: 'foo alt',
+                // class: ['purple'],
+                // attr: [
+                //     [ 'title', 'yeay' ],
+                // ]
+            },
+            {
+                type: 'audio',
+                slug: './test.mp3',
+                class: ['purple'],
+                // attr: [
+                //     [ 'title', 'yeay' ],
+                //     [ 'autoplay', 'autoplay' ],
+                // ]
+            },
+            {
+                type: 'video',
+                slug: './test.mp4',
+                // class: ['purple'],
+                attr: [
+                    [ 'title', 'yeay' ],
+                    [ 'autoplay', 'autoplay' ],
+                    [ 'loop', 'loop' ],
+                ]
+            },
+            {
+                type: 'bandcamptrack',
+                slug: '2939601556',
+                // class: ['purple'],
+                // attr: [
+                //     [ 'title', 'yeay' ],
+                // ]
+            },
+            {
+                type: 'bandcampalbum',
+                slug: '3401800769',
+                trackcount: 14,
+                // class: ['purple'],
+                // attr: [
+                //     [ 'title', 'yeay' ],
+                // ]
+            },
+            {
+                type: 'spotifytrack',
+                slug: '2f06uugl6gOdhLsllkQuXe',
+                // usetheme: true,
+                // class: ['purple'],
+                // attr: [
+                //     [ 'title', 'yeay' ],
+                // ]
+            },
+            {
+                type: 'spotifyalbum',
+                slug: '2Pm1Tsp61yaBO4pRgkKhld',
+                trackcount: 5,
+                usetheme: true,
+                // class: ['purple'],
+                // attr: [
+                //     [ 'title', 'yeay' ],
+                // ]
+            },
+            {
+                type: 'spotifyplaylist',
+                slug: '3CzfYIJaAYVLfv00FB1AZy',
+                // trackcount: 22,
+                // usetheme: true,
+                // class: ['purple'],
+                // attr: [
+                //     [ 'title', 'yeay' ],
+                // ]
+            },
+            {
+                type: 'mixcloudshow',
+                slug: 'lowtechman/planet-4202',
+                // class: ['purple'],
+                // attr: [
+                //     [ 'title', 'yeay' ],
+                // ]
+            },
+            {
+                type: 'mixcloudplaylist',
+                slug: 'lowtechman/playlists/planet-420',
+                // class: ['purple'],
+                // attr: [
+                //     [ 'title', 'yeay' ],
+                // ]
+            },
+            {
+                type: 'youtubevideo',
+                slug: 'S7SLep244ss',
+                start: 600,
+                // class: ['purple'],
+                // attr: [
+                //     [ 'title', 'yeay' ],
+                // ]
+            },
+            {
+                type: 'youtubeplaylist',
+                slug: 'PLx-rndEudz7SqQxnqg8aM74hGrJWX5iM_',
+                // class: ['purple'],
+                // attr: [
+                //     [ 'title', 'yeay' ],
+                // ]
+            },
+            {
+                type: 'odyseevideo',
+                slug: '@spartalien:2/hallowscream-2022:f',
+                // class: ['purple'],
+                // attr: [
+                //     [ 'title', 'yeay' ],
+                // ]
+            },
+        ]
+
+        test_elements.forEach(lazycode => {
+            const e = document.createElement('div')
+            e.classList.add('lazycode')
+            e.innerText = JSON.stringify(lazycode)
+            document.body.append(e)
+        })
+    </script>
+
+    <script type="module">
+        import { LazyMedia } from '../../app/public/res/lazymedia.js'
+
+        const LM = new LazyMedia()
+
+        LM.autoembed()
+
+        // const lazycode_elements = LM.get_lazycode_elements()
+        // console.log(lazycode_elements)
+    </script>
+
+</body>
+</html>
