@@ -21,55 +21,55 @@ $conf['site_timezone'] = 'UTC';
 $conf['site_nav'] = [
     'home' => [
         'link' => './',
-        'link_text' => 'home',
+        'link_text' => 'Home',
     ],
     'music' => [
         'link' => './music',
-        'link_text' => 'music',
+        'link_text' => 'Music',
     ],
     'catalog' => [
         'link' => './catalog',
-        'link_text' => 'catalog',
-    ],
-    'visual' => [
-        'link' => './visual',
-        'link_text' => 'visual',
-    ],
-    'physical' => [
-        'link' => './physical',
-        'link_text' => 'physical',
+        'link_text' => 'Catalog',
     ],
     'planet420' => [
         'link' => './planet420',
-        'link_text' => 'planet420',
+        'link_text' => 'Planet 420',
     ],
     'mixtape' => [
         'link' => './mixtape',
-        'link_text' => 'mixtape',
+        'link_text' => 'Mixtape',
+    ],
+    'visual' => [
+        'link' => './visual',
+        'link_text' => 'Visual',
+    ],
+    'physical' => [
+        'link' => './physical',
+        'link_text' => 'Physical',
     ],
     'tool' => [
         'link' => './tool',
-        'link_text' => 'tool',
+        'link_text' => 'Tool',
     ],
     'stuff' => [
         'link' => './stuff',
-        'link_text' => 'stuff',
+        'link_text' => 'Stuff',
     ],
     'mention' => [
         'link' => './mention',
-        'link_text' => 'mention',
+        'link_text' => 'Mention',
     ],
     'news' => [
         'link' => './news',
-        'link_text' => 'news',
+        'link_text' => 'News',
     ],
     'about' => [
         'link' => './about',
-        'link_text' => 'about',
+        'link_text' => 'About',
     ],
     'exit' => [
         'link' => './exit',
-        'link_text' => 'exit',
+        'link_text' => 'Exit',
     ],
 ];
 
