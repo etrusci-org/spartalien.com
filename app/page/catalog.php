@@ -16,7 +16,16 @@ if (isset($this->Router->route['var']['artist'])) {
 
 
 <?php if ($track): ?>
-    <h2><?php print($track['track_name']); ?></h2>
+    <h2>
+        <?php
+        printf(
+            '%1$s%2$s',
+            ($track['artist_id'] != 1) ? sprintf('%s - ', $track['artist_name']) : '',
+            $track['track_name'],
+        );
+        ?>
+    </h2>
+
 
     <?php
     printf('

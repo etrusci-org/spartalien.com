@@ -11,7 +11,15 @@ if (isset($this->Router->route['var']['id'])) {
 
 
 <?php if ($rls): ?>
-    <h2><?php print($rls['rls_name']); ?></h2>
+    <h2>
+        <?php
+        printf(
+            '%1$s%2$s',
+            ($rls['artist_id'] != 1) ? sprintf('%s - ', $rls['artist_name']) : '',
+            $rls['rls_name'],
+        );
+        ?>
+    </h2>
 
     <div class="grid-x-2">
         <?php
