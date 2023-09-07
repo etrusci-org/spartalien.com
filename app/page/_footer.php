@@ -12,7 +12,7 @@
 
         <nav>
             (
-            <a href="./purchases">Purchases</a>
+            <a href="./purchase">Purchase</a>
             <a href="./privacy">Privacy</a>
             )
         </nav>

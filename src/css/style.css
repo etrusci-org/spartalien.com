@@ -638,11 +638,16 @@ footer img:hover, footer img:focus {
   .grid-x-2,
   .grid-x-3 {
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 8rem;
   }
   .grid-x-2.compact-lines,
   .grid-x-3.compact-lines {
     row-gap: 1.5rem;
+  }
+  .grid-x-2 {
+    row-gap: 8rem;
+  }
+  .grid-x-3 {
+    row-gap: 0rem;
   }
 }
 @media screen and (min-width: 1024px) {
