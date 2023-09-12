@@ -559,7 +559,7 @@ footer img:hover, footer img:focus {
 }
 
 img.tn {
-  min-width: 80px;
+  min-width: 100%;
   height: auto;
   border-width: 1px;
   border-color: hsl(0, 0%, 11%);
@@ -567,8 +567,8 @@ img.tn {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
   align-items: stretch;
   column-gap: 1.5rem;
   row-gap: 1.5rem;

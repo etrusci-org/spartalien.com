@@ -321,7 +321,9 @@ class Core
     {
         $tn  = './file/preview/'.$type.'/'.$id.'-tn.jpg';
         $med = './file/preview/'.$type.'/'.$id.'-med.jpg';
-        $big = './file/preview/'.$type.'/'.$id.'-big.png';
+
+        // REMEMBER ME / TODO: big not on visual and physical
+        $big = './file/preview/'.$type.'/'.$id.'-big.jpg';
 
         return match($size) {
             'tn' => $tn,
