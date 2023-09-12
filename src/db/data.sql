@@ -1186,11 +1186,11 @@ INSERT INTO visual_media (visual_id, code) VALUES (33, '{"type": "image", "slug"
 INSERT INTO visual_media (visual_id, code) VALUES (34, '{"type": "image", "slug": "./file/preview/visual/34-med.jpg", "linkto": "./file/visual/2013-its_gonna_come_down_on_you_anyway.png"}');
 INSERT INTO visual_media (visual_id, code) VALUES (35, '{"type": "image", "slug": "./file/preview/visual/35-med.jpg", "linkto": "./file/visual/2014-20140927-the_ghost_in_my_world.png"}');
 INSERT INTO visual_media (visual_id, code) VALUES (36, '{"type": "image", "slug": "./file/preview/visual/36-med.jpg", "linkto": "./file/visual/2016-the_audionaut_is_back_1920x1080-notext.png"}');
-INSERT INTO visual_media (visual_id, code) VALUES (37, '{"type": "video", "slug": "./file/visual/2021-eventually.mp4", "attr": [["poster", "./file/visual/37-tn.jpg"], ["autoplay", "autoplay"], ["loop", "loop"]]}');
-INSERT INTO visual_media (visual_id, code) VALUES (38, '{"type": "video", "slug": "./file/visual/2021-lost_memory.mp4", "attr": [["poster", "./file/visual/38-tn.jpg"], ["autoplay", "autoplay"], ["loop", "loop"]]}');
-INSERT INTO visual_media (visual_id, code) VALUES (39, '{"type": "video", "slug": "./file/visual/2021-tunnel_b21_4_3.mp4", "attr": [["poster", "./file/visual/39-tn.jpg"], ["autoplay", "autoplay"], ["loop", "loop"]]}');
+INSERT INTO visual_media (visual_id, code) VALUES (37, '{"type": "video", "slug": "./file/visual/2021-eventually.mp4", "attr": [["poster", "./file/preview/visual/37-tn.jpg"], ["autoplay", "autoplay"], ["loop", "loop"]]}');
+INSERT INTO visual_media (visual_id, code) VALUES (38, '{"type": "video", "slug": "./file/visual/2021-lost_memory.mp4", "attr": [["poster", "./file/preview/visual/38-tn.jpg"], ["autoplay", "autoplay"], ["loop", "loop"]]}');
+INSERT INTO visual_media (visual_id, code) VALUES (39, '{"type": "video", "slug": "./file/visual/2021-tunnel_b21_4_3.mp4", "attr": [["poster", "./file/preview/visual/39-tn.jpg"], ["autoplay", "autoplay"], ["loop", "loop"]]}');
 INSERT INTO visual_media (visual_id, code) VALUES (40, '{"type": "image", "slug": "./file/preview/visual/40-med.jpg", "linkto": "./file/visual/2021-e_dote_baum_am_abgrund-web.png"}');
-INSERT INTO visual_media (visual_id, code) VALUES (41, '{"type": "video", "slug": "./file/visual/2021-subweird1.mp4", "attr": [["poster", "./file/visual/41-tn.jpg"], ["autoplay", "autoplay"], ["loop", "loop"]]}');
+INSERT INTO visual_media (visual_id, code) VALUES (41, '{"type": "video", "slug": "./file/visual/2021-subweird1.mp4", "attr": [["poster", "./file/preview/visual/41-tn.jpg"], ["autoplay", "autoplay"], ["loop", "loop"]]}');
 INSERT INTO visual_media (visual_id, code) VALUES (42, '{"type": "youtubevideo", "slug": "QZovE8JDsXU"}'); -- 42
 INSERT INTO visual_media (visual_id, code) VALUES (43, '{"type": "youtubevideo", "slug": "cC4vSYqYbYA"}');
 INSERT INTO visual_media (visual_id, code) VALUES (44, '{"type": "youtubevideo", "slug": "v3aCJysvutk"}');
