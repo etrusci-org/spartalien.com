@@ -58,7 +58,7 @@
 
 
 <div class="grid-x-2">
-    <div class="box full-width">
+    <div class="box">
         <h3>RaidTrain</h3>
         <p>Quickly create a time slot overview webpage for your Twitch raid train event and such activities.</p>
         <p>
@@ -66,7 +66,7 @@
         </p>
     </div>
 
-    <div class="box fpl-width">
+    <div class="box">
         <h3>Olay</h3>
         <p>Live stream overlay stuff for use as Browser-Source in OBS Studio.</p>
         <p>
@@ -77,7 +77,7 @@
 
 
 <div class="grid-x-2">
-    <div class="box fpl-width">
+    <div class="box">
         <h3>LoopExtender</h3>
         <p>
             Create m3u playlist files for OBS VLC Video Source.
@@ -87,7 +87,7 @@
         </p>
     </div>
 
-    <div class="box fpl-width">
+    <div class="box">
         <h3>Jayze</h3>
         <p>
             A tool to generate data.
@@ -97,4 +97,15 @@
             <a href="https://github.com/etrusci-org/jayze/#readme">README + Source at GitHub</a>
         </p>
     </div>
+</div>
+
+
+<div class="box">
+    <h3>LastfmLog</h3>
+    <p>
+        Command line tool that downloads your Last.fm scrobbles (played tracks) data into a local SQLite database so you can do something with it, e.g bake your own statistics. You can also export some basic statistics to a JSON file without any SQL knowledge.
+    </p>
+    <p>
+        <a href="https://github.com/etrusci-org/lastfmlog/#readme">README + Source at GitHub</a>
+    </p>
 </div>
