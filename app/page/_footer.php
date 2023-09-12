@@ -22,6 +22,8 @@
         <p>&copy; <?php print(date('Y')); ?></p>
     </footer>
 
+    <div class="imgzoom-target"></div>
+
     <script type="module" src="./res/main.js?v=<?php print($this->version['js']); ?>"></script>
 </body>
 </html>

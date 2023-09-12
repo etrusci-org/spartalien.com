@@ -471,6 +471,45 @@ img.tn {
 
 
 
+div.imgzoom-target {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2000;
+    text-align: center;
+    cursor: zoom-out;
+    background-color: #000000ec;
+}
+
+div.imgzoom-target.open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.imgzoom-target img {
+    max-width: 100%;
+    max-height: 100%;
+    border: 10px solid #2b2b2b;
+}
+
+a.imgzoom,
+a.lazymedia.image {
+    cursor: zoom-in;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

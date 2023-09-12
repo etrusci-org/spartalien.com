@@ -73,7 +73,7 @@ Some types have additional optional attributes.
 | Type               | Supported Attributes                      | Returned Element |
 |--------------------|-------------------------------------------|------------------|
 | `link`             | `attr`, `class`, `text`, `target`         | [HTMLAnchorElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement) |
-| `image`            | `attr`, `class`, `alt`                    | [HTMLImageElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement) |
+| `image`            | `attr`, `class`, `alt`, `linkto`          | [HTMLImageElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement) or [HTMLAnchorElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement) &larr; [HTMLImageElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement) if `linkto` attribubute is set |
 | `audio`            | `attr`, `class`                           | [HTMLAudioElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement) |
 | `video`            | `attr`, `class`                           | [HTMLDivElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLDivElement) &larr; [HTMLVideoElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement) &larr; [HTMLAnchorElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement) |
 | `bandcamptrack`    | `attr`, `class`                           | [HTMLIFrameElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement) |
@@ -120,6 +120,7 @@ For example, for **type** `link` it is an URL or path.
 | `text`             | `link`                                             | Any text |
 | `target`           | `link`                                             | [HTMLAnchorElement target value](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attributes) |
 | `alt`              | `image`                                            | [HTMLImageElement alt value](https://developer.mozilla.org/en-US/en-US/docs/Web/HTML/Element/img#attributes) |
+| `linkto`           | `image`                                            | [HTMLAnchorElement target value](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attributes) |
 | `trackcount`       | `bandcampalbum`, `spotifyalbum`, `spotifyplaylist` | [Positive natural number](https://en.wikipedia.org/wiki/Natural_number) track count of the album or playlist - if set, the embed height will be auto-calculated |
 | `usetheme`         | `spotifytrack`, `spotifyalbum`, `spotifyplaylist`  | [Boolean](https://en.wikipedia.org/wiki/Boolean_data_type) that indicates whether to use the auto-theme (based on coverart colors) from Spotify |
 | `start`            | `youtubevideo`                                     | Time in [seconds](https://en.wikipedia.org/wiki/Second) at which point the video should start |

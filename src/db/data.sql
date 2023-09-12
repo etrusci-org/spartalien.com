@@ -1,13 +1,13 @@
 BEGIN TRANSACTION;
 
 
-INSERT INTO artist (name, url) VALUES ('SPARTALIEN', '//spartalien.com');
-INSERT INTO artist (name, url) VALUES ('SPARTALIEN & Esblendet', NULL);
-INSERT INTO artist (name, url) VALUES ('Esblendet', '//esblendet.ch');
-INSERT INTO artist (name, url) VALUES ('Stevie Lee Price', '//twitter.com/STEVIELEEPRICE');
-INSERT INTO artist (name, url) VALUES ('ediblewaves', '//ediblewaves.bandcamp.com');
-INSERT INTO artist (name, url) VALUES ('Orochi Hanma', '//twitch.tv/orochihanma');
-INSERT INTO artist (name, url) VALUES ('arT2', '//etrusci.org');
+INSERT INTO artist (name, url, description) VALUES ('SPARTALIEN', '//spartalien.com', 'Aliases: arT2, lowtechman');
+INSERT INTO artist (name, url, description) VALUES ('SPARTALIEN & Esblendet', NULL, NULL);
+INSERT INTO artist (name, url, description) VALUES ('Esblendet', '//esblendet.ch', NULL);
+INSERT INTO artist (name, url, description) VALUES ('Stevie Lee Price', '//twitter.com/STEVIELEEPRICE', NULL);
+INSERT INTO artist (name, url, description) VALUES ('ediblewaves', '//ediblewaves.bandcamp.com', NULL);
+INSERT INTO artist (name, url, description) VALUES ('Orochi Hanma', '//twitch.tv/orochihanma', NULL);
+INSERT INTO artist (name, url, description) VALUES ('arT2', '//etrusci.org', 'Aliases: SPARTALIEN, lowtechman');
 
 
 INSERT INTO label (name, url) VALUES ('Kaiseki Digital', '//kaisekidigital.bandcamp.com');
@@ -1019,7 +1019,7 @@ INSERT INTO phy (name, description) VALUES ('Memoria S9M2, 2358 Limited Edition'
 INSERT INTO phy (name, description) VALUES ('Logo T-Shirt, S9M3', 'Type: T-Shirt' || CHAR(10) || 'Released: 2020-07-06' || CHAR(10, 10) || 'Official logo on a comfortable unisex T-Shirt.' || CHAR(10, 10) || 'Material: 100% Cotton, Oeko-Tex Standard 100' || CHAR(10) || 'Colors: black on white, white on black' || CHAR(10) || 'Sizes: small, medium, large' || CHAR(10) || 'Weight: 145 g/m²' || CHAR(10) || 'Washing: max. 40°C, inside-out, similiar colors, don''t iron over the print');
 INSERT INTO phy (name, description) VALUES ('Logo Sticker, S9M4', 'Type: Sticker' || CHAR(10) || 'Released: 2020-07-22' || CHAR(10, 10) || 'Official logo on a Sticker.' || CHAR(10, 10) || 'Colors: black on white, white on black' || CHAR(10) || 'Sizes: 58x70mm, 62x82mm, 80x100mm');
 INSERT INTO phy (name, description) VALUES ('Memory S9M5, FLOATING HIGH Limited Edition CD-R', 'Type: Audio CD + Digital Album' || CHAR(10) || 'Released: 2021-01-01' || CHAR(10, 10) || 'This is the limited CD edition of the FLOATING HIGH album. Limited edition of 5.' || CHAR(10, 10) || 'Contains:' || CHAR(10) || '- FLOATING HIGH album Audio-CD.' || CHAR(10) || '- FLOATING HIGH album to stream and download on Bandcamp.' || CHAR(10) || '- Includes bonus track: A Night With My Imaginary Friend.' || CHAR(10) || '- CD jewel case, cover and disc printed, handwritten tracklist.' || CHAR(10, 10) || 'Digital release is [there](./music/id:27).');
-INSERT INTO phy (name, description) VALUES ('Memory S9M6, FLOATING HIGH Limited Edition USB-Stick', 'Type: USB Flash Drive + Digital Album' || CHAR(10, 10) || 'Released: 2021-01-01' || CHAR(10, 10) || 'This is the limited USB-Stick edition of the FLOATING HIGH album. Limited edition of 7.' || CHAR(10, 10) || 'Contains:' || CHAR(10) || '- FLOATING HIGH album in three different file formats: WAV, FLAC, MP3' || CHAR(10) || '- FLOATING HIGH album to stream and download on Bandcamp.' || CHAR(10) || '- Includes bonus track: A Night With My Imaginary Friend.' || CHAR(10) || '- Metal cast USB-Stick (16GB, USB 3.1, FAT32, Win/Mac/Linux).' || CHAR(10) || '- Unique piece of wood to use as a stand for the USB-Stick. All were cut from the same tree branch.' || CHAR(10) || '- Cover art in different sizes including high resolution.' || CHAR(10) || '- Photos to watch while listening to the album.' || CHAR(10, 10) || '**Warning for allergy sufferers**: Wood was treated with a bit of coconut fat.' || CHAR(10, 10) || 'Digital release is [there](./music/id:27).');
+INSERT INTO phy (name, description) VALUES ('Memory S9M6, FLOATING HIGH Limited Edition USB-Stick', 'Type: USB Flash Drive + Digital Album' || CHAR(10) || 'Released: 2021-01-01' || CHAR(10, 10) || 'This is the limited USB-Stick edition of the FLOATING HIGH album. Limited edition of 7.' || CHAR(10, 10) || 'Contains:' || CHAR(10) || '- FLOATING HIGH album in three different file formats: WAV, FLAC, MP3' || CHAR(10) || '- FLOATING HIGH album to stream and download on Bandcamp.' || CHAR(10) || '- Includes bonus track: A Night With My Imaginary Friend.' || CHAR(10) || '- Metal cast USB-Stick (16GB, USB 3.1, FAT32, Win/Mac/Linux).' || CHAR(10) || '- Unique piece of wood to use as a stand for the USB-Stick. All were cut from the same tree branch.' || CHAR(10) || '- Cover art in different sizes including high resolution.' || CHAR(10) || '- Photos to watch while listening to the album.' || CHAR(10, 10) || '**Warning for allergy sufferers**: Wood was treated with a bit of coconut fat.' || CHAR(10, 10) || 'Digital release is [there](./music/id:27).');
 
 
 INSERT INTO phy_media (phy_id, code) VALUES (1, '{"type": "link", "slug": "//spartalien.bandcamp.com/merch/artefact-s9m1-monolog-limited-edition?action=buy", "text": "SOLD OUT"}');
@@ -1128,7 +1128,6 @@ INSERT INTO visual (name, pub_date, description) VALUES ('4+ Hours of Dark Exper
 INSERT INTO visual (name, pub_date, description) VALUES ('Flux (feat. Stevie Lee Price)', '2021-08-13', 'Music video for [Flux (feat. Stevie Lee Price)](./catalog/track:97)');
 INSERT INTO visual (name, pub_date, description) VALUES ('Calming Stress Relief Music for Meditation, Reflection, and Solitude | UNTOLD STORIES', '2021-10-03', 'Mixed version of [UNTOLD STORIES](./music/id:32)');
 INSERT INTO visual (name, pub_date, description) VALUES ('Promo Art 2018-03', '2018-03', 'Setting the mood.');
-INSERT INTO visual (name, pub_date, description) VALUES ('Wallpapers 2020-01', '2020-01', 'Background images for your desktop. Dark and bright versions. All ZIP files contain the same wallpapers from the previews, just in different resolutions.' || CHAR(10) || 'Your current screen resolution is: <script>document.write(window.screen.width, "x", window.screen.height)</script><noscript>[JavaScript required]</noscript>');
 INSERT INTO visual (name, pub_date, description) VALUES ('X Minutes of Peace', '2018', 'Relax.');
 INSERT INTO visual (name, pub_date, description) VALUES ('TOTAL FUCKING MADNESS', '2023-01', 'TOTAL FUCKING MADNESS' || CHAR(10) || 'TOTAL FUCKING MADNESS' || CHAR(10) || 'TOTAL FUCKING MADNESS' || CHAR(10) || 'TOTAL FUCKING MADNESS' || CHAR(10) || 'TOTAL FUCKING MADNESS' || CHAR(10) || 'TOTAL FUCKING MADNESS' || CHAR(10, 10) || '00:00 Intro' || CHAR(10) || '00:32 Level 1' || CHAR(10) || '05:28 Level 2' || CHAR(10) || '10:00 Level 3' || CHAR(10) || '14:06 Level 4' || CHAR(10) || '17:48 Level 5' || CHAR(10) || '21:06 Level 6' || CHAR(10) || '23:58 Outro');
 
@@ -1191,7 +1190,7 @@ INSERT INTO visual_media (visual_id, code) VALUES (38, '{"type": "video", "slug"
 INSERT INTO visual_media (visual_id, code) VALUES (39, '{"type": "video", "slug": "./file/visual/2021-tunnel_b21_4_3.mp4", "attr": [["poster", "./file/preview/visual/39-tn.jpg"], ["autoplay", "autoplay"], ["loop", "loop"]]}');
 INSERT INTO visual_media (visual_id, code) VALUES (40, '{"type": "image", "slug": "./file/preview/visual/40-med.jpg", "linkto": "./file/visual/2021-e_dote_baum_am_abgrund-web.png"}');
 INSERT INTO visual_media (visual_id, code) VALUES (41, '{"type": "video", "slug": "./file/visual/2021-subweird1.mp4", "attr": [["poster", "./file/preview/visual/41-tn.jpg"], ["autoplay", "autoplay"], ["loop", "loop"]]}');
-INSERT INTO visual_media (visual_id, code) VALUES (42, '{"type": "youtubevideo", "slug": "QZovE8JDsXU"}'); -- 42
+INSERT INTO visual_media (visual_id, code) VALUES (42, '{"type": "youtubevideo", "slug": "QZovE8JDsXU"}');
 INSERT INTO visual_media (visual_id, code) VALUES (43, '{"type": "youtubevideo", "slug": "cC4vSYqYbYA"}');
 INSERT INTO visual_media (visual_id, code) VALUES (44, '{"type": "youtubevideo", "slug": "v3aCJysvutk"}');
 INSERT INTO visual_media (visual_id, code) VALUES (45, '{"type": "youtubevideo", "slug": "KYNIayrc074"}');
@@ -1220,88 +1219,28 @@ INSERT INTO visual_media (visual_id, code) VALUES (64, '{"type": "image", "slug"
 INSERT INTO visual_media (visual_id, code) VALUES (64, '{"type": "image", "slug": "./file/visual/2018-spartalien-promoart-201803-5.jpg", "linkto": "./file/visual/2018-spartalien-promoart-201803-5.jpg"}');
 INSERT INTO visual_media (visual_id, code) VALUES (64, '{"type": "image", "slug": "./file/preview/visual/64-6-med.jpg", "linkto": "./file/visual/2018-spartalien-promoart-201803-6.jpg"}');
 INSERT INTO visual_media (visual_id, code) VALUES (64, '{"type": "image", "slug": "./file/preview/visual/64-7-med.jpg", "linkto": "./file/visual/2018-spartalien-promoart-201803-7.jpg"}');
-INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "link", "slug": "./file/visual/2020-wallpapers_800x600.zip", "text": "800x600.zip"}');
-INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "link", "slug": "./file/visual/2020-wallpapers_1024x768.zip", "text": "1024x768.zip"}');
-INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "link", "slug": "./file/visual/2020-wallpapers_1280x600.zip", "text": "1280x600.zip"}');
-INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "link", "slug": "./file/visual/2020-wallpapers_1280x720.zip", "text": "1280x720.zip"}');
-INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "link", "slug": "./file/visual/2020-wallpapers_1280x1024.zip", "text": "1280x1024.zip"}');
-INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "link", "slug": "./file/visual/2020-wallpapers_1920x1080.zip", "text": "1920x1080.zip"}');
-INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "image", "slug": "./file/visual/2020-wallpapers-preview-b-5.jpg", "linkto": "./file/visual/2020-wallpapers-preview-b-5.jpg"}');
-INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "image", "slug": "./file/visual/2020-wallpapers-preview-b-6.jpg", "linkto": "./file/visual/2020-wallpapers-preview-b-6.jpg"}');
-INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "image", "slug": "./file/visual/2020-wallpapers-preview-b-7.jpg", "linkto": "./file/visual/2020-wallpapers-preview-b-7.jpg"}');
-INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "image", "slug": "./file/visual/2020-wallpapers-preview-b-8.jpg", "linkto": "./file/visual/2020-wallpapers-preview-b-8.jpg"}');
-INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "image", "slug": "./file/visual/2020-wallpapers-preview-b-1.jpg", "linkto": "./file/visual/2020-wallpapers-preview-b-1.jpg"}');
-INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "image", "slug": "./file/visual/2020-wallpapers-preview-b-2.jpg", "linkto": "./file/visual/2020-wallpapers-preview-b-2.jpg"}');
-INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "image", "slug": "./file/visual/2020-wallpapers-preview-b-3.jpg", "linkto": "./file/visual/2020-wallpapers-preview-b-3.jpg"}');
-INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "image", "slug": "./file/visual/2020-wallpapers-preview-b-4.jpg", "linkto": "./file/visual/2020-wallpapers-preview-b-4.jpg"}');
-INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "image", "slug": "./file/visual/2020-wallpapers-preview-b-9.jpg", "linkto": "./file/visual/2020-wallpapers-preview-b-9.jpg"}');
-INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "image", "slug": "./file/visual/2020-wallpapers-preview-w-1.jpg", "linkto": "./file/visual/2020-wallpapers-preview-w-1.jpg"}');
-INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "image", "slug": "./file/visual/2020-wallpapers-preview-w-2.jpg", "linkto": "./file/visual/2020-wallpapers-preview-w-2.jpg"}');
-INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "image", "slug": "./file/visual/2020-wallpapers-preview-w-3.jpg", "linkto": "./file/visual/2020-wallpapers-preview-w-3.jpg"}');
-INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "image", "slug": "./file/visual/2020-wallpapers-preview-w-4.jpg", "linkto": "./file/visual/2020-wallpapers-preview-w-4.jpg"}');
-INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "image", "slug": "./file/visual/2020-wallpapers-preview-w-5.jpg", "linkto": "./file/visual/2020-wallpapers-preview-w-5.jpg"}');
-INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "image", "slug": "./file/visual/2020-wallpapers-preview-w-6.jpg", "linkto": "./file/visual/2020-wallpapers-preview-w-6.jpg"}');
-INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "image", "slug": "./file/visual/2020-wallpapers-preview-w-7.jpg", "linkto": "./file/visual/2020-wallpapers-preview-w-7.jpg"}');
-INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "image", "slug": "./file/visual/2020-wallpapers-preview-w-8.jpg", "linkto": "./file/visual/2020-wallpapers-preview-w-8.jpg"}');
-INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "image", "slug": "./file/visual/2020-wallpapers-preview-w-9.jpg", "linkto": "./file/visual/2020-wallpapers-preview-w-9.jpg"}');
-INSERT INTO visual_media (visual_id, code) VALUES (66, '{"type": "youtubevideo", "slug": "uL2S2xVQPto"}');
-INSERT INTO visual_media (visual_id, code) VALUES (66, '{"type": "youtubevideo", "slug": "z7cUKof9VvU"}');
-INSERT INTO visual_media (visual_id, code) VALUES (66, '{"type": "youtubevideo", "slug": "MVBeO9HvKZM"}');
-INSERT INTO visual_media (visual_id, code) VALUES (66, '{"type": "youtubevideo", "slug": "JDFAeND7hlI"}');
-INSERT INTO visual_media (visual_id, code) VALUES (66, '{"type": "youtubevideo", "slug": "YjEKp2UnUn8"}');
-INSERT INTO visual_media (visual_id, code) VALUES (66, '{"type": "youtubevideo", "slug": "fKRlTYKWYwA"}');
-INSERT INTO visual_media (visual_id, code) VALUES (66, '{"type": "youtubevideo", "slug": "q_XuMDRsIwc"}');
-INSERT INTO visual_media (visual_id, code) VALUES (66, '{"type": "youtubevideo", "slug": "awkTjmcHQzc"}');
-INSERT INTO visual_media (visual_id, code) VALUES (67, '{"type": "odyseevideo", "slug": "@spartalien:2/total-fucking-madness:8"}');
-INSERT INTO visual_media (visual_id, code) VALUES (67, '{"type": "youtubevideo", "slug": "eq_I5Oq603M"}');
+INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "youtubevideo", "slug": "uL2S2xVQPto"}');
+INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "youtubevideo", "slug": "z7cUKof9VvU"}');
+INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "youtubevideo", "slug": "MVBeO9HvKZM"}');
+INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "youtubevideo", "slug": "JDFAeND7hlI"}');
+INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "youtubevideo", "slug": "YjEKp2UnUn8"}');
+INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "youtubevideo", "slug": "fKRlTYKWYwA"}');
+INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "youtubevideo", "slug": "q_XuMDRsIwc"}');
+INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "youtubevideo", "slug": "awkTjmcHQzc"}');
+INSERT INTO visual_media (visual_id, code) VALUES (66, '{"type": "odyseevideo", "slug": "@spartalien:2/total-fucking-madness:8"}');
+INSERT INTO visual_media (visual_id, code) VALUES (66, '{"type": "youtubevideo", "slug": "eq_I5Oq603M"}');
 
 
--- INSERT INTO stuff (name, description) VALUES ('Promo Art 2018-03', 'Setting the mood.');
 INSERT INTO stuff (name, description) VALUES ('Radio-Dark-Tunnel Jingles', 'Radio station IDs/jingles made for [Radio-Dark-Tunnel](//radio-dark-tunnel.net).');
 INSERT INTO stuff (name, description) VALUES ('Track 32/2', 'Just a short tune.');
--- INSERT INTO stuff (name, description) VALUES ('Wallpapers 2020-01', 'Background images for your desktop. Dark and bright versions. All ZIP files contain the same wallpapers from the previews below, just in different resolutions.' || CHAR(10) || 'Your current screen resolution is: <script>document.write(window.screen.width, "x", window.screen.height)</script><noscript>[JavaScript required]</noscript>');
 INSERT INTO stuff (name, description) VALUES ('Making of Memoria S9M2, 2358 Limited Edition', 'Get yours [here](./physical/id:2).');
--- INSERT INTO stuff (name, description) VALUES ('X Minutes of Peace', 'Relax.');
 INSERT INTO stuff (name, description) VALUES ('GhostTownTunes Voice-Over', 'Livestream voiceovers made for [GhostTownTunes](//twitch.tv/ghosttowntunes).');
--- INSERT INTO stuff (name, description) VALUES ('TOTAL FUCKING MADNESS', 'TOTAL FUCKING MADNESS' || CHAR(10) ||'TOTAL FUCKING MADNESS' || CHAR(10) ||'TOTAL FUCKING MADNESS' || CHAR(10) ||'TOTAL FUCKING MADNESS' || CHAR(10) ||'TOTAL FUCKING MADNESS' || CHAR(10) ||'TOTAL FUCKING MADNESS' || CHAR(10, 10) ||'00:00 Intro' || CHAR(10) ||'00:32 Level 1' || CHAR(10) ||'05:28 Level 2' || CHAR(10) ||'10:00 Level 3' || CHAR(10) ||'14:06 Level 4' || CHAR(10) ||'17:48 Level 5' || CHAR(10) ||'21:06 Level 6' || CHAR(10) ||'23:58 Outro');
 
 
--- INSERT INTO stuff_media (stuff_id, code) VALUES (1, '{"type": "image", "slug": "./file/promoart-201803/spartalien-promoart-201803-1.jpg"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (1, '{"type": "image", "slug": "./file/promoart-201803/spartalien-promoart-201803-2.jpg"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (1, '{"type": "image", "slug": "./file/promoart-201803/spartalien-promoart-201803-3.jpg"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (1, '{"type": "image", "slug": "./file/promoart-201803/spartalien-promoart-201803-4.jpg"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (1, '{"type": "image", "slug": "./file/promoart-201803/spartalien-promoart-201803-5.jpg"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (1, '{"type": "image", "slug": "./file/promoart-201803/spartalien-promoart-201803-6.jpg"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (1, '{"type": "image", "slug": "./file/promoart-201803/spartalien-promoart-201803-7.jpg"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (1, '{"type": "image", "slug": "./file/promoart-201803/spartalien-promoart-201803-8.jpg"}');
 INSERT INTO stuff_media (stuff_id, code) VALUES (1, '{"type": "audio", "slug": "./file/rdt-jingles/rdt-jingle-1.mp3"}');
 INSERT INTO stuff_media (stuff_id, code) VALUES (1, '{"type": "audio", "slug": "./file/rdt-jingles/rdt-jingle-2.mp3"}');
 INSERT INTO stuff_media (stuff_id, code) VALUES (1, '{"type": "audio", "slug": "./file/rdt-jingles/rdt-jingle-3.mp3"}');
 INSERT INTO stuff_media (stuff_id, code) VALUES (2, '{"type": "audio", "slug": "./file/SPARTALIEN-322.mp3"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "link", "slug": "./file/wallpapers202001/wallpapers_800x600.zip", "text": "800x600.zip"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "link", "slug": "./file/wallpapers202001/wallpapers_1024x768.zip", "text": "1024x768.zip"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "link", "slug": "./file/wallpapers202001/wallpapers_1280x600.zip", "text": "1280x600.zip"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "link", "slug": "./file/wallpapers202001/wallpapers_1280x720.zip", "text": "1280x720.zip"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "link", "slug": "./file/wallpapers202001/wallpapers_1280x1024.zip", "text": "1280x1024.zip"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "link", "slug": "./file/wallpapers202001/wallpapers_1920x1080.zip", "text": "1920x1080.zip"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "image", "slug": "./file/wallpapers202001/wallpapers-preview-b-5.jpg"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "image", "slug": "./file/wallpapers202001/wallpapers-preview-b-6.jpg"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "image", "slug": "./file/wallpapers202001/wallpapers-preview-b-7.jpg"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "image", "slug": "./file/wallpapers202001/wallpapers-preview-b-8.jpg"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "image", "slug": "./file/wallpapers202001/wallpapers-preview-b-1.jpg"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "image", "slug": "./file/wallpapers202001/wallpapers-preview-b-2.jpg"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "image", "slug": "./file/wallpapers202001/wallpapers-preview-b-3.jpg"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "image", "slug": "./file/wallpapers202001/wallpapers-preview-b-4.jpg"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "image", "slug": "./file/wallpapers202001/wallpapers-preview-b-9.jpg"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "image", "slug": "./file/wallpapers202001/wallpapers-preview-w-1.jpg"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "image", "slug": "./file/wallpapers202001/wallpapers-preview-w-2.jpg"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "image", "slug": "./file/wallpapers202001/wallpapers-preview-w-3.jpg"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "image", "slug": "./file/wallpapers202001/wallpapers-preview-w-4.jpg"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "image", "slug": "./file/wallpapers202001/wallpapers-preview-w-5.jpg"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "image", "slug": "./file/wallpapers202001/wallpapers-preview-w-6.jpg"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "image", "slug": "./file/wallpapers202001/wallpapers-preview-w-7.jpg"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "image", "slug": "./file/wallpapers202001/wallpapers-preview-w-8.jpg"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "image", "slug": "./file/wallpapers202001/wallpapers-preview-w-9.jpg"}');
 INSERT INTO stuff_media (stuff_id, code) VALUES (3, '{"type": "youtubevideo", "slug": "eVzQQe1LyoY"}');
 INSERT INTO stuff_media (stuff_id, code) VALUES (3, '{"type": "youtubevideo", "slug": "-9iwRLyjK-g"}');
 INSERT INTO stuff_media (stuff_id, code) VALUES (3, '{"type": "youtubevideo", "slug": "D_PxOWk6v38"}');
@@ -1312,19 +1251,9 @@ INSERT INTO stuff_media (stuff_id, code) VALUES (3, '{"type": "youtubevideo", "s
 INSERT INTO stuff_media (stuff_id, code) VALUES (3, '{"type": "youtubevideo", "slug": "XP89XWk1BeA"}');
 INSERT INTO stuff_media (stuff_id, code) VALUES (3, '{"type": "youtubevideo", "slug": "wBKZFFxSQb0"}');
 INSERT INTO stuff_media (stuff_id, code) VALUES (3, '{"type": "youtubevideo", "slug": "LDlcH_Z7Tfc"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (6, '{"type": "youtubevideo", "slug": "uL2S2xVQPto"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (6, '{"type": "youtubevideo", "slug": "z7cUKof9VvU"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (6, '{"type": "youtubevideo", "slug": "MVBeO9HvKZM"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (6, '{"type": "youtubevideo", "slug": "JDFAeND7hlI"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (6, '{"type": "youtubevideo", "slug": "YjEKp2UnUn8"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (6, '{"type": "youtubevideo", "slug": "fKRlTYKWYwA"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (6, '{"type": "youtubevideo", "slug": "q_XuMDRsIwc"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (6, '{"type": "youtubevideo", "slug": "awkTjmcHQzc"}');
 INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "audio", "slug": "./file/gtt-voiceovers/gtt-voiceover-1.mp3"}');
 INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "audio", "slug": "./file/gtt-voiceovers/gtt-voiceover-1-neithernoisenordub.mp3"}');
 INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "audio", "slug": "./file/gtt-voiceovers/gtt-voiceover-1-nonoise.mp3"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (8, '{"type": "odyseevideo", "slug": "@spartalien:2/total-fucking-madness:8"}');
--- INSERT INTO stuff_media (stuff_id, code) VALUES (8, '{"type": "youtubevideo", "slug": "eq_I5Oq603M"}');
 
 
 INSERT INTO news (pub_date) VALUES ('2016-03-24');
@@ -1434,7 +1363,7 @@ INSERT INTO news_text (news_id, text) VALUES (29, 'New music: [KEEN](./music/id:
 INSERT INTO news_text (news_id, text) VALUES (30, 'New music: [SPARTALIEN & Esblendet - Rainbows & Unicorns](./music/id:22)');
 INSERT INTO news_text (news_id, text) VALUES (31, 'New music: [Brain I/O #8](./music/id:18)');
 INSERT INTO news_text (news_id, text) VALUES (32, 'New logo!');
-INSERT INTO news_text (news_id, text) VALUES (33, 'New [Wallpapers](./visual/id:65)');
+INSERT INTO news_text (news_id, text) VALUES (33, 'New Wallpapers');
 INSERT INTO news_text (news_id, text) VALUES (34, 'New music: [Let It All Go, Volume 1](./music/id:23)');
 INSERT INTO news_text (news_id, text) VALUES (35, 'New music: [Brain I/O #9](./music/id:18)');
 INSERT INTO news_text (news_id, text) VALUES (36, 'New music: [1996](./music/id:24)');
@@ -1481,7 +1410,7 @@ INSERT INTO news_text (news_id, text) VALUES (70, 'New music: [arT2 - Sound.Ex 1
 INSERT INTO mention (subject, description) VALUES ('Live on MighTV 2020-11-18', 'The [Might](//might.digital) crew invited me to create some music on their livestream.');
 INSERT INTO mention (subject, description) VALUES ('Live on MighTV 2020-11-29', 'The [Might](//might.digital) crew invited me to create some music on their livestream.');
 INSERT INTO mention (subject, description) VALUES ('Shikantaza Creativity Interview', '[Shikantaza Art](//shikantaza.cyberpunkonline.net) asked me to answer some questions.');
-INSERT INTO mention (subject, description) VALUES ('ediblewaves'' YouTube Channel', 'ediblewaves [i]aka[/i] Klangachse invited me to hang out on his livestream.' || CHAR(10) || 'Also check out his [Bandcamp page](//ediblewaves.bandcamp.com) and [YouTube channel](//www.youtube.com/@ediblewaves8027).' || CHAR(10, 10) || 'Starts at: 0:24:04');
+INSERT INTO mention (subject, description) VALUES ('ediblewaves'' YouTube Channel', 'ediblewaves *aka* Klangachse invited me to hang out on his livestream.' || CHAR(10) || 'Also check out his [Bandcamp page](//ediblewaves.bandcamp.com) and [YouTube channel](//www.youtube.com/@ediblewaves8027).' || CHAR(10, 10) || 'Starts at: 0:24:04');
 INSERT INTO mention (subject, description) VALUES ('Spooky Kitten Records'' WHiTMiRE Reviews Music: Episode 26', '[Michael Whitmire](//www.youtube.com/@SpookyKittenRecords) played [Flux (feat. Stevie Lee Price)](./catalog/track:97) on his music review show.' || CHAR(10, 10) || 'Starts at: 1:46:27');
 INSERT INTO mention (subject, description) VALUES ('Resonate on CAMP Radio 2022-03-27', '[The Argent Grub](//theargentgrub.co.uk) included [Rainbows & Unicorns](./catalog/track:58) in the Resonate playlist.');
 INSERT INTO mention (subject, description) VALUES ('Bento Box, Vol. 2', 'A second delicious dose of Kaiseki Digital for your enjoyment.' || CHAR(10, 10) || 'Released 2019-03-29 on [Kaiseki Digital](//kaisekidigital.bandcamp.com).' || CHAR(10, 10) || 'I contributed track 1.');
@@ -1522,6 +1451,55 @@ INSERT INTO mention_media (mention_id, code) VALUES (14, '{"type": "link", "slug
 INSERT INTO mention_media (mention_id, code) VALUES (14, '{"type": "image", "slug": "./file/compilation/soundsforthesoul-the-backrooms-comp-level-2.jpg"}');
 INSERT INTO mention_media (mention_id, code) VALUES (14, '{"type": "bandcampalbum", "slug": "78435677", "trackcount": 43}');
 INSERT INTO mention_media (mention_id, code) VALUES (15, '{"type": "youtubevideo", "slug": "4cGDNeS81lg", "start": 1706}');
+
+
+INSERT INTO exit (text, url) VALUES ('Conservation Drones', '//conservationdrones.org');
+INSERT INTO exit (text, url) VALUES ('Earthship Biotecture', '//earthshipglobal.com');
+INSERT INTO exit (text, url) VALUES ('Four Paws', '//four-paws.org');
+INSERT INTO exit (text, url) VALUES ('Music Declares Emergency', '//musicdeclares.net');
+INSERT INTO exit (text, url) VALUES ('Pestalozzi Children''s Foundation', '//pestalozzi.ch');
+INSERT INTO exit (text, url) VALUES ('Schweizerische Tiermeldezentrale', '//stmz.ch');
+INSERT INTO exit (text, url) VALUES ('Internet Archive', '//archive.org');
+INSERT INTO exit (text, url) VALUES ('<1', '//lessthanone.bandcamp.com');
+INSERT INTO exit (text, url) VALUES ('Angel Ruediger', '//open.spotify.com/artist/3Xp2zhqhMeT9j9bNIeyZWU');
+INSERT INTO exit (text, url) VALUES ('Cyber Shaman', '//cyber-shaman.bandcamp.com');
+INSERT INTO exit (text, url) VALUES ('DepthCruiser', '//www.depthcruiser.com');
+INSERT INTO exit (text, url) VALUES ('Dorian Iten', '//dorian-iten.com');
+INSERT INTO exit (text, url) VALUES ('HOLLOWLOVE', '//hollowlove.com');
+INSERT INTO exit (text, url) VALUES ('Lens', '//lensmakesart.com');
+INSERT INTO exit (text, url) VALUES ('melodywhore', '//melodywhore.com');
+INSERT INTO exit (text, url) VALUES ('Plike', '//plike.bandcamp.com');
+INSERT INTO exit (text, url) VALUES ('Radio Dark Tunnel', '//radio-dark-tunnel.net');
+INSERT INTO exit (text, url) VALUES ('Sara Jayne Crow', '//straypoodle.wordpress.com');
+INSERT INTO exit (text, url) VALUES ('Tengushee', '//tengushee.com');
+INSERT INTO exit (text, url) VALUES ('Submarine Broadcasting Company', '//submarinebroadcastingco.bandcamp.com');
+INSERT INTO exit (text, url) VALUES ('Minimal_Drone*GRL', '//minimaldronegrl.bandcamp.com');
+INSERT INTO exit (text, url) VALUES ('ediblewaves', '//ediblewaves.bandcamp.com');
+INSERT INTO exit (text, url) VALUES ('Shikantaza Art', '//shikantaza.cyberpunkonline.net');
+INSERT INTO exit (text, url) VALUES ('Occupy White Walls', '//www.oww.io');
+INSERT INTO exit (text, url) VALUES ('The Creative Passport', '//www.creativepassport.net');
+INSERT INTO exit (text, url) VALUES ('GhostTownTunes', '//twitch.tv/ghosttowntunes');
+INSERT INTO exit (text, url) VALUES ('DJOZeroO', '//twitch.tv/djozeroo');
+INSERT INTO exit (text, url) VALUES ('cruelcoppinger', '//cruelcoppinger.tumblr.com');
+INSERT INTO exit (text, url) VALUES ('Stevie Lee Price', '//twitter.com/STEVIELEEPRICE');
+INSERT INTO exit (text, url) VALUES ('Kaiseki Digital', '//kaisekidigital.bandcamp.com');
+INSERT INTO exit (text, url) VALUES ('ayefelon', '//ayefelon.bandcamp.com');
+INSERT INTO exit (text, url) VALUES ('Sounds for the Soul Records', '//soundsforthesoul.bandcamp.com');
+INSERT INTO exit (text, url) VALUES ('Martina''s Spotify Playlists', '//open.spotify.com/user/m0o63p2xyamfpkw2xg4mw26nc/playlists');
+INSERT INTO exit (text, url) VALUES ('Mind Of La E', '//mindoflae.com');
+INSERT INTO exit (text, url) VALUES ('Resonate', '//resonate.coop');
+INSERT INTO exit (text, url) VALUES ('The Argent Grub', '//theargentgrub.co.uk');
+INSERT INTO exit (text, url) VALUES ('CAMP', '//www.campfr.com');
+INSERT INTO exit (text, url) VALUES ('Orochi Hanma', '//www.twitch.tv/orochihanma');
+INSERT INTO exit (text, url) VALUES ('SomaFM', '//somafm.com');
+INSERT INTO exit (text, url) VALUES ('Scotopia', '//scotopia.co.uk');
+INSERT INTO exit (text, url) VALUES ('scene.org File Archive', '//files.scene.org');
+INSERT INTO exit (text, url) VALUES ('MusiX', '//www.musix.com');
+INSERT INTO exit (text, url) VALUES ('House of Sound', '//www.houseofsound.ch');
+INSERT INTO exit (text, url) VALUES ('MP3TAG', '//mp3tag.de');
+INSERT INTO exit (text, url) VALUES ('Foobar2000', '//foobar2000.org');
+INSERT INTO exit (text, url) VALUES ('iMusician', '//imusician.app/signup?referral_token=Lriyz1h7DIHUCK1I');
+INSERT INTO exit (text, url) VALUES ('Spooky Kitten Records', '//www.youtube.com/@SpookyKittenRecords');
 
 
 INSERT INTO p420_session(num, pub_date, runtime, mixcloud_key) VALUES (1, '2021-05-04', 10370, NULL);
@@ -2714,55 +2692,6 @@ INSERT INTO p420_tracklist(session_num, start_time, artist, track) VALUES (45, 4
 INSERT INTO p420_tracklist(session_num, start_time, artist, track) VALUES (45, 5145, 'we could die here', 'death');
 INSERT INTO p420_tracklist(session_num, start_time, artist, track) VALUES (45, 5309, 'Dzihan & Kamien', 'Drophere feat. Ma.dita');
 INSERT INTO p420_tracklist(session_num, start_time, artist, track) VALUES (45, 5591, 'Cowboy Junkies', 'Sweet Jane (Edit)');
-
-
-INSERT INTO exit (text, url) VALUES ('Conservation Drones', '//conservationdrones.org');
-INSERT INTO exit (text, url) VALUES ('Earthship Biotecture', '//earthshipglobal.com');
-INSERT INTO exit (text, url) VALUES ('Four Paws', '//four-paws.org');
-INSERT INTO exit (text, url) VALUES ('Music Declares Emergency', '//musicdeclares.net');
-INSERT INTO exit (text, url) VALUES ('Pestalozzi Children''s Foundation', '//pestalozzi.ch');
-INSERT INTO exit (text, url) VALUES ('Schweizerische Tiermeldezentrale', '//stmz.ch');
-INSERT INTO exit (text, url) VALUES ('Internet Archive', '//archive.org');
-INSERT INTO exit (text, url) VALUES ('<1', '//lessthanone.bandcamp.com');
-INSERT INTO exit (text, url) VALUES ('Angel Ruediger', '//open.spotify.com/artist/3Xp2zhqhMeT9j9bNIeyZWU');
-INSERT INTO exit (text, url) VALUES ('Cyber Shaman', '//cyber-shaman.bandcamp.com');
-INSERT INTO exit (text, url) VALUES ('DepthCruiser', '//www.depthcruiser.com');
-INSERT INTO exit (text, url) VALUES ('Dorian Iten', '//dorian-iten.com');
-INSERT INTO exit (text, url) VALUES ('HOLLOWLOVE', '//hollowlove.com');
-INSERT INTO exit (text, url) VALUES ('Lens', '//lensmakesart.com');
-INSERT INTO exit (text, url) VALUES ('melodywhore', '//melodywhore.com');
-INSERT INTO exit (text, url) VALUES ('Plike', '//plike.bandcamp.com');
-INSERT INTO exit (text, url) VALUES ('Radio Dark Tunnel', '//radio-dark-tunnel.net');
-INSERT INTO exit (text, url) VALUES ('Sara Jayne Crow', '//straypoodle.wordpress.com');
-INSERT INTO exit (text, url) VALUES ('Tengushee', '//tengushee.com');
-INSERT INTO exit (text, url) VALUES ('Submarine Broadcasting Company', '//submarinebroadcastingco.bandcamp.com');
-INSERT INTO exit (text, url) VALUES ('Minimal_Drone*GRL', '//minimaldronegrl.bandcamp.com');
-INSERT INTO exit (text, url) VALUES ('ediblewaves', '//ediblewaves.bandcamp.com');
-INSERT INTO exit (text, url) VALUES ('Shikantaza Art', '//shikantaza.cyberpunkonline.net');
-INSERT INTO exit (text, url) VALUES ('Occupy White Walls', '//www.oww.io');
-INSERT INTO exit (text, url) VALUES ('The Creative Passport', '//www.creativepassport.net');
-INSERT INTO exit (text, url) VALUES ('GhostTownTunes', '//twitch.tv/ghosttowntunes');
-INSERT INTO exit (text, url) VALUES ('DJOZeroO', '//twitch.tv/djozeroo');
-INSERT INTO exit (text, url) VALUES ('cruelcoppinger', '//cruelcoppinger.tumblr.com');
-INSERT INTO exit (text, url) VALUES ('Stevie Lee Price', '//twitter.com/STEVIELEEPRICE');
-INSERT INTO exit (text, url) VALUES ('Kaiseki Digital', '//kaisekidigital.bandcamp.com');
-INSERT INTO exit (text, url) VALUES ('ayefelon', '//ayefelon.bandcamp.com');
-INSERT INTO exit (text, url) VALUES ('Sounds for the Soul Records', '//soundsforthesoul.bandcamp.com');
-INSERT INTO exit (text, url) VALUES ('Martina''s Spotify Playlists', '//open.spotify.com/user/m0o63p2xyamfpkw2xg4mw26nc/playlists');
-INSERT INTO exit (text, url) VALUES ('Mind Of La E', '//mindoflae.com');
-INSERT INTO exit (text, url) VALUES ('Resonate', '//resonate.coop');
-INSERT INTO exit (text, url) VALUES ('The Argent Grub', '//theargentgrub.co.uk');
-INSERT INTO exit (text, url) VALUES ('CAMP', '//www.campfr.com');
-INSERT INTO exit (text, url) VALUES ('Orochi Hanma', '//www.twitch.tv/orochihanma');
-INSERT INTO exit (text, url) VALUES ('SomaFM', '//somafm.com');
-INSERT INTO exit (text, url) VALUES ('Scotopia', '//scotopia.co.uk');
-INSERT INTO exit (text, url) VALUES ('scene.org File Archive', '//files.scene.org');
-INSERT INTO exit (text, url) VALUES ('MusiX', '//www.musix.com');
-INSERT INTO exit (text, url) VALUES ('House of Sound', '//www.houseofsound.ch');
-INSERT INTO exit (text, url) VALUES ('MP3TAG', '//mp3tag.de');
-INSERT INTO exit (text, url) VALUES ('Foobar2000', '//foobar2000.org');
-INSERT INTO exit (text, url) VALUES ('iMusician', '//imusician.app/signup?referral_token=Lriyz1h7DIHUCK1I');
-INSERT INTO exit (text, url) VALUES ('Spooky Kitten Records', '//www.youtube.com/@SpookyKittenRecords');
 
 
 COMMIT;

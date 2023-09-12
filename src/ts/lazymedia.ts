@@ -29,6 +29,9 @@ type LazyCode = {
     alt?: string
     linkto?: string
 
+    // optional for audio
+    label?: string
+
     // optional for bandcampalbum, spotifyalbum, spotifyplaylist
     trackcount?: number
 
@@ -178,21 +181,48 @@ export class LazyMedia
         if (code.type == 'audio') {
             code.slug = this.slug_template.audio.replace('{SLUG}', code.slug)
 
-            baked_element = document.createElement('audio')
+            if (!code.label) {
+                baked_element = document.createElement('audio')
 
-            baked_element.setAttribute('src', code.slug)
-            baked_element.setAttribute('loading', 'lazy')
-            baked_element.setAttribute('preload', 'metadata')
-            baked_element.setAttribute('controls', 'controls')
+                baked_element.setAttribute('src', code.slug)
+                baked_element.setAttribute('loading', 'lazy')
+                baked_element.setAttribute('preload', 'metadata')
+                baked_element.setAttribute('controls', 'controls')
 
-            this.add_code_attr(code, baked_element)
-            this.add_code_css(code, baked_element)
+                this.add_code_attr(code, baked_element)
+                this.add_code_css(code, baked_element)
 
-            const inner: HTMLAnchorElement = document.createElement('a')
-            inner.setAttribute('href', code.slug)
-            inner.innerText = code.slug
+                const inner1: HTMLAnchorElement = document.createElement('a')
+                inner1.setAttribute('href', code.slug)
+                inner1.innerText = code.slug
 
-            baked_element.append(inner)
+                baked_element.append(inner1)
+            }
+            else {
+                baked_element = document.createElement('div')
+
+                const inner1: HTMLLabelElement = document.createElement('label')
+                inner1.innerHTML = code.label
+
+                baked_element.append(inner1)
+
+                const inner2: HTMLAudioElement = document.createElement('audio')
+
+                inner2.setAttribute('src', code.slug)
+                inner2.setAttribute('loading', 'lazy')
+                inner2.setAttribute('preload', 'metadata')
+                inner2.setAttribute('controls', 'controls')
+
+                this.add_code_attr(code, inner2)
+                this.add_code_css(code, inner2)
+
+                const inner3: HTMLAnchorElement = document.createElement('a')
+                inner3.setAttribute('href', code.slug)
+                inner3.innerText = code.slug
+
+                inner2.append(inner3)
+                baked_element.append(inner2)
+            }
         }
 
         // video

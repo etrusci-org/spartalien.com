@@ -45,14 +45,14 @@ if (isset($this->Router->route['var']['artist'])) {
             <div class="box">
                 <h3>Meta</h3>
                 <ul class="meta">
+                    <li>Type: Track</li>
                     <li>Artist: <a href="./catalog/artist:%1$s">%2$s</a></li>
-                    <li>Runtime: %3$s [%4$ss]</li>
+                    <li>Runtime: %3$s</li>
                 </ul>
             </div>',
             $track['artist_id'],
             $track['artist_name'],
             $track['track_runtime_human'],
-            $track['track_runtime'],
         );
 
         if ($track['track_credit']) {
@@ -91,16 +91,23 @@ if (isset($this->Router->route['var']['artist'])) {
 <?php if ($artist): ?>
     <h2><?php print($artist['artist_name']); ?></h2>
     <div class="box">
-        <h3>Meta</h3>
         <?php
-        $meta = '';
-        if ($artist['artist_description']) $meta .= $this->_lazytext($artist['artist_description']);
-        if ($artist['artist_url']) $meta .= sprintf('<p class="meta"><a href="%1$s">%1$s</a></p>', $artist['artist_url']);
-        if (!$meta) $meta = '<p>No information.</p>';
-        print($meta);
+        printf('
+            <h3>Meta</h3>
+            <ul class="meta">
+                <li>Type: Artist</li>
+                %1$s
+            </ul>
+            <p>%2$s</p>',
+            ($artist['artist_url']) ? sprintf('<li>Link: <a href="%1$s">%1$s</a></li>', $artist['artist_url']) : '',
+            ($artist['artist_description']) ? $this->_lazytext($artist['artist_description']) : 'No further information stored.',
+        );
         ?>
-        <p><a href="javascript:history.back(-1);">&lArr; back</a></p>
     </div>
+
+    <p>
+        <a href="javascript:history.back(-1);">&lArr; back</a>
+    </p>
 <?php endif ?>
 
 

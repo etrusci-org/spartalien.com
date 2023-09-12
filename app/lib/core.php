@@ -205,7 +205,7 @@ class Core
 
         foreach ($this->conf['site_nav'] as $k => $v) {
             $dump[] = sprintf(
-                '<a href="%1$s" title="%2$s"%3$s>%2$s</a>',
+                '<a href="%1$s"%3$s>%2$s</a>',
                 $v['link'],
                 $v['link_text'],
                 ($this->Router->route['node'] == $k) ? ' class="active"' : '',

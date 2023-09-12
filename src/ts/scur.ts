@@ -34,7 +34,7 @@ export class Scur
     }
 
 
-    autodeob(): void {
+    public autodeob(): void {
         const nodeList: NodeListOf<Element> = document.querySelectorAll('[data-scur]')
 
         nodeList.forEach(node => {

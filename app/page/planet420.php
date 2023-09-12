@@ -38,13 +38,12 @@ $total_hours_to_listen = $this->get_total_hours_to_listen($session_list);
                 <h3>Meta</h3>
                 <ul class="meta">
                     <li>Track count: %1$s</li>
-                    <li>Total runtime: %2$s [%3$ss]</li>
-                    <li>Released: %4$s</li>
+                    <li>Total runtime: %2$s</li>
+                    <li>Released: %3$s</li>
                 </ul>
             </div>',
             $session['session_track_count'],
             $session['session_runtime_human'],
-            $session['session_runtime'],
             $session['session_pub_date'],
         );
         ?>
