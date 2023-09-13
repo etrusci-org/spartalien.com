@@ -22,7 +22,6 @@ export class ImgZoom {
             this.close();
         }, false);
         window.addEventListener('keydown', (event) => {
-            console.log(event.key);
             if (event.key == 'Escape' || event.key == ' ') {
                 this.close();
             }
