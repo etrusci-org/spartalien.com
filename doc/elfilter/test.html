@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        /* cosmetics and test stuff */
+        body { background-color: #000; padding: 1rem; }
+        body, a { color: #ccc; }
+        table { border-collapse: collapse; }
+        td { border: 1px solid; }
+
+        /* classes and style examples by and for elfilter */
+        .hide { display: none; }
+    </style>
+</head>
+<body>
+
+
+    <input type="text" class="elfilter-input">
+
+    <hr>
+
+    <table class="elfilter">
+        <tbody>
+            <tr>
+                <td>Foo</td>
+                <td>Bar</td>
+            </tr>
+            <tr>
+                <td>Moo</td>
+                <td>Cow</td>
+            </tr>
+            <tr>
+                <td>Batman</td>
+                <td>Joker</td>
+            </tr>
+            <tr>
+                <td>Silence</td>
+                <td>Music</td>
+            </tr>
+            <tr>
+                <td>Silence</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>-</td>
+                <td>Music</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <ul class="elfilter">
+        <li>Foo Bar</li>
+        <li>Foo</li>
+        <li>Bar</li>
+        <li>Bar1</li>
+        <li>Bar2</li>
+        <li>Bar3</li>
+    </ul>
+
+    <hr>
+
+    <input type="text" class="elfilter-input">
+
+
+
+
+    <script type="module">
+        import { ElFilter } from '../../app/public/res/elfilter.js'
+
+        const EF = new ElFilter()
+    </script>
+
+
+
+
+</body>
+</html>
+
+
+    <!-- cool 1
+
+    <input type="text" class="elfilter-input" placeholder="filter...">
+    <hr>
+
+    <table>
+        <tbody>
+            <tr data-elfilter-item="moo cow">
+                <td>Moo</td>
+                <td>Cow</td>
+            </tr>
+            <tr data-elfilter-item="batman joker">
+                <td>Batman</td>
+                <td>Joker</td>
+            </tr>
+            <tr data-elfilter-item="silence music">
+                <td>Silence</td>
+                <td>Music</td>
+            </tr>
+            <tr data-elfilter-item="silence">
+                <td>Silence</td>
+                <td>-</td>
+            </tr>
+            <tr data-elfilter-item="music">
+                <td>-</td>
+                <td>Music</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <ul>
+        <li data-elfilter-item="foo bar">Foo Bar</li>
+        <li data-elfilter-item="foo">Foo</li>
+        <li data-elfilter-item="bar">Bar1</li>
+        <li data-elfilter-item="bar">Bar2</li>
+        <li data-elfilter-item="bar">Bar3</li>
+    </ul>
+    <hr>
+
+    <input type="text" class="elfilter-input" placeholder="filter...">
+
+
+
+
+    <script type="module">
+        import { ElFilter } from '../../app/public/res/elfilter.js'
+
+        const EF = new ElFilter()
+    </script>
+
+    -->
+
+
+
+
+    <!-- try 1
+
+    Filter:
+    <button data-elfilter-ctrl="*">all</button>
+    <button data-elfilter-ctrl="foo">foo</button>
+    <button data-elfilter-ctrl="bar">bar</button>
+    <button data-elfilter-ctrl="moo">moo</button>
+    <button data-elfilter-ctrl="com">com</button>
+
+    <input class="elfilter-search" type="text">
+
+    <hr>
+
+    <div data-elfilter-item="foo">foo</div>
+
+    <div data-elfilter-item="bar">bar1</div>
+    <div data-elfilter-item="bar">bar2</div>
+    <div data-elfilter-item="bar">bar3</div>
+    <div data-elfilter-item="bar">bar4</div>
+
+    <div data-elfilter-item="moo">cow1</div>
+    <div data-elfilter-item="moo">cow2</div>
+
+    <div data-elfilter-item="com">batman</div>
+    <div data-elfilter-item="com">venom</div>
+
+    <script type="module">
+        import { ElFilter } from '../../app/public/res/elfilter.js'
+
+        const EF = new ElFilter()
+    </script>
+    -->

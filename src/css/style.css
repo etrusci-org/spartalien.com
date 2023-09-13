@@ -626,6 +626,10 @@ img.tn {
   text-align: right;
 }
 
+.hide {
+  display: none;
+}
+
 .lazycode {
   display: block;
 }
