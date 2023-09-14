@@ -213,6 +213,23 @@ table {
 }
 
 
+input {
+    width: 100%;
+    min-width: 100px;
+    max-width: 200px;
+    padding: .75rem;
+
+    &::placeholder {
+        color: $color-gray-500;
+    }
+
+    &[type=text] {
+        color: $color-brand-50;
+        background-color: $color-gray-850;
+        box-shadow: 0 0 10px 5px $color-black inset;
+    }
+
+}
 
 
 
@@ -484,7 +501,7 @@ div.imgzoom-target {
     z-index: 2000;
     text-align: center;
     cursor: zoom-out;
-    background-color: #000000ec;
+    background-color: rgba(0, 0, 0, 0.97);
 }
 
 div.imgzoom-target.open {

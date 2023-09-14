@@ -31,6 +31,7 @@ img,
 audio,
 video,
 iframe,
+input,
 ::before,
 ::after {
     margin: 0;
@@ -114,7 +115,6 @@ iframe {
     max-width: 100%;
     height: auto;
 }
-
 
 
 

@@ -258,6 +258,7 @@ img,
 audio,
 video,
 iframe,
+input,
 ::before,
 ::after {
   margin: 0;
@@ -477,6 +478,21 @@ table tr:hover td, table tr:focus td {
   transition: background-color 0.25s linear;
 }
 
+input {
+  width: 100%;
+  min-width: 100px;
+  max-width: 200px;
+  padding: 0.75rem;
+}
+input::placeholder {
+  color: hsl(0, 0%, 48%);
+}
+input[type=text] {
+  color: hsl(77, 75%, 41%);
+  background-color: hsl(0, 0%, 15%);
+  box-shadow: 0 0 10px 5px hsl(0, 0%, 0%) inset;
+}
+
 header {
   position: sticky;
   top: 0;
@@ -652,7 +668,7 @@ div.imgzoom-target {
   z-index: 2000;
   text-align: center;
   cursor: zoom-out;
-  background-color: rgba(0, 0, 0, 0.9254901961);
+  background-color: rgba(0, 0, 0, 0.97);
 }
 
 div.imgzoom-target.open {
