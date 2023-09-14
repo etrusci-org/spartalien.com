@@ -16,21 +16,21 @@ $total_hours_to_listen = $this->get_total_hours_to_listen($session_list);
     <h2>Planet 420.<?php print($session['session_num']); ?></h2>
 
     <div class="grid-x-2">
-        <div class="box full-width">
-            <?php
-            if ($session['session_mixcloud_key']) {
-                printf('
+        <?php
+        if ($session['session_mixcloud_key']) {
+            printf(
+                '<div class="box full-width">
                     <div class="lazycode">
                         {"type": "mixcloudshow", "slug": "%1$s"}
-                    </div>',
-                    $session['session_mixcloud_key'],
-                );
-            }
-            else {
-                print('<p>Sorry, the recording for this one is lost.</p>');
-            }
-            ?>
-        </div>
+                    </div>
+                </div>',
+                $session['session_mixcloud_key'],
+            );
+        }
+        else {
+            print('<p>Sorry, the recording for this one is lost.</p>');
+        }
+        ?>
 
         <?php
         printf('

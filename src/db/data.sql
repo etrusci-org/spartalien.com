@@ -1219,6 +1219,7 @@ INSERT INTO visual_media (visual_id, code) VALUES (64, '{"type": "image", "slug"
 INSERT INTO visual_media (visual_id, code) VALUES (64, '{"type": "image", "slug": "./file/visual/2018-spartalien-promoart-201803-5.jpg", "linkto": "./file/visual/2018-spartalien-promoart-201803-5.jpg"}');
 INSERT INTO visual_media (visual_id, code) VALUES (64, '{"type": "image", "slug": "./file/preview/visual/64-6-med.jpg", "linkto": "./file/visual/2018-spartalien-promoart-201803-6.jpg"}');
 INSERT INTO visual_media (visual_id, code) VALUES (64, '{"type": "image", "slug": "./file/preview/visual/64-7-med.jpg", "linkto": "./file/visual/2018-spartalien-promoart-201803-7.jpg"}');
+INSERT INTO visual_media (visual_id, code) VALUES (64, '{"type": "image", "slug": "./file/preview/visual/64-8-med.jpg", "linkto": "./file/visual/2018-spartalien-promoart-201803-8.jpg"}');
 INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "youtubevideo", "slug": "uL2S2xVQPto"}');
 INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "youtubevideo", "slug": "z7cUKof9VvU"}');
 INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "youtubevideo", "slug": "MVBeO9HvKZM"}');

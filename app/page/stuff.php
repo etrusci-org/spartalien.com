@@ -13,16 +13,16 @@ if (isset($this->Router->route['var']['id'])) {
 <?php if ($stuff): ?>
     <h2><?php print($stuff['stuff_name']); ?></h2>
 
-    <div class="box">
-        <?php
-        foreach ($stuff['stuff_media'] as $v) {
-            printf(
-                '<div class="lazycode">%s</div>',
-                $v,
-            );
-        }
-        ?>
-    </div>
+    <?php
+    foreach ($stuff['stuff_media'] as $v) {
+        printf(
+            '<div class="box">
+                <div class="lazycode">%s</div>
+            </div>',
+            $v,
+        );
+    }
+    ?>
 <?php endif; ?>
 
 

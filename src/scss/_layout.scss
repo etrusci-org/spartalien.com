@@ -120,14 +120,6 @@ main, footer {
 
 
 
-.meta {
-    font-family: $font-family-mono;
-    font-size: 80%;
-    margin-bottom: 2rem;
-    color: $color-gray-600;
-}
-
-
 
 
 
@@ -370,7 +362,7 @@ img.tn {
 
 
 
-// this grid works now well for images
+// this grid works now well for 1:1 images
 // does not need media queries
 .grid {
     display: grid;
@@ -440,6 +432,14 @@ img.tn {
 
 
 
+.meta {
+    font-family: $font-family-mono;
+    font-size: 80%;
+    margin-bottom: 2rem;
+    color: $color-gray-600;
+}
+
+
 .noscript {
     color: $color-warning;
     padding: .25rem;
@@ -473,18 +473,88 @@ img.tn {
 
 .lazycode {
     display: block;
+    background-image: url('./loading.gif');
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 
 .lazymedia {
     display: block;
 
-    &.mixcloudshow,
-    &.mixcloudplaylist {
+    // &.link {}
+
+    &.image {
         width: 100%;
-        height: 181px;
+        height: auto;
+    }
+
+    &.audio {
+        width: 500px;
+        max-width: 100%;
+    }
+
+    &.bandcamptrack {
+        width: 100%;
+        height: 120px;
+    }
+
+    &.bandcampalbum {
+        width: 100%;
+        height: 208px;
+    }
+
+    // &.spotifytrack {}
+
+    // &.spotifyalbum {}
+
+    // &.spotifyplaylist {}
+
+    &.mixcloudplaylist,
+    &.mixcloudshow {
+        width: 100%;
+        height: 182px;
+    }
+
+
+    // see .videobox for these:
+    // &.video {}
+    // &.youtubevideo {}
+    // &.youtubeplaylist {}
+    // &.odyseevideo {}
+
+
+    // &.mixcloudshow,
+    // &.mixcloudplaylist {
+    //     width: 100%;
+    //     height: 181px;
+    // }
+}
+
+
+.videobox {
+    position: relative;
+    padding-top: 56.25%; // 16:9
+    overflow: hidden;
+    margin-bottom: 2rem;
+    width: 800px;
+    max-width: 100%;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .lazymedia {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
     }
 }
+
+
 
 
 
@@ -554,7 +624,8 @@ a.lazymedia.image {
     }
 
     .grid-x-2 {
-        row-gap: 8rem;
+        // row-gap: 8rem;
+        row-gap: 0rem;
     }
 
     .grid-x-3 {
@@ -585,469 +656,3 @@ a.lazymedia.image {
 @media screen and (max-height: 50rem) {
     header { position: relative; }
 }
-
-
-
-
-
-
-
-
-
-
-
-// /*--- Layout ---*/
-// // mobile first, handle larger screensizes in _query
-
-// p { line-height: 1.75; }
-// ul { line-height: 1.75; }
-// nav ul { line-height: 1; }
-// table { line-height: 2; }
-// pre { line-height: 1.5; }
-
-
-// header {
-//     padding-top: 1.25rem;
-//     padding-bottom: 1rem;
-//     padding-left: 1rem;
-//     padding-right: 1rem;
-//     margin-bottom: 3rem;
-//     border-bottom-width: 1px;
-//     border-bottom-style: dotted;
-// }
-
-
-// nav ul li {
-//     display: inline-block;
-//     margin-right: .75rem;
-
-//     &:last-child {
-//         margin-right: 0;
-//     }
-
-//     a {
-//         &:link,
-//         &:visited {
-//             text-decoration-line: none;
-//         }
-
-//         &::before {
-//             content: '/';
-//         }
-//     }
-// }
-
-
-// main {
-//     min-width: 300px;
-//     max-width: 1200px;
-//     padding-left: 1rem;
-//     padding-right: 1rem;
-//     margin-left: auto;
-//     margin-right: auto;
-
-//     img {
-//         max-height: 80vh;
-//     }
-// }
-
-
-// footer {
-//     padding-bottom: 2rem;
-//     padding-left: 1rem;
-//     padding-right: 1rem;
-//     margin-top: 95vh;
-
-//     nav {
-//         margin-bottom: 1rem;
-//     }
-// }
-
-
-
-
-
-// h1 {
-//     display: none;
-// }
-
-
-// h2 {
-//     margin-bottom: 6rem;
-//     letter-spacing: .25rem;
-// }
-
-
-// h3 {
-//     margin-bottom: 2rem;
-// }
-
-
-// section {
-//     margin-bottom: 8rem;
-
-//     &:last-child {
-//         margin-bottom: 0;
-//     }
-
-//     &.more {
-//         margin-top: 30rem;
-//     }
-// }
-
-
-// // article {
-// //     margin-bottom: 8rem;
-
-// //     &:last-child {
-// //         margin-bottom: 0;
-// //     }
-// // }
-
-
-// p,
-// ul {
-//     margin-bottom: 1rem;
-
-//     &:last-child {
-//         margin-bottom: 0;
-//     }
-// }
-
-
-// table {
-//     // width: 100%;
-
-//     th {
-//         padding-bottom: .5rem;
-//         white-space: nowrap;
-//     }
-
-//     th,
-//     td {
-//         padding-right: 4rem;
-//         vertical-align: top;
-//     }
-// }
-
-
-// a {
-//     outline: none;
-
-//     &:link,
-//     &:visited {
-//         text-decoration-line: underline;
-//         text-decoration-style: dotted;
-//     }
-
-//     &:hover,
-//     &:active {
-//         text-decoration-line: underline;
-//         text-decoration-style: solid;
-//     }
-
-//     &:focus,
-//     &.active {
-//         text-decoration-line: underline;
-//         text-decoration-style: double;
-
-//         img {
-//             border-width: 1px;
-//         }
-//     }
-
-//     &[href^='//']::after,
-//     &[href^='http://']::after,
-//     &[href^='https://']::after {
-//         content: '⇗';
-//     }
-// }
-
-
-
-
-// .grid {
-//     display: grid;
-//     grid-template-columns: repeat(2, 1fr);
-//     grid-template-rows: minmax(auto, 1fr);
-//     column-gap: 2rem;
-//     row-gap: 2rem;
-
-//     img {
-//         width: auto;
-//         height: 100%;
-//         object-fit: cover;
-//     }
-
-//     &.max3 {
-//         grid-template-columns: 1fr;
-//     }
-
-//     &.content {
-//         grid-template-columns: 1fr;
-//         column-gap: 4rem;
-//         row-gap: 8rem;
-
-//         img {
-//             width: 100%;
-//             max-width: 400px;
-//             height: auto;
-//             object-fit: contain;
-//         }
-//     }
-// }
-
-
-
-// .rls {
-//     .head {
-//         margin-bottom: 4rem;
-//     }
-
-//     .info {
-//         margin-bottom: 4rem;
-//     }
-// }
-
-
-
-// .text-align-right {
-//     text-align: right;
-// }
-
-
-// .letter-spacing-sm {
-//     letter-spacing: .25rem;
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // h1, p, ul, pre, table {
-// //     line-height: 1.5;
-// // }
-
-
-// // header {
-// //     display: grid;
-// //     grid-template-columns: min-content auto;
-// //     column-gap: 2rem;
-// //     align-items: start;
-
-// //     padding: 1rem;
-// //     margin-bottom: 3rem;
-// // }
-
-
-// // nav li {
-// //     display: inline-block;
-// //     margin-right: .5rem;
-// // }
-
-
-// // main {
-// //     min-width: 300px;
-// //     max-width: 1300px;
-// //     padding: 0 1rem;
-// //     margin: 0 auto 3rem auto;
-// // }
-
-
-// // section {
-// //     margin-bottom: 4rem;
-
-// //     &:last-child {
-// //         margin-bottom: 0;
-// //     }
-
-// //     &.more {
-// //         margin-top: 20rem;
-// //     }
-// // }
-
-
-// // footer {
-// //     padding: 0 1rem 1rem 1rem;
-// // }
-
-
-// // h1 {
-// //     letter-spacing: 3px;
-// // }
-
-
-// // h2 {
-// //     margin-bottom: 3rem;
-// // }
-
-
-// // h3 {
-// //     margin-bottom: 1rem;
-// // }
-
-
-// // p,
-// // ul {
-// //     margin-bottom: .5rem;
-
-// //     &:last-child {
-// //         margin-bottom: 0;
-// //     }
-// // }
-
-
-// // table {
-// //     // width: 100%;
-// //     width: auto;
-
-// //     th {
-// //         padding-bottom: .5rem;
-// //         white-space: nowrap;
-// //     }
-
-// //     th,
-// //     td {
-// //         padding-right: 2rem;
-// //         vertical-align: top;
-// //     }
-// // }
-
-
-// // // .rls {
-// // //     .head {
-// // //         h2 {
-// // //             margin-bottom: .5rem;
-// // //         }
-
-// // //         .meta {
-// // //             color: $color-gray-500;
-// // //             margin-bottom: 1.5rem;
-// // //         }
-
-
-// // //         .coverart {
-// // //             margin-bottom: 1.5rem;
-// // //         }
-
-// // //         .player {
-// // //             .lazycode,
-// // //             .lazymedia {
-// // //                 width: 100%;
-// // //                 max-width: 600px;
-// // //                 max-height: 600px;
-// // //             }
-// // //         }
-// // //     }
-
-// // //     // .description {}
-
-// // //     // .tracklist {}
-
-// // //     // .credit {}
-
-// // //     // .media {}
-// // // }
-
-
-// // .text-align-right {
-// //     text-align: right;
-// // }
-
-
-// // .grid {
-// //     display: grid;
-// //     grid-template-rows: 1fr;
-
-// //     &.content {
-// //         grid-template-columns: 1fr;
-// //         column-gap: 2rem;
-// //         row-gap: 2rem;
-// //     }
-
-// //     &.gallery {
-// //         grid-template-columns: repeat(3, 1fr);
-// //         column-gap: 1rem;
-// //         row-gap: 1rem;
-
-// //         img {
-// //             width: auto;
-// //             height: 100%;
-// //             object-fit: cover;
-// //         }
-// //     }
-// // }
-
-
-// // .lazymedia {
-// //     // display: block;
-// //     // margin-bottom: 1rem;
-
-// //     // &:last-child {
-// //     //     margin-bottom: 0;
-// //     // }
-
-// //     // &.bandcampTrack {
-// //     //     width: 100%;
-// //     //     min-width: 170px;
-// //     //     height: 120px;
-
-// //     //     &.small {
-// //     //         height: 42px;
-// //     //     }
-
-// //     //     &.withCover {
-// //     //         width: 350px;
-// //     //         height: 350px;
-// //     //         margin: 0 auto;
-// //     //     }
-// //     // }
-
-// //     &.bandcampAlbum {
-// //         // with tracklist:
-// //         min-width: 370px;
-// //         height: 208px;
-// //         min-height: 208px;
-
-// //         // &.noTracklist {
-// //         //     min-width: 250px;
-// //         //     height: 120px;
-// //         //     min-height: 120px;
-// //         // }
-// //     }
-// // }
