@@ -78,16 +78,16 @@ $Logger = new Logger($conf['log_dir']);
 
 
 // Init app
-if (!$node_middleware_files) {
-        $App = new Core($conf, $version, $DB, $Router, $Logger);
-}
-else {
-    foreach ($node_middleware_files as $v) {
-        require $v;
-    }
-    $App = new Page($conf, $version, $DB, $Router, $Logger);
+foreach ($node_middleware_files as $v) {
+    require $v;
 }
 
+if (!class_exists('\s9com\Page')) {
+    $App = new Core($conf, $version, $DB, $Router, $Logger);
+}
+else {
+    $App = new Page($conf, $version, $DB, $Router, $Logger);
+}
 
 // Janitor
 unset(
