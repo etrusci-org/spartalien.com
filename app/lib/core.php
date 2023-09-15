@@ -41,9 +41,14 @@ class Core
             $cache_file = $this->conf['cache_dir'].'/cached_'.$cache_id.'.php';
         }
 
+        // Assume brain file path
+        $brain_file = $this->conf['page_dir'].'/_brain.php';
+
         // Load fast if caching is disabled
         if ($this->conf['caching_ttl'] < 0) {
             ob_start();
+
+            require $brain_file;
 
             foreach ($page_files as $v) {
                 if ($v == '*node') {
@@ -57,7 +62,6 @@ class Core
             $buffer = ob_get_contents();
             $buffer = str_replace('{nocache}', '', $buffer);
             $buffer = str_replace('{/nocache}', '', $buffer);
-            // $buffer = preg_replace('/^\s+/m', '', $buffer);
 
             ob_end_clean();
 
@@ -74,6 +78,8 @@ class Core
         else {
             // Turn on output buffering
             ob_start();
+
+            require $brain_file;
 
             // Load raw code
             $code = '';
@@ -116,8 +122,6 @@ class Core
             foreach ($nocache_blocks as $block_id => $v) {
                 $buffer = str_replace($block_id, $v['replace'], $buffer);
             }
-
-            // $buffer = preg_replace('/^\s+/m', '', $buffer);
 
             // Store current buffer to file
             file_put_contents($cache_file, $buffer, LOCK_EX);

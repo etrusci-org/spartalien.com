@@ -5,9 +5,9 @@
     <div class="box">
         <h3>In A Nutshell</h3>
         <p>Multimedia experimenter / Music addict / Human</p>
-        <p>
-            Aliases: SPARTALIEN, arT2, lowtechman
-        </p>
+        <ul>
+            <li>Aliases: SPARTALIEN, arT2, lowtechman</li>
+        </ul>
         <p>
             <img src="./file/we-ca-2017.jpg" alt="we ca. 2017">
         </p>
@@ -23,6 +23,22 @@
             </li>
         </ul>
     </div>
+</div>
+
+
+<div class="box">
+    <h3>Elsewhere</h3>
+    <p>
+        <?php
+        foreach ($var_elsewhere as $v) {
+            printf(
+                '<a href="%2$s">%1$s</a> ',
+                $v[0],
+                $v[1],
+            );
+        }
+        ?>
+    </p>
 </div>
 
 
