@@ -16,8 +16,6 @@ export class ImgZoom
             node_element.addEventListener('click', (event) => {
                 event.preventDefault()
 
-                console.log(node_element)
-
                 // create image element
                 const img = new Image()
                 img.setAttribute('src', node_element.getAttribute('href') || '')
@@ -39,7 +37,7 @@ export class ImgZoom
         }, false)
 
         window.addEventListener('keydown', (event) => {
-            if (event.key == 'Escape' || event.key == ' ') {
+            if (['Escape', 'x', 'c', ' '].includes(event.key)) {
                 this.close()
             }
         }, false)

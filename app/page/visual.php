@@ -11,7 +11,7 @@ if (isset($this->Router->route['var']['id'])) {
 
 
 <?php if ($visual): ?>
-    <h2>Visual: <?php print($visual['visual_name']); ?></h2>
+    <h2><?php print($visual['visual_name']); ?></h2>
 
     <?php
     foreach ($visual['visual_media'] as $v) {

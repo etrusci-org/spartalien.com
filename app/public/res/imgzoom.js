@@ -9,7 +9,6 @@ export class ImgZoom {
         this.nodes.forEach((node_element) => {
             node_element.addEventListener('click', (event) => {
                 event.preventDefault();
-                console.log(node_element);
                 const img = new Image();
                 img.setAttribute('src', node_element.getAttribute('href') || '');
                 this.target_element.replaceChildren(img);
@@ -22,7 +21,7 @@ export class ImgZoom {
             this.close();
         }, false);
         window.addEventListener('keydown', (event) => {
-            if (event.key == 'Escape' || event.key == ' ') {
+            if (['Escape', 'x', 'c', ' '].includes(event.key)) {
                 this.close();
             }
         }, false);
