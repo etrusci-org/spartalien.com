@@ -533,44 +533,6 @@ INSERT INTO rls_media (rls_id, code) VALUES (30, '{"type": "link", "slug": "./fi
 INSERT INTO rls_media (rls_id, code) VALUES (30, '{"type": "link", "slug": "//stream.resonate.coop/artist/20951/release/flux", "text": "Flux on Resonate"}');
 INSERT INTO rls_media (rls_id, code) VALUES (30, '{"type": "youtubevideo", "slug": "mE4p5UV62sw"}');
 INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "youtubevideo", "slug": "mseAapnJomY"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-1.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-2.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-3.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-4.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-5.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-6.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-7.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-8.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-9.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-10.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-11.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-12.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-13.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-14.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-15.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-16.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-17.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-18.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-19.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-20.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-21.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-22.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-23.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-24.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-25.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-26.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-27.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-28.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-29.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-30.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-31.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-32.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-33.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-34.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-35.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-36.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-37.jpg"}');
-INSERT INTO rls_media (rls_id, code) VALUES (32, '{"type": "image", "slug": "./file/untold-stories/mood-gfx-38.jpg"}');
 INSERT INTO rls_media (rls_id, code) VALUES (34, '{"type": "link", "slug": "./file/smoking-sea-lyrics.html", "text": "Smoking-Sea-Lyrics.html", "target": "_blank"}');
 INSERT INTO rls_media (rls_id, code) VALUES (34, '{"type": "link", "slug": "//stream.resonate.coop/artist/20951/release/okay-but-can-you-rap-to-this", "text": "OKAY, BUT CAN YOU RAP TO THIS? on Resonate"}');
 INSERT INTO rls_media (rls_id, code) VALUES (35, '{"type": "youtubeplaylist", "slug": "PLGOlCfPCyZ4EHWNjgL5g5bRG6bur9dUXf"}');
@@ -1130,6 +1092,7 @@ INSERT INTO visual (name, pub_date, description) VALUES ('Calming Stress Relief 
 INSERT INTO visual (name, pub_date, description) VALUES ('Promo Art 2018-03', '2018-03', 'Setting the mood.');
 INSERT INTO visual (name, pub_date, description) VALUES ('X Minutes of Peace', '2018', 'Relax.');
 INSERT INTO visual (name, pub_date, description) VALUES ('TOTAL FUCKING MADNESS', '2023-01', 'TOTAL FUCKING MADNESS' || CHAR(10) || 'TOTAL FUCKING MADNESS' || CHAR(10) || 'TOTAL FUCKING MADNESS' || CHAR(10) || 'TOTAL FUCKING MADNESS' || CHAR(10) || 'TOTAL FUCKING MADNESS' || CHAR(10) || 'TOTAL FUCKING MADNESS' || CHAR(10, 10) || '00:00 Intro' || CHAR(10) || '00:32 Level 1' || CHAR(10) || '05:28 Level 2' || CHAR(10) || '10:00 Level 3' || CHAR(10) || '14:06 Level 4' || CHAR(10) || '17:48 Level 5' || CHAR(10) || '21:06 Level 6' || CHAR(10) || '23:58 Outro');
+INSERT INTO visual (name, pub_date, description) VALUES ('GhostTownTunes Logo', '2021', 'Livestream logo made for [GhostTownTunes](http://twitch.tv/ghosttowntunes).');
 
 
 INSERT INTO visual_media (visual_id, code) VALUES (1, '{"type": "image", "slug": "./file/visual/2000-soia.jpg", "linkto": "./file/visual/2000-soia.jpg"}');
@@ -1230,18 +1193,26 @@ INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "youtubevideo",
 INSERT INTO visual_media (visual_id, code) VALUES (65, '{"type": "youtubevideo", "slug": "awkTjmcHQzc"}');
 INSERT INTO visual_media (visual_id, code) VALUES (66, '{"type": "odyseevideo", "slug": "@spartalien:2/total-fucking-madness:8"}');
 INSERT INTO visual_media (visual_id, code) VALUES (66, '{"type": "youtubevideo", "slug": "eq_I5Oq603M"}');
+INSERT INTO visual_media (visual_id, code) VALUES (67, '{"type": "video", "slug": "./file/visual/20210420-gttlogo-1.2-black-bg.mp4", "attr": [["poster", "./file/preview/visual/67-1-tn.jpg"], ["autoplay", "autoplay"], ["loop", "loop"]]}');
+INSERT INTO visual_media (visual_id, code) VALUES (67, '{"type": "video", "slug": "./file/visual/20210420-gttlogo-1-grayscale.mp4", "attr": [["poster", "./file/preview/visual/67-2-tn.jpg"], ["autoplay", "autoplay"], ["loop", "loop"]]}');
+INSERT INTO visual_media (visual_id, code) VALUES (67, '{"type": "video", "slug": "./file/visual/20210420-gttlogo-1-bronzeblue.mp4", "attr": [["poster", "./file/preview/visual/67-3-tn.jpg"], ["autoplay", "autoplay"], ["loop", "loop"]]}');
+INSERT INTO visual_media (visual_id, code) VALUES (67, '{"type": "video", "slug": "./file/visual/20210420-gttlogo-1-greenpurple.mp4", "attr": [["poster", "./file/preview/visual/67-4-tn.jpg"], ["autoplay", "autoplay"], ["loop", "loop"]]}');
+INSERT INTO visual_media (visual_id, code) VALUES (67, '{"type": "video", "slug": "./file/visual/20210420-gttlogo-2-silveryellow.mp4", "attr": [["poster", "./file/preview/visual/67-5-tn.jpg"], ["autoplay", "autoplay"], ["loop", "loop"]]}');
+INSERT INTO visual_media (visual_id, code) VALUES (67, '{"type": "video", "slug": "./file/visual/20210420-gttlogo-2-silverblue.mp4", "attr": [["poster", "./file/preview/visual/67-6-tn.jpg"], ["autoplay", "autoplay"], ["loop", "loop"]]}');
+INSERT INTO visual_media (visual_id, code) VALUES (67, '{"type": "video", "slug": "./file/visual/20210420-gttlogo-2-silvergreen.mp4", "attr": [["poster", "./file/preview/visual/67-7-tn.jpg"], ["autoplay", "autoplay"], ["loop", "loop"]]}');
+INSERT INTO visual_media (visual_id, code) VALUES (67, '{"type": "video", "slug": "./file/visual/20210420-gttlogo-2-silverpurple.mp4", "attr": [["poster", "./file/preview/visual/67-8-tn.jpg"], ["autoplay", "autoplay"], ["loop", "loop"]]}');
 
 
 INSERT INTO stuff (name, description) VALUES ('Radio-Dark-Tunnel Jingles', 'Radio station IDs/jingles made for [Radio-Dark-Tunnel](//radio-dark-tunnel.net).');
 INSERT INTO stuff (name, description) VALUES ('Track 32/2', 'Just a short tune.');
 INSERT INTO stuff (name, description) VALUES ('Making of Memoria S9M2, 2358 Limited Edition', 'Get yours [here](./physical/id:2).');
-INSERT INTO stuff (name, description) VALUES ('GhostTownTunes Voice-Over', 'Livestream voiceovers made for [GhostTownTunes](//twitch.tv/ghosttowntunes).');
+INSERT INTO stuff (name, description) VALUES ('GhostTownTunes Voice-Over', 'Livestream voice-over made for [GhostTownTunes](//twitch.tv/ghosttowntunes).');
 
 
-INSERT INTO stuff_media (stuff_id, code) VALUES (1, '{"type": "audio", "slug": "./file/rdt-jingles/rdt-jingle-1.mp3"}');
-INSERT INTO stuff_media (stuff_id, code) VALUES (1, '{"type": "audio", "slug": "./file/rdt-jingles/rdt-jingle-2.mp3"}');
-INSERT INTO stuff_media (stuff_id, code) VALUES (1, '{"type": "audio", "slug": "./file/rdt-jingles/rdt-jingle-3.mp3"}');
-INSERT INTO stuff_media (stuff_id, code) VALUES (2, '{"type": "audio", "slug": "./file/SPARTALIEN-322.mp3"}');
+INSERT INTO stuff_media (stuff_id, code) VALUES (1, '{"type": "audio", "slug": "./file/rdt-jingles/rdt-jingle-1.mp3", "label": "rdt-jingle-1"}');
+INSERT INTO stuff_media (stuff_id, code) VALUES (1, '{"type": "audio", "slug": "./file/rdt-jingles/rdt-jingle-2.mp3", "label": "rdt-jingle-2"}');
+INSERT INTO stuff_media (stuff_id, code) VALUES (1, '{"type": "audio", "slug": "./file/rdt-jingles/rdt-jingle-3.mp3", "label": "rdt-jingle-3"}');
+INSERT INTO stuff_media (stuff_id, code) VALUES (2, '{"type": "audio", "slug": "./file/SPARTALIEN-322.mp3", "label": "SPARTALIEN-322"}');
 INSERT INTO stuff_media (stuff_id, code) VALUES (3, '{"type": "youtubevideo", "slug": "eVzQQe1LyoY"}');
 INSERT INTO stuff_media (stuff_id, code) VALUES (3, '{"type": "youtubevideo", "slug": "-9iwRLyjK-g"}');
 INSERT INTO stuff_media (stuff_id, code) VALUES (3, '{"type": "youtubevideo", "slug": "D_PxOWk6v38"}');
@@ -1252,9 +1223,9 @@ INSERT INTO stuff_media (stuff_id, code) VALUES (3, '{"type": "youtubevideo", "s
 INSERT INTO stuff_media (stuff_id, code) VALUES (3, '{"type": "youtubevideo", "slug": "XP89XWk1BeA"}');
 INSERT INTO stuff_media (stuff_id, code) VALUES (3, '{"type": "youtubevideo", "slug": "wBKZFFxSQb0"}');
 INSERT INTO stuff_media (stuff_id, code) VALUES (3, '{"type": "youtubevideo", "slug": "LDlcH_Z7Tfc"}');
-INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "audio", "slug": "./file/gtt-voiceovers/gtt-voiceover-1.mp3"}');
-INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "audio", "slug": "./file/gtt-voiceovers/gtt-voiceover-1-neithernoisenordub.mp3"}');
-INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "audio", "slug": "./file/gtt-voiceovers/gtt-voiceover-1-nonoise.mp3"}');
+INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "audio", "slug": "./file/gtt-voiceovers/gtt-voiceover-1.mp3", "label": "gtt-voiceover-1"}');
+INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "audio", "slug": "./file/gtt-voiceovers/gtt-voiceover-1-neithernoisenordub.mp3", "label": "gtt-voiceover-1-neithernoisenordub"}');
+INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "audio", "slug": "./file/gtt-voiceovers/gtt-voiceover-1-nonoise.mp3", "label": "gtt-voiceover-1-nonoise"}');
 
 
 INSERT INTO news (pub_date) VALUES ('2016-03-24');
@@ -1501,6 +1472,7 @@ INSERT INTO exit (text, url) VALUES ('MP3TAG', '//mp3tag.de');
 INSERT INTO exit (text, url) VALUES ('Foobar2000', '//foobar2000.org');
 INSERT INTO exit (text, url) VALUES ('iMusician', '//imusician.app/signup?referral_token=Lriyz1h7DIHUCK1I');
 INSERT INTO exit (text, url) VALUES ('Spooky Kitten Records', '//www.youtube.com/@SpookyKittenRecords');
+INSERT INTO exit (text, url) VALUES ('Volume Control for Bandcamp', '//addons.mozilla.org/firefox/addon/bandcamp-player-volume-control');
 
 
 INSERT INTO p420_session(num, pub_date, runtime, mixcloud_key) VALUES (1, '2021-05-04', 10370, NULL);

@@ -172,6 +172,11 @@ a {
 }
 
 
+label {
+    margin-bottom: .5rem;
+}
+
+
 table {
     th {
         white-space: nowrap;
@@ -179,7 +184,7 @@ table {
 
     th,
     td {
-        padding-right: 4rem;
+        padding-right: 3rem;
         vertical-align: top;
     }
 
@@ -206,13 +211,12 @@ table {
 
 
 input {
-    width: 100%;
-    min-width: 100px;
-    max-width: 200px;
+    width: 200px;
+    max-width: 100%;
     padding: .75rem;
 
     &::placeholder {
-        color: $color-gray-500;
+        color: $color-gray-400;
     }
 
     &[type=text] {
@@ -282,7 +286,7 @@ nav {
 
 
 main {
-    min-width: 300px;
+    min-width: 350px;
     max-width: 1200px;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -343,7 +347,8 @@ footer {
 img.tn {
     // min-width: 80px;
     // min-width: 150px;
-    min-width: 100%;
+    width: 100%;
+    min-width: 50px;
     height: auto;
     border-width: 1px;
     border-color: $color-gray-900;
@@ -481,8 +486,13 @@ img.tn {
 
 .lazymedia {
     display: block;
+    background-image: url('./loading.gif');
+    background-repeat: no-repeat;
+    background-position: 0 0;
 
-    // &.link {}
+    &.link {
+        background-image: none;
+    }
 
     &.image {
         width: 100%;
@@ -492,23 +502,37 @@ img.tn {
     &.audio {
         width: 500px;
         max-width: 100%;
+        background-image: none;
+    }
+
+    &.video {
+        background-image: none;
     }
 
     &.bandcamptrack {
+        min-width: 300px;
         width: 100%;
         height: 120px;
     }
 
     &.bandcampalbum {
+        min-width: 300px;
         width: 100%;
         height: 208px;
     }
 
-    // &.spotifytrack {}
+    &.spotifytrack {
+        min-width: 300px;
+        width: 100%;
+    }
 
-    // &.spotifyalbum {}
+    &.spotifyalbum,
+    &.spotifyplaylist {
+        min-width: 300px;
+        width: 100%;
+        height: 352px;
 
-    // &.spotifyplaylist {}
+    }
 
     &.mixcloudplaylist,
     &.mixcloudshow {
@@ -516,19 +540,11 @@ img.tn {
         height: 182px;
     }
 
-
-    // see .videobox for these:
+    // see .videobox .lazymedia too for these:
     // &.video {}
     // &.youtubevideo {}
     // &.youtubeplaylist {}
     // &.odyseevideo {}
-
-
-    // &.mixcloudshow,
-    // &.mixcloudplaylist {
-    //     width: 100%;
-    //     height: 181px;
-    // }
 }
 
 
@@ -559,9 +575,7 @@ img.tn {
 
 
 
-
-
-div.imgzoom-target {
+.imgzoom-target {
     display: none;
     position: fixed;
     top: 0;
@@ -571,20 +585,22 @@ div.imgzoom-target {
     z-index: 2000;
     text-align: center;
     cursor: zoom-out;
-    background-color: rgba(0, 0, 0, 0.97);
+    background-color: $color-black;
+
+    &.open {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        border: 20px solid $color-gray-950;
+    }
 }
 
-div.imgzoom-target.open {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-div.imgzoom-target img {
-    max-width: 100%;
-    max-height: 100%;
-    border: 10px solid #2b2b2b;
-}
 
 a.imgzoom,
 a.lazymedia.image {

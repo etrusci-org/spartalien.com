@@ -45,7 +45,7 @@ if (isset($this->Router->route['var']['id'])) {
         foreach ($phy_list as $v) {
             printf(
                 '<a href="./physical/id:%1$s" title="%2$s"%4$s>
-                    <img src="%3$s" loading="lazy" alt="preview image">
+                    <img src="%3$s" class="tn" loading="lazy" alt="preview image">
                 </a>',
                 $v['phy_id'],
                 $v['phy_name'],

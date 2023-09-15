@@ -58,10 +58,10 @@ export class LazyMedia {
             this.add_code_attr(code, baked_element);
             this.add_code_css(code, baked_element);
             if (!code.text) {
-                baked_element.innerText = code.slug.replace(/(^\w+:|^)\/\//, '');
+                baked_element.innerHTML = code.slug.replace(/(^\w+:|^)\/\//, '');
             }
             else {
-                baked_element.innerText = code.text;
+                baked_element.innerHTML = code.text;
             }
             if (code.target) {
                 baked_element.setAttribute('target', code.target);
@@ -111,7 +111,7 @@ export class LazyMedia {
                 this.add_code_css(code, baked_element);
                 const inner1 = document.createElement('a');
                 inner1.setAttribute('href', code.slug);
-                inner1.innerText = code.slug;
+                inner1.innerHTML = code.slug;
                 baked_element.append(inner1);
             }
             else {
@@ -128,7 +128,7 @@ export class LazyMedia {
                 this.add_code_css(code, inner2);
                 const inner3 = document.createElement('a');
                 inner3.setAttribute('href', code.slug);
-                inner3.innerText = code.slug;
+                inner3.innerHTML = code.slug;
                 inner2.append(inner3);
                 baked_element.append(inner2);
             }
@@ -147,7 +147,7 @@ export class LazyMedia {
             this.add_code_css(code, inner1);
             const inner2 = document.createElement('a');
             inner2.setAttribute('href', code.slug);
-            inner2.innerText = code.slug;
+            inner2.innerHTML = code.slug;
             inner1.append(inner2);
             baked_element.append(inner1);
         }

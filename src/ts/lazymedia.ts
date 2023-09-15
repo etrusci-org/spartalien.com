@@ -122,10 +122,10 @@ export class LazyMedia
             this.add_code_css(code, baked_element)
 
             if (!code.text) {
-                baked_element.innerText = code.slug.replace(/(^\w+:|^)\/\//, '')
+                baked_element.innerHTML = code.slug.replace(/(^\w+:|^)\/\//, '')
             }
             else {
-                baked_element.innerText = code.text
+                baked_element.innerHTML = code.text
             }
 
             if (code.target) {
@@ -194,7 +194,7 @@ export class LazyMedia
 
                 const inner1: HTMLAnchorElement = document.createElement('a')
                 inner1.setAttribute('href', code.slug)
-                inner1.innerText = code.slug
+                inner1.innerHTML = code.slug
 
                 baked_element.append(inner1)
             }
@@ -218,7 +218,7 @@ export class LazyMedia
 
                 const inner3: HTMLAnchorElement = document.createElement('a')
                 inner3.setAttribute('href', code.slug)
-                inner3.innerText = code.slug
+                inner3.innerHTML = code.slug
 
                 inner2.append(inner3)
                 baked_element.append(inner2)
@@ -245,7 +245,7 @@ export class LazyMedia
 
             const inner2: HTMLAnchorElement = document.createElement('a')
             inner2.setAttribute('href', code.slug)
-            inner2.innerText = code.slug
+            inner2.innerHTML = code.slug
 
             inner1.append(inner2)
             baked_element.append(inner1)

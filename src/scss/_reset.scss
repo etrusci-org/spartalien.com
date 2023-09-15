@@ -18,6 +18,7 @@ p,
 ul,
 li,
 // span,
+label,
 table,
 thead,
 tbody,
@@ -83,6 +84,11 @@ pre {
 ul {
     list-style: none;
     padding-inline: 0;
+}
+
+
+label {
+    display: block;
 }
 
 

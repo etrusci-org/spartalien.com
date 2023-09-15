@@ -14,6 +14,16 @@ if (isset($this->Router->route['var']['id'])) {
     <h2><?php print($stuff['stuff_name']); ?></h2>
 
     <?php
+    if ($stuff['stuff_description']) {
+        printf(
+            '<div class="box">
+                <p>%s</p>
+            </div>',
+            $this->_lazytext($stuff['stuff_description']),
+        );
+    }
+
+
     foreach ($stuff['stuff_media'] as $v) {
         printf(
             '<div class="box">

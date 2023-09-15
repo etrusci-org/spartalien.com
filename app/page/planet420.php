@@ -85,11 +85,17 @@ $total_hours_to_listen = $this->get_total_hours_to_listen($session_list);
 <div <?php print(($session) ? 'class="more"' : ''); ?>>
     <h2><?php print((!$session) ? 'Planet 420' : 'More Sessions ...'); ?></h2>
     <?php if (!$session): ?>
+
+        <div class="box">
+            <p>A series of 'special mixtapes' featuring carefully selected tracks for each session, all tied together by a common thread awaiting your exploration.</p>
+            <p>Music styles you can expect: Downtempo, IDM, Ambient, Lounge, Chillout, Experimental, NuJazz, Beats, Hip-Hop, and some more.</p>
+        </div>
+
         <div class="box full-width">
             <p>
                 New here? Then simply click the play button to listen to
                 <?php print($total_hours_to_listen); ?>
-                hours of selected eclectic music ...
+                hours of selected eclectic music.
             </p>
             <div class="lazycode">{
                 "type": "mixcloudplaylist",
@@ -99,7 +105,7 @@ $total_hours_to_listen = $this->get_total_hours_to_listen($session_list);
     <?php endif; ?>
 
     <div class="box">
-        <p>... or browse through individual sessions and their tracklists:</p>
+        <h3>Session Archive</h3>
         <table>
             <thead>
                 <tr>
@@ -114,8 +120,8 @@ $total_hours_to_listen = $this->get_total_hours_to_listen($session_list);
                     printf('
                         <tr>
                             <td><a href="./planet420/session:%1$s"%5$s>Planet 420.%1$s / %2$s</a></td>
-                            <td class="text-align-right font-mono">%3$s</td>
-                            <td class="text-align-right font-mono">%4$s</td>
+                            <td class="text-align-right">%3$s</td>
+                            <td class="text-align-right">%4$s</td>
                         </tr>',
                         $v['session_num'],
                         $v['session_pub_date'],

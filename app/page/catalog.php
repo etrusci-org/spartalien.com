@@ -138,7 +138,7 @@ if (isset($this->Router->route['var']['artist'])) {
                             <tr>
                                 <td><a href="./catalog/track:%1$s"%6$s>%2$s</a></td>
                                 <td><a href="./catalog/artist:%4$s">%5$s</a></td>
-                                <td class="text-align-right font-mono">%3$s</td>
+                                <td class="text-align-right">%3$s</td>
                             </tr>',
                             $v['track_id'],
                             $v['track_name'],
