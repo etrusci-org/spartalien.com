@@ -459,6 +459,15 @@ label {
   margin-bottom: 0.5rem;
 }
 
+ul li {
+  background-color: transparent;
+  transition: background-color 1s linear;
+}
+ul li:hover, ul li:focus {
+  background-color: hsl(0, 0%, 15%);
+  transition: background-color 0.25s linear;
+}
+
 table th {
   white-space: nowrap;
 }
@@ -476,7 +485,7 @@ table tr td {
   transition: background-color 1s linear;
 }
 table tr:hover td, table tr:focus td {
-  background-color: hsl(0, 0%, 11%);
+  background-color: hsl(0, 0%, 15%);
   transition: background-color 0.25s linear;
 }
 
@@ -543,7 +552,7 @@ footer {
   padding-right: 1rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  margin-top: 85vh;
+  margin-top: 70vh;
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: hsl(77, 75%, 20%);

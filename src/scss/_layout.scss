@@ -177,6 +177,20 @@ label {
 }
 
 
+ul {
+    li {
+        background-color: transparent;
+        transition: background-color 1s linear;
+
+        &:hover,
+        &:focus {
+            background-color: $color-gray-850;
+            transition: background-color .25s linear;
+        }
+    }
+}
+
+
 table {
     th {
         white-space: nowrap;
@@ -202,7 +216,7 @@ table {
         &:hover,
         &:focus {
             td {
-                background-color: $color-gray-900;
+                background-color: $color-gray-850;
                 transition: background-color .25s linear;
             }
         }
@@ -304,7 +318,7 @@ footer {
     padding-right: 1rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    margin-top: 85vh;
+    margin-top: 70vh;
     border-top-width: 1px;
     border-top-style: solid;
     border-top-color: $color-brand-250;

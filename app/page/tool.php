@@ -114,7 +114,7 @@
     <div class="box">
         <h3>Quotes</h3>
         <p>
-        Words from people.
+            Words from people.
         </p>
         <p>
             <a href="https://github.com/etrusci-org/quotes/#readme">README + Source at GitHub</a>

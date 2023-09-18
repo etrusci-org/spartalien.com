@@ -26,21 +26,18 @@ if (isset($this->Router->route['var']['artist'])) {
         ?>
     </h2>
 
-
-    <?php
-    printf('
-        <div class="box">
-            <div class="lazycode">{
-                "type": "bandcamptrack",
-                "slug": "%1$s"
-            }</div>
-        </div>',
-        $track['track_bandcamp_id'],
-    );
-    ?>
-
     <div class="grid-x-2">
         <?php
+        printf('
+            <div class="box full-width">
+                <div class="lazycode">{
+                    "type": "bandcamptrack",
+                    "slug": "%1$s"
+                }</div>
+            </div>',
+            $track['track_bandcamp_id'],
+        );
+
         printf('
             <div class="box">
                 <h3>Meta</h3>
@@ -54,7 +51,11 @@ if (isset($this->Router->route['var']['artist'])) {
             $track['artist_name'],
             $track['track_runtime_human'],
         );
+        ?>
+    </div>
 
+    <div class="grid-x-2">
+        <?php
         if ($track['track_credit']) {
             printf(
                 '<div class="box">
@@ -64,20 +65,18 @@ if (isset($this->Router->route['var']['artist'])) {
                 implode('', array_map(fn(string $v): string => sprintf('<p>%1$s</p>', $this->_lazytext($v)), $track['track_credit']))
             );
         }
+
+        printf('
+            <div class="box">
+                <h3>Distribution</h3>
+                <ul>
+                    %1$s
+                </ul>
+            </div>',
+            implode('', array_map(fn(array $v): string => sprintf('<li><a href="%1$s">%2$s</a></li>', $v['url'], ucwords($v['platform'])), $track['track_dist'])),
+        );
         ?>
     </div>
-
-    <?php
-    printf('
-        <div class="box">
-            <h3>Distribution</h3>
-            <ul>
-                %1$s
-            </ul>
-        </div>',
-        implode('', array_map(fn(array $v): string => sprintf('<li><a href="%1$s">%2$s</a></li>', $v['url'], ucwords($v['platform'])), $track['track_dist'])),
-    );
-    ?>
 
     <p>
         <a href="javascript:history.back(-1);">&lArr; back</a>
