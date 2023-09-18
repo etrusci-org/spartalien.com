@@ -241,7 +241,7 @@ $conf['pre_render_settings'] = [
     ],
     'home' => [
         'headers' => [],
-        'middleware_files' => [],
+        'middleware_files' => ['page/_home.class.php'],
         'page_files' => [],
     ],
     'about' => [
