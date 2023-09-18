@@ -19,7 +19,7 @@
 
         <p><img src="./res/logo-small.png" alt="Logo" title="SPARTALIEN"></p>
 
-        <p>&copy; <?php print(date('Y')); ?></p>
+        <p>&copy; <?php print(date('Y')); ?> SPARTALIEN.COM</p>
     </footer>
 
     <div class="imgzoom-target"></div>
