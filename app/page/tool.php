@@ -100,12 +100,24 @@
 </div>
 
 
-<div class="box">
-    <h3>LastfmLog</h3>
-    <p>
-        Command line tool that downloads your Last.fm scrobbles (played tracks) data into a local SQLite database so you can do something with it, e.g bake your own statistics. You can also export some basic statistics to a JSON file without any SQL knowledge.
-    </p>
-    <p>
-        <a href="https://github.com/etrusci-org/lastfmlog/#readme">README + Source at GitHub</a>
-    </p>
+<div class="grid-x-2">
+    <div class="box">
+        <h3>LastfmLog</h3>
+        <p>
+            Command line tool that downloads your Last.fm scrobbles (played tracks) data into a local SQLite database so you can do something with it, e.g bake your own statistics. You can also export some basic statistics to a JSON file without any SQL knowledge.
+        </p>
+        <p>
+            <a href="https://github.com/etrusci-org/lastfmlog/#readme">README + Source at GitHub</a>
+        </p>
+    </div>
+
+    <div class="box">
+        <h3>Quotes</h3>
+        <p>
+        Words from people.
+        </p>
+        <p>
+            <a href="https://github.com/etrusci-org/quotes/#readme">README + Source at GitHub</a>
+        </p>
+    </div>
 </div>
