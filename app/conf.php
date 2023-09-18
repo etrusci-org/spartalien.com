@@ -190,6 +190,11 @@ $conf['valid_request_patterns'] = [
         ],
     ],
     [
+        'route' => '/^news.atom$/',
+        'valuesTable' => '',
+        'valuesCol' => [],
+    ],
+    [
         'route' => '/^mention$/',
         'valuesTable' => '',
         'valuesCol' => [],
@@ -288,6 +293,11 @@ $conf['pre_render_settings'] = [
         'headers' => [],
         'middleware_files' => ['page/_news.class.php'],
         'page_files' => [],
+    ],
+    'news.atom' => [
+        'headers' => ['Content-Type: application/atom+xml; charset=utf-8'],
+        'middleware_files' => ['page/_news.class.php'],
+        'page_files' => [null, '*node', null],
     ],
     'mention' => [
         'headers' => [],

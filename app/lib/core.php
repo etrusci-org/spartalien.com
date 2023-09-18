@@ -54,7 +54,7 @@ class Core
                 if ($v == '*node') {
                     include $this->conf['page_dir'].'/'.$this->Router->route['node'].'.php';
                 }
-                else {
+                else if ($v) {
                     include $this->conf['page_dir'].'/'.$v.'.php';
                 }
             }
