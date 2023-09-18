@@ -28,17 +28,7 @@
 
 <div class="box">
     <h3>Elsewhere</h3>
-    <p>
-        <?php
-        foreach ($var_elsewhere as $v) {
-            printf(
-                '<a href="%2$s">%1$s</a> ',
-                $v[0],
-                $v[1],
-            );
-        }
-        ?>
-    </p>
+    <p><?php print(implode(' &middot; ', array_map(fn(array $v) => sprintf('<a href="%2$s">%1$s</a>', $v[0], $v[1]), $var_elsewhere))); ?></p>
 </div>
 
 

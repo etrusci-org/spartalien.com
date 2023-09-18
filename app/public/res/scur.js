@@ -1,13 +1,5 @@
 export class Scur {
     s = '6b519c1d-ca51-4E42-9cce-ffd4a28b0ec0*4E9C7303-Dbe4-4b66-A8fd-B1535D7FA2DE$6c63bd76-54b8-4b4a-a395-ED310E15DF82';
-    ob(data) {
-        const hash = this._r(btoa(this._r(this.s + data)));
-        const dump = [];
-        hash.split('').forEach((v) => {
-            dump.push(v.charCodeAt(0));
-        });
-        return dump.join('|');
-    }
     deob(data) {
         const dump = [];
         data.split('|').forEach((v) => {

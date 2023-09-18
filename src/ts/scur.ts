@@ -3,6 +3,8 @@ export class Scur
     public s: string = '6b519c1d-ca51-4E42-9cce-ffd4a28b0ec0*4E9C7303-Dbe4-4b66-A8fd-B1535D7FA2DE$6c63bd76-54b8-4b4a-a395-ED310E15DF82'
 
 
+    /* only compile this method if you need to encode a string:
+
     public ob(data: string): string
     {
         const hash: string = this._r(btoa(this._r(this.s + data)))
@@ -14,6 +16,8 @@ export class Scur
 
         return dump.join('|')
     }
+
+    */
 
 
     public deob(data: string): string {

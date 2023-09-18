@@ -1002,6 +1002,16 @@ INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "image", "slug": "./fi
 INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "image", "slug": "./file/preview/phy/2-6-med.jpg", "linkto": "./file/phy-2358/package5of7.jpg"}');
 INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "image", "slug": "./file/preview/phy/2-7-med.jpg", "linkto": "./file/phy-2358/package6of7.jpg"}');
 INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "image", "slug": "./file/preview/phy/2-8-med.jpg", "linkto": "./file/phy-2358/package7of7.jpg"}');
+INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "youtubevideo", "slug": "eVzQQe1LyoY"}');
+INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "youtubevideo", "slug": "-9iwRLyjK-g"}');
+INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "youtubevideo", "slug": "D_PxOWk6v38"}');
+INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "youtubevideo", "slug": "ZbkqkQ8ZUoI"}');
+INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "youtubevideo", "slug": "PEOKvptSzDs"}');
+INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "youtubevideo", "slug": "43TRzxkP48I"}');
+INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "youtubevideo", "slug": "P4ccQUu8S3U"}');
+INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "youtubevideo", "slug": "XP89XWk1BeA"}');
+INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "youtubevideo", "slug": "wBKZFFxSQb0"}');
+INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "youtubevideo", "slug": "LDlcH_Z7Tfc"}');
 INSERT INTO phy_media (phy_id, code) VALUES (3, '{"type": "link", "slug": "//spartalien.bandcamp.com/merch/logo-t-shirt-s9m3?action=buy", "text": "BUY"}');
 INSERT INTO phy_media (phy_id, code) VALUES (3, '{"type": "image", "slug": "./file/preview/phy/3-1-med.jpg", "linkto": "./file/phy-tshirt/1.jpg"}');
 INSERT INTO phy_media (phy_id, code) VALUES (3, '{"type": "image", "slug": "./file/preview/phy/3-2-med.jpg", "linkto": "./file/phy-tshirt/2.jpg"}');

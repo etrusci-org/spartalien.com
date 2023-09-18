@@ -6,13 +6,13 @@ ServerSignature Off
 AddDefaultCharset UTF-8
 
 
-<IfModule mod_rewrite.c>
-
+<IfModule mod_negotiation.c>
     # Prevent automatic directory listing
-    <IfModule mod_negotiation.c>
-        Options -MultiViews -Indexes
-    </IfModule>
+    Options -MultiViews -Indexes
+</IfModule>
 
+
+<IfModule mod_rewrite.c>
     # Enable URL rewrite
     RewriteEngine On
 
@@ -28,5 +28,4 @@ AddDefaultCharset UTF-8
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^(?!index\.php)(.*)$ index.php?route=$1 [L]
-
 </IfModule>

@@ -641,6 +641,7 @@ img.tn {
   color: hsl(27, 75%, 41%);
   padding: 0.25rem;
   margin-bottom: 0.25rem;
+  text-align: center;
 }
 
 .text-align-center {
