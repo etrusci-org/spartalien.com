@@ -1084,7 +1084,7 @@ INSERT INTO visual (name, pub_date, description) VALUES ('Nature''s Song', '2018
 INSERT INTO visual (name, pub_date, description) VALUES ('Random Morning Piano Doodles', '2019-02-10', NULL);
 INSERT INTO visual (name, pub_date, description) VALUES ('Paenitentia', '2019-06-03', 'Music video for [Paenitentia](./catalog/track:36)');
 INSERT INTO visual (name, pub_date, description) VALUES ('Brain I/O #1', '2019-06-09', 'Music video for [Brain I/O #1](./catalog/track:45)');
-INSERT INTO visual (name, pub_date, description) VALUES ('Brain I/O #2', '2019-07-13', 'Music video for [Brain I/O #2](./catalog/track:46)');
+INSERT INTO visual (name, pub_date, description) VALUES ('Brain I/O #2', '2019-06-13', 'Music video for [Brain I/O #2](./catalog/track:46)');
 INSERT INTO visual (name, pub_date, description) VALUES ('Brain I/O #3', '2019-07-02', 'Music video for [Brain I/O #3](./catalog/track:47)');
 INSERT INTO visual (name, pub_date, description) VALUES ('Brain I/O #4', '2019-07-12', 'Music video for [Brain I/O #4](./catalog/track:50)');
 INSERT INTO visual (name, pub_date, description) VALUES ('Brain I/O #5', '2019-07-20', 'Music video for [Brain I/O #5](./catalog/track:51)');
