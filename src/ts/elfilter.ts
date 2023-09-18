@@ -14,7 +14,11 @@ export class ElFilter
 
         // Get all parent elements
         this.parent = document.querySelectorAll(this.parent_selector)
+    }
 
+
+    public init(): void
+    {
         // Register event listener on keyup for every input element
         for (const input of this.input) {
             input.addEventListener('keyup', () => {

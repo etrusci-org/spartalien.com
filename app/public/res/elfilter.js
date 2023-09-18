@@ -6,6 +6,8 @@ export class ElFilter {
     constructor() {
         this.input = document.querySelectorAll(this.input_selector);
         this.parent = document.querySelectorAll(this.parent_selector);
+    }
+    init() {
         for (const input of this.input) {
             input.addEventListener('keyup', () => {
                 this.filter(input.value);

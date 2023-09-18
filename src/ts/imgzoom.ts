@@ -10,8 +10,12 @@ export class ImgZoom
     constructor()
     {
         this.target_element = document.querySelector(this.target_selector) as HTMLDivElement
-        this.nodes = document.querySelectorAll(this.node_selector) as NodeListOf<HTMLAnchorElement>
+        this.nodes = document.querySelectorAll(this.node_selector)
+    }
 
+
+    public init(): void
+    {
         this.nodes.forEach((node_element) => {
             node_element.addEventListener('click', (event) => {
                 event.preventDefault()
@@ -44,7 +48,7 @@ export class ImgZoom
     }
 
 
-    close(): void
+    public close(): void
     {
         this.target_element.classList.remove('open')
         this.target_element.innerHTML = ''

@@ -5,8 +5,8 @@ import { ElFilter } from './elfilter.js';
 function main() {
     new LazyMedia().autoembed();
     new Scur().autodeob();
-    new ImgZoom();
-    new ElFilter();
+    new ImgZoom().init();
+    new ElFilter().init();
     document.querySelectorAll('a').forEach(element => {
         if (element.hostname && document.location.hostname != element.hostname) {
             element.setAttribute('target', '_blank');

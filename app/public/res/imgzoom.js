@@ -6,6 +6,8 @@ export class ImgZoom {
     constructor() {
         this.target_element = document.querySelector(this.target_selector);
         this.nodes = document.querySelectorAll(this.node_selector);
+    }
+    init() {
         this.nodes.forEach((node_element) => {
             node_element.addEventListener('click', (event) => {
                 event.preventDefault();

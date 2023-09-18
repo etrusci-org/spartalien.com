@@ -242,9 +242,11 @@ hr,
 h1,
 h2,
 h3,
+div,
 p,
 ul,
 li,
+span,
 label,
 table,
 thead,
@@ -307,6 +309,7 @@ table {
   border-collapse: collapse;
 }
 
+.box,
 table,
 pre {
   max-width: 100%;
@@ -499,6 +502,8 @@ input::placeholder {
 }
 input[type=text] {
   color: hsl(77, 75%, 41%);
+  border-width: 1px;
+  border-color: hsl(0, 0%, 7%);
   background-color: hsl(0, 0%, 15%);
   box-shadow: 0 0 10px 5px hsl(0, 0%, 0%) inset;
 }
@@ -620,7 +625,7 @@ img.tn {
   padding: 1.5rem;
   margin-bottom: 8rem;
   border-width: 1px;
-  border-color: hsl(0, 0%, 11%);
+  border-color: hsl(0, 0%, 7%);
   background-color: hsl(0, 0%, 7%);
   box-shadow: 0 0 10px 5px hsl(0, 0%, 0%) inset;
 }

@@ -235,6 +235,8 @@ input {
 
     &[type=text] {
         color: $color-brand-50;
+        border-width: 1px;
+        border-color: $color-gray-950;
         background-color: $color-gray-850;
         box-shadow: 0 0 10px 5px $color-black inset;
     }
@@ -416,7 +418,7 @@ img.tn {
     padding: 1.5rem;
     margin-bottom: 8rem;
     border-width: 1px;
-    border-color: $color-gray-900;
+    border-color: $color-gray-950;
     background-color: $color-gray-950;
     box-shadow: 0 0 10px 5px $color-black inset;
 
