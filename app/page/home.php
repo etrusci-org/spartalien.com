@@ -29,7 +29,7 @@ $rls = $this->get_latest_rls_list();
     </div>
 
     <div class="box">
-        <h3>Latest News</h3>
+        <h3>Latest News <a href="./news.atom" class="img" title="News Atom Feed"><img src="./res/vendor/rss.svg" class="ico" alt="News Atom Feed"></a></h3>
         <ul>
             <?php
             foreach ($news as $v) {

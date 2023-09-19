@@ -79,6 +79,7 @@ $conf['db_file'] = $APP_DIR.'/db/main.sqlite3';
 $conf['cache_dir'] = $APP_DIR.'/cache';
 $conf['log_dir'] = $APP_DIR.'/log';
 $conf['page_dir'] = $APP_DIR.'/page';
+$conf['sitemap_file'] = $APP_DIR.'/public/sitemap.xml';
 $conf['version_file'] = $conf['cache_dir'].'/version.php';
 $conf['valid_requests_file'] = $APP_DIR.'/cache/valid_requests.php';
 

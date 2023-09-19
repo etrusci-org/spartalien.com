@@ -1,13 +1,13 @@
 BEGIN TRANSACTION;
 
 
-INSERT INTO artist (name, url, description) VALUES ('SPARTALIEN', '//spartalien.com', 'Aliases: arT2, lowtechman');
+INSERT INTO artist (name, url, description) VALUES ('SPARTALIEN', '//spartalien.com', 'Aliases: SPARTALIEN, arT2, lowtechman');
 INSERT INTO artist (name, url, description) VALUES ('SPARTALIEN & Esblendet', NULL, NULL);
 INSERT INTO artist (name, url, description) VALUES ('Esblendet', '//esblendet.ch', NULL);
 INSERT INTO artist (name, url, description) VALUES ('Stevie Lee Price', '//twitter.com/STEVIELEEPRICE', NULL);
 INSERT INTO artist (name, url, description) VALUES ('ediblewaves', '//ediblewaves.bandcamp.com', NULL);
 INSERT INTO artist (name, url, description) VALUES ('Orochi Hanma', '//twitch.tv/orochihanma', NULL);
-INSERT INTO artist (name, url, description) VALUES ('arT2', '//etrusci.org', 'Aliases: SPARTALIEN, lowtechman');
+INSERT INTO artist (name, url, description) VALUES ('arT2', '//etrusci.org', 'Aliases: SPARTALIEN, arT2, lowtechman');
 
 
 INSERT INTO label (name, url) VALUES ('Kaiseki Digital', '//kaisekidigital.bandcamp.com');
@@ -1096,7 +1096,7 @@ INSERT INTO visual (name, pub_date, description) VALUES ('Brain I/O #9', '2020-0
 INSERT INTO visual (name, pub_date, description) VALUES ('Slomo Intros', '2020-05-02', NULL);
 INSERT INTO visual (name, pub_date, description) VALUES ('Brain I/O #10', '2020-07-13', 'Music video for [Brain I/O #10](./catalog/track:76)');
 INSERT INTO visual (name, pub_date, description) VALUES ('Let It All Go, Volume 2', '2020-12-10', 'Music video for [Let It All Go, Volume 2](./catalog/track:77)');
-INSERT INTO visual (name, pub_date, description) VALUES ('4+ Hours of Dark Experimental Ambient and Noise Music | BRAIN I/O', '2021-03-05', 'Mixed version of [BRAIN I/O #1 -](./music/id:18) #10');
+INSERT INTO visual (name, pub_date, description) VALUES ('4+ Hours of Dark Experimental Ambient and Noise Music | BRAIN I/O', '2021-03-05', 'Mixed version of [BRAIN I/O #1 - #10](./music/id:18)');
 INSERT INTO visual (name, pub_date, description) VALUES ('Flux (feat. Stevie Lee Price)', '2021-08-13', 'Music video for [Flux (feat. Stevie Lee Price)](./catalog/track:97)');
 INSERT INTO visual (name, pub_date, description) VALUES ('Calming Stress Relief Music for Meditation, Reflection, and Solitude | UNTOLD STORIES', '2021-10-03', 'Mixed version of [UNTOLD STORIES](./music/id:32)');
 INSERT INTO visual (name, pub_date, description) VALUES ('Promo Art 2018-03', '2018-03', 'Setting the mood.');

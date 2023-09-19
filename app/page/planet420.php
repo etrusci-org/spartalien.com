@@ -49,9 +49,13 @@ $total_hours_to_listen = $this->get_total_hours_to_listen($session_list);
         ?>
     </div>
 
+    <p>
+        <input type="text" class="elfilter-input" placeholder="Filter tracklist..." title="'uni' will find 'unicorns' and 'reunion'">
+    </p>
+
     <div class="box">
         <h3>Tracklist</h3>
-        <table>
+        <table class="elfilter">
             <thead>
                 <tr>
                     <th>Start Time</th>

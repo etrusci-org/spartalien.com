@@ -43,7 +43,7 @@ export class ElFilter
                     // Loop tru <li>'s
                     for (const item of parent.querySelectorAll('li')) {
                         // Show <li> if matched
-                        if (item.innerText.toLowerCase().indexOf(query) != -1) {
+                        if (item.textContent?.toLowerCase().indexOf(query) != -1) {
                             item.classList.remove('hide')
                         }
                         // Show <li> if no match
@@ -60,7 +60,7 @@ export class ElFilter
                         // Collect match results from <td>'s
                         const result = []
                         for (const td of tr.querySelectorAll('td')) {
-                            result.push((td.innerText.toLowerCase().indexOf(query) == -1) ? 'hide' : 'show')
+                            result.push((td.textContent?.toLowerCase().indexOf(query) == -1) ? 'hide' : 'show')
                         }
 
                         // Show <tr> if at least one <td> matched

@@ -12,7 +12,6 @@ if (isset($this->Router->route['var']['id'])) {
 
 <?php if ($news): ?>
     <h2>News from <?php print($news[0]['news_pub_date']); ?></h2>
-
     <div class="box">
         <?php
         foreach ($news as $v) {
@@ -29,6 +28,16 @@ if (isset($this->Router->route['var']['id'])) {
 
 <div <?php print(($news) ? 'class="more"' : ''); ?>>
     <h2><?php print((!$news) ? 'Notable News & Updates' : 'More News ...'); ?></h2>
+
+    <?php if (!$news): ?>
+        <div class="box">
+            <p>
+                Follow me on <a href="https://instagram.com/spartalien">Instagram</a> and <a href="https://twitter.com/spartalien">Twitter</a> for random bleeps in between.
+                There's also an <a href="./news.atom">Atom Feed<a> you can subscribe to.
+            </p>
+        </div>
+    <?php endif; ?>
+
     <div class="box">
         <ul>
             <?php
@@ -48,7 +57,7 @@ if (isset($this->Router->route['var']['id'])) {
                     $dump[$date][0]['news_id'],
                     $date,
                     $items,
-                    (isset($this->Router->route['var']['id']) && $this->Router->route['var']['id'] == $v['news_id']) ? ' class="active"' : '',
+                    (isset($this->Router->route['var']['id']) && $this->Router->route['var']['id'] == $dump[$date][0]['news_id']) ? ' class="active"' : '',
                 );
             }
             ?>

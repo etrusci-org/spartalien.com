@@ -20,7 +20,7 @@ export class ElFilter {
             switch (parent.nodeName.toLowerCase()) {
                 case 'ul':
                     for (const item of parent.querySelectorAll('li')) {
-                        if (item.innerText.toLowerCase().indexOf(query) != -1) {
+                        if (item.textContent?.toLowerCase().indexOf(query) != -1) {
                             item.classList.remove('hide');
                         }
                         else {
@@ -32,7 +32,7 @@ export class ElFilter {
                     for (const tr of parent.querySelectorAll('tbody tr')) {
                         const result = [];
                         for (const td of tr.querySelectorAll('td')) {
-                            result.push((td.innerText.toLowerCase().indexOf(query) == -1) ? 'hide' : 'show');
+                            result.push((td.textContent?.toLowerCase().indexOf(query) == -1) ? 'hide' : 'show');
                         }
                         if (result.includes('show')) {
                             tr.classList.remove('hide');

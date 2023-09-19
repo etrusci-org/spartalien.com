@@ -3,12 +3,8 @@
 
 <div class="box">
     <h3>Content Not Found</h3>
-    <p>
-        Your request
-        "<code>/{nocache}<?php print($this->Router->route['request']); ?>{/nocache}</code>"
-        is invalid.
-        The content may have been deleted or moved to another location.
-    </p>
+    <p>Your request "<code>/{nocache}<?php print($this->Router->route['request']); ?>{/nocache}</code>" is invalid.</p>
+    <p>The content may have been deleted or moved to another location.</p>
 
     <div class="lazycode">{
         "type": "video",
@@ -16,7 +12,7 @@
         "attr": [
             ["autoplay", "autoplay"],
             ["loop", "loop"],
-            ["controls", false]
+            ["controls", null]
         ]
     }</div>
 </div>

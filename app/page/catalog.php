@@ -118,7 +118,7 @@ if (isset($this->Router->route['var']['artist'])) {
     <div <?php print(($track) ? 'class="more"' : ''); ?>>
         <h2><?php print((!$track) ? 'Tracks Catalog' : 'More Tracks ...'); ?></h2>
         <p>
-            <input type="text" class="elfilter-input" placeholder="Filter..." title="'uni' will find 'unicorns' and 'reunion'">
+            <input type="text" class="elfilter-input" placeholder="Filter tracks..." title="'uni' will find 'unicorns' and 'reunion'">
         </p>
 
         <div class="box">

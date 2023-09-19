@@ -358,7 +358,7 @@ iframe {
 }
 *::selection {
   color: hsl(0, 0%, 0%);
-  background-color: hsl(77, 75%, 41%);
+  background-color: rgb(139, 183, 26);
 }
 
 body {
@@ -400,7 +400,7 @@ h2:hover, h2:focus {
   transition: color 0.25s linear;
 }
 h2:hover::first-letter, h2:focus::first-letter {
-  color: hsl(77, 75%, 41%);
+  color: rgb(139, 183, 26);
 }
 
 h3 {
@@ -437,18 +437,18 @@ a:link, a:visited {
 }
 a:hover, a:active {
   text-decoration-line: none;
-  color: hsl(77, 75%, 41%);
+  color: rgb(139, 183, 26);
   text-decoration-color: hsl(0, 0%, 69%);
 }
 a:focus, a.active {
   text-decoration-line: underline;
   text-decoration-style: double;
-  color: hsl(77, 75%, 41%);
-  text-decoration-color: hsl(77, 75%, 41%);
+  color: rgb(139, 183, 26);
+  text-decoration-color: rgb(139, 183, 26);
 }
-a:focus img, a.active img {
+a.active img {
   border-width: 1px;
-  border-color: hsl(77, 75%, 41%);
+  border-color: rgb(139, 183, 26);
 }
 a.external::after {
   content: "⇗";
@@ -501,7 +501,7 @@ input::placeholder {
   color: hsl(0, 0%, 59%);
 }
 input[type=text] {
-  color: hsl(77, 75%, 41%);
+  color: rgb(139, 183, 26);
   border-width: 1px;
   border-color: hsl(0, 0%, 7%);
   background-color: hsl(0, 0%, 15%);
@@ -670,6 +670,17 @@ img.tn {
   display: none;
 }
 
+.ico {
+  display: inline-block;
+  width: auto;
+  height: 18px;
+  vertical-align: middle;
+  opacity: 0.5;
+}
+.ico:hover, .ico:focus {
+  opacity: 1;
+}
+
 .lazycode {
   display: block;
   background-image: url("./loading.gif");
@@ -691,7 +702,7 @@ img.tn {
   height: auto;
 }
 .lazymedia.audio {
-  width: 500px;
+  width: 400px;
   max-width: 100%;
   background-image: none;
 }
@@ -774,6 +785,9 @@ a.lazymedia.image {
   body {
     font-size: calc(18px + 4 * (100vw - 576px) / 960);
   }
+  .ico {
+    height: calc(18px + 4 * (100vw - 576px) / 960);
+  }
   h2 {
     font-size: calc(24px + 12 * (100vw - 576px) / 960);
   }
@@ -805,6 +819,9 @@ a.lazymedia.image {
 @media screen and (min-width: 1536px) {
   body {
     font-size: 22px;
+  }
+  .ico {
+    height: 22px;
   }
   h2 {
     font-size: 36px;

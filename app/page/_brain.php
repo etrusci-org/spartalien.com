@@ -34,3 +34,12 @@ $var_metatag = [
     'description' => 'Original music, visuals, mixtapes, and some more.',
     'keywords' => 'SPARTALIEN, arT2, lowtechman, multimedia, digital, art, music, audio, video, visual, soundtrack, visual, code, experimental, original',
 ];
+
+
+$var_ogtag = [
+    'og:title' => $var_metatag['title'],
+    'og:url' => $this->conf['site_url'].$this->Router->route['request'],
+    'og:description' => $var_metatag['description'],
+    'og:type' => 'website',
+    'og:image' => $this->conf['site_url'].'res/og.jpg?v='.$this->version['og'],
+];

@@ -1,22 +1,17 @@
-# Because script kiddies
 ServerSignature Off
-
-
-# UTF-8 ftw
 AddDefaultCharset UTF-8
-
+AddType application/xml      .xml
+AddType application/atom+xml .atom
 
 <IfModule mod_negotiation.c>
-    # Prevent automatic directory listing
     Options -MultiViews -Indexes
 </IfModule>
 
-
 <IfModule mod_rewrite.c>
-    # Enable URL rewrite
     RewriteEngine On
 
     # Files redirect for dev env
+    # DO NOT USE ON PRODUCTION SERVER!
     RewriteRule ^file(/.*)?$ /spartalien.com-files/file$1 [R=302,L]
 
     # Fix trailing slashes on non-directories

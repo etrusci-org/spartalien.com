@@ -24,6 +24,10 @@ $dump .= "'js' => ".array_sum(
         return filemtime($v);
     }, glob($APP_DIR.'/public/res/*.js'))).",".PHP_EOL;
 
+$dump .= "'og' => ".filemtime($APP_DIR.'/public/res/og.jpg').",".PHP_EOL;
+
+$dump .= "'favicon' => ".filemtime($APP_DIR.'/public/favicon.ico').",".PHP_EOL;
+
 $dump = '<?php $version = ['.PHP_EOL.$dump.']; ?>';
 
 file_put_contents($conf['version_file'], $dump, LOCK_EX);

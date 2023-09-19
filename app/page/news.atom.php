@@ -18,7 +18,7 @@ print('<?xml version="1.0" encoding="utf-8"?>'."\n");
     }
 
     foreach ($dump as $date => $items) {
-        $items = implode('<br>', array_map(fn(array $v) => sprintf('<li>%s</li>', strip_tags($this->_lazytext($v['news_text']))), $items));
+        $items = implode('<br>', array_map(fn(array $v) => sprintf('<li>%s</li>', $this->_lazytext($v['news_text'])), $items));
 
         printf('<entry><title>NEWS FROM %4$s</title><link href="%1$snews/id:%3$s"/><id>tag:spartalien.com,%2$s:news-%3$s</id><updated>%4$sT00:00:00Z</updated><author><name>SPARTALIEN</name></author><content type="html">%5$s</content></entry>',
             $this->conf['site_url'],
