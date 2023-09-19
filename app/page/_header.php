@@ -6,6 +6,13 @@
 
     <base href="<?php print($this->conf['site_url']); ?>">
 
+    <meta name="application-name" content="<?php print($var_metatag['application-name']); ?>">
+    <meta name="author" content="<?php print($var_metatag['author']); ?>">
+    <meta name="generator" content="<?php print($var_metatag['generator']); ?>">
+    <meta name="title" content="<?php print($var_metatag['title']); ?>">
+    <meta name="description" content="<?php print($var_metatag['description']); ?>">
+    <meta name="keywords" content="<?php print($var_metatag['keywords']); ?>">
+
     <link rel="stylesheet" href="./res/style.min.css?v=<?php print($this->version['css']); ?>">
 
     <title><?php print($this->get_page_title()); ?></title>

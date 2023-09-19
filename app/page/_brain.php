@@ -21,5 +21,16 @@ $var_elsewhere = [
     'odysee' => ['Odysee', '//odysee.com/@spartalien:2'],
     'discogs' => ['Discogs', '//discogs.com/artist/5977226'],
     'lastfm' => ['Last.fm', '//last.fm/user/spartalien'],
+    'github' => ['GitHub', '//github.com/etrusci-org'],
     'etrusci' => ['etrusci.org', '//etrusci.org'],
+];
+
+
+$var_metatag = [
+    'application-name' => 'SPARTALIEN.COM',
+    'author' => 'arT2 (etrusci.org)',
+    'generator' => 'Brain',
+    'title' => $this->get_page_title(),
+    'description' => 'Original music, visuals, mixtapes, and some more.',
+    'keywords' => 'SPARTALIEN, arT2, lowtechman, multimedia, digital, art, music, audio, video, visual, soundtrack, visual, code, experimental, original',
 ];
