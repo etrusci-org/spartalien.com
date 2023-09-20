@@ -14,7 +14,7 @@ class Page extends Core
                 news_text.text AS news_text
             FROM news
             LEFT JOIN news_text ON news_text.news_id = news.id
-            ORDER BY news.pub_date DESC, news_text.ROWID DESC;'
+            ORDER BY news.pub_date DESC, news_text.ROWID ASC;'
         );
 
         foreach ($dump as $k => $v) {
