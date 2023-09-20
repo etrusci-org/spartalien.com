@@ -19,8 +19,8 @@ $rls = $this->get_latest_rls_list();
                         <span class="meta">[%3$s]</span>
                     </li>',
                     $v['rls_id'],
-                    $v['rls_name'],
-                    $v['rls_type_name'],
+                    $this->_hsc($v['rls_name']),
+                    $this->_hsc($v['rls_type_name']),
                 );
             }
             ?>
@@ -29,7 +29,7 @@ $rls = $this->get_latest_rls_list();
     </div>
 
     <div class="box">
-        <h3>Latest News <a href="./news.atom" class="img" title="News Atom Feed"><img src="./res/vendor/rss.svg" class="ico" alt="News Atom Feed"></a></h3>
+        <h3>Latest News</h3>
         <ul>
             <?php
             foreach ($news as $v) {
@@ -53,6 +53,6 @@ $rls = $this->get_latest_rls_list();
 
     <div class="box">
         <h3>Elsewhere</h3>
-        <p><?php print(implode(' &middot; ', array_map(fn(array $v) => sprintf('<a href="%2$s">%1$s</a>', $v[0], $v[1]), $var_elsewhere))); ?></p>
+        <p><?php print(implode(' &middot; ', array_map(fn(array $v) => sprintf('<a href="%2$s">%1$s</a>', $this->_hsc($v[0]), $v[1]), $var_elsewhere))); ?></p>
     </div>
 </div>

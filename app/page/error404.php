@@ -3,7 +3,7 @@
 
 <div class="box">
     <h3>Content Not Found</h3>
-    <p>Your request "<code>/{nocache}<?php print($this->Router->route['request']); ?>{/nocache}</code>" is invalid.</p>
+    <p>Your request "<code>/{nocache}<?php $this->_phsc($this->Router->route['request']); ?>{/nocache}</code>" is invalid.</p>
     <p>The content may have been deleted or moved to another location.</p>
 
     <div class="lazycode">{

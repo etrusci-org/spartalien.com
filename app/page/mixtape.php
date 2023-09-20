@@ -1,8 +1,8 @@
 <?php
-$cache_file_user       = $this->conf['cache_dir'].'/mixcloud-lowtechman-user.json';
+$cache_file_user = $this->conf['cache_dir'].'/mixcloud-lowtechman-user.json';
 $cache_file_cloudcasts = $this->conf['cache_dir'].'/mixcloud-lowtechman-cloudcasts.json';
 
-$user           = $this->_json_dec(file_get_contents($cache_file_user));
+$user = $this->_json_dec(file_get_contents($cache_file_user));
 $cloudcast_list = $this->_json_dec(file_get_contents($cache_file_cloudcasts));
 ?>
 
@@ -45,8 +45,8 @@ $cloudcast_list = $this->_json_dec(file_get_contents($cache_file_cloudcasts));
                         <td>%3$s</td>
                     </tr>',
                     $v['url'],
-                    $v['name'],
-                    implode(', ', array_map(function(array $v) { return strtolower($v['name']); }, $v['tags'])),
+                    $this->_hsc($v['name']),
+                    implode(', ', array_map(function(array $v) { return $this->_hsc(strtolower($v['name'])); }, $v['tags'])),
                     date('Y-m-d', strtotime($v['created_time'])),
                     $v['pictures']['medium'],
                 );

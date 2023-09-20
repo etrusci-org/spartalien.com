@@ -20,8 +20,8 @@ if (isset($this->Router->route['var']['artist'])) {
         <?php
         printf(
             '%1$s%2$s',
-            ($track['artist_id'] != 1) ? sprintf('%s - ', $track['artist_name']) : '',
-            $track['track_name'],
+            ($track['artist_id'] != 1) ? sprintf('%s - ', $this->_hsc($track['artist_name'])) : '',
+            $this->_hsc($track['track_name']),
         );
         ?>
     </h2>
@@ -48,7 +48,7 @@ if (isset($this->Router->route['var']['artist'])) {
                 </ul>
             </div>',
             $track['artist_id'],
-            $track['artist_name'],
+            $this->_hsc($track['artist_name']),
             $track['track_runtime_human'],
         );
         ?>
@@ -73,7 +73,7 @@ if (isset($this->Router->route['var']['artist'])) {
                     %1$s
                 </ul>
             </div>',
-            implode('', array_map(fn(array $v): string => sprintf('<li><a href="%1$s">%2$s</a></li>', $v['url'], ucwords($v['platform'])), $track['track_dist'])),
+            implode('', array_map(fn(array $v): string => sprintf('<li><a href="%1$s">%2$s</a></li>', $v['url'], $this->_hsc(ucwords($v['platform']))), $track['track_dist'])),
         );
         ?>
     </div>
@@ -116,7 +116,7 @@ if (isset($this->Router->route['var']['artist'])) {
 
 <?php if (!$artist): ?>
     <div <?php print(($track) ? 'class="more"' : ''); ?>>
-        <h2><?php print((!$track) ? 'Tracks Catalog' : 'More Tracks ...'); ?></h2>
+        <h2><?php print((!$track) ? 'Music Tracks Catalog' : 'More Tracks ...'); ?></h2>
         <p>
             <input type="text" class="elfilter-input" placeholder="Filter tracks..." title="'uni' will find 'unicorns' and 'reunion'">
         </p>
@@ -140,10 +140,10 @@ if (isset($this->Router->route['var']['artist'])) {
                                 <td class="text-align-right">%3$s</td>
                             </tr>',
                             $v['track_id'],
-                            $v['track_name'],
+                            $this->_hsc($v['track_name']),
                             $v['track_runtime_human'],
                             $v['artist_id'],
-                            $v['artist_name'],
+                            $this->_hsc($v['artist_name']),
                             (isset($this->Router->route['var']['track']) && $this->Router->route['var']['track'] == $v['track_id']) ? ' class="active"' : '',
                         );
                     }

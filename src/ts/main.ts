@@ -6,8 +6,7 @@ import { ElFilter } from './elfilter.js'
 
 
 
-function main(): void
-{
+window.addEventListener('load', () => {
     new LazyMedia().autoembed()
     new Scur().autodeob()
     new ImgZoom().init()
@@ -24,9 +23,4 @@ function main(): void
         event.preventDefault()
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
     }, false)
-}
-
-
-window.addEventListener('load', () => {
-    main()
 }, false)

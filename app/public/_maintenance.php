@@ -7,19 +7,20 @@ date_default_timezone_set('UTC');
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="60; url=./">
+    <meta http-equiv="refresh" content="60; url=<?php print($_SERVER['REQUEST_URI']); ?>">
     <title>Website Maintenance &middot;&middot;&middot; SPARTALIEN.com</title>
     <style>
-        body { background: #000000; font-family: monospace, sans-serif; font-size: 20px; text-align: center; }
+        body { background: #000000; font-family: sans-serif; font-size: 1.5rem; text-align: center; line-height: 1.75; letter-spacing: .1rem; }
         body, a { color: #ffffff; }
-        .nfo { color: #777777; font-size: 16px; }
+        .nfo { color: #777777; }
     </style>
 </head>
 <body>
-    <p>Updating the website. Everything will be back shortly.</p>
+    <h1><a href="https://spartalien.com">SPARTALIEN.COM</a> - Website Maintenance</h1>
+    <p>Updating the website. Everything will be back shortly. Thank you for your patience.</p>
     <p class="nfo">
-        This page will auto-reload every minute.<br>
-        Current time: <?php print(date('H:i T')); ?>
+        This page auto-reloads every minute and will redirect you back to where you came from when the maintenance is over.<br>
+        Last reload on: <?php print(date('H:i T')); ?>
     </p>
     <p>
         <a href="https://spartalien.bandcamp.com" target="_blank">Bandcamp</a> &middot;

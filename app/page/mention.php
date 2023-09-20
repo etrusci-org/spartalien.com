@@ -11,7 +11,7 @@ if (isset($this->Router->route['var']['id'])) {
 
 
 <?php if ($mention): ?>
-    <h2><?php print($mention['mention_subject']); ?></h2>
+    <h2><?php $this->_phsc($mention['mention_subject']); ?></h2>
 
     <?php
     if ($mention['mention_description']) {
@@ -38,14 +38,14 @@ if (isset($this->Router->route['var']['id'])) {
 
 
 <div <?php print(($mention) ? 'class="more"' : ''); ?>>
-    <h2><?php print((!$mention) ? 'Mentions' : 'More Mentions ...'); ?></h2>
+    <h2><?php print((!$mention) ? 'Appearances, Reviews, Interviews, and More' : 'More Mentions ...'); ?></h2>
     <div class="box">
         <ul class="grid-x-3 compact-lines">
             <?php
             foreach ($mention_list as $v) {
                 printf('<li><a href="./mention/id:%1$s"%3$s>%2$s</a></li>',
                     $v['mention_id'],
-                    $v['mention_subject'],
+                    $this->_hsc($v['mention_subject']),
                     (isset($this->Router->route['var']['id']) && $this->Router->route['var']['id'] == $v['mention_id']) ? ' class="active"' : '',
                 );
             }

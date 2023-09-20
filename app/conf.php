@@ -7,7 +7,6 @@ $conf = [];
 
 // ----------------------------------------------------------------------------
 
-$conf['maintenance_mode'] = false;
 $conf['error_reporting_level'] = E_ALL;
 
 // ----------------------------------------------------------------------------
@@ -22,54 +21,67 @@ $conf['site_nav'] = [
     'home' => [
         'link' => './',
         'link_text' => 'Home',
+        'link_title' => 'Where It All Starts',
     ],
     'music' => [
         'link' => './music',
         'link_text' => 'Music',
+        'link_title' => 'Music For You, Them, And Me',
     ],
     'catalog' => [
         'link' => './catalog',
         'link_text' => 'Catalog',
+        'link_title' => 'Music Tracks Catalog',
     ],
     'planet420' => [
         'link' => './planet420',
         'link_text' => 'Planet 420',
+        'link_title' => 'Special Mixtapes',
     ],
     'mixtape' => [
         'link' => './mixtape',
         'link_text' => 'Mixtape',
+        'link_title' => 'More Mixtapes',
     ],
     'visual' => [
         'link' => './visual',
         'link_text' => 'Visual',
+        'link_title' => 'Visuals For You, Them, And Me',
     ],
     'physical' => [
         'link' => './physical',
         'link_text' => 'Physical',
+        'link_title' => 'Physical Things',
     ],
     'tool' => [
         'link' => './tool',
         'link_text' => 'Tool',
+        'link_title' => 'Tools For You To Use In Your Projects',
     ],
     'stuff' => [
         'link' => './stuff',
         'link_text' => 'Stuff',
+        'link_title' => 'Miscellaneous Stuff',
     ],
     'mention' => [
         'link' => './mention',
-        'link_text' => 'Mention',
+        'link_text' => 'Mentions',
+        'link_title' => 'Appearances, Reviews, Interviews, and More',
     ],
     'news' => [
         'link' => './news',
         'link_text' => 'News',
+        'link_title' => 'Notable News & Updates',
     ],
     'about' => [
         'link' => './about',
         'link_text' => 'About',
+        'link_title' => 'About Me, Myself & I',
     ],
     'exit' => [
         'link' => './exit',
         'link_text' => 'Exit',
+        'link_title' => 'Selected Exit Routes',
     ],
 ];
 

@@ -11,7 +11,7 @@ if (isset($this->Router->route['var']['id'])) {
 
 
 <?php if ($phy): ?>
-    <h2><?php print($phy['phy_name']); ?></h2>
+    <h2><?php $this->_phsc($phy['phy_name']); ?></h2>
 
     <?php
     if ($phy['phy_description']) {
@@ -48,10 +48,8 @@ if (isset($this->Router->route['var']['id'])) {
                     <img src="%3$s" class="tn" loading="lazy" alt="preview image">
                 </a>',
                 $v['phy_id'],
-                $v['phy_name'],
-
+                $this->_hsc($v['phy_name']),
                 $v['phy_preview_image']['tn'],
-
                 (isset($this->Router->route['var']['id']) && $this->Router->route['var']['id'] == $v['phy_id']) ? ' class="active"' : '',
             );
         }

@@ -15,8 +15,8 @@ if (isset($this->Router->route['var']['id'])) {
         <?php
         printf(
             '%1$s%2$s',
-            ($rls['artist_id'] != 1) ? sprintf('%s - ', $rls['artist_name']) : '',
-            $rls['rls_name'],
+            ($rls['artist_id'] != 1) ? sprintf('%s - ', $this->_hsc($rls['artist_name'])) : '',
+            $this->_hsc($rls['rls_name']),
         );
         ?>
     </h2>
@@ -63,12 +63,12 @@ if (isset($this->Router->route['var']['id'])) {
                 </ul>
                 %7$s
             </div>',
-            $rls['rls_type_name'],
+            $this->_hsc($rls['rls_type_name']),
             $rls['rls_track_count'],
             $rls['rls_runtime_total_human'],
             $rls['rls_pub_date'],
             ($rls['rls_upd_date']) ? sprintf('<li>Updated: %1$s</li>', $rls['rls_upd_date']) : '',
-            ($rls['label_name']) ? sprintf('<li>Label: <a href="%1$s">%2$s</a></li>', $rls['label_url'], $rls['label_name']) : '',
+            ($rls['label_name']) ? sprintf('<li>Label: <a href="%1$s">%2$s</a></li>', $rls['label_url'], $this->_hsc($rls['label_name'])) : '',
             ($rls['rls_description']) ? sprintf('<p>%s</p>', $this->_lazytext($rls['rls_description'])) : '',
         );
 
@@ -81,8 +81,8 @@ if (isset($this->Router->route['var']['id'])) {
             printf(
                 '<li><code>%1$s.</code> %2$s<a href="./catalog/track:%5$s">%3$s</a> <code>[%4$s]</code></li>',
                 $v['track_order'],
-                ($v['artist_id'] != 1) ? sprintf('<a href="./catalog/artist:%1$s">%2$s</a> - ', $v['artist_id'], $v['artist_name']) : '',
-                $v['track_name'],
+                ($v['artist_id'] != 1) ? sprintf('<a href="./catalog/artist:%1$s">%2$s</a> - ', $v['artist_id'], $this->_hsc($v['artist_name'])) : '',
+                $this->_hsc($v['track_name']),
                 $v['track_runtime_human'],
                 $v['track_id'],
             );
@@ -121,7 +121,7 @@ if (isset($this->Router->route['var']['id'])) {
                     %1$s
                 </ul>
             </div>',
-            implode('', array_map(fn(array $v): string => sprintf('<li><a href="%1$s">%2$s</a></li>', $v['url'], ucwords($v['platform'])), $rls['rls_dist'])),
+            implode('', array_map(fn(array $v): string => sprintf('<li><a href="%1$s">%2$s</a></li>', $v['url'], $this->_hsc(ucwords($v['platform']))), $rls['rls_dist'])),
         );
         ?>
     </div>
@@ -152,7 +152,7 @@ if (isset($this->Router->route['var']['id'])) {
                     <img src="%3$s" class="tn" loading="lazy" alt="%2$s">
                 </a>',
                 $v['rls_id'],
-                $v['rls_name'],
+                $this->_hsc($v['rls_name']),
                 $v['rls_preview_image']['tn'],
                 (isset($this->Router->route['var']['id']) && $this->Router->route['var']['id'] == $v['rls_id']) ? ' class="active"' : '',
             );

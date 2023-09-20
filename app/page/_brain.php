@@ -3,6 +3,25 @@ declare(strict_types=1);
 namespace s9com;
 
 
+$var_metatag = [
+    'application-name' => 'SPARTALIEN.COM',
+    'author' => 'arT2 (etrusci.org)',
+    'generator' => 'Brain',
+    'title' => $this->get_page_title(),
+    'description' => 'Original music, visuals, mixtapes, and some more.',
+    'keywords' => 'SPARTALIEN, arT2, lowtechman, multimedia, digital, art, music, audio, video, visual, soundtrack, visual, code, experimental, original',
+];
+
+
+$var_ogtag = [
+    'og:title' => $var_metatag['title'],
+    'og:url' => $this->conf['site_url'].$this->Router->route['request'],
+    'og:description' => $var_metatag['description'],
+    'og:type' => 'website',
+    'og:image' => $this->conf['site_url'].'res/og.jpg?v='.$this->version['og'],
+];
+
+
 $var_elsewhere = [
     'newsletter' => ['Newsletter', '//eepurl.com/dqYlHr'],
     'discord' => ['Discord', '//spartalien.com/discord'],
@@ -23,23 +42,4 @@ $var_elsewhere = [
     'lastfm' => ['Last.fm', '//last.fm/user/spartalien'],
     'github' => ['GitHub', '//github.com/etrusci-org'],
     'etrusci' => ['etrusci.org', '//etrusci.org'],
-];
-
-
-$var_metatag = [
-    'application-name' => 'SPARTALIEN.COM',
-    'author' => 'arT2 (etrusci.org)',
-    'generator' => 'Brain',
-    'title' => $this->get_page_title(),
-    'description' => 'Original music, visuals, mixtapes, and some more.',
-    'keywords' => 'SPARTALIEN, arT2, lowtechman, multimedia, digital, art, music, audio, video, visual, soundtrack, visual, code, experimental, original',
-];
-
-
-$var_ogtag = [
-    'og:title' => $var_metatag['title'],
-    'og:url' => $this->conf['site_url'].$this->Router->route['request'],
-    'og:description' => $var_metatag['description'],
-    'og:type' => 'website',
-    'og:image' => $this->conf['site_url'].'res/og.jpg?v='.$this->version['og'],
 ];

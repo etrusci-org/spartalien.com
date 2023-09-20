@@ -209,9 +209,10 @@ class Core
 
         foreach ($this->conf['site_nav'] as $k => $v) {
             $dump[] = sprintf(
-                '<a href="%1$s"%3$s>%2$s</a>',
+                '<a href="%1$s" title="%3$s" %4$s>%2$s</a>',
                 $v['link'],
                 $v['link_text'],
+                $v['link_title'],
                 ($this->Router->route['node'] == $k) ? ' class="active"' : '',
             );
         }
@@ -287,6 +288,18 @@ class Core
     }
 
 
+    public static function _hsc(string $data): string
+    {
+        return htmlspecialchars($data, flags: ENT_NOQUOTES | ENT_SUBSTITUTE | ENT_HTML5);
+    }
+
+
+    public static function _phsc(string $data): void
+    {
+        print(htmlspecialchars($data, flags: ENT_NOQUOTES | ENT_SUBSTITUTE | ENT_HTML5));
+    }
+
+
     public static function _lazytext(string $text): string
     {
         $patterns = [
@@ -314,6 +327,8 @@ class Core
             // 5
             '<s>$1</s>',
         ];
+
+        $text = htmlspecialchars($text, flags: ENT_NOQUOTES | ENT_SUBSTITUTE | ENT_HTML5);
 
         $text = preg_replace($patterns, $replacements, $text);
 

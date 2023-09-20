@@ -32,7 +32,9 @@ if (isset($this->Router->route['var']['id'])) {
     <?php if (!$news): ?>
         <div class="box">
             <p>
-                Follow me on <a href="https://instagram.com/spartalien">Instagram</a> and <a href="https://twitter.com/spartalien">Twitter</a> for random bleeps in between.
+                <a href="<?php print($var_elsewhere['newsletter'][1]); ?>">Subscribe to the newsletter</a>
+                to get the news and related insider infos I usually don't post anywhere else directly in your email inbox.
+                Or follow me on <a href="<?php print($var_elsewhere['instagram'][1]); ?>">Instagram</a> and <a href="<?php print($var_elsewhere['twitter'][1]); ?>">Twitter</a> for random bleeps in between.
                 There's also an <a href="./news.atom">Atom Feed<a> you can subscribe to.
             </p>
         </div>

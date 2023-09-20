@@ -11,7 +11,7 @@ if (isset($this->Router->route['var']['id'])) {
 
 
 <?php if ($stuff): ?>
-    <h2><?php print($stuff['stuff_name']); ?></h2>
+    <h2><?php $this->_phsc($stuff['stuff_name']); ?></h2>
 
     <?php
     if ($stuff['stuff_description']) {
@@ -46,7 +46,7 @@ if (isset($this->Router->route['var']['id'])) {
             foreach ($stuff_list as $v) {
                 printf('<li><a href="./stuff/id:%1$s"%3$s>%2$s</a></li>',
                     $v['stuff_id'],
-                    $v['stuff_name'],
+                    $this->_hsc($v['stuff_name']),
                     (isset($this->Router->route['var']['id']) && $this->Router->route['var']['id'] == $v['stuff_id']) ? ' class="active"' : '',
                 );
             }

@@ -50,7 +50,7 @@ if (isset($this->Router->route['var']['id'])) {
                     <img src="%3$s" class="tn" loading="lazy" alt="preview image">
                 </a>',
                 $v['visual_id'],
-                $v['visual_name'],
+                $this->_hsc($v['visual_name']),
                 $v['visual_preview_image']['tn'],
                 (isset($this->Router->route['var']['id']) && $this->Router->route['var']['id'] == $v['visual_id']) ? ' class="active"' : '',
             );

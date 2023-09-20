@@ -73,8 +73,8 @@ $total_hours_to_listen = $this->get_total_hours_to_listen($session_list);
                             <td>%3$s</td>
                         </tr>',
                         $v['track_start_time_human'],
-                        $v['artist_name'],
-                        $v['track_name'],
+                        $this->_hsc($v['artist_name']),
+                        $this->_hsc($v['track_name']),
                     );
                 }
                 ?>
@@ -97,14 +97,17 @@ $total_hours_to_listen = $this->get_total_hours_to_listen($session_list);
 
         <div class="box full-width">
             <p>
-                New here? Then simply click the play button to listen to
+                New here? Then simply click the play button to listen to (so far)
                 <?php print($total_hours_to_listen); ?>
-                hours of selected eclectic music.
+                hours of selected eclectic music...
             </p>
             <div class="lazycode">{
                 "type": "mixcloudplaylist",
                 "slug": "lowtechman/playlists/planet-420"
             }</div>
+            <p>
+                ...or find your favorite session in the archive below &dArr;
+            </p>
         </div>
     <?php endif; ?>
 

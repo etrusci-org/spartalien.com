@@ -2,7 +2,7 @@ import { LazyMedia } from './lazymedia.js';
 import { Scur } from './scur.js';
 import { ImgZoom } from './imgzoom.js';
 import { ElFilter } from './elfilter.js';
-function main() {
+window.addEventListener('load', () => {
     new LazyMedia().autoembed();
     new Scur().autodeob();
     new ImgZoom().init();
@@ -17,7 +17,4 @@ function main() {
         event.preventDefault();
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     }, false);
-}
-window.addEventListener('load', () => {
-    main();
 }, false);
