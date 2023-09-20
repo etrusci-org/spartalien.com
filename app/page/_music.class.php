@@ -58,7 +58,8 @@ class Page extends Core
                 artist.id AS artist_id,
                 artist.name AS artist_name,
                 label.id AS label_id,
-                label.name AS label_name
+                label.name AS label_name,
+                label.url AS label_url
             FROM rls
             LEFT JOIN rls_type ON rls_type.id = rls.rls_type_id
             LEFT JOIN artist ON artist.id = rls.artist_id

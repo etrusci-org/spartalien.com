@@ -59,14 +59,16 @@ if (isset($this->Router->route['var']['id'])) {
                     <li>Total runtime: %3$s</li>
                     <li>Released: %4$s</li>
                     %5$s
+                    %6$s
                 </ul>
-                %6$s
+                %7$s
             </div>',
             $rls['rls_type_name'],
             $rls['rls_track_count'],
             $rls['rls_runtime_total_human'],
             $rls['rls_pub_date'],
             ($rls['rls_upd_date']) ? sprintf('<li>Updated: %1$s</li>', $rls['rls_upd_date']) : '',
+            ($rls['label_name']) ? sprintf('<li>Label: <a href="%1$s">%2$s</a></li>', $rls['label_url'], $rls['label_name']) : '',
             ($rls['rls_description']) ? sprintf('<p>%s</p>', $this->_lazytext($rls['rls_description'])) : '',
         );
 
