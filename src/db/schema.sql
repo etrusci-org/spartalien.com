@@ -217,6 +217,17 @@ CREATE TABLE mention_media (
 );
 
 
+CREATE TABLE exit (
+    id          INTEGER NOT NULL,
+    text        TEXT NOT NULL,
+    description TEXT DEFAULT NULL,
+    url         TEXT DEFAULT NULL,
+
+    PRIMARY KEY (id AUTOINCREMENT),
+    UNIQUE (url)
+);
+
+
 CREATE TABLE p420_session (
     num          INTEGER NOT NULL,
     pub_date     TEXT NOT NULL,
@@ -238,15 +249,5 @@ CREATE TABLE p420_tracklist (
     PRIMARY KEY (session_num, start_time)
 );
 
-
-CREATE TABLE exit (
-    id          INTEGER NOT NULL,
-    text        TEXT NOT NULL,
-    description TEXT DEFAULT NULL,
-    url         TEXT DEFAULT NULL,
-
-    PRIMARY KEY (id AUTOINCREMENT),
-    UNIQUE (url)
-);
 
 COMMIT;
