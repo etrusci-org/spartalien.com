@@ -9,7 +9,7 @@
             <li>Aliases: SPARTALIEN, arT2, lowtechman</li>
         </ul>
         <p>
-            <img src="./file/we-ca-2017.jpg" alt="we ca. 2017">
+            <a class="imgzoom" href="./file/we-ca-2017.jpg"><img src="./file/we-ca-2017.jpg" alt="we ca. 2017"></a>
         </p>
     </div>
 
