@@ -367,6 +367,11 @@ body {
   text-rendering: geometricPrecision;
   color: hsl(0, 0%, 48%);
   background-color: hsl(0, 0%, 3%);
+  background-image: url("./logo-bg.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: auto 70vh;
 }
 
 code,
@@ -425,9 +430,6 @@ main pre, footer pre {
 }
 main p, main ul, main pre, main .lazycode, main .lazymedia, footer p, footer ul, footer pre, footer .lazycode, footer .lazymedia {
   margin-bottom: 1rem;
-}
-main p:last-child, main ul:last-child, main pre:last-child, main .lazycode:last-child, main .lazymedia:last-child, footer p:last-child, footer ul:last-child, footer pre:last-child, footer .lazycode:last-child, footer .lazymedia:last-child {
-  margin-bottom: 0;
 }
 
 a:link, a:visited {
@@ -557,20 +559,14 @@ footer {
   padding-right: 1rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  margin-top: 70vh;
+  margin-top: 80vh;
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: hsl(77, 75%, 20%);
   background-color: hsl(0, 0%, 7%);
   box-shadow: 0 -5px 10px 5px hsl(0, 0%, 0%);
-  opacity: 0.25;
-  transition: opacity 0.75s linear;
   z-index: 5;
   cursor: crosshair;
-}
-footer:hover, footer:focus {
-  opacity: 1;
-  transition: opacity 0.1s linear;
 }
 footer nav {
   justify-content: center;
@@ -745,9 +741,6 @@ img.tn {
   width: 800px;
   max-width: 100%;
 }
-.videobox:last-child {
-  margin-bottom: 0;
-}
 .videobox .lazymedia {
   position: absolute;
   top: 0;
@@ -834,7 +827,7 @@ a.lazymedia.image {
     font-size: 26px;
   }
 }
-@media screen and (max-height: 50rem) {
+@media screen and (max-height: 600px) {
   header {
     position: relative;
   }

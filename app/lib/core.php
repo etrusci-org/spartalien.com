@@ -85,12 +85,11 @@ class Core
             $code = '';
             foreach ($page_files as $v) {
                 if ($v == '*node') {
-                    $page_file = $this->conf['page_dir'].'/'.$this->Router->route['node'].'.php';
+                    $code .= file_get_contents($this->conf['page_dir'].'/'.$this->Router->route['node'].'.php');
                 }
-                else {
-                    $page_file = $this->conf['page_dir'].'/'.$v.'.php';
+                else if ($v) {
+                    $code .= file_get_contents($this->conf['page_dir'].'/'.$v.'.php');
                 }
-                $code .= file_get_contents($page_file);
             }
 
             // find nocache blocks in code and remember them
@@ -135,7 +134,7 @@ class Core
     }
 
 
-    protected function get_page_title(string $sep = ' &middot;&middot;&middot; '): string
+    protected function get_page_title(string $sep = ' | '): string
     {
         // Full title if route is neither default node nor error404
         if (
@@ -184,13 +183,7 @@ class Core
                 $page_title = 'News from '.$dump['pub_date'].$sep.$page_title;
             }
 
-            return
-                $page_title
-                .$sep
-                .$this->conf['site_title'];
-                // .$sep
-                // .'/'
-                // .$this->Router->route['request']
+            return $page_title.$sep.$this->conf['site_title'];
         }
 
         // Special title if route is error404

@@ -28,7 +28,6 @@
 </body>
 </html>
 <!--
->>> Website created by arT2 <etrusci.org> for SPARTALIEN <spartalien.com>
-::: <?php print($this->Router->get_route_id().' '.$this->_json_enc($this->Router->route, flags: JSON_PRETTY_PRINT | JSON_THROW_ON_ERROR | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES).PHP_EOL); ?>
-!!! Dear aspiring hackers, please stop hammering - the data is there: <https://github.com/etrusci-org/spartalien.com/blob/main/src/db/data.sql>. Thank you.
+<?php print($this->Router->get_route_id().' '.$this->_json_enc($this->Router->route).PHP_EOL); ?>
+<https://github.com/etrusci-org/spartalien.com/>
 -->
