@@ -19,7 +19,7 @@ type LazyCode = {
 
     // optional for all
     class?: string[]
-    attr?: [string, string|null][] // ['foo', null] will remove the attribute foo from the target element
+    attr?: [string, string | null][] // ['foo', null] will remove the attribute foo from the target element
 
     // optional for link
     text?: string
@@ -106,9 +106,9 @@ export class LazyMedia
     }
 
 
-    public get_baked_element(code: LazyCode): HTMLElement|null
+    public get_baked_element(code: LazyCode): HTMLElement | null
     {
-        let baked_element: null|HTMLElement = null
+        let baked_element: null | HTMLElement = null
 
         // link
         if (code.type == 'link') {
@@ -147,7 +147,7 @@ export class LazyMedia
                 this.add_code_css(code, baked_element)
 
                 if (!code.alt) {
-                    baked_element.setAttribute('alt', code.slug.split('/').pop() || code.slug)
+                    baked_element.setAttribute('alt', code.slug.split('/').pop() ?? code.slug)
                 }
                 else {
                     baked_element.setAttribute('alt', code.alt)
@@ -167,7 +167,7 @@ export class LazyMedia
                 this.add_code_css(code, baked_element)
 
                 if (!code.alt) {
-                    inner1.setAttribute('alt', code.slug.split('/').pop() || code.slug)
+                    inner1.setAttribute('alt', code.slug.split('/').pop() ?? code.slug)
                 }
                 else {
                     inner1.setAttribute('alt', code.alt)

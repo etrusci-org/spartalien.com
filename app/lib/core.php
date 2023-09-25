@@ -196,7 +196,7 @@ class Core
     }
 
 
-    protected function get_site_nav_html(string $separator = ' '): string
+    protected function get_site_nav_html(string $sep = ' '): string
     {
         $dump = [];
 
@@ -204,13 +204,13 @@ class Core
             $dump[] = sprintf(
                 '<a href="%1$s" title="%3$s" %4$s>%2$s</a>',
                 $v['link'],
-                $v['link_text'],
-                $v['link_title'],
+                $this->_hsc($v['link_text']),
+                $this->_hsc($v['link_title']),
                 ($this->Router->route['node'] == $k) ? ' class="active"' : '',
             );
         }
 
-        $dump = implode($separator, $dump);
+        $dump = implode($sep, $dump);
 
         return $dump;
     }
@@ -333,8 +333,6 @@ class Core
     {
         $tn  = './file/preview/'.$type.'/'.$id.'-tn.jpg';
         $med = './file/preview/'.$type.'/'.$id.'-med.jpg';
-
-        // REMEMBER ME / TODO: big not on visual and physical
         $big = './file/preview/'.$type.'/'.$id.'-big.jpg';
 
         return match($size) {

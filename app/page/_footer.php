@@ -7,8 +7,8 @@
         <nav><?php print($this->get_site_nav_html()); ?></nav>
 
         <div class="grid-x-2">
-            <nav>( <a href="./purchase">Purchase</a> <a href="./privacy">Privacy</a> )</nav>
-            <p>&copy; <?php print(date('Y')); ?> SPARTALIEN.COM</p>
+            <p>( <a href="./purchase">Purchase</a>, <a href="./privacy">Privacy</a> )</p>
+            <p>( &copy; <?php print(date('Y')); ?> SPARTALIEN )</p>
         </div>
 
         <p><img src="./res/logo-small.png" alt="Logo" title="SPARTALIEN"></p>

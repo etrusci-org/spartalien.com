@@ -13,14 +13,8 @@
 
 <div class="box">
     <h3>Webserver Logs</h3>
-    <p>
-        Server access logs are used to analyze the website traffic.
-        These include your IP, User Agent and Referer website.
-        A log entry of you may look like this:
-    </p>
-    <p>
-        <code>11.22.33.44 - - [17/Aug/2022:08:49:28 +0000] "GET /music/id:29 HTTP/1.1" 200 3352 "https://spartalien.com/news/id:53" "Mozilla/5.0 (Linux; Android 7.0;)"</code>
-    </p>
+    <p>Server access logs are used to analyze the website traffic. These include your IP, User Agent and Referer website. A log entry of you may look like this:</p>
+    <p><code>11.22.33.44 - - [17/Aug/2022:08:49:28 +0000] "GET /music/id:29 HTTP/1.1" 200 3352 "https://spartalien.com/news/id:53" "Mozilla/5.0 (Linux; Android 7.0;)"</code></p>
 </div>
 
 
@@ -37,12 +31,10 @@
         <h3>Website Host</h3>
         <p>This website is hosted on <a href="//www.nearlyfreespeech.net">NearlyFreeSpeech.NET</a>.</p>
     </div>
-
     <div class="box">
         <h3>Newsletter Mailinglist Host</h3>
         <p>The Newsletter mailinglist is hosted on <a href="//mailchimp.com">Mailchimp</a>.</p>
     </div>
-
     <div class="box">
         <h3>Website Source Code</h3>
         <p>You can view the full source code on <a href="//github.com/etrusci-org/spartalien.com">GitHub</a>.</p>

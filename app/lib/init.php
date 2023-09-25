@@ -74,7 +74,6 @@ foreach ($node_middleware_files as $v) {
     require $v;
 }
 
-// FIXME: still can have only one Page class at once
 if (!class_exists('\s9com\Page')) {
     $App = new Core($conf, $version, $DB, $Router, $Logger);
 }

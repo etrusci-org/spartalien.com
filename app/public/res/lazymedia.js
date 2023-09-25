@@ -76,7 +76,7 @@ export class LazyMedia {
                 this.add_code_attr(code, baked_element);
                 this.add_code_css(code, baked_element);
                 if (!code.alt) {
-                    baked_element.setAttribute('alt', code.slug.split('/').pop() || code.slug);
+                    baked_element.setAttribute('alt', code.slug.split('/').pop() ?? code.slug);
                 }
                 else {
                     baked_element.setAttribute('alt', code.alt);
@@ -91,7 +91,7 @@ export class LazyMedia {
                 this.add_code_attr(code, baked_element);
                 this.add_code_css(code, baked_element);
                 if (!code.alt) {
-                    inner1.setAttribute('alt', code.slug.split('/').pop() || code.slug);
+                    inner1.setAttribute('alt', code.slug.split('/').pop() ?? code.slug);
                 }
                 else {
                     inner1.setAttribute('alt', code.alt);
