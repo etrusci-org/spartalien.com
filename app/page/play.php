@@ -34,38 +34,40 @@
     </div>
 
     <div class="grid-x-2">
-        <div>
-            <p>
-                <strong>Items found</strong><br>
-                <span class="loot_found"></span>
-            </p>
-
-            <p>
-                <strong>Items sold</strong><br>
-                <span class="loot_sold"></span>
-            </p>
-        </div>
+        <p>
+            <strong>Items found</strong><br>
+            <span class="loot_found"></span>
+        </p>
 
         <p>
-            <strong>Top item by value</strong><br>
-            <span class="top_loot"></span>
+            <strong>Items sold</strong><br>
+            <span class="loot_sold"></span>
         </p>
     </div>
 
-    <strong>Backpack (<span class="free_inventory_slots"></span>/<code>50</code>)</strong>
-    <table>
-        <thead>
-            <tr>
-                <th>Item</th>
-                <th>Count</th>
-                <th>Value/Item</th>
-                <th>Value/Batch</th>
-            </tr>
-        </thead>
-        <tbody class="inventory"></tbody>
-    </table>
-</div>
+    <div class="grid-x-2">
+        <div>
+            <strong>Backpack (<span class="free_inventory_slots"></span>/<code>50</code>)</strong>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Count</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody class="inventory"></tbody>
+            </table>
+        </div>
 
+        <p>
+            <strong>Top item found by value</strong><br>
+            <span class="top_loot"></span>
+        </p>
+
+    </div>
+
+</div>
 
 
 <div class="box">
@@ -79,17 +81,10 @@
 </div>
 
 
-
-
-
-
-
 <script type="module">
     import { VisitorProgress } from './res/visitorprogress.js'
 
     const VP = new VisitorProgress()
-
-    if (VP.opt_in) VP.progress() // TODO: remove me when done creating page, no progress on this overview page
 
     const optin_toggle = document.querySelector('.optin_toggle')
     const stats = document.querySelector('.stats')
@@ -105,6 +100,7 @@
     const free_inventory_slots = document.querySelector('.free_inventory_slots')
     const cursymbol = '◈'
     const decdigits = 3
+
 
     optin_toggle.addEventListener('click', (event) => {
         event.preventDefault()
@@ -166,8 +162,7 @@
                     <tr>
                         <td><code>${item_name}</code></td>
                         <td><code>${VP.current_data.inventory[item_name].count}</code></td>
-                        <td><code>${VP.current_data.inventory[item_name].value_per_item.toFixed(decdigits)}</code> ${cursymbol}</td>
-                        <td><code>${(VP.current_data.inventory[item_name].value_per_batch != VP.current_data.inventory[item_name].value_per_item) ? `${VP.current_data.inventory[item_name].value_per_batch.toFixed(decdigits)} ${cursymbol}` : '-'}</code></td>
+                        <td title="Value/Item: ${VP.current_data.inventory[item_name].value_per_item.toFixed(decdigits)}"><code>${VP.current_data.inventory[item_name].value_per_batch.toFixed(decdigits)}</code> ${cursymbol}</td>
                     </tr>`
             }
         }
@@ -177,8 +172,4 @@
 
 
     update_data_display()
-
-
-
-
 </script>

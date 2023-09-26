@@ -21,6 +21,5 @@ window.addEventListener('load', () => {
     }, false);
     if (VP.opt_in && !document.location.pathname.endsWith('/play')) {
         VP.progress();
-        console.log(VP.current_data);
     }
 }, false);
