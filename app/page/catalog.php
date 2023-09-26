@@ -128,6 +128,7 @@ if (isset($this->Router->route['var']['artist'])) {
                         <th>Track</th>
                         <th>Artist</th>
                         <th>Runtime</th>
+                        <th>Year</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -138,6 +139,7 @@ if (isset($this->Router->route['var']['artist'])) {
                                 <td><a href="./catalog/track:%1$s"%6$s>%2$s</a></td>
                                 <td><a href="./catalog/artist:%4$s">%5$s</a></td>
                                 <td class="text-align-right">%3$s</td>
+                                <td class="text-align-right">%7$s</td>
                             </tr>',
                             $v['track_id'],
                             $this->_hsc($v['track_name']),
@@ -145,6 +147,7 @@ if (isset($this->Router->route['var']['artist'])) {
                             $v['artist_id'],
                             $this->_hsc($v['artist_name']),
                             (isset($this->Router->route['var']['track']) && $this->Router->route['var']['track'] == $v['track_id']) ? ' class="active"' : '',
+                            $v['track_crea_year'],
                         );
                     }
                     ?>

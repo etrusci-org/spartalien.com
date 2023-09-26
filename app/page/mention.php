@@ -43,9 +43,10 @@ if (isset($this->Router->route['var']['id'])) {
         <ul class="grid-x-3 compact-lines">
             <?php
             foreach ($mention_list as $v) {
-                printf('<li><a href="./mention/id:%1$s"%3$s>%2$s</a></li>',
+                printf('<li><code>%3$s</code> <a href="./mention/id:%1$s"%4$s>%2$s</a></li>',
                     $v['mention_id'],
                     $this->_hsc($v['mention_subject']),
+                    $v['mention_year'],
                     (isset($this->Router->route['var']['id']) && $this->Router->route['var']['id'] == $v['mention_id']) ? ' class="active"' : '',
                 );
             }

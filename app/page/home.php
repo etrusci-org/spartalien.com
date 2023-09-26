@@ -48,7 +48,7 @@ $rls = $this->get_latest_rls_list();
 <div class="grid-x-2">
     <div class="box">
         <h3>Insider Club</h3>
-        <a href="//eepurl.com/dqYlHr" class="img"><img src="./res/newsletter-qr.png" alt="Newsletter QR-Code"></a>
+        <p><a href="//eepurl.com/dqYlHr" class="img"><img src="./res/newsletter-qr.png" alt="Newsletter QR-Code"></a></p>
     </div>
 
     <div class="box">

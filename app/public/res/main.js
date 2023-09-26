@@ -19,8 +19,6 @@ window.addEventListener('load', () => {
         event.preventDefault();
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     }, false);
-    if (VP.opt_in) {
-        if (!document.location.pathname.endsWith('/play'))
-            VP.progress();
-    }
+    if (VP.opt_in)
+        VP.progress();
 }, false);

@@ -12,9 +12,10 @@ class Page extends Core
             SELECT
                 mention.id AS mention_id,
                 mention.subject AS mention_subject,
+                mention.year AS mention_year,
                 mention.description AS mention_description
             FROM mention
-            ORDER BY LOWER(mention.subject) ASC;'
+            ORDER BY mention.year DESC;'
         );
 
         return $dump ?? [];
@@ -27,6 +28,7 @@ class Page extends Core
             SELECT
                 mention.id AS mention_id,
                 mention.subject AS mention_subject,
+                mention.year AS mention_year,
                 mention.description AS mention_description
             FROM mention
             WHERE mention_id = :mention_id

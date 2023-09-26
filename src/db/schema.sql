@@ -27,6 +27,7 @@ CREATE TABLE track (
     id          INTEGER NOT NULL,
     artist_id   INTEGER NOT NULL,
     name        TEXT NOT NULL,
+    crea_year   TEXT NOT NULL,
     runtime     INTEGER NOT NULL,
     bandcamp_id TEXT DEFAULT NULL,
 
@@ -201,6 +202,7 @@ CREATE TABLE news_text (
 CREATE TABLE mention (
     id          INTEGER NOT NULL,
     subject     TEXT NOT NULL,
+    year        TEXT NOT NULL,
     description TEXT DEFAULT NULL,
 
     PRIMARY KEY (id AUTOINCREMENT),

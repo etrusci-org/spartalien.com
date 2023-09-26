@@ -62,8 +62,8 @@ export class LazyMedia
         spotifyplaylist: 'https://open.spotify.com/embed/playlist/{SLUG}/?theme=0',
         mixcloudshow: 'https://www.mixcloud.com/widget/iframe/?feed=/{SLUG}/&hide_cover=1',
         mixcloudplaylist: 'https://www.mixcloud.com/widget/iframe/?feed=/{SLUG}/&hide_cover=1',
-        youtubevideo: 'https://youtube.com/embed/{SLUG}?modestbranding=1&rel=0&start=0',
-        youtubeplaylist: 'https://youtube.com/embed/videoseries?list={SLUG}&modestbranding=1&rel=0',
+        youtubevideo: 'https://youtube.com/embed/{SLUG}?modestbranding=1&color=white&rel=0&start=0',
+        youtubeplaylist: 'https://youtube.com/embed/videoseries?list={SLUG}&modestbranding=1&color=white&rel=0',
         odyseevideo: 'https://odysee.com/$/embed/{SLUG}',
     }
     public bandcamp_list_height = {
@@ -201,8 +201,9 @@ export class LazyMedia
             else {
                 baked_element = document.createElement('div')
 
-                const inner1: HTMLLabelElement = document.createElement('label')
+                const inner1: HTMLAnchorElement = document.createElement('a')
                 inner1.innerHTML = code.label
+                inner1.setAttribute('href', code.slug)
 
                 baked_element.append(inner1)
 

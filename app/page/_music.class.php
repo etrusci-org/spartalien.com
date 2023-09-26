@@ -120,6 +120,7 @@ class Page extends Core
             SELECT
                 track.id AS track_id,
                 track.name AS track_name,
+                track.crea_year AS track_crea_year,
                 track.runtime AS track_runtime,
                 track.artist_id AS artist_id,
                 artist.name AS artist_name

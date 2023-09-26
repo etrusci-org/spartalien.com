@@ -12,6 +12,10 @@
     background-repeat: no-repeat;
     background-position: 0 0;
 
+    &:last-child {
+        margin-bottom: .75rem;
+    }
+
     &.link {
         background-image: none;
     }
@@ -84,7 +88,7 @@ a.lazymedia img {
     max-width: 100%;
 
     &:last-child {
-        margin-bottom: 0;
+        margin-bottom: .75rem;
     }
 
     .lazymedia {
