@@ -152,7 +152,7 @@ if (isset($this->Router->route['var']['id'])) {
                     <img src="%3$s" class="tn" loading="lazy" alt="%2$s">
                 </a>',
                 $v['rls_id'],
-                $this->_hsc($v['rls_name']),
+                sprintf('%1$s | %2$s', $this->_hsc($v['rls_name']), substr($v['rls_list_order'], 0, 4)),
                 $v['rls_preview_image']['tn'],
                 (isset($this->Router->route['var']['id']) && $this->Router->route['var']['id'] == $v['rls_id']) ? ' class="active"' : '',
             );
