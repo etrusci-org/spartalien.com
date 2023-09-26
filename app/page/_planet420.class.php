@@ -22,8 +22,6 @@ class Page extends Core
 
         foreach ($dump as $k => $v) {
             $dump[$k]['session_runtime_human'] = $this->_seconds_to_dhms($v['session_runtime']);
-
-            ksort($dump[$k]);
         }
 
         return $dump ?? [];
@@ -52,8 +50,6 @@ class Page extends Core
         $dump['session_runtime_human'] = $this->_seconds_to_dhms($dump['session_runtime']);
         $dump['session_track_list'] = $this->get_session_track_list($dump['session_num']);
 
-        ksort($dump);
-
         return $dump ?? [];
     }
 
@@ -75,8 +71,6 @@ class Page extends Core
 
         foreach ($dump as $k => $v) {
             $dump[$k]['track_start_time_human'] = $this->_seconds_to_dhms($v['track_start_time']);
-
-            ksort($dump[$k]);
         }
 
         return $dump ?? [];

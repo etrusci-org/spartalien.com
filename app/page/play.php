@@ -1,9 +1,15 @@
 <h2>VisitorProgress</h2>
 
 
+<noscript><p>Javascript required</p></noscript>
+
 
 <div class="stats hide box">
     <h3>Your Progress</h3>
+    <p>
+        You can progress only once every hour. Means, it does not help to reload the pages forever.
+        Displayed data below auto-updates every 30 minutes.
+    </p>
 
     <div class="grid-x-2">
         <p>
@@ -47,7 +53,7 @@
 
     <div class="grid-x-2">
         <div>
-            <strong>Backpack (<span class="free_inventory_slots"></span>/<code>50</code>)</strong>
+            <strong>Backpack (<span class="free_inventory_slots"></span>/<code>10</code>)</strong>
             <table>
                 <thead>
                     <tr>
@@ -64,9 +70,7 @@
             <strong>Top item found by value</strong><br>
             <span class="top_loot"></span>
         </p>
-
     </div>
-
 </div>
 
 
@@ -75,7 +79,7 @@
         This is an <a href="https://en.wikipedia.org/wiki/Incremental_game">incremental-game</a>.
         To progress, simply visit my website from time to time and come back here to check on your progress if you like.
         All the data is saved inside your browser's local storage - it won't be tracked by me or someone else.
-        There are no rewards.
+        There are no rewards - so cheating makes no sense.
     </p>
     <p><button class="optin_toggle"></button></p>
 </div>
@@ -98,8 +102,6 @@
     const top_loot = document.querySelector('.top_loot')
     const inventory = document.querySelector('.inventory')
     const free_inventory_slots = document.querySelector('.free_inventory_slots')
-    const cursymbol = '◈'
-    const decdigits = 3
 
 
     optin_toggle.addEventListener('click', (event) => {
@@ -132,14 +134,14 @@
         started_playing_on.innerHTML = `<code>${new Date(VP.current_data.started_playing_on).toUTCString()}</code>`
         last_progress_on.innerHTML = `<code>${(VP.current_data.last_progress_on) ? new Date(VP.current_data.last_progress_on).toUTCString() : 'never'}</code>`
         ingame_time_passed.innerHTML = `
-            <code>${VP.current_data.stats.ingame_time_passed.years.toFixed(decdigits)}</code> years
-            <code>${VP.current_data.stats.ingame_time_passed.months.toFixed(decdigits)}</code> months
-            <code>${VP.current_data.stats.ingame_time_passed.days.toFixed(decdigits)}</code> days
-            <code>${VP.current_data.stats.ingame_time_passed.hours.toFixed(decdigits)}</code> hours
-            <code>${VP.current_data.stats.ingame_time_passed.minutes.toFixed(decdigits)}</code> minutes
-            <code>${VP.current_data.stats.ingame_time_passed.seconds.toFixed(decdigits)}</code> seconds`
-        distance_traveled.innerHTML = `<code>${VP.current_data.stats.distance_traveled.toFixed(decdigits)}</code> km`
-        currency_gained.innerHTML = `<code>${VP.current_data.stats.currency_gained.toFixed(decdigits)}</code> ${cursymbol}`
+            <code>${VP.current_data.stats.ingame_time_passed.years.toFixed(3)}</code> years
+            <code>${VP.current_data.stats.ingame_time_passed.months.toFixed(3)}</code> months
+            <code>${VP.current_data.stats.ingame_time_passed.days.toFixed(3)}</code> days
+            <code>${VP.current_data.stats.ingame_time_passed.hours.toFixed(3)}</code> hours
+            <code>${VP.current_data.stats.ingame_time_passed.minutes.toFixed(3)}</code> minutes
+            <code>${VP.current_data.stats.ingame_time_passed.seconds.toFixed(3)}</code> seconds`
+        distance_traveled.innerHTML = `<code>${VP.current_data.stats.distance_traveled.toFixed(3)}</code> km`
+        currency_gained.innerHTML = `<code>${VP.current_data.stats.currency_gained.toFixed(3)}</code>`
         loot_found.innerHTML = `<code>${VP.current_data.stats.loot_found}</code>`
         loot_sold.innerHTML = `<code>${VP.current_data.stats.loot_sold}</code>`
         if (!VP.current_data.stats.top_loot.name) {
@@ -148,7 +150,7 @@
         else {
             top_loot.innerHTML = `
                 Item: <code>${VP.current_data.stats.top_loot.name}</code><br>
-                Value: <code>${VP.current_data.stats.top_loot.value.toFixed(decdigits)}</code> ${cursymbol}<br>
+                Value: <code>${VP.current_data.stats.top_loot.value.toFixed(3)}</code><br>
                 Discovered on: <code>${new Date(VP.current_data.stats.top_loot.discovered_on).toUTCString()}</code>`
         }
 
@@ -162,7 +164,7 @@
                     <tr>
                         <td><code>${item_name}</code></td>
                         <td><code>${VP.current_data.inventory[item_name].count}</code></td>
-                        <td title="Value/Item: ${VP.current_data.inventory[item_name].value_per_item.toFixed(decdigits)}"><code>${VP.current_data.inventory[item_name].value_per_batch.toFixed(decdigits)}</code> ${cursymbol}</td>
+                        <td title="Value/Item: ${VP.current_data.inventory[item_name].value_per_item.toFixed(3)}"><code>${VP.current_data.inventory[item_name].value_per_batch.toFixed(3)}</code></td>
                     </tr>`
             }
         }
@@ -172,4 +174,8 @@
 
 
     update_data_display()
+
+    setInterval(() => {
+        update_data_display()
+    }, 1_800_000)
 </script>

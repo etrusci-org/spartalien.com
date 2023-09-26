@@ -146,6 +146,10 @@ button {
     &:focus {
         color: $color-brand-50;
         background-color: $color-gray-750;
+    }
+
+    &:active {
+        background-color: $color-gray-700;
         box-shadow: 0 0 2px 0 $color-black;
     }
 }

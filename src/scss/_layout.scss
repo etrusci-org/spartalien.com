@@ -39,6 +39,7 @@ h3 {
 
 main, footer {
     table { line-height: 2; }
+    th { line-height: 1.5; }
 
     p, ul, .lazymedia { line-height: 1.5; }
 
@@ -46,10 +47,6 @@ main, footer {
 
     p, ul, pre, .lazycode, .lazymedia {
         margin-bottom: 1rem;
-
-        &:last-child {
-            margin-bottom: 0;
-        }
     }
 }
 
@@ -107,12 +104,13 @@ label {
 
 table {
     th {
+        font-weight: bold;
         white-space: nowrap;
     }
 
     th,
     td {
-        padding-right: 3rem;
+        padding-right: 2rem;
         vertical-align: top;
     }
 
@@ -279,7 +277,10 @@ footer {
 
 .box {
     max-width: fit-content;
-    padding: 1.5rem;
+    padding-top: 1.75rem;
+    padding-bottom: 1rem;
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
     margin-bottom: 8rem;
     border-width: 1px;
 

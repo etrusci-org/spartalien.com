@@ -1,7 +1,7 @@
 export { VisitorProgress };
 const CONF = {
     data_version: 1,
-    progress_delay: 60000,
+    progress_delay: 3600000,
     seconds_duration: 600,
     walking_speed: 3.89,
     inventory_size: 10,
@@ -379,6 +379,7 @@ class VisitorProgress {
         }
     }
     get current_data() {
+        this.#load_data();
         return this.#data;
     }
     progress() {

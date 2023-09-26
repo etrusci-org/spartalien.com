@@ -132,7 +132,6 @@ For example, for **type** `link` it is an URL or path.
 
 ## LazyCode Examples
 
-
 Simple link:
 ```json
 {

@@ -35,7 +35,6 @@ class Page extends Core
         foreach ($dump as $k => $v) {
             $dump[$k]['rls_preview_image'] = $this->_get_preview_image_paths('rls', $v['rls_id']);
             $dump[$k]['rls_is_freedl'] = boolval($dump[$k]['rls_is_freedl']);
-            ksort($dump[$k]);
         }
 
         return $dump ?? [];
@@ -80,7 +79,6 @@ class Page extends Core
         $dump['rls_credit'] = $this->get_credit('rls', $dump['rls_id']);
         $dump['rls_media'] = $this->get_media('rls', $dump['rls_id']);
         $dump['rls_dist'] = $this->get_dist('rls', $dump['rls_id']);
-        ksort($dump);
 
         return $dump ?? [];
     }
@@ -110,7 +108,6 @@ class Page extends Core
             $dump[$k]['track_runtime_human'] = $this->_seconds_to_dhms($v['track_runtime']);
             $dump[$k]['track_credit'] = $this->get_credit('track', $v['track_id']);
             $dump[$k]['track_order'] = $track_order++;
-            ksort($dump[$k]);
         }
 
         return $dump ?? [];
@@ -133,7 +130,6 @@ class Page extends Core
 
         foreach ($dump as $k => $v) {
             $dump[$k]['track_runtime_human'] = $this->_seconds_to_dhms($v['track_runtime']);
-            ksort($dump[$k]);
         }
 
         return $dump ?? [];
@@ -162,8 +158,6 @@ class Page extends Core
         $dump['track_runtime_human'] = $this->_seconds_to_dhms($dump['track_runtime']);
         $dump['track_credit'] = $this->get_credit('track', $dump['track_id']);
         $dump['track_dist'] = $this->get_dist('track', $dump['track_id']);
-
-        ksort($dump);
 
         return $dump ?? [];
     }

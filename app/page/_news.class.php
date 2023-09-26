@@ -17,10 +17,6 @@ class Page extends Core
             ORDER BY news.pub_date DESC, news_text.ROWID ASC;'
         );
 
-        foreach ($dump as $k => $v) {
-            ksort($dump[$k]);
-        }
-
         return $dump ?? [];
     }
 
@@ -39,10 +35,6 @@ class Page extends Core
                 ['news_id', $news_id, SQLITE3_INTEGER],
             ]
         );
-
-        foreach ($dump as $k => $v) {
-            ksort($dump[$k]);
-        }
 
         return $dump ?? [];
     }

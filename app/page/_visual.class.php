@@ -20,7 +20,6 @@ class Page extends Core
 
         foreach ($dump as $k => $v) {
             $dump[$k]['visual_preview_image'] = $this->_get_preview_image_paths('visual', $v['visual_id']);
-            ksort($dump[$k]);
         }
 
         return $dump ?? [];
@@ -45,8 +44,6 @@ class Page extends Core
 
         $dump['visual_preview_image'] = $this->_get_preview_image_paths('visual', $dump['visual_id']);
         $dump['visual_media'] = $this->get_media($dump['visual_id']);
-
-        ksort($dump);
 
         return $dump ?? [];
     }

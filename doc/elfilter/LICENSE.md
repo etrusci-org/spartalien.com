@@ -1,3 +1,3 @@
-# ImgZoom - License
+# ElFilter - License
 
 Public Domain Worldwide

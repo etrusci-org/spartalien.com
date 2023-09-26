@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        body { background-color: #000; line-height: 1.5; font-family: sans-serif; }
+        body, a { color: #888; }
+    </style>
+</head>
+<body>
+
+    <button class="toggle-opt-in"></button>
+
+
+    <pre class="debug"></pre>
+
+
+    <script type="module">
+        import { VisitorProgress } from '../../app/public/res/visitorprogress.js'
+
+        const VP = new VisitorProgress()
+
+        // ----------------------------------------------
+
+        const toggle_opt_in = document.querySelector('.toggle-opt-in')
+        const debug_output = document.querySelector('.debug')
+
+        toggle_opt_in.innerText  = (!VP.opt_in) ? 'opt-in' : 'opt-out'
+        toggle_opt_in.addEventListener('click', () => {
+            if (!VP.opt_in) {
+                VP.opt_in = true
+                toggle_opt_in.innerText = 'opt-out'
+                document.location.reload()
+            }
+            else {
+                if (!confirm('you sure? this will purge all your progress!')) return
+                VP.opt_in = false
+                toggle_opt_in.innerText = 'opt-in'
+                document.location.reload()
+            }
+        }, false)
+
+        // ----------------------------------------------
+
+        if (VP.opt_in) {
+            VP.progress()
+            // console.log(VP.current_data)
+            debug_output.innerHTML = JSON.stringify(VP.current_data, null, 2)
+
+            // this interval is just for demo. it's not meant that way for real usage
+            setInterval(() => {
+                VP.progress()
+                // console.log(VP.current_data)
+                debug_output.innerHTML = JSON.stringify(VP.current_data, null, 2)
+            }, 2_000)
+        }
+    </script>
+
+</body>
+</html>

@@ -3,15 +3,10 @@
 
     <footer class="text-align-center">
         <p><a class="scroll_to_top">&uArr; u p &uArr;</a></p>
-
         <nav><?php print($this->get_site_nav_html()); ?></nav>
-
-        <div class="grid-x-2">
-            <p>( <a href="./purchase">Purchase</a>, <a href="./privacy">Privacy</a> )</p>
-            <p>( &copy; <?php print(date('Y')); ?> SPARTALIEN )</p>
-        </div>
-
+        <p>{ <a href="./purchase">Purchase</a>, <a href="./privacy">Privacy</a> }</p>
         <p><img src="./res/logo-small.png" alt="Logo" title="SPARTALIEN"></p>
+        <p>&copy; <?php print(date('Y')); ?> SPARTALIEN</p>
     </footer>
 
     <div class="imgzoom-target"></div>

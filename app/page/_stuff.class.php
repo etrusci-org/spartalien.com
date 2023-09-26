@@ -38,8 +38,6 @@ class Page extends Core
 
         $dump['stuff_media'] = $this->get_media($stuff_id);
 
-        ksort($dump);
-
         return $dump ?? [];
     }
 

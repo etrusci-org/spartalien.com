@@ -13,14 +13,6 @@
         grid-template-columns: repeat(2, 1fr);
         &.compact-lines { row-gap: 1.5rem; }
     }
-
-    .grid-x-2 {
-        row-gap: 0rem;
-    }
-
-    .grid-x-3 {
-        row-gap: 0rem;
-    }
 }
 
 
