@@ -56,10 +56,10 @@
     <table>
         <thead>
             <tr>
-                <td>Item</td>
-                <td>Count</td>
-                <td>Value/Item</td>
-                <td>Value/Batch</td>
+                <th>Item</th>
+                <th>Count</th>
+                <th>Value/Item</th>
+                <th>Value/Batch</th>
             </tr>
         </thead>
         <tbody class="inventory"></tbody>
@@ -68,10 +68,15 @@
 
 
 
-<!-- <div class="box"> -->
-    <!-- <p>Game description goes here once I figured it out...</p> -->
+<div class="box">
+    <p>
+        This is an <a href="https://en.wikipedia.org/wiki/Incremental_game">incremental-game</a>.
+        To progress, simply visit my website from time to time and come back here to check on your progress if you like.
+        All the data is saved inside your browser's local storage - it won't be tracked by me or someone else.
+        There are no rewards.
+    </p>
     <p><button class="optin_toggle"></button></p>
-<!-- </div> -->
+</div>
 
 
 
@@ -103,14 +108,15 @@
 
     optin_toggle.addEventListener('click', (event) => {
         event.preventDefault()
+        optin_toggle.blur()
         if (!VP.opt_in) {
             VP.opt_in = true
-            update_display()
+            update_data_display()
         }
         else {
             if (!confirm('This will purge all your progress!\nAre you sure?\nReally?\n...\nAre you really really sure??')) return
             VP.opt_in = false
-            update_display(true)
+            update_data_display(true)
         }
     }, false)
 
@@ -120,7 +126,7 @@
 
         if (VP.opt_in) {
             stats.classList.remove('hide')
-            optin_toggle.textContent = 'reset progress'
+            optin_toggle.textContent = 'reset progress + stop playing'
         }
         else {
             stats.classList.add('hide')
@@ -128,7 +134,7 @@
         }
 
         started_playing_on.innerHTML = `<code>${new Date(VP.current_data.started_playing_on).toUTCString()}</code>`
-        last_progress_on.innerHTML = `<code>${new Date(VP.current_data.last_progress_on).toUTCString()}</code>`
+        last_progress_on.innerHTML = `<code>${(VP.current_data.last_progress_on) ? new Date(VP.current_data.last_progress_on).toUTCString() : 'never'}</code>`
         ingame_time_passed.innerHTML = `
             <code>${VP.current_data.stats.ingame_time_passed.years.toFixed(decdigits)}</code> years
             <code>${VP.current_data.stats.ingame_time_passed.months.toFixed(decdigits)}</code> months
@@ -141,7 +147,7 @@
         loot_found.innerHTML = `<code>${VP.current_data.stats.loot_found}</code>`
         loot_sold.innerHTML = `<code>${VP.current_data.stats.loot_sold}</code>`
         if (!VP.current_data.stats.top_loot.name) {
-            top_loot.innerHTML = '<em>none so far</em>'
+            top_loot.innerHTML = '<code>none so far</code>'
         }
         else {
             top_loot.innerHTML = `
@@ -151,7 +157,7 @@
         }
 
         if (Object.keys(VP.current_data.inventory).length == 0) {
-            inventory.innerHTML = '<tr colspan="4"><td><em>empty</em></td></tr>'
+            inventory.innerHTML = '<tr colspan="4"><td><code>empty</code></td></tr>'
         }
         else {
             inventory.innerHTML = ''
