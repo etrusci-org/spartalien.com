@@ -1,7 +1,12 @@
 @import '_var';
+
 @import '_reset';
-// @import '_font';
-// putting everything, in layout currently, split up later...
+
+@import '_font';
 @import '_layout';
-// @import '_color';
-// @import '_query';
+@import '_color';
+
+@import '_lazymedia';
+@import '_imgzoom';
+
+@import '_query';

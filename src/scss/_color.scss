@@ -1,217 +1,209 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// /*--- Color ---*/
-
-// body {
-//     color: $color-gray-450;
-//     background-color: $color-gray-997;
-// }
-
-
-// header {
-//     color: $color-gray-100;
-//     background-color: $color-gray-999;
-//     border-bottom-color: $color-gray-600;
-// }
-
-
-// h2 {
-//     color: $color-gray-500;
-// }
-
-
-// h3 {
-//     color: $color-gray-300;
-// }
-
-
-// a {
-//     &:link,
-//     &:visited {
-//         color: $color-gray-300;
-//     }
-
-//     &:hover,
-//     &:active {
-//         color: $color-brand-50;
-//         text-decoration-color: $color-gray-300;
-//     }
-
-//     &:focus,
-//     &.active {
-//         color: $color-brand-50;
-//         text-decoration-color: $color-brand-50;
-
-//         img {
-//             border-color: $color-brand-50;
-//         }
-//     }
-
-//     &[href^='//']::after,
-//     &[href^='http://']::after,
-//     &[href^='https://']::after {
-//         color: $color-gray-600;
-//     }
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // bak-------------------------------------------
-
-// // header {
-// //     border-width: 1px;
-// //     border-color: red;
-// // }
-
-
-// // main {
-// //     border-width: 1px;
-// //     border-color: green;
-
-// //     nav {
-// //         border-width: 1px;
-// //         border-color: yellow;
-// //     }
-// // }
-
-// // footer {
-// //     border-width: 1px;
-// //     border-color: blue;
-// // }
-
-
-
-// // section {
-// //     border-width: 1px;
-// //     border-color: rgba(255, 0, 242, 0.5);
-// // }
-
-
-
-
-// // body {
-// //     color: $color-gray-400;
-// //     background-color: $color-gray-950;
-// // }
-
-
-// // a {
-// //     color: #557fb9;
-// // }
-
-
-// // .active {
-// //     color: #55b9a2;
-// // }
-
-
-// // header {
-// //     border-width: 1px;
-// //     border-color: rgba(255, 0, 0, 0.16);
-// // }
-
-
-// // main {
-// //     border-width: 1px;
-// //     border-color: rgba(255, 0, 0, 0.16);
-
-// //     nav {
-// //         border-width: 1px;
-// //         border-color: rgba(255, 0, 0, 0.16);
-// //     }
-// // }
-
-
-// // section {
-// //     // background-color: #333;
-// //     border-width: 1px;
-// //     border-color: rgba(255, 0, 242, 0.16);
-
-// //     section {
-// //         border-color: rgba(255, 213, 0, 0.272);
-
-// //         section {
-// //             border-color: rgba(13, 255, 0, 0.16);
-// //         }
-// //     }
-// // }
-
-
-// // footer {
-// //     border-width: 1px;
-// //     border-color: rgba(0, 0, 255, 0.233);
-// // }
-
-
-// // // code, pre, .lazycode {
-// // //     color: $color-gray-500;
-// // // }
-
-
-// // // header {
-// // //     h1 a {
-// // //         &:link,
-// // //         &:visited {
-// // //             color: $color-gray-100;
-// // //         }
-// // //     }
-// // // }
-
-
-
-// // // h2 {
-// // //     color: $color-gray-300;
-// // // }
-
-
-// // // h3 {
-// // //     color: $color-gray-600;
-// // // }
-
-
-// // // a {
-// // //     &:link,
-// // //     &:visited {
-// // //         color: $color-brand-200;
-// // //     }
-
-// // //     &:hover,
-// // //     &:focus,
-// // //     &:active,
-// // //     &.active {
-// // //         color: $color-brand-50;
-// // //         text-decoration-color: $color-brand-50;
-// // //     }
-// // // }
-
-
-// // *::selection {
-// //     color: $color-white;
-// //     background-color: $color-brand-150;
-// // }
+*::selection {
+    color: $color-black;
+    background-color: $color-brand-50;
+}
+
+
+body {
+    color: $color-gray-500;
+    background-color: $color-gray-997;
+    background-image: url('./logo-bg.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: auto 70vh;
+}
+
+
+code,
+pre,
+.font-mono,
+.lazycode,
+.noscript {
+    color: $color-gray-550;
+}
+
+
+h1 {
+    color: $color-gray-150;
+}
+
+
+h2 {
+    color: $color-gray-650;
+    transition: color 5s linear;
+
+    &::first-letter {
+        color: $color-brand-200;
+    }
+
+    &:hover,
+    &:focus {
+        color: $color-gray-500;
+        transition: color .25s linear;
+
+        &::first-letter {
+            color: $color-brand-50;
+        }
+    }
+}
+
+
+h3 {
+    color: $color-gray-500;
+    transition: color 5s linear;
+
+    &::first-letter {
+        color: $color-gray-350;
+    }
+}
+
+
+a {
+    &:link,
+    &:visited {
+        color: $color-gray-400;
+    }
+
+    &:hover,
+    &:active {
+        color: $color-brand-50;
+        text-decoration-color: $color-gray-300;
+    }
+
+    &:focus,
+    &.active {
+        color: $color-brand-50;
+        text-decoration-color: $color-brand-50;
+    }
+
+    &.active {
+        img {
+            border-color: $color-brand-50;
+        }
+    }
+
+    &.external::after {
+        color: $color-gray-600;
+    }
+}
+
+
+ul {
+    li {
+        background-color: transparent;
+        transition: background-color 1s linear;
+
+        &:hover,
+        &:focus {
+            background-color: $color-gray-850;
+            transition: background-color .25s linear;
+        }
+    }
+}
+
+
+table {
+    tr {
+        td {
+            background-color: transparent;
+            transition: background-color 1s linear;
+        }
+
+        &:hover,
+        &:focus {
+            td {
+                background-color: $color-gray-850;
+                transition: background-color .25s linear;
+            }
+        }
+    }
+}
+
+
+input {
+    &::placeholder {
+        color: $color-gray-400;
+    }
+
+    &[type=text] {
+        color: $color-brand-50;
+        border-width: 1px;
+        border-color: $color-gray-950;
+        background-color: $color-gray-850;
+        box-shadow: 0 0 10px 5px $color-black inset;
+    }
+}
+
+
+button {
+    color: $color-gray-500;
+    border-color: $color-gray-950;
+    background-color: $color-gray-850;
+    box-shadow: 0 0 10px 0 $color-black;
+
+    &:hover,
+    &:focus {
+        color: $color-brand-50;
+        background-color: $color-gray-750;
+        box-shadow: 0 0 2px 0 $color-black;
+    }
+}
+
+
+header {
+    border-bottom-color: $color-brand-250;
+    background-color: $color-gray-999;
+    box-shadow: 0 5px 10px 5px $color-black;
+}
+
+
+nav {
+    a {
+        &:active {
+            color: $color-white;
+        }
+    }
+}
+
+
+footer {
+    border-top-color: $color-brand-250;
+    background-color: $color-gray-950;
+    box-shadow: 0 -5px 10px 5px $color-black;
+}
+
+
+
+img.tn {
+    border-color: $color-gray-900;
+}
+
+
+.box {
+    border-color: $color-gray-950;
+    background-color: $color-gray-950;
+    box-shadow: 0 0 10px 5px $color-black inset;
+
+    &:hover,
+    &:focus {
+        h3 {
+            color: $color-gray-350;
+            transition: color .25s linear;
+
+            &::first-letter {
+                color: $color-gray-100;
+            }
+        }
+    }
+}
+
+
+.meta {
+    color: $color-gray-600;
+}
+
+
+.noscript {
+    color: $color-warning;
+}

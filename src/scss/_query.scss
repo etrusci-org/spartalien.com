@@ -1,50 +1,48 @@
+// width - small
+@media screen and (min-width: 576px) {
+    body { font-size: calc($font-size-default-min + ($font-size-default-max-num - $font-size-default-min-num) * ((100vw - 576px) / (1536 - 576))); }
+    h2 { font-size: calc($font-size-h2-min + ($font-size-h2-max-num - $font-size-h2-min-num) * ((100vw - 576px) / (1536 - 576))); }
+    h3 { font-size: calc($font-size-h3-min + ($font-size-h3-max-num - $font-size-h3-min-num) * ((100vw - 576px) / (1536 - 576))); }
+}
 
 
+// width - medium
+@media screen and (min-width: 768px) {
+    .grid-x-2,
+    .grid-x-3 {
+        grid-template-columns: repeat(2, 1fr);
+        &.compact-lines { row-gap: 1.5rem; }
+    }
+
+    .grid-x-2 {
+        row-gap: 0rem;
+    }
+
+    .grid-x-3 {
+        row-gap: 0rem;
+    }
+}
 
 
+// width - large
+@media screen and (min-width: 1024px) {
+    .grid-x-3 { grid-template-columns: repeat(3, 1fr); }
+}
 
 
+// width - extra large
+// @media screen and (min-width: 1280px) {}
 
 
+// width - extra extra large
+@media screen and (min-width: 1536px) {
+    body { font-size: $font-size-default-max; }
+    h2 { font-size: $font-size-h2-max; }
+    h3 { font-size: $font-size-h3-max; }
+}
 
 
-
-
-
-
-// /*--- Query ---*/
-
-// // small:
-// @media screen and (min-width: 576px) {
-//     body, h1 { font-size: calc($font-size-default-min + ($font-size-default-max-num - $font-size-default-min-num) * ((100vw - 576px) / (1536 - 576))); }
-//     h2 { font-size: calc($font-size-h2-min + ($font-size-h2-max-num - $font-size-h2-min-num) * ((100vw - 576px) / (1536 - 576))); }
-//     h3 { font-size: calc($font-size-h3-min + ($font-size-h3-max-num - $font-size-h3-min-num) * ((100vw - 576px) / (1536 - 576))); }
-//     .grid { grid-template-columns: repeat(3, 1fr); }
-//     .grid.max3 { grid-template-columns: repeat(2, auto); }
-//     .grid.content { grid-template-columns: repeat(2, auto); }
-// }
-
-
-// // medium:
-// @media screen and (min-width: 768px) {
-//     .grid { grid-template-columns: repeat(4, 1fr); }
-//     .grid.max3 { grid-template-columns: repeat(3, auto); }
-// }
-
-
-// // large:
-// @media screen and (min-width: 1024px) {
-//     .grid { grid-template-columns: repeat(5, 1fr); }
-// }
-
-
-// // extra large:
-// // @media screen and (min-width: 1280px) {}
-
-
-// // extra extra large:
-// @media screen and (min-width: 1536px) {
-//     body, h1 { font-size: $font-size-default-max; }
-//     h2 { font-size: $font-size-h2-max; }
-//     h3 { font-size: $font-size-h3-max; }
-// }
+// height - make header un-sticky
+@media screen and (max-height: 700px) {
+    header { position: relative; }
+}

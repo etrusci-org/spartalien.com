@@ -1,51 +1,7 @@
-/* share-tech-regular - latin */
-@font-face {
-    font-display: swap;
-    font-family: 'Share Tech';
-    font-style: normal;
-    font-weight: 400;
-    src: url('./vendor/share-tech-v21-latin-regular.woff2') format('woff2');
-}
-
-/* share-tech-mono-regular - latin */
-@font-face {
-    font-display: swap;
-    font-family: 'Share Tech Mono';
-    font-style: normal;
-    font-weight: 400;
-    src: url('./vendor/share-tech-mono-v15-latin-regular.woff2') format('woff2');
-}
-
-
-/* noto-sans-200 - latin */
-@font-face {
-    font-display: swap;
-    font-family: 'Noto Sans';
-    font-style: normal;
-    font-weight: 200;
-    src: url('./vendor/noto-sans-v30-latin-200.woff2') format('woff2');
-}
-
-
-// text -------------------------------------------------------------------------
-
-*::selection {
-    color: $color-black;
-    background-color: $color-brand-50;
-}
-
-
 body {
     font-family: $font-family-main;
     font-size: $font-size-default-min;
     text-rendering: geometricPrecision;
-    color: $color-gray-500;
-    background-color: $color-gray-997;
-    background-image: url('./logo-bg.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: auto 70vh;
 }
 
 
@@ -56,14 +12,12 @@ pre,
 .noscript {
     font-family: $font-family-mono;
     font-size: 80%;
-    color: $color-gray-550;
 }
 
 
 
 h1 {
     font-family: $font-family-deco;
-    color: $color-gray-150;
     letter-spacing: .15rem;
 }
 
@@ -72,22 +26,6 @@ h2 {
     font-family: $font-family-deco;
     font-size: $font-size-h2-min;
     margin-bottom: 6rem;
-    color: $color-gray-650;
-    transition: color 5s linear;
-
-    &::first-letter {
-        color: $color-brand-200;
-    }
-
-    &:hover,
-    &:focus {
-        color: $color-gray-500;
-        transition: color .25s linear;
-
-        &::first-letter {
-            color: $color-brand-50;
-        }
-    }
 }
 
 
@@ -95,12 +33,6 @@ h3 {
     font-family: $font-family-deco;
     font-size: $font-size-h3-min;
     margin-bottom: 2rem;
-    color: $color-gray-500;
-    transition: color 5s linear;
-
-    &::first-letter {
-        color: $color-gray-350;
-    }
 }
 
 
@@ -110,14 +42,14 @@ main, footer {
 
     p, ul, .lazymedia { line-height: 1.5; }
 
-    pre /*, .meta */ { line-height: 1.35; }
+    pre { line-height: 1.35; }
 
     p, ul, pre, .lazycode, .lazymedia {
         margin-bottom: 1rem;
 
-        // &:last-child {
-        //     margin-bottom: 0;
-        // }
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -134,43 +66,32 @@ main, footer {
 
 
 
-// standart elements
 a {
     &:link,
     &:visited {
         text-decoration-line: underline;
         text-decoration-style: dotted;
-        color: $color-gray-400;
     }
 
     &:hover,
     &:active {
         text-decoration-line: none;
-        color: $color-brand-50;
-        text-decoration-color: $color-gray-300;
     }
 
     &:focus,
     &.active {
         text-decoration-line: underline;
         text-decoration-style: double;
-        color: $color-brand-50;
-        text-decoration-color: $color-brand-50;
     }
 
     &.active {
         img {
             border-width: 1px;
-            border-color: $color-brand-50;
         }
     }
 
-    // &[href^='//']::after,
-    // &[href^='http://']::after,
-    // &[href^='https://']::after {
     &.external::after {
         content: '⇗';
-        color: $color-gray-600;
     }
 
     &.img::after {
@@ -181,20 +102,6 @@ a {
 
 label {
     margin-bottom: .5rem;
-}
-
-
-ul {
-    li {
-        background-color: transparent;
-        transition: background-color 1s linear;
-
-        &:hover,
-        &:focus {
-            background-color: $color-gray-850;
-            transition: background-color .25s linear;
-        }
-    }
 }
 
 
@@ -213,21 +120,6 @@ table {
         padding-top: .5rem;
         padding-bottom: .5rem;
     }
-
-    tr {
-        td {
-            background-color: transparent;
-            transition: background-color 1s linear;
-        }
-
-        &:hover,
-        &:focus {
-            td {
-                background-color: $color-gray-850;
-                transition: background-color .25s linear;
-            }
-        }
-    }
 }
 
 
@@ -235,38 +127,22 @@ input {
     width: 200px;
     max-width: 100%;
     padding: .75rem;
-
-    &::placeholder {
-        color: $color-gray-400;
-    }
-
-    &[type=text] {
-        color: $color-brand-50;
-        border-width: 1px;
-        border-color: $color-gray-950;
-        background-color: $color-gray-850;
-        box-shadow: 0 0 10px 5px $color-black inset;
-    }
 }
 
 
 button {
-    cursor: pointer;
     padding: .25rem .5rem;
-
-    color: $color-gray-500;
     border-width: 1px;
-    border-color: $color-gray-950;
     border-radius: 7px;
-    background-color: $color-gray-850;
-    box-shadow: 0 0 10px 0 $color-black;
+    cursor: pointer;
+}
 
-    &:hover,
-    &:focus {
-        color: $color-brand-50;
-        background-color: $color-gray-750;
-        box-shadow: 0 0 2px 0 $color-black;
-    }
+
+img.tn {
+    width: 100%;
+    min-width: 50px;
+    height: auto;
+    border-width: 1px;
 }
 
 
@@ -280,9 +156,6 @@ button {
 
 
 
-
-
-// layout -------------------------------------------------------------------------
 
 header {
     position: sticky;
@@ -292,9 +165,6 @@ header {
     margin-bottom: 4rem;
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-bottom-color: $color-brand-250;
-    background-color: $color-gray-999;
-    box-shadow: 0 5px 10px 5px $color-black;
     z-index: 10;
 }
 
@@ -306,7 +176,6 @@ nav {
     column-gap: .75rem;
     row-gap: .5rem;
     align-items: center;
-    // justify-content: flex-start;
     justify-content: center;
     font-family: $font-family-deco;
 
@@ -315,14 +184,6 @@ nav {
         &:visited {
             text-decoration-line: none;
         }
-
-        &:active {
-            color: $color-white;
-        }
-
-        // &.active {
-        //     text-decoration-line: underline;
-        // }
     }
 }
 
@@ -350,19 +211,8 @@ footer {
     margin-top: 80vh;
     border-top-width: 1px;
     border-top-style: solid;
-    border-top-color: $color-brand-250;
-    background-color: $color-gray-950;
-    box-shadow: 0 -5px 10px 5px $color-black;
-    // opacity: .3;
-    // transition: opacity .75s linear;
     z-index: 5;
     cursor: crosshair;
-
-    // &:hover,
-    // &:focus {
-    //     opacity: 1;
-    //     transition: opacity .1s linear;
-    // }
 
     nav {
         justify-content: center;
@@ -384,16 +234,6 @@ footer {
         }
     }
 }
-
-
-img.tn {
-    width: 100%;
-    min-width: 50px;
-    height: auto;
-    border-width: 1px;
-    border-color: $color-gray-900;
-}
-
 
 
 
@@ -421,7 +261,6 @@ img.tn {
         width: auto;
         height: 100%;
         object-fit: cover;
-        // box-shadow: 0 0 10px 5px $color-black;
     }
 }
 
@@ -443,26 +282,15 @@ img.tn {
     padding: 1.5rem;
     margin-bottom: 8rem;
     border-width: 1px;
-    border-color: $color-gray-950;
-    background-color: $color-gray-950;
-    box-shadow: 0 0 10px 5px $color-black inset;
 
     &.full-width {
         max-width: 100%;
     }
-
-    &:hover,
-    &:focus {
-        h3 {
-            color: $color-gray-350;
-            transition: color .25s linear;
-
-            &::first-letter {
-                color: $color-gray-100;
-            }
-        }
-    }
 }
+
+
+
+
 
 
 
@@ -471,22 +299,14 @@ img.tn {
 }
 
 
-
-
-
-
-
-
 .meta {
     font-family: $font-family-mono;
     font-size: 80%;
     margin-bottom: 2rem;
-    color: $color-gray-600;
 }
 
 
 .noscript {
-    color: $color-warning;
     padding: .25rem;
     margin-bottom: .25rem;
     text-align: center;
@@ -510,225 +330,4 @@ img.tn {
 
 .hide {
     display: none;
-}
-
-
-
-.ico {
-    display: inline-block;
-    width: auto;
-    height: $font-size-default-min;
-    vertical-align: middle;
-    opacity: .5;
-
-    &:hover,
-    &:focus {
-        opacity: 1;
-    }
-}
-
-
-
-
-
-
-
-.lazycode {
-    display: block;
-    background-image: url('./loading.gif');
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-
-.lazymedia {
-    display: block;
-    background-image: url('./loading.gif');
-    background-repeat: no-repeat;
-    background-position: 0 0;
-
-    &.link {
-        background-image: none;
-    }
-
-    &.image {
-        width: 100%;
-        height: auto;
-    }
-
-    &.audio {
-        width: 400px;
-        max-width: 100%;
-        background-image: none;
-    }
-
-    &.video {
-        background-image: none;
-    }
-
-    &.bandcamptrack {
-        min-width: 300px;
-        width: 100%;
-        height: 120px;
-    }
-
-    &.bandcampalbum {
-        min-width: 300px;
-        width: 100%;
-        height: 208px;
-    }
-
-    &.spotifytrack {
-        min-width: 300px;
-        width: 100%;
-    }
-
-    &.spotifyalbum,
-    &.spotifyplaylist {
-        min-width: 300px;
-        width: 100%;
-        height: 352px;
-
-    }
-
-    &.mixcloudplaylist,
-    &.mixcloudshow {
-        width: 100%;
-        height: 182px;
-    }
-
-    // see .videobox .lazymedia too for these:
-    // &.video {}
-    // &.youtubevideo {}
-    // &.youtubeplaylist {}
-    // &.odyseevideo {}
-}
-
-
-.videobox {
-    position: relative;
-    padding-top: 56.25%; // 16:9
-    overflow: hidden;
-    margin-bottom: 2rem;
-    width: 800px;
-    max-width: 100%;
-
-    // &:last-child {
-    //     margin-bottom: 0;
-    // }
-
-    .lazymedia {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        margin: 0;
-    }
-}
-
-
-
-
-
-
-.imgzoom-target {
-    display: none;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 2000;
-    text-align: center;
-    cursor: zoom-out;
-    background-color: $color-black;
-
-    &.open {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    img {
-        max-width: 100%;
-        max-height: 100%;
-        border: 20px solid $color-gray-950;
-    }
-}
-
-
-
-a.imgzoom,
-a.lazymedia.image {
-    cursor: zoom-in;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// width - small
-@media screen and (min-width: 576px) {
-    body { font-size: calc($font-size-default-min + ($font-size-default-max-num - $font-size-default-min-num) * ((100vw - 576px) / (1536 - 576))); }
-    .ico { height: calc($font-size-default-min + ($font-size-default-max-num - $font-size-default-min-num) * ((100vw - 576px) / (1536 - 576))); }
-
-    h2 { font-size: calc($font-size-h2-min + ($font-size-h2-max-num - $font-size-h2-min-num) * ((100vw - 576px) / (1536 - 576))); }
-    h3 { font-size: calc($font-size-h3-min + ($font-size-h3-max-num - $font-size-h3-min-num) * ((100vw - 576px) / (1536 - 576))); }
-}
-
-
-// width - medium
-@media screen and (min-width: 768px) {
-    .grid-x-2,
-    .grid-x-3 {
-        grid-template-columns: repeat(2, 1fr);
-        // row-gap: 8rem;
-        // margin-bottom: 8rem;
-        &.compact-lines { row-gap: 1.5rem; }
-        // .box { margin-bottom: 0; }
-    }
-
-    .grid-x-2 {
-        // row-gap: 8rem;
-        row-gap: 0rem;
-    }
-
-    .grid-x-3 {
-        row-gap: 0rem;
-    }
-}
-
-
-// width - large
-@media screen and (min-width: 1024px) {
-    .grid-x-3 { grid-template-columns: repeat(3, 1fr); }
-}
-
-
-// width - extra large
-// @media screen and (min-width: 1280px) {}
-
-
-// width - extra extra large
-@media screen and (min-width: 1536px) {
-    body { font-size: $font-size-default-max; }
-    .ico { height: $font-size-default-max; }
-    h2 { font-size: $font-size-h2-max; }
-    h3 { font-size: $font-size-h3-max; }
-}
-
-
-// height - make header un-sticky
-@media screen and (max-height: 600px) {
-    header { position: relative; }
 }
