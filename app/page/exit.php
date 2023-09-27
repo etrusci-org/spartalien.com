@@ -1,6 +1,7 @@
 <?php
 $exit_list = $this->DB->query('
     SELECT
+        exit.id AS exit_id,
         exit.text AS exit_text,
         exit.description AS exit_description,
         exit.url AS exit_url
@@ -28,12 +29,12 @@ $exit_list = $this->DB->query('
         foreach ($exit_list as $v) {
             printf('
                 <li>
-                    <a href="%1$s" title="%4$s">%2$s</a><br>
+                    <a href="%1$s" title="%4$s">%2$s</a>
                     %3$s
                 </li>',
                 $v['exit_url'],
                 htmlspecialchars($v['exit_text']),
-                ($v['exit_description']) ? sprintf('%1$s<br>', $this->_lazytext($v['exit_description'])) : '',
+                ($v['exit_description']) ? sprintf('<br>%1$s', $this->_lazytext($v['exit_description'])) : '',
                 ltrim($v['exit_url'], '/'),
             );
         }

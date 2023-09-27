@@ -5,11 +5,11 @@
     <h3>Buying</h3>
     <p>
         Although my music available on many music platforms - if you decide to buy some <em>(thank you!)</em>, consider doing so through
-        <a href="//spartalien.bandcamp.com">Bandcamp</a>, since only there I can include bonus material for digital releases.
+        <a href="//spartalien.bandcamp.com">Bandcamp</a>, since only there I can include bonus material for digital releases and you'll get the most bang for the buck so to speak.
         You'll also have it in your Bandcamp collection then - so you can always stream and/or (re)download it at any time in various formats (also through phone apps + no subscription needed)
     </p>
     <p>
-        Bandcamp help links:
+        <strong>Bandcamp help links</strong>:
         <a href="https://get.bandcamp.help/hc/en-us/articles/360007903473-How-do-I-add-music-to-my-collection-">Add music to your collection</a>,
         <a href="https://get.bandcamp.help/hc/en-us/articles/360007903173-Where-do-I-download-my-purchase-">Download your purchases</a>,
         <a href="https://get.bandcamp.help/hc/en-us/articles/1500007925941-Download-music-to-your-phone">Download music to your phone</a>
@@ -20,7 +20,7 @@
         I can provide digital files and also Bandcamp codes to redeem.
     </p>
     <p>
-        Physical things are only available through Bandcamp or me.
+        <strong>Physical things are only available through Bandcamp or me.</strong>
     </p>
 </div>
 
