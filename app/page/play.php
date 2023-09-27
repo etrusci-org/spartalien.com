@@ -7,7 +7,7 @@
 <div class="stats hide box">
     <h3>Your Progress</h3>
     <p>
-        You can progress only once every hour. Means, it does not help to reload the pages forever.
+        You can progress only once every hour. Therefore it does not help to reload the pages forever.
         Displayed data below auto-updates every 30 minutes.
     </p>
 

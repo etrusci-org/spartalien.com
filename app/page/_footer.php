@@ -4,7 +4,7 @@
     <footer class="text-align-center">
         <p><a class="scroll_to_top">&uArr; u p &uArr;</a></p>
         <nav><?php print($this->get_site_nav_html()); ?></nav>
-        <p>{ <a href="./purchase">Purchase</a>, <a href="./privacy">Privacy</a> }</p>
+        <p>{ <a href="./purchase">Purchase</a> &middot; <a href="./privacy">Privacy</a> }</p>
         <p><img src="./res/logo-small.png" alt="Logo" title="SPARTALIEN"></p>
         <p>&copy; <?php print(date('Y')); ?> SPARTALIEN</p>
     </footer>

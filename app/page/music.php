@@ -25,9 +25,9 @@ if (isset($this->Router->route['var']['id'])) {
         <?php
         printf('
             <div class="box full-width">
-                <a href="%1$s" class="imgzoom">
-                    <img src="%2$s" alt="coverart">
-                </a>
+                <p>
+                    <a href="%1$s" class="imgzoom"><img src="%2$s" alt="coverart"></a>
+                </p>
             </div>',
             $rls['rls_preview_image']['big'],
             $rls['rls_preview_image']['med'],
