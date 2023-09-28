@@ -41,6 +41,6 @@ use original as *-big
 ## p420 size
 
 ```text
-tn  300x300
+med 600x600
 use original as *-big (1000x1000)
 ```
