@@ -1,22 +1,22 @@
 export class ElFilter {
     input_selector = 'input.elfilter-input';
     parent_selector = '.elfilter';
-    input;
-    parent;
+    #input;
+    #parent;
     constructor() {
-        this.input = document.querySelectorAll(this.input_selector);
-        this.parent = document.querySelectorAll(this.parent_selector);
+        this.#input = document.querySelectorAll(this.input_selector);
+        this.#parent = document.querySelectorAll(this.parent_selector);
     }
     init() {
-        for (const input of this.input) {
+        for (const input of this.#input) {
             input.addEventListener('keyup', () => {
-                this.filter(input.value);
+                this.#filter(input.value);
             }, false);
         }
     }
-    filter(query) {
+    #filter(query) {
         query = query.toLowerCase();
-        for (const parent of this.parent) {
+        for (const parent of this.#parent) {
             switch (parent.nodeName.toLowerCase()) {
                 case 'ul':
                     for (const item of parent.querySelectorAll('li')) {
@@ -44,7 +44,7 @@ export class ElFilter {
                     break;
             }
         }
-        for (const input of this.input) {
+        for (const input of this.#input) {
             input.value = query;
         }
     }

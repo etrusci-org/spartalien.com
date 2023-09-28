@@ -520,7 +520,7 @@ class VisitorProgress
     {
         if (!this.storage_ready) return false
 
-        let dump = this.#Storage.getItem(this.#data_key)
+        const dump = this.#Storage.getItem(this.#data_key)
 
         if (!dump) return true // using already set default data
 
@@ -550,7 +550,7 @@ class VisitorProgress
         if (!this.storage_ready) return false
 
         try {
-            let dump = btoa(JSON.stringify(this.#data))
+            const dump = btoa(JSON.stringify(this.#data))
             this.#Storage.setItem(this.#data_key, dump)
             return true
         }
@@ -622,7 +622,7 @@ class VisitorProgress
 
     #get_random_item_name(): string
     {
-        let item_name: string[] = []
+        const item_name: string[] = []
 
         if (Math.random() < CONF.item_name_prefix_chance) item_name.push(LOOT_ITEMS.prefix[Math.floor(Math.random() * LOOT_ITEMS.prefix.length)] as string)
         item_name.push(LOOT_ITEMS.name[Math.floor(Math.random() * LOOT_ITEMS.name.length)] as string)

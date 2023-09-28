@@ -97,7 +97,7 @@ $conf['valid_requests_file'] = $APP_DIR.'/cache/valid_requests.php';
 
 // ----------------------------------------------------------------------------
 
-$conf['caching_ttl'] = -1;
+$conf['caching_ttl'] = 3600;
 $conf['validate_requests'] = true;
 
 // ----------------------------------------------------------------------------

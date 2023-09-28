@@ -1,11 +1,10 @@
 export class Scur
 {
-    public s: string = '6b519c1d-ca51-4E42-9cce-ffd4a28b0ec0*4E9C7303-Dbe4-4b66-A8fd-B1535D7FA2DE$6c63bd76-54b8-4b4a-a395-ED310E15DF82'
+    s: string = '6b519c1d-ca51-4E42-9cce-ffd4a28b0ec0*4E9C7303-Dbe4-4b66-A8fd-B1535D7FA2DE$6c63bd76-54b8-4b4a-a395-ED310E15DF82'
 
 
     /* only compile this method if you need to encode a string:
-
-    public ob(data: string): string
+    ob(data: string): string
     {
         const hash: string = this._r(btoa(this._r(this.s + data)))
         const dump: number[] = []
@@ -16,18 +15,17 @@ export class Scur
 
         return dump.join('|')
     }
-
     */
 
 
-    public deob(data: string): string {
+    deob(data: string): string {
         const dump: string[] = []
 
         data.split('|').forEach((v) => {
             dump.push(String.fromCharCode(parseInt(v)))
         })
 
-        const text: string = this._r(atob(this._r(dump.join(''))))
+        const text: string = this.#_r(atob(this.#_r(dump.join(''))))
 
         if (text.indexOf(this.s) == -1) {
             console.error('Invalid or missing salt')
@@ -38,7 +36,7 @@ export class Scur
     }
 
 
-    public autodeob(): void {
+    autodeob(): void {
         const nodeList: NodeListOf<Element> = document.querySelectorAll('[data-scur]')
 
         nodeList.forEach(node => {
@@ -58,7 +56,7 @@ export class Scur
     }
 
 
-    public _r(data: string): string {
+    #_r(data: string): string {
         return data.split('').reverse().join('')
     }
 }

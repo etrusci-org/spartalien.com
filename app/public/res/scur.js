@@ -5,7 +5,7 @@ export class Scur {
         data.split('|').forEach((v) => {
             dump.push(String.fromCharCode(parseInt(v)));
         });
-        const text = this._r(atob(this._r(dump.join(''))));
+        const text = this.#_r(atob(this.#_r(dump.join(''))));
         if (text.indexOf(this.s) == -1) {
             console.error('Invalid or missing salt');
             return data;
@@ -27,7 +27,7 @@ export class Scur {
             }
         });
     }
-    _r(data) {
+    #_r(data) {
         return data.split('').reverse().join('');
     }
 }

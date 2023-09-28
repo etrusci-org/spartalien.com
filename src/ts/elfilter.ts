@@ -1,40 +1,39 @@
 export class ElFilter
 {
-    public input_selector: string = 'input.elfilter-input'
-    public parent_selector: string = '.elfilter'
-
-    private input: NodeListOf<HTMLInputElement>
-    private parent: NodeListOf<HTMLElement>
+    input_selector: string = 'input.elfilter-input'
+    parent_selector: string = '.elfilter'
+    #input: NodeListOf<HTMLInputElement>
+    #parent: NodeListOf<HTMLElement>
 
 
     constructor()
     {
         // Get all input elements
-        this.input = document.querySelectorAll(this.input_selector)
+        this.#input = document.querySelectorAll(this.input_selector)
 
         // Get all parent elements
-        this.parent = document.querySelectorAll(this.parent_selector)
+        this.#parent = document.querySelectorAll(this.parent_selector)
     }
 
 
-    public init(): void
+    init(): void
     {
         // Register event listener on keyup for every input element
-        for (const input of this.input) {
+        for (const input of this.#input) {
             input.addEventListener('keyup', () => {
-                this.filter(input.value)
+                this.#filter(input.value)
             }, false)
         }
     }
 
 
-    private filter(query: string): void
+    #filter(query: string): void
     {
         // Prepare query string for usage
         query = query.toLowerCase()
 
         // Loop tru parent elements
-        for (const parent of this.parent) {
+        for (const parent of this.#parent) {
             // Process parent elements depending on their type
             switch (parent.nodeName.toLowerCase())
             {
@@ -77,7 +76,7 @@ export class ElFilter
         }
 
         // Update all filter input values
-        for (const input of this.input) {
+        for (const input of this.#input) {
             input.value = query
         }
     }

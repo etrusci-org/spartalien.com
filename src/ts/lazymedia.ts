@@ -47,10 +47,10 @@ type LazyCode = {
 
 export class LazyMedia
 {
-    public element_selector: string = '.lazycode'
-    public videobox_class: string = 'videobox'
-    public error_class: string = 'error'
-    public slug_template = {
+    element_selector: string = '.lazycode'
+    videobox_class: string = 'videobox'
+    error_class: string = 'error'
+    slug_template = {
         link: '{SLUG}',
         image: '{SLUG}',
         audio: '{SLUG}',
@@ -66,19 +66,19 @@ export class LazyMedia
         youtubeplaylist: 'https://youtube.com/embed/videoseries?list={SLUG}&modestbranding=1&color=white&rel=0',
         odyseevideo: 'https://odysee.com/$/embed/{SLUG}',
     }
-    public bandcamp_list_height = {
+    bandcamp_list_height = {
         header: 119,
         row: 32,
         footer: 64,
     }
-    public spotify_list_height = {
+    spotify_list_height = {
         header: 200,
         row: 51,
         footer: 25,
     }
 
 
-    public autoembed(): void
+    autoembed(): void
     {
         this.get_lazycode_elements().forEach(target_element => {
             try {
@@ -100,13 +100,13 @@ export class LazyMedia
     }
 
 
-    public get_lazycode_elements(): NodeListOf<HTMLElement>
+    get_lazycode_elements(): NodeListOf<HTMLElement>
     {
         return document.querySelectorAll(this.element_selector)
     }
 
 
-    public get_baked_element(code: LazyCode): HTMLElement | null
+    get_baked_element(code: LazyCode): HTMLElement | null
     {
         let baked_element: null | HTMLElement = null
 
@@ -118,8 +118,8 @@ export class LazyMedia
 
             baked_element.setAttribute('href', code.slug)
 
-            this.add_code_attr(code, baked_element)
-            this.add_code_css(code, baked_element)
+            this.#add_code_attr(code, baked_element)
+            this.#add_code_css(code, baked_element)
 
             if (!code.text) {
                 baked_element.innerHTML = code.slug.replace(/(^\w+:|^)\/\//, '')
@@ -143,8 +143,8 @@ export class LazyMedia
                 baked_element.setAttribute('src', code.slug)
                 baked_element.setAttribute('loading', 'lazy')
 
-                this.add_code_attr(code, baked_element)
-                this.add_code_css(code, baked_element)
+                this.#add_code_attr(code, baked_element)
+                this.#add_code_css(code, baked_element)
 
                 if (!code.alt) {
                     baked_element.setAttribute('alt', code.slug.split('/').pop() ?? code.slug)
@@ -163,8 +163,8 @@ export class LazyMedia
                 inner1.setAttribute('src', code.slug)
                 inner1.setAttribute('loading', 'lazy')
 
-                this.add_code_attr(code, baked_element)
-                this.add_code_css(code, baked_element)
+                this.#add_code_attr(code, baked_element)
+                this.#add_code_css(code, baked_element)
 
                 if (!code.alt) {
                     inner1.setAttribute('alt', code.slug.split('/').pop() ?? code.slug)
@@ -189,8 +189,8 @@ export class LazyMedia
                 baked_element.setAttribute('preload', 'metadata')
                 baked_element.setAttribute('controls', 'controls')
 
-                this.add_code_attr(code, baked_element)
-                this.add_code_css(code, baked_element)
+                this.#add_code_attr(code, baked_element)
+                this.#add_code_css(code, baked_element)
 
                 const inner1: HTMLAnchorElement = document.createElement('a')
                 inner1.setAttribute('href', code.slug)
@@ -214,8 +214,8 @@ export class LazyMedia
                 inner2.setAttribute('preload', 'metadata')
                 inner2.setAttribute('controls', 'controls')
 
-                this.add_code_attr(code, inner2)
-                this.add_code_css(code, inner2)
+                this.#add_code_attr(code, inner2)
+                this.#add_code_css(code, inner2)
 
                 const inner3: HTMLAnchorElement = document.createElement('a')
                 inner3.setAttribute('href', code.slug)
@@ -241,8 +241,8 @@ export class LazyMedia
             inner1.setAttribute('controls', 'controls')
             inner1.setAttribute('playsinline', 'playsinline')
 
-            this.add_code_attr(code, inner1)
-            this.add_code_css(code, inner1)
+            this.#add_code_attr(code, inner1)
+            this.#add_code_css(code, inner1)
 
             const inner2: HTMLAnchorElement = document.createElement('a')
             inner2.setAttribute('href', code.slug)
@@ -261,8 +261,8 @@ export class LazyMedia
             baked_element.setAttribute('src', code.slug)
             baked_element.setAttribute('loading', 'lazy')
 
-            this.add_code_attr(code, baked_element)
-            this.add_code_css(code, baked_element)
+            this.#add_code_attr(code, baked_element)
+            this.#add_code_css(code, baked_element)
         }
 
         // bandcampalbum
@@ -278,8 +278,8 @@ export class LazyMedia
             baked_element.setAttribute('src', code.slug)
             baked_element.setAttribute('loading', 'lazy')
 
-            this.add_code_attr(code, baked_element)
-            this.add_code_css(code, baked_element)
+            this.#add_code_attr(code, baked_element)
+            this.#add_code_css(code, baked_element)
 
             if (code.trackcount) {
                 baked_element.style.height = `${Math.round(this.bandcamp_list_height.header + (this.bandcamp_list_height.row * code.trackcount) + this.bandcamp_list_height.footer)}px`
@@ -302,8 +302,8 @@ export class LazyMedia
             baked_element.setAttribute('src', code.slug)
             baked_element.setAttribute('loading', 'lazy')
 
-            this.add_code_attr(code, baked_element)
-            this.add_code_css(code, baked_element)
+            this.#add_code_attr(code, baked_element)
+            this.#add_code_css(code, baked_element)
         }
 
         // spotifyalbum
@@ -319,8 +319,8 @@ export class LazyMedia
             baked_element.setAttribute('src', code.slug)
             baked_element.setAttribute('loading', 'lazy')
 
-            this.add_code_attr(code, baked_element)
-            this.add_code_css(code, baked_element)
+            this.#add_code_attr(code, baked_element)
+            this.#add_code_css(code, baked_element)
 
             if (code.trackcount) {
                 baked_element.style.height = `${Math.round(this.spotify_list_height.header + (this.spotify_list_height.row * code.trackcount) + this.spotify_list_height.footer)}px`
@@ -340,8 +340,8 @@ export class LazyMedia
             baked_element.setAttribute('src', code.slug)
             baked_element.setAttribute('loading', 'lazy')
 
-            this.add_code_attr(code, baked_element)
-            this.add_code_css(code, baked_element)
+            this.#add_code_attr(code, baked_element)
+            this.#add_code_css(code, baked_element)
 
             if (code.trackcount) {
                 baked_element.style.height = `${Math.round(this.spotify_list_height.header + (this.spotify_list_height.row * code.trackcount) + this.spotify_list_height.footer)}px`
@@ -357,8 +357,8 @@ export class LazyMedia
             baked_element.setAttribute('src', code.slug)
             baked_element.setAttribute('loading', 'lazy')
 
-            this.add_code_attr(code, baked_element)
-            this.add_code_css(code, baked_element)
+            this.#add_code_attr(code, baked_element)
+            this.#add_code_css(code, baked_element)
         }
 
         // mixcloudplaylist
@@ -370,8 +370,8 @@ export class LazyMedia
             baked_element.setAttribute('src', code.slug)
             baked_element.setAttribute('loading', 'lazy')
 
-            this.add_code_attr(code, baked_element)
-            this.add_code_css(code, baked_element)
+            this.#add_code_attr(code, baked_element)
+            this.#add_code_css(code, baked_element)
         }
 
         // youtubevideo
@@ -392,8 +392,8 @@ export class LazyMedia
             inner1.setAttribute('allowfullscreen', 'allowfullscreen')
             inner1.setAttribute('playsinline', 'playsinline')
 
-            this.add_code_attr(code, inner1)
-            this.add_code_css(code, inner1)
+            this.#add_code_attr(code, inner1)
+            this.#add_code_css(code, inner1)
 
             baked_element.append(inner1)
         }
@@ -412,8 +412,8 @@ export class LazyMedia
             inner1.setAttribute('allowfullscreen', 'allowfullscreen')
             inner1.setAttribute('playsinline', 'playsinline')
 
-            this.add_code_attr(code, inner1)
-            this.add_code_css(code, inner1)
+            this.#add_code_attr(code, inner1)
+            this.#add_code_css(code, inner1)
 
             baked_element.append(inner1)
         }
@@ -432,8 +432,8 @@ export class LazyMedia
             inner1.setAttribute('allowfullscreen', 'allowfullscreen')
             inner1.setAttribute('playsinline', 'playsinline')
 
-            this.add_code_attr(code, inner1)
-            this.add_code_css(code, inner1)
+            this.#add_code_attr(code, inner1)
+            this.#add_code_css(code, inner1)
 
             baked_element.append(inner1)
         }
@@ -442,7 +442,7 @@ export class LazyMedia
     }
 
 
-    public add_code_attr(code: LazyCode, baked_element: HTMLElement): void
+    #add_code_attr(code: LazyCode, baked_element: HTMLElement): void
     {
         if (code.attr) {
             for (const [k, v] of code.attr) {
@@ -457,7 +457,7 @@ export class LazyMedia
     }
 
 
-    public add_code_css(code: LazyCode, baked_element: HTMLElement): void
+    #add_code_css(code: LazyCode, baked_element: HTMLElement): void
     {
         baked_element.classList.add('lazymedia', code.type)
 

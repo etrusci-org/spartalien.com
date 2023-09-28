@@ -1,6 +1,6 @@
 # spartalien.com - Image Size Guidelines
 
-All files:
+## all
 - JPG
 - usually ~80%
 

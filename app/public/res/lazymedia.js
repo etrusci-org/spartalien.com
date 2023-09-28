@@ -55,8 +55,8 @@ export class LazyMedia {
             code.slug = this.slug_template.link.replace('{SLUG}', code.slug);
             baked_element = document.createElement('a');
             baked_element.setAttribute('href', code.slug);
-            this.add_code_attr(code, baked_element);
-            this.add_code_css(code, baked_element);
+            this.#add_code_attr(code, baked_element);
+            this.#add_code_css(code, baked_element);
             if (!code.text) {
                 baked_element.innerHTML = code.slug.replace(/(^\w+:|^)\/\//, '');
             }
@@ -73,8 +73,8 @@ export class LazyMedia {
                 baked_element = document.createElement('img');
                 baked_element.setAttribute('src', code.slug);
                 baked_element.setAttribute('loading', 'lazy');
-                this.add_code_attr(code, baked_element);
-                this.add_code_css(code, baked_element);
+                this.#add_code_attr(code, baked_element);
+                this.#add_code_css(code, baked_element);
                 if (!code.alt) {
                     baked_element.setAttribute('alt', code.slug.split('/').pop() ?? code.slug);
                 }
@@ -88,8 +88,8 @@ export class LazyMedia {
                 const inner1 = document.createElement('img');
                 inner1.setAttribute('src', code.slug);
                 inner1.setAttribute('loading', 'lazy');
-                this.add_code_attr(code, baked_element);
-                this.add_code_css(code, baked_element);
+                this.#add_code_attr(code, baked_element);
+                this.#add_code_css(code, baked_element);
                 if (!code.alt) {
                     inner1.setAttribute('alt', code.slug.split('/').pop() ?? code.slug);
                 }
@@ -107,8 +107,8 @@ export class LazyMedia {
                 baked_element.setAttribute('loading', 'lazy');
                 baked_element.setAttribute('preload', 'metadata');
                 baked_element.setAttribute('controls', 'controls');
-                this.add_code_attr(code, baked_element);
-                this.add_code_css(code, baked_element);
+                this.#add_code_attr(code, baked_element);
+                this.#add_code_css(code, baked_element);
                 const inner1 = document.createElement('a');
                 inner1.setAttribute('href', code.slug);
                 inner1.innerHTML = code.slug;
@@ -125,8 +125,8 @@ export class LazyMedia {
                 inner2.setAttribute('loading', 'lazy');
                 inner2.setAttribute('preload', 'metadata');
                 inner2.setAttribute('controls', 'controls');
-                this.add_code_attr(code, inner2);
-                this.add_code_css(code, inner2);
+                this.#add_code_attr(code, inner2);
+                this.#add_code_css(code, inner2);
                 const inner3 = document.createElement('a');
                 inner3.setAttribute('href', code.slug);
                 inner3.innerHTML = code.slug;
@@ -144,8 +144,8 @@ export class LazyMedia {
             inner1.setAttribute('preload', 'metadata');
             inner1.setAttribute('controls', 'controls');
             inner1.setAttribute('playsinline', 'playsinline');
-            this.add_code_attr(code, inner1);
-            this.add_code_css(code, inner1);
+            this.#add_code_attr(code, inner1);
+            this.#add_code_css(code, inner1);
             const inner2 = document.createElement('a');
             inner2.setAttribute('href', code.slug);
             inner2.innerHTML = code.slug;
@@ -157,8 +157,8 @@ export class LazyMedia {
             baked_element = document.createElement('iframe');
             baked_element.setAttribute('src', code.slug);
             baked_element.setAttribute('loading', 'lazy');
-            this.add_code_attr(code, baked_element);
-            this.add_code_css(code, baked_element);
+            this.#add_code_attr(code, baked_element);
+            this.#add_code_css(code, baked_element);
         }
         if (code.type == 'bandcampalbum') {
             code.slug = this.slug_template.bandcampalbum.replace('{SLUG}', code.slug);
@@ -168,8 +168,8 @@ export class LazyMedia {
             baked_element = document.createElement('iframe');
             baked_element.setAttribute('src', code.slug);
             baked_element.setAttribute('loading', 'lazy');
-            this.add_code_attr(code, baked_element);
-            this.add_code_css(code, baked_element);
+            this.#add_code_attr(code, baked_element);
+            this.#add_code_css(code, baked_element);
             if (code.trackcount) {
                 baked_element.style.height = `${Math.round(this.bandcamp_list_height.header + (this.bandcamp_list_height.row * code.trackcount) + this.bandcamp_list_height.footer)}px`;
             }
@@ -185,8 +185,8 @@ export class LazyMedia {
             baked_element = document.createElement('iframe');
             baked_element.setAttribute('src', code.slug);
             baked_element.setAttribute('loading', 'lazy');
-            this.add_code_attr(code, baked_element);
-            this.add_code_css(code, baked_element);
+            this.#add_code_attr(code, baked_element);
+            this.#add_code_css(code, baked_element);
         }
         if (code.type == 'spotifyalbum') {
             code.slug = this.slug_template.spotifyalbum.replace('{SLUG}', code.slug);
@@ -196,8 +196,8 @@ export class LazyMedia {
             baked_element = document.createElement('iframe');
             baked_element.setAttribute('src', code.slug);
             baked_element.setAttribute('loading', 'lazy');
-            this.add_code_attr(code, baked_element);
-            this.add_code_css(code, baked_element);
+            this.#add_code_attr(code, baked_element);
+            this.#add_code_css(code, baked_element);
             if (code.trackcount) {
                 baked_element.style.height = `${Math.round(this.spotify_list_height.header + (this.spotify_list_height.row * code.trackcount) + this.spotify_list_height.footer)}px`;
             }
@@ -210,8 +210,8 @@ export class LazyMedia {
             baked_element = document.createElement('iframe');
             baked_element.setAttribute('src', code.slug);
             baked_element.setAttribute('loading', 'lazy');
-            this.add_code_attr(code, baked_element);
-            this.add_code_css(code, baked_element);
+            this.#add_code_attr(code, baked_element);
+            this.#add_code_css(code, baked_element);
             if (code.trackcount) {
                 baked_element.style.height = `${Math.round(this.spotify_list_height.header + (this.spotify_list_height.row * code.trackcount) + this.spotify_list_height.footer)}px`;
             }
@@ -221,16 +221,16 @@ export class LazyMedia {
             baked_element = document.createElement('iframe');
             baked_element.setAttribute('src', code.slug);
             baked_element.setAttribute('loading', 'lazy');
-            this.add_code_attr(code, baked_element);
-            this.add_code_css(code, baked_element);
+            this.#add_code_attr(code, baked_element);
+            this.#add_code_css(code, baked_element);
         }
         if (code.type == 'mixcloudplaylist') {
             code.slug = this.slug_template.mixcloudplaylist.replace('{SLUG}', code.slug);
             baked_element = document.createElement('iframe');
             baked_element.setAttribute('src', code.slug);
             baked_element.setAttribute('loading', 'lazy');
-            this.add_code_attr(code, baked_element);
-            this.add_code_css(code, baked_element);
+            this.#add_code_attr(code, baked_element);
+            this.#add_code_css(code, baked_element);
         }
         if (code.type == 'youtubevideo') {
             code.slug = this.slug_template.youtubevideo.replace('{SLUG}', code.slug);
@@ -244,8 +244,8 @@ export class LazyMedia {
             inner1.setAttribute('loading', 'lazy');
             inner1.setAttribute('allowfullscreen', 'allowfullscreen');
             inner1.setAttribute('playsinline', 'playsinline');
-            this.add_code_attr(code, inner1);
-            this.add_code_css(code, inner1);
+            this.#add_code_attr(code, inner1);
+            this.#add_code_css(code, inner1);
             baked_element.append(inner1);
         }
         if (code.type == 'youtubeplaylist') {
@@ -257,8 +257,8 @@ export class LazyMedia {
             inner1.setAttribute('loading', 'lazy');
             inner1.setAttribute('allowfullscreen', 'allowfullscreen');
             inner1.setAttribute('playsinline', 'playsinline');
-            this.add_code_attr(code, inner1);
-            this.add_code_css(code, inner1);
+            this.#add_code_attr(code, inner1);
+            this.#add_code_css(code, inner1);
             baked_element.append(inner1);
         }
         if (code.type == 'odyseevideo') {
@@ -270,13 +270,13 @@ export class LazyMedia {
             inner1.setAttribute('loading', 'lazy');
             inner1.setAttribute('allowfullscreen', 'allowfullscreen');
             inner1.setAttribute('playsinline', 'playsinline');
-            this.add_code_attr(code, inner1);
-            this.add_code_css(code, inner1);
+            this.#add_code_attr(code, inner1);
+            this.#add_code_css(code, inner1);
             baked_element.append(inner1);
         }
         return baked_element;
     }
-    add_code_attr(code, baked_element) {
+    #add_code_attr(code, baked_element) {
         if (code.attr) {
             for (const [k, v] of code.attr) {
                 if (v !== null) {
@@ -288,7 +288,7 @@ export class LazyMedia {
             }
         }
     }
-    add_code_css(code, baked_element) {
+    #add_code_css(code, baked_element) {
         baked_element.classList.add('lazymedia', code.type);
         if (code.class) {
             baked_element.classList.add(...code.class);
