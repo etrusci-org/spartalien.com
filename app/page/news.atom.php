@@ -1,9 +1,7 @@
 <?php
 $news_list = $this->get_news_list();
-
-
-print('<?xml version="1.0" encoding="utf-8"?>'."\n");
 ?>
+{nocache}<?php print('<?xml version="1.0" encoding="utf-8"?>'."\n"); ?>{/nocache}
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><?php $this->_phsc($this->conf['site_title']); ?></title>
     <subtitle>Notable News &amp; Updates</subtitle>
