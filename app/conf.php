@@ -33,6 +33,11 @@ $conf['site_nav'] = [
         'link_text' => 'Catalog',
         'link_title' => 'Music Tracks Catalog',
     ],
+    'physical' => [
+        'link' => './physical',
+        'link_text' => 'Physical',
+        'link_title' => 'Physical Things',
+    ],
     'planet420' => [
         'link' => './planet420',
         'link_text' => 'Planet 420',
@@ -47,11 +52,6 @@ $conf['site_nav'] = [
         'link' => './visual',
         'link_text' => 'Visual',
         'link_title' => 'Visuals For You, Them, And Me',
-    ],
-    'physical' => [
-        'link' => './physical',
-        'link_text' => 'Physical',
-        'link_title' => 'Physical Things',
     ],
     'tool' => [
         'link' => './tool',
@@ -97,7 +97,7 @@ $conf['valid_requests_file'] = $APP_DIR.'/cache/valid_requests.php';
 
 // ----------------------------------------------------------------------------
 
-$conf['caching_ttl'] = 3600;
+$conf['caching_ttl'] = -1;
 $conf['validate_requests'] = true;
 
 // ----------------------------------------------------------------------------

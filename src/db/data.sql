@@ -1072,10 +1072,10 @@ INSERT INTO visual (id, name, pub_date, tool, description) VALUES (33, 'The plan
 INSERT INTO visual (id, name, pub_date, tool, description) VALUES (34, 'It''s gonna come down on you anyway...', '2013', 'Photography, GIMP', NULL);
 INSERT INTO visual (id, name, pub_date, tool, description) VALUES (35, 'The ghost in my world', '2014', 'Photography, GIMP', NULL);
 INSERT INTO visual (id, name, pub_date, tool, description) VALUES (36, 'Audionaut', '2016', 'GIMP', 'If you think you''ve seen this before, you probably did. It''s a remake of an old logo I once designed (and am using now for the [Planet 420)(./planet420) coverart images).');
-INSERT INTO visual (id, name, pub_date, tool, description) VALUES (37, 'Eventually', '2021', 'Blender', NULL);
-INSERT INTO visual (id, name, pub_date, tool, description) VALUES (38, 'Lost memory', '2021', 'Blender', NULL);
-INSERT INTO visual (id, name, pub_date, tool, description) VALUES (39, 'Tunnel B21.4.3', '2021', 'Blender', NULL);
-INSERT INTO visual (id, name, pub_date, tool, description) VALUES (40, 'E dote Baum am Abgrund', '2021', 'Blender', NULL);
+INSERT INTO visual (id, name, pub_date, tool, description) VALUES (37, 'Eventually', '2021', 'Blender, Resolve', NULL);
+INSERT INTO visual (id, name, pub_date, tool, description) VALUES (38, 'Lost memory', '2021', 'Blender, Resolve', NULL);
+INSERT INTO visual (id, name, pub_date, tool, description) VALUES (39, 'Tunnel B21.4.3', '2021', 'Blender, Resolve', NULL);
+INSERT INTO visual (id, name, pub_date, tool, description) VALUES (40, 'E dote Baum am Abgrund', '2021', 'Blender, GIMP', NULL);
 INSERT INTO visual (id, name, pub_date, tool, description) VALUES (41, 'Subweird 1', '2021', 'Videography, Resolve', NULL);
 INSERT INTO visual (id, name, pub_date, tool, description) VALUES (42, 'Continuoduction', '2017-08-25', 'Videography, Premiere', 'Music video for [Continuoduction](./catalog/track:1).');
 INSERT INTO visual (id, name, pub_date, tool, description) VALUES (43, 'I''ll Embrace You Again In Space', '2018-05-24', 'Videography, Hitfilm', 'Music video for [I''ll Embrace You Again In Space](./catalog/track:2).');
@@ -1102,7 +1102,7 @@ INSERT INTO visual (id, name, pub_date, tool, description) VALUES (63, 'Calming 
 INSERT INTO visual (id, name, pub_date, tool, description) VALUES (64, 'Promo Art 2018-03', '2018-03', 'Photography, GIMP', 'Setting the mood.');
 INSERT INTO visual (id, name, pub_date, tool, description) VALUES (65, 'X Minutes of Peace', '2018', 'Videography, Premiere', 'Relax.');
 INSERT INTO visual (id, name, pub_date, tool, description) VALUES (66, 'TOTAL FUCKING MADNESS', '2023-01', 'Resolve', 'TOTAL FUCKING MADNESS' || CHAR(10) || 'TOTAL FUCKING MADNESS' || CHAR(10) || 'TOTAL FUCKING MADNESS' || CHAR(10) || 'TOTAL FUCKING MADNESS' || CHAR(10) || 'TOTAL FUCKING MADNESS' || CHAR(10) || 'TOTAL FUCKING MADNESS' || CHAR(10, 10) || '00:00 Intro' || CHAR(10) || '00:32 Level 1' || CHAR(10) || '05:28 Level 2' || CHAR(10) || '10:00 Level 3' || CHAR(10) || '14:06 Level 4' || CHAR(10) || '17:48 Level 5' || CHAR(10) || '21:06 Level 6' || CHAR(10) || '23:58 Outro');
-INSERT INTO visual (id, name, pub_date, tool, description) VALUES (67, 'GhostTownTunes Logo', '2021', 'Blender', 'Livestream logo made for [GhostTownTunes](http://twitch.tv/ghosttowntunes). Based on his original 2D logo made by *Unknown Creator*.');
+INSERT INTO visual (id, name, pub_date, tool, description) VALUES (67, 'GhostTownTunes Logo', '2021', 'Blender, Resolve', 'Livestream logo made for [GhostTownTunes](http://twitch.tv/ghosttowntunes). Based on his original 2D logo made by *Unknown Creator*.');
 
 
 INSERT INTO visual_media (visual_id, code) VALUES (1, '{"type": "image", "slug": "./file/visual/2000-soia.jpg", "linkto": "./file/visual/2000-soia.jpg"}');
