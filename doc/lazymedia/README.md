@@ -1,6 +1,6 @@
 # LazyMedia
 
-Embed stuff on your website with JSON and JavaScript.
+Embed stuff on your website with simple JSON code.
 
 File: [src/ts/lazymedia.ts](../../src/ts/lazymedia.ts)
 

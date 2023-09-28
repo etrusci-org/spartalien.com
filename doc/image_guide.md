@@ -36,3 +36,11 @@ use original as *-big
 1 med/media: *x600
 use original as *-big
 ```
+
+
+## p420 size
+
+```text
+tn  300x300
+use original as *-big (1000x1000)
+```
