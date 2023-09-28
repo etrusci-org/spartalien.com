@@ -19,10 +19,12 @@ if (isset($this->Router->route['var']['id'])) {
             <h3>Meta</h3>
             <ul class="meta">
                 <li>Created: %1$s</li>
+                <li>Tool: %2$s</li>
             </ul>
-            %2$s
+            %3$s
         </div>',
         substr($visual['visual_pub_date'], 0, 4),
+        $this->_lazytext($visual['visual_tool']),
         ($visual['visual_description']) ? sprintf('<p>%s</p>', $this->_lazytext($visual['visual_description'])) : '',
     );
 

@@ -32,6 +32,7 @@ class Page extends Core
             SELECT
                 visual.id AS visual_id,
                 visual.pub_date AS visual_pub_date,
+                visual.tool AS visual_tool,
                 visual.name AS visual_name,
                 visual.description AS visual_description
             FROM visual

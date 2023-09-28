@@ -146,6 +146,7 @@ CREATE TABLE visual (
     id          INTEGER NOT NULL,
     pub_date    TEXT NOT NULL,
     name        TEXT NOT NULL,
+    tool        TEXT NOT NULL,
     description TEXT DEFAULT NULL,
 
     PRIMARY KEY (id AUTOINCREMENT),
