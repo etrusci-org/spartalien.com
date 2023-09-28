@@ -1,8 +1,8 @@
 export { VisitorProgress };
 const CONF = {
     data_version: 1,
-    progress_delay: 3600000,
-    seconds_duration: 600,
+    progress_delay: 1800000,
+    seconds_duration: 60,
     walking_speed: 3.89,
     inventory_size: 10,
     loot_chance_1: 0.79,

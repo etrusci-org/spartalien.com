@@ -7,8 +7,8 @@
 <div class="stats hide box">
     <h3>Your Progress</h3>
     <p>
-        You can progress only once every hour. Therefore it does not help to reload the pages forever.
-        Displayed data below auto-updates every 30 minutes.
+        You can progress only once every 30 minutes. Therefore it does not help to reload the pages forever.
+        Displayed data below auto-updates every 10 minutes.
     </p>
 
     <div class="grid-x-2">
@@ -177,5 +177,5 @@
 
     setInterval(() => {
         update_data_display()
-    }, 1_800_000)
+    }, 600_000)
 </script>

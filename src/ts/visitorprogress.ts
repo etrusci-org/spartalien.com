@@ -12,11 +12,11 @@ const CONF = {
 
     // amount of time that has to pass before the next progress is possible
     // integer (milliseconds): >= 0
-    progress_delay: 3_600_000,
+    progress_delay: 1_800_000,
 
     // how much time passes in-game in one real-life second
     // integer (in-game seconds): > 0
-    seconds_duration: 600,
+    seconds_duration: 60,
 
     // average walking speed of the player
     // float (km/h): > 0
