@@ -9,7 +9,7 @@ $OUT_DIR = realpath('../spartalien.com-files/file/planet420');
 
 
 if (!$OUT_DIR) die('OUT_DIR does not exist');
-print('OUT_DIR: '.$OUT_DIR.PHP_EOL);
+// print('OUT_DIR: '.$OUT_DIR.PHP_EOL);
 
 
 // ----------------------------------------------------------------------------
@@ -137,6 +137,9 @@ foreach ($session_list as $s) {
 
     $txt = implode("\n", array_map(fn(string $v) => trim($v), explode(PHP_EOL, $txt)));
 
-    print('creating '.$out_file.PHP_EOL);
+    // print('creating '.$out_file.PHP_EOL);
     file_put_contents($out_file, $txt, LOCK_EX);
 }
+
+
+print(microtime(true).' baked p420 tracklists ('.array_sum(array_map(function(string $v): int { return filesize($v); }, glob($OUT_DIR.'/planet420-*.txt'))).' bytes)'.PHP_EOL);

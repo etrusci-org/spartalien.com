@@ -17,6 +17,18 @@ $total_hours_to_listen = $this->get_total_hours_to_listen($session_list);
 
     <div class="grid-x-2">
         <?php
+        printf('
+            <div class="box">
+                <p>
+                    <a class="imgzoom" href="./file/planet420/planet420-%1$s-%2$s.png"><img src="./file/preview/p420/planet420-%1$s-%2$s-med.jpg" alt="coverart"></a>
+                </p>
+            </div>',
+            $session['session_num'],
+            str_replace('-', '', $session['session_pub_date']),
+        );
+        ?>
+
+        <?php
         if ($session['session_mixcloud_key']) {
             printf(
                 '<div class="box full-width">
@@ -28,33 +40,33 @@ $total_hours_to_listen = $this->get_total_hours_to_listen($session_list);
             );
         }
         else {
-            print('<p>Sorry, the recording for this one is lost.</p>');
+            print('<div class="box"><p>Sorry, this recording is lost.</p></div>');
         }
         ?>
-
-        <?php
-        printf('
-            <div class="box">
-                <h3>Meta</h3>
-                <ul class="meta">
-                    <li>Track count: %1$s</li>
-                    <li>Total runtime: %2$s</li>
-                    <li>Released: %3$s</li>
-                </ul>
-            </div>',
-            $session['session_track_count'],
-            $session['session_runtime_human'],
-            $session['session_pub_date'],
-        );
-        ?>
     </div>
+
+    <?php
+    printf('
+        <div class="box">
+            <h3>Meta</h3>
+            <ul class="meta">
+                <li>Track count: %1$s</li>
+                <li>Total runtime: %2$s</li>
+                <li>Released: %3$s</li>
+            </ul>
+        </div>',
+        $session['session_track_count'],
+        $session['session_runtime_human'],
+        $session['session_pub_date'],
+    );
+    ?>
 
     <p>
         <input type="text" class="elfilter-input" placeholder="Filter tracklist..." title="'uni' will find 'unicorns' and 'reunion'">
     </p>
 
     <div class="box">
-        <h3>Tracklist</h3>
+        <h3>Tracklist (<?php printf('<a href="./file/planet420/planet420-%1$s-%2$s.txt" target="_blank">txt</a>', $session['session_num'], str_replace('-', '', $session['session_pub_date'])); ?>)</h3>
         <table class="elfilter">
             <thead>
                 <tr>
