@@ -1,3 +1,2 @@
 0000/
-app/protected/db/*.bak*.sqlite3
-app/protected/db/myd6.sqlite3
+src/css/style.css

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        /* cosmetics and test stuff */
+        body { background-color: #000; padding: 1rem; }
+        body, a { color: #ccc; }
+
+        /* classes and style examples by and for imgzoom */
+        div.imgzoom-target {
+            display: none;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 2000;
+            text-align: center;
+            cursor: zoom-out;
+            background-color: #000000ed;
+        }
+
+        div.imgzoom-target.open {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        div.imgzoom-target img {
+            max-width: 100%;
+            max-height: 100%;
+            border: 20px solid;
+        }
+
+        a.imgzoom,
+        a.lazymedia.image {
+            cursor: zoom-in;
+        }
+    </style>
+</head>
+<body>
+    <p>click images to zoom</p>
+
+    <a class="imgzoom" href="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&amp;fm=jpg">
+        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=100&amp;fm=jpg">
+    </a>
+
+    <a class="lazymedia image" href="https://images.unsplash.com/photo-1694110952752-b4ec38730627?w=800&amp;fm=jpg">
+        <img src="https://images.unsplash.com/photo-1694110952752-b4ec38730627?w=100&amp;fm=jpg">
+    </a>
+
+
+    <div class="imgzoom-target"></div>
+
+
+    <script type="module">
+        import { ImgZoom } from '../../app/public/res/imgzoom.js'
+
+        const IZ = new ImgZoom()
+        IZ.init()
+    </script>
+</body>
+</html>

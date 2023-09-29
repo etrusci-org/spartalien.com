@@ -11,23 +11,20 @@
         {
             "label": "spartalien.com build",
             "dependsOn": [
-                "tsc-watch",
-                "sass-watch",
-                "csso-watch",
-                "gen-validrequests"
+                "bake_app_files",
+                "watch_sass",
+                "watch_csso",
+                "watch_ts",
             ],
             "group": {
                 "kind": "build",
                 "isDefault": true
-            },
-            "runOptions": {
-                "runOn": "folderOpen"
             }
         },
         {
-            "label": "tsc-watch",
+            "label": "bake_app_files",
             "type": "shell",
-            "command": "./tool/tsc-watch.sh",
+            "command": "./bake_app_files.sh",
             "isBackground": true,
             "problemMatcher": [],
             "presentation": {
@@ -35,9 +32,9 @@
             }
         },
         {
-            "label": "sass-watch",
+            "label": "watch_sass",
             "type": "shell",
-            "command": "./tool/sass-watch.sh",
+            "command": "./watch_sass.sh",
             "isBackground": true,
             "problemMatcher": [],
             "presentation": {
@@ -45,9 +42,9 @@
             }
         },
         {
-            "label": "csso-watch",
+            "label": "watch_csso",
             "type": "shell",
-            "command": "./tool/csso-watch.sh",
+            "command": "./watch_csso.sh",
             "isBackground": true,
             "problemMatcher": [],
             "presentation": {
@@ -55,14 +52,14 @@
             }
         },
         {
-            "label": "gen-validrequests",
+            "label": "watch_ts",
             "type": "shell",
-            "command": "php ./app/protected/bin/1-gen-validrequests.php",
+            "command": "./watch_ts.sh",
             "isBackground": true,
             "problemMatcher": [],
             "presentation": {
                 "group": "devtools"
             }
-        }
+        },
     ]
 }

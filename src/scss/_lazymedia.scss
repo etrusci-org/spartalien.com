@@ -1,0 +1,102 @@
+.lazycode {
+    display: block;
+    background-image: url('./loading.gif');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+.lazymedia {
+    display: block;
+    background-image: url('./loading.gif');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    &:last-child {
+        margin-bottom: .75rem;
+    }
+
+    &.link {
+        background-image: none;
+    }
+
+    &.image {
+        width: 100%;
+        height: auto;
+    }
+
+    &.audio {
+        width: 400px;
+        max-width: 100%;
+        background-image: none;
+    }
+
+    &.video {
+        background-image: none;
+    }
+
+    &.bandcamptrack {
+        min-width: 300px;
+        width: 100%;
+        height: 120px;
+    }
+
+    &.bandcampalbum {
+        min-width: 300px;
+        width: 100%;
+        height: 208px;
+    }
+
+    &.spotifytrack {
+        min-width: 300px;
+        width: 100%;
+    }
+
+    &.spotifyalbum,
+    &.spotifyplaylist {
+        min-width: 300px;
+        width: 100%;
+        height: 352px;
+
+    }
+
+    &.mixcloudplaylist,
+    &.mixcloudshow {
+        width: 100%;
+        height: 182px;
+    }
+
+    // see .videobox .lazymedia too for these:
+    // &.video {}
+    // &.youtubevideo {}
+    // &.youtubeplaylist {}
+    // &.odyseevideo {}
+}
+
+
+a.lazymedia img {
+    cursor: zoom-in;
+}
+
+
+.videobox {
+    position: relative;
+    padding-top: 56.25%; // 16:9
+    overflow: hidden;
+    margin-bottom: 2rem;
+    width: 800px;
+    max-width: 100%;
+
+    &:last-child {
+        margin-bottom: .75rem;
+    }
+
+    .lazymedia {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+}

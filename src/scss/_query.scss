@@ -1,185 +1,40 @@
-// _query
+// width - small
+@media screen and (min-width: 576px) {
+    body { font-size: calc($font-size-default-min + ($font-size-default-max-num - $font-size-default-min-num) * ((100vw - 576px) / (1536 - 576))); }
+    h2 { font-size: calc($font-size-h2-min + ($font-size-h2-max-num - $font-size-h2-min-num) * ((100vw - 576px) / (1536 - 576))); }
+    h3 { font-size: calc($font-size-h3-min + ($font-size-h3-max-num - $font-size-h3-min-num) * ((100vw - 576px) / (1536 - 576))); }
+}
 
-@media screen and (min-height: 400px /* at least logo height + some more for content */) {
-    header {
-        position: sticky;
-        top: 0;
+
+// width - medium
+@media screen and (min-width: 768px) {
+    .grid-x-2,
+    .grid-x-3 {
+        grid-template-columns: repeat(2, 1fr);
+        &.compact-lines { row-gap: 1.5rem; }
     }
 }
 
 
-@media screen and (min-width: 560px) {
-    body,
-    textarea,
-    code {
-        font-size: $font-size-20;
-    }
-
-    img {
-        &[src^='res/ico-'] {
-            height: 1.125rem;
-        }
-    }
-
-    header {
-        h1,
-        nav {
-            display: inline-block;
-            vertical-align: middle;
-        }
-
-        h1 {
-            margin-right: 1.5rem;
-        }
-    }
-
-    .grid {
-        &.simple {
-            grid-template-columns: 1fr 1fr 1fr;
-        }
-
-        &.two {
-            grid-template-columns: 1fr 1fr;
-        }
-    }
+// width - large
+@media screen and (min-width: 1024px) {
+    .grid-x-3 { grid-template-columns: repeat(3, 1fr); }
 }
 
 
-// @media screen and (min-width: 768px) {}
-
-
-// @media screen and (min-width: 960px) {}
-
-
+// width - extra large
 // @media screen and (min-width: 1280px) {}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// @media screen and (min-width: 560px) {
-//     body {
-//         font-size: $font-size-10;
-//     }
-
-//     header {
-//         h1,
-//         nav {
-//             display: inline-block;
-//             vertical-align: middle;
-//         }
-
-//         h1 {
-//             margin-right: 20px;
-//         }
-//     }
-
-//     // .grid {}
-// }
-
-
-// @media screen and (min-width: 768px) {
-//     body {
-//         font-size: $font-size-20;
-//     }
-
-//     .grid {
-//         &.two-1-1 {
-//             display: grid;
-//             grid-template-columns: 1fr 1fr;
-//             grid-auto-rows: auto;
-//             column-gap: 40px;
-//         }
-
-//         // &.news-list-item {}
-
-//         &.rls-list-item {
-//             display: grid;
-//             grid-template-columns: auto 1fr;
-//             grid-auto-rows: auto;
-//             column-gap: 10px;
-
-//             text-align: left;
-
-//             // padding: 0;
-
-//             // .title {}
-
-//             .meta {
-//                 text-align: right;
-//             }
-//         }
-//     }
-// }
-
-
-// @media screen and (min-width: 960px) {
-//     body {
-//         font-size: $font-size-30;
-//     }
-// }
-
-
-// // @media screen and (min-width: 1280px) {}
+// width - extra extra large
+@media screen and (min-width: 1536px) {
+    body { font-size: $font-size-default-max; }
+    h2 { font-size: $font-size-h2-max; }
+    h3 { font-size: $font-size-h3-max; }
+}
+
+
+// height - make header un-sticky
+@media screen and (max-height: 700px) {
+    header { position: relative; }
+}

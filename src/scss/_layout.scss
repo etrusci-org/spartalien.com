@@ -1,265 +1,326 @@
-// _layout
-// mobile layout/size, handle larger screens in _query
-
 body {
-    font-family: $font-main;
-    min-height: 100vh;
-    line-height: 1.4;
-}
-
-body,
-input,
-textarea,
-code {
-    font-size: $font-size-10;
+    font-family: $font-family-main;
+    font-size: $font-size-default-min;
+    text-rendering: geometricPrecision;
 }
 
 
-
-
-h1,
-h2,
-h3 {
-    letter-spacing: .125rem;
+code,
+pre,
+.font-mono,
+.lazycode,
+.noscript {
+    font-family: $font-family-mono;
+    font-size: 80%;
 }
+
 
 
 h1 {
-    font-size: 1.7rem;
+    font-family: $font-family-deco;
+    letter-spacing: .15rem;
 }
 
 
 h2 {
-    font-size: 1.5rem;
+    font-family: $font-family-deco;
+    font-size: $font-size-h2-min;
+    margin-bottom: 6rem;
 }
 
 
 h3 {
-    font-size: 1rem;
-}
-
-h2,
-h3 {
-    margin: 0 0 .25rem;
+    font-family: $font-family-deco;
+    font-size: $font-size-h3-min;
+    margin-bottom: 2rem;
 }
 
 
-label {
-    font-weight: bold;
-}
 
-input[type=text],
-input[type=submit] {
-        padding: .5rem;
-        margin: 0 .25rem 0 0;
-}
+main, footer {
+    table { line-height: 2; }
+    th { line-height: 1.5; }
 
-input[type=submit] {
-    font-weight: bold;
-    border-radius: .5rem;
-    cursor: pointer;
-}
+    p, ul, .lazymedia { line-height: 1.5; }
 
-textarea {
-    width: 100%;
-    height: 9.5rem;
-    padding: 0.5rem;
-}
+    pre { line-height: 1.35; }
 
-textarea,
-code {
-    font-family: monospace;
-    line-height: 1.2;
-    display: inline-block;
-    white-space: pre;
-}
-
-p,
-ul,
-table,
-iframe {
-    margin: 0 0 .33rem;
-}
-
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-
-table {
-    text-align: left;
-    border-collapse: collapse;
-    margin: 0 auto;
-}
-
-
-th {
-    font-weight: bold;
-}
-
-
-li,
-th,
-td {
-    vertical-align: top;
-    padding: .125rem 1rem .125rem 0;
-
-    &:last-child {
-        padding: .125rem 0;
+    p, ul, pre, .lazycode, .lazymedia {
+        margin-bottom: 1rem;
     }
 }
 
 
-td {
-    img {
-        &[src*='/ico-'] {
-            margin: 0 0 0 .5rem;
-        }
-    }
-}
 
 
-img {
-    &[src*='/ico-'] {
-        display: inline-block;
-        width: auto;
-        height: 1rem;
-        margin: 0 .25rem .25rem 0;
-        vertical-align: middle;
-    }
-}
+
+
+
+
+
+
+
+
 
 
 a {
     &:link,
     &:visited {
-        text-decoration: none;
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
         text-decoration-line: underline;
         text-decoration-style: dotted;
     }
 
-    &.btn {
-        text-decoration: none;
+    &:hover,
+    &:active {
+        text-decoration-line: none;
+    }
+
+    &:focus,
+    &.active {
+        text-decoration-line: underline;
+        text-decoration-style: double;
+    }
+
+    &.active {
+        img {
+            border-width: 1px;
+        }
+    }
+
+    &.external::after {
+        content: '⇗';
+    }
+
+    &.img::after {
+        content: '';
     }
 }
 
 
-header {
-    position: static; // switches to sticky in _query if enough min-height is given
-    padding: .5rem;
-    margin: 0 0 2rem;
-    text-align: center;
-    z-index: 1000;
+label {
+    margin-bottom: .5rem;
+}
 
-    img {
-        width: 100%;
-        max-width: 149px;
-        height: auto;
+
+table {
+    th {
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    th,
+    td {
+        padding-right: 2rem;
+        vertical-align: top;
+    }
+
+    td {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+    }
+}
+
+
+input {
+    width: 200px;
+    max-width: 100%;
+    padding: .75rem;
+}
+
+
+button {
+    padding: .25rem .5rem;
+    border-width: 1px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+
+img.tn {
+    width: 100%;
+    min-width: 50px;
+    height: auto;
+    border-width: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+header {
+    position: sticky;
+    top: 0;
+    line-height: 1;
+    padding: 1rem;
+    margin-bottom: 4rem;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    z-index: 10;
+}
+
+
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: .75rem;
+    row-gap: .5rem;
+    align-items: center;
+    justify-content: center;
+    font-family: $font-family-deco;
+
+    a {
+        &:link,
+        &:visited {
+            text-decoration-line: none;
+        }
     }
 }
 
 
 main {
-    min-width: 320px;
-    max-width: 600px;
-    padding: 0 1rem 1rem;
-    margin: 0 auto;
-    z-index: 500;
+    min-width: 350px;
+    max-width: 1200px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 5;
+
+    img {
+        max-height: 70vh;
+    }
 }
 
 
-
 footer {
-    text-align: center;
-    padding: 0 1rem 1rem;
-    margin: 25rem 0 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-top: 80vh;
+    border-top-width: 1px;
+    border-top-style: solid;
+    z-index: 5;
+    cursor: crosshair;
 
-    p {
-        margin: 0 0 1.5rem;
+    nav {
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    img {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        margin-bottom: 2rem;
+        opacity: .2;
+        transition: opacity 2.0s linear;
+
+        &:hover,
+        &:focus {
+            opacity: 1;
+            transition: opacity 1.500s linear;
+        }
     }
 }
 
 
 
-.box {
-    box-sizing: border-box;
-    padding: 1rem 1rem .75rem;
-    margin: 0 0 2rem;
+
+
+
+
+
+
+
+
+
+
+// this grid works now well for 1:1 images
+// does not need media queries
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
+    align-items: stretch;
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
+
+    img {
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 
-.moreSpacer {
-    height: 20rem;
-    margin: 0 0 2rem;
-    background-position: center center;
-    background-size: contain;
-    background-repeat: no-repeat;
+// use this for 2-3 column
+// needs media queries
+.grid-x-2,
+.grid-x-3 {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    align-items: start;
+    column-gap: 4rem;
+}
+
+
+.box {
+    max-width: fit-content;
+    padding-top: 1.75rem;
+    padding-bottom: 1rem;
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+    margin-bottom: 8rem;
+    border-width: 1px;
+
+    &.full-width {
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+
+
+.more {
+    margin-top: 40vh;
 }
 
 
 .meta {
-    font-size: $font-size-00;
+    font-family: $font-family-mono;
+    font-size: 80%;
 }
 
 
-.release {
-    h2 {
-        text-align: center;
-    }
-
-    .meta {
-        text-align: center;
-        margin: 0 0 2rem;
-    }
-}
-
-
-
-.grid {
-    box-sizing: border-box;
-
-    &.simple {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-auto-rows: auto;
-        column-gap: 1.5rem;
-        row-gap: 1.5rem;
-    }
-
-    &.two {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-auto-rows: auto;
-        column-gap: 1.5rem;
-        row-gap: 1.5rem;
-    }
-}
-
-
-
-
-
-
-
-
-.btn {
-    display: inline-block;
+.noscript {
+    padding: .25rem;
+    margin-bottom: .25rem;
     text-align: center;
-    vertical-align: text-top;
-    padding: .25rem .5rem .11rem;
-    margin: 0 .25rem .5rem 0;
 }
 
 
+.text-align-center {
+    text-align: center;
 
-
+    img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 
 
 .text-align-right {
@@ -267,180 +328,6 @@ footer {
 }
 
 
-.text-align-center {
-    text-align: center;
-}
-
-
-
-.nobr {
-    white-space: nowrap;
-}
-
-
-
-
-
-.lazycode {
-    display: block;
-    padding: .25rem .25rem .25rem 1.5rem;
-    margin: 0 0 1rem;
-    background-size: 1rem;
-    background-position: .25rem 50%;
-    background-repeat: no-repeat;
-}
-
-
-.lazymedia {
-    display: block;
-    margin: 0 0 1rem;
-    background-size: 1rem;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-
-    &:last-child {
-        margin:  0 0 .5rem;
-    }
-
-    &.audio {
-        width: 100%;
-        height: 2rem;
-    }
-
-    &.image,
-    &.video {
-        margin: 0 auto;
-    }
-
-    &.bandcampTrack {
-        width: 100%;
-        min-width: 170px;
-        height: 120px;
-
-        &.small {
-            height: 42px;
-        }
-
-        &.withCover {
-            width: 350px;
-            height: 350px;
-            margin: 0 auto;
-        }
-    }
-
-    &.bandcampAlbum {
-        width: 100%;
-
-        // with tracklist:
-        min-width: 370px;
-        height: 208px;
-        min-height: 208px;
-
-        &.noTracklist {
-            min-width: 250px;
-            height: 120px;
-            min-height: 120px;
-        }
-    }
-
-    &.spotifyTrack {
-        width: 100%;
-        min-width: 300px;
-        height: 80px;
-        min-height: 80px;
-    }
-
-    &.spotifyAlbum,
-    &.spotifyPlaylist {
-        width: 100%;
-        min-width: 300px;
-        height: 352px;
-        min-height: 80px;
-    }
-
-    &.mixcloudMix,
-    &.mixcloudPlaylist {
-        width: 100%;
-        height: 180px;
-    }
-
-    &.twitchChat {
-        width: 100%;
-        height: 600px;
-    }
-}
-
-
-.videobox {  // to use with .lazymedia as child for keeping the w/h ratio when resizing content
-    position: relative;
-    padding: 56.25% 0 0; // 16:9
-    overflow: hidden;
-    margin: 0 0 1rem;
-
-    &:last-child {
-        margin: 0 0 .5rem;
-    }
-
-    .lazymedia {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        margin: 0;
-    }
-}
-
-
-.thumb {
-    width: auto;
-    height: 80px;
-}
-
-
-.imagepreviewTarget {
+.hide {
     display: none;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 2000;
-    text-align: center;
-    cursor: zoom-out;
-
-    &.open {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    img {
-        max-width: 100%;
-        max-height: 100%;
-        border: 20px solid;
-    }
-}
-
-.imagepreview {
-    cursor: zoom-in;
-
-    display: inline-block;
-    margin-bottom: 1rem;
-    &:last-child {
-        margin-bottom: 0;
-    }
-
-    img {
-        max-height: 600px;
-    }
-}
-
-
-
-
-.noscript {
-    font-weight: bold;
-    text-align: center;
-    padding: .5rem 1rem;
 }

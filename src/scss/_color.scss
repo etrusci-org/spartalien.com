@@ -1,52 +1,103 @@
-// _color
+*::selection {
+    color: $color-black;
+    background-color: $color-brand-50;
+}
+
 
 body {
-    color: $color-30;
-    background-color: $color-05;
+    color: $color-gray-500;
+    background-color: $color-gray-997;
+    background-image: url('./logo-bg.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: auto 70vh;
 }
 
 
-input,
-textarea,
 code,
-.code {
-    color: $color-80;
+pre,
+.font-mono,
+.lazycode,
+.noscript {
+    color: $color-gray-550;
 }
 
-input,
-textarea {
-    background-color: $color-10;
+
+h1 {
+    color: $color-gray-150;
+}
+
+
+h2 {
+    color: $color-gray-650;
+    transition: color 5s linear;
+
+    &::first-letter {
+        color: $color-brand-200;
+    }
 
     &:hover,
     &:focus {
-        color: $color-30;
-        background-color: $color-27;
+        color: $color-gray-500;
+        transition: color .25s linear;
+
+        &::first-letter {
+            color: $color-brand-50;
+        }
     }
 }
 
-input {
-    background-color: $color-25;
-}
 
-h1,
-h2,
 h3 {
-    color: $color-40;
+    color: $color-gray-500;
+    transition: color 5s linear;
+
+    &::first-letter {
+        color: $color-gray-350;
+    }
 }
 
 
-header {
-    background-color: $color-00;
-    box-shadow: 0px 0px 15px 5px $color-00;
+a {
+    &:link,
+    &:visited {
+        color: $color-gray-400;
+    }
+
+    &:hover,
+    &:active {
+        color: $color-brand-50;
+        text-decoration-color: $color-gray-300;
+    }
+
+    &:focus,
+    &.active {
+        color: $color-brand-50;
+        text-decoration-color: $color-brand-50;
+    }
+
+    &.active {
+        img {
+            border-color: $color-brand-50;
+        }
+    }
+
+    &.external::after {
+        color: $color-gray-600;
+    }
 }
 
 
 ul {
     li {
+        background-color: transparent;
+        transition: background-color 1s linear;
+
         &:hover,
         &:focus {
-            color: $color-60;
-            background-color: $color-10;
+            background-color: $color-gray-850;
+            transition: background-color .25s linear;
         }
     }
 }
@@ -54,142 +105,109 @@ ul {
 
 table {
     tr {
-        &:hover td {
-            color: $color-60;
-            background-color: $color-10;
+        td {
+            background-color: transparent;
+            transition: background-color 1s linear;
         }
-    }
-}
 
-
-a {
-    &:visited,
-    &:link {
-        color: $color-40;
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-        color: $color-60;
-    }
-}
-
-
-a.active {
-    color: $color-60;
-}
-
-
-.strmatch {
-    color: $color-65;
-}
-
-
-.error {
-    color: $color-70;
-}
-
-
-.box {
-    background-color: $color-20;
-    box-shadow: 0px 0px 10px 0px $color-00;
-}
-
-
-.moreSpacer {
-    background-image: url('morespacer.svg');
-}
-
-
-
-.btn {
-    background-color: $color-20;
-    box-shadow: 0px 0px 3px 0px $color-00;
-
-    &:hover,
-    &:focus,
-    &.active {
-        color: $color-60;
-        background-color: $color-25;
-        cursor: pointer;
-
-        img {
-            &[src*='/ico-'] {
-                opacity: 1;
+        &:hover,
+        &:focus {
+            td {
+                background-color: $color-gray-850;
+                transition: background-color .25s linear;
             }
         }
     }
 }
 
 
-img {
-    &[src*='/ico-'] {
-        opacity: .5;
+input {
+    &::placeholder {
+        color: $color-gray-400;
+    }
 
-        &:hover {
-            opacity: 1;
+    &[type=text] {
+        color: $color-brand-50;
+        border-width: 1px;
+        border-color: $color-gray-950;
+        background-color: $color-gray-850;
+        box-shadow: 0 0 10px 5px $color-black inset;
+    }
+}
+
+
+button {
+    color: $color-gray-500;
+    border-color: $color-gray-950;
+    background-color: $color-gray-850;
+    box-shadow: 0 0 10px 0 $color-black;
+
+    &:hover,
+    &:focus {
+        color: $color-brand-50;
+        background-color: $color-gray-750;
+    }
+
+    &:active {
+        background-color: $color-gray-700;
+        box-shadow: 0 0 2px 0 $color-black;
+    }
+}
+
+
+header {
+    border-bottom-color: $color-brand-250;
+    background-color: $color-gray-999;
+    box-shadow: 0 5px 10px 5px $color-black;
+}
+
+
+nav {
+    a {
+        &:active {
+            color: $color-white;
         }
     }
 }
 
 
-.grid {
-    .row {
-        &:hover,
-        &:focus {
-            background-color: $color-10;
+footer {
+    border-top-color: $color-brand-250;
+    background-color: $color-gray-950;
+    box-shadow: 0 -5px 10px 5px $color-black;
+}
+
+
+
+img.tn {
+    border-color: $color-gray-900;
+}
+
+
+.box {
+    border-color: $color-gray-950;
+    background-color: $color-gray-950;
+    box-shadow: 0 0 10px 5px $color-black inset;
+
+    &:hover,
+    &:focus {
+        h3 {
+            color: $color-gray-350;
+            transition: color .25s linear;
+
+            &::first-letter {
+                color: $color-gray-100;
+            }
         }
     }
 }
 
 
-
-.lazycode {
-    color: $color-80;
-    background-color: $color-10;
-    background-image: url('loading.gif');
+.meta {
+    color: $color-gray-600;
 }
-
-
-.lazymedia {
-    background-color: $color-10;
-    background-image: url('loading.gif');
-
-    &.link,
-    &.video {
-        background-color: transparent;
-        background-image: none;
-    }
-
-    &.audio {
-        background-color: $color-30;
-        background-image: none;
-        color-scheme: dark;
-    }
-
-    &.spotifyTrack,
-    &.spotifyAlbum,
-    &.spotifyPlaylist {
-        background-color: transparent;
-    }
-}
-
-
-
-.imagepreviewTarget {
-    background-color: $color-05;
-
-    img {
-        border-color: $color-20;
-        box-shadow: 0px 0px 10px 0px $color-00;
-    }
-}
-
-
 
 
 .noscript {
-    color: $color-70;
-    background-color: $color-00;
+    color: $color-warning;
 }

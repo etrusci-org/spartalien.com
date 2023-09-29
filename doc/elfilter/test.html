@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        /* cosmetics and test stuff */
+        body { background-color: #000; padding: 1rem; }
+        body, a { color: #ccc; }
+        table { border-collapse: collapse; }
+        td { border: 1px solid; }
+
+        /* classes and style examples by and for elfilter */
+        .hide { display: none; }
+    </style>
+</head>
+<body>
+
+
+    <input type="text" class="elfilter-input">
+
+    <hr>
+
+    <table class="elfilter">
+        <tbody>
+            <tr>
+                <td>Foo</td>
+                <td>Bar</td>
+            </tr>
+            <tr>
+                <td>Moo</td>
+                <td>Cow</td>
+            </tr>
+            <tr>
+                <td>Batman</td>
+                <td>Joker</td>
+            </tr>
+            <tr>
+                <td>Silence</td>
+                <td>Music</td>
+            </tr>
+            <tr>
+                <td>Silence</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>-</td>
+                <td>Music</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <ul class="elfilter">
+        <li>Foo Bar</li>
+        <li>Foo</li>
+        <li>Bar</li>
+        <li>Bar1</li>
+        <li>Bar2</li>
+        <li>Bar3</li>
+    </ul>
+
+    <hr>
+
+    <input type="text" class="elfilter-input">
+
+
+
+
+    <script type="module">
+        import { ElFilter } from '../../app/public/res/elfilter.js'
+
+        const EF = new ElFilter()
+        EF.init()
+    </script>
+
+
+
+
+</body>
+</html>

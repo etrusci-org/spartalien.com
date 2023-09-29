@@ -1,0 +1,28 @@
+// share-tech-regular - latin
+@font-face {
+    font-display: swap;
+    font-family: 'Share Tech';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./vendor/share-tech-v21-latin-regular.woff2') format('woff2');
+}
+
+
+// share-tech-mono-regular - latin
+@font-face {
+    font-display: swap;
+    font-family: 'Share Tech Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./vendor/share-tech-mono-v15-latin-regular.woff2') format('woff2');
+}
+
+
+// noto-sans-200 - latin
+@font-face {
+    font-display: swap;
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 200;
+    src: url('./vendor/noto-sans-v30-latin-200.woff2') format('woff2');
+}

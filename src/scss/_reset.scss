@@ -1,56 +1,114 @@
-// _reset
+@use '../vendor/modern-normalize-2.0.0/modern-normalize.css';
+
 
 html,
 body,
+noscript,
 header,
-main,
 nav,
-div,
+main,
+footer,
+hr,
 h1,
 h2,
 h3,
-label,
-input,
-textarea,
+div,
 p,
 ul,
 li,
-hr,
+span,
+label,
 table,
 thead,
 tbody,
 tr,
 th,
 td,
+code,
+pre,
 a,
-iframe,
-img,
-audio,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
-
-
-body {
-    text-rendering: geometricPrecision;
-}
-
-
-a,
-input,
-textarea {
-    outline: none;
-}
-
-
-iframe,
 img,
 audio,
 video,
-textarea {
+iframe,
+input,
+button,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    border-style: solid;
+    border-color: currentColor;
+}
+
+
+html {
+    line-height: 1;
+    text-underline-offset: 5px;
+    -webkit-text-size-adjust: 100%;
+    -moz-tab-size: 4;
+    tab-size: 4;
+}
+
+
+header,
+nav,
+main,
+footer {
+    display: block;
+}
+
+
+h1,
+h2,
+h3,
+th,
+code,
+pre {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+
+ul {
+    list-style: none;
+    padding-inline: 0;
+}
+
+
+label {
+    display: block;
+}
+
+
+table {
+    text-align: left;
+    border-collapse: collapse;
+}
+
+
+.box,
+table,
+pre {
     max-width: 100%;
-    // height: auto; // this would set height to 0 in Edge, TODO: investigate
-    box-sizing: border-box;
+    overflow: scroll;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+    outline: none;
+    cursor: pointer;
+}
+
+
+img,
+audio,
+video,
+iframe {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }

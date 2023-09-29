@@ -1,4 +1,4 @@
-# LICENSE
+# spartalien.com - License
 
 Everything, unless noted otherwise: **Copyright SPARTALIEN (spartalien.com)**
 
@@ -8,25 +8,24 @@ You are allowed to re-use parts of the source code I've wrote. E.g. if you find 
 
 ---
 
-## Stuff Made By Other Entities
 
-Thanks to [Carrois Apostrophe](https://carrois.com) for:
 
-- `app/public/res/vendor/share-tech-v17-latin-regular.woff` ([Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL))
-- `app/public/res/vendor/share-tech-v17-latin-regular.woff2` ([Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL))
 
-Thanks to [Icons8](https://icons8.com) for:
+## Credits
 
-- `app/public/res/vendor/ico-bandcamp.svg` ([Universal Multimedia Licensing Agreement For Icons8](https://intercom.help/icons8-7fb7577e8170/en/articles/5534926-universal-multimedia-licensing-agreement-for-icons8))
-- `app/public/res/vendor/ico-spotify.svg` ([Universal Multimedia Licensing Agreement For Icons8](https://intercom.help/icons8-7fb7577e8170/en/articles/5534926-universal-multimedia-licensing-agreement-for-icons8))
-- `app/public/res/vendor/ico-search.svg` ([Universal Multimedia Licensing Agreement For Icons8](https://intercom.help/icons8-7fb7577e8170/en/articles/5534926-universal-multimedia-licensing-agreement-for-icons8))
-- `app/public/res/vendor/ico-exit.svg` ([Universal Multimedia Licensing Agreement For Icons8](https://intercom.help/icons8-7fb7577e8170/en/articles/5534926-universal-multimedia-licensing-agreement-for-icons8))
+Thanks to [Noto Fonts Project](https://github.com/notofonts) for:
 
-Thanks to *Unknown Author* for:
+- `src/vendor/noto-sans-v30-latin-200.woff2` ([Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL))
 
-- `app/public/res/vendor/err404.mp4`
+Thanks to [Carrois Apostrophe](https://carrois.com/) for:
 
----
+- `src/vendor/share-tech-mono-v15-latin-regular.woff2` ([Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL))
+- `src/vendor/share-tech-v21-latin-regular.woff2` ([Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL))
 
-- [README](README.md)
-- [LICENSE](LICENSE.md) ←
+Thanks to [Sindre Sorhus](https://github.com/sindresorhus) for:
+
+- `src/vendor/modern-normalize-v2.0.0` ([MIT License](./src/vendor/modern-normalize-2.0.0/license))
+
+Thanks to *Unknown Creator* for:
+
+- `src/vendor/err404.mp4`

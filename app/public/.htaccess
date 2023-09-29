@@ -1,16 +1,26 @@
-AddDefaultCharset UTF-8
 ServerSignature Off
-Options -Indexes
-Options -MultiViews
-
+AddDefaultCharset UTF-8
 AddType application/xml      .xml
 AddType application/atom+xml .atom
 
-RewriteEngine On
+<IfModule mod_negotiation.c>
+    Options -MultiViews -Indexes
+</IfModule>
 
-# FILES REDIRECT FOR DEV ENV:
-RewriteRule ^file(/.*)?$ /spartalien.com-files/file$1 [R=302,L]
+<IfModule mod_rewrite.c>
+    RewriteEngine On
 
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php?r=$1 [L]
+    # Files redirect for dev env
+    # DO NOT USE ON PRODUCTION SERVER!
+    RewriteRule ^file(/.*)?$ /spartalien.com-files/file$1 [R=302,L]
+
+    # Fix trailing slashes on non-directories
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Send requests to index.php if not an existing file or directory
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(?!index\.php)(.*)$ index.php?route=$1 [L]
+</IfModule>

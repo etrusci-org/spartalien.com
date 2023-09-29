@@ -1,0 +1,2 @@
+.read ./src/db/schema.sql
+.read ./src/db/data.sql
