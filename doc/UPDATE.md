@@ -5,6 +5,8 @@
 
 ## Local
 
+Stop all running build tasks.
+
 Run `rebuild.sh`.
 
 ---

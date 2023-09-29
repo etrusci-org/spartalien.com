@@ -15,6 +15,9 @@
 </body>
 </html>
 <!--
-<?php print($this->Router->get_route_id().' '.$this->_json_enc($this->Router->route).PHP_EOL); ?>
-<https://github.com/etrusci-org/spartalien.com/>
+- <?php print($this->Router->get_route_id().' '.$this->_json_enc($this->Router->route).PHP_EOL); ?>
+- <https://validator.w3.org/nu/?doc=<?php print(urlencode($this->conf['site_url'].$this->Router->route['request'])); ?>>
+- <https://validator.w3.org/feed/check.cgi?url=<?php print(urlencode($this->conf['site_url'].'news.atom')); ?>>
+- <https://github.com/etrusci-org/spartalien.com/>
+- <https://www.codefactor.io/repository/github/etrusci-org/spartalien.com>
 -->

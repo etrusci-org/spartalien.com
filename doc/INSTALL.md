@@ -5,6 +5,8 @@
 
 ## Prepare Local Files
 
+Stop all running build tasks.
+
 Run `rebuild.sh`.
 
 Set `MAINTENANCE_MODE` in `app/public/index.php` to `true`.
