@@ -66,3 +66,12 @@ In `/home/protected/v9.app/conf.php`:
 ## Go Live
 
 Set `MAINTENANCE_MODE` in `/home/public/index.php` back to `false`.
+
+---
+
+
+
+
+## Local Files Aftermath
+
+Set `MAINTENANCE_MODE` in `app/public/index.php` back to `false`.
