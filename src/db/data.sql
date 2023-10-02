@@ -1217,6 +1217,7 @@ INSERT INTO stuff (id, name, description) VALUES (1, 'Radio-Dark-Tunnel Jingles'
 INSERT INTO stuff (id, name, description) VALUES (2, 'Track 32/2', 'Just a short tune.');
 INSERT INTO stuff (id, name, description) VALUES (3, 'Making of Memoria S9M2, 2358 Limited Edition', 'Get yours [here](./physical/id:2).');
 INSERT INTO stuff (id, name, description) VALUES (4, 'GhostTownTunes Voice-Over', 'Livestream voice-over made for [GhostTownTunes](//twitch.tv/ghosttowntunes).');
+INSERT INTO stuff (id, name, description) VALUES (5, 'Theme music for Podcast für Inneres & Äusseres', 'Podcast theme music made for Marco Riva''s [Podcast für Inneres & Äusseres](//open.spotify.com/show/1UHOsHHmqv7IMQwpjjlTeJ). You can hear the Intro, Interlude and Outro in the Episodes.');
 
 
 INSERT INTO stuff_media (stuff_id, code) VALUES (1, '{"type": "audio", "slug": "./file/rdt-jingles/rdt-jingle-1.mp3", "label": "rdt-jingle-1"}');
@@ -1236,6 +1237,8 @@ INSERT INTO stuff_media (stuff_id, code) VALUES (3, '{"type": "youtubevideo", "s
 INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "audio", "slug": "./file/gtt-voiceovers/gtt-voiceover-1.mp3", "label": "gtt-voiceover-1"}');
 INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "audio", "slug": "./file/gtt-voiceovers/gtt-voiceover-1-neithernoisenordub.mp3", "label": "gtt-voiceover-1-neithernoisenordub"}');
 INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "audio", "slug": "./file/gtt-voiceovers/gtt-voiceover-1-nonoise.mp3", "label": "gtt-voiceover-1-nonoise"}');
+INSERT INTO stuff_media (stuff_id, code) VALUES (5, '{"type": "spotifyepisode", "slug": "4u7uwBK7atMx9NlYj0LBCp"}');
+INSERT INTO stuff_media (stuff_id, code) VALUES (5, '{"type": "link", "slug": "//open.spotify.com/show/1UHOsHHmqv7IMQwpjjlTeJ", "text": "Podcast on Spotify"}');
 
 
 INSERT INTO news (id, pub_date) VALUES (1, '2016-03-24');

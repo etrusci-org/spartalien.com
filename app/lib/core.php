@@ -5,25 +5,20 @@ namespace s9com;
 
 class Core
 {
-    protected array    $conf;
-    protected array    $version;
-    protected Database $DB;
-    protected Router   $Router;
-    protected Logger   $Logger;
-
-
-    public function __construct(array $conf, array $version, Database $DB, Router $Router, Logger $Logger)
-    {
-        $this->conf    = $conf;
-        $this->version = $version;
-        $this->DB      = $DB;
-        $this->Router  = $Router;
-        $this->Logger  = $Logger;
-    }
+    public function __construct(
+        protected array $conf,
+        protected array $version,
+        protected Database $DB,
+        protected Router $Router,
+        protected Logger $Logger,
+        protected ActiveVisitors $ActiveVisitors,
+    ) {}
 
 
     public function render_output(?array $page_files = null, array $default_page_files = ['_header', '*node', '_footer']): void
     {
+        $this->ActiveVisitors->log_activity();
+
         if (!$page_files) {
             $page_files = $default_page_files;
         }

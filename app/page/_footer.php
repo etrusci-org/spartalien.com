@@ -7,6 +7,23 @@
         <p>{ <a href="./purchase">Purchase</a> &middot; <a href="./privacy">Privacy</a> }</p>
         <p><img src="./res/logo-small.png" alt="Logo" title="SPARTALIEN"></p>
         <p>&copy; <?php print(date('Y')); ?> SPARTALIEN</p>
+        <p class="activevisitors">
+            ~ active visitors ~<br>
+            {nocache}
+            <?php
+            $activity = $this->ActiveVisitors->get_activity();
+            while ($row = $activity->fetchArray())
+            {
+                printf('
+                    <img src="https://www.gravatar.com/avatar/%1$s.jpg?s=50&default=retro" loading="lazy" alt="visitor" title="last seen %2$s seconds ago on %3$s">',
+                    $row['client_hash'],
+                    time() - $row['last_seen'],
+                    $row['last_location'],
+                );
+            }
+            ?>
+            {/nocache}
+        </p>
     </footer>
 
     <div class="imgzoom-target"></div>
