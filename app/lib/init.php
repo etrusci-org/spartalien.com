@@ -11,6 +11,7 @@ require $APP_DIR.'/lib/core.php';
 require $APP_DIR.'/lib/database.php';
 require $APP_DIR.'/lib/router.php';
 require $APP_DIR.'/lib/logger.php';
+require $APP_DIR.'/lib/activevisitors.php';
 
 
 // Set some php settings
@@ -69,16 +70,21 @@ if ($node_settings['page_files']) {
 $Logger = new Logger($conf['log_dir']);
 
 
+
+// Init ActiveVisitors
+$ActiveVisitors = new ActiveVisitors(db_file: $APP_DIR.'/db/activevisitors.sqlite3', testmode: false);
+
+
 // Init app
 foreach ($node_middleware_files as $v) {
     require $v;
 }
 
 if (!class_exists('\s9com\Page')) {
-    $App = new Core($conf, $version, $DB, $Router, $Logger);
+    $App = new Core($conf, $version, $DB, $Router, $Logger, $ActiveVisitors);
 }
 else {
-    $App = new Page($conf, $version, $DB, $Router, $Logger);
+    $App = new Page($conf, $version, $DB, $Router, $Logger, $ActiveVisitors);
 }
 
 // Janitor
@@ -89,6 +95,7 @@ unset(
     $DB,
     $Router,
     $Logger,
+    $ActiveVisitors,
     $node_middleware_files,
     $node_settings,
 );
