@@ -8,4 +8,4 @@ if [ -f $dbfile ]; then
     exit 1
 fi
 
-sqlite3 -init $initfile $dbfile
+sqlite3 -init $initfile $dbfile ''
