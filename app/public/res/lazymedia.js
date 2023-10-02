@@ -10,6 +10,7 @@ export class LazyMedia {
         bandcamptrack: 'https://bandcamp.com/EmbeddedPlayer/track={SLUG}/tracklist=false/size=large/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/',
         bandcampalbum: 'https://bandcamp.com/EmbeddedPlayer/album={SLUG}/tracklist=true/size=large/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/',
         spotifytrack: 'https://open.spotify.com/embed/track/{SLUG}/?theme=0',
+        spotifyepisode: 'https://open.spotify.com/embed/episode/{SLUG}/?theme=0',
         spotifyalbum: 'https://open.spotify.com/embed/album/{SLUG}/?theme=0',
         spotifyplaylist: 'https://open.spotify.com/embed/playlist/{SLUG}/?theme=0',
         mixcloudshow: 'https://player-widget.mixcloud.com/widget/iframe/?feed=/{SLUG}/&hide_cover=1&hide_artwork=1',
@@ -179,6 +180,17 @@ export class LazyMedia {
         }
         if (code.type == 'spotifytrack') {
             code.slug = this.slug_template.spotifytrack.replace('{SLUG}', code.slug);
+            if (code.usetheme) {
+                code.slug = code.slug.replace('theme=0', 'theme=1');
+            }
+            baked_element = document.createElement('iframe');
+            baked_element.setAttribute('src', code.slug);
+            baked_element.setAttribute('loading', 'lazy');
+            this.#add_code_attr(code, baked_element);
+            this.#add_code_css(code, baked_element);
+        }
+        if (code.type == 'spotifyepisode') {
+            code.slug = this.slug_template.spotifyepisode.replace('{SLUG}', code.slug);
             if (code.usetheme) {
                 code.slug = code.slug.replace('theme=0', 'theme=1');
             }
