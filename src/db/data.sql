@@ -1071,7 +1071,7 @@ INSERT INTO visual (id, name, pub_date, tool, description) VALUES (32, 'Back and
 INSERT INTO visual (id, name, pub_date, tool, description) VALUES (33, 'The planet (Part 1-5)', '2012', 'Photography, GIMP', NULL);
 INSERT INTO visual (id, name, pub_date, tool, description) VALUES (34, 'It''s gonna come down on you anyway...', '2013', 'Photography, GIMP', NULL);
 INSERT INTO visual (id, name, pub_date, tool, description) VALUES (35, 'The ghost in my world', '2014', 'Photography, GIMP', NULL);
-INSERT INTO visual (id, name, pub_date, tool, description) VALUES (36, 'Audionaut', '2016', 'GIMP', 'If you think you''ve seen this before, you probably did. It''s a remake of an old logo I once designed (and am using now for the [Planet 420)(./planet420) coverart images).');
+INSERT INTO visual (id, name, pub_date, tool, description) VALUES (36, 'Audionaut', '2016', 'GIMP', 'If you think you''ve seen this before, you probably did. It''s a remake of an old logo I once designed (and am using now for the [Planet 420](./planet420) coverart images).');
 INSERT INTO visual (id, name, pub_date, tool, description) VALUES (37, 'Eventually', '2021', 'Blender, Resolve', NULL);
 INSERT INTO visual (id, name, pub_date, tool, description) VALUES (38, 'Lost memory', '2021', 'Blender, Resolve', NULL);
 INSERT INTO visual (id, name, pub_date, tool, description) VALUES (39, 'Tunnel B21.4.3', '2021', 'Blender, Resolve', NULL);
