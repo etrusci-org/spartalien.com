@@ -29,7 +29,7 @@ class Core
         if ($this->Router->route['node'] == $this->Router->error_node) {
             $compile_file = $this->conf['cache_dir'].'/compiled_'.$this->Router->error_node.'.php';
             $cache_file = $this->conf['cache_dir'].'/cached_'.$this->Router->error_node.'.php';
-            $this->Logger->log('error 404 - client_ip='.$this->_get_client_ip().' - request='.$this->Router->route['request']);
+            $this->Logger->log('error 404 | request='.$this->Router->route['request'].' | client_ip='.$this->_get_client_ip().' | client_agent='.($_SERVER['HTTP_USER_AGENT'] ?? 'none'));
         }
         else {
             $compile_file = $this->conf['cache_dir'].'/compiled_'.$cache_id.'.php';
