@@ -6,7 +6,7 @@ export class Scur
     /* only compile this method if you need to encode a string:
     ob(data: string): string
     {
-        const hash: string = this._r(btoa(this._r(this.s + data)))
+        const hash: string = this.#_r(btoa(this.#_r(this.s + data)))
         const dump: number[] = []
 
         hash.split('').forEach((v) => {
