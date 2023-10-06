@@ -246,11 +246,6 @@ $conf['valid_request_patterns'] = [
         'valuesTable' => '',
         'valuesCol' => [],
     ],
-    [
-        'route' => '/^play$/',
-        'valuesTable' => '',
-        'valuesCol' => [],
-    ],
 ];
 
 // ----------------------------------------------------------------------------
@@ -338,11 +333,6 @@ $conf['pre_render_settings'] = [
         'page_files' => [],
     ],
     'purchase' => [
-        'headers' => [],
-        'middleware_files' => [],
-        'page_files' => [],
-    ],
-    'play' => [
         'headers' => [],
         'middleware_files' => [],
         'page_files' => [],
