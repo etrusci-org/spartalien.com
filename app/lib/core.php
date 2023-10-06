@@ -43,7 +43,7 @@ class Core
         if ($this->conf['caching_ttl'] < 0) {
             ob_start();
 
-            require $brain_file;
+            include $brain_file;
 
             foreach ($page_files as $v) {
                 if ($v == '*node') {
@@ -61,71 +61,73 @@ class Core
             ob_end_clean();
 
             print($buffer);
+            return;
         }
+
         // Or load from cache if still valid
-        else if (
+        if (
             is_file($cache_file) &&
             (time() - filemtime($cache_file)) < $this->conf['caching_ttl']
         ) {
             include $cache_file;
+            return;
         }
+
         // Or bake cache if caching is enabled and there's none yet
-        else {
-            // Turn on output buffering
-            ob_start();
+        // Turn on output buffering
+        ob_start();
 
-            require $brain_file;
+        include $brain_file;
 
-            // Load raw code
-            $code = '';
-            foreach ($page_files as $v) {
-                if ($v == '*node') {
-                    $code .= file_get_contents($this->conf['page_dir'].'/'.$this->Router->route['node'].'.php');
-                }
-                else if ($v) {
-                    $code .= file_get_contents($this->conf['page_dir'].'/'.$v.'.php');
-                }
+        // Load raw code
+        $code = '';
+        foreach ($page_files as $v) {
+            if ($v == '*node') {
+                $code .= file_get_contents($this->conf['page_dir'].'/'.$this->Router->route['node'].'.php');
             }
-
-            // find nocache blocks in code and remember them
-            preg_match_all('/{nocache}(.*?){\/nocache}/sm', $code, $m, PREG_PATTERN_ORDER);
-            $nocache_blocks = [];
-            if ($m) {
-                foreach ($m[0] as $k => $v) {
-                    $nocache_blocks['nocache_'.$k.'_'.$cache_id] = [
-                        'search' => $v,
-                        'replace' => $m[1][$k],
-                    ];
-                }
+            else if ($v) {
+                $code .= file_get_contents($this->conf['page_dir'].'/'.$v.'.php');
             }
-
-            // Replace ncblocks with idstr
-            foreach ($nocache_blocks as $block_id => $v) {
-                $code = str_replace($v['search'], $block_id, $code);
-            }
-
-            // Store current code to file
-            file_put_contents($compile_file, $code, LOCK_EX);
-
-            // Run current code and buffer output
-            include $compile_file;
-            $buffer = ob_get_contents();
-            ob_clean();
-
-            // Replace idstr in current output buffer with ncblockcode
-            foreach ($nocache_blocks as $block_id => $v) {
-                $buffer = str_replace($block_id, $v['replace'], $buffer);
-            }
-
-            // Store current buffer to file
-            file_put_contents($cache_file, $buffer, LOCK_EX);
-
-            // Run current output buffer
-            include $cache_file;
-
-            // Turn off output buffering and send buffer
-            ob_end_flush();
         }
+
+        // find nocache blocks in code and remember them
+        preg_match_all('/{nocache}(.*?){\/nocache}/sm', $code, $m, PREG_PATTERN_ORDER);
+        $nocache_blocks = [];
+        if ($m) {
+            foreach ($m[0] as $k => $v) {
+                $nocache_blocks['nocache_'.$k.'_'.$cache_id] = [
+                    'search' => $v,
+                    'replace' => $m[1][$k],
+                ];
+            }
+        }
+
+        // Replace ncblocks with idstr
+        foreach ($nocache_blocks as $block_id => $v) {
+            $code = str_replace($v['search'], $block_id, $code);
+        }
+
+        // Store current code to file
+        file_put_contents($compile_file, $code, LOCK_EX);
+
+        // Run current code and buffer output
+        include $compile_file;
+        $buffer = ob_get_contents();
+        ob_clean();
+
+        // Replace idstr in current output buffer with ncblockcode
+        foreach ($nocache_blocks as $block_id => $v) {
+            $buffer = str_replace($block_id, $v['replace'], $buffer);
+        }
+
+        // Store current buffer to file
+        file_put_contents($cache_file, $buffer, LOCK_EX);
+
+        // Run current output buffer
+        include $cache_file;
+
+        // Turn off output buffering and send buffer
+        ob_end_flush();
     }
 
 
