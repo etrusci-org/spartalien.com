@@ -15,10 +15,9 @@
             while ($row = $activity->fetchArray())
             {
                 printf('
-                    <img src="https://www.gravatar.com/avatar/%1$s.jpg?s=50&default=retro" loading="lazy" alt="visitor" title="last seen %2$s seconds ago on %3$s">',
+                    <img src="https://www.gravatar.com/avatar/%1$s.jpg?s=50&default=retro" loading="lazy" alt="visitor" title="last seen %2$s seconds ago">',
                     $row['client_hash'],
                     time() - $row['last_seen'],
-                    $row['last_location'],
                 );
             }
             ?>
@@ -31,10 +30,4 @@
     <script type="module" src="./res/main.js?v=<?php print($this->version['js']); ?>"></script>
 </body>
 </html>
-<!--
-- <?php print($this->Router->get_route_id().' '.$this->_json_enc($this->Router->route).PHP_EOL); ?>
-- <https://validator.w3.org/nu/?doc=<?php print(urlencode($this->conf['site_url'].$this->Router->route['request'])); ?>>
-- <https://validator.w3.org/feed/check.cgi?url=<?php print(urlencode($this->conf['site_url'].'news.atom')); ?>>
-- <https://github.com/etrusci-org/spartalien.com/>
-- <https://www.codefactor.io/repository/github/etrusci-org/spartalien.com>
--->
+<!-- <?php print($this->Router->get_route_id().' '.$this->_json_enc($this->Router->route)); ?> -->

@@ -18,7 +18,7 @@ class Logger
 
     public function log(string $message): void
     {
-        $line = microtime(true).' - '.$message.PHP_EOL;
+        $line = microtime(true).' | '.date('Y-m-d H:i:s T').' | '.$message.PHP_EOL;
         file_put_contents($this->current_log_file, $line, LOCK_EX | FILE_APPEND);
     }
 }
