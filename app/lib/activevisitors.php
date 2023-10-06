@@ -1,12 +1,8 @@
 <?php
 declare(strict_types=1);
-
-
 namespace s9com;
 use SQLite3;
 use SQLite3Result;
-
-
 
 
 class ActiveVisitors
