@@ -29,7 +29,7 @@ class Core
         if ($this->Router->route['node'] == $this->Router->error_node) {
             $compile_file = $this->conf['cache_dir'].'/compiled_'.$this->Router->error_node.'.php';
             $cache_file = $this->conf['cache_dir'].'/cached_'.$this->Router->error_node.'.php';
-            $this->Logger->log('error 404 | request='.$this->Router->route['request'].' | client_ip='.$this->_get_client_ip().' | client_agent='.($_SERVER['HTTP_USER_AGENT'] ?? 'none'));
+            $this->Logger->log('error 404 | request='.$this->Router->route['request'].' | '.$this->_get_client_log_info());
         }
         else {
             $compile_file = $this->conf['cache_dir'].'/compiled_'.$cache_id.'.php';
@@ -41,26 +41,7 @@ class Core
 
         // Load fast if caching is disabled
         if ($this->conf['caching_ttl'] < 0) {
-            ob_start();
-
-            include $brain_file;
-
-            foreach ($page_files as $v) {
-                if ($v == '*node') {
-                    include $this->conf['page_dir'].'/'.$this->Router->route['node'].'.php';
-                }
-                else if ($v) {
-                    include $this->conf['page_dir'].'/'.$v.'.php';
-                }
-            }
-
-            $buffer = ob_get_contents();
-            $buffer = str_replace('{nocache}', '', $buffer);
-            $buffer = str_replace('{/nocache}', '', $buffer);
-
-            ob_end_clean();
-
-            print($buffer);
+            $this->_render_fast($brain_file, $page_files);
             return;
         }
 
@@ -69,12 +50,48 @@ class Core
             is_file($cache_file) &&
             (time() - filemtime($cache_file)) < $this->conf['caching_ttl']
         ) {
-            include $cache_file;
+            $this->_render_from_cache($cache_file);
             return;
         }
 
         // Or bake cache if caching is enabled and there's none yet
-        // Turn on output buffering
+        $this->_render_bake_and_output_cache($brain_file, $cache_id, $compile_file, $cache_file, $page_files);
+    }
+
+
+    protected function _render_fast(string $brain_file, array $page_files): void
+    {
+        ob_start();
+
+        include $brain_file;
+
+        foreach ($page_files as $v) {
+            if ($v == '*node') {
+                include $this->conf['page_dir'].'/'.$this->Router->route['node'].'.php';
+            }
+            else if ($v) {
+                include $this->conf['page_dir'].'/'.$v.'.php';
+            }
+        }
+
+        $buffer = ob_get_contents();
+        $buffer = str_replace('{nocache}', '', $buffer);
+        $buffer = str_replace('{/nocache}', '', $buffer);
+
+        ob_end_clean();
+
+        print($buffer);
+    }
+
+
+    protected function _render_from_cache(string $cache_file): void
+    {
+        include $cache_file;
+    }
+
+
+    protected function _render_bake_and_output_cache(string $brain_file, string $cache_id, string $compile_file, string $cache_file, array $page_files): void
+    {
         ob_start();
 
         include $brain_file;
@@ -243,6 +260,12 @@ class Core
         }
 
         return sprintf('%d:%02d', $dur['m'], $dur['s']);
+    }
+
+
+    protected function _get_client_log_info(): string
+    {
+        return 'client_ip='.$this->_get_client_ip().' | client_agent='.($_SERVER['HTTP_USER_AGENT'] ?? 'none');
     }
 
 
