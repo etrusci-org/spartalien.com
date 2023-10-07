@@ -1237,6 +1237,7 @@ INSERT INTO stuff_media (stuff_id, code) VALUES (3, '{"type": "youtubevideo", "s
 INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "audio", "slug": "./file/gtt-voiceovers/gtt-voiceover-1.mp3", "label": "gtt-voiceover-1"}');
 INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "audio", "slug": "./file/gtt-voiceovers/gtt-voiceover-1-neithernoisenordub.mp3", "label": "gtt-voiceover-1-neithernoisenordub"}');
 INSERT INTO stuff_media (stuff_id, code) VALUES (4, '{"type": "audio", "slug": "./file/gtt-voiceovers/gtt-voiceover-1-nonoise.mp3", "label": "gtt-voiceover-1-nonoise"}');
+INSERT INTO stuff_media (stuff_id, code) VALUES (5, '{"type": "image", "slug": "./file/podcast-riva.jpg", "linkto": "./file/podcast-riva.jpg"}');
 INSERT INTO stuff_media (stuff_id, code) VALUES (5, '{"type": "spotifyepisode", "slug": "4u7uwBK7atMx9NlYj0LBCp"}');
 INSERT INTO stuff_media (stuff_id, code) VALUES (5, '{"type": "link", "slug": "//open.spotify.com/show/1UHOsHHmqv7IMQwpjjlTeJ", "text": "Podcast on Spotify"}');
 

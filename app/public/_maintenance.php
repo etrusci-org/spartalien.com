@@ -1,7 +1,7 @@
 <?php
 error_reporting(0);
 date_default_timezone_set('UTC');
-const RELOAD_INTERVAL = 10;
+const RELOAD_INTERVAL = 60;
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
