@@ -87,6 +87,7 @@ else {
     $App = new Page($conf, $version, $DB, $Router, $Logger, $ActiveVisitors);
 }
 
+
 // Janitor
 unset(
     $conf, // from conf.php

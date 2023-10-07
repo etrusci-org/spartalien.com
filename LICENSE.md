@@ -29,3 +29,7 @@ Thanks to [Sindre Sorhus](https://github.com/sindresorhus) for:
 Thanks to *Unknown Creator* for:
 
 - `src/vendor/err404.mp4`
+
+Thanks to [Gravatar API](https://gravatar.com/site/implement/) for:
+
+- Avatars of *active visitor*

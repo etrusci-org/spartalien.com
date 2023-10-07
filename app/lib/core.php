@@ -29,7 +29,7 @@ class Core
         if ($this->Router->route['node'] == $this->Router->error_node) {
             $compile_file = $this->conf['cache_dir'].'/compiled_'.$this->Router->error_node.'.php';
             $cache_file = $this->conf['cache_dir'].'/cached_'.$this->Router->error_node.'.php';
-            $this->Logger->log('error 404 | request='.$this->Router->route['request'].' | '.$this->_get_client_log_info());
+            $this->Logger->log('error 404');
         }
         else {
             $compile_file = $this->conf['cache_dir'].'/compiled_'.$cache_id.'.php';
@@ -260,44 +260,6 @@ class Core
         }
 
         return sprintf('%d:%02d', $dur['m'], $dur['s']);
-    }
-
-
-    protected function _get_client_log_info(): string
-    {
-        return 'client_ip='.$this->_get_client_ip().' | client_agent='.($_SERVER['HTTP_USER_AGENT'] ?? 'none');
-    }
-
-
-    public static function _get_client_ip(): string|null
-    {
-        $ip = null;
-
-        if (isset($_SERVER['REMOTE_ADDR'])) {
-            $ip = $_SERVER['REMOTE_ADDR'];
-        }
-
-        if (isset($_SERVER['HTTP_CLIENT_IP'])) {
-            $ip = $_SERVER['HTTP_CLIENT_IP'];
-        }
-
-        if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-            $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-        }
-
-        // HTTP_X_FORWARDED_FOR usually contains more than one ip: client, proxy1, proxy2, ..., but we only want the client ip.
-        if (is_string($ip) && strstr($ip, ',')) {
-            $dump = explode(',', $ip);
-            if (is_array($dump) && isset($dump[0])) {
-                $ip = trim($dump[0]);
-            }
-        }
-
-        if (!filter_var($ip, FILTER_VALIDATE_IP)) {
-            $ip = null;
-        }
-
-        return $ip;
     }
 
 
