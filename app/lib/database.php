@@ -41,19 +41,19 @@ class Database
     }
 
 
-    public function query(string $query, array $values = []): array|false
+    public function query(string $query, array $values = []): array|null
     {
-        if (!($this->DB instanceof SQLite3)) return false;
+        if (!($this->DB instanceof SQLite3)) return null;
 
         $stmt = $this->DB->prepare($query);
-        if (!$stmt) return false;
+        if (!$stmt) return null;
 
         foreach ($values as $v) {
             $stmt->bindValue($v[0], $v[1], $v[2]);
         }
 
         $result = $stmt->execute();
-        if (!$result) return false;
+        if (!$result) return null;
 
         $dump = [];
         while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
@@ -66,20 +66,21 @@ class Database
     }
 
 
-    public function query_single(string $query, array $values = []): array|false
+    public function query_single(string $query, array $values = []): array|null
     {
-        if (!($this->DB instanceof SQLite3)) return false;
+        if (!($this->DB instanceof SQLite3)) return null;
 
         $result = $this->query($query, $values);
 
         if (!$result || count($result) < 1) {
-            return false;
+            return null;
         }
 
         return $result[0];
     }
 
 
+    /*
     public function write(string $query, array $values = []): SQLite3Result|false
     {
         if (!($this->DB instanceof SQLite3)) return false;
@@ -94,4 +95,5 @@ class Database
 
         return $stmt->execute();
     }
+    */
 }
