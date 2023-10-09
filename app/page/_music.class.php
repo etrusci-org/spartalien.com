@@ -159,6 +159,26 @@ class Page extends Core
         $dump['track_runtime_human'] = $this->_seconds_to_dhms($dump['track_runtime']);
         $dump['track_credit'] = $this->get_credit('track', $dump['track_id']);
         $dump['track_dist'] = $this->get_dist('track', $dump['track_id']);
+        $dump['track_appears_on'] = $this->get_appears_on($dump['track_id']);
+
+        return $dump ?? [];
+    }
+
+
+    protected function get_appears_on(int $track_id): array
+    {
+        $dump = $this->DB->query('
+            SELECT
+                rls_tracklist.rls_id AS rls_id,
+                rls.name AS rls_name
+            FROM rls_tracklist
+            LEFT JOIN track ON track.id = rls_tracklist.track_id
+            LEFT JOIN rls ON rls.id = rls_tracklist.rls_id
+            WHERE track.id = :track_id;',
+            [
+                ['track_id', $track_id, SQLITE3_INTEGER],
+            ]
+        );
 
         return $dump ?? [];
     }
