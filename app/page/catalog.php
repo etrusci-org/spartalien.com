@@ -45,11 +45,13 @@ if (isset($this->Router->route['var']['artist'])) {
                     <li>Type: Track</li>
                     <li>Artist: <a href="./catalog/artist:%1$s">%2$s</a></li>
                     <li>Runtime: %3$s</li>
+                    <li>Appears on:<br>%4$s</li>
                 </ul>
             </div>',
             $track['artist_id'],
             $this->_hsc($track['artist_name']),
             $track['track_runtime_human'],
+            implode('<br>', array_map(fn(array $v) => sprintf('<a href="./music/id:%1$s">%2$s</a>', $v['rls_id'], $this->_hsc($v['rls_name'])), $track['track_appears_on'])),
         );
         ?>
     </div>
