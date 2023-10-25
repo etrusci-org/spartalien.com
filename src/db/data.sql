@@ -1488,6 +1488,7 @@ INSERT INTO exit (id, text, url, description) VALUES (46, 'iMusician', '//imusic
 INSERT INTO exit (id, text, url, description) VALUES (47, 'Spooky Kitten Records', '//www.youtube.com/@SpookyKittenRecords', NULL);
 INSERT INTO exit (id, text, url, description) VALUES (48, 'Volume Control for Bandcamp', '//addons.mozilla.org/firefox/addon/bandcamp-player-volume-control', NULL);
 INSERT INTO exit (id, text, url, description) VALUES (49, 'RipCue', '//ripcue.com', NULL);
+INSERT INTO exit (id, text, url, description) VALUES (50, 'Bricolage', '//bricolageglasgow.bandcamp.com', NULL);
 
 
 INSERT INTO p420_session(num, pub_date, runtime, mixcloud_key) VALUES (1, '2021-05-04', 10370, NULL);
