@@ -15,9 +15,10 @@
             while ($row = $activity->fetchArray())
             {
                 printf('
-                    <img src="https://www.gravatar.com/avatar/%1$s.jpg?s=50&default=retro" loading="lazy" alt="visitor" title="last seen %2$s seconds ago">',
+                    <img src="https://www.gravatar.com/avatar/%1$s.jpg?s=50&default=retro" loading="lazy" alt="visitor" title="last seen %2$s seconds ago on %3$s">',
                     $row['client_hash'],
                     time() - $row['last_seen'],
+                    $row['last_location'],
                 );
             }
             ?>
