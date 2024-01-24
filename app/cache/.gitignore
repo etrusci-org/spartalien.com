@@ -1,2 +1,5 @@
 *
 !.gitignore
+!mixcloud-*-*.json
+!valid_requests.php
+!version.php
