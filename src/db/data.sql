@@ -1103,7 +1103,7 @@ INSERT INTO visual (id, name, pub_date, tool, description) VALUES (64, 'Promo Ar
 INSERT INTO visual (id, name, pub_date, tool, description) VALUES (65, 'X Minutes of Peace', '2018', 'Videography, Premiere', 'Relax.');
 INSERT INTO visual (id, name, pub_date, tool, description) VALUES (66, 'TOTAL FUCKING MADNESS', '2023-01', 'Resolve', 'TOTAL FUCKING MADNESS' || CHAR(10) || 'TOTAL FUCKING MADNESS' || CHAR(10) || 'TOTAL FUCKING MADNESS' || CHAR(10) || 'TOTAL FUCKING MADNESS' || CHAR(10) || 'TOTAL FUCKING MADNESS' || CHAR(10) || 'TOTAL FUCKING MADNESS' || CHAR(10, 10) || '00:00 Intro' || CHAR(10) || '00:32 Level 1' || CHAR(10) || '05:28 Level 2' || CHAR(10) || '10:00 Level 3' || CHAR(10) || '14:06 Level 4' || CHAR(10) || '17:48 Level 5' || CHAR(10) || '21:06 Level 6' || CHAR(10) || '23:58 Outro');
 INSERT INTO visual (id, name, pub_date, tool, description) VALUES (67, 'GhostTownTunes Logo', '2021', 'Blender, Resolve', 'Livestream logo made for [GhostTownTunes](http://twitch.tv/ghosttowntunes). Based on his original 2D logo made by *Unknown Creator*.');
-
+INSERT INTO visual (id, name, pub_date, tool, description) VALUES (68, 'Bird Feeder Cam - February 2024', '2024-02', 'Videography, Reaper, Resolve', 'Video of birds feeding in the bird feeder with music to contemplate to.' || CHAR(10) || 'Bird Feeder Cam - February 2024' || CHAR(10, 10) || 'Music:' || CHAR(10) || '- [Let It All Go, Volume 2 (Weatherless & Droneless Mix)](./catalog/track:80)' || CHAR(10) || '- 2 x [Custom Track](https://spartalien.bandcamp.com/album/bird-feeder-cam-february-2024-custom-tracks)' || CHAR(10) || '- [Let It All Go, Volume 1 (Waveless Mix)](./catalog/track:61)' || CHAR(10, 10) || 'Camera:' || CHAR(10) || 'Canon Legria HF R406' || CHAR(10, 10) || 'Birds Database:' || CHAR(10) || '[vogelwarte.ch](https://www.vogelwarte.ch/en/birds-of-switzerland/)' || CHAR(10, 10) || '00:00:00 Day 1' || CHAR(10) || '00:58:01 Day 2' || CHAR(10) || '02:34:08 Day 3');
 
 INSERT INTO visual_media (visual_id, code) VALUES (1, '{"type": "image", "slug": "./file/visual/2000-soia.jpg", "linkto": "./file/visual/2000-soia.jpg"}');
 INSERT INTO visual_media (visual_id, code) VALUES (2, '{"type": "image", "slug": "./file/preview/visual/2-1-med.jpg", "linkto": "./file/visual/2002-what_like-part1.jpg"}');
@@ -1211,6 +1211,8 @@ INSERT INTO visual_media (visual_id, code) VALUES (67, '{"type": "video", "slug"
 INSERT INTO visual_media (visual_id, code) VALUES (67, '{"type": "video", "slug": "./file/visual/20210420-gttlogo-2-silverblue.mp4", "attr": [["poster", "./file/preview/visual/67-6-tn.jpg"], ["autoplay", "autoplay"], ["loop", "loop"]]}');
 INSERT INTO visual_media (visual_id, code) VALUES (67, '{"type": "video", "slug": "./file/visual/20210420-gttlogo-2-silvergreen.mp4", "attr": [["poster", "./file/preview/visual/67-7-tn.jpg"], ["autoplay", "autoplay"], ["loop", "loop"]]}');
 INSERT INTO visual_media (visual_id, code) VALUES (67, '{"type": "video", "slug": "./file/visual/20210420-gttlogo-2-silverpurple.mp4", "attr": [["poster", "./file/preview/visual/67-8-tn.jpg"], ["autoplay", "autoplay"], ["loop", "loop"]]}');
+INSERT INTO visual_media (visual_id, code) VALUES (68, '{"type": "youtubevideo", "slug": "2m81naKeeTQ"}');
+INSERT INTO visual_media (visual_id, code) VALUES (68, '{"type": "link", "slug": "//spartalien.bandcamp.com/album/bird-feeder-cam-february-2024-custom-tracks", "text": "Custom audio tracks on Bandcamp"}');
 
 
 INSERT INTO stuff (id, name, description) VALUES (1, 'Radio-Dark-Tunnel Jingles', 'Radio station IDs/jingles made for [Radio-Dark-Tunnel](//radio-dark-tunnel.net).');
@@ -1312,6 +1314,7 @@ INSERT INTO news (id, pub_date) VALUES (67, '2023-07-13');
 INSERT INTO news (id, pub_date) VALUES (68, '2023-07-15');
 INSERT INTO news (id, pub_date) VALUES (69, '2023-05-27');
 INSERT INTO news (id, pub_date) VALUES (70, '2023-08-20');
+INSERT INTO news (id, pub_date) VALUES (71, '2024-02-18');
 
 
 INSERT INTO news_text (news_id, text) VALUES (1, 'New music: [Continuoduction](./music/id:1)');
@@ -1390,7 +1393,8 @@ INSERT INTO news_text (news_id, text) VALUES (66, 'New music: [THE DYING SPACESH
 INSERT INTO news_text (news_id, text) VALUES (67, 'New music: [Yellow Soul Grinder](./music/id:37)');
 INSERT INTO news_text (news_id, text) VALUES (68, 'Mentioned on: [SFTS: The Backrooms Comp : Level 2](./mention/id:14)');
 INSERT INTO news_text (news_id, text) VALUES (69, 'Mentioned on: [Spooky Kitten Records'' WHiTMiRE Reviews Music: Episode 76](./mention/id:15)');
-INSERT INTO news_text (news_id, text) VALUES (70, 'New music: [arT2 - Sound.Ex 1](./music/id:38). Just a back catalog release for completeness.');
+INSERT INTO news_text (news_id, text) VALUES (70, 'New (old) music: [arT2 - Sound.Ex 1](./music/id:38)');
+INSERT INTO news_text (news_id, text) VALUES (71, 'New visual: [Bird Feeder Cam - February 2024](./visual/id:68)');
 
 
 INSERT INTO mention (id, subject, year, description) VALUES (1, 'Live on MighTV 2020-11-18', '2020', 'The [Might](//might.digital) crew invited me to create some music on their livestream.');
