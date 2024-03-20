@@ -111,7 +111,7 @@
         <h3>Quotes</h3>
         <div class="grid-x-2">
             <p><a class="imgzoom" href="./file/tool/quotes.jpg"><img src="./file/preview/tool/quotes-tn.jpg" loading="lazy" alt="screenshot"></a></p>
-            <p>Words from people.</p>
+            <p>Curated words from people. Mostly about art and life.</p>
         </div>
         <ul>
             <li><a href="https://github.com/etrusci-org/quotes/#readme">README + Source at GitHub</a></li>

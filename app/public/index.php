@@ -3,7 +3,7 @@ declare(strict_types=1);
 namespace s9com;
 
 
-// Turn on maintenance mode on/off
+// Turn maintenance mode on/off
 const MAINTENANCE_MODE = false;
 
 // Path to app/lib/init.php

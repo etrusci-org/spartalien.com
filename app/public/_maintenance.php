@@ -18,7 +18,7 @@ const RELOAD_INTERVAL = 60;
 </head>
 <body>
     <h1><a href="https://spartalien.com">SPARTALIEN.COM</a> - Website Maintenance</h1>
-    <p>Updating the website. Everything will be back shortly. Thank you for your patience.</p>
+    <p>Updating the website. Everything should be back shortly. Thank you for your patience.</p>
     <p class="nfo">
         This page auto-reloads every minute and will redirect you back to where you came from when the maintenance is over.<br>
         Next auto-reload in ~<span class="next-reload-in"><?php print(RELOAD_INTERVAL); ?></span> seconds.
@@ -33,7 +33,7 @@ const RELOAD_INTERVAL = 60;
         const next_reload_in = document.querySelector('.next-reload-in')
         const time_start = Date.now()
         setInterval(() => {
-            next_reload_in.innerText = Math.max(0, <?php print(RELOAD_INTERVAL); ?> + ((time_start - Date.now()) / 1_000)).toFixed(1)
+            next_reload_in.textContent = Math.max(0, <?php print(RELOAD_INTERVAL); ?> + ((time_start - Date.now()) / 1_000)).toFixed(1)
         }, 100)
     </script>
 </body>
