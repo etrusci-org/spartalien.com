@@ -42,17 +42,6 @@
 
 <div class="grid-x-2">
     <div class="box">
-        <h3>RaidTrain</h3>
-        <div class="grid-x-2">
-            <p><a class="imgzoom" href="./file/tool/raidtrain.jpg"><img src="./file/preview/tool/raidtrain-tn.jpg" loading="lazy" alt="screenshot"></a></p>
-            <p>Quickly create a time slot overview webpage for your Twitch raid train event and such activities.</p>
-        </div>
-        <ul>
-            <li><a href="https://github.com/etrusci-org/raidtrain/#readme">README + Source at GitHub</a></li>
-        </ul>
-    </div>
-
-    <div class="box">
         <h3>Olay</h3>
         <div class="grid-x-2">
             <p><a class="imgzoom" href="./file/tool/olay.jpg"><img src="./file/preview/tool/olay-tn.jpg" loading="lazy" alt="screenshot"></a></p>
@@ -61,6 +50,17 @@
         <ul>
             <li><a href="https://etrusci.org/tool/olay/">Demo</a></li>
             <li><a href="https://github.com/etrusci-org/olay/#readme">README + Source at GitHub</a></li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <h3>RaidTrain</h3>
+        <div class="grid-x-2">
+            <p><a class="imgzoom" href="./file/tool/raidtrain.jpg"><img src="./file/preview/tool/raidtrain-tn.jpg" loading="lazy" alt="screenshot"></a></p>
+            <p>Quickly create a time slot overview webpage for your Twitch raid train event and such activities.</p>
+        </div>
+        <ul>
+            <li><a href="https://github.com/etrusci-org/raidtrain/#readme">README + Source at GitHub</a></li>
         </ul>
     </div>
 </div>
