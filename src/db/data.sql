@@ -1464,7 +1464,7 @@ INSERT INTO exit (id, text, url, description) VALUES (18, 'Sara Jayne Crow', '//
 INSERT INTO exit (id, text, url, description) VALUES (19, 'Tengushee', '//tengushee.com', NULL);
 INSERT INTO exit (id, text, url, description) VALUES (20, 'Submarine Broadcasting Company', '//submarinebroadcastingco.bandcamp.com', NULL);
 INSERT INTO exit (id, text, url, description) VALUES (21, 'Minimal_Drone*GRL', '//minimaldronegrl.bandcamp.com', NULL);
-INSERT INTO exit (id, text, url, description) VALUES (22, 'ediblewaves', '//ediblewaves.bandcamp.com', NULL);
+INSERT INTO exit (id, text, url, description) VALUES (22, 'SKOTOP', '//skotop.bandcamp.com', NULL);
 INSERT INTO exit (id, text, url, description) VALUES (23, 'Shikantaza Art', '//shikantaza.cyberpunkonline.net', NULL);
 INSERT INTO exit (id, text, url, description) VALUES (24, 'Occupy White Walls', '//www.oww.io', NULL);
 INSERT INTO exit (id, text, url, description) VALUES (25, 'The Creative Passport', '//www.creativepassport.net', NULL);
@@ -1493,6 +1493,7 @@ INSERT INTO exit (id, text, url, description) VALUES (47, 'Spooky Kitten Records
 INSERT INTO exit (id, text, url, description) VALUES (48, 'Volume Control for Bandcamp', '//addons.mozilla.org/firefox/addon/bandcamp-player-volume-control', NULL);
 INSERT INTO exit (id, text, url, description) VALUES (49, 'RipCue', '//ripcue.com', NULL);
 INSERT INTO exit (id, text, url, description) VALUES (50, 'Bricolage', '//bricolageglasgow.bandcamp.com', NULL);
+INSERT INTO exit (id, text, url, description) VALUES (51, 'Tanja Vujinovic', '//tanjav.art', NULL);
 
 
 INSERT INTO p420_session(num, pub_date, runtime, mixcloud_key) VALUES (1, '2021-05-04', 10370, NULL);
