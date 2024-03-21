@@ -23,4 +23,5 @@
 '/^exit$/',
 '/^privacy$/',
 '/^purchase$/',
+'/^quotes$/',
 ]; ?>

@@ -246,6 +246,11 @@ $conf['valid_request_patterns'] = [
         'valuesTable' => '',
         'valuesCol' => [],
     ],
+    [
+        'route' => '/^quotes$/',
+        'valuesTable' => '',
+        'valuesCol' => [],
+    ],
 ];
 
 // ----------------------------------------------------------------------------
@@ -336,5 +341,10 @@ $conf['pre_render_settings'] = [
         'headers' => [],
         'middleware_files' => [],
         'page_files' => [],
+    ],
+    'quotes' => [
+        'headers' => [],
+        'middleware_files' => [],
+        'page_files' => [null, '*node', null],
     ],
 ];
