@@ -14,6 +14,15 @@ if (isset($this->Router->route['var']['id'])) {
     <h2><?php print($visual['visual_name']); ?></h2>
 
     <?php
+    foreach ($visual['visual_media'] as $v) {
+        printf(
+            '<div class="box">
+                <div class="lazycode">%1$s</div>
+            </div>',
+            $v
+        );
+    }
+
     printf(
         '<div class="box">
             <h3>Meta</h3>
@@ -27,15 +36,6 @@ if (isset($this->Router->route['var']['id'])) {
         $this->_lazytext($visual['visual_tool']),
         ($visual['visual_description']) ? sprintf('<p>%s</p>', $this->_lazytext($visual['visual_description'])) : '',
     );
-
-    foreach ($visual['visual_media'] as $v) {
-        printf(
-            '<div class="box">
-                <div class="lazycode">%1$s</div>
-            </div>',
-            $v
-        );
-    }
     ?>
 <?php endif; ?>
 
