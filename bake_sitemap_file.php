@@ -28,6 +28,8 @@ foreach ($conf['site_nav'] as $v) {
 $dump = '<?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 '.$dump.'
+<url><loc>https://spartalien.com/privacy</loc></url>
+<url><loc>https://spartalien.com/purchase</loc></url>
 </urlset>';
 
 file_put_contents($conf['sitemap_file'], $dump, LOCK_EX);
