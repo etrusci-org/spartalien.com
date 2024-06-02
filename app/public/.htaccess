@@ -20,8 +20,8 @@ AddType application/atom+xml .atom
     RewriteRule ^ %1 [L,R=301]
 
     # Nifty redirects to other domains
-    RewriteRule ^(cam|live)$ https://twitch.tv/spartalien [R=301,L]
-    RewriteRule ^discord$ https://discord.gg/wy7HbvKvG8 [R=301,L]
+    RewriteRule ^(twitch|cam|live)$ https://twitch.tv/spartalien [R=301,L]
+    RewriteRule ^(discord|chat)$ https://discord.gg/wy7HbvKvG8 [R=301,L]
     # RewriteRule ^cp$ ... [R=301,L]
 
     # Send requests to index.php if not an existing file or directory

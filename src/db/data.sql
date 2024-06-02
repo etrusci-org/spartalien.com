@@ -19,6 +19,7 @@ INSERT INTO rls_type (id, name) VALUES (1, 'Single');
 INSERT INTO rls_type (id, name) VALUES (2, 'EP');
 INSERT INTO rls_type (id, name) VALUES (3, 'Album');
 INSERT INTO rls_type (id, name) VALUES (4, 'Remix');
+INSERT INTO rls_type (id, name) VALUES (5, 'Special');
 
 
 INSERT INTO track (id, artist_id, name, crea_year, runtime, bandcamp_id) VALUES (1, 1, 'Continuoduction', '2016', 396, '2223569284');
@@ -207,6 +208,8 @@ INSERT INTO track (id, artist_id, name, crea_year, runtime, bandcamp_id) VALUES 
 INSERT INTO track (id, artist_id, name, crea_year, runtime, bandcamp_id) VALUES (184, 7, 'Chicken vs. Overdrive (feat. Claire)', '2003', 96, '2244230942');
 INSERT INTO track (id, artist_id, name, crea_year, runtime, bandcamp_id) VALUES (185, 7, 'All I Know', '2006', 395, '1864935083');
 INSERT INTO track (id, artist_id, name, crea_year, runtime, bandcamp_id) VALUES (186, 7, 'Intrutrolude', '2006', 254, '949326331');
+INSERT INTO track (id, artist_id, name, crea_year, runtime, bandcamp_id) VALUES (187, 1, 'Bird Feeder Cam - February 2024 - Custom Track 1', '2024', 5592, '4255890995');
+INSERT INTO track (id, artist_id, name, crea_year, runtime, bandcamp_id) VALUES (188, 1, 'Bird Feeder Cam - February 2024 - Custom Track 2', '2024', 5434, '995023937');
 
 
 INSERT INTO track_credit (track_id, line) VALUES (3, 'Speech - Dr. Timothy Leary (leary.com)');
@@ -291,6 +294,7 @@ INSERT INTO rls (id, artist_id, rls_type_id, label_id, name, pub_date, upd_date,
 INSERT INTO rls (id, artist_id, rls_type_id, label_id, name, pub_date, upd_date, is_freedl, bandcamp_id, description) VALUES (36, 1, 3, NULL, 'THE DYING SPACESHIP SYMPHONY', '2023-06-17', NULL, 1, '2972069926', 'The atmosphere of a moment that never seemed to end.' || CHAR(10, 10, 10) || 'Bandcamp exclusive.');
 INSERT INTO rls (id, artist_id, rls_type_id, label_id, name, pub_date, upd_date, is_freedl, bandcamp_id, description) VALUES (37, 1, 1, 3, 'Yellow Soul Grinder', '2023-07-13', NULL, 0, '1255097516', 'It was already too late before it started to consume you.' || CHAR(10, 10, 10) || 'Made for [SFTS: The Backrooms Comp : Level 2](./mention/id:14).');
 INSERT INTO rls (id, artist_id, rls_type_id, label_id, name, pub_date, upd_date, is_freedl, bandcamp_id, description) VALUES (38, 7, 3, NULL, 'Sound.Ex 1', '2004-10-05', NULL, 1, '2619863095', 'A selection of first steps in creating my own sound (as "[arT2](./catalog/artist:7)" back then). 2001-2006. Experimental trips, dark passages, and a lot of mood-explanation. Whatever.. enjoy.');
+INSERT INTO rls (id, artist_id, rls_type_id, label_id, name, pub_date, upd_date, is_freedl, bandcamp_id, description) VALUES (39, 1, 5, NULL, 'Bird Feeder Cam - February 2024 - Custom Tracks', '2024-02-18', NULL, 1, '2665994579', 'These are the two "custom tracks" from the [Bird Feeder Cam - February 2024](./visual/id:68) video.');
 
 
 INSERT INTO rls_credit (rls_id, line) VALUES (1, 'Coverart photo - NASA (nasa.gov)');
@@ -512,6 +516,8 @@ INSERT INTO rls_tracklist (rls_id, track_id) VALUES (38, 183);
 INSERT INTO rls_tracklist (rls_id, track_id) VALUES (38, 184);
 INSERT INTO rls_tracklist (rls_id, track_id) VALUES (38, 185);
 INSERT INTO rls_tracklist (rls_id, track_id) VALUES (38, 186);
+INSERT INTO rls_tracklist (rls_id, track_id) VALUES (39, 187);
+INSERT INTO rls_tracklist (rls_id, track_id) VALUES (39, 188);
 
 
 INSERT INTO rls_media (rls_id, code) VALUES (1, '{"type": "youtubevideo", "slug": "QZovE8JDsXU"}');
@@ -897,6 +903,8 @@ INSERT INTO track_dist (track_id, platform, url) VALUES (184, 'bandcamp', '//spa
 INSERT INTO track_dist (track_id, platform, url) VALUES (184, 'internet archive', '//archive.org/download/arT2-Sound.Ex_1/12-arT2_feat_Claire-Chicken_vs_Overdrive.mp3');
 INSERT INTO track_dist (track_id, platform, url) VALUES (185, 'bandcamp', '//spartalien.bandcamp.com/track/all-i-know');
 INSERT INTO track_dist (track_id, platform, url) VALUES (186, 'bandcamp', '//spartalien.bandcamp.com/track/intrutrolude');
+INSERT INTO track_dist (track_id, platform, url) VALUES (187, 'bandcamp', '//spartalien.bandcamp.com/track/bird-feeder-cam-february-2024-custom-track-1');
+INSERT INTO track_dist (track_id, platform, url) VALUES (188, 'bandcamp', '//spartalien.bandcamp.com/track/bird-feeder-cam-february-2024-custom-track-2');
 
 
 INSERT INTO rls_dist (rls_id, platform, url) VALUES (1, 'bandcamp', '//spartalien.bandcamp.com/track/continuoduction');
@@ -974,6 +982,7 @@ INSERT INTO rls_dist (rls_id, platform, url) VALUES (37, 'spotify', '//open.spot
 INSERT INTO rls_dist (rls_id, platform, url) VALUES (38, 'bandcamp', '//spartalien.bandcamp.com/album/sound-ex-1');
 INSERT INTO rls_dist (rls_id, platform, url) VALUES (38, 'internet archive', '//archive.org/details/arT2-Sound.Ex_1/');
 INSERT INTO rls_dist (rls_id, platform, url) VALUES (38, 'mixcloud', '//www.mixcloud.com/lowtechman/old-sound-experiments/');
+INSERT INTO rls_dist (rls_id, platform, url) VALUES (39, 'bandcamp', '//spartalien.bandcamp.com/album/bird-feeder-cam-february-2024-custom-tracks');
 
 
 INSERT INTO phy (id, name, description) VALUES (1, 'Artefact S9M1', 'Type: USB Flash Drive + Digital Album' || CHAR(10) || 'Released: 2018-06-10' || CHAR(10, 10) || 'In May 2018, aerchologists have discovered five objects from an undisclosed location.' || CHAR(10) || 'All of the objects are made of an unknown black material and have the shape of a triangle. The border is painted white.' || CHAR(10) || 'On top, on the lower end of the triangles, a pattern of dots is visible. Every triangle has its own pattern. Theories evolved quickly around the dots and the most common one is, that these could be some sort of counter.' || CHAR(10) || 'Above the dot patterns, a small electronic device with an aluminum case is plugged into a rectangular slot.' || CHAR(10) || 'Above this slot, a twisted line points to the upper corner of the triangle. The aerchologists where startled when they found out that these strangely glow in the dark.' || CHAR(10, 10) || 'A few days after the initial discovery, scientists found out that the aluminum devices in the slot are storage devices. Here is what they could decode:' || CHAR(10) || '- MONOLOG album in three different file formats: WAV, FLAC, MP3' || CHAR(10) || '- MONOLOG album to stream and download on Bandcamp.' || CHAR(10) || '- PDF file with the album information and lyrics.' || CHAR(10) || '- High resoultion album cover.' || CHAR(10) || '- Bonus album track- and promo art.' || CHAR(10) || '- Art, documents, photos and videos to watch/read while/after listening to the album.' || CHAR(10, 10) || 'Digital release is [there](./music/id:13).');
@@ -992,7 +1001,7 @@ INSERT INTO phy_media (phy_id, code) VALUES (1, '{"type": "image", "slug": "./fi
 INSERT INTO phy_media (phy_id, code) VALUES (1, '{"type": "image", "slug": "./file/preview/phy/1-5-med.jpg", "linkto": "./file/phy-monolog/5.jpg"}');
 INSERT INTO phy_media (phy_id, code) VALUES (1, '{"type": "image", "slug": "./file/preview/phy/1-6-med.jpg", "linkto": "./file/phy-monolog/6.jpg"}');
 INSERT INTO phy_media (phy_id, code) VALUES (1, '{"type": "image", "slug": "./file/preview/phy/1-7-med.jpg", "linkto": "./file/phy-monolog/7.jpg"}');
-INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "link", "slug": "//spartalien.bandcamp.com/merch/memoria-s9m2-2358-limited-edition?action=buy", "text": "BUY"}');
+INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "link", "slug": "//spartalien.bandcamp.com/merch/memoria-s9m2-2358-limited-edition?action=buy", "text": "SOLD OUT"}');
 INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "link", "slug": "./stuff/id:3", "text": "Making of videos"}');
 INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "image", "slug": "./file/phy-2358/all.jpg", "linkto": "./file/phy-2358/all.jpg"}');
 INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "image", "slug": "./file/preview/phy/2-2-med.jpg", "linkto": "./file/phy-2358/package1of7.jpg"}');
@@ -1012,15 +1021,15 @@ INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "youtubevideo", "slug"
 INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "youtubevideo", "slug": "XP89XWk1BeA"}');
 INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "youtubevideo", "slug": "wBKZFFxSQb0"}');
 INSERT INTO phy_media (phy_id, code) VALUES (2, '{"type": "youtubevideo", "slug": "LDlcH_Z7Tfc"}');
-INSERT INTO phy_media (phy_id, code) VALUES (3, '{"type": "link", "slug": "//spartalien.bandcamp.com/merch/logo-t-shirt-s9m3?action=buy", "text": "BUY"}');
-INSERT INTO phy_media (phy_id, code) VALUES (3, '{"type": "image", "slug": "./file/preview/phy/3-1-med.jpg", "linkto": "./file/phy-tshirt/1.jpg"}');
-INSERT INTO phy_media (phy_id, code) VALUES (3, '{"type": "image", "slug": "./file/preview/phy/3-2-med.jpg", "linkto": "./file/phy-tshirt/2.jpg"}');
-INSERT INTO phy_media (phy_id, code) VALUES (3, '{"type": "image", "slug": "./file/preview/phy/3-3-med.jpg", "linkto": "./file/phy-tshirt/3.jpg"}');
-INSERT INTO phy_media (phy_id, code) VALUES (3, '{"type": "image", "slug": "./file/preview/phy/3-4-med.jpg", "linkto": "./file/phy-tshirt/4.jpg"}');
-INSERT INTO phy_media (phy_id, code) VALUES (3, '{"type": "image", "slug": "./file/preview/phy/3-5-med.jpg", "linkto": "./file/phy-tshirt/5.jpg"}');
-INSERT INTO phy_media (phy_id, code) VALUES (4, '{"type": "link", "slug": "//spartalien.bandcamp.com/merch/logo-sticker-s9m4?action=buy", "text": "BUY"}');
-INSERT INTO phy_media (phy_id, code) VALUES (4, '{"type": "image", "slug": "./file/preview/phy/4-1-med.jpg", "linkto": "./file/phy-sticker/white-on-black.jpg"}');
-INSERT INTO phy_media (phy_id, code) VALUES (4, '{"type": "image", "slug": "./file/preview/phy/4-2-med.jpg", "linkto": "./file/phy-sticker/black-on-white.jpg"}');
+-- INSERT INTO phy_media (phy_id, code) VALUES (3, '{"type": "link", "slug": "//spartalien.bandcamp.com/merch/logo-t-shirt-s9m3?action=buy", "text": "BUY"}');
+-- INSERT INTO phy_media (phy_id, code) VALUES (3, '{"type": "image", "slug": "./file/preview/phy/3-1-med.jpg", "linkto": "./file/phy-tshirt/1.jpg"}');
+-- INSERT INTO phy_media (phy_id, code) VALUES (3, '{"type": "image", "slug": "./file/preview/phy/3-2-med.jpg", "linkto": "./file/phy-tshirt/2.jpg"}');
+-- INSERT INTO phy_media (phy_id, code) VALUES (3, '{"type": "image", "slug": "./file/preview/phy/3-3-med.jpg", "linkto": "./file/phy-tshirt/3.jpg"}');
+-- INSERT INTO phy_media (phy_id, code) VALUES (3, '{"type": "image", "slug": "./file/preview/phy/3-4-med.jpg", "linkto": "./file/phy-tshirt/4.jpg"}');
+-- INSERT INTO phy_media (phy_id, code) VALUES (3, '{"type": "image", "slug": "./file/preview/phy/3-5-med.jpg", "linkto": "./file/phy-tshirt/5.jpg"}');
+-- INSERT INTO phy_media (phy_id, code) VALUES (4, '{"type": "link", "slug": "//spartalien.bandcamp.com/merch/logo-sticker-s9m4?action=buy", "text": "BUY"}');
+-- INSERT INTO phy_media (phy_id, code) VALUES (4, '{"type": "image", "slug": "./file/preview/phy/4-1-med.jpg", "linkto": "./file/phy-sticker/white-on-black.jpg"}');
+-- INSERT INTO phy_media (phy_id, code) VALUES (4, '{"type": "image", "slug": "./file/preview/phy/4-2-med.jpg", "linkto": "./file/phy-sticker/black-on-white.jpg"}');
 INSERT INTO phy_media (phy_id, code) VALUES (5, '{"type": "link", "slug": "//spartalien.bandcamp.com/merch/memory-s9m5-floating-high-limited-edition-cd-r?action=buy", "text": "SOLD OUT"}');
 INSERT INTO phy_media (phy_id, code) VALUES (5, '{"type": "image", "slug": "./file/preview/phy/5-1-med.jpg", "linkto": "./file/phy-floatinghigh-cd/1.jpg"}');
 INSERT INTO phy_media (phy_id, code) VALUES (5, '{"type": "image", "slug": "./file/preview/phy/5-2-med.jpg", "linkto": "./file/phy-floatinghigh-cd/2.jpg"}');
@@ -1030,7 +1039,7 @@ INSERT INTO phy_media (phy_id, code) VALUES (5, '{"type": "image", "slug": "./fi
 INSERT INTO phy_media (phy_id, code) VALUES (5, '{"type": "image", "slug": "./file/preview/phy/5-5-med.jpg", "linkto": "./file/phy-floatinghigh-cd/5.jpg"}');
 INSERT INTO phy_media (phy_id, code) VALUES (5, '{"type": "image", "slug": "./file/preview/phy/5-6-med.jpg", "linkto": "./file/phy-floatinghigh-cd/6.jpg"}');
 INSERT INTO phy_media (phy_id, code) VALUES (5, '{"type": "image", "slug": "./file/preview/phy/5-7-med.jpg", "linkto": "./file/phy-floatinghigh-cd/7.jpg"}');
-INSERT INTO phy_media (phy_id, code) VALUES (6, '{"type": "link", "slug": "//spartalien.bandcamp.com/merch/memory-s9m6-floating-high-limited-edition-usb-stick?action=buy", "text": "BUY"}');
+INSERT INTO phy_media (phy_id, code) VALUES (6, '{"type": "link", "slug": "//spartalien.bandcamp.com/merch/memory-s9m6-floating-high-limited-edition-usb-stick?action=buy", "text": "SOLD OUT"}');
 INSERT INTO phy_media (phy_id, code) VALUES (6, '{"type": "image", "slug": "./file/preview/phy/6-1-med.jpg", "linkto": "./file/phy-floatinghigh-usb/1.jpg"}');
 INSERT INTO phy_media (phy_id, code) VALUES (6, '{"type": "image", "slug": "./file/preview/phy/6-2-med.jpg", "linkto": "./file/phy-floatinghigh-usb/2.jpg"}');
 INSERT INTO phy_media (phy_id, code) VALUES (6, '{"type": "image", "slug": "./file/preview/phy/6-3-med.jpg", "linkto": "./file/phy-floatinghigh-usb/3.jpg"}');
@@ -1103,7 +1112,7 @@ INSERT INTO visual (id, name, pub_date, tool, description) VALUES (64, 'Promo Ar
 INSERT INTO visual (id, name, pub_date, tool, description) VALUES (65, 'X Minutes of Peace', '2018', 'Videography, Premiere', 'Relax.');
 INSERT INTO visual (id, name, pub_date, tool, description) VALUES (66, 'TOTAL FUCKING MADNESS', '2023-01', 'Resolve', 'TOTAL FUCKING MADNESS' || CHAR(10) || 'TOTAL FUCKING MADNESS' || CHAR(10) || 'TOTAL FUCKING MADNESS' || CHAR(10) || 'TOTAL FUCKING MADNESS' || CHAR(10) || 'TOTAL FUCKING MADNESS' || CHAR(10) || 'TOTAL FUCKING MADNESS' || CHAR(10, 10) || '00:00 Intro' || CHAR(10) || '00:32 Level 1' || CHAR(10) || '05:28 Level 2' || CHAR(10) || '10:00 Level 3' || CHAR(10) || '14:06 Level 4' || CHAR(10) || '17:48 Level 5' || CHAR(10) || '21:06 Level 6' || CHAR(10) || '23:58 Outro');
 INSERT INTO visual (id, name, pub_date, tool, description) VALUES (67, 'GhostTownTunes Logo', '2021', 'Blender, Resolve', 'Livestream logo made for [GhostTownTunes](http://twitch.tv/ghosttowntunes). Based on his original 2D logo made by *Unknown Creator*.');
-INSERT INTO visual (id, name, pub_date, tool, description) VALUES (68, 'Bird Feeder Cam - February 2024', '2024-02', 'Videography, Reaper, Resolve', 'Video of birds feeding in the bird feeder with music to contemplate to.' || CHAR(10) || 'Bird Feeder Cam - February 2024' || CHAR(10, 10) || 'Music:' || CHAR(10) || '- [Let It All Go, Volume 2 (Weatherless & Droneless Mix)](./catalog/track:80)' || CHAR(10) || '- 2 x [Custom Track](https://spartalien.bandcamp.com/album/bird-feeder-cam-february-2024-custom-tracks)' || CHAR(10) || '- [Let It All Go, Volume 1 (Waveless Mix)](./catalog/track:61)' || CHAR(10, 10) || 'Camera:' || CHAR(10) || 'Canon Legria HF R406' || CHAR(10, 10) || 'Birds Database:' || CHAR(10) || '[vogelwarte.ch](https://www.vogelwarte.ch/en/birds-of-switzerland/)' || CHAR(10, 10) || '00:00:00 Day 1' || CHAR(10) || '00:58:01 Day 2' || CHAR(10) || '02:34:08 Day 3');
+INSERT INTO visual (id, name, pub_date, tool, description) VALUES (68, 'Bird Feeder Cam - February 2024', '2024-02', 'Videography, Reaper, Resolve', 'Video of birds feeding in the bird feeder with music to contemplate to.' || CHAR(10) || 'Bird Feeder Cam - February 2024' || CHAR(10, 10) || 'Music:' || CHAR(10) || '- [Let It All Go, Volume 2 (Weatherless & Droneless Mix)](./catalog/track:80)' || CHAR(10) || '- 2 x [Custom Track](./music/id:39)' || CHAR(10) || '- [Let It All Go, Volume 1 (Waveless Mix)](./catalog/track:61)' || CHAR(10, 10) || 'Camera:' || CHAR(10) || 'Canon Legria HF R406' || CHAR(10, 10) || 'Birds Database:' || CHAR(10) || '[vogelwarte.ch](https://www.vogelwarte.ch/en/birds-of-switzerland/)' || CHAR(10, 10) || '00:00:00 Day 1' || CHAR(10) || '00:58:01 Day 2' || CHAR(10) || '02:34:08 Day 3');
 
 INSERT INTO visual_media (visual_id, code) VALUES (1, '{"type": "image", "slug": "./file/visual/2000-soia.jpg", "linkto": "./file/visual/2000-soia.jpg"}');
 INSERT INTO visual_media (visual_id, code) VALUES (2, '{"type": "image", "slug": "./file/preview/visual/2-1-med.jpg", "linkto": "./file/visual/2002-what_like-part1.jpg"}');
@@ -1212,7 +1221,8 @@ INSERT INTO visual_media (visual_id, code) VALUES (67, '{"type": "video", "slug"
 INSERT INTO visual_media (visual_id, code) VALUES (67, '{"type": "video", "slug": "./file/visual/20210420-gttlogo-2-silvergreen.mp4", "attr": [["poster", "./file/preview/visual/67-7-tn.jpg"], ["autoplay", "autoplay"], ["loop", "loop"]]}');
 INSERT INTO visual_media (visual_id, code) VALUES (67, '{"type": "video", "slug": "./file/visual/20210420-gttlogo-2-silverpurple.mp4", "attr": [["poster", "./file/preview/visual/67-8-tn.jpg"], ["autoplay", "autoplay"], ["loop", "loop"]]}');
 INSERT INTO visual_media (visual_id, code) VALUES (68, '{"type": "youtubevideo", "slug": "2m81naKeeTQ"}');
-INSERT INTO visual_media (visual_id, code) VALUES (68, '{"type": "link", "slug": "//spartalien.bandcamp.com/album/bird-feeder-cam-february-2024-custom-tracks", "text": "Custom audio tracks on Bandcamp"}');
+INSERT INTO visual_media (visual_id, code) VALUES (68, '{"type": "odyseevideo", "slug": "@spartalien:2/bird-feeder-cam-february-2024:d"}');
+INSERT INTO visual_media (visual_id, code) VALUES (68, '{"type": "link", "slug": "./music/id:39", "text": "Custom audio tracks"}');
 
 
 INSERT INTO stuff (id, name, description) VALUES (1, 'Radio-Dark-Tunnel Jingles', 'Radio station IDs/jingles made for [Radio-Dark-Tunnel](//radio-dark-tunnel.net).');
@@ -1395,6 +1405,7 @@ INSERT INTO news_text (news_id, text) VALUES (68, 'Mentioned on: [SFTS: The Back
 INSERT INTO news_text (news_id, text) VALUES (69, 'Mentioned on: [Spooky Kitten Records'' WHiTMiRE Reviews Music: Episode 76](./mention/id:15)');
 INSERT INTO news_text (news_id, text) VALUES (70, 'New (old) music: [arT2 - Sound.Ex 1](./music/id:38)');
 INSERT INTO news_text (news_id, text) VALUES (71, 'New visual: [Bird Feeder Cam - February 2024](./visual/id:68)');
+INSERT INTO news_text (news_id, text) VALUES (71, 'New music: [Bird Feeder Cam - February 2024 - Custom Tracks](./music/id:39)');
 
 
 INSERT INTO mention (id, subject, year, description) VALUES (1, 'Live on MighTV 2020-11-18', '2020', 'The [Might](//might.digital) crew invited me to create some music on their livestream.');
@@ -1444,7 +1455,7 @@ INSERT INTO mention_media (mention_id, code) VALUES (15, '{"type": "youtubevideo
 
 
 INSERT INTO exit (id, text, url, description) VALUES (1, 'Conservation Drones', '//conservationdrones.org', NULL);
-INSERT INTO exit (id, text, url, description) VALUES (2, 'Earthship Biotecture', '//earthshipglobal.com', NULL);
+INSERT INTO exit (id, text, url, description) VALUES (2, 'Earthship Biotecture', '//earthship.com', NULL);
 INSERT INTO exit (id, text, url, description) VALUES (3, 'Four Paws', '//four-paws.org', NULL);
 INSERT INTO exit (id, text, url, description) VALUES (4, 'Music Declares Emergency', '//musicdeclares.net', NULL);
 INSERT INTO exit (id, text, url, description) VALUES (5, 'Pestalozzi Children''s Foundation', '//pestalozzi.ch', NULL);
@@ -1494,6 +1505,7 @@ INSERT INTO exit (id, text, url, description) VALUES (48, 'Volume Control for Ba
 INSERT INTO exit (id, text, url, description) VALUES (49, 'RipCue', '//ripcue.com', NULL);
 INSERT INTO exit (id, text, url, description) VALUES (50, 'Bricolage', '//bricolageglasgow.bandcamp.com', NULL);
 INSERT INTO exit (id, text, url, description) VALUES (51, 'Tanja Vujinovic', '//tanjav.art', NULL);
+INSERT INTO exit (id, text, url, description) VALUES (52, 'Penguin-PC', '//penguin-pc.ch', NULL);
 
 
 INSERT INTO p420_session(num, pub_date, runtime, mixcloud_key) VALUES (1, '2021-05-04', 10370, NULL);
