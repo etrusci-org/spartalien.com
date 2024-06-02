@@ -42,7 +42,7 @@
 
 <div class="grid-x-2">
     <div class="box">
-        <h3>Olay</h3>
+        <h3>olay</h3>
         <div class="grid-x-2">
             <p><a class="imgzoom" href="./file/tool/olay.jpg"><img src="./file/preview/tool/olay-tn.jpg" loading="lazy" alt="screenshot"></a></p>
             <p>Live stream overlay stuff for use as Browser-Source in OBS Studio.</p>
@@ -54,7 +54,7 @@
     </div>
 
     <div class="box">
-        <h3>RaidTrain</h3>
+        <h3>raidtrain</h3>
         <div class="grid-x-2">
             <p><a class="imgzoom" href="./file/tool/raidtrain.jpg"><img src="./file/preview/tool/raidtrain-tn.jpg" loading="lazy" alt="screenshot"></a></p>
             <p>Quickly create a time slot overview webpage for your Twitch raid train event and such activities.</p>
@@ -68,7 +68,7 @@
 
 <div class="grid-x-2">
     <div class="box">
-        <h3>LoopExtender</h3>
+        <h3>loopextender</h3>
         <div class="lazycode">{
             "type": "youtubevideo",
             "slug": "6pYTthir_qs"
@@ -81,7 +81,7 @@
     </div>
 
     <div class="box">
-        <h3>Jayze</h3>
+        <h3>jayze</h3>
         <div class="lazycode">{
             "type": "youtubevideo",
             "slug": "j9NafFwILJs"
@@ -94,10 +94,9 @@
     </div>
 </div>
 
-
 <div class="grid-x-2">
     <div class="box">
-        <h3>LastfmLog</h3>
+        <h3>lastfmlog</h3>
         <div class="grid-x-2">
             <p><a class="imgzoom" href="./file/tool/lastfmlog.jpg"><img src="./file/preview/tool/lastfmlog-tn.jpg" loading="lazy" alt="screenshot"></a></p>
             <p>Command line tool that downloads your Last.fm scrobbles (played tracks) data into a local SQLite database.</p>
@@ -108,7 +107,7 @@
     </div>
 
     <div class="box">
-        <h3>Quotes</h3>
+        <h3>quotes</h3>
         <div class="grid-x-2">
             <p><a class="imgzoom" href="./file/tool/quotes.jpg"><img src="./file/preview/tool/quotes-tn.jpg" loading="lazy" alt="screenshot"></a></p>
             <p>Curated words from people. Mostly about art and life.</p>
@@ -117,4 +116,19 @@
             <li><a href="https://github.com/etrusci-org/quotes/#readme">README + Source at GitHub</a></li>
         </ul>
     </div>
+</div>
+
+<div class="box">
+    <h3>space2obs</h3>
+    <div class="grid-x-2">
+        <div class="lazycode">{
+            "type": "youtubevideo",
+            "slug": "WGMR_rx8r8Q"
+        }</div>
+        <p>Command-line tools to fetch interesting data (mostly image and text) about our solar system (including our beautiful planet!) and making it available to be displayed in OBS Studio.</p>
+    </div>
+    <ul>
+        <li><a href="https://www.youtube.com/watch?v=WGMR_rx8r8Q">Demo video</a></li>
+        <li><a href="https://github.com/etrusci-org/space2obs/#readme">README + Source at GitHub</a></li>
+    </ul>
 </div>
