@@ -68,8 +68,16 @@
         height: 182px;
     }
 
+    &.twitchchat {
+        min-width: 450px;
+        width: 100%;
+        min-height: 300px;
+        max-height: 100%;
+    }
+
     // see .videobox .lazymedia too for these:
     // &.video {}
+    // &.twitchstream {}
     // &.youtubevideo {}
     // &.youtubeplaylist {}
     // &.odyseevideo {}
