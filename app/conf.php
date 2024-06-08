@@ -48,6 +48,11 @@ $conf['site_nav'] = [
         'link_text' => 'Mixtape',
         'link_title' => 'More Mixtapes',
     ],
+    'stream' => [
+        'link' => './stream',
+        'link_text' => 'Stream',
+        'link_title' => 'Live Streaming Stuff',
+    ],
     'visual' => [
         'link' => './visual',
         'link_text' => 'Visual',
@@ -191,6 +196,11 @@ $conf['valid_request_patterns'] = [
         'valuesCol' => [],
     ],
     [
+        'route' => '/^stream$/',
+        'valuesTable' => '',
+        'valuesCol' => [],
+    ],
+    [
         'route' => '/^news$/',
         'valuesTable' => '',
         'valuesCol' => [],
@@ -303,6 +313,11 @@ $conf['pre_render_settings'] = [
         'page_files' => [],
     ],
     'mixtape' => [
+        'headers' => [],
+        'middleware_files' => [],
+        'page_files' => [],
+    ],
+    'stream' => [
         'headers' => [],
         'middleware_files' => [],
         'page_files' => [],
