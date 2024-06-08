@@ -5,17 +5,20 @@ type LazyCode = {
         | 'image'
         | 'audio'
         | 'video'
-        | 'bandcamptrack'
         | 'bandcampalbum'
-        | 'spotifytrack'
-        | 'spotifyepisode'
-        | 'spotifyalbum'
-        | 'spotifyplaylist'
-        | 'mixcloudshow'
+        | 'bandcamptrack'
         | 'mixcloudplaylist'
-        | 'youtubevideo'
-        | 'youtubeplaylist'
+        | 'mixcloudshow'
         | 'odyseevideo'
+        | 'spotifyalbum'
+        | 'spotifyepisode'
+        | 'spotifyplaylist'
+        | 'spotifytrack'
+        | 'twitchstream'
+        | 'twitchchat'
+        | 'youtubeplaylist'
+        | 'youtubevideo'
+
     slug: string
 
     // optional for all
@@ -64,6 +67,8 @@ export class LazyMedia
         spotifyplaylist: 'https://open.spotify.com/embed/playlist/{SLUG}/?theme=0',
         mixcloudshow: 'https://player-widget.mixcloud.com/widget/iframe/?feed=/{SLUG}/&hide_cover=1&hide_artwork=1',
         mixcloudplaylist: 'https://player-widget.mixcloud.com/widget/iframe/?feed=/{SLUG}/&hide_cover=1&hide_artwork=1',
+        twitchstream: 'https://player.twitch.tv/?muted=false&autoplay=true&channel={SLUG}',
+        twitchchat: 'https://twitch.tv/embed/{SLUG}',
         youtubevideo: 'https://youtube.com/embed/{SLUG}?modestbranding=1&color=white&rel=0&start=0',
         youtubeplaylist: 'https://youtube.com/embed/videoseries?list={SLUG}&modestbranding=1&color=white&rel=0',
         odyseevideo: 'https://odysee.com/$/embed/{SLUG}',
@@ -84,7 +89,7 @@ export class LazyMedia
     {
         this.get_lazycode_elements().forEach(target_element => {
             try {
-                const code: LazyCode = JSON.parse(target_element.innerHTML)
+                const code: LazyCode = JSON.parse(target_element.innerText)
                 const baked_element = this.get_baked_element(code)
 
                 if (baked_element) {
@@ -383,6 +388,39 @@ export class LazyMedia
         // mixcloudplaylist
         if (code.type == 'mixcloudplaylist') {
             code.slug = this.slug_template.mixcloudplaylist.replace('{SLUG}', code.slug)
+
+            baked_element = document.createElement('iframe')
+
+            baked_element.setAttribute('src', code.slug)
+            baked_element.setAttribute('loading', 'lazy')
+
+            this.#add_code_attr(code, baked_element)
+            this.#add_code_css(code, baked_element)
+        }
+
+        // twitchstream
+        if (code.type == 'twitchstream') {
+            code.slug = this.slug_template.twitchstream.replace('{SLUG}', code.slug)
+
+            baked_element = document.createElement('div')
+            baked_element.classList.add(this.videobox_class)
+
+            const inner1: HTMLIFrameElement = document.createElement('iframe')
+
+            inner1.setAttribute('src', code.slug)
+            inner1.setAttribute('loading', 'lazy')
+            inner1.setAttribute('allowfullscreen', 'allowfullscreen')
+            inner1.setAttribute('playsinline', 'playsinline')
+
+            this.#add_code_attr(code, inner1)
+            this.#add_code_css(code, inner1)
+
+            baked_element.append(inner1)
+        }
+
+        // twitchchat
+        if (code.type == 'twitchchat') {
+            code.slug = this.slug_template.twitchchat.replace('{SLUG}', code.slug)
 
             baked_element = document.createElement('iframe')
 

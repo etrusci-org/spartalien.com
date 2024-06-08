@@ -3,7 +3,7 @@
 
 <div class="box">
     <p>
-        Last Update: 2024-03-20.
+        Last updated on <?php print(date('Y-m-d', filemtime(__FILE__))); ?>.
         Feel free to
         <a data-scur="61|61|103|78|105|86|84|77|53|77|87|77|107|49|121|89|104|86|84|77|116|81|84|82|48|73|84|76|53|77|50|89|108|49|105|90|109|82|71|78|104|74|68|79|105|66|84|90|106|66|106|75|48|85|85|79|68|100|122|77|119|77|84|76|69|74|87|90|48|48|67|78|105|90|106|78|116|69|69|79|109|82|87|76|67|70|84|78|122|85|68|82|51|89|85|81|121|81|85|82|107|89|122|89|50|77|106|89|107|100|106|78|116|85|68|78|105|104|84|76|48|73|71|78|104|49|83|89|122|107|84|78|116|85|69|82|122|69|68|77|70|70|84|78|69|90|69|79|121|48|87|89|112|120|71|100|118|112|84|97|117|90|50|98|65|78|72|99|104|74|72|100|104|120|87|97|108|53|109|76|106|57|87|98">send me an email</a> <noscript>[Javascript required]</noscript>
         if you have any questions.
@@ -21,8 +21,8 @@
 
 
 <div class="box">
-    <h3>Trackers</h3>
-    <p>My website refrains from employing third-party trackers. However, it's important to note that embedded content, such as music and video players, may introduce tracking elements on the pages where they are loaded. These trackers provide various statistics, which I utilize.</p>
+    <h3>Tracking</h3>
+    <p>This website refrains from employing third-party trackers. However, it's important to note that embedded content, such as music and video players, may introduce tracking elements on the pages where they are loaded. These trackers provide various statistics, which I may utilize.</p>
     <p>Furthermore, in my <a href="//eepurl.com/dqYlHr">Newsletter</a> mailing list, opens and clicks are tracked.</p>
 </div>
 
@@ -38,6 +38,6 @@
     </div>
     <div class="box">
         <h3>Website Source Code</h3>
-        <p>You can view the full source code on <a href="//github.com/etrusci-org/spartalien.com">GitHub</a>.</p>
+        <p>You can view the full source code on <a href="//github.com/etrusci-org/spartalien.com">GitHub</a>. The <em>main</em> branch is usually what is live right now.</p>
     </div>
 </div>

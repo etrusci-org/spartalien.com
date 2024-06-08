@@ -83,9 +83,11 @@ Some types have additional optional attributes.
 | `spotifyplaylist`  | `attr`, `class`, `usetheme`, `trackcount` | [HTMLIFrameElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement) |
 | `mixcloudshow`     | `attr`, `class`                           | [HTMLIFrameElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement) |
 | `mixcloudplaylist` | `attr`, `class`                           | [HTMLIFrameElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement) |
-| `youtubevideo`     | `attr`, `class`, `start`                  | [HTMLDivElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLDivElement) &larr; [HTMLVideoElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement) |
-| `youtubeplaylist`  | `attr`, `class`                           | [HTMLDivElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLDivElement) &larr; [HTMLVideoElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement) |
-| `odyseevideo`      | `attr`, `class`                           | [HTMLDivElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLDivElement) &larr; [HTMLVideoElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement) |
+| `twitchstream`     | `attr`, `class`                           | [HTMLDivElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLDivElement) &larr; [HTMLIFrameElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement) |
+| `twitchchat`       | `attr`, `class`                           | [HTMLDivElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLDivElement) &larr; [HTMLIFrameElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement) |
+| `youtubevideo`     | `attr`, `class`, `start`                  | [HTMLDivElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLDivElement) &larr; [HTMLIFrameElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement) |
+| `youtubeplaylist`  | `attr`, `class`                           | [HTMLDivElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLDivElement) &larr; [HTMLIFrameElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement) |
+| `odyseevideo`      | `attr`, `class`                           | [HTMLDivElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLDivElement) &larr; [HTMLIFrameElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement) |
 
 
 ### Slug
@@ -106,6 +108,8 @@ For example, for **type** `link` it is an URL or path.
 | `spotifyplaylist`  | Playlist ID |
 | `mixcloudshow`     | `<USERNAME>/<PLAYLIST_KEY>` |
 | `mixcloudplaylist` | `<USERNAME>/playlists/<PLAYLIST_KEY>` |
+| `twitchstream`     | `<CHANNEL_NAME>&parent=<PARENT_DOMAIN>` |
+| `twitchchat`       | `<CHANNEL_NAME>/chat?parent=<PARENT_DOMAIN>[&darkpopout]` |
 | `youtubevideo`     | Video ID |
 | `youtubeplaylist`  | Playlist ID |
 | `odyseevideo`      | `<@CHANNEL>/<VIDEO_ID>` |
@@ -131,6 +135,8 @@ For example, for **type** `link` it is an URL or path.
 
 
 ## LazyCode Examples
+
+See [test.html](./test.html) for more.
 
 Simple link:
 ```json

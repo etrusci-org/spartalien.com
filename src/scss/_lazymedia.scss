@@ -36,27 +36,27 @@
     }
 
     &.bandcamptrack {
-        min-width: 300px;
+        min-width: 250px;
         width: 100%;
         height: 120px;
     }
 
     &.bandcampalbum {
-        min-width: 300px;
+        min-width: 250px;
         width: 100%;
         height: 208px;
     }
 
     &.spotifytrack,
     &.spotifyepisode {
-        min-width: 300px;
+        min-width: 250px;
         width: 100%;
         height: 152px;
     }
 
     &.spotifyalbum,
     &.spotifyplaylist {
-        min-width: 300px;
+        min-width: 250px;
         width: 100%;
         height: 352px;
 
@@ -68,8 +68,15 @@
         height: 182px;
     }
 
+    &.twitchchat {
+        min-width: 250px;
+        width: 100%;
+        height: 400px;
+    }
+
     // see .videobox .lazymedia too for these:
     // &.video {}
+    // &.twitchstream {}
     // &.youtubevideo {}
     // &.youtubeplaylist {}
     // &.odyseevideo {}
