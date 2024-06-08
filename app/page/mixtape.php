@@ -17,7 +17,7 @@ $cloudcast_list = $this->_json_dec(file_get_contents($cache_file_cloudcasts));
         These are some of my other mixtapes (beside <a href="./planet420">Planet 420</a>).
     </p>
     <p>
-        <a href="https://mixcloud.com/lowtechman">Find me on Mixcloud: lowtechman</a>
+        Find me on Mixcloud: <a href="<?php print($var_elsewhere['mixcloud'][1]); ?>">lowtechman</a>
     </p>
 </div>
 
