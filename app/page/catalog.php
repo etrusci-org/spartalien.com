@@ -70,7 +70,7 @@ if (isset($this->Router->route['var']['artist'])) {
 
         printf('
             <div class="box">
-                <h3>Distribution</h3>
+                <h3>Where to get it</h3>
                 <ul>
                     %1$s
                 </ul>
