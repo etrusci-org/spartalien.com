@@ -17,8 +17,6 @@ class Core
 
     public function render_output(?array $page_files = null, array $default_page_files = ['_header', '*node', '_footer']): void
     {
-        $this->ActiveVisitors->log_activity();
-
         if (!$page_files) {
             $page_files = $default_page_files;
         }
@@ -34,6 +32,7 @@ class Core
         else {
             $compile_file = $this->conf['cache_dir'].'/compiled_'.$cache_id.'.php';
             $cache_file = $this->conf['cache_dir'].'/cached_'.$cache_id.'.php';
+            $this->ActiveVisitors->log_activity();
         }
 
         // Assume brain file path

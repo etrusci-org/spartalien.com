@@ -252,11 +252,6 @@ $conf['valid_request_patterns'] = [
         'valuesCol' => [],
     ],
     [
-        'route' => '/^purchase$/',
-        'valuesTable' => '',
-        'valuesCol' => [],
-    ],
-    [
         'route' => '/^quotes$/',
         'valuesTable' => '',
         'valuesCol' => [],
@@ -348,11 +343,6 @@ $conf['pre_render_settings'] = [
         'page_files' => [],
     ],
     'privacy' => [
-        'headers' => [],
-        'middleware_files' => [],
-        'page_files' => [],
-    ],
-    'purchase' => [
         'headers' => [],
         'middleware_files' => [],
         'page_files' => [],

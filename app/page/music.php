@@ -116,12 +116,10 @@ if (isset($this->Router->route['var']['id'])) {
 
         printf('
             <div class="box">
-                <h3>Distribution</h3>
+                <h3>Where to get it</h3>
                 <ul>
                     %1$s
                 </ul>
-                <!-- <p>You can also find my music on many other music streaming/download platforms (<a href="//tidal.com/browse/artist/10259479">Tidal</a>, <a href="//www.deezer.com/artist/50523232">Deezer</a>, <a href="//music.apple.com/artist/spartalien/1455263028">Apple Music</a>, etc.). Just search for "SPARTALIEN" on your favorite one.</p> -->
-                <p><small>Please <a href="./purchase">read this</a> before you buy digital downloads.</small></p>
             </div>',
             implode('', array_map(fn(array $v): string => sprintf('<li><a href="%1$s">%2$s</a></li>', $v['url'], $this->_hsc(ucwords($v['platform']))), $rls['rls_dist'])),
         );

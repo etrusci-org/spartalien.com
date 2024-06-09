@@ -15,8 +15,14 @@
     <h3>Webserver Logs</h3>
     <p>Server access logs are utilized for analyzing website traffic. These logs contain information such as your IP address, User Agent, and Referer website. A typical log entry may appear as follows:</p>
     <p><code>11.22.33.44 - - [17/Aug/2022:08:49:28 +0000] "GET /music/id:29 HTTP/1.1" 200 3352 "https://spartalien.com/news/id:53" "Mozilla/5.0 (Linux; Android 7.0;)"</code></p>
-    <p>Additionally, certain errors are logged separately. For instance, when encountering a 404 error (page not found), the logs would resemble this:</p>
+
+    <p>Certain errors are logged separately. For instance, when encountering a 404 error (page not found), the logs would resemble this:</p>
     <p><code>1710231337.0037 | 2024-03-12 08:15:37 UTC | error 404 | /some/page | client_ip_hash=HASH_CODE | client_agent=Mozilla/5.0</code></p>
+
+    <p>
+        Visitors will be displayed in the active visitors section at the bottom of the website.<br>
+        For this the temporarly stored and displayed data is: <code>unique client hash</code>, <code>last request time</code>, <code>last location</code>.
+    </p>
 </div>
 
 
