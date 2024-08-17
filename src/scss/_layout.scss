@@ -212,6 +212,17 @@ footer {
     z-index: 5;
     cursor: crosshair;
 
+    a {
+        &:link,
+        &:visited {
+            text-decoration: none;
+
+            &.external::after {
+                content: none;
+            }
+        }
+    }
+
     nav {
         justify-content: center;
         margin-bottom: 2rem;

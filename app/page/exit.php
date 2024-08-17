@@ -17,7 +17,7 @@ $exit_list = $this->DB->query('
 
 
 <div class="box">
-    <p>Links to software, services, cool websites, people, and more I'd like to recommend.</p>
+    <p>Links to cool software, services, websites, people, and more I'd like to recommend.</p>
 </div>
 
 
