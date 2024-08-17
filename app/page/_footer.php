@@ -6,6 +6,9 @@
         <nav><?php print($this->get_site_nav_html()); ?></nav>
         <p><img src="./res/logo-small.png" alt="Logo" title="SPARTALIEN"></p>
         <p>{ <a href="./privacy">Privacy</a> }</p>
+
+        <div class="ourspace_webring_widget"></div>
+
         <p class="activevisitors">
             ~ visitors ~<br>
             {nocache}
@@ -29,6 +32,7 @@
     <div class="imgzoom-target"></div>
 
     <script type="module" src="./res/main.js?v=<?php print($this->version['js']); ?>"></script>
+    <script src="https://ourspace.ch/widget.js/src:4"></script>
 </body>
 </html>
 <!-- <?php print($this->Router->get_route_id().' '.$this->_json_enc($this->Router->route)); ?> -->
