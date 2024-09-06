@@ -35,4 +35,4 @@
     <script src="https://ourspace.ch/widget.js/src:4"></script>
 </body>
 </html>
-<!-- <?php print($this->Router->get_route_id().' '.$this->_json_enc($this->Router->route)); ?> -->
+<!-- <?php print($this->Router->get_route_id().' /'.$this->Router->route['request']); ?> -->
