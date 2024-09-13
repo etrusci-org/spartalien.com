@@ -1305,6 +1305,7 @@ INSERT INTO exit (id, text, url, description) VALUES (53, 'Käthi''s Atelier', '
 INSERT INTO exit (id, text, url, description) VALUES (54, 'GifCities', '//gifcities.org', NULL);
 INSERT INTO exit (id, text, url, description) VALUES (55, 'DeinVet', '//dein-vet.ch', NULL);
 INSERT INTO exit (id, text, url, description) VALUES (56, 'Playnite', '//playnite.link', NULL);
+INSERT INTO exit (id, text, url, description) VALUES (57, 'Sounding Soil', '//soundingsoil.ch', NULL);
 
 INSERT INTO p420_session(num, pub_date, runtime, mixcloud_key) VALUES (1, '2021-05-04', 10370, NULL);
 INSERT INTO p420_session(num, pub_date, runtime, mixcloud_key) VALUES (2, '2021-05-06', 10371, 'lowtechman/planet-4202');
