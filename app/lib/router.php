@@ -90,17 +90,17 @@ class Router
     {
         $valid = false;
 
+        // default node
+        if ($this->route['request'] == '') {
+            $valid = true;
+        }
+
         // route patterns
         foreach ($this->valid_requests as $pattern) {
             if (preg_match($pattern, $this->route['request'])) {
                 $valid = true;
                 break;
             }
-        }
-
-        // default node
-        if ($this->route['request'] == '') {
-            $valid = true;
         }
 
         if (!$valid) {
